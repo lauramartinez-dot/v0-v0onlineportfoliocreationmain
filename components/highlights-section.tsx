@@ -292,10 +292,9 @@ export function HighlightsSection() {
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
           </div>
 
-          {/* What and Why sections at top with better visual hierarchy */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-            {/* Left column - What and Why sections */}
-            <div className="space-y-6">
+          <div className="space-y-8 max-w-6xl mx-auto">
+            {/* Top row: What and Why side by side */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* What section */}
               <div className="relative overflow-hidden p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
                 <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-4">What</h3>
@@ -315,8 +314,9 @@ export function HighlightsSection() {
               </div>
             </div>
 
-            {/* Right column - Senior Technical Writer section with integrated images */}
+            {/* Bottom row: How does it look like - full width with integrated images */}
             <div className="p-6 rounded-xl bg-card border border-border shadow-sm space-y-6">
+              <h3 className="text-xl font-semibold text-foreground">How does it look like</h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
                 enough for anyone to use and precise enough for engineers to trust.
