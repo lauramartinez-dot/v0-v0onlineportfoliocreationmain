@@ -239,8 +239,7 @@ function HoverExpandableCard({
           <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
           <p className="text-base text-muted-foreground leading-relaxed">
             Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-            enough for anyone to use and precise enough for engineers to trust. From code to UX to end-user
-            documentation.
+            enough for anyone to use and precise enough for engineers to trust.
           </p>
         </div>
       </div>
