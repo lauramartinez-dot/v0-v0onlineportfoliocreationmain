@@ -57,44 +57,8 @@ export function HeroSection() {
                 <span>🇪🇸 From Spain</span>
                 <span>💬 Bilingual (English / Spanish)</span>
                 <span>📍 Based in Barcelona</span>
+                <span>📧 lmartmont@gmail.com</span>
               </span>
-              <br />
-              <span className="inline-flex flex-wrap items-center gap-2">
-                <span className="text-foreground font-medium">{"Target audience:"}</span>
-                <button
-                  onClick={() => setSelectedAudience("recruiter")}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedAudience === "recruiter"
-                      ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-110"
-                      : "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:scale-105 hover:shadow-md"
-                  }`}
-                >
-                  recruiter
-                </button>
-
-                <button
-                  onClick={() => setSelectedAudience("family")}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedAudience === "family"
-                      ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-110"
-                      : "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:scale-105 hover:shadow-md"
-                  }`}
-                >
-                  family member
-                </button>
-
-                <button
-                  onClick={() => setSelectedAudience("friend")}
-                  className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-300 ${
-                    selectedAudience === "friend"
-                      ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg scale-110"
-                      : "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 hover:scale-105 hover:shadow-md"
-                  }`}
-                >
-                  friend
-                </button>
-              </span>
-              {/* </CHANGE> */}
               <br />
               <br />
             </p>
