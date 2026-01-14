@@ -295,13 +295,13 @@ export function HighlightsSection() {
 
           {/* Text content - centered and above images */}
           <div className="max-w-3xl mx-auto mb-12 space-y-4">
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
             </p>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Over the past 15 years, this has been at the core of every role I've worked in.
             </p>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
               enough for anyone to use and precise enough for engineers to trust.
             </p>
