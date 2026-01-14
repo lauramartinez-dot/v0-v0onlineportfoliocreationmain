@@ -305,6 +305,27 @@ export function HighlightsSection() {
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
           </div>
 
+          {/* What and Why sections at top with better visual hierarchy */}
+          <div className="max-w-4xl mx-auto mb-12 space-y-8">
+            {/* What */}
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50/50 to-pink-50/30 border border-purple-200/40">
+              <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wide">What</h3>
+              <div className="text-base text-foreground leading-relaxed space-y-3">
+                <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+              </div>
+            </div>
+
+            {/* Why */}
+            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-pink-50/30 to-purple-50/50 border border-pink-200/40">
+              <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wide">Why</h3>
+              <p className="text-base text-foreground leading-relaxed">
+                Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+                is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+              </p>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             {/* Text content - left side */}
             <div className="text-left">
