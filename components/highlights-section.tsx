@@ -339,16 +339,16 @@ export function HighlightsSection() {
               </div>
             </div>
 
-            {/* Help Center Image */}
+            {/* Documentation Image */}
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
               <Image
-                src="/content-writing-concept.png"
-                alt="Content writing concept"
+                src="/images/adobe-20express-20-20file.png"
+                alt="Documentation interface with getting started guide"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
               />
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                Help Center
+                Documentation
               </div>
             </div>
           </div>
@@ -357,9 +357,9 @@ export function HighlightsSection() {
           <div className="max-w-3xl mx-auto mt-12">
             <div className="rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-sm text-muted-foreground leading-relaxed text-center">
-                <span className="font-semibold text-foreground">My mission:</span> I wholeheartedly believe
-                that tech literacy is the most life-changing skill there is—even more so in today's AI-disrupted world
-                and among those less encouraged into STEM.
+                <span className="font-semibold text-foreground">My mission:</span> I wholeheartedly believe that tech
+                literacy is the most life-changing skill there is—even more so in today's AI-disrupted world and among
+                those less encouraged into STEM.
               </p>
             </div>
           </div>
