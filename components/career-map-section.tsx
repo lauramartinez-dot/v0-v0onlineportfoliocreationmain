@@ -560,6 +560,31 @@ const experiences: Experience[] = [
     color: "#9931e7",
     icon: FileText,
   },
+  {
+    id: "personio-team-building",
+    title: "Operational Team Lead | Early Hire",
+    company: "Personio",
+    workType: "Operational",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2023",
+    location: "Barcelona",
+    country: "Spain",
+    countryFlag: "🇪🇸",
+    type: "work",
+    description:
+      "Joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
+    achievements: [
+      "Managed 10-member international distributed team",
+      "Maintained operational consistency across global team",
+      "Led international tech support operations",
+    ],
+    liveLinks: [],
+    technologies: ["Global Team Management", "Tech Support", "Distributed Operations", "Cross-Cultural Leadership"],
+    relevantSkills: ["Business Acumen", "Remote Collaboration", "True Non-Tech User Empathy"],
+    color: "#9931e7",
+    icon: Globe,
+  },
 ]
 
 interface GroupedCareerCardProps {
