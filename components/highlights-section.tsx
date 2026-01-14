@@ -305,7 +305,7 @@ export function HighlightsSection() {
               enough for anyone to use and precise enough for engineers to trust.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              In short: I bridge complex code and UX by creaion clear, UX-informed documentation.
+              In short: I bridge complex code and UX by creating clear, UX-informed documentation.
             </p>
           </div>
 
