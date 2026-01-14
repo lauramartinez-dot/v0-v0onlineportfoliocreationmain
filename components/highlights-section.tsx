@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { topSkills, type coreSkills, type beyondCoreSkills } from "@/data/highlights"
-import { Star, X } from "lucide-react"
+import { Star, X, ChevronDown } from "lucide-react"
 import Image from "next/image"
 
 function renderDescription(text: string) {
@@ -270,6 +270,18 @@ function HoverExpandableCard({
 
 export function HighlightsSection() {
   const [isHovered, setIsHovered] = useState(false)
+  const [expandedSections, setExpandedSections] = useState({
+    what: true,
+    why: true,
+    how: true,
+  })
+
+  const toggleSection = (section: keyof typeof expandedSections) => {
+    setExpandedSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }))
+  }
 
   return (
     <section id="highlights" className="relative px-4 overflow-hidden py-[70px]">
@@ -296,71 +308,123 @@ export function HighlightsSection() {
             {/* Top row: What and Why side by side */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* What section */}
-              <div className="relative overflow-hidden p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-4">What</h3>
-                <div className="text-base text-muted-foreground leading-relaxed space-y-3">
-                  <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-                  <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+              <div className="relative overflow-hidden rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
+                <button
+                  onClick={() => toggleSection("what")}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80">What</h3>
+                  <ChevronDown
+                    className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
+                      expandedSections.what ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`transition-all duration-300 overflow-hidden ${
+                    expandedSections.what ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6 text-base text-muted-foreground leading-relaxed space-y-3">
+                    <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                    <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+                  </div>
                 </div>
               </div>
 
               {/* Why section */}
-              <div className="relative overflow-hidden p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-4">Why</h3>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
-                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
-                </p>
+              <div className="relative overflow-hidden rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
+                <button
+                  onClick={() => toggleSection("why")}
+                  className="w-full flex items-center justify-between p-6 text-left"
+                >
+                  <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80">Why</h3>
+                  <ChevronDown
+                    className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
+                      expandedSections.why ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`transition-all duration-300 overflow-hidden ${
+                    expandedSections.why ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="px-6 pb-6">
+                    <p className="text-base text-muted-foreground leading-relaxed">
+                      Because I've always wholeheartedly believed that tech literacy is the most life-changing skill
+                      there is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Bottom row: How does it look like - full width with integrated images */}
-            <div className="p-6 rounded-xl bg-card border border-border shadow-sm space-y-6">
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-4">
-                How does it look like
-              </h3>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-                enough for anyone to use and precise enough for engineers to trust.
-              </p>
+            <div className="rounded-xl bg-card border border-border shadow-sm">
+              <button
+                onClick={() => toggleSection("how")}
+                className="w-full flex items-center justify-between p-6 text-left"
+              >
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80">
+                  How does it look like
+                </h3>
+                <ChevronDown
+                  className={`h-5 w-5 text-muted-foreground transition-transform duration-300 ${
+                    expandedSections.how ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+              <div
+                className={`transition-all duration-300 overflow-hidden ${
+                  expandedSections.how ? "max-h-[1000px] opacity-100" : "max-h-0 opacity-0"
+                }`}
+              >
+                <div className="px-6 pb-6 space-y-6">
+                  <p className="text-base text-muted-foreground leading-relaxed">
+                    Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+                    enough for anyone to use and precise enough for engineers to trust.
+                  </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {/* Code Image */}
-                <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
-                  <Image
-                    src="/images/saas-app.png"
-                    alt="Code editor showing React documentation"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                    Code
-                  </div>
-                </div>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    {/* Code Image */}
+                    <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
+                      <Image
+                        src="/images/saas-app.png"
+                        alt="Code editor showing React documentation"
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        Code
+                      </div>
+                    </div>
 
-                {/* UX Image */}
-                <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
-                  <Image
-                    src="/technical-documentation.png"
-                    alt="Technical documentation concept"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                    UX
-                  </div>
-                </div>
+                    {/* UX Image */}
+                    <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
+                      <Image
+                        src="/technical-documentation.png"
+                        alt="Technical documentation concept"
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        UX
+                      </div>
+                    </div>
 
-                {/* Help Center Image */}
-                <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
-                  <Image
-                    src="/content-writing-concept.png"
-                    alt="Content writing concept"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                    Help Center
+                    {/* Help Center Image */}
+                    <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
+                      <Image
+                        src="/content-writing-concept.png"
+                        alt="Content writing concept"
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                        Help Center
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
