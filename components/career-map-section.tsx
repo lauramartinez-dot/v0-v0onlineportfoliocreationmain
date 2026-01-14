@@ -243,7 +243,8 @@ const experiences: Experience[] = [
     title: "Technical Documentation Author",
     company: "Personio",
     workType: "Documentation authoring",
-    logo: "/images/personio-team.jpg",
+    logo: "/personio-logo.png", // Use actual Personio logo for bubble
+    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
     year: "2021",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
@@ -292,7 +293,8 @@ const experiences: Experience[] = [
     title: "Building International Documentation Team",
     company: "Personio",
     workType: "Operational",
-    logo: "/images/personio-team.jpg",
+    logo: "/personio-logo.png", // Use actual Personio logo for bubble
+    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
     year: "2021",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
@@ -317,7 +319,8 @@ const experiences: Experience[] = [
     title: "Scaling Documentation Team During Hypergrowth",
     company: "Personio",
     workType: "Operational",
-    logo: "/images/personio-team.jpg",
+    logo: "/personio-logo.png", // Use actual Personio logo for bubble
+    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
     year: "2021",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
@@ -342,7 +345,8 @@ const experiences: Experience[] = [
     title: "Documentation Localization Expansion",
     company: "Personio",
     workType: "Operational",
-    logo: "/images/personio-team.jpg",
+    logo: "/personio-logo.png", // Use actual Personio logo for bubble
+    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
     year: "2021",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
@@ -365,7 +369,8 @@ const experiences: Experience[] = [
     title: "AI-Assisted Instructional Videos",
     company: "Personio",
     workType: "Hands-on writing",
-    logo: "/images/personio-team.jpg",
+    logo: "/personio-logo.png", // Use actual Personio logo for bubble
+    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
     year: "2021",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
@@ -398,7 +403,8 @@ const experiences: Experience[] = [
     title: "Spanish Tech Support & Localization Team Lead",
     company: "Mogi",
     workType: "Operational",
-    logo: "/images/mogi-logo.png",
+    logo: "/mogi-logo.png", // Use actual Mogi logo for bubble
+    headerImage: "/images/mogi-logo.png", // Use logo as header banner
     year: "2018",
     location: "Dublin",
     country: "Ireland",
@@ -422,7 +428,8 @@ const experiences: Experience[] = [
     title: "International Tech Support Team Lead",
     company: "Personio",
     workType: "Operational",
-    logo: "/images/personio-team.jpg",
+    logo: "/personio-logo.png", // Use actual Personio logo for bubble
+    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
     year: "2023",
     location: "Barcelona",
     country: "Spain",
@@ -446,7 +453,8 @@ const experiences: Experience[] = [
     title: "Spanish-Native Support & Localization Specialist",
     company: "Sysnet",
     workType: "Operational",
-    logo: "/images/sysnet-logo.png",
+    logo: "/sysnet-logo.png", // Use actual Sysnet logo for bubble
+    headerImage: "/images/sysnet-logo.png", // Use logo as header banner
     year: "2017",
     location: "Dublin",
     country: "Ireland",
@@ -615,7 +623,7 @@ const GroupedCareerCard = ({
                 .filter((exp) => exp.liveLinks && exp.liveLinks.length > 0)
                 .flatMap((exp) =>
                   exp.liveLinks.map((link) => {
-                    const roleMatch = link.label.match(/$$([^)]+)$$/)
+                    const roleMatch = link.label.match(/\$\$([^)]+)\$\$/)
                     const role = roleMatch ? roleMatch[1] : undefined
                     const contentType =
                       link.url.includes("youtube.com") || link.url.includes("vimeo.com") || link.url.includes("video")
@@ -666,7 +674,7 @@ const GroupedCareerCard = ({
                           </span>
                         </div>
                         <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors">
-                          {link.label.replace(/\s*$$[^)]+$$\s*/, "")}
+                          {link.label.replace(/\s*\$\$[^)]+\$\$\s*/, "")}
                         </span>
                       </div>
                       <svg
