@@ -149,7 +149,7 @@ function SkillImageCard({
           src={image || "/placeholder.svg"}
           alt={item.title}
           fill
-          className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+          className="object-contain transition-transform duration-300 group-hover:scale-105"
         />
 
         {addPurpleOverlay && <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />}
@@ -315,12 +315,12 @@ export function HighlightsSection() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Code Image */}
             <div className="relative rounded-lg overflow-hidden shadow-md group">
-              <div className="w-full aspect-square relative bg-muted">
+              <div className="w-full aspect-square relative">
                 <Image
                   src="/images/saas-app.png"
                   alt="Code editor showing React documentation"
                   fill
-                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -330,12 +330,12 @@ export function HighlightsSection() {
 
             {/* UX Image */}
             <div className="relative rounded-lg overflow-hidden shadow-md group">
-              <div className="w-full aspect-square relative bg-muted">
+              <div className="w-full aspect-square relative">
                 <Image
                   src="/images/ux-time-entry-interface.png"
                   alt="SaaS app time entry interface"
                   fill
-                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
@@ -345,12 +345,12 @@ export function HighlightsSection() {
 
             {/* Documentation Image */}
             <div className="relative rounded-lg overflow-hidden shadow-md group">
-              <div className="w-full aspect-square relative bg-muted">
+              <div className="w-full aspect-square relative">
                 <Image
                   src="/images/documentation-getting-started.png"
                   alt="Documentation interface with getting started guide"
                   fill
-                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
