@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { FileText, Video, Newspaper } from "lucide-react"
+import { Video, Newspaper, BookOpen, ListChecks } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
@@ -24,11 +24,11 @@ interface CategoryData {
 
 const categories: CategoryData[] = [
   {
-    id: "user-guides",
-    title: "User Guides",
-    icon: FileText,
+    id: "functional-documentation",
+    title: "Functional Documentation",
+    icon: BookOpen,
     description:
-      "Comprehensive user-facing documentation for SaaS platforms, tailored to specific business roles and use cases.",
+      "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
     samples: [
       {
         title: "Overview of permissions and employee roles (Admin)",
@@ -39,20 +39,37 @@ const categories: CategoryData[] = [
         image: "/hr-software-permissions-dashboard.jpg",
       },
       {
-        title: "Grant permissions for everyday tasks in Personio (Admin)",
-        company: "Personio",
-        year: "2021",
-        url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
-        role: "Admin",
-        image: "/hr-permissions-settings-interface.jpg",
-      },
-      {
         title: "Summary of the homepage cards (Admin)",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
         role: "Admin",
         image: "/hr-dashboard-homepage-cards.jpg",
+      },
+      {
+        title: "Log in and explore your new Personio account (End-users)",
+        company: "Personio",
+        year: "2021",
+        url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
+        role: "End-user",
+        image: "/employee-login-welcome-screen.jpg",
+      },
+    ],
+  },
+  {
+    id: "task-based-documentation",
+    title: "Task-Based Documentation",
+    icon: ListChecks,
+    description:
+      "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
+    samples: [
+      {
+        title: "Grant permissions for everyday tasks in Personio (Admin)",
+        company: "Personio",
+        year: "2021",
+        url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
+        role: "Admin",
+        image: "/hr-permissions-settings-interface.jpg",
       },
       {
         title: "Troubleshoot issues with report creation as an Administrator (Admin)",
@@ -69,14 +86,6 @@ const categories: CategoryData[] = [
         url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
         role: "Supervisor",
         image: "/supervisor-reports-interface.jpg",
-      },
-      {
-        title: "Log in and explore your new Personio account (End-users)",
-        company: "Personio",
-        year: "2021",
-        url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
-        role: "End-user",
-        image: "/employee-login-welcome-screen.jpg",
       },
     ],
   },
@@ -120,7 +129,7 @@ const categories: CategoryData[] = [
       },
       {
         title:
-          "Nos savons las canciones del ISIS de memoria: Así es el día a día de quienes revisan los vídeos que reportas en las redes sociales",
+          "Nos savemos las canciones del ISIS de memoria: Así es el día a día de quienes revisan los vídeos que reportas en las redes sociales",
         company: "Business Insider Spain",
         year: "2020",
         url: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
