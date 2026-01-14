@@ -352,7 +352,7 @@ export function HighlightsSection() {
           {/* Why Section */}
           <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-border/50">
             <p className="text-lg text-muted-foreground leading-relaxed italic text-center">
-              Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+              My mission: I've always wholeheartedly believed that tech literacy is the most life-changing skill there
               is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
             </p>
           </div>
