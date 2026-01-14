@@ -329,11 +329,10 @@ export function HighlightsSection() {
                 </div>
               </div>
 
-              {/* UX Image */}
               <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
                 <Image
-                  src="/technical-documentation.png"
-                  alt="Technical documentation concept"
+                  src="/images/adobe-20express-20-20file.png"
+                  alt="SaaS app time entry interface"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
