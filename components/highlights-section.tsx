@@ -290,29 +290,36 @@ export function HighlightsSection() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             {/* Text content - left side */}
             <div className="text-left space-y-8">
-              {/* Introduction - no heading */}
-              <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
-                <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-                <p>This has been at the heart of every role I've ever held for the past 15 years.</p>
-                <p>
+              {/* What section */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">What</h3>
+                <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                  <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                  <p>This has been at the heart of every role I've ever held for the past 15 years.</p>
+                </div>
+              </div>
+
+              {/* Why section */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Why</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
                   is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
                 </p>
               </div>
-            </div>
 
-            {/* Right side - My role now and Images */}
-            <div className="space-y-6">
-              {/* My role now section */}
+              {/* My role as a Senior Technical Writer section */}
               <div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">My role now</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  As a Senior Technical Writer, I translate complex SaaS software (interconnected apps, permissions, and
-                  workflows) into documentation that's clear enough for anyone to use and precise enough for engineers
-                  to trust.
+                  I translate complex SaaS software (interconnected apps, permissions, and workflows) into documentation
+                  that's clear enough for anyone to use and precise enough for engineers to trust.
                 </p>
               </div>
+            </div>
 
+            {/* Right side - Images */}
+            <div className="space-y-6">
               {/* Images showcase */}
               <div className="relative h-[350px] md:h-[450px] overflow-hidden group">
                 {/* Default state: Code */}
