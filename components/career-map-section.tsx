@@ -503,87 +503,80 @@ const experiences: Experience[] = [
     headerImage: "/images/personio-team.jpg",
     year: "2023-2025",
     location: "Barcelona",
-    countryFlag: "🇪🇸",
-    description:
-      "Joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
-    achievements: [
-      "First Technical Writer on a 10-person team to be promoted to Senior",
-      "Mentored a peer to promotion, who became our team's second Senior role two years after my promotion",
-      "Guided a peer to promotion, who became our team's second Senior role two years after my promotion",
-      "Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes",
-      "Partnered with leadership to align content with key metrics: product adoption and customer retention",
-      "Built AI-powered processes to optimize team operations",
-      "Created an AI assistant for Spanish translation review, reducing review time by 90%",
-      "Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
-      "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
-      "Improved data availability and enabled team to generate reports 30% faster",
-      "Continued delivering release documentation through collaboration with cross-functional teams",
-      "Owned content for a key product feature (Analytics), reducing tickets by over 50% (Apr–Sep 2025)",
-      "Leveraged AI tools (ChatGPT, Claude, Gemini, Clueso) to produce new articles and videos in under 4h",
-      "Continued as the only remaining member of Personio's Women Committee (EWG)",
-      "Appointed as Culture Champion Barcelona Lead, led initiatives that boosted office attendance",
-      "Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter",
-    ],
-    liveLinks: [
-      {
-        label: "Overview of permissions and employee roles (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-      },
-      {
-        label: "Grant permissions for everyday tasks in Personio (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
-      },
-      {
-        label: "Summary of the homepage cards (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
-      },
-      {
-        label: "Troubleshoot issues with report creation as an Administrator (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
-      },
-      {
-        label: "Troubleshoot issues with report creation as a Supervisor (Supervisor)",
-        url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
-      },
-      {
-        label: "Log in and explore your new Personio account (End-users)",
-        url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
-      },
-    ],
-    technologies: ["Technical Writing", "API Documentation", "User Guides", "Software Documentation", "AI Tools"],
-    relevantSkills: [
-      "Strong Technical Knowledge",
-      "Multi-Audience Documentation",
-      "Business Acumen",
-      "AI-Driven Operations",
-    ],
-    color: "#9931e7",
-    icon: FileText,
-  },
-  {
-    id: "personio-team-building",
-    title: "Operational Team Lead | Early Hire",
-    company: "Personio",
-    workType: "Operational",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2023",
-    location: "Barcelona",
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
+      "Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy:",
     achievements: [
-      "Managed 10-member international distributed team",
-      "Maintained operational consistency across global team",
-      "Led international tech support operations",
+      "**Content ops (80%):**",
+      "• First Technical Writer on a 10-person team to be promoted to Senior",
+      "• Mentored 10 teammates across Ireland, Spain, and Germany",
+      "• Guided a peer to promotion, who became our team's second Senior role two years after my promotion",
+      "• Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes",
+      "• Partnered with leadership to align content with key metrics: product adoption and customer retention",
+      "• Built AI-powered, data-informed processes to optimize team operations:",
+      "→ Created an AI assistant for Spanish translation review, reducing review time by 90%",
+      "→ Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
+      "→ Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
+      "→ Improved data availability and enabled team to generate reports 30% faster",
+      "",
+      "**Hands-on writing and translation (20%):**",
+      "• Continued delivering release documentation through collaboration with cross-functional teams",
+      "• Owned content for a key product feature (Analytics), reducing tickets by over 50% (Apr–Sep 2025)",
+      "• Leveraged AI tools (ChatGPT, Claude, Gemini, Clueso) to produce new articles and videos in under 4h",
+      "",
+      "**Other roles:**",
+      "• Continued as the only remaining member of Personio's Women Committee (EWG)",
+      "• Appointed as Culture Champion Barcelona Lead, led initiatives that boosted office attendance",
+      "• Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter",
     ],
     liveLinks: [],
-    technologies: ["Global Team Management", "Tech Support", "Distributed Operations", "Cross-Cultural Leadership"],
-    relevantSkills: ["Business Acumen", "Remote Collaboration", "True Non-Tech User Empathy"],
+    technologies: ["Technical Writing", "Content Operations", "AI Tools", "Team Leadership", "Data-Driven Strategy"],
+    relevantSkills: ["AI-Driven Operations", "Business Acumen", "Team Leadership", "Multi-Audience Documentation"],
     color: "#9931e7",
-    icon: Globe,
+    icon: FileText,
+  },
+  {
+    id: "personio-technical-writer",
+    title: "Technical Writer | Bilingual (EN/ES)",
+    company: "Personio",
+    workType: "Operational",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2021-2023",
+    location: "Dresden",
+    country: "Germany",
+    countryFlag: "🇩🇪",
+    type: "work",
+    description:
+      "Early hire — joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth). Hybrid role spanning content ops and hands-on writing:",
+    achievements: [
+      "**Content ops (50%):**",
+      "• Joined a 3-writer German-only team and helped scale it into a 10-writer, globally distributed team",
+      "• Expanded English documentation from 3 languages to 6 via translation and localization",
+      "• Built the Spanish documentation from scratch. Managed 150+ EN>ES translations annually",
+      "• Temporarily acted as a company-wide Spanish Localization Expert and led UX improvements",
+      "",
+      "**Hands-on writing (50%):**",
+      "• Authored English documentation for Personio's SaaS platform",
+      "• Collaborated with cross-functional teams to deliver release documentation",
+      "• Created user guides, admin documentation, and troubleshooting articles",
+      "",
+      "**Other roles:**",
+      "• Joined Personio's Women Committee (EWG) as an active member",
+      "• Contributed to diversity and inclusion initiatives across the company",
+    ],
+    liveLinks: [],
+    technologies: ["Technical Writing", "Localization", "Team Scaling", "Documentation Strategy", "SaaS Documentation"],
+    relevantSkills: [
+      "Strong Technical Knowledge",
+      "Multi-Audience Documentation",
+      "Team Building",
+      "Cross-Cultural Communication",
+    ],
+    color: "#9931e7",
+    icon: FileText,
   },
 ]
 
@@ -697,13 +690,7 @@ const GroupedCareerCard = ({
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="group relative flex flex-col p-3 bg-white dark:bg-gray-900 rounded-xl border-2 border-gray-200 dark:border-gray-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-[1.02] hover:border-primary/50 cursor-pointer overflow-hidden"
-                onClick={(e) => {
-                  e.stopPropagation()
-                  if (exp.liveLinks?.[0]?.url) {
-                    window.open(exp.liveLinks[0].url, "_blank")
-                  }
-                }}
+                className="group relative flex flex-col p-3 bg-white dark:bg-gray-900 rounded-xl border-2 border-gray-200 dark:border-gray-700 transition-all duration-300 shadow-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -715,103 +702,8 @@ const GroupedCareerCard = ({
                     }}
                   />
                 </div>
-
-                {exp.liveLinks?.[0]?.url && (
-                  <div className="relative z-10 mt-2 flex items-center gap-2 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-                    <span>View details</span>
-                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                )}
               </div>
             ))}
-          </div>
-
-          {/* Work Samples section */}
-          <div className="mt-8">
-            <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Work Samples</h3>
-            {(() => {
-              const allLinks = experiences
-                .filter((exp) => exp.liveLinks && exp.liveLinks.length > 0)
-                .flatMap((exp) =>
-                  exp.liveLinks.map((link) => {
-                    const roleMatch = link.label.match(/\$\$([^)]+)\$\$/)
-                    const role = roleMatch ? roleMatch[1] : undefined
-                    const contentType =
-                      link.url.includes("youtube.com") || link.url.includes("vimeo.com") || link.url.includes("video")
-                        ? "video"
-                        : "article"
-                    return {
-                      ...link,
-                      role,
-                      contentType,
-                    }
-                  }),
-                )
-              return allLinks.length > 0 ? (
-                <div className="grid gap-3">
-                  {allLinks.map((link, idx) => (
-                    <a
-                      key={idx}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="group flex items-start justify-between p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-md transition-all duration-300"
-                    >
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          {link.role && (
-                            <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
-                              {link.role}
-                            </span>
-                          )}
-                          <span
-                            className={`text-xs px-2 py-0.5 rounded-full flex items-center gap-1 ${
-                              link.contentType === "video"
-                                ? "bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300"
-                                : "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300"
-                            }`}
-                          >
-                            {link.contentType === "video" ? (
-                              <>
-                                <Video className="h-3 w-3" />
-                                <span>Video</span>
-                              </>
-                            ) : (
-                              <>
-                                <FileText className="h-3 w-3" />
-                                <span>Article</span>
-                              </>
-                            )}
-                          </span>
-                        </div>
-                        <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors">
-                          {link.label.replace(/\s*\$\$[^)]+\$\$\s*/, "")}
-                        </span>
-                      </div>
-                      <svg
-                        className="h-4 w-4 text-gray-400 group-hover:text-primary transition-colors flex-shrink-0 ml-2"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                        />
-                      </svg>
-                    </a>
-                  ))}
-                </div>
-              ) : (
-                <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">No work samples available</p>
-                </div>
-              )
-            })()}
           </div>
         </DialogContent>
       </Dialog>
@@ -824,12 +716,6 @@ const CareerCard = ({ exp }: { exp: Experience }) => {
     <div
       key={exp.id}
       className="group relative cursor-pointer overflow-hidden rounded-lg border-2 border-gray-200 bg-white p-4 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 min-h-[100px]"
-      onClick={(e) => {
-        e.stopPropagation()
-        if (exp.liveLinks?.[0]?.url) {
-          window.open(exp.liveLinks[0].url, "_blank")
-        }
-      }}
     >
       <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -854,15 +740,6 @@ const CareerCard = ({ exp }: { exp: Experience }) => {
             </li>
           ))}
         </ul>
-      )}
-
-      {exp.liveLinks?.[0]?.url && (
-        <div className="relative z-10 flex items-center gap-2 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
-          <span>View details</span>
-          <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </div>
       )}
     </div>
   )
