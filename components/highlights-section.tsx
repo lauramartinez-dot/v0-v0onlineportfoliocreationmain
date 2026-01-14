@@ -314,39 +314,48 @@ export function HighlightsSection() {
           {/* Images - three squares in a row below text */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Code Image */}
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group bg-muted">
-              <Image
-                src="/images/saas-app.png"
-                alt="Code editor showing React documentation"
-                fill
-                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-              />
+            <div className="relative rounded-lg overflow-hidden shadow-md group">
+              <div className="w-full aspect-square">
+                <Image
+                  src="/images/saas-app.png"
+                  alt="Code editor showing React documentation"
+                  width={400}
+                  height={400}
+                  className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
                 Code
               </div>
             </div>
 
             {/* UX Image */}
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group bg-muted">
-              <Image
-                src="/images/ux-time-entry-interface.png"
-                alt="SaaS app time entry interface"
-                fill
-                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-              />
+            <div className="relative rounded-lg overflow-hidden shadow-md group">
+              <div className="w-full aspect-square">
+                <Image
+                  src="/images/ux-time-entry-interface.png"
+                  alt="SaaS app time entry interface"
+                  width={400}
+                  height={400}
+                  className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
                 UX
               </div>
             </div>
 
             {/* Documentation Image */}
-            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group bg-muted">
-              <Image
-                src="/images/documentation-getting-started.png"
-                alt="Documentation interface with getting started guide"
-                fill
-                className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-              />
+            <div className="relative rounded-lg overflow-hidden shadow-md group">
+              <div className="w-full aspect-square">
+                <Image
+                  src="/images/documentation-getting-started.png"
+                  alt="Documentation interface with getting started guide"
+                  width={400}
+                  height={400}
+                  className="w-full h-full transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
                 Documentation
               </div>
