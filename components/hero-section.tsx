@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown } from "lucide-react"
+import { Download, ArrowRight, ChevronDown, MapPin, Globe, Mail } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
@@ -44,23 +44,33 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
+            <h1 className="mb-2 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
               Laura Martínez
             </h1>
 
-            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
+            <h4 className="mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
               Senior Technical Writer
             </h4>
 
-            <p className="mb-8 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              <span className="flex flex-col gap-2">
-                <span>🇪🇸 From Spain</span>
-                <span>💬 Bilingual (English / Spanish)</span>
-                <span>📍 Based in Barcelona</span>
-                <span>📧 lmartmont@gmail.com</span>
+            <p className="mb-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              <span className="flex flex-col gap-1.5">
+                <span className="flex items-center justify-center md:justify-start gap-2">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  <span>From Spain</span>
+                </span>
+                <span className="flex items-center justify-center md:justify-start gap-2">
+                  <Globe className="h-4 w-4 text-primary" />
+                  <span>Bilingual (English / Spanish)</span>
+                </span>
+                <span className="flex items-center justify-center md:justify-start gap-2">
+                  <MapPin className="h-4 w-4 text-primary" />
+                  <span>Based in Barcelona</span>
+                </span>
+                <span className="flex items-center justify-center md:justify-start gap-2">
+                  <Mail className="h-4 w-4 text-primary" />
+                  <span>lmartmont@gmail.com</span>
+                </span>
               </span>
-              <br />
-              <br />
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
