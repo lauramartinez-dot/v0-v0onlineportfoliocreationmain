@@ -78,7 +78,7 @@ const experiences: Experience[] = [
     id: "berlin-journalism-grant",
     title: "Journalism Research Grant",
     company: "Berlin Senate Chancellery",
-    workType: "Hands-on writing", // Changed workType from "Academic" to "Hands-on writing"
+    workType: "Operational", // Changed from "Hands-on writing" to "Operational" to move to achievements section
     logo: "/berlin-science-week-logo.png", // Keep original logo for bubble
     headerImage: "/images/berlin-science-week-event.jpg", // Use event photo for header
     year: "2020",
@@ -768,25 +768,13 @@ export default function CareerMapSection() {
     return yearB - yearA // Most recent first
   })
 
-  const personioExperiences = allSortedExperiences.filter((exp) => exp.company === "Personio")
+  const personioExperiences = allSortedExperiences.filter(
+    (exp) => exp.company === "Personio" && exp.workType === "Operational",
+  )
   const berlinGrantExp = allSortedExperiences.find((exp) => exp.id === "berlin-journalism-grant")
-  const earlyWritingExperiences = allSortedExperiences.filter(
-    (exp) =>
-      (exp.company === "Xataka" || exp.company === "Business Insider Spain" || exp.id === "berlin-journalism-grant") &&
-      exp.workType === "Hands-on writing",
-  )
-  const laterWritingExperiences = allSortedExperiences.filter(
-    (exp) =>
-      (exp.company === "Muy Interesante" || exp.company === "Europa Press") && exp.workType === "Hands-on writing",
-  )
+
   const otherExperiences = allSortedExperiences.filter(
-    (exp) =>
-      exp.company !== "Personio" &&
-      exp.company !== "Xataka" &&
-      exp.company !== "Business Insider Spain" &&
-      exp.company !== "Muy Interesante" &&
-      exp.company !== "Europa Press" &&
-      exp.id !== "berlin-journalism-grant",
+    (exp) => exp.company !== "Personio" && exp.workType === "Operational",
   )
 
   const mogiExp = otherExperiences.find((exp) => exp.company === "Mogi")
@@ -836,7 +824,7 @@ export default function CareerMapSection() {
                   headerImage="/images/personio-team.jpg"
                   location="Dresden & Barcelona, DE/ES"
                   countryFlag="🇩🇪 🇪🇸"
-                  achievementCount={6}
+                  achievementCount={personioExperiences.length}
                   summary="Joined Personio at 300 employees and helped scale the documentation team as the company grew from 300 to 2,000 employees in three years (hypergrowth phase)."
                   experiences={personioExperiences}
                   workType="Operational"
@@ -844,32 +832,19 @@ export default function CareerMapSection() {
               </div>
             </div>
 
-            {/* Early Writing Group (2018-2020) - Including Xataka, Business Insider, Berlin Grant */}
-            <div className="flex items-start gap-6">
-              <div className="w-28 flex-shrink-0 text-right">
-                <div className="text-sm font-bold text-gray-900">2020</div>
-                <div className="text-xs text-gray-400 my-0.5">↓</div>
-                <div className="text-sm font-bold text-gray-900">2018</div>
-                <div className="mt-2 text-xs text-gray-600">Madrid</div>
-                <div className="mt-1">🇪🇸</div>
+            {berlinGrantExp && (
+              <div className="flex items-start gap-6">
+                <div className="w-28 flex-shrink-0 text-right">
+                  <div className="text-sm font-bold text-gray-900">{berlinGrantExp.year}</div>
+                  <div className="mt-1 text-xs text-gray-600">{berlinGrantExp.location}</div>
+                  <div className="mt-1">{berlinGrantExp.countryFlag}</div>
+                </div>
+                <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-purple-600 bg-white" />
+                <div className="flex-1 pb-8">
+                  <CareerCard exp={berlinGrantExp} />
+                </div>
               </div>
-              <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-purple-600 bg-white" />
-              <div className="flex-1 pb-8">
-                <GroupedCareerCard
-                  groupId="early-writing-group"
-                  title="Freelance Tech Journalism"
-                  company="Xataka & Business Insider"
-                  logo="/xataka-logo.png"
-                  headerImage="/images/journalism.jpg"
-                  location="Madrid, ES"
-                  countryFlag="🇪🇸"
-                  achievementCount={3}
-                  summary="Authored tech articles for leading Spanish tech outlets Xataka and Business Insider Spain. Awarded a Journalism Research Grant by the Berlin Senate Chancellery to cover Berlin Science Week 2020 for Spanish media."
-                  experiences={earlyWritingExperiences}
-                  workType="Hands-on writing"
-                />
-              </div>
-            </div>
+            )}
 
             {/* Mogi - 2018 */}
             {mogiExp && (
@@ -897,35 +872,6 @@ export default function CareerMapSection() {
                 <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-[#6EC1E4] bg-white" />
                 <div className="flex-1 pb-8">
                   <CareerCard exp={sysnetExp} />
-                </div>
-              </div>
-            )}
-
-            {/* Later Writing - 2013-2015 */}
-            {laterWritingExperiences.length > 0 && (
-              <div className="flex items-start gap-6">
-                <div className="w-28 flex-shrink-0 text-right">
-                  <div className="text-sm font-bold text-gray-900">2015</div>
-                  <div className="text-xs text-gray-400 my-0.5">↓</div>
-                  <div className="text-sm font-bold text-gray-900">2013</div>
-                  <div className="mt-2 text-xs text-gray-600">Madrid</div>
-                  <div className="mt-1">🇪🇸</div>
-                </div>
-                <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-purple-600 bg-white" />
-                <div className="flex-1 pb-8">
-                  <GroupedCareerCard
-                    groupId="freelance-journalism"
-                    title="Tech Journalist (ES) @ Spanish Tech Outlets"
-                    company="Freelance"
-                    logo="/images/journalism.jpg"
-                    headerImage="/images/journalism.jpg"
-                    location="Madrid, Spain"
-                    countryFlag="🇪🇸"
-                    achievementCount={laterWritingExperiences.length}
-                    summary="Authored 200+ Spanish-language articles for leading tech media outlets including Muy Interesante, Europa Press, Atrevia, and La Moncloa. Covered astronomy, robotics, neuroscience, and physics research."
-                    experiences={laterWritingExperiences}
-                    workType="Writing"
-                  />
                 </div>
               </div>
             )}
