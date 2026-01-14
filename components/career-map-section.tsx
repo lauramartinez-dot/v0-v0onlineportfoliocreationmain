@@ -823,9 +823,64 @@ export default function CareerMapSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {companyCards.map((card) => (
-            <GroupedCareerCard key={card.groupId} {...card} />
-          ))}
+          <GroupedCareerCard
+            company="Personio"
+            title="Senior Technical Writer | Bilingual (EN/ES)"
+            location="Barcelona"
+            countryFlag="🇪🇸"
+            years="2023-2025"
+            logo="/personio-logo.png"
+            headerImage="/images/personio-team.jpg"
+            summary="Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy."
+            experiences={experiences.filter((exp) => exp.id === "personio-senior-technical-writer")}
+          />
+
+          <GroupedCareerCard
+            company="Personio"
+            title="Technical Writer | Bilingual (EN/ES)"
+            location="Dresden, Germany"
+            countryFlag="🇩🇪"
+            years="2021-2023"
+            logo="/personio-logo.png"
+            headerImage="/images/personio-team.jpg"
+            summary="Early hire — joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth)."
+            experiences={experiences.filter((exp) => exp.id === "personio-technical-writer")}
+          />
+
+          {/* Other company cards */}
+          {Object.entries(
+            experiences
+              .filter((exp) => exp.company !== "Personio")
+              .reduce(
+                (acc, exp) => {
+                  if (!acc[exp.company]) {
+                    acc[exp.company] = []
+                  }
+                  acc[exp.company].push(exp)
+                  return acc
+                },
+                {} as Record<string, typeof experiences>,
+              ),
+          ).map(([company, companyExps]) => {
+            const mainExp = companyExps[0]
+            const achievementCount = companyExps.reduce((sum, exp) => sum + (exp.achievements?.length || 0), 0)
+            return (
+              <GroupedCareerCard
+                key={company.toLowerCase().replace(/\s+/g, "-")}
+                groupId={company.toLowerCase().replace(/\s+/g, "-")}
+                title={mainExp.title}
+                company={company}
+                logo={mainExp.logo}
+                headerImage={mainExp.headerImage || mainExp.logo}
+                location={mainExp.location}
+                countryFlag={mainExp.countryFlag}
+                achievementCount={achievementCount}
+                summary={mainExp.description}
+                experiences={companyExps}
+                workType={mainExp.workType}
+              />
+            )
+          })}
         </div>
       </div>
     </section>
