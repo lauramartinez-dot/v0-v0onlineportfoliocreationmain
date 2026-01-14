@@ -303,9 +303,12 @@ export function HighlightsSection() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-              enough for anyone to use and precise enough for engineers to trust. From code to UX to end-user
-              documentation.
+              enough for anyone to use and precise enough for engineers to trust.
             </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Documentation is part of how software becomes accessible: from cryptic code, to semi-friendly UX, to clear, user-friendly documentation.
+            </p>
+            
           </div>
 
           {/* Images - three squares in a row below text */}
