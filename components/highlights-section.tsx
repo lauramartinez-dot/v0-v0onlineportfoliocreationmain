@@ -350,12 +350,14 @@ export function HighlightsSection() {
           </div>
 
           {/* Why Section */}
-          <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-border/30">
-            <p className="text-sm text-muted-foreground/70 leading-relaxed text-center">
-              <span className="italic">My mission:</span> I've always wholeheartedly believed that tech literacy is the
-              most life-changing skill there is—even more so in today's AI-disrupted world and among those less
-              encouraged into STEM.
-            </p>
+          <div className="max-w-3xl mx-auto mt-12">
+            <div className="rounded-xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 shadow-sm">
+              <p className="text-sm text-muted-foreground/80 leading-relaxed text-center">
+                <span className="font-semibold text-foreground">My mission:</span> I've always wholeheartedly believed
+                that tech literacy is the most life-changing skill there is—even more so in today's AI-disrupted world
+                and among those less encouraged into STEM.
+              </p>
+            </div>
           </div>
         </div>
 
