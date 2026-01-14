@@ -306,6 +306,10 @@ export function HighlightsSection() {
               enough for anyone to use and precise enough for engineers to trust. From code to UX to end-user
               documentation.
             </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              In short: I help make software more accessible by bridging cryptic code, usable UX, and user-friendly
+              documentation.
+            </p>
           </div>
 
           {/* Images - three squares in a row below text */}
