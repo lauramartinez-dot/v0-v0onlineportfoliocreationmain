@@ -302,12 +302,10 @@ export function HighlightsSection() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-              enough for anyone to use and precise enough for engineers to trust. From code to UX to end-user
-              documentation.
+              enough for anyone to use and precise enough for engineers to trust.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              In short: I help make software more accessible by turning complex code into clear, UX-informed
-              documentation.
+              In short: I bridge complex code and UX by creaion clear, UX-informed documentation.
             </p>
           </div>
 
