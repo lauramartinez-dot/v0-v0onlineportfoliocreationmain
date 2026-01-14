@@ -295,7 +295,7 @@ export function HighlightsSection() {
                 <h3 className="text-xl font-semibold text-foreground mb-3">What</h3>
                 <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-                  <p>This has been at the heart of every role I've ever held for the past 15 years.</p>
+                  <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
                 </div>
               </div>
 
@@ -303,8 +303,8 @@ export function HighlightsSection() {
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">Why</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
-                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+                  Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill
+                  there is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
                 </p>
               </div>
 
@@ -312,8 +312,9 @@ export function HighlightsSection() {
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I translate complex SaaS software (interconnected apps, permissions, and workflows) into documentation
-                  that's clear enough for anyone to use and precise enough for engineers to trust.
+                  Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+                  enough for anyone to use and precise enough for engineers to trust. Many Technical Writers do this,
+                  but only a few bring:
                 </p>
               </div>
             </div>
