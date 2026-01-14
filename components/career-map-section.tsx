@@ -498,16 +498,16 @@ const experiences: Experience[] = [
     id: "personio-senior-tw",
     title: "Senior Technical Writer | Bilingual (EN/ES)",
     company: "Personio",
-    workType: "Operational",
+    workType: "Documentation authoring",
     logo: "/personio-logo.png",
     headerImage: "/images/personio-team.jpg",
     year: "2023-2025",
-    location: "Barcelona",
+    location: "Barcelona (relocated from Germany)",
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy:",
+      "Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy.",
     achievements: [
       "**Content ops (80%):**",
       "• First Technical Writer on a 10-person team to be promoted to Senior",
@@ -516,10 +516,10 @@ const experiences: Experience[] = [
       "• Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes",
       "• Partnered with leadership to align content with key metrics: product adoption and customer retention",
       "• Built AI-powered, data-informed processes to optimize team operations:",
-      "→ Created an AI assistant for Spanish translation review, reducing review time by 90%",
-      "→ Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
-      "→ Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
-      "→ Improved data availability and enabled team to generate reports 30% faster",
+      "  → Created an AI assistant for Spanish translation review, reducing review time by 90%",
+      "  → Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
+      "  → Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
+      "  → Improved data availability and enabled team to generate reports 30% faster",
       "",
       "**Hands-on writing and translation (20%):**",
       "• Continued delivering release documentation through collaboration with cross-functional teams",
@@ -532,49 +532,35 @@ const experiences: Experience[] = [
       "• Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter",
     ],
     liveLinks: [],
-    technologies: ["Technical Writing", "Content Operations", "AI Tools", "Team Leadership", "Data-Driven Strategy"],
-    relevantSkills: ["AI-Driven Operations", "Business Acumen", "Team Leadership", "Multi-Audience Documentation"],
+    technologies: ["Technical Writing", "Content Operations", "AI Tools", "Team Leadership", "Process Optimization"],
+    relevantSkills: ["AI-Driven Operations", "Team Leadership", "Business Acumen", "Multi-Audience Documentation"],
     color: "#9931e7",
     icon: FileText,
   },
   {
-    id: "personio-technical-writer",
+    id: "personio-tw",
     title: "Technical Writer | Bilingual (EN/ES)",
     company: "Personio",
-    workType: "Operational",
+    workType: "Documentation authoring",
     logo: "/personio-logo.png",
     headerImage: "/images/personio-team.jpg",
     year: "2021-2023",
-    location: "Dresden",
+    location: "Dresden, Germany",
     country: "Germany",
     countryFlag: "🇩🇪",
     type: "work",
     description:
-      "Early hire — joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth). Hybrid role spanning content ops and hands-on writing:",
+      "Early hire — joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth). Hybrid role spanning content ops and hands-on writing.",
     achievements: [
       "**Content ops (50%):**",
       "• Joined a 3-writer German-only team and helped scale it into a 10-writer, globally distributed team",
       "• Expanded English documentation from 3 languages to 6 via translation and localization",
       "• Built the Spanish documentation from scratch. Managed 150+ EN>ES translations annually",
       "• Temporarily acted as a company-wide Spanish Localization Expert and led UX improvements",
-      "",
-      "**Hands-on writing (50%):**",
-      "• Authored English documentation for Personio's SaaS platform",
-      "• Collaborated with cross-functional teams to deliver release documentation",
-      "• Created user guides, admin documentation, and troubleshooting articles",
-      "",
-      "**Other roles:**",
-      "• Joined Personio's Women Committee (EWG) as an active member",
-      "• Contributed to diversity and inclusion initiatives across the company",
     ],
     liveLinks: [],
-    technologies: ["Technical Writing", "Localization", "Team Scaling", "Documentation Strategy", "SaaS Documentation"],
-    relevantSkills: [
-      "Strong Technical Knowledge",
-      "Multi-Audience Documentation",
-      "Team Building",
-      "Cross-Cultural Communication",
-    ],
+    technologies: ["Technical Writing", "Team Scaling", "Localization", "Documentation Strategy"],
+    relevantSkills: ["Team Building", "Localization", "Hypergrowth Management", "Cross-functional Collaboration"],
     color: "#9931e7",
     icon: FileText,
   },
@@ -832,7 +818,7 @@ export default function CareerMapSection() {
             logo="/personio-logo.png"
             headerImage="/images/personio-team.jpg"
             summary="Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy."
-            experiences={experiences.filter((exp) => exp.id === "personio-senior-technical-writer")}
+            experiences={experiences.filter((exp) => exp.id === "personio-senior-tw")}
           />
 
           <GroupedCareerCard
@@ -844,7 +830,7 @@ export default function CareerMapSection() {
             logo="/personio-logo.png"
             headerImage="/images/personio-team.jpg"
             summary="Early hire — joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth)."
-            experiences={experiences.filter((exp) => exp.id === "personio-technical-writer")}
+            experiences={experiences.filter((exp) => exp.id === "personio-tw")}
           />
 
           {/* Other company cards */}
