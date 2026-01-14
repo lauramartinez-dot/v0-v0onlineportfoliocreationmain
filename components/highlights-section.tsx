@@ -236,7 +236,12 @@ function HoverExpandableCard({
         </div>
 
         <div className="flex-grow min-w-0">
-          <h3 className="font-semibold text-foreground text-base leading-tight">{item.title}</h3>
+          <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
+          <p className="text-base text-muted-foreground leading-relaxed">
+            Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+            enough for anyone to use and precise enough for engineers to trust. Many Technical Writers do this, but only
+            a few bring:
+          </p>
         </div>
       </div>
 
@@ -288,44 +293,45 @@ export function HighlightsSection() {
           </div>
 
           {/* What and Why sections at top with better visual hierarchy */}
-          <div className="max-w-4xl mx-auto mb-12 space-y-8">
-            {/* What */}
-            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-50/50 to-pink-50/30 border border-purple-200/40">
-              <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wide">What</h3>
-              <div className="text-base text-foreground leading-relaxed space-y-3">
-                <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-                <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
+            {/* Left column - What and Why sections */}
+            <div className="space-y-6">
+              {/* What section */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent border-2 border-purple-300/30 shadow-lg">
+                <div className="absolute -top-3 -left-3 h-6 w-6 rounded-full bg-purple-500/40 blur-md" />
+                <div className="absolute -bottom-2 -right-2 h-8 w-8 rounded-full bg-pink-500/30 blur-md" />
+                <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">What</h3>
+                <div className="text-lg text-foreground leading-relaxed space-y-4">
+                  <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                  <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+                </div>
+              </div>
+
+              {/* Why section */}
+              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-pink-500/10 via-purple-500/5 to-transparent border-2 border-pink-300/30 shadow-lg">
+                <div className="absolute -top-2 -right-3 h-7 w-7 rounded-full bg-pink-500/40 blur-md" />
+                <div className="absolute -bottom-3 -left-2 h-6 w-6 rounded-full bg-purple-500/30 blur-md" />
+                <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">Why</h3>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+                </p>
               </div>
             </div>
 
-            {/* Why */}
-            <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-pink-50/30 to-purple-50/50 border border-pink-200/40">
-              <h3 className="text-lg font-bold text-primary mb-4 uppercase tracking-wide">Why</h3>
-              <p className="text-base text-foreground leading-relaxed">
-                Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
-                is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
-              </p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-            {/* Text content - left side */}
-            <div className="text-left">
-              {/* My role as a Senior Technical Writer section */}
-              <div>
+            {/* Right column - Role description and images */}
+            <div className="space-y-6">
+              <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
                 <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
                   enough for anyone to use and precise enough for engineers to trust. Many Technical Writers do this,
                   but only a few bring:
                 </p>
               </div>
-            </div>
 
-            {/* Right side - Images */}
-            <div className="space-y-6">
               {/* Images showcase */}
-              <div className="relative h-[350px] md:h-[450px] overflow-hidden group">
+              <div className="relative h-[350px] md:h-[450px] overflow-hidden group rounded-xl shadow-md">
                 {/* Default state: Code */}
                 <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 group-hover:opacity-0">
                   <Image
