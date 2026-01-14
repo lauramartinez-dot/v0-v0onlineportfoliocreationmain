@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { FileText, Video, Newspaper } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
+import Image from "next/image"
 
 interface WritingSample {
   title: string
@@ -10,6 +11,7 @@ interface WritingSample {
   year: string
   url: string
   role?: string
+  image?: string
 }
 
 interface CategoryData {
@@ -34,6 +36,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         role: "Admin",
+        image: "/hr-software-permissions-dashboard.jpg",
       },
       {
         title: "Grant permissions for everyday tasks in Personio (Admin)",
@@ -41,6 +44,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
         role: "Admin",
+        image: "/hr-permissions-settings-interface.jpg",
       },
       {
         title: "Summary of the homepage cards (Admin)",
@@ -48,6 +52,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
         role: "Admin",
+        image: "/hr-dashboard-homepage-cards.jpg",
       },
       {
         title: "Troubleshoot issues with report creation as an Administrator (Admin)",
@@ -55,6 +60,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
         role: "Admin",
+        image: "/analytics-reports-troubleshooting.jpg",
       },
       {
         title: "Troubleshoot issues with report creation as a Supervisor (Supervisor)",
@@ -62,6 +68,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
         role: "Supervisor",
+        image: "/supervisor-reports-interface.jpg",
       },
       {
         title: "Log in and explore your new Personio account (End-users)",
@@ -69,6 +76,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
         role: "End-user",
+        image: "/employee-login-welcome-screen.jpg",
       },
     ],
   },
@@ -84,12 +92,14 @@ const categories: CategoryData[] = [
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+        image: "/video-tutorial-permissions-thumbnail.jpg",
       },
       {
         title: "Overview of the Analytics area",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
+        image: "/video-analytics-dashboard-thumbnail.jpg",
       },
     ],
   },
@@ -106,6 +116,7 @@ const categories: CategoryData[] = [
         company: "Business Insider Spain",
         year: "2020",
         url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
+        image: "/content-moderation-article.jpg",
       },
       {
         title:
@@ -113,18 +124,21 @@ const categories: CategoryData[] = [
         company: "Business Insider Spain",
         year: "2020",
         url: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
+        image: "/social-media-content-review-article.jpg",
       },
       {
         title: "Cerveza gratis, servicio de lavandería y billar: Así se trabaja en las tecnológicas de moda en Dublín",
         company: "Business Insider Spain",
         year: "2020",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
+        image: "/tech-office-dublin-workspace.jpg",
       },
       {
         title: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
         company: "Xataka",
         year: "2014",
         url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
+        image: "/airplane-flight-physics-science.jpg",
       },
       {
         title:
@@ -132,48 +146,56 @@ const categories: CategoryData[] = [
         company: "Xataka",
         year: "2014",
         url: "#",
+        image: "/tiktok-bytedance-tech-startup.jpg",
       },
       {
         title: "10 aplicaciones para sobrevivir a un festival de música",
         company: "Xataka",
         year: "2014",
         url: "#",
+        image: "/music-festival-mobile-apps.jpg",
       },
       {
         title: "Hallan la primera evidencia de la inflación cósmica",
         company: "Muy Interesante",
         year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
+        image: "/cosmic-inflation-universe-science.jpg",
       },
       {
         title: "¿Qué nos pasaría si viajáramos a la velocidad de la luz?",
         company: "Muy Interesante",
         year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "El satélite español Deimos-2 está ya en órbita",
         company: "Muy Interesante",
         year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
         company: "Europa Press",
         year: "2014",
         url: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "Google quiere que grabes todos tus recuerdos como en un capítulo de Black Mirror",
         company: "Europa Press",
         year: "2014",
         url: "#",
+        image: "/placeholder.svg?height=200&width=400",
       },
       {
         title: "10 aplicaciones para sobrevivir a un festival de música",
         company: "Europa Press",
         year: "2014",
         url: "#",
+        image: "/placeholder.svg?height=200&width=400",
       },
     ],
   },
@@ -229,17 +251,26 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
 
           <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Samples</h3>
 
-          <div className="grid gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {category.samples.map((sample, idx) => (
               <a
                 key={idx}
                 href={sample.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-start justify-between p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-primary/50 hover:shadow-md transition-all duration-300"
+                className="group flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary/50 hover:shadow-lg transition-all duration-300"
               >
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2">
+                <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+                  <Image
+                    src={sample.image || "/placeholder.svg?height=200&width=400"}
+                    alt={sample.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+
+                <div className="p-4 flex-1 flex flex-col">
+                  <div className="flex items-center gap-2 mb-2 flex-wrap">
                     <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
                       {sample.company}
                     </span>
@@ -252,23 +283,10 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
                       </span>
                     )}
                   </div>
-                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary transition-colors">
+                  <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors line-clamp-3">
                     {sample.title}
-                  </span>
+                  </h4>
                 </div>
-                <svg
-                  className="h-4 w-4 text-gray-400 group-hover:text-primary transition-colors flex-shrink-0 ml-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
               </a>
             ))}
           </div>
