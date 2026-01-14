@@ -301,8 +301,11 @@ export function HighlightsSection() {
               Over the past 15 years, this has been at the core of every role I've worked in.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, as a Senior Technical Writer, I turn complex SaaS software into documentation that's clear
+              Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
               enough for anyone to use and precise enough for engineers to trust.
+            </p>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              In short: from cryptic code to usable UX to plain documentation.
             </p>
           </div>
 
@@ -319,7 +322,7 @@ export function HighlightsSection() {
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                From cryptic code
+                Code
               </div>
             </div>
 
@@ -334,7 +337,7 @@ export function HighlightsSection() {
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                And semi-intuitive UX
+                UX
               </div>
             </div>
 
@@ -349,7 +352,7 @@ export function HighlightsSection() {
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-              To crystal-clear documentation
+                Documentation
               </div>
             </div>
           </div>

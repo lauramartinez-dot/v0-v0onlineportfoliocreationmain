@@ -240,22 +240,35 @@ const experiences: Experience[] = [
   },
   {
     id: "documentation-authoring",
-    title: "Technical Documentation Author",
+    title: "Senior Technical Writer | Bilingual (EN/ES)",
     company: "Personio",
     workType: "Documentation authoring",
-    logo: "/personio-logo.png", // Use actual Personio logo for bubble
-    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
-    year: "2021",
-    location: "Dresden & Barcelona",
-    country: "Germany & Spain",
-    countryFlag: "🇩🇪 🇪🇸",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2023-2025",
+    location: "Barcelona (relocated from Germany)",
+    country: "Spain",
+    countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Authored and maintained **100+** high-quality English articles for user-facing documentation, each tailored to specific business roles.",
+      "Continued scaling documentation to support the company's transition from a scale-up to a mature organization as **Senior Technical Writer**.",
     achievements: [
-      "Created comprehensive documentation for complex articles",
-      "Covered diverse topics from analytics to API integrations",
-      "Maintained high quality standards across 100+ articles",
+      "First Technical Writer on a 10-person team to be promoted to Senior",
+      "Mentored a peer to promotion, who became our team's second Senior role two years after my promotion",
+      "Guided a peer to promotion, who became our team's second Senior role two years after my promotion",
+      "Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes",
+      "Partnered with leadership to align content with key metrics: product adoption and customer retention",
+      "Built AI-powered processes to optimize team operations",
+      "Created an AI assistant for Spanish translation review, reducing review time by 90%",
+      "Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
+      "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
+      "Improved data availability and enabled team to generate reports 30% faster",
+      "Continued delivering release documentation through collaboration with cross-functional teams",
+      "Owned content for a key product feature (Analytics), reducing tickets by over 50% (Apr–Sep 2025)",
+      "Leveraged AI tools (ChatGPT, Claude, Gemini, Clueso) to produce new articles and videos in under 4h",
+      "Continued as the only remaining member of Personio's Women Committee (EWG)",
+      "Appointed as Culture Champion Barcelona Lead, led initiatives that boosted office attendance",
+      "Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter",
     ],
     liveLinks: [
       {
@@ -283,8 +296,13 @@ const experiences: Experience[] = [
         url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
       },
     ],
-    technologies: ["Technical Writing", "API Documentation", "User Guides", "Software Documentation"],
-    relevantSkills: ["Strong Technical Knowledge", "Multi-Audience Documentation", "Business Acumen"],
+    technologies: ["Technical Writing", "API Documentation", "User Guides", "Software Documentation", "AI Tools"],
+    relevantSkills: [
+      "Strong Technical Knowledge",
+      "Multi-Audience Documentation",
+      "Business Acumen",
+      "AI-Driven Operations",
+    ],
     color: "#9931e7",
     icon: FileText,
   },
@@ -293,23 +311,24 @@ const experiences: Experience[] = [
     title: "Building International Documentation Team",
     company: "Personio",
     workType: "Operational",
-    logo: "/personio-logo.png", // Use actual Personio logo for bubble
-    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
-    year: "2021",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2021-2023",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
-    countryFlag: "🇩🇪",
+    countryFlag: "🇩🇪 🇪🇸",
     type: "work",
     description:
-      "Joined Personio as the **first Spanish-native** Technical Writer and built the Spanish user-facing documentation from scratch.",
+      "Joined Personio as the **first Spanish-native** Technical Writer and helped build the Spanish user-facing documentation from scratch.",
     achievements: [
       "Joined as first Spanish-native Technical Writer",
       "Built Spanish documentation from scratch",
-      "Expanded team from 3 to 10 writers",
+      "Helped expand team from 3 to 10 writers",
       "Transformed German-only to international team",
       "Supported company growth from 300 to 2,000 employees",
     ],
     liveLinks: [{ label: "Personio Help Center", url: "https://support.personio.de" }],
+    technologies: ["Technical Writing", "Team Building", "Localization", "Documentation Strategy"],
     relevantSkills: ["Team Building", "Hiring", "Mentorship", "Cross-Cultural Communication"],
     color: "#9931e7",
     icon: Users,
@@ -319,12 +338,12 @@ const experiences: Experience[] = [
     title: "Scaling Documentation Team During Hypergrowth",
     company: "Personio",
     workType: "Operational",
-    logo: "/personio-logo.png", // Use actual Personio logo for bubble
-    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
-    year: "2021",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2021-2023",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
-    countryFlag: "🇩🇪",
+    countryFlag: "🇩🇪 🇪🇸",
     type: "work",
     description:
       "Helped scale a 3-writer, German-only team into a 10-writer, international team, supporting the company's hypergrowth from **300 to 2,000 people** in 3 years.",
@@ -336,6 +355,7 @@ const experiences: Experience[] = [
       "Established scalable documentation workflows",
     ],
     liveLinks: [{ label: "Personio Help Center", url: "https://support.personio.de" }],
+    technologies: ["Team Scaling", "Process Design", "Documentation Operations", "Cross-functional Collaboration"],
     relevantSkills: ["Team Scaling", "Process Design", "Hypergrowth Management", "International Expansion"],
     color: "#9931e7",
     icon: TrendingUp,
@@ -345,12 +365,12 @@ const experiences: Experience[] = [
     title: "Documentation Localization Expansion",
     company: "Personio",
     workType: "Operational",
-    logo: "/personio-logo.png", // Use actual Personio logo for bubble
-    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
-    year: "2021",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2021-2023",
     location: "Dresden & Barcelona",
     country: "Germany & Spain",
-    countryFlag: "🇩🇪",
+    countryFlag: "🇩🇪 🇪🇸",
     type: "work",
     description:
       "Expanded Personio's user-facing documentation from **3 to 6 languages** through outsourced translation and localization.",
@@ -360,6 +380,7 @@ const experiences: Experience[] = [
       "Ensured quality and consistency across all language versions",
     ],
     liveLinks: [{ label: "Personio Help Center", url: "https://support.personio.de" }],
+    technologies: ["Localization", "Translation Management", "Quality Assurance", "Vendor Management"],
     relevantSkills: ["Project Management", "Cross-Cultural Communication", "Quality Control"],
     color: "#9931e7",
     icon: Globe,
@@ -369,12 +390,12 @@ const experiences: Experience[] = [
     title: "AI-Assisted Instructional Videos",
     company: "Personio",
     workType: "Hands-on writing",
-    logo: "/personio-logo.png", // Use actual Personio logo for bubble
-    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
-    year: "2021",
-    location: "Dresden & Barcelona",
-    country: "Germany & Spain",
-    countryFlag: "🇩🇪",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2023-2025",
+    location: "Barcelona",
+    country: "Spain",
+    countryFlag: "🇪🇸",
     type: "work",
     description:
       "Authored and fully produced English **AI-assisted instructional videos**, and translated them into German and Spanish.",
@@ -403,8 +424,8 @@ const experiences: Experience[] = [
     title: "Spanish Tech Support & Localization Team Lead",
     company: "Mogi",
     workType: "Operational",
-    logo: "/mogi-logo.png", // Use actual Mogi logo for bubble
-    headerImage: "/modern-tech-support-office-team-collaboration.jpg", // Use team/office image for header banner
+    logo: "/mogi-logo.png",
+    headerImage: "/modern-tech-support-office-team-collaboration.jpg",
     year: "2018",
     location: "Dublin",
     country: "Ireland",
@@ -428,8 +449,8 @@ const experiences: Experience[] = [
     title: "International Tech Support Team Lead",
     company: "Personio",
     workType: "Operational",
-    logo: "/personio-logo.png", // Use actual Personio logo for bubble
-    headerImage: "/images/personio-team.jpg", // Keep team photo for header banner
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
     year: "2023",
     location: "Barcelona",
     country: "Spain",
@@ -453,8 +474,8 @@ const experiences: Experience[] = [
     title: "Spanish-Native Support & Localization Specialist",
     company: "Sysnet",
     workType: "Operational",
-    logo: "/sysnet-logo.png", // Use actual Sysnet logo for bubble
-    headerImage: "/customer-support-technology-workspace.jpg", // Use workspace image for header banner
+    logo: "/sysnet-logo.png",
+    headerImage: "/customer-support-technology-workspace.jpg",
     year: "2017",
     location: "Dublin",
     country: "Ireland",
@@ -786,8 +807,8 @@ const RelocationIndicator = ({
 
 export default function CareerMapSection() {
   const allSortedExperiences = experiences.sort((a, b) => {
-    const yearA = a.year === "Present" ? 9999 : Number.parseInt(a.year)
-    const yearB = b.year === "Present" ? 9999 : Number.parseInt(b.year)
+    const yearA = a.year === "Present" ? 9999 : Number.parseInt(a.year.split("-")[0])
+    const yearB = b.year === "Present" ? 9999 : Number.parseInt(b.year.split("-")[0])
     return yearB - yearA // Most recent first
   })
 

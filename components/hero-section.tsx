@@ -9,7 +9,7 @@ export function HeroSection() {
   const [selectedAudience, setSelectedAudience] = useState<string | null>(null)
 
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-32 pb-12 overflow-hidden">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-52 pb-16 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
         <div className="absolute -top-20 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-transparent blur-3xl" />
@@ -20,7 +20,7 @@ export function HeroSection() {
       </div>
 
       <div className="mx-auto max-w-5xl w-full">
-        <div className="flex flex-col items-center gap-6 md:flex-row md:items-center md:justify-between md:gap-10">
+        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
           <div className="order-1 animate-slide-in-left">
             <div className="relative">
               {/* Large blurred circle - bottom left */}
@@ -31,7 +31,7 @@ export function HeroSection() {
               <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
 
               {/* Profile image */}
-              <div className="relative h-48 w-48 md:h-64 md:w-64 lg:h-72 lg:w-72 rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
+              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
                 <Image
                   src="/main-headshot.jpg"
                   alt="Laura Martínez - Senior Technical Writer"
@@ -44,28 +44,30 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <h1 className="mb-1 text-3xl font-bold tracking-tight text-foreground md:text-4xl lg:text-5xl xl:text-6xl">
+            <h1 className="mb-2 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
               Laura Martínez
             </h1>
 
-            <h4 className="mb-3 text-xl font-semibold md:text-2xl lg:text-3xl text-primary">Senior Technical Writer</h4>
+            <h4 className="mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
+              Senior Technical Writer
+            </h4>
 
-            <p className="mb-4 text-xs md:text-base text-muted-foreground max-w-xl leading-relaxed">
+            <p className="mb-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
               <span className="flex flex-col gap-1.5">
                 <span className="flex items-center justify-center md:justify-start gap-2">
-                  <MapPin className="h-3.5 w-3.5 text-primary" />
+                  <MapPin className="h-4 w-4 text-primary" />
                   <span>From Spain</span>
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Globe className="h-3.5 w-3.5 text-primary" />
+                  <Globe className="h-4 w-4 text-primary" />
                   <span>Bilingual (English / Spanish)</span>
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-2">
-                  <MapPin className="h-3.5 w-3.5 text-primary" />
+                  <MapPin className="h-4 w-4 text-primary" />
                   <span>Based in Barcelona</span>
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Mail className="h-3.5 w-3.5 text-primary" />
+                  <Mail className="h-4 w-4 text-primary" />
                   <span>lmartmont@gmail.com</span>
                 </span>
               </span>
@@ -74,7 +76,7 @@ export function HeroSection() {
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
                 size="lg"
-                className="group rounded-full px-6 py-5 text-sm font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
+                className="group rounded-full px-8 py-6 text-base font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
                 asChild
               >
                 <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
@@ -85,7 +87,7 @@ export function HeroSection() {
               <Button
                 size="lg"
                 variant="outline"
-                className="group rounded-full px-6 py-5 text-sm font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
+                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
                 asChild
               >
                 <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
@@ -97,7 +99,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center gap-0.5 mt-24">
+        <div className="flex flex-col items-center gap-0.5 mt-40">
           <span className="text-sm text-muted-foreground">Scroll to explore</span>
           <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
         </div>
