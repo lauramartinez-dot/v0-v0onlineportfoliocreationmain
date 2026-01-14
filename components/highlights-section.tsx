@@ -239,8 +239,8 @@ function HoverExpandableCard({
           <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
           <p className="text-base text-muted-foreground leading-relaxed">
             Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-            enough for anyone to use and precise enough for engineers to trust. Many Technical Writers do this, but only
-            a few bring:
+            enough for anyone to use and precise enough for engineers to trust. From code to UX to end-user
+            documentation.
           </p>
         </div>
       </div>
@@ -303,12 +303,9 @@ export function HighlightsSection() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-              enough for anyone to use and precise enough for engineers to trust.
+              enough for anyone to use and precise enough for engineers to trust. From code to UX to end-user
+              documentation.
             </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-             In short: I help make software more accessible by bridging cryptic code, usable UX, and user-friendly documentation.
-            </p>
-            
           </div>
 
           {/* Images - three squares in a row below text */}
