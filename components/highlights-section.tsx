@@ -293,115 +293,65 @@ export function HighlightsSection() {
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
           </div>
 
-          {/* What section - compact button that expands on hover */}
-          <div
-            onMouseEnter={() => setHoveredSection("what")}
-            onMouseLeave={() => setHoveredSection(null)}
-            className={`relative overflow-hidden rounded-lg bg-card border border-border/50 shadow-sm transition-all duration-500 ease-out ${
-              hoveredSection === "what" ? "shadow-lg border-primary/40" : ""
-            }`}
-          >
-            <div className={`transition-all duration-500 ease-out ${hoveredSection === "what" ? "p-6" : "px-6 py-3"}`}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 cursor-default">What</h3>
-              <div
-                className={`transition-all duration-500 ease-out overflow-hidden ${
-                  hoveredSection === "what" ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="text-base text-muted-foreground leading-relaxed space-y-3">
-                  <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-                  <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Why section - compact button that expands on hover */}
-          <div
-            onMouseEnter={() => setHoveredSection("why")}
-            onMouseLeave={() => setHoveredSection(null)}
-            className={`relative overflow-hidden rounded-lg bg-card border border-border/50 shadow-sm transition-all duration-500 ease-out ${
-              hoveredSection === "why" ? "shadow-lg border-primary/40" : ""
-            }`}
-          >
-            <div className={`transition-all duration-500 ease-out ${hoveredSection === "why" ? "p-6" : "px-6 py-3"}`}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 cursor-default">Why</h3>
-              <div
-                className={`transition-all duration-500 ease-out overflow-hidden ${
-                  hoveredSection === "why" ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
-                }`}
-              >
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
-                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left column - Text content */}
+            <div className="space-y-6">
+              <div className="space-y-4">
+                <p className="text-lg text-foreground leading-relaxed">
+                  I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
+                </p>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Over the past 15 years, this has been at the core of every role I've worked in.
+                </p>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill
+                  there is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+                </p>
+                <p className="text-lg text-foreground leading-relaxed">
+                  Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+                  enough for anyone to use and precise enough for engineers to trust.
                 </p>
               </div>
             </div>
-          </div>
 
-          {/* How does it look like section - compact button that expands on hover with images */}
-          <div
-            onMouseEnter={() => setHoveredSection("how")}
-            onMouseLeave={() => setHoveredSection(null)}
-            className={`relative overflow-hidden rounded-lg bg-card border border-border/50 shadow-sm transition-all duration-500 ease-out ${
-              hoveredSection === "how" ? "shadow-lg border-primary/40" : ""
-            }`}
-          >
-            <div className={`transition-all duration-500 ease-out ${hoveredSection === "how" ? "p-6" : "px-6 py-3"}`}>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 cursor-default">
-                How does it look like
-              </h3>
-              <div
-                className={`transition-all duration-500 ease-out overflow-hidden ${
-                  hoveredSection === "how" ? "max-h-[1000px] opacity-100 mt-6" : "max-h-0 opacity-0"
-                }`}
-              >
-                <div className="space-y-6">
-                  <p className="text-base text-muted-foreground leading-relaxed">
-                    Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-                    enough for anyone to use and precise enough for engineers to trust.
-                  </p>
+            {/* Right column - Images */}
+            <div className="grid grid-cols-1 gap-4">
+              {/* Code Image */}
+              <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
+                <Image
+                  src="/images/saas-app.png"
+                  alt="Code editor showing React documentation"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  Code
+                </div>
+              </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                    {/* Code Image */}
-                    <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
-                      <Image
-                        src="/images/saas-app.png"
-                        alt="Code editor showing React documentation"
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                        Code
-                      </div>
-                    </div>
+              {/* UX Image */}
+              <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
+                <Image
+                  src="/technical-documentation.png"
+                  alt="Technical documentation concept"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  UX
+                </div>
+              </div>
 
-                    {/* UX Image */}
-                    <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
-                      <Image
-                        src="/technical-documentation.png"
-                        alt="Technical documentation concept"
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                        UX
-                      </div>
-                    </div>
-
-                    {/* Help Center Image */}
-                    <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
-                      <Image
-                        src="/content-writing-concept.png"
-                        alt="Content writing concept"
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                        Help Center
-                      </div>
-                    </div>
-                  </div>
+              {/* Help Center Image */}
+              <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
+                <Image
+                  src="/content-writing-concept.png"
+                  alt="Content writing concept"
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  Help Center
                 </div>
               </div>
             </div>
