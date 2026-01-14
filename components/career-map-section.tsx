@@ -494,6 +494,72 @@ const experiences: Experience[] = [
     color: "#9931e7",
     icon: Globe,
   },
+  {
+    id: "personio-senior-tw",
+    title: "Senior Technical Writer | Bilingual (EN/ES)",
+    company: "Personio",
+    workType: "Operational",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2023-2025",
+    location: "Barcelona",
+    countryFlag: "🇪🇸",
+    description:
+      "Early hire — joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
+    achievements: [
+      "First Technical Writer on a 10-person team to be promoted to Senior",
+      "Mentored a peer to promotion, who became our team's second Senior role two years after my promotion",
+      "Guided a peer to promotion, who became our team's second Senior role two years after my promotion",
+      "Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes",
+      "Partnered with leadership to align content with key metrics: product adoption and customer retention",
+      "Built AI-powered processes to optimize team operations",
+      "Created an AI assistant for Spanish translation review, reducing review time by 90%",
+      "Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
+      "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
+      "Improved data availability and enabled team to generate reports 30% faster",
+      "Continued delivering release documentation through collaboration with cross-functional teams",
+      "Owned content for a key product feature (Analytics), reducing tickets by over 50% (Apr–Sep 2025)",
+      "Leveraged AI tools (ChatGPT, Claude, Gemini, Clueso) to produce new articles and videos in under 4h",
+      "Continued as the only remaining member of Personio's Women Committee (EWG)",
+      "Appointed as Culture Champion Barcelona Lead, led initiatives that boosted office attendance",
+      "Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter",
+    ],
+    liveLinks: [
+      {
+        label: "Overview of permissions and employee roles (Admin)",
+        url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+      },
+      {
+        label: "Grant permissions for everyday tasks in Personio (Admin)",
+        url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
+      },
+      {
+        label: "Summary of the homepage cards (Admin)",
+        url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
+      },
+      {
+        label: "Troubleshoot issues with report creation as an Administrator (Admin)",
+        url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
+      },
+      {
+        label: "Troubleshoot issues with report creation as a Supervisor (Supervisor)",
+        url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
+      },
+      {
+        label: "Log in and explore your new Personio account (End-users)",
+        url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
+      },
+    ],
+    technologies: ["Technical Writing", "API Documentation", "User Guides", "Software Documentation", "AI Tools"],
+    relevantSkills: [
+      "Strong Technical Knowledge",
+      "Multi-Audience Documentation",
+      "Business Acumen",
+      "AI-Driven Operations",
+    ],
+    color: "#9931e7",
+    icon: FileText,
+  },
 ]
 
 interface GroupedCareerCardProps {
