@@ -297,34 +297,46 @@ export function HighlightsSection() {
             {/* Left column - What and Why sections */}
             <div className="space-y-6">
               {/* What section */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-purple-500/10 via-pink-500/5 to-transparent border-2 border-purple-300/30 shadow-lg">
-                <div className="absolute -top-3 -left-3 h-6 w-6 rounded-full bg-purple-500/40 blur-md" />
-                <div className="absolute -bottom-2 -right-2 h-8 w-8 rounded-full bg-pink-500/30 blur-md" />
-                <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">What</h3>
-                <div className="text-lg text-foreground leading-relaxed space-y-4">
-                  <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-                  <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+              <div className="relative overflow-hidden p-8 rounded-2xl bg-gradient-to-br from-purple-50 via-white to-purple-50/50 dark:from-purple-950/30 dark:via-background dark:to-purple-950/20 border border-purple-200 dark:border-purple-800/50 shadow-[0_8px_30px_rgb(147,51,234,0.12)] hover:shadow-[0_12px_40px_rgb(147,51,234,0.18)] transition-shadow duration-300">
+                <div className="absolute top-0 left-0 h-24 w-24 rounded-full bg-purple-400/20 dark:bg-purple-500/20 blur-3xl" />
+                <div className="absolute bottom-0 right-0 h-20 w-20 rounded-full bg-pink-400/20 dark:bg-pink-500/20 blur-2xl" />
+
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 dark:from-purple-400 dark:to-pink-400 bg-clip-text text-transparent mb-5 tracking-tight">
+                    What
+                  </h3>
+                  <div className="text-lg text-foreground/90 leading-relaxed space-y-4">
+                    <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                    <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
+                     <p>Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear enough for anyone to use and precise enough for engineers to trust.</p>
+                  </div>
                 </div>
               </div>
 
               {/* Why section */}
-              <div className="relative p-8 rounded-2xl bg-gradient-to-br from-pink-500/10 via-purple-500/5 to-transparent border-2 border-pink-300/30 shadow-lg">
-                <div className="absolute -top-2 -right-3 h-7 w-7 rounded-full bg-pink-500/40 blur-md" />
-                <div className="absolute -bottom-3 -left-2 h-6 w-6 rounded-full bg-purple-500/30 blur-md" />
-                <h3 className="text-2xl font-bold text-primary mb-4 tracking-tight">Why</h3>
-                <p className="text-lg text-foreground leading-relaxed">
-                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
-                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
-                </p>
+              <div className="relative overflow-hidden p-8 rounded-2xl bg-gradient-to-br from-pink-50 via-white to-pink-50/50 dark:from-pink-950/30 dark:via-background dark:to-pink-950/20 border border-pink-200 dark:border-pink-800/50 shadow-[0_8px_30px_rgb(236,72,153,0.12)] hover:shadow-[0_12px_40px_rgb(236,72,153,0.18)] transition-shadow duration-300">
+                <div className="absolute top-0 right-0 h-24 w-24 rounded-full bg-pink-400/20 dark:bg-pink-500/20 blur-3xl" />
+                <div className="absolute bottom-0 left-0 h-20 w-20 rounded-full bg-purple-400/20 dark:bg-purple-500/20 blur-2xl" />
+
+                <div className="relative z-10">
+                  <h3 className="text-3xl font-bold bg-gradient-to-r from-pink-600 to-purple-600 dark:from-pink-400 dark:to-purple-400 bg-clip-text text-transparent mb-5 tracking-tight">
+                    Why
+                  </h3>
+                  <p className="text-lg text-foreground/90 leading-relaxed">
+                    Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+                    is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+                  </p>
+                </div>
               </div>
             </div>
 
             {/* Right column - Role description and images */}
             <div className="space-y-6">
               <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <h3 className="text-xl font-semibold text-foreground mb-3">How does it look like    </h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">How does it look like </h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  As a Senior Technical Writer, I translate complex SaaS software into documentation that&apos;s clear enough for anyone to use and precise enough for engineers to trust. 
+                  As a Senior Technical Writer, I translate complex SaaS software into documentation that&apos;s clear
+                  enough for anyone to use and precise enough for engineers to trust.
                 </p>
               </div>
 
