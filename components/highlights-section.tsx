@@ -305,12 +305,6 @@ export function HighlightsSection() {
               Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
               enough for anyone to use and precise enough for engineers to trust.
             </p>
-            <div className="pt-4 border-t border-border/50">
-              <p className="text-lg text-muted-foreground leading-relaxed italic">
-                Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill
-                there is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
-              </p>
-            </div>
           </div>
 
           {/* Images - three squares in a row below text */}
@@ -353,6 +347,14 @@ export function HighlightsSection() {
                 Help Center
               </div>
             </div>
+          </div>
+
+          {/* Why Section */}
+          <div className="max-w-3xl mx-auto mt-12 pt-8 border-t border-border/50">
+            <p className="text-lg text-muted-foreground leading-relaxed italic text-center">
+              Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+              is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+            </p>
           </div>
         </div>
 
