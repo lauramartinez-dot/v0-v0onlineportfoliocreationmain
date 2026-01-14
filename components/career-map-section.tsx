@@ -630,7 +630,7 @@ const GroupedCareerCard = ({
             className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />
           {/* Logo bubble overlay */}
-          <div className="absolute top-4 right-4 h-24 w-24 overflow-hidden rounded-full border-4 border-background bg-background shadow-lg">
+          <div className="absolute top-4 right-4 h-32 w-32 overflow-hidden rounded-full border-4 border-background bg-background shadow-lg">
             <img
               src={logo || "/placeholder.svg"}
               alt={`${company} logo`}
