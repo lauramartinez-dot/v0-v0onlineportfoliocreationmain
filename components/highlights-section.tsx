@@ -278,24 +278,6 @@ export function HighlightsSection() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        {/* What Section */}
-        <div className="mb-16 text-center max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-foreground mb-4">What</h2>
-          <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
-            <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
-            <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
-          </div>
-        </div>
-
-        {/* Why Section */}
-        <div className="mb-20 text-center max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold text-foreground mb-4">Why</h2>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there is—even
-            more so in today's AI-disrupted world and among those less encouraged into STEM.
-          </p>
-        </div>
-
         {/* My Role Section */}
         <div className="mb-20">
           <div className="text-center mb-8">
