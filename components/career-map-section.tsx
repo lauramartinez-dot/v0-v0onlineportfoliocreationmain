@@ -404,7 +404,7 @@ const experiences: Experience[] = [
     company: "Mogi",
     workType: "Operational",
     logo: "/mogi-logo.png", // Use actual Mogi logo for bubble
-    headerImage: "/images/mogi-logo.png", // Use logo as header banner
+    headerImage: "/modern-tech-support-office-team-collaboration.jpg", // Use team/office image for header banner
     year: "2018",
     location: "Dublin",
     country: "Ireland",
@@ -454,7 +454,7 @@ const experiences: Experience[] = [
     company: "Sysnet",
     workType: "Operational",
     logo: "/sysnet-logo.png", // Use actual Sysnet logo for bubble
-    headerImage: "/images/sysnet-logo.png", // Use logo as header banner
+    headerImage: "/customer-support-technology-workspace.jpg", // Use workspace image for header banner
     year: "2017",
     location: "Dublin",
     country: "Ireland",
@@ -508,43 +508,44 @@ const GroupedCareerCard = ({
     <>
       <div
         onClick={() => setOpen(true)}
-        className="group relative cursor-pointer overflow-hidden rounded-2xl border-2 border-gray-200/80 bg-white shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+        className="group relative cursor-pointer overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-md"
       >
-        {/* Header Image */}
-        <div className="relative h-64 border-b-2 border-gray-200/80 overflow-hidden bg-gray-50">
+        {/* Header image with logo bubble */}
+        <div className="relative h-48 w-full overflow-hidden bg-muted">
           <img
-            src={headerImage || logo || "/placeholder.svg"}
-            alt={`${company} image`}
-            className="h-full w-full object-cover"
+            src={headerImage || "/placeholder.svg"}
+            alt={company}
+            className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />
-
-          <div className="absolute top-4 right-4 w-40 h-40 rounded-full bg-white shadow-xl border-2 border-gray-200 flex items-center justify-center overflow-hidden">
+          {/* Logo bubble overlay */}
+          <div className="absolute top-4 right-4 h-16 w-16 overflow-hidden rounded-full border-4 border-background bg-background shadow-lg">
             <img
               src={logo || "/placeholder.svg"}
               alt={`${company} logo`}
-              className="w-full h-full object-contain scale-[2]"
+              className="h-full w-full object-contain p-1"
             />
           </div>
         </div>
 
-        <div className="p-8">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-          <p
-            className="relative z-10 text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200 group-hover:text-gray-900 dark:group-hover:text-gray-50 transition-colors duration-300"
-            dangerouslySetInnerHTML={{
-              __html: summary.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
-            }}
-          />
-
-          <div className="relative z-10 mt-4 flex items-center gap-2 text-sm font-medium text-primary">
-            <span>View {achievementCount} achievements</span>
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+        {/* Card content */}
+        <div className="p-6">
+          <h3 className="mb-2 text-xl font-semibold text-foreground">{company}</h3>
+          {/* Date and location info */}
+          <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground">
+            <span>{countryFlag}</span>
+            <span>{location}</span>
+            <span>•</span>
+            <span>{experiences[0]?.year}</span>
           </div>
-
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <p className="mb-4 text-sm text-muted-foreground">{summary}</p>
+          <div className="flex items-center justify-between">
+            <span className="text-sm font-medium text-primary">
+              {achievementCount} achievement{achievementCount !== 1 ? "s" : ""}
+            </span>
+            <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
+              View details →
+            </span>
+          </div>
         </div>
       </div>
 
