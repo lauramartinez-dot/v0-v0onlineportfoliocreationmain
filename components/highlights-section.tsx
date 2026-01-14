@@ -359,8 +359,8 @@ export function HighlightsSection() {
 
           {/* Why Section */}
           <div className="max-w-3xl mx-auto mt-12">
-            <div className="rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
-              <p className="text-sm text-muted-foreground leading-relaxed text-center">
+            <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
+              <p className="text-base text-muted-foreground leading-relaxed text-center">
                 <span className="font-semibold text-foreground">My mission:</span> I help people—especially those less
                 encouraged into STEM—gain tech literacy, because I wholeheartedly believe it is the most life-changing
                 skill there is, even more so in today's AI-disrupted world.
