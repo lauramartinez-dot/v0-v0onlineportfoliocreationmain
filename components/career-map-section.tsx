@@ -641,7 +641,8 @@ const GroupedCareerCard = ({
 
         {/* Card content */}
         <div className="p-6">
-          <h3 className="mb-2 text-xl font-semibold text-foreground">{company}</h3>
+          <h3 className="mb-2 text-xl font-semibold text-foreground">{title}</h3>
+          <p className="mb-3 text-sm font-medium text-muted-foreground">{company}</p>
           {/* Date and location info */}
           <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground">
             <span>{countryFlag}</span>
