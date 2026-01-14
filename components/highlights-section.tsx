@@ -306,8 +306,7 @@ export function HighlightsSection() {
               documentation.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              In short: I help make software more accessible by bridging cryptic code, usable UX, and user-friendly
-              documentation.
+              In short: I help make software more accessible by turning complex code into clear, UX-informed documentation.
             </p>
           </div>
 
