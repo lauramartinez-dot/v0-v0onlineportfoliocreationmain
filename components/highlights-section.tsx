@@ -287,14 +287,34 @@ export function HighlightsSection() {
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
           </div>
 
-          <div className="text-center max-w-4xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              I turn jargon-heavy technology into content anyone can understand.
-              <br />
-              <br />
-              For the past 5 years, that's meant creating UX-focused documentation for software users.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            {/* Text content - left side */}
+            <div className="text-left space-y-8">
+              {/* What section */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">What</h3>
+                <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                  <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                  <p>I've done this consistently for the past 15 years, at the heart of every role I've ever held</p>
+                  <p>
+                    As a Senior Technical Writer, I translate complex SaaS software (interconnected apps, permissions,
+                    and workflows) into documentation that's clear enough for anyone to use and precise enough for
+                    engineers to trust.
+                  </p>
+                </div>
+              </div>
 
+              {/* Why section */}
+              <div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">Why</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+                </p>
+              </div>
+            </div>
+
+            {/* Images - right side */}
             <div className="relative h-[350px] md:h-[450px] overflow-hidden group">
               {/* Default state: Code */}
               <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 group-hover:opacity-0">
