@@ -359,7 +359,7 @@ export function HighlightsSection() {
 
           {/* Why Section */}
           <div className="max-w-3xl mx-auto mt-12">
-            <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
+            <div className="rounded-lg border border-purple-200/60 bg-gradient-to-br from-purple-50/80 via-pink-50/50 to-purple-50/80 backdrop-blur-sm p-6 shadow-lg shadow-purple-500/20 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/30 hover:border-purple-300/70">
               <p className="text-base text-muted-foreground leading-relaxed text-center">
                 <span className="font-semibold text-foreground">My mission:</span> I help people—especially those less
                 encouraged into STEM—gain tech literacy, because I wholeheartedly believe it is the most life-changing
