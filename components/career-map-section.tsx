@@ -716,15 +716,29 @@ const CareerCard = ({ exp }: { exp: Experience }) => {
         <p
           className="text-sm leading-relaxed text-gray-700 dark:text-gray-300"
           dangerouslySetInnerHTML={{
-            __html: exp.description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
+            __html: exp.description.replace(
+              /\*\*(.*?)\*\*/g,
+              "<strong class='text-foreground font-semibold'>$1</strong>",
+            ),
           }}
         />
       </div>
 
+      {exp.achievements && exp.achievements.length > 0 && (
+        <ul className="space-y-1.5 mb-4">
+          {exp.achievements.slice(0, 3).map((achievement, idx) => (
+            <li key={idx} className="flex items-start gap-2 text-xs text-muted-foreground">
+              <span className="text-primary mt-0.5">•</span>
+              <span>{achievement}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+
       {exp.liveLinks?.[0]?.url && (
-        <div className="relative z-10 mt-3 flex items-center gap-2 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="relative z-10 flex items-center gap-2 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
           <span>View details</span>
-          <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
           </svg>
         </div>
@@ -768,22 +782,11 @@ export default function CareerMapSection() {
     return yearB - yearA // Most recent first
   })
 
-  const personioExperiences = allSortedExperiences.filter(
-    (exp) => exp.company === "Personio" && exp.workType === "Operational",
-  )
-  const berlinGrantExp = allSortedExperiences.find((exp) => exp.id === "berlin-journalism-grant")
-
-  const otherExperiences = allSortedExperiences.filter(
-    (exp) => exp.company !== "Personio" && exp.workType === "Operational",
-  )
-
-  const mogiExp = otherExperiences.find((exp) => exp.company === "Mogi")
-  const sysnetExp = otherExperiences.find((exp) => exp.company === "Sysnet")
-  const remainingExperiences = otherExperiences.filter((exp) => exp.company !== "Mogi" && exp.company !== "Sysnet")
+  const operationalExperiences = allSortedExperiences.filter((exp) => exp.workType === "Operational")
 
   return (
     <section id="top-achievements" className="scroll-mt-20 py-20 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-4">
         <div className="mb-12 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
             What I Worked On
@@ -791,105 +794,72 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-48 top-0 h-full w-0.5 bg-gradient-to-b from-purple-600 via-[#6EC1E4] to-gray-300" />
-
-          <div className="space-y-8">
-            {/* Personio Group - 2021-Present */}
-            <div className="flex items-start gap-6">
-              <div className="w-28 flex-shrink-0 text-right">
-                <div className="text-sm font-bold text-gray-900">{"2025\n"}</div>
-                <div className="mt-1 text-xs text-gray-600">Barcelona</div>
-                <div className="mt-1">🇪🇸</div>
-                <div className="my-3 flex items-center justify-end gap-1">
-                  <div className="h-8 w-0.5 bg-gradient-to-b from-gray-300 to-transparent"></div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {operationalExperiences.map((exp) => (
+            <div
+              key={exp.id}
+              className="group relative cursor-pointer overflow-hidden rounded-xl border border-border bg-card shadow-sm hover:shadow-lg hover:border-primary/50 transition-all duration-300 p-6"
+              onClick={(e) => {
+                e.stopPropagation()
+                if (exp.liveLinks?.[0]?.url) {
+                  window.open(exp.liveLinks[0].url, "_blank")
+                }
+              }}
+            >
+              <div className="flex items-start justify-between mb-4">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 rounded-lg bg-gray-100 flex items-center justify-center overflow-hidden">
+                    <img
+                      src={exp.logo || "/placeholder.svg"}
+                      alt={exp.company}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground">{exp.company}</h3>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <span>{exp.countryFlag}</span>
+                      <span>{exp.year}</span>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded">
-                  Relocated 🇩🇪 &gt; 🇪🇸
-                </div>
-                <div className="my-3 flex items-center justify-end gap-1">
-                  <div className="h-8 w-0.5 bg-gradient-to-b from-transparent to-gray-300"></div>
-                </div>
-                <div className="text-sm font-bold text-gray-900">2021</div>
-                <div className="mt-1 text-xs text-gray-600">Dresden</div>
-                <div className="mt-1">🇩🇪</div>
               </div>
-              <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-purple-600 bg-white" />
-              <div className="flex-1 pb-8">
-                <GroupedCareerCard
-                  groupId="personio-group"
-                  title="Technical Writing & Leadership @ Personio"
-                  company="Personio"
-                  logo="/images/personio-logo.png"
-                  headerImage="/images/personio-team.jpg"
-                  location="Dresden & Barcelona, DE/ES"
-                  countryFlag="🇩🇪 🇪🇸"
-                  achievementCount={personioExperiences.length}
-                  summary="Joined Personio at 300 employees and helped scale the documentation team as the company grew from 300 to 2,000 employees in three years (hypergrowth phase)."
-                  experiences={personioExperiences}
-                  workType="Operational"
+
+              <div className="relative z-10">
+                <p
+                  className="text-sm leading-relaxed text-muted-foreground mb-4"
+                  dangerouslySetInnerHTML={{
+                    __html: exp.description.replace(
+                      /\*\*(.*?)\*\*/g,
+                      "<strong class='text-foreground font-semibold'>$1</strong>",
+                    ),
+                  }}
                 />
               </div>
+
+              {exp.achievements && exp.achievements.length > 0 && (
+                <ul className="space-y-1.5 mb-4">
+                  {exp.achievements.slice(0, 3).map((achievement, idx) => (
+                    <li key={idx} className="flex items-start gap-2 text-xs text-muted-foreground">
+                      <span className="text-primary mt-0.5">•</span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {exp.liveLinks?.[0]?.url && (
+                <div className="relative z-10 flex items-center gap-2 text-xs font-medium text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+                  <span>View details</span>
+                  <svg className="h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              )}
+
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.03] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
-
-            {berlinGrantExp && (
-              <div className="flex items-start gap-6">
-                <div className="w-28 flex-shrink-0 text-right">
-                  <div className="text-sm font-bold text-gray-900">{berlinGrantExp.year}</div>
-                  <div className="mt-1 text-xs text-gray-600">{berlinGrantExp.location}</div>
-                  <div className="mt-1">{berlinGrantExp.countryFlag}</div>
-                </div>
-                <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-purple-600 bg-white" />
-                <div className="flex-1 pb-8">
-                  <CareerCard exp={berlinGrantExp} />
-                </div>
-              </div>
-            )}
-
-            {/* Mogi - 2018 */}
-            {mogiExp && (
-              <div className="flex items-start gap-6">
-                <div className="w-28 flex-shrink-0 text-right">
-                  <div className="text-sm font-bold text-gray-900">{mogiExp.year}</div>
-                  <div className="mt-1 text-xs text-gray-600">{mogiExp.location.split(",")[0]}</div>
-                  <div className="mt-1">{mogiExp.countryFlag}</div>
-                </div>
-                <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-[#6EC1E4] bg-white" />
-                <div className="flex-1 pb-8">
-                  <CareerCard exp={mogiExp} />
-                </div>
-              </div>
-            )}
-
-            {/* Sysnet - 2017 */}
-            {sysnetExp && (
-              <div className="flex items-start gap-6">
-                <div className="w-28 flex-shrink-0 text-right">
-                  <div className="text-sm font-bold text-gray-900">{sysnetExp.year}</div>
-                  <div className="mt-1 text-xs text-gray-600">{sysnetExp.location.split(",")[0]}</div>
-                  <div className="mt-1">{sysnetExp.countryFlag}</div>
-                </div>
-                <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-[#6EC1E4] bg-white" />
-                <div className="flex-1 pb-8">
-                  <CareerCard exp={sysnetExp} />
-                </div>
-              </div>
-            )}
-
-            {remainingExperiences.map((exp) => (
-              <div key={exp.id} className="flex items-start gap-6">
-                <div className="w-28 flex-shrink-0 text-right">
-                  <div className="text-sm font-bold text-gray-900">{exp.year}</div>
-                  <div className="mt-1 text-xs text-gray-600">{exp.location.split(",")[0]}</div>
-                  <div className="mt-1">{exp.countryFlag}</div>
-                </div>
-                <div className="relative mt-1.5 h-3 w-3 flex-shrink-0 rounded-full border-2 border-purple-600 bg-white" />
-                <div className="flex-1 pb-8">
-                  <CareerCard exp={exp} />
-                </div>
-              </div>
-            ))}
-          </div>
+          ))}
         </div>
       </div>
     </section>
