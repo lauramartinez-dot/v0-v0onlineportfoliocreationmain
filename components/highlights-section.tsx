@@ -306,7 +306,7 @@ export function HighlightsSection() {
               enough for anyone to use and precise enough for engineers to trust.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Documentation is part of how software becomes accessible: from cryptic code, to semi-friendly UX, to clear, user-friendly documentation.
+              Documentation is part of how software becomes accessible: from cryptic code, to usable UX, to user-friendly documentation.
             </p>
             
           </div>
