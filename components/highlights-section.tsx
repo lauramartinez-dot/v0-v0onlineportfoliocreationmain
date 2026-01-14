@@ -292,11 +292,11 @@ export function HighlightsSection() {
             <div className="text-left space-y-8">
               {/* Introduction - no heading */}
               <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
+                <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
+                <p>This has been at the heart of every role I've ever held for the past 15 years.</p>
                 <p>
-                  I turn complex, jargon-heavy tech into content anyone, techy or not, can understand. I've done this
-                  consistently for the past 15 years, at the heart of every role I've ever held. Because I've always
-                  wholeheartedly believed that tech literacy is the most life-changing skill there is—even more so in
-                  today's AI-disrupted world and among those less encouraged into STEM.
+                  Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
+                  is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
                 </p>
               </div>
             </div>
