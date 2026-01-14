@@ -326,7 +326,6 @@ export function HighlightsSection() {
               </div>
             </div>
 
-            {/* UX Image */}
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
               <Image
                 src="/images/adobe-20express-20-20file.png"
@@ -339,7 +338,6 @@ export function HighlightsSection() {
               </div>
             </div>
 
-            {/* Documentation Image */}
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
               <Image
                 src="/images/adobe-20express-20-20file.png"
