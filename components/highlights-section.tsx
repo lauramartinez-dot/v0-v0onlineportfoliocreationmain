@@ -287,7 +287,7 @@ export function HighlightsSection() {
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
             {/* Text content - left side */}
             <div className="text-left space-y-8">
               {/* Introduction - no heading */}
@@ -299,7 +299,10 @@ export function HighlightsSection() {
                   today's AI-disrupted world and among those less encouraged into STEM.
                 </p>
               </div>
+            </div>
 
+            {/* Right side - My role now and Images */}
+            <div className="space-y-6">
               {/* My role now section */}
               <div>
                 <h3 className="text-xl font-semibold text-foreground mb-3">My role now</h3>
@@ -309,52 +312,52 @@ export function HighlightsSection() {
                   to trust.
                 </p>
               </div>
-            </div>
 
-            {/* Images - right side */}
-            <div className="relative h-[350px] md:h-[450px] overflow-hidden group">
-              {/* Default state: Code */}
-              <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 group-hover:opacity-0">
-                <Image
-                  src="/images/saas-app.png"
-                  alt="Code editor showing React documentation"
-                  fill
-                  className="object-contain"
-                />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  Code
+              {/* Images showcase */}
+              <div className="relative h-[350px] md:h-[450px] overflow-hidden group">
+                {/* Default state: Code */}
+                <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 group-hover:opacity-0">
+                  <Image
+                    src="/images/saas-app.png"
+                    alt="Code editor showing React documentation"
+                    fill
+                    className="object-contain"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                    Code
+                  </div>
                 </div>
-              </div>
 
-              {/* First hover state: UX */}
-              <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 group-hover:opacity-100 group-hover:[&:not(:hover)]:opacity-0 hover:!opacity-0">
-                <Image
-                  src="/technical-documentation.png"
-                  alt="Technical documentation concept"
-                  fill
-                  className="object-contain"
-                />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  UX
+                {/* First hover state: UX */}
+                <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 group-hover:opacity-100 group-hover:[&:not(:hover)]:opacity-0 hover:!opacity-0">
+                  <Image
+                    src="/technical-documentation.png"
+                    alt="Technical documentation concept"
+                    fill
+                    className="object-contain"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                    UX
+                  </div>
                 </div>
-              </div>
 
-              {/* Second hover state: Help Center */}
-              <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 group-hover:[&:hover]:opacity-100">
-                <Image
-                  src="/content-writing-concept.png"
-                  alt="Content writing concept"
-                  fill
-                  className="object-contain"
-                />
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  Help Center
+                {/* Second hover state: Help Center */}
+                <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 group-hover:[&:hover]:opacity-100">
+                  <Image
+                    src="/content-writing-concept.png"
+                    alt="Content writing concept"
+                    fill
+                    className="object-contain"
+                  />
+                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                    Help Center
+                  </div>
                 </div>
-              </div>
 
-              {/* Instruction hint */}
-              <div className="absolute top-4 right-4 text-xs text-muted-foreground bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-70 group-hover:opacity-0 transition-opacity">
-                Hover to see progression →
+                {/* Instruction hint */}
+                <div className="absolute top-4 right-4 text-xs text-muted-foreground bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-70 group-hover:opacity-0 transition-opacity">
+                  Hover to see progression →
+                </div>
               </div>
             </div>
           </div>
