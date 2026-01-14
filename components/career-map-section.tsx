@@ -505,7 +505,7 @@ const experiences: Experience[] = [
     location: "Barcelona",
     countryFlag: "🇪🇸",
     description:
-      "Early hire — joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
+      "Joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
     achievements: [
       "First Technical Writer on a 10-person team to be promoted to Senior",
       "Mentored a peer to promotion, who became our team's second Senior role two years after my promotion",
