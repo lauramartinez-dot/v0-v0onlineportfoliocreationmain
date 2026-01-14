@@ -322,11 +322,9 @@ export function HighlightsSection() {
             {/* Right column - Role description and images */}
             <div className="space-y-6">
               <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">How does it look like    </h3>
                 <p className="text-base text-muted-foreground leading-relaxed">
-                  Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-                  enough for anyone to use and precise enough for engineers to trust. Many Technical Writers do this,
-                  but only a few bring:
+                  As a Senior Technical Writer, I translate complex SaaS software into documentation that&apos;s clear enough for anyone to use and precise enough for engineers to trust. 
                 </p>
               </div>
 
