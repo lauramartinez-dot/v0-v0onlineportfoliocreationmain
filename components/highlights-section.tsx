@@ -315,17 +315,14 @@ export function HighlightsSection() {
               </div>
             </div>
 
-            {/* Right column - Senior Technical Writer section and images */}
-            <div className="space-y-6">
-              {/* Senior Technical Writer section */}
-              <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-                  enough for anyone to use and precise enough for engineers to trust.
-                </p>
-              </div>
+            {/* Right column - Senior Technical Writer section with integrated images */}
+            <div className="p-6 rounded-xl bg-card border border-border shadow-sm space-y-6">
+              <p className="text-base text-muted-foreground leading-relaxed">
+                Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+                enough for anyone to use and precise enough for engineers to trust.
+              </p>
 
-              {/* Images showcase */}
+              {/* Images showcase integrated in the same box */}
               <div className="relative h-[350px] md:h-[450px] overflow-hidden group rounded-xl shadow-md">
                 {/* Default state: Code */}
                 <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 group-hover:opacity-0">
