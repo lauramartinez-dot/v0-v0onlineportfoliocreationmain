@@ -328,7 +328,7 @@ export function HighlightsSection() {
 
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
               <Image
-                src="/images/adobe-20express-20-20file.png"
+                src="/images/ux-time-entry-interface.png"
                 alt="SaaS app time entry interface"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -340,7 +340,7 @@ export function HighlightsSection() {
 
             <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
               <Image
-                src="/images/adobe-20express-20-20file.png"
+                src="/images/documentation-getting-started.png"
                 alt="Documentation interface with getting started guide"
                 fill
                 className="object-cover transition-transform duration-300 group-hover:scale-105"
