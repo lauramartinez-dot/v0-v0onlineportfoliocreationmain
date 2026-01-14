@@ -334,7 +334,7 @@ export function HighlightsSection() {
                 />
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                To usable UX
+                And semi-intuitive UX
               </div>
             </div>
 
