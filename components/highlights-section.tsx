@@ -293,65 +293,64 @@ export function HighlightsSection() {
             <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Left column - Text content */}
-            <div className="space-y-6">
-              <div className="space-y-4">
-                <p className="text-lg text-foreground leading-relaxed">
-                  I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
-                </p>
-                <p className="text-lg text-foreground leading-relaxed">
-                  Over the past 15 years, this has been at the core of every role I've worked in.
-                </p>
-                <p className="text-lg text-foreground leading-relaxed">
-                  Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill
-                  there is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
-                </p>
-                <p className="text-lg text-foreground leading-relaxed">
-                  Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-                  enough for anyone to use and precise enough for engineers to trust.
-                </p>
+          {/* Text content - centered and above images */}
+          <div className="max-w-3xl mx-auto mb-12 space-y-4">
+            <p className="text-lg text-foreground leading-relaxed">
+              I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed">
+              Over the past 15 years, this has been at the core of every role I've worked in.
+            </p>
+            <p className="text-lg text-foreground leading-relaxed">
+              Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+              enough for anyone to use and precise enough for engineers to trust.
+            </p>
+            <div className="pt-4 border-t border-border/50">
+              <p className="text-lg text-muted-foreground leading-relaxed italic">
+                Why? Because I've always wholeheartedly believed that tech literacy is the most life-changing skill
+                there is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
+              </p>
+            </div>
+          </div>
+
+          {/* Images - three squares in a row below text */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Code Image */}
+            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
+              <Image
+                src="/images/saas-app.png"
+                alt="Code editor showing React documentation"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                Code
               </div>
             </div>
 
-            {/* Right column - Images */}
-            <div className="grid grid-cols-1 gap-4">
-              {/* Code Image */}
-              <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
-                <Image
-                  src="/images/saas-app.png"
-                  alt="Code editor showing React documentation"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  Code
-                </div>
+            {/* UX Image */}
+            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
+              <Image
+                src="/images/adobe-20express-20-20file.png"
+                alt="SaaS app time entry interface"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                UX
               </div>
+            </div>
 
-              <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
-                <Image
-                  src="/images/adobe-20express-20-20file.png"
-                  alt="SaaS app time entry interface"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  UX
-                </div>
-              </div>
-
-              {/* Help Center Image */}
-              <div className="relative h-[200px] rounded-lg overflow-hidden shadow-md group">
-                <Image
-                  src="/content-writing-concept.png"
-                  alt="Content writing concept"
-                  fill
-                  className="object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                  Help Center
-                </div>
+            {/* Help Center Image */}
+            <div className="relative aspect-square rounded-lg overflow-hidden shadow-md group">
+              <Image
+                src="/content-writing-concept.png"
+                alt="Content writing concept"
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                Help Center
               </div>
             </div>
           </div>
