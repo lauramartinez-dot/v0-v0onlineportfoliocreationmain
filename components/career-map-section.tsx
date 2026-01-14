@@ -630,7 +630,7 @@ const GroupedCareerCard = ({
             className="h-full w-full object-cover transition-transform group-hover:scale-105"
           />
           {/* Logo bubble overlay */}
-          <div className="absolute top-4 right-4 h-16 w-16 overflow-hidden rounded-full border-4 border-background bg-background shadow-lg">
+          <div className="absolute top-4 right-4 h-24 w-24 overflow-hidden rounded-full border-4 border-background bg-background shadow-lg">
             <img
               src={logo || "/placeholder.svg"}
               alt={`${company} logo`}
@@ -642,7 +642,6 @@ const GroupedCareerCard = ({
         {/* Card content */}
         <div className="p-6">
           <h3 className="mb-2 text-xl font-semibold text-foreground">{title}</h3>
-          <p className="mb-3 text-sm font-medium text-muted-foreground">{company}</p>
           {/* Date and location info */}
           <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground">
             <span>{countryFlag}</span>
