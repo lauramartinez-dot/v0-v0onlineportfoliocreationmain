@@ -302,10 +302,6 @@ export function HighlightsSection() {
                 <div className="text-base text-foreground leading-relaxed space-y-3">
                   <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
                   <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
-                  <p>
-                    Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-                    enough for anyone to use and precise enough for engineers to trust.
-                  </p>
                 </div>
               </div>
 
@@ -319,8 +315,16 @@ export function HighlightsSection() {
               </div>
             </div>
 
-            {/* Right column - Role description and images */}
+            {/* Right column - Senior Technical Writer section and images */}
             <div className="space-y-6">
+              {/* Senior Technical Writer section */}
+              <div className="p-6 rounded-xl bg-card border border-border shadow-sm">
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+                  enough for anyone to use and precise enough for engineers to trust.
+                </p>
+              </div>
+
               {/* Images showcase */}
               <div className="relative h-[350px] md:h-[450px] overflow-hidden group rounded-xl shadow-md">
                 {/* Default state: Code */}
