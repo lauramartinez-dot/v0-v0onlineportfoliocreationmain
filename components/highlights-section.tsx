@@ -297,8 +297,8 @@ export function HighlightsSection() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* What section */}
               <div className="relative overflow-hidden p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-4">What</h3>
-                <div className="text-base text-foreground leading-relaxed space-y-3">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-4">What</h3>
+                <div className="text-base text-muted-foreground leading-relaxed space-y-3">
                   <p>I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.</p>
                   <p>Over the past 15 years, this has been at the core of every role I've worked in.</p>
                 </div>
@@ -306,8 +306,8 @@ export function HighlightsSection() {
 
               {/* Why section */}
               <div className="relative overflow-hidden p-6 rounded-xl bg-card border border-border/50 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300">
-                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary mb-4">Why</h3>
-                <p className="text-base text-foreground leading-relaxed">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-4">Why</h3>
+                <p className="text-base text-muted-foreground leading-relaxed">
                   Because I've always wholeheartedly believed that tech literacy is the most life-changing skill there
                   is—even more so in today's AI-disrupted world and among those less encouraged into STEM.
                 </p>
@@ -316,56 +316,52 @@ export function HighlightsSection() {
 
             {/* Bottom row: How does it look like - full width with integrated images */}
             <div className="p-6 rounded-xl bg-card border border-border shadow-sm space-y-6">
-              <h3 className="text-xl font-semibold text-foreground">How does it look like</h3>
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-primary/80 mb-4">
+                How does it look like
+              </h3>
               <p className="text-base text-muted-foreground leading-relaxed">
                 Now, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
                 enough for anyone to use and precise enough for engineers to trust.
               </p>
 
-              {/* Images showcase integrated in the same box */}
-              <div className="relative h-[350px] md:h-[450px] overflow-hidden group rounded-xl shadow-md">
-                {/* Default state: Code */}
-                <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-100 group-hover:opacity-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {/* Code Image */}
+                <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
                   <Image
                     src="/images/saas-app.png"
                     alt="Code editor showing React documentation"
                     fill
-                    className="object-contain"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
                     Code
                   </div>
                 </div>
 
-                {/* First hover state: UX */}
-                <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 group-hover:opacity-100 group-hover:[&:not(:hover)]:opacity-0 hover:!opacity-0">
+                {/* UX Image */}
+                <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
                   <Image
                     src="/technical-documentation.png"
                     alt="Technical documentation concept"
                     fill
-                    className="object-contain"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
                     UX
                   </div>
                 </div>
 
-                {/* Second hover state: Help Center */}
-                <div className="absolute inset-0 w-full h-full transition-opacity duration-700 opacity-0 group-hover:[&:hover]:opacity-100">
+                {/* Help Center Image */}
+                <div className="relative h-[250px] md:h-[300px] rounded-lg overflow-hidden shadow-md group">
                   <Image
                     src="/content-writing-concept.png"
                     alt="Content writing concept"
                     fill
-                    className="object-contain"
+                    className="object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
                     Help Center
                   </div>
-                </div>
-
-                {/* Instruction hint */}
-                <div className="absolute top-4 right-4 text-xs text-muted-foreground bg-background/80 backdrop-blur-sm px-3 py-1.5 rounded-full opacity-70 group-hover:opacity-0 transition-opacity">
-                  Hover to see progression →
                 </div>
               </div>
             </div>
