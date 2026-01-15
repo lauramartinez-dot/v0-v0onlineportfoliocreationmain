@@ -152,6 +152,8 @@ function SkillImageCard({
           className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
 
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-600/30 via-purple-500/10 to-transparent" />
+
         {addPurpleOverlay && <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />}
 
         <div className="absolute -inset-y-8 inset-x-0 bg-gradient-to-t from-black/95 via-black/25 via-30% via-black/5 via-60% to-transparent transition-transform duration-300 group-hover:-translate-y-6" />
@@ -367,9 +369,9 @@ export function HighlightsSection() {
           <div className="max-w-5xl mx-auto mt-12">
             <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-primary opacity-[0.78]">My mission</span> is to help people (especially
-                those less encouraged into STEM) gain tech literacy, because I wholeheartedly believe it is the most
-                life-changing skill there is, even more so in today's AI-disrupted world.
+                <span className="font-semibold text-primary opacity-[0.78]">My mission</span> is to help people
+                (especially those less encouraged into STEM) gain tech literacy, because I wholeheartedly believe it is
+                the most life-changing skill there is, even more so in today's AI-disrupted world.
               </p>
             </div>
           </div>
