@@ -293,7 +293,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Text content - centered and above images */}
-          <div className="max-w-3xl mx-auto mb-12 space-y-4">
+          <div className="max-w-5xl mx-auto mb-12 space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed">
               I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
             </p>
@@ -301,9 +301,8 @@ export function HighlightsSection() {
               Over the past 15 years, this has been at the core of every role I've worked in.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, as a Senior Technical Writer, I{" "}
-              <span className="text-foreground font-medium">translate complex SaaS software into documentation</span>{" "}
-              that's clear enough for anyone to use and precise enough for engineers to trust.
+              Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+              enough for anyone to use and precise enough for engineers to trust.
             </p>
           </div>
 
@@ -365,9 +364,9 @@ export function HighlightsSection() {
           <div className="max-w-5xl mx-auto mt-12">
             <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-primary opacity-[0.78]">My mission:</span> I help people—especially those less
-                encouraged into STEM—gain tech literacy, because I wholeheartedly believe it is the most life-changing
-                skill there is, even more so in today's AI-disrupted world.
+                <span className="font-semibold text-primary opacity-[0.78]">My mission:</span> I help people—especially
+                those less encouraged into STEM—gain tech literacy, because I wholeheartedly believe it is the most
+                life-changing skill there is, even more so in today's AI-disrupted world.
               </p>
             </div>
           </div>
