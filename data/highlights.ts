@@ -109,7 +109,7 @@ export const coreSkills = [
 export const beyondCoreSkills = [
   {
     icon: Home,
-    title: "Near-Native English Writing",
+    title: "Near-Native, AI-Proofread English Writing",
     description:
       "I am bilingual (English/Spanish) and write exclusively in English, using AI-assisted proofreading to ensure native-level quality.",
     link: "",
@@ -119,13 +119,13 @@ export const beyondCoreSkills = [
     icon: Globe,
     title: "Localization Mindset",
     description:
-      "I write clear, highly localizable English content meant to be easily translated into other languages.",
+      "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
     skills: ["Localization-Ready Content", "Global Audiences"],
   },
   {
     icon: Users,
-    title: "Remote Collaboration",
+    title: "6 years experience working full remote in globally distributed teams",
     description:
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
