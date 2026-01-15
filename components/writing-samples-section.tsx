@@ -324,14 +324,14 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
 
           <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Samples</h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {category.samples.map((sample, idx) => (
               <a
                 key={idx}
                 href={sample.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary/50 hover:shadow-lg transition-all duration-300"
+                className="group flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 {category.id === "technology-writing" && (
                   <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
@@ -344,21 +344,21 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
                   </div>
                 )}
 
-                <div className="p-4 flex-1 flex flex-col">
-                  <div className="flex items-center gap-2 mb-2 flex-wrap">
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400">
+                <div className="p-8 flex-1 flex flex-col gap-4">
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <span className="text-sm px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
                       {sample.company}
                     </span>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300">
+                    <span className="text-sm px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium">
                       {sample.year}
                     </span>
                     {sample.role && (
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300">
+                      <span className="text-sm px-3 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium">
                         {sample.role}
                       </span>
                     )}
                   </div>
-                  <h4 className="text-sm font-medium text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors line-clamp-3">
+                  <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">
                     {sample.title}
                   </h4>
                 </div>
