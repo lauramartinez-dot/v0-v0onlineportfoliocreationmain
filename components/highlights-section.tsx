@@ -268,7 +268,7 @@ export function HighlightsSection() {
                   alt="Documentation interface"
                   width={1024}
                   height={1024}
-                  className="w-full h-auto object-contain rounded-xl shadow-lg"
+                  className="w-full h-auto object-contain"
                 />
               </div>
             </div>
