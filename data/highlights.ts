@@ -117,7 +117,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Globe,
-    title: "Localization Mindset",
+    title: "Localization-Ready English Content to Be Translated",
     description:
       "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
