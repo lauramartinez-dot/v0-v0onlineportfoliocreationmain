@@ -132,7 +132,7 @@ function SkillImageCard({
   addPurpleOverlay?: boolean
 }) {
   return (
-    <div className="group relative aspect-[4/3] overflow-hidden rounded-xl shadow-lg">
+    <div className="group relative min-h-[450px] overflow-hidden rounded-xl shadow-lg">
       <Image
         src={image || "/placeholder.svg"}
         alt={item.title}
@@ -232,7 +232,6 @@ function HoverExpandableCard({
           </p>
         </div>
       </div>
-
       <div
         className={`transition-all duration-300 overflow-hidden ${
           isHovered ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
