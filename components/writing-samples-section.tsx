@@ -29,13 +29,13 @@ interface CategoryData {
 const categories: CategoryData[] = [
   {
     id: "functional-documentation",
-    title: "Functional Documentation",
+    title: "Conceptual guides",
     icon: BookOpen,
     description:
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
-    headerImage: "/images/7b4a699f73-1e53-4b3c-a4b6-5a4136bfbc6e-7d.png", // Added header image for Functional Documentation card
+    headerImage: "/images/7b4a699f73-1e53-4b3c-a4b6-5a4136bfbc6e-7d.png",
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"], // Has End-user role sample
+    subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -65,13 +65,13 @@ const categories: CategoryData[] = [
   },
   {
     id: "task-based-documentation",
-    title: "Task-Based Documentation",
+    title: "How-to guides",
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/images/image.png", // Updated header image to use the correct task-based documentation image with Personio permissions article
+    headerImage: "/images/image.png",
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors"], // No End-user role samples, removed Employees
+    subAudience: ["Admins", "Supervisors"],
     samples: [
       {
         title: "Grant permissions for everyday tasks in Personio",
@@ -105,9 +105,9 @@ const categories: CategoryData[] = [
     icon: Video,
     description:
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
-    headerImage: "/images/image.png", // Updated header image to use the exact blob URL for the video tutorial interface
+    headerImage: "/images/image.png",
     audience: "Business users",
-    subAudience: ["Admins"], // No End-user role samples, removed Employees
+    subAudience: ["Admins"],
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -116,7 +116,7 @@ const categories: CategoryData[] = [
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         role: "Admin",
         germanUrl:
-          "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles", // Added Admin role and German version link
+          "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         image: "/video-tutorial-permissions-thumbnail.jpg",
       },
       {
@@ -125,7 +125,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
         role: "Admin",
-        germanUrl: "https://support.personio.de/hc/de/articles/15717723889437-Overview-of-the-Analytics-area", // Added Admin role and German version link
+        germanUrl: "https://support.personio.de/hc/de/articles/15717723889437-Overview-of-the-Analytics-area",
         image: "/video-analytics-dashboard-thumbnail.jpg",
       },
     ],
@@ -138,7 +138,7 @@ const categories: CategoryData[] = [
       "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
     audience: "Business users",
     subAudience: ["All users"],
-    samples: [], // Empty samples array - user doesn't have samples yet
+    samples: [],
   },
   {
     id: "release-notes",
@@ -146,9 +146,9 @@ const categories: CategoryData[] = [
     icon: FileText,
     description:
       "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
-    headerImage: "/images/7bb2ef88ce-6372-44e6-aa59-0da1e772b8b6-7d.jpg", // Added header image for Release Notes card
+    headerImage: "/images/7bb2ef88ce-6372-44e6-aa59-0da1e772b8b6-7d.jpg",
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"], // Kept as is - typically for all user types
+    subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
       {
         title: "Personio Product Updates",
@@ -260,7 +260,7 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
           <Image
             src={
               category.headerImage || `/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`
-            } // Use headerImage if available, otherwise generate placeholder
+            }
             alt={category.title}
             fill
             className="object-cover group-hover:scale-110 transition-transform duration-500"
