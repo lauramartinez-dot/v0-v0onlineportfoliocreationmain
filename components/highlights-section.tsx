@@ -132,7 +132,7 @@ function SkillImageCard({
   addPurpleOverlay?: boolean
 }) {
   return (
-    <div className="group relative rounded-xl overflow-hidden aspect-[4/3]">
+    <div className="group relative rounded-xl overflow-hidden min-h-[500px] md:min-h-[600px]">
       {/* Purple gradient overlay - positioned behind black gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-purple-600/30 via-purple-500/10 to-transparent z-10" />
 
