@@ -133,12 +133,21 @@ function SkillImageCard({
 }) {
   return (
     <div className="relative">
-      <Image
-        src={image || "/placeholder.svg"}
-        alt={item.title}
-        fill
-        className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl shadow-lg"
-      />
+      {/* Large blurred circle - bottom left */}
+      <div className="absolute -bottom-8 -left-12 h-40 w-40 md:h-52 md:w-52 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
+      {/* Small blurred circle - top right */}
+      <div className="absolute -top-6 -right-6 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
+      {/* Small accent circle - bottom right */}
+      <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
+
+      <div className="relative rounded-xl overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={item.title}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl shadow-lg"
+        />
+      </div>
 
       {addPurpleOverlay && <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />}
 
@@ -296,13 +305,23 @@ export function HighlightsSection() {
 
             {/* Right side - Single documentation image without background */}
             <div className="relative">
-              <Image
-                src="/images/documentation-getting-started.png"
-                alt="Documentation interface"
-                width={800}
-                height={600}
-                className="w-full h-auto object-contain rounded-xl shadow-lg"
-              />
+              {/* Large blurred circle - bottom left */}
+              <div className="absolute -bottom-8 -left-12 h-40 w-40 md:h-52 md:w-52 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
+              {/* Small blurred circle - top right */}
+              <div className="absolute -top-6 -right-6 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
+              {/* Small accent circle - bottom right */}
+              <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
+
+              {/* Documentation image with ring border and shadow effects */}
+              <div className="relative rounded-xl overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
+                <Image
+                  src="/images/documentation-getting-started.png"
+                  alt="Documentation interface"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain"
+                />
+              </div>
             </div>
           </div>
 
