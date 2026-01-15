@@ -244,9 +244,9 @@ export function HighlightsSection() {
 
           {/* Text content - centered and above images */}
           <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.2fr,1fr] gap-12 items-start">
               {/* Left side - All text content */}
-              <div className="space-y-6">
+              <div className="space-y-6 flex flex-col justify-center h-full py-8">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I turn complex technology into content anyone can understand, whether they're into tech or not.
                 </p>
@@ -262,7 +262,7 @@ export function HighlightsSection() {
               </div>
 
               {/* Right side - Single documentation image without background */}
-              <div className="relative">
+              <div className="relative flex items-center justify-center">
                 <Image
                   src="/images/untitled.png"
                   alt="Documentation interface"
