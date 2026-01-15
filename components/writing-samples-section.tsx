@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Video, Newspaper, BookOpen, ListChecks } from "lucide-react"
+import { Video, Newspaper, BookOpen, ListChecks, MessageSquare, Database } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
@@ -109,6 +109,66 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
         image: "/video-analytics-dashboard-thumbnail.jpg",
+      },
+    ],
+  },
+  {
+    id: "in-app-communications",
+    title: "In-app Communications",
+    icon: MessageSquare,
+    description:
+      "Contextual messaging, onboarding flows, tooltips, and user notifications crafted to guide users within the product interface.",
+    samples: [
+      {
+        title: "Product tour for new permissions framework",
+        company: "Personio",
+        year: "2023",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
+        title: "Feature announcement: Analytics dashboard",
+        company: "Personio",
+        year: "2023",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
+        title: "Onboarding tooltips for first-time users",
+        company: "Personio",
+        year: "2022",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+    ],
+  },
+  {
+    id: "internal-knowledge-base",
+    title: "Internal Knowledge Base Articles",
+    icon: Database,
+    description:
+      "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
+    samples: [
+      {
+        title: "Content operations handbook for technical writers",
+        company: "Personio",
+        year: "2024",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
+        title: "Translation workflow and localization guidelines",
+        company: "Personio",
+        year: "2023",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
+        title: "Documentation review process and quality standards",
+        company: "Personio",
+        year: "2023",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
       },
     ],
   },
