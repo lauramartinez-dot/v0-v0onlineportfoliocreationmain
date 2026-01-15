@@ -309,8 +309,8 @@ export function HighlightsSection() {
           {/* Images - three squares in a row below text */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Code Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square">
-              <div className="w-full h-full relative">
+            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
+              <div className="w-full h-full relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/saas-app.png"
                   alt="Code editor showing React documentation"
@@ -326,8 +326,8 @@ export function HighlightsSection() {
             </div>
 
             {/* UX Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square">
-              <div className="w-full h-full relative">
+            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
+              <div className="w-full h-full relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/ux-time-entry-interface.png"
                   alt="SaaS app time entry interface"
@@ -343,8 +343,8 @@ export function HighlightsSection() {
             </div>
 
             {/* Documentation Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square">
-              <div className="w-full h-full relative">
+            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
+              <div className="w-full h-full relative rounded-lg overflow-hidden">
                 <Image
                   src="/images/documentation-getting-started.png"
                   alt="Documentation interface with getting started guide"
