@@ -298,10 +298,10 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
             } // Use headerImage if available, otherwise generate placeholder
             alt={category.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-70"
+            className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-50"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-purple-600/60 via-purple-400/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-purple-600/70 via-purple-400/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent" />
 
           <div className="absolute bottom-4 left-4 w-14 h-14 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
             <Icon className="h-7 w-7 text-primary" />
