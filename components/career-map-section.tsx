@@ -9,15 +9,11 @@ import {
   Globe,
   Award,
   Users,
-  Video,
-  FileText,
   Target,
   Bot,
   BarChart,
   Trash,
   FileSpreadsheet,
-  Languages,
-  Sparkles,
 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
@@ -256,353 +252,14 @@ const experiences: Experience[] = [
     icon: Newspaper,
   },
   {
-    id: "documentation-authoring",
-    title: "Senior Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Documentation authoring",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2023-2025",
-    location: "Barcelona (relocated from Germany)",
-    country: "Spain",
-    countryFlag: "🇪🇸",
-    type: "work",
-    description:
-      "Early hire — joined at 300 employees as **one of the first near-native English Technical Writers** and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
-    achievements: [
-      "First Technical Writer on a 10-person team to be promoted to Senior",
-      "Mentored a peer to promotion, who became our team's second Senior role two years after my promotion",
-      "Guided a peer to promotion, who became our team's second Senior role two years after my promotion",
-      "Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes",
-      "Partnered with leadership to align content with key metrics: product adoption and customer retention",
-      "Built AI-powered processes to optimize team operations:",
-      "  → Created an AI assistant for Spanish translation review, reducing review time by 90%",
-      "  → Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
-      "  → Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
-      "  → Improved data availability and enabled team to generate reports 30% faster",
-      "",
-      "Continued delivering release documentation through collaboration with cross-functional teams",
-      "Owned content for a key product feature (Analytics), reducing tickets by over 50% (Apr–Sep 2025)",
-      "Leveraged AI tools (ChatGPT, Claude, Gemini, Clueso) to produce new articles and videos in under 4h",
-      "Continued as the only remaining member of Personio's Women Committee (EWG)",
-      "Appointed as Culture Champion Barcelona Lead, led initiatives that boosted office attendance",
-      "Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter",
-    ],
-    liveLinks: [
-      {
-        label: "Overview of permissions and employee roles (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-      },
-      {
-        label: "Grant permissions for everyday tasks in Personio (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
-      },
-      {
-        label: "Summary of the homepage cards (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
-      },
-      {
-        label: "Troubleshoot issues with report creation as an Administrator (Admin)",
-        url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
-      },
-      {
-        label: "Troubleshoot issues with report creation as a Supervisor (Supervisor)",
-        url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
-      },
-      {
-        label: "Log in and explore your new Personio account (End-users)",
-        url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
-      },
-    ],
-    technologies: ["Technical Writing", "API Documentation", "User Guides", "Software Documentation", "AI Tools"],
-    relevantSkills: [
-      "Strong Technical Knowledge",
-      "Multi-Audience Documentation",
-      "Business Acumen",
-      "AI-Driven Operations",
-    ],
-    color: "#9931e7",
-    icon: FileText,
-  },
-  {
-    id: "team-building",
-    title: "Building International Documentation Team",
-    company: "Personio",
-    workType: "Operational",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden & Barcelona",
-    country: "Germany & Spain",
-    countryFlag: "🇩🇪 🇪🇸",
-    type: "work",
-    description:
-      "Joined Personio as the **first Spanish-native** Technical Writer and helped build the Spanish user-facing documentation from scratch.",
-    achievements: [
-      "Joined as first Spanish-native Technical Writer",
-      "Built Spanish documentation from scratch",
-      "Helped expand team from 3 to 10 writers",
-      "Transformed German-only to international team",
-      "Supported company growth from 300 to 2,000 employees",
-    ],
-    liveLinks: [{ label: "Personio Help Center", url: "https://support.personio.de" }],
-    technologies: ["Technical Writing", "Team Building", "Localization", "Documentation Strategy"],
-    relevantSkills: ["Team Building", "Hiring", "Mentorship", "Cross-Cultural Communication"],
-    color: "#9931e7",
-    icon: Users,
-  },
-  {
-    id: "team-scaling-hypergrowth",
-    title: "Scaling Documentation Team During Hypergrowth",
-    company: "Personio",
-    workType: "Operational",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden & Barcelona",
-    country: "Germany & Spain",
-    countryFlag: "🇩🇪 🇪🇸",
-    type: "work",
-    description:
-      "Helped scale a 3-writer, German-only team into a 10-writer, international team, supporting the company's hypergrowth from **300 to 2,000 people** in 3 years.",
-    achievements: [
-      "Scaled team from 3 to 10 writers in 3 years",
-      "Transformed German-only team into international function",
-      "Supported hypergrowth from 300 to 2,000 employees",
-      "Built cross-functional collaboration processes",
-      "Established scalable documentation workflows",
-    ],
-    liveLinks: [{ label: "Personio Help Center", url: "https://support.personio.de" }],
-    technologies: ["Team Scaling", "Process Design", "Documentation Operations", "Cross-functional Collaboration"],
-    relevantSkills: ["Team Scaling", "Process Design", "Hypergrowth Management", "International Expansion"],
-    color: "#9931e7",
-    icon: TrendingUp,
-  },
-  {
-    id: "localization-expansion",
-    title: "Documentation Localization Expansion",
-    company: "Personio",
-    workType: "Operational",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden & Barcelona",
-    country: "Germany & Spain",
-    countryFlag: "🇩🇪 🇪🇸",
-    type: "work",
-    description:
-      "Expanded Personio's user-facing documentation from **3 to 6 languages** through outsourced translation and localization.",
-    achievements: [
-      "Doubled language coverage from 3 to 6 languages",
-      "Established vendor management processes for translation",
-      "Ensured quality and consistency across all language versions",
-    ],
-    liveLinks: [{ label: "Personio Help Center", url: "https://support.personio.de" }],
-    technologies: ["Localization", "Translation Management", "Quality Assurance", "Vendor Management"],
-    relevantSkills: ["Project Management", "Cross-Cultural Communication", "Quality Control"],
-    color: "#9931e7",
-    icon: Globe,
-  },
-  {
-    id: "ai-video-content",
-    title: "AI-Assisted Instructional Videos",
-    company: "Personio",
-    workType: "Hands-on writing",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2023-2025",
-    location: "Barcelona",
-    country: "Spain",
-    countryFlag: "🇪🇸",
-    type: "work",
-    description:
-      "Authored and fully produced English **AI-assisted instructional videos**, and translated them into German and Spanish.",
-    achievements: [
-      "Developed video content strategy to reduce support contacts",
-      "Leveraged AI tools to scale video production",
-      "Responded to customer feedback for visual learning materials",
-    ],
-    liveLinks: [
-      {
-        label: "Overview of permissions and employee roles",
-        url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-      },
-      {
-        label: "Overview of the Analytics area",
-        url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
-      },
-    ],
-    technologies: ["Video Production", "AI Tools", "Content Strategy", "Customer Support Optimization"],
-    relevantSkills: ["AI-Driven Operations", "Multi-Audience Documentation", "Entrepreneurial Mindset"],
-    color: "#9931e7",
-    icon: Video,
-  },
-  {
-    id: "mogi-spanish-team",
-    title: "Spanish Tech Support & Localization Team Lead",
-    company: "Mogi",
-    workType: "Operational",
-    logo: "/mogi-logo.png",
-    headerImage: "/modern-tech-support-office-team-collaboration.jpg",
-    year: "2018",
-    location: "Dublin",
-    country: "Ireland",
-    countryFlag: "🇮🇪",
-    type: "work",
-    description:
-      "Joined Mogi as the **first in-house, Spanish-native** support and localization specialist, eventually supervising a 15-member, globally distributed team.",
-    achievements: [
-      "First in-house Spanish-native support specialist at Mogi",
-      "Managed 15-member globally distributed team",
-      "Maintained operational consistency and high productivity",
-    ],
-    liveLinks: [],
-    technologies: ["Team Management", "Tech Support", "Localization", "Operations Management"],
-    relevantSkills: ["Business Acumen", "Remote Collaboration", "True Non-Tech User Empathy"],
-    color: "#9931e7",
-    icon: Users,
-  },
-  {
-    id: "mogi-international-team",
-    title: "International Tech Support Team Lead",
-    company: "Mogi",
-    workType: "Operational",
-    logo: "/mogi-logo.png",
-    headerImage: "/modern-tech-support-office-team-collaboration.jpg",
-    year: "2018",
-    location: "Dublin",
-    country: "Ireland",
-    countryFlag: "🇮🇪",
-    type: "work",
-    description:
-      "Supervised a 10-member internationally distributed team, maintaining operational consistency across time zones and high productivity standards.",
-    achievements: [
-      "Managed 10-member international distributed team",
-      "Maintained operational consistency across global team",
-      "Led international tech support operations",
-    ],
-    liveLinks: [],
-    technologies: ["Global Team Management", "Tech Support", "Distributed Operations", "Cross-Cultural Leadership"],
-    relevantSkills: ["Business Acumen", "Remote Collaboration", "True Non-Tech User Empathy"],
-    color: "#9931e7",
-    icon: Globe,
-  },
-  {
-    id: "sysnet-specialist",
-    title: "Spanish-Native Support & Localization Specialist",
-    company: "Sysnet",
-    workType: "Operational",
-    logo: "/sysnet-logo.png",
-    headerImage: "/customer-support-technology-workspace.jpg",
-    year: "2017",
-    location: "Dublin",
-    country: "Ireland",
-    countryFlag: "🇮🇪",
-    type: "work",
-    description:
-      "Joined Sysnet as the **second, in-house Spanish-native** support and localization specialist, contributing to the expansion into the Latin American market.",
-    achievements: [
-      "Second in-house Spanish-native support specialist at Sysnet",
-      "Contributed to Latin American market expansion",
-      "Provided technical support and localization expertise",
-    ],
-    liveLinks: [],
-    technologies: ["Tech Support", "Localization", "Spanish Market Expansion"],
-    relevantSkills: ["Business Acumen", "True Non-Tech User Empathy"],
-    color: "#9931e7",
-    icon: Globe,
-  },
-  {
-    id: "personio-senior-tw",
-    title: "Senior Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Documentation authoring",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2023-2025",
-    location: "Barcelona (relocated from Germany)",
-    country: "Spain",
-    countryFlag: "🇪🇸",
-    type: "work",
-    description:
-      "Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy:",
-    achievements: [
-      "**Content ops (80%):**",
-      "• First Technical Writer on a 10-person team to be promoted to Senior.",
-      "• Mentored 10 teammates across Ireland, Spain, and Germany.",
-      "• Guided a peer to promotion, who became our team's second Senior role two years after my promotion.",
-      "• Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes.",
-      "• Partnered with leadership to align content with key metrics: product adoption and customer retention.",
-      "• Built AI-powered, data-informed processes to optimize team operations:",
-      "→ Created an AI assistant for Spanish translation review, reducing review time by 90%.",
-      "→ Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
-      "→ Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance.",
-      "→ Improved data availability and enabled team to generate reports 30% faster.",
-      "",
-      "**Hands-on writing and translation (20%):**",
-      "• Continued delivering release documentation through collaboration with cross-functional teams.",
-      "• Owned content for a key product feature (Analytics), reducing tickets by over 50% (Apr–Sep 2025).",
-      "• Leveraged AI tools (ChatGPT, Claude, Gemini, Clueso) to produce new articles and videos in under 4h.",
-      "",
-      "**Other roles:**",
-      "• Continued as the only remaining member of Personio's Women Committee (EWG).",
-      "• Appointed as Culture Champion Barcelona Lead, led initiatives that boosted office attendance.",
-      "• Appointed as Culture Interviewer, conducted 20 company-wide culture interviews per quarter.",
-    ],
-    liveLinks: [],
-    technologies: ["Technical Writing", "AI Tools", "Content Operations", "Leadership"],
-    relevantSkills: ["Content Strategy", "Team Leadership", "AI-Driven Operations", "Mentorship"],
-    color: "#9931e7",
-    icon: FileText,
-  },
-  {
-    id: "personio-tw",
-    title: "Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Documentation authoring",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden, Germany",
-    country: "Germany",
-    countryFlag: "🇩🇪",
-    type: "work",
-    description:
-      "Early hire — joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
-    achievements: [
-      "Hybrid role spanning content ops and hands-on writing:",
-      "",
-      "**Content ops (50%):**",
-      "• Joined a 3-writer German-only team and helped scale it into a 10-writer, globally distributed team.",
-      "• Expanded English documentation from 3 languages to 6 via translation and localization.",
-      "• Built the Spanish documentation from scratch. Managed 150+ EN>ES translations annually.",
-      "• Temporarily acted as a company-wide Spanish Localization Expert and led UX improvements.",
-      "",
-      "**Hands-on writing (50%):**",
-      "• Delivered release documentation, working closely with Product and Engineers.",
-      "• Owned content for the Access Rights domain, collaborating with cross-functional stakeholders.",
-      "• Authored an average of 10 articles per quarter.",
-      "• Created 6 instructional videos (Camtasia, Synthesia) per quarter to diversify Help Center content.",
-      "",
-      "**Other roles:**",
-      "• Member of Personio's Women Committee (EWG)",
-      "• Culture Interviewer",
-    ],
-    liveLinks: [],
-    technologies: ["Technical Writing", "Localization", "Video Production", "Documentation"],
-    relevantSkills: ["Team Scaling", "Cross-functional Collaboration", "Content Creation"],
-    color: "#9931e7",
-    icon: FileText,
-  },
-  {
-    id: "personio-senior-promotion",
+    id: "personio-senior-first-promoted",
     title: "Senior Technical Writer | Bilingual (EN/ES)",
     company: "Personio",
     workType: "Content operations",
     logo: "/personio-logo.png",
     headerImage: "/images/personio-team.jpg",
     year: "2023-2025",
-    location: "Barcelona",
+    location: "Barcelona (relocated from Germany)",
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
@@ -768,80 +425,79 @@ const experiences: Experience[] = [
     icon: FileSpreadsheet,
   },
   {
-    id: "personio-tw-team-scaling",
-    title: "Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Content operations",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden, Germany",
-    country: "Germany",
-    countryFlag: "🇩🇪",
+    id: "mogi-spanish-team",
+    title: "Spanish Tech Support & Localization Team Lead",
+    company: "Mogi",
+    workType: "Operational",
+    logo: "/mogi-logo.png",
+    headerImage: "/modern-tech-support-office-team-collaboration.jpg",
+    year: "2018",
+    location: "Dublin",
+    country: "Ireland",
+    countryFlag: "🇮🇪",
     type: "work",
-    description: "Joined a 3-writer German-only team and helped scale it into a 10-writer, globally distributed team.",
-    achievements: [],
-    technologies: ["Team Building", "Team Management", "International Collaboration"],
-    relevantSkills: ["Team Scaling", "Remote Collaboration", "Leadership"],
+    description:
+      "Joined Mogi as the **first in-house, Spanish-native** support and localization specialist, eventually supervising a 15-member, globally distributed team.",
+    achievements: [
+      "First in-house Spanish-native support specialist at Mogi",
+      "Managed 15-member globally distributed team",
+      "Maintained operational consistency and high productivity",
+    ],
+    liveLinks: [],
+    technologies: ["Team Management", "Tech Support", "Localization", "Operations Management"],
+    relevantSkills: ["Business Acumen", "Remote Collaboration", "True Non-Tech User Empathy"],
     color: "#9931e7",
     icon: Users,
   },
   {
-    id: "personio-tw-localization-expansion",
-    title: "Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Content operations",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden, Germany",
-    country: "Germany",
-    countryFlag: "🇩🇪",
+    id: "mogi-international-team",
+    title: "International Tech Support Team Lead",
+    company: "Mogi",
+    workType: "Operational",
+    logo: "/mogi-logo.png",
+    headerImage: "/modern-tech-support-office-team-collaboration.jpg",
+    year: "2018",
+    location: "Dublin",
+    country: "Ireland",
+    countryFlag: "🇮🇪",
     type: "work",
-    description: "Expanded English documentation from 3 languages to 6 via translation and localization.",
-    achievements: [],
-    technologies: ["Localization", "Translation", "Multi-language Documentation"],
-    relevantSkills: ["Localization Strategy", "Language Management"],
+    description:
+      "Supervised a 10-member internationally distributed team, maintaining operational consistency across time zones and high productivity standards.",
+    achievements: [
+      "Managed 10-member international distributed team",
+      "Maintained operational consistency across global team",
+      "Led international tech support operations",
+    ],
+    liveLinks: [],
+    technologies: ["Global Team Management", "Tech Support", "Distributed Operations", "Cross-Cultural Leadership"],
+    relevantSkills: ["Business Acumen", "Remote Collaboration", "True Non-Tech User Empathy"],
     color: "#9931e7",
     icon: Globe,
   },
   {
-    id: "personio-tw-spanish-docs",
-    title: "Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Content operations",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden, Germany",
-    country: "Germany",
-    countryFlag: "🇩🇪",
+    id: "sysnet-specialist",
+    title: "Spanish-Native Support & Localization Specialist",
+    company: "Sysnet",
+    workType: "Operational",
+    logo: "/sysnet-logo.png",
+    headerImage: "/customer-support-technology-workspace.jpg",
+    year: "2017",
+    location: "Dublin",
+    country: "Ireland",
+    countryFlag: "🇮🇪",
     type: "work",
-    description: "Built the Spanish documentation from scratch. Managed 150+ EN>ES translations annually.",
-    achievements: [],
-    technologies: ["Spanish Translation", "Documentation Creation", "Localization"],
-    relevantSkills: ["Spanish Expertise", "Content Creation", "Translation Management"],
+    description:
+      "Joined Sysnet as the **second, in-house Spanish-native** support and localization specialist, contributing to the expansion into the Latin American market.",
+    achievements: [
+      "Second in-house Spanish-native support specialist at Sysnet",
+      "Contributed to Latin American market expansion",
+      "Provided technical support and localization expertise",
+    ],
+    liveLinks: [],
+    technologies: ["Tech Support", "Localization", "Spanish Market Expansion"],
+    relevantSkills: ["Business Acumen", "True Non-Tech User Empathy"],
     color: "#9931e7",
-    icon: Languages,
-  },
-  {
-    id: "personio-tw-localization-expert",
-    title: "Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Content operations",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2021-2023",
-    location: "Dresden, Germany",
-    country: "Germany",
-    countryFlag: "🇩🇪",
-    type: "work",
-    description: "Temporarily acted as a company-wide Spanish Localization Expert and led UX improvements.",
-    achievements: [],
-    technologies: ["Spanish Localization", "UX Design", "Cross-functional Leadership"],
-    relevantSkills: ["Localization Expertise", "UX Strategy", "Cross-functional Collaboration"],
-    color: "#9931e7",
-    icon: Sparkles,
+    icon: Globe,
   },
 ]
 
@@ -965,7 +621,10 @@ const GroupedCareerCard = ({
                   <p
                     className="text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-3"
                     dangerouslySetInnerHTML={{
-                      __html: exp.description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
+                      __html: exp.description.replace(
+                        /\*\*(.*?)\*\*/g,
+                        "<strong class='text-foreground font-semibold'>$1</strong>",
+                      ),
                     }}
                   />
                   {exp.achievements && exp.achievements.length > 0 && (
@@ -1101,69 +760,9 @@ export default function CareerMapSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <GroupedCareerCard
-            company="Personio"
-            title="Senior Technical Writer | Bilingual (EN/ES)"
-            location="Barcelona"
-            countryFlag="🇪🇸"
-            years="2023-2025"
-            logo="/personio-logo.png"
-            headerImage="/images/personio-team.jpg"
-            summary="Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy."
-            experiences={experiences.filter(
-              (exp) => exp.company === "Personio" && exp.title === "Senior Technical Writer | Bilingual (EN/ES)",
-            )}
-          />
-
-          <GroupedCareerCard
-            company="Personio"
-            title="Technical Writer | Bilingual (EN/ES)"
-            location="Dresden, Germany"
-            countryFlag="🇩🇪"
-            years="2021-2023"
-            logo="/personio-logo.png"
-            headerImage="/images/personio-team.jpg"
-            summary="Early hire — joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth)."
-            experiences={experiences.filter(
-              (exp) => exp.company === "Personio" && exp.title === "Technical Writer | Bilingual (EN/ES)",
-            )}
-          />
-
-          {/* Other company cards */}
-          {Object.entries(
-            experiences
-              .filter((exp) => exp.company !== "Personio" && exp.workType === "Operational")
-              .reduce(
-                (acc, exp) => {
-                  if (!acc[exp.company]) {
-                    acc[exp.company] = []
-                  }
-                  acc[exp.company].push(exp)
-                  return acc
-                },
-                {} as Record<string, typeof experiences>,
-              ),
-          ).map(([company, companyExps]) => {
-            const mainExp = companyExps[0]
-            const achievementCount = companyExps.reduce((sum, exp) => sum + (exp.achievements?.length || 0), 0)
-            return (
-              <GroupedCareerCard
-                key={company.toLowerCase().replace(/\s+/g, "-")}
-                groupId={company.toLowerCase().replace(/\s+/g, "-")}
-                title={mainExp.title}
-                company={company}
-                logo={mainExp.logo}
-                headerImage={mainExp.headerImage || mainExp.logo}
-                location={mainExp.location}
-                countryFlag={mainExp.countryFlag}
-                achievementCount={achievementCount}
-                summary={mainExp.description}
-                experiences={companyExps}
-                workType={mainExp.workType}
-                years={mainExp.year} // Added years
-              />
-            )
-          })}
+          {companyCards.map((card) => (
+            <GroupedCareerCard key={card.groupId} {...card} />
+          ))}
         </div>
       </div>
     </section>
