@@ -218,14 +218,6 @@ const categories: CategoryData[] = [
         image: "/content-moderation-article.jpg",
       },
       {
-        title:
-          "Nos savemos las canciones del ISIS de memoria: Así es el día a día de quienes revisan los vídeos que reportas en las redes sociales",
-        company: "Business Insider Spain",
-        year: "2020",
-        url: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
-        image: "/social-media-content-review-article.jpg",
-      },
-      {
         title: "Cerveza gratis, servicio de lavandería y billar: Así se trabaja en las tecnológicas de moda en Dublín",
         company: "Business Insider Spain",
         year: "2020",
@@ -238,21 +230,6 @@ const categories: CategoryData[] = [
         year: "2014",
         url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
         image: "/airplane-flight-physics-science.jpg",
-      },
-      {
-        title:
-          "Esto lo que sabemos de ByteDance, la enigmática dueña de TikTok y la startup más valorada en todo el mundo",
-        company: "Xataka",
-        year: "2014",
-        url: "#",
-        image: "/tiktok-bytedance-tech-startup.jpg",
-      },
-      {
-        title: "10 aplicaciones para sobrevivir a un festival de música",
-        company: "Xataka",
-        year: "2014",
-        url: "#",
-        image: "/music-festival-mobile-apps.jpg",
       },
       {
         title: "Hallan la primera evidencia de la inflación cósmica",
@@ -273,27 +250,6 @@ const categories: CategoryData[] = [
         company: "Muy Interesante",
         year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
-        company: "Europa Press",
-        year: "2014",
-        url: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Google quiere que grabes todos tus recuerdos como en un capítulo de Black Mirror",
-        company: "Europa Press",
-        year: "2014",
-        url: "#",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "10 aplicaciones para sobrevivir a un festival de música",
-        company: "Europa Press",
-        year: "2014",
-        url: "#",
         image: "/placeholder.svg?height=200&width=400",
       },
     ],
