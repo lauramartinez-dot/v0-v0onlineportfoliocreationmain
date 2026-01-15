@@ -264,10 +264,10 @@ export function HighlightsSection() {
               {/* Right side - Single documentation image without background */}
               <div className="relative">
                 <Image
-                  src="/images/documentation-getting-started.png"
+                  src="/images/untitled.png"
                   alt="Documentation interface"
-                  width={800}
-                  height={600}
+                  width={1024}
+                  height={1024}
                   className="w-full h-auto object-contain rounded-xl shadow-lg"
                 />
               </div>
