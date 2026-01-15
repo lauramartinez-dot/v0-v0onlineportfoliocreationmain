@@ -297,7 +297,7 @@ export function HighlightsSection() {
           {/* Text content - centered and above images */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
             {/* Left side - All text content */}
-            <div className="space-y-6">
+            <div className="space-y-6 pr-8">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I turn complex technology into content anyone can understand, whether they're into tech or not.
               </p>
@@ -305,31 +305,20 @@ export function HighlightsSection() {
                 Over the past 15 years, this has been at the core of every role I've worked in.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, as a Senior Technical Writer,{" "}
-                <strong className="font-semibold text-foreground whitespace-nowrap">
-                  I turn complex SaaS software into documentation tailored to the end user
-                </strong>
-                , whether that's:
+                Today, as a Senior Technical Writer, I turn complex SaaS software into documentation tailored to the end
+                user, whether that's a business user who needs clear, jargon-free guidance on using the app or a
+                developer who needs accurate, fluff-free guidance on how to work with it.
               </p>
-
-              <div className="space-y-4 pt-4">
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  A business user who needs clear, jargon-free guidance on using the app
-                </p>
-                <p className="text-base text-muted-foreground leading-relaxed">
-                  A developer who needs accurate, fluff-free guidance on how to work with the app
-                </p>
-              </div>
             </div>
 
-            {/* Right side - Single documentation image */}
-            <div className="relative rounded-lg overflow-hidden shadow-lg">
+            {/* Right side - Single documentation image without background */}
+            <div className="relative">
               <Image
                 src="/images/documentation-getting-started.png"
                 alt="Documentation interface"
                 width={800}
                 height={600}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
           </div>
