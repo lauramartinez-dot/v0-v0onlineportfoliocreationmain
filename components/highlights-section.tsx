@@ -311,50 +311,26 @@ export function HighlightsSection() {
             </p>
           </div>
 
-          {/* Images - two squares in a row below text */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* UX Image */}
-            <div className="flex flex-col gap-3">
-              <p className="text-base text-muted-foreground text-center leading-relaxed">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+            {/* Left side - Combined text */}
+            <div className="space-y-6">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 A business user who needs clear, jargon-free guidance on using the app
               </p>
-              <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
-                <div className="w-full h-full relative rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/documentation-getting-started.png"
-                    alt="Documentation interface"
-                    fill
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                    User POV
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Code Image */}
-            <div className="flex flex-col gap-3">
-              <p className="text-base text-muted-foreground text-center leading-relaxed">
+              <p className="text-base text-muted-foreground leading-relaxed">
                 A developer who needs accurate, fluff-free guidance on how to work with the app
               </p>
-              <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
-                <div className="w-full h-full relative rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/documentation-getting-started.png"
-                    alt="Documentation interface"
-                    fill
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                    Developer POV
-                  </span>
-                </div>
-              </div>
+            </div>
+
+            {/* Right side - Single documentation image */}
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/documentation-getting-started.png"
+                alt="Documentation interface"
+                width={800}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
 
