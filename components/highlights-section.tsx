@@ -365,7 +365,7 @@ export function HighlightsSection() {
           <div className="max-w-5xl mx-auto mt-12">
             <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-foreground">My mission:</span> I help people—especially those less
+                <span className="font-semibold text-primary opacity-[0.78]">My mission:</span> I help people—especially those less
                 encouraged into STEM—gain tech literacy, because I wholeheartedly believe it is the most life-changing
                 skill there is, even more so in today's AI-disrupted world.
               </p>
