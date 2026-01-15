@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Video, Newspaper, BookOpen, ListChecks, Database, FileText } from "lucide-react"
+import { Video, Newspaper, BookOpen, ListChecks, Database, FileText, MessageSquare } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
@@ -129,6 +129,16 @@ const categories: CategoryData[] = [
         image: "/video-analytics-dashboard-thumbnail.jpg",
       },
     ],
+  },
+  {
+    id: "in-app-communications",
+    title: "In-app Communications",
+    icon: MessageSquare,
+    description:
+      "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
+    audience: "Business users",
+    subAudience: ["All users"],
+    samples: [], // Empty samples array - user doesn't have samples yet
   },
   {
     id: "release-notes",
