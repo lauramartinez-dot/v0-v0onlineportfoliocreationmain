@@ -304,63 +304,53 @@ export function HighlightsSection() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Today, as a Senior Technical Writer, I turn complex SaaS software into documentation tailored to the end
-              user —
-              <br />
-              whether that's a business user who needs clear, jargon-free guidance on using the app, or a developer who
-              needs accurate, fluff-free guidance on how to work with it.
+              user.
             </p>
           </div>
 
-          {/* Images - three squares in a row below text */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {/* Images - two squares in a row below text */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Code Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
-              <div className="w-full h-full relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/saas-app.png"
-                  alt="Code editor showing React documentation"
-                  fill
-                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                  The code
-                </span>
+            <div className="flex flex-col gap-3">
+              <p className="text-base text-muted-foreground text-center leading-relaxed">
+                A developer who needs accurate, fluff-free guidance on how to work with it
+              </p>
+              <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
+                <div className="w-full h-full relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/saas-app.png"
+                    alt="Code editor showing React documentation"
+                    fill
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                  <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
+                    The code
+                  </span>
+                </div>
               </div>
             </div>
 
             {/* UX Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
-              <div className="w-full h-full relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/ux-time-entry-interface.png"
-                  alt="SaaS app time entry interface"
-                  fill
-                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                  The actual app (UI)
-                </span>
-              </div>
-            </div>
-
-            {/* Documentation Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
-              <div className="w-full h-full relative rounded-lg overflow-hidden">
-                <Image
-                  src="/images/documentation-getting-started.png"
-                  alt="Documentation interface with getting started guide"
-                  fill
-                  className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                />
-              </div>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                  The documentation
-                </span>
+            <div className="flex flex-col gap-3">
+              <p className="text-base text-muted-foreground text-center leading-relaxed">
+                A business user who needs clear, jargon-free guidance on using the app
+              </p>
+              <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
+                <div className="w-full h-full relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/ux-time-entry-interface.png"
+                    alt="SaaS app time entry interface"
+                    fill
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                  <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
+                    The actual app (UI)
+                  </span>
+                </div>
               </div>
             </div>
           </div>
