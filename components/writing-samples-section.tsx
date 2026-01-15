@@ -69,7 +69,7 @@ const categories: CategoryData[] = [
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/images/7b0608ec57-3ffb-4177-9ce7-f777c78096ab-7d.png",
+    headerImage: "/images/7b3d4b3173-cc7b-41fa-bc9e-fa58af8e6be5-7d.jpg", // Updated header image to use the "Grant permissions" article screenshot
     audience: "Business users",
     subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
