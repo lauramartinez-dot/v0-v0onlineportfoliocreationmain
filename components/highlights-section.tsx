@@ -338,7 +338,7 @@ export function HighlightsSection() {
             {/* Code Image */}
             <div className="flex flex-col gap-3">
               <p className="text-base text-muted-foreground text-center leading-relaxed">
-                A developer who needs accurate, fluff-free guidance on how to work with it
+                A developer who needs accurate, fluff-free guidance on how to work with the app
               </p>
               <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
                 <div className="w-full h-full relative rounded-lg overflow-hidden">
