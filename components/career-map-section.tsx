@@ -263,7 +263,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "First Technical Writer on a 10-person team to be promoted to Senior.",
+    description:
+      "Promoted to Senior Technical Writer, becoming the first on the 10-person team to reach this level. This promotion recognized excellence in technical writing, content operations, and leadership contributions to the team's growth during Personio's transition from scale-up to mature organization.",
     achievements: [],
     technologies: ["Leadership", "Mentorship", "Career Development"],
     relevantSkills: ["Leadership", "Technical Excellence"],
@@ -282,7 +283,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "Mentored 10 teammates on a global, remote-first team across Ireland, Spain, and Germany.",
+    description:
+      "Led mentorship initiatives for 10 teammates across a global, remote-first team spanning Ireland, Spain, and Germany. Provided guidance on technical writing best practices, content strategy, and career development, fostering a culture of continuous learning and professional growth.",
     achievements: [],
     technologies: ["Mentorship", "Remote Collaboration", "Team Development"],
     relevantSkills: ["Mentorship", "Cross-Cultural Communication"],
@@ -301,7 +303,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "Guided a peer to promotion, who became our team's second Senior role two years after my promotion.",
+    description:
+      "Actively mentored a peer through their career development journey, providing guidance and support that led to their promotion to Senior Technical Writer—becoming the team's second Senior role two years after my own promotion. This demonstrated the effectiveness of knowledge transfer and leadership development.",
     achievements: [],
     technologies: ["Mentorship", "Career Development", "Leadership"],
     relevantSkills: ["Mentorship", "Leadership"],
@@ -321,7 +324,7 @@ const experiences: Experience[] = [
     countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Led training sessions and workshops (Miro, Google Slides) to upskill writers on new tools and processes.",
+      "Designed and facilitated training sessions and workshops using Miro and Google Slides to upskill writers on new tools, processes, and documentation methodologies. These sessions improved team efficiency, standardized workflows, and ensured consistent adoption of best practices across the globally distributed team.",
     achievements: [],
     technologies: ["Miro", "Google Slides", "Training", "Workshop Facilitation"],
     relevantSkills: ["Training", "Process Design"],
@@ -341,7 +344,7 @@ const experiences: Experience[] = [
     countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Partnered with leadership to align content with key metrics: product adoption and customer retention.",
+      "Collaborated directly with leadership to align content strategy with business objectives, focusing on key metrics like product adoption and customer retention. This partnership ensured documentation efforts directly supported company goals and demonstrated measurable impact on user success and business outcomes.",
     achievements: [],
     technologies: ["Content Strategy", "Product Analytics", "Customer Success"],
     relevantSkills: ["Business Acumen", "Strategic Thinking"],
@@ -360,7 +363,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "Created an AI assistant for Spanish translation review, reducing review time by 90%.",
+    description:
+      "Developed an AI-powered assistant specifically designed for Spanish translation review, streamlining the quality assurance process. This innovation reduced review time by 90%, allowing the team to scale translation operations efficiently while maintaining high quality standards and freeing up resources for strategic content initiatives.",
     achievements: [],
     technologies: ["AI", "Machine Learning", "Python", "Translation", "Automation"],
     relevantSkills: ["AI-Driven Operations", "Process Optimization"],
@@ -379,7 +383,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "Enabled the team to deprioritize 20% of feature release tasks with low audience impact.",
+    description:
+      "Implemented data-driven analysis to identify and deprioritize 20% of feature release documentation tasks that had minimal audience impact. This optimization allowed the team to focus resources on high-value content, improving overall documentation quality and team efficiency while maintaining comprehensive coverage of critical features.",
     achievements: [],
     technologies: ["Data Analytics", "Product Analytics", "Content Strategy"],
     relevantSkills: ["Data-Driven Decision Making", "Process Optimization"],
@@ -398,7 +403,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance.",
+    description:
+      "Led a comprehensive content audit that identified and removed over 100 outdated Help Center articles (20% of total content). This cleanup significantly improved content relevance, reduced user confusion, enhanced search accuracy, and streamlined maintenance efforts while ensuring users found accurate, up-to-date information.",
     achievements: [],
     technologies: ["Content Audit", "Data Analytics", "Content Strategy"],
     relevantSkills: ["Content Strategy", "Data-Driven Operations"],
@@ -417,7 +423,8 @@ const experiences: Experience[] = [
     country: "Spain",
     countryFlag: "🇪🇸",
     type: "work",
-    description: "Improved data availability and enabled team to generate reports 30% faster.",
+    description:
+      "Enhanced data infrastructure and reporting capabilities, enabling the team to generate performance reports 30% faster. Improved data availability and accessibility empowered data-driven decision making, accelerated response times to content issues, and provided better visibility into documentation effectiveness and user engagement metrics.",
     achievements: [],
     technologies: ["Data Analytics", "Reporting", "Process Automation"],
     relevantSkills: ["Data Operations", "Process Optimization"],
@@ -436,7 +443,8 @@ const experiences: Experience[] = [
     country: "Germany",
     countryFlag: "🇩🇪",
     type: "work",
-    description: "Joined a 3-writer German-only team and helped scale it into a 10-writer, globally distributed team.",
+    description:
+      "Joined as one of the first near-native English Technical Writers when the team was only 3 German-speaking writers. Played a key role in scaling the team into a 10-writer, globally distributed organization spanning multiple countries and time zones, establishing processes and standards that enabled sustainable growth during Personio's hypergrowth phase.",
     achievements: [],
     technologies: ["Team Building", "Scaling", "International Collaboration"],
     relevantSkills: ["Team Building", "Cross-Cultural Communication"],
@@ -455,7 +463,8 @@ const experiences: Experience[] = [
     country: "Germany",
     countryFlag: "🇩🇪",
     type: "work",
-    description: "Expanded English documentation from 3 languages to 6 via translation and localization.",
+    description:
+      "Led the expansion of English documentation from 3 languages to 6 through strategic translation and localization initiatives. This expansion doubled Personio's language coverage, significantly increasing market reach and ensuring users across Europe could access comprehensive documentation in their native languages, supporting the company's international growth.",
     achievements: [],
     technologies: ["Translation", "Localization", "Content Strategy"],
     relevantSkills: ["Multilingual Content", "Localization"],
@@ -474,7 +483,8 @@ const experiences: Experience[] = [
     country: "Germany",
     countryFlag: "🇩🇪",
     type: "work",
-    description: "Built the Spanish documentation from scratch. Managed 150+ EN>ES translations annually.",
+    description:
+      "Built Personio's entire Spanish documentation library from the ground up, creating a comprehensive resource for Spanish-speaking users. Managed 150+ English-to-Spanish translations annually, ensuring consistent terminology, cultural adaptation, and high-quality content that met the needs of the growing Spanish market.",
     achievements: [],
     technologies: ["Documentation", "Spanish Translation", "Content Creation"],
     relevantSkills: ["Technical Writing", "Translation Management"],
@@ -493,7 +503,8 @@ const experiences: Experience[] = [
     country: "Germany",
     countryFlag: "🇩🇪",
     type: "work",
-    description: "Temporarily acted as a company-wide Spanish Localization Expert and led UX improvements.",
+    description:
+      "Temporarily expanded role to serve as the company-wide Spanish Localization Expert, collaborating with product, design, and engineering teams. Led UX improvements specific to Spanish-speaking markets, ensuring product interfaces and documentation maintained linguistic and cultural accuracy while delivering optimal user experiences across all Spanish locales.",
     achievements: [],
     technologies: ["Localization", "UX Design", "Cross-Functional Collaboration"],
     relevantSkills: ["Localization Strategy", "UX Writing"],
