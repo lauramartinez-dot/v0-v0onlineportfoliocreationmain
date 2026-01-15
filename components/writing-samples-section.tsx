@@ -69,7 +69,7 @@ const categories: CategoryData[] = [
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/images/image.png", // Updated header image to use the exact blob URL provided by user
+    headerImage: "/images/image.png", // Updated header image to use the correct task-based documentation image with Personio permissions article
     audience: "Business users",
     subAudience: ["Admins", "Supervisors"], // No End-user role samples, removed Employees
     samples: [
