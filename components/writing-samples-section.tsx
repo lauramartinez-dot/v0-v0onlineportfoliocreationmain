@@ -20,6 +20,7 @@ interface CategoryData {
   icon: any
   description: string
   samples: WritingSample[]
+  headerImage?: string // Added optional headerImage field for category cards
 }
 
 const categories: CategoryData[] = [
@@ -62,6 +63,7 @@ const categories: CategoryData[] = [
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
+    headerImage: "/images/7b0608ec57-3ffb-4177-9ce7-f777c78096ab-7d.png", // Added actual Personio permissions screenshot
     samples: [
       {
         title: "Grant permissions for everyday tasks in Personio (Admin)",
@@ -69,7 +71,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
         role: "Admin",
-        image: "/images/task-based-grant-permissions.png", // Updated to use actual screenshot
+        image: "/images/task-based-grant-permissions.png",
       },
       {
         title: "Troubleshoot issues with report creation as an Administrator (Admin)",
@@ -268,7 +270,9 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
       >
         <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-50">
           <Image
-            src={`/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`}
+            src={
+              category.headerImage || `/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`
+            } // Use headerImage if available, otherwise generate placeholder
             alt={category.title}
             fill
             className="object-cover group-hover:scale-110 transition-transform duration-500"
