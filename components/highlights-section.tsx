@@ -243,7 +243,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Text content - centered and above images */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             {/* Left side - All text content */}
             <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
@@ -253,9 +253,10 @@ export function HighlightsSection() {
                 Over the past 15 years, this has been at the core of every role I've worked in.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, as a Senior Technical Writer, I turn complex SaaS software into documentation tailored to the end
-                user, whether that's a business user who needs clear, jargon-free guidance on using the app or a
-                developer who needs accurate, fluff-free guidance on how to work with it.
+                Today, as a Senior Technical Writer, I turn complex SaaS software into{" "}
+                <span className="text-primary/90 font-medium">documentation tailored to the end user</span>, whether
+                that's a business user who needs clear, jargon-free guidance on using the app or a developer who needs
+                accurate, fluff-free guidance on how to work with it.
               </p>
             </div>
 
@@ -272,7 +273,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Why Section */}
-          <div className="max-w-5xl mx-auto mt-12">
+          <div className="mt-12">
             <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 <span className="font-semibold text-primary opacity-[0.78]">My mission</span> is to help people
