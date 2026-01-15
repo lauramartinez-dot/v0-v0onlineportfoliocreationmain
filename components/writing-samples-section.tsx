@@ -105,7 +105,7 @@ const categories: CategoryData[] = [
     icon: Video,
     description:
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
-    headerImage: "/images/image.png",
+    headerImage: "/images/image.png", // Updated to use the Time & Attendance video tutorial screenshot
     audience: "Business users",
     subAudience: ["Admins"],
     samples: [
