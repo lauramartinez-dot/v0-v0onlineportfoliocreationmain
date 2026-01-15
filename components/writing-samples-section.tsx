@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Video, Newspaper, BookOpen, ListChecks, MessageSquare, Database } from "lucide-react"
+import { Video, Newspaper, BookOpen, ListChecks, MessageSquare, Database, FileText } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
@@ -139,6 +139,36 @@ const categories: CategoryData[] = [
         year: "2022",
         url: "#",
         image: "/onboarding-tooltip.jpg",
+      },
+    ],
+  },
+  {
+    id: "release-notes",
+    title: "Release Notes",
+    icon: FileText,
+    description:
+      "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
+    samples: [
+      {
+        title: "Analytics Dashboard Release Notes",
+        company: "Personio",
+        year: "2024",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
+        title: "Permissions Framework Update",
+        company: "Personio",
+        year: "2024",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
+      },
+      {
+        title: "Mobile App Feature Release",
+        company: "Personio",
+        year: "2023",
+        url: "#",
+        image: "/placeholder.svg?height=200&width=400",
       },
     ],
   },
