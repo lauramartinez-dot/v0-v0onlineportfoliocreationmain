@@ -362,7 +362,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Why Section */}
-          <div className="max-w-5xl mx-auto mt-12">
+          <div className="max-w-6xl mx-auto mt-12">
             <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 <span className="font-semibold text-foreground">My mission:</span> I help people—especially those less
