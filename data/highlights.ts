@@ -50,7 +50,7 @@ export const coreSkills = [
   },
   {
     icon: Cpu,
-    title: "Strong Technical Knowledge",
+    title: "",
     description:
       "From years as a tech journalist explaining engineering fundamentals to my current role documenting complex SaaS products.",
     link: "",
