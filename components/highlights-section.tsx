@@ -253,7 +253,7 @@ export function HighlightsSection() {
                   Writer role.
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mt-8 mb-2">My role, in plain language:</h3>
+                <h3 className="text-xl font-semibold text-foreground mt-8 mb-2">Ok, but what do I actually do?</h3>
 
                 <p className="text-lg text-foreground leading-relaxed">
                   I turn complex SaaS software into{" "}
