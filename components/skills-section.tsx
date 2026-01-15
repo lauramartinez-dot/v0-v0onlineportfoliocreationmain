@@ -1,5 +1,4 @@
 import { Wrench, Globe } from "lucide-react"
-import { Badge } from "@/components/ui/badge"
 
 const tools = [
   "Zendesk",
@@ -35,13 +34,7 @@ export function SkillsSection() {
               <Wrench className="h-5 w-5 text-primary" />
               <h3 className="font-semibold text-foreground">Tools</h3>
             </div>
-            <div className="flex flex-wrap gap-2">
-              {tools.map((tool, index) => (
-                <Badge key={index} variant="outline" className="rounded-full font-normal">
-                  {tool}
-                </Badge>
-              ))}
-            </div>
+            <p className="text-muted-foreground leading-relaxed">{tools.join(", ")}</p>
           </div>
 
           {/* Languages */}
