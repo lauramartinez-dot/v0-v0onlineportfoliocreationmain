@@ -21,6 +21,8 @@ interface CategoryData {
   description: string
   samples: WritingSample[]
   headerImage?: string // Added optional headerImage field for category cards
+  audience?: string
+  subAudience?: string[]
 }
 
 const categories: CategoryData[] = [
@@ -30,6 +32,8 @@ const categories: CategoryData[] = [
     icon: BookOpen,
     description:
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
+    audience: "Business users",
+    subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -63,7 +67,9 @@ const categories: CategoryData[] = [
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/images/7b0608ec57-3ffb-4177-9ce7-f777c78096ab-7d.png", // Added actual Personio permissions screenshot
+    headerImage: "/images/7b0608ec57-3ffb-4177-9ce7-f777c78096ab-7d.png",
+    audience: "Business users",
+    subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
       {
         title: "Grant permissions for everyday tasks in Personio",
@@ -97,6 +103,8 @@ const categories: CategoryData[] = [
     icon: Video,
     description:
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
+    audience: "Business users",
+    subAudience: ["Admins", "Employees"],
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -120,6 +128,8 @@ const categories: CategoryData[] = [
     icon: MessageSquare,
     description:
       "Contextual messaging, onboarding flows, tooltips, and user notifications crafted to guide users within the product interface.",
+    audience: "Business users",
+    subAudience: ["Admins", "Employees"],
     samples: [
       {
         title: "Product tour for new permissions framework",
@@ -150,6 +160,8 @@ const categories: CategoryData[] = [
     icon: FileText,
     description:
       "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
+    audience: "Business users",
+    subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
       {
         title: "Analytics Dashboard Release Notes",
@@ -180,6 +192,8 @@ const categories: CategoryData[] = [
     icon: Database,
     description:
       "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
+    audience: "Internal teams",
+    subAudience: ["Technical Writers", "Product Managers", "Engineers"],
     samples: [
       {
         title: "Content operations handbook for technical writers",
@@ -210,6 +224,8 @@ const categories: CategoryData[] = [
     icon: Newspaper,
     description:
       "Tech journalism and articles for leading Spanish media outlets, covering innovation, science, and technology trends.",
+    audience: "General public",
+    subAudience: ["Tech enthusiasts", "Science readers"],
     samples: [
       {
         title:
@@ -290,6 +306,22 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
           </h3>
 
           <p className="text-sm text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
+
+          {category.audience && (
+            <div className="mb-5 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
+              <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                Audience: <span className="font-normal text-gray-700 dark:text-gray-300">{category.audience}</span>
+              </p>
+              {category.subAudience && category.subAudience.length > 0 && (
+                <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+                  Sub-audience:{" "}
+                  <span className="font-normal text-gray-700 dark:text-gray-300">
+                    {category.subAudience.join(", ")}
+                  </span>
+                </p>
+              )}
+            </div>
+          )}
 
           <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
             <span>View {category.samples.length} samples</span>
