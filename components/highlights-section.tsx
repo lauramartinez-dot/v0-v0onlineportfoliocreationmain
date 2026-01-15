@@ -301,8 +301,9 @@ export function HighlightsSection() {
               Over the past 15 years, this has been at the core of every role I've worked in.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
-              enough for anyone to use and precise enough for engineers to trust.
+              Today, as a Senior Technical Writer, I{" "}
+              <span className="text-foreground font-medium">translate complex SaaS software into documentation</span>{" "}
+              that's clear enough for anyone to use and precise enough for engineers to trust.
             </p>
           </div>
 
