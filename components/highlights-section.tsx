@@ -295,15 +295,17 @@ export function HighlightsSection() {
           {/* Text content - centered and above images */}
           <div className="max-w-5xl mx-auto mb-12 space-y-4 text-center">
             <p className="text-lg text-muted-foreground leading-relaxed">
-              I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
+              I turn complex technology into content anyone can understand, whether they're into tech or not.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Over the past 15 years, this has been at the core of every role I've worked in.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, as a Senior Technical Writer, I translate complex SaaS software into
+              Today, as a Senior Technical Writer, I turn complex SaaS software into documentation tailored to the end
+              user —
               <br />
-              documentation that's clear enough for anyone to use and precise enough for engineers to trust.
+              whether that's a business user who needs clear, jargon-free guidance on using the app, or a developer who
+              needs accurate, fluff-free guidance on how to work with it.
             </p>
           </div>
 
