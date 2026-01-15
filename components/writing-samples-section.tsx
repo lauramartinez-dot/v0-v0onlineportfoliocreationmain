@@ -8,11 +8,10 @@ import Image from "next/image"
 interface WritingSample {
   title: string
   company: string
-  year: string
   url: string
   role?: string
   image?: string
-  germanUrl?: string // Added germanUrl field for multilingual video links
+  germanUrl?: string
 }
 
 interface CategoryData {
@@ -21,7 +20,7 @@ interface CategoryData {
   icon: any
   description: string
   samples: WritingSample[]
-  headerImage?: string // Added optional headerImage field for category cards
+  headerImage?: string
   audience?: string
   subAudience?: string[]
 }
@@ -40,7 +39,6 @@ const categories: CategoryData[] = [
       {
         title: "Overview of permissions and employee roles",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         role: "Admin",
         image: "/hr-software-permissions-dashboard.jpg",
@@ -48,7 +46,6 @@ const categories: CategoryData[] = [
       {
         title: "Summary of the homepage cards",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
         role: "Admin",
         image: "/hr-dashboard-homepage-cards.jpg",
@@ -56,7 +53,6 @@ const categories: CategoryData[] = [
       {
         title: "Log in and explore your new Personio account",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
         role: "End-user",
         image: "/employee-login-welcome-screen.jpg",
@@ -76,7 +72,6 @@ const categories: CategoryData[] = [
       {
         title: "Grant permissions for everyday tasks in Personio",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
         role: "Admin",
         image: "/images/task-based-grant-permissions.png",
@@ -84,7 +79,6 @@ const categories: CategoryData[] = [
       {
         title: "Troubleshoot issues with report creation as an Administrator",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
         role: "Admin",
         image: "/analytics-reports-troubleshooting.jpg",
@@ -92,7 +86,6 @@ const categories: CategoryData[] = [
       {
         title: "Troubleshoot issues with report creation as a Supervisor",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
         role: "Supervisor",
         image: "/supervisor-reports-interface.jpg",
@@ -105,14 +98,13 @@ const categories: CategoryData[] = [
     icon: Video,
     description:
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
-    headerImage: "/images/instructional-videos-header.png", // Updated to use the Time & Attendance video tutorial screenshot
+    headerImage: "/images/instructional-videos-header.png",
     audience: "Business users",
     subAudience: ["Admins"],
     samples: [
       {
         title: "Overview of permissions and employee roles (English)",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         role: "Admin",
         image: "/video-tutorial-permissions-thumbnail.jpg",
@@ -120,7 +112,6 @@ const categories: CategoryData[] = [
       {
         title: "Overview of permissions and employee roles (German)",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         role: "Admin",
         image: "/video-tutorial-permissions-thumbnail.jpg",
@@ -128,7 +119,6 @@ const categories: CategoryData[] = [
       {
         title: "Overview of the Analytics area (English)",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
         role: "Admin",
         image: "/video-analytics-dashboard-thumbnail.jpg",
@@ -136,7 +126,6 @@ const categories: CategoryData[] = [
       {
         title: "Overview of the Analytics area (German)",
         company: "Personio",
-        year: "2021",
         url: "https://support.personio.de/hc/de/articles/15717723889437-Overview-of-the-Analytics-area",
         role: "Admin",
         image: "/video-analytics-dashboard-thumbnail.jpg",
@@ -166,7 +155,6 @@ const categories: CategoryData[] = [
       {
         title: "Personio Product Updates",
         company: "Personio",
-        year: "2025",
         url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
       },
     ],
@@ -183,21 +171,18 @@ const categories: CategoryData[] = [
       {
         title: "Content operations handbook for technical writers",
         company: "Personio",
-        year: "2024",
         url: "#",
         image: "/operations-handbook.jpg",
       },
       {
         title: "Translation workflow and localization guidelines",
         company: "Personio",
-        year: "2023",
         url: "#",
         image: "/translation-workflow.jpg",
       },
       {
         title: "Documentation review process and quality standards",
         company: "Personio",
-        year: "2023",
         url: "#",
         image: "/quality-standards-document.jpg",
       },
@@ -216,42 +201,36 @@ const categories: CategoryData[] = [
         title:
           "Execution videos, sex in the office, PTSD and ISIS sing-alongs: A day in the life of an online content moderator",
         company: "Business Insider Spain",
-        year: "2020",
         url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
         image: "/content-moderator-reviewing-social-media.jpg",
       },
       {
         title: "Cerveza gratis, servicio de lavandería y billar: Así se trabaja en las tecnológicas de moda en Dublín",
         company: "Business Insider Spain",
-        year: "2020",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405147000",
         image: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
       },
       {
         title: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
         company: "Xataka",
-        year: "2014",
         url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
         image: "/airplane-in-flight-aerodynamics.jpg",
       },
       {
         title: "Hallan la primera evidencia de la inflación cósmica",
         company: "Muy Interesante",
-        year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
         image: "/cosmic-inflation-universe-expansion.jpg",
       },
       {
         title: "¿Qué nos pasaría si viajáramos a la velocidad de la luz?",
         company: "Muy Interesante",
-        year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
         image: "/traveling-at-the-speed-of-light-space.jpg",
       },
       {
         title: "El satélite español Deimos-2 está ya en órbita",
         company: "Muy Interesante",
-        year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
         image: "/satellite-in-orbit-around-earth.jpg",
       },
@@ -380,9 +359,6 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-sm px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
                       {sample.company}
-                    </span>
-                    <span className="text-sm px-3 py-1.5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium">
-                      {sample.year}
                     </span>
                     {sample.role && (
                       <span className="text-sm px-3 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium">
