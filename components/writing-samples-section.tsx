@@ -167,29 +167,15 @@ const categories: CategoryData[] = [
     icon: FileText,
     description:
       "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
+    headerImage: "/images/7bb2ef88ce-6372-44e6-aa59-0da1e772b8b6-7d.jpg", // Added header image for Release Notes card
     audience: "Business users",
     subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
       {
-        title: "Analytics Dashboard Release Notes",
+        title: "Personio Product Updates",
         company: "Personio",
-        year: "2024",
-        url: "#",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Permissions Framework Update",
-        company: "Personio",
-        year: "2024",
-        url: "#",
-        image: "/placeholder.svg?height=200&width=400",
-      },
-      {
-        title: "Mobile App Feature Release",
-        company: "Personio",
-        year: "2023",
-        url: "#",
-        image: "/placeholder.svg?height=200&width=400",
+        year: "2025",
+        url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
       },
     ],
   },
