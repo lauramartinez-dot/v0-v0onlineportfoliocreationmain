@@ -52,18 +52,6 @@ function HoverExpandableCard({
           }`}
         >
           <p className="text-lg text-muted-foreground mb-3">{renderDescription(item.description)}</p>
-          {item.skills && item.skills.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {item.skills.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary border border-primary/20"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     </div>

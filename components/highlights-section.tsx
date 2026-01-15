@@ -63,20 +63,6 @@ function SkillPopup({
         </div>
 
         <p className="text-sm text-muted-foreground mb-4">{renderDescription(item.description)}</p>
-
-        {item.skills && item.skills.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {item.skills.map((skill, idx) => (
-              <span
-                key={idx}
-                className={`inline-block rounded-full px-3 py-1 text-xs font-medium
-                  ${isPinned ? "bg-primary/20 text-primary" : "bg-primary/10 text-primary"}`}
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   )
@@ -185,18 +171,6 @@ function CollapsibleSkillCard({
       {isExpanded && (
         <div className="mt-3 pt-3 border-t border-border">
           <p className="text-sm text-muted-foreground mb-3">{renderDescription(item.description)}</p>
-          {item.skills && item.skills.length > 0 && (
-            <div className="flex flex-wrap gap-2">
-              {item.skills.map((skill, idx) => (
-                <span
-                  key={idx}
-                  className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
       )}
     </div>
@@ -238,18 +212,6 @@ function HoverExpandableCard({
         }`}
       >
         <p className="text-base text-muted-foreground mb-3">{renderDescription(item.description)}</p>
-        {item.skills && item.skills.length > 0 && (
-          <div className="flex flex-wrap gap-2">
-            {item.skills.map((skill, idx) => (
-              <span
-                key={idx}
-                className="inline-block rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-primary/30 px-3 py-1.5 text-xs font-medium text-primary"
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
-        )}
       </div>
     </div>
   )
