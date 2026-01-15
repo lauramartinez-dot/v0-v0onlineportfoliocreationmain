@@ -12,6 +12,7 @@ interface WritingSample {
   url: string
   role?: string
   image?: string
+  germanUrl?: string // Added germanUrl field for multilingual video links
 }
 
 interface CategoryData {
@@ -111,6 +112,9 @@ const categories: CategoryData[] = [
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+        role: "Admin",
+        germanUrl:
+          "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles", // Added Admin role and German version link
         image: "/video-tutorial-permissions-thumbnail.jpg",
       },
       {
@@ -118,6 +122,8 @@ const categories: CategoryData[] = [
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
+        role: "Admin",
+        germanUrl: "https://support.personio.de/hc/de/articles/15717723889437-Overview-of-the-Analytics-area", // Added Admin role and German version link
         image: "/video-analytics-dashboard-thumbnail.jpg",
       },
     ],
@@ -407,6 +413,20 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
                   <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">
                     {sample.title}
                   </h4>
+                  {sample.germanUrl && (
+                    <a
+                      href={sample.germanUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sm text-primary hover:text-primary/80 font-medium flex items-center gap-2 mt-2"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <span>🇩🇪 German version</span>
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </a>
             ))}
