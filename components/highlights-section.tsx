@@ -310,28 +310,6 @@ export function HighlightsSection() {
 
           {/* Images - two squares in a row below text */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {/* Code Image */}
-            <div className="flex flex-col gap-3">
-              <p className="text-base text-muted-foreground text-center leading-relaxed">
-                A developer who needs accurate, fluff-free guidance on how to work with it
-              </p>
-              <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
-                <div className="w-full h-full relative rounded-lg overflow-hidden">
-                  <Image
-                    src="/images/saas-app.png"
-                    alt="Code editor showing React documentation"
-                    fill
-                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
-                  />
-                </div>
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                   Developer POV
-                  </span>
-                </div>
-              </div>
-            </div>
-
             {/* UX Image */}
             <div className="flex flex-col gap-3">
               <p className="text-base text-muted-foreground text-center leading-relaxed">
@@ -348,7 +326,29 @@ export function HighlightsSection() {
                 </div>
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
                   <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                    Business user POV 
+                    Business user POV
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Code Image */}
+            <div className="flex flex-col gap-3">
+              <p className="text-base text-muted-foreground text-center leading-relaxed">
+                A developer who needs accurate, fluff-free guidance on how to work with it
+              </p>
+              <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
+                <div className="w-full h-full relative rounded-lg overflow-hidden">
+                  <Image
+                    src="/images/saas-app.png"
+                    alt="Code editor showing React documentation"
+                    fill
+                    className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                  <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
+                    Developer POV
                   </span>
                 </div>
               </div>
