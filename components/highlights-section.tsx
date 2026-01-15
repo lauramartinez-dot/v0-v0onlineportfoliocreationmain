@@ -132,7 +132,7 @@ function SkillImageCard({
   addPurpleOverlay?: boolean
 }) {
   return (
-    <div className="group relative min-h-[450px] overflow-hidden rounded-xl shadow-lg">
+    <div className="group relative min-h-[600px] overflow-hidden rounded-xl shadow-lg">
       <Image
         src={image || "/placeholder.svg"}
         alt={item.title}
