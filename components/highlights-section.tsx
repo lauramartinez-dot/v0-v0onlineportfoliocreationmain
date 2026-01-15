@@ -132,30 +132,20 @@ function SkillImageCard({
   addPurpleOverlay?: boolean
 }) {
   return (
-    <div className="relative">
-      {/* Large blurred circle - bottom left */}
-      <div className="absolute -bottom-8 -left-12 h-40 w-40 md:h-52 md:w-52 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
-      {/* Small blurred circle - top right */}
-      <div className="absolute -top-6 -right-6 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
-      {/* Small accent circle - bottom right */}
-      <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
+    <div className="group relative rounded-xl overflow-hidden h-[400px]">
+      {/* Purple gradient overlay - positioned behind black gradient */}
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-600/60 via-purple-400/40 to-transparent z-10" />
 
-      <div className="relative rounded-xl overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
-        <Image
-          src={image || "/placeholder.svg"}
-          alt={item.title}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105 rounded-xl shadow-lg"
-        />
-      </div>
+      {/* Black gradient overlay for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/40 to-transparent z-20" />
 
-      {addPurpleOverlay && <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />}
+      {/* Background Image */}
+      <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
 
-      <div className="absolute bottom-0 left-0 right-0 p-8 transition-transform duration-300 group-hover:-translate-y-6">
-        <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 md:text-3xl">{item.title}</h3>
-        <p className="text-lg text-white/90 leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-48 group-hover:opacity-100">
-          {item.description}
-        </p>
+      {/* Text content */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 z-30">
+        <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+        <p className="text-sm text-white/90 line-clamp-3">{item.description}</p>
       </div>
     </div>
   )
