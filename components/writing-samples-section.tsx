@@ -243,7 +243,7 @@ const categories: CategoryData[] = [
         company: "Muy Interesante",
         year: "2014",
         url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
-        image: "/placeholder.svg?height=200&width=400",
+        image: "/images/millennium-falcon-hyperspace.jpg",
       },
       {
         title: "El satélite español Deimos-2 está ya en órbita",
