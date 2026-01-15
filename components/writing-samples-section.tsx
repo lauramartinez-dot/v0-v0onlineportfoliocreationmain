@@ -246,7 +246,7 @@ const categories: CategoryData[] = [
         title: "Cerveza gratis, servicio de lavandería y billar: Así se trabaja en las tecnológicas de moda en Dublín",
         company: "Business Insider Spain",
         year: "2020",
-        url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
+        url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405147000",
         image: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
       },
       {
@@ -298,7 +298,7 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
             } // Use headerImage if available, otherwise generate placeholder
             alt={category.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            className="object-cover group-hover:scale-110 transition-transform duration-500 opacity-70"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-purple-600/60 via-purple-400/40 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
