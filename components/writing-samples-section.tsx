@@ -69,7 +69,7 @@ const categories: CategoryData[] = [
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/images/image.png",
+    headerImage: "/images/task-based-documentation-header.png",
     audience: "Business users",
     subAudience: ["Admins", "Supervisors"],
     samples: [
@@ -105,7 +105,7 @@ const categories: CategoryData[] = [
     icon: Video,
     description:
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
-    headerImage: "/images/image.png", // Updated to use the Time & Attendance video tutorial screenshot
+    headerImage: "/images/instructional-videos-header.png", // Updated to use the Time & Attendance video tutorial screenshot
     audience: "Business users",
     subAudience: ["Admins"],
     samples: [
