@@ -307,18 +307,6 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="!w-[75vw] !max-w-none max-h-[90vh] overflow-y-auto p-6">
-          {category.headerImage && (
-            <div className="relative w-full h-64 -mx-6 -mt-6 mb-6 overflow-hidden">
-              <Image
-                src={category.headerImage || "/placeholder.svg"}
-                alt={category.title}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-            </div>
-          )}
-
           <DialogHeader>
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -345,14 +333,16 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
                 rel="noopener noreferrer"
                 className="group flex flex-col overflow-hidden rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary/50 hover:shadow-lg transition-all duration-300"
               >
-                <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
-                  <Image
-                    src={sample.image || "/placeholder.svg?height=200&width=400"}
-                    alt={sample.title}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+                {category.id === "technology-writing" && (
+                  <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+                    <Image
+                      src={sample.image || "/placeholder.svg?height=200&width=400"}
+                      alt={sample.title}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                )}
 
                 <div className="p-4 flex-1 flex flex-col">
                   <div className="flex items-center gap-2 mb-2 flex-wrap">
