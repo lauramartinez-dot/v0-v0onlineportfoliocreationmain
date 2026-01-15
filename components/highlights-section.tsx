@@ -304,7 +304,7 @@ export function HighlightsSection() {
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
               Today, as a Senior Technical Writer, I turn complex SaaS software into documentation tailored to the end
-              user.
+              user, whether that's:
             </p>
           </div>
 
