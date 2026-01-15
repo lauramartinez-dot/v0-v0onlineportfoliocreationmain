@@ -16,6 +16,7 @@ export default function Home() {
       <HeroSection />
       <TransitionSection />
       <HighlightsSection />
+      <TransitionSection /> {/* Added transition section between My role and Top Differentiators */}
       <SkillsCoreSection />
       <ScrollTransitionSection />
       <TransitionSection />
