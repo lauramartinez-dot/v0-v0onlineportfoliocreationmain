@@ -215,14 +215,14 @@ const categories: CategoryData[] = [
         company: "Business Insider Spain",
         year: "2020",
         url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
-        image: "/business-insider-content-moderator-article.jpg",
+        image: "/images/image.png",
       },
       {
         title: "Cerveza gratis, servicio de lavandería y billar: Así se trabaja en las tecnológicas de moda en Dublín",
         company: "Business Insider Spain",
         year: "2020",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
-        image: "/business-insider-dublin-tech-office.jpg",
+        image: "/images/image.png",
       },
       {
         title: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
