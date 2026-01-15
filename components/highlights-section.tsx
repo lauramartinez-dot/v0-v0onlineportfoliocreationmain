@@ -321,8 +321,8 @@ export function HighlightsSection() {
               <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
                 <div className="w-full h-full relative rounded-lg overflow-hidden">
                   <Image
-                    src="/images/ux-time-entry-interface.png"
-                    alt="SaaS app time entry interface"
+                    src="/images/documentation-getting-started.png"
+                    alt="Documentation interface"
                     fill
                     className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
@@ -343,8 +343,8 @@ export function HighlightsSection() {
               <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-100 aspect-square p-4">
                 <div className="w-full h-full relative rounded-lg overflow-hidden">
                   <Image
-                    src="/images/saas-app.png"
-                    alt="Code editor showing React documentation"
+                    src="/images/documentation-getting-started.png"
+                    alt="Documentation interface"
                     fill
                     className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                   />
