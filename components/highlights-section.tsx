@@ -293,7 +293,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Text content - centered and above images */}
-          <div className="max-w-5xl mx-auto mb-12 space-y-4">
+          <div className="max-w-5xl mx-auto mb-12 space-y-4 text-center">
             <p className="text-lg text-muted-foreground leading-relaxed">
               I turn complex, jargon-heavy tech into content anyone, techy or not, can understand.
             </p>
