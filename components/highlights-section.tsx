@@ -280,7 +280,7 @@ export function HighlightsSection() {
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
                 <Star className="w-5 h-5 text-white" />
               </div>
-              <p className="text-base text-foreground leading-relaxed">
+              <p className="text-base leading-relaxed text-foreground opacity-[0.78]">
                 <span className="font-bold text-primary">Mission:</span> I want to help people—especially women and
                 others who haven't always been encouraged to pursue STEM—gain tech literacy. I believe it's one of the
                 most life-changing skills, especially in today's AI-driven world.
