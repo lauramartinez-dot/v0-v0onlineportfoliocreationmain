@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Video, Newspaper, BookOpen, ListChecks, MessageSquare, Database, FileText } from "lucide-react"
+import { Video, Newspaper, BookOpen, ListChecks, Database, FileText } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
@@ -127,38 +127,6 @@ const categories: CategoryData[] = [
         role: "Admin",
         germanUrl: "https://support.personio.de/hc/de/articles/15717723889437-Overview-of-the-Analytics-area", // Added Admin role and German version link
         image: "/video-analytics-dashboard-thumbnail.jpg",
-      },
-    ],
-  },
-  {
-    id: "in-app-communications",
-    title: "In-app Communications",
-    icon: MessageSquare,
-    description:
-      "Contextual messaging, onboarding flows, tooltips, and user notifications crafted to guide users within the product interface.",
-    audience: "Business users",
-    subAudience: ["Admins", "Employees"], // Kept as is - adjust if no End-user samples exist
-    samples: [
-      {
-        title: "Product tour for new permissions framework",
-        company: "Personio",
-        year: "2023",
-        url: "#",
-        image: "/product-tour-interface.jpg",
-      },
-      {
-        title: "Feature announcement: Analytics dashboard",
-        company: "Personio",
-        year: "2023",
-        url: "#",
-        image: "/feature-announcement-banner.jpg",
-      },
-      {
-        title: "Onboarding tooltips for first-time users",
-        company: "Personio",
-        year: "2022",
-        url: "#",
-        image: "/onboarding-tooltip.jpg",
       },
     ],
   },
