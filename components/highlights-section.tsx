@@ -249,7 +249,7 @@ export function HighlightsSection() {
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   {
-                    "I turn complex technology into content anyone can understand, whether they're into tech or not. \n\nOver the past 15 years, this has been at the core of every role I've worked in, including Senior Technical Writer role."
+                    "I turn complex technology into content anyone can understand, whether they're into tech or not. <br> Over the past 15 years, this has been at the core of every role I've worked in, including Senior Technical Writer role."
                   }
                 </p>
 
