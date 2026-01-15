@@ -1,6 +1,6 @@
 export function TransitionSection() {
   return (
-    <section className="relative py-16 bg-transparent">
+    <section className="relative py-3 bg-transparent">
       <div
         className="absolute inset-0 blur-[60px] opacity-100"
         style={{
