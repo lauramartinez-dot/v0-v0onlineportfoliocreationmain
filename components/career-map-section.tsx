@@ -1,6 +1,4 @@
 "use client"
-
-import { useState } from "react"
 import {
   GraduationCap,
   Plane,
@@ -15,7 +13,6 @@ import {
   Trash,
   FileSpreadsheet,
 } from "lucide-react"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface Experience {
   id: string
@@ -588,273 +585,108 @@ const experiences: Experience[] = [
   },
 ]
 
-interface GroupedCareerCardProps {
-  groupId: string
+interface Achievement {
+  id: string
   title: string
-  company: string
-  logo: string
-  headerImage: string // Added headerImage prop
-  location: string
-  countryFlag: string
-  achievementCount: number
-  summary: string
-  experiences: Experience[]
-  workType: string
-  years: string // Added years prop
+  description: string
+  icon: any
+  color: string
 }
 
-const GroupedCareerCard = ({
-  groupId,
-  title,
-  company,
-  logo,
-  headerImage, // Use headerImage for banner, fallback to logo
-  location,
-  countryFlag,
-  achievementCount,
-  summary,
-  experiences,
-  workType,
-  years, // Added years prop
-}: GroupedCareerCardProps) => {
-  const [open, setOpen] = useState(false)
+const operationalAchievements: Achievement[] = [
+  {
+    id: "scaled-teams",
+    title: "Scaled Documentation & Support Teams Globally",
+    description:
+      "Built and expanded documentation and support teams from small local groups to 10+ globally distributed writers and support staff, mentoring peers and guiding promotions (Personio, MoGi Group, Sysnet).",
+    icon: Users,
+    color: "#9931e7",
+  },
+  {
+    id: "ai-optimization",
+    title: "Optimized Workflows with AI & Data",
+    description:
+      "Designed AI-powered and data-informed processes that: Reduced Spanish translation review time by 90%. Cleared 100+ outdated articles, improving content relevance. Generated operational reports 30% faster. Deprioritized low-impact tasks → saved 20% of release effort.",
+    icon: Bot,
+    color: "#9931e7",
+  },
+  {
+    id: "reduced-support",
+    title: "Directly Reduced Support Load & Improved Customer Experience",
+    description:
+      "Authored and owned key product feature documentation, leading to: 50% fewer support tickets in six months. Clearer user guidance and reduced friction for product adoption.",
+    icon: BarChart,
+    color: "#9931e7",
+  },
+  {
+    id: "multilingual",
+    title: "Built Multi-language & Localized Content from Scratch",
+    description:
+      "Created Spanish documentation from zero, managed 150+ translations per year, and localized content for global audiences, including tech journalism (Personio, Business Insider, Muy Interesante).",
+    icon: Globe,
+    color: "#9931e7",
+  },
+  {
+    id: "mentorship",
+    title: "Mentored & Developed Talent",
+    description:
+      "Promoted to Senior Technical Writer as the first on a 10-person team; mentored 10 team members and guided a peer to promotion, doubling senior-level coverage within the team.",
+    icon: TrendingUp,
+    color: "#9931e7",
+  },
+  {
+    id: "cross-functional",
+    title: "Led Cross-functional & Cultural Initiatives",
+    description:
+      "Acted as Culture Champion, Women Committee lead, and interviewer; ran workshops and trainings to upskill teams, aligning documentation strategy with business KPIs like adoption and retention.",
+    icon: Target,
+    color: "#9931e7",
+  },
+  {
+    id: "tech-content",
+    title: "Published High-impact Tech Content",
+    description:
+      "Authored 200+ articles on emerging tech and science, some featured on front pages; translated and localized content to reach broader audiences; recognized with a Journalism Research Grant.",
+    icon: Award,
+    color: "#9931e7",
+  },
+]
 
-  return (
-    <>
-      <div
-        onClick={() => setOpen(true)}
-        className="group relative cursor-pointer overflow-hidden rounded-xl border border-border bg-card shadow-sm transition-all hover:shadow-md"
-      >
-        {/* Header image with logo bubble */}
-        <div className="relative h-48 w-full overflow-hidden bg-muted">
-          <img
-            src={headerImage || "/placeholder.svg"}
-            alt={company}
-            className="h-full w-full object-cover transition-transform group-hover:scale-105"
-          />
-          {/* Logo bubble overlay */}
-          <div className="absolute top-4 right-4 h-32 w-32 overflow-hidden rounded-full border-4 border-background bg-background shadow-lg">
-            <img
-              src={logo || "/placeholder.svg"}
-              alt={`${company} logo`}
-              className="h-full w-full object-contain p-1"
-            />
-          </div>
-        </div>
-
-        {/* Card content */}
-        <div className="p-6">
-          <h3 className="mb-2 text-xl font-semibold text-foreground">{title}</h3>
-          {/* Date and location info */}
-          <div className="mb-3 flex items-center gap-2 text-sm text-muted-foreground">
-            <span>{countryFlag}</span>
-            <span>{location}</span>
-            <span>•</span>
-            <span>{years}</span>
-          </div>
-          <p className="mb-4 text-sm text-muted-foreground">{summary}</p>
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-medium text-primary">
-              {achievementCount} achievement{achievementCount !== 1 ? "s" : ""}
-            </span>
-            <span className="text-sm text-muted-foreground group-hover:text-primary transition-colors">
-              View details →
-            </span>
-          </div>
-        </div>
-      </div>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="!w-[75vw] !max-w-none max-h-[90vh] overflow-y-auto p-6 sm:!max-w-none md:!max-w-none lg:!max-w-none">
-          <DialogHeader>
-            <DialogTitle className="text-3xl font-bold">{company}</DialogTitle>
-          </DialogHeader>
-
-          {/* Modal Image */}
-          <div className="mb-8 flex gap-6">
-            {/* Description */}
-            <div className="flex-1 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-              <p
-                className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200"
-                dangerouslySetInnerHTML={{
-                  __html: summary.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
-                }}
-              />
-            </div>
-
-            {/* Image on the right */}
-            {headerImage && (
-              <div className="w-[480px] h-80 overflow-hidden rounded-xl bg-gray-100 dark:bg-gray-800 flex-shrink-0">
-                <img
-                  src={headerImage || "/placeholder.svg"}
-                  alt={`${company} logo`}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            )}
-          </div>
-
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Top achievements</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className="group relative flex flex-col p-3 bg-white dark:bg-gray-900 rounded-xl border-2 border-gray-200 dark:border-gray-700 transition-all duration-300 shadow-lg overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                <div className="relative z-10">
-                  <p
-                    className="text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-3"
-                    dangerouslySetInnerHTML={{
-                      __html: exp.description.replace(
-                        /\*\*(.*?)\*\*/g,
-                        "<strong class='text-foreground font-semibold'>$1</strong>",
-                      ),
-                    }}
-                  />
-                  {exp.achievements && exp.achievements.length > 0 && (
-                    <ul className="space-y-2 mt-4">
-                      {exp.achievements.map((achievement, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                          <span className="text-primary mt-0.5 flex-shrink-0">•</span>
-                          <span>{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
-  )
-}
-
-const CareerCard = ({ exp }: { exp: Experience }) => {
+const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
+  const Icon = achievement.icon
   return (
     <div
-      key={exp.id}
-      className="group relative cursor-pointer overflow-hidden rounded-lg border-2 border-gray-200 bg-white p-4 shadow-sm hover:shadow-md hover:border-primary/30 transition-all duration-300 min-h-[100px]"
+      key={achievement.id}
+      className="group rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/[0.05] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-      <div className="relative z-10">
-        <p
-          className="text-sm leading-relaxed text-gray-700 dark:text-gray-300"
-          dangerouslySetInnerHTML={{
-            __html: exp.description.replace(
-              /\*\*(.*?)\*\*/g,
-              "<strong class='text-foreground font-semibold'>$1</strong>",
-            ),
-          }}
-        />
+      <div className="flex items-start gap-4">
+        <div className="shrink-0 rounded-lg bg-primary/10 p-3">
+          <Icon className="h-6 w-6 text-primary" />
+        </div>
+        <div className="flex-1">
+          <h3 className="mb-2 text-lg font-semibold text-foreground">{achievement.title}</h3>
+          <p className="text-sm text-muted-foreground leading-relaxed">{achievement.description}</p>
+        </div>
       </div>
-
-      {exp.achievements && exp.achievements.length > 0 && (
-        <ul className="space-y-1.5 mb-4">
-          {exp.achievements.slice(0, 3).map((achievement, idx) => (
-            <li key={idx} className="flex items-start gap-2 text-xs text-muted-foreground">
-              <span className="text-primary mt-0.5">•</span>
-              <span>{achievement}</span>
-            </li>
-          ))}
-        </ul>
-      )}
     </div>
   )
 }
 
-const RelocationIndicator = ({
-  fromCountry,
-  toCountry,
-  fromFlag,
-  toFlag,
-}: { fromCountry: string; toCountry: string; fromFlag: string; toFlag: string }) => (
-  <div className="flex items-start gap-6">
-    <div className="w-28 flex-shrink-0" />
-    <div className="relative mt-1.5 h-3 w-3 flex-shrink-0" />
-    <div className="flex-1 pb-4">
-      <div className="flex items-center gap-3 rounded-lg border border-purple-200 bg-purple-50/50 px-4 py-2 text-sm">
-        <div className="flex items-center gap-2 text-gray-700">
-          <span className="text-lg">{fromFlag}</span>
-          <span className="font-medium">{fromCountry}</span>
-        </div>
-        <svg className="h-4 w-4 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-        </svg>
-        <div className="flex items-center gap-2 text-gray-700">
-          <span className="text-lg">{toFlag}</span>
-          <span className="font-medium">{toCountry}</span>
-        </div>
-        <span className="ml-auto text-xs text-purple-600 font-medium">Relocated</span>
-      </div>
-    </div>
-  </div>
-)
-
 export default function CareerMapSection() {
-  const allSortedExperiences = experiences.sort((a, b) => {
-    const yearA = a.year === "Present" ? 9999 : Number.parseInt(a.year.split("-")[0])
-    const yearB = b.year === "Present" ? 9999 : Number.parseInt(b.year.split("-")[0])
-    return yearB - yearA // Most recent first
-  })
-
-  const operationalExperiences = allSortedExperiences.filter(
-    (exp) =>
-      exp.workType === "Operational" ||
-      exp.workType === "Content operations" ||
-      exp.workType === "AI-powered operations" ||
-      exp.workType === "Data-informed operations",
-  )
-
-  const groupedByCompanyAndTitle = operationalExperiences.reduce(
-    (acc, exp) => {
-      const key = `${exp.company}-${exp.title}`
-      if (!acc[key]) {
-        acc[key] = []
-      }
-      acc[key].push(exp)
-      return acc
-    },
-    {} as Record<string, Experience[]>,
-  )
-
-  const companyCards = Object.entries(groupedByCompanyAndTitle).map(([key, exps]) => {
-    const mainExp = exps[0] // Use first experience for main details
-    const achievementCount = exps.length // Count individual sub-achievements
-    return {
-      groupId: key.toLowerCase().replace(/\s+/g, "-"),
-      title: mainExp.title,
-      company: mainExp.company,
-      logo: mainExp.logo,
-      headerImage: mainExp.headerImage || mainExp.logo, // Use headerImage if available, fallback to logo
-      location: mainExp.location,
-      countryFlag: mainExp.countryFlag,
-      achievementCount,
-      summary: mainExp.description,
-      experiences: exps,
-      workType: mainExp.workType,
-      years: mainExp.year, // Added years
-    }
-  })
-
   return (
-    <section id="top-achievements" className="scroll-mt-20 py-20 relative overflow-hidden">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="mb-12 text-center">
+    <section id="top-achievements" className="py-24 bg-background">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="mb-16 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
             What I Worked On
           </div>
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {companyCards.map((card) => (
-            <GroupedCareerCard key={card.groupId} {...card} />
+        <div className="grid gap-6 md:grid-cols-2">
+          {operationalAchievements.map((achievement) => (
+            <AchievementCard key={achievement.id} achievement={achievement} />
           ))}
         </div>
       </div>
