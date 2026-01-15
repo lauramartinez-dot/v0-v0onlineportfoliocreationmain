@@ -857,6 +857,7 @@ interface GroupedCareerCardProps {
   summary: string
   experiences: Experience[]
   workType: string
+  years: string // Added years prop
 }
 
 const GroupedCareerCard = ({
@@ -871,6 +872,7 @@ const GroupedCareerCard = ({
   summary,
   experiences,
   workType,
+  years, // Added years prop
 }: GroupedCareerCardProps) => {
   const [open, setOpen] = useState(false)
 
@@ -905,7 +907,7 @@ const GroupedCareerCard = ({
             <span>{countryFlag}</span>
             <span>{location}</span>
             <span>•</span>
-            <span>{experiences[0]?.year}</span>
+            <span>{years}</span>
           </div>
           <p className="mb-4 text-sm text-muted-foreground">{summary}</p>
           <div className="flex items-center justify-between">
@@ -1084,6 +1086,7 @@ export default function CareerMapSection() {
       summary: mainExp.description,
       experiences: exps,
       workType: mainExp.workType,
+      years: mainExp.year, // Added years
     }
   })
 
@@ -1107,7 +1110,9 @@ export default function CareerMapSection() {
             logo="/personio-logo.png"
             headerImage="/images/personio-team.jpg"
             summary="Continued scaling documentation to support the company's transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy."
-            experiences={experiences.filter((exp) => exp.id === "personio-senior-tw")}
+            experiences={experiences.filter(
+              (exp) => exp.company === "Personio" && exp.title === "Senior Technical Writer | Bilingual (EN/ES)",
+            )}
           />
 
           <GroupedCareerCard
@@ -1119,7 +1124,9 @@ export default function CareerMapSection() {
             logo="/personio-logo.png"
             headerImage="/images/personio-team.jpg"
             summary="Early hire — joined at 300 employees as one of the first near-native English Technical Writers and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth)."
-            experiences={experiences.filter((exp) => exp.id === "personio-tw")}
+            experiences={experiences.filter(
+              (exp) => exp.company === "Personio" && exp.title === "Technical Writer | Bilingual (EN/ES)",
+            )}
           />
 
           {/* Other company cards */}
@@ -1153,6 +1160,7 @@ export default function CareerMapSection() {
                 summary={mainExp.description}
                 experiences={companyExps}
                 workType={mainExp.workType}
+                years={mainExp.year} // Added years
               />
             )
           })}
