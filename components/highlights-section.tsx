@@ -295,31 +295,31 @@ export function HighlightsSection() {
           </div>
 
           {/* Text content - centered and above images */}
-          <div className="max-w-5xl mx-auto mb-12 space-y-4 text-center">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              I turn complex technology into content anyone can understand, whether they're into tech or not.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Over the past 15 years, this has been at the core of every role I've worked in.
-            </p>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, as a Senior Technical Writer,{" "}
-              <strong className="font-semibold text-foreground whitespace-nowrap">
-                I turn complex SaaS software into documentation tailored to the end user
-              </strong>
-              , whether that's:
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-            {/* Left side - Combined text */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
+            {/* Left side - All text content */}
             <div className="space-y-6">
-              <p className="text-base text-muted-foreground leading-relaxed">
-                A business user who needs clear, jargon-free guidance on using the app
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                I turn complex technology into content anyone can understand, whether they're into tech or not.
               </p>
-              <p className="text-base text-muted-foreground leading-relaxed">
-                A developer who needs accurate, fluff-free guidance on how to work with the app
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Over the past 15 years, this has been at the core of every role I've worked in.
               </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Today, as a Senior Technical Writer,{" "}
+                <strong className="font-semibold text-foreground whitespace-nowrap">
+                  I turn complex SaaS software into documentation tailored to the end user
+                </strong>
+                , whether that's:
+              </p>
+
+              <div className="space-y-4 pt-4">
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  A business user who needs clear, jargon-free guidance on using the app
+                </p>
+                <p className="text-base text-muted-foreground leading-relaxed">
+                  A developer who needs accurate, fluff-free guidance on how to work with the app
+                </p>
+              </div>
             </div>
 
             {/* Right side - Single documentation image */}
