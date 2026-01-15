@@ -303,8 +303,11 @@ export function HighlightsSection() {
               Over the past 15 years, this has been at the core of every role I've worked in.
             </p>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Today, as a Senior Technical Writer, I turn complex SaaS software into documentation tailored to the end
-              user, whether that's:
+              Today, as a Senior Technical Writer,{" "}
+              <strong className="font-semibold text-foreground whitespace-nowrap">
+                I turn complex SaaS software into documentation tailored to the end user
+              </strong>
+              , whether that's:
             </p>
           </div>
 
