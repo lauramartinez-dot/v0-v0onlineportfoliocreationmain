@@ -444,7 +444,7 @@ const experiences: Experience[] = [
     countryFlag: "🇩🇪",
     type: "work",
     description:
-      "Joined as one of the first near-native English Technical Writers when the team was only 3 German-speaking writers. Played a key role in scaling the team into a 10-writer, globally distributed organization spanning multiple countries and time zones, establishing processes and standards that enabled sustainable growth during Personio's hypergrowth phase.",
+      "joined at 300 employees as 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗳𝗶𝗿𝘀𝘁 𝗻𝗲𝗮𝗿-𝗻𝗮𝘁𝗶𝘃𝗲 𝗘𝗻𝗴𝗹𝗶𝘀𝗵 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗪𝗿𝗶𝘁𝗲𝗿𝘀 and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
     achievements: [],
     technologies: ["Team Building", "Scaling", "International Collaboration"],
     relevantSkills: ["Team Building", "Cross-Cultural Communication"],
