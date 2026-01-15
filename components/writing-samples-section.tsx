@@ -33,6 +33,7 @@ const categories: CategoryData[] = [
     icon: BookOpen,
     description:
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
+    headerImage: "/images/7b4a699f73-1e53-4b3c-a4b6-5a4136bfbc6e-7d.png", // Added header image for Functional Documentation card
     audience: "Business users",
     subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
