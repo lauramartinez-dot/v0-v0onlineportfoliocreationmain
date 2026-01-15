@@ -308,17 +308,31 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
           <p className="text-sm text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
 
           {category.audience && (
-            <div className="mb-5 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
-              <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">
-                Audience: <span className="font-normal text-gray-700 dark:text-gray-300">{category.audience}</span>
-              </p>
+            <div className="mb-5 space-y-3">
+              <div>
+                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 block">
+                  Audience
+                </span>
+                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
+                  {category.audience}
+                </span>
+              </div>
               {category.subAudience && category.subAudience.length > 0 && (
-                <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
-                  Sub-audience:{" "}
-                  <span className="font-normal text-gray-700 dark:text-gray-300">
-                    {category.subAudience.join(", ")}
+                <div>
+                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 block">
+                    Sub-audience
                   </span>
-                </p>
+                  <div className="flex flex-wrap gap-2">
+                    {category.subAudience.map((subAud, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20"
+                      >
+                        {subAud}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               )}
             </div>
           )}
