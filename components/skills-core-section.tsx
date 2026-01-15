@@ -162,7 +162,7 @@ export function SkillsCoreSection() {
                   "ChatGPT, Clueso (Gen AI tools)",
                   "Zendesk, Confluence (Knowledge Base)",
                   "GitHub (Version Control)",
-                  "Lucidchart (Diagramming)",
+                  "Lucidchart, Draw.io (Diagramming)",
                   "JavaScript basics (Programming)",
                   "v0.app (AI-Assisted Development)",
                 ].map((tool, index) => {
