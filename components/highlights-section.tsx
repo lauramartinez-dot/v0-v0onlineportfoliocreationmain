@@ -309,7 +309,7 @@ export function HighlightsSection() {
           {/* Images - three squares in a row below text */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Code Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group">
+            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-50/50">
               <div className="w-full h-[400px] relative">
                 <Image
                   src="/images/saas-app.png"
@@ -318,13 +318,15 @@ export function HighlightsSection() {
                   className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                From cryptic code  
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
+                  From cryptic code
+                </span>
               </div>
             </div>
 
             {/* UX Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group">
+            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-50/50">
               <div className="w-full h-[400px] relative">
                 <Image
                   src="/images/ux-time-entry-interface.png"
@@ -333,13 +335,15 @@ export function HighlightsSection() {
                   className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                {"And semi-intuitive UX"}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
+                  And semi-intuitive UX
+                </span>
               </div>
             </div>
 
             {/* Documentation Image */}
-            <div className="relative rounded-lg overflow-hidden shadow-md group">
+            <div className="relative rounded-lg overflow-hidden shadow-md group bg-purple-50/50">
               <div className="w-full h-[400px] relative">
                 <Image
                   src="/images/documentation-getting-started.png"
@@ -348,8 +352,10 @@ export function HighlightsSection() {
                   className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 text-sm font-medium text-primary bg-background/90 backdrop-blur-sm px-4 py-2 rounded-full">
-                To clear documentation 
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
+                <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
+                  To clear documentation
+                </span>
               </div>
             </div>
           </div>
