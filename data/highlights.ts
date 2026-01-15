@@ -109,7 +109,7 @@ export const coreSkills = [
 export const beyondCoreSkills = [
   {
     icon: Home,
-    title: "Near-Native, AI-Proofread English Writing",
+    title: "Near-native, AI-proofread English writing",
     description:
       "I am bilingual (English/Spanish) and write exclusively in English, using AI-assisted proofreading to ensure native-level quality.",
     link: "",
@@ -117,7 +117,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Globe,
-    title: "Localization-Ready English Content to Be Translated",
+    title: "Localization-ready English content to be translated",
     description:
       "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
