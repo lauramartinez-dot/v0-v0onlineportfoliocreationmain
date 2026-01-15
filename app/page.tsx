@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/hero-section"
-import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { SkillsCoreSection } from "@/components/skills-core-section"
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
@@ -14,14 +13,15 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <TransitionSection />
+      <ScrollTransitionSection />
       <HighlightsSection />
-      <TransitionSection /> {/* Added transition section between My role and Top Differentiators */}
+      <ScrollTransitionSection />
       <SkillsCoreSection />
       <ScrollTransitionSection />
-      <TransitionSection />
       <CareerMapSection />
+      <ScrollTransitionSection />
       <WritingSamplesSection />
+      <ScrollTransitionSection />
       <ContactSection />
       <Footer />
     </main>
