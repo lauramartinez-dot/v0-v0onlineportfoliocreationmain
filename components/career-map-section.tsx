@@ -695,11 +695,21 @@ const GroupedCareerCard = ({
 
                 <div className="relative z-10">
                   <p
-                    className="text-sm leading-relaxed text-gray-700 dark:text-gray-300"
+                    className="text-sm leading-relaxed text-gray-700 dark:text-gray-300 mb-3"
                     dangerouslySetInnerHTML={{
                       __html: exp.description.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>"),
                     }}
                   />
+                  {exp.achievements && exp.achievements.length > 0 && (
+                    <ul className="space-y-2 mt-4">
+                      {exp.achievements.map((achievement, idx) => (
+                        <li key={idx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                          <span className="text-primary mt-0.5 flex-shrink-0">•</span>
+                          <span>{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               </div>
             ))}
