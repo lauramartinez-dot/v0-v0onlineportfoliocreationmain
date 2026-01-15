@@ -82,7 +82,7 @@ export const coreSkills = [
   },
   {
     icon: Briefcase,
-    title: "Ability to operate as both hands-on writer and content manager",
+    title: "Split focus as both hands-on writer and content manager",
     description:
       "I create AI- and data-driven processes that improve team efficiency and align documentation with company goals and KPIs.",
     link: "",
