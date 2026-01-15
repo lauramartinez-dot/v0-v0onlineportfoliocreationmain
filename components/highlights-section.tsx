@@ -243,9 +243,9 @@ export function HighlightsSection() {
           </div>
 
           {/* Text content - centered and above images */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto items-center">
             {/* Left side - All text content */}
-            <div className="space-y-6 pr-8">
+            <div className="space-y-6">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 I turn complex technology into content anyone can understand, whether they're into tech or not.
               </p>
