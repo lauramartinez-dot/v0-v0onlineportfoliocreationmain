@@ -243,37 +243,39 @@ export function HighlightsSection() {
           </div>
 
           {/* Text content - centered and above images */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            {/* Left side - All text content */}
-            <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                I turn complex technology into content anyone can understand, whether they're into tech or not.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Over the past 15 years, this has been at the core of every role I've worked in.
-              </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Today, as a Senior Technical Writer, I turn complex SaaS software into{" "}
-                <span className="text-primary/90 font-medium">documentation tailored to the end user</span>, whether
-                that's a business user who needs clear, jargon-free guidance on using the app or a developer who needs
-                accurate, fluff-free guidance on how to work with it.
-              </p>
-            </div>
+          <div className="max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Left side - All text content */}
+              <div className="space-y-6">
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  I turn complex technology into content anyone can understand, whether they're into tech or not.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Over the past 15 years, this has been at the core of every role I've worked in.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Today, as a Senior Technical Writer, I turn complex SaaS software into{" "}
+                  <span className="text-primary/90 font-medium">documentation tailored to the end user</span>, whether
+                  that's a business user who needs clear, jargon-free guidance on using the app or a developer who needs
+                  accurate, fluff-free guidance on how to work with it.
+                </p>
+              </div>
 
-            {/* Right side - Single documentation image without background */}
-            <div className="relative">
-              <Image
-                src="/images/documentation-getting-started.png"
-                alt="Documentation interface"
-                width={800}
-                height={600}
-                className="w-full h-auto object-contain rounded-xl shadow-lg"
-              />
+              {/* Right side - Single documentation image without background */}
+              <div className="relative">
+                <Image
+                  src="/images/documentation-getting-started.png"
+                  alt="Documentation interface"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto object-contain rounded-xl shadow-lg"
+                />
+              </div>
             </div>
           </div>
 
           {/* Why Section */}
-          <div className="mt-12">
+          <div className="max-w-5xl mx-auto mt-12">
             <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
               <p className="text-lg text-muted-foreground leading-relaxed">
                 <span className="font-semibold text-primary opacity-[0.78]">My mission</span> is to help people
