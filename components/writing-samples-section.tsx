@@ -264,23 +264,37 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
     <>
       <div
         onClick={() => setOpen(true)}
-        className="group relative cursor-pointer overflow-hidden rounded-xl border-2 border-gray-200/80 bg-white shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+        className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
       >
-        <div className="p-6">
-          <div className="flex items-start gap-4 mb-4">
-            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
-              <Icon className="h-6 w-6 text-primary" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-lg font-bold text-gray-900 mb-1">{category.title}</h3>
-            </div>
+        <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-50">
+          <Image
+            src={`/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`}
+            alt={category.title}
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+
+          <div className="absolute bottom-4 left-4 w-14 h-14 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
+            <Icon className="h-7 w-7 text-primary" />
           </div>
+        </div>
 
-          <p className="text-sm text-gray-700 leading-relaxed mb-4">{category.description}</p>
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
+            {category.title}
+          </h3>
 
-          <div className="flex items-center gap-2 text-sm font-medium text-primary">
+          <p className="text-sm text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
+
+          <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
             <span>View {category.samples.length} samples</span>
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg
+              className="h-4 w-4 group-hover:translate-x-1 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </div>
@@ -353,8 +367,8 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
 
 export default function WritingSamplesSection() {
   return (
-    <section id="writing-samples" className="scroll-mt-20 py-20 bg-gray-50/50">
-      <div className="max-w-5xl mx-auto px-4">
+    <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
+      <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
             My Work
@@ -365,7 +379,7 @@ export default function WritingSamplesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((category) => (
             <CategoryCard key={category.id} category={category} />
           ))}
