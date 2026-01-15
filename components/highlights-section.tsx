@@ -276,11 +276,14 @@ export function HighlightsSection() {
 
           {/* Why Section */}
           <div className="max-w-5xl mx-auto mt-12">
-            <div className="rounded-lg border border-border bg-card/50 backdrop-blur-sm p-8 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                <span className="font-semibold text-primary opacity-[0.78]">My mission</span> is to help people
-                (especially those less encouraged into STEM) gain tech literacy, because I wholeheartedly believe it is
-                the most life-changing skill there is, even more so in today's AI-disrupted world.
+            <div className="inline-flex items-center gap-3 rounded-full border-2 border-primary/30 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 px-6 py-4 shadow-sm backdrop-blur-sm">
+              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
+                <Star className="w-5 h-5 text-white" />
+              </div>
+              <p className="text-base text-foreground leading-relaxed">
+                <span className="font-bold text-primary">Mission:</span> I want to help people—especially women and
+                others who haven't always been encouraged to pursue STEM—gain tech literacy. I believe it's one of the
+                most life-changing skills, especially in today's AI-driven world.
               </p>
             </div>
           </div>
