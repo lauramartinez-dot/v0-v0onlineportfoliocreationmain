@@ -354,7 +354,7 @@ export function HighlightsSection() {
               </div>
               <div className="absolute bottom-3 left-1/2 -translate-x-1/2">
                 <span className="inline-block rounded-full px-6 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/25 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/30">
-                  To clear documentation
+                  To clear guides
                 </span>
               </div>
             </div>
