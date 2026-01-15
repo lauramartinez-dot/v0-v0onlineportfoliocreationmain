@@ -69,7 +69,7 @@ const categories: CategoryData[] = [
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
         role: "Admin",
-        image: "/hr-permissions-settings-interface.jpg",
+        image: "/images/task-based-grant-permissions.png", // Updated to use actual screenshot
       },
       {
         title: "Troubleshoot issues with report creation as an Administrator (Admin)",
