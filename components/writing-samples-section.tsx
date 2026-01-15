@@ -307,6 +307,18 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="!w-[75vw] !max-w-none max-h-[90vh] overflow-y-auto p-6">
+          {category.headerImage && (
+            <div className="relative w-full h-64 -mx-6 -mt-6 mb-6 overflow-hidden">
+              <Image
+                src={category.headerImage || "/placeholder.svg"}
+                alt={category.title}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+            </div>
+          )}
+
           <DialogHeader>
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
