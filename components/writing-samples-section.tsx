@@ -32,7 +32,7 @@ const categories: CategoryData[] = [
     icon: BookOpen,
     description:
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
-    headerImage: "/images/7b4a699f73-1e53-4b3c-a4b6-5a4136bfbc6e-7d.png",
+    headerImage: "/abstract-conceptual-diagram-with-connected-nodes-a.jpg",
     audience: "Business users",
     subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
@@ -65,7 +65,7 @@ const categories: CategoryData[] = [
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/images/task-based-documentation-header.png",
+    headerImage: "/step-by-step-checklist-with-checkmarks-and-progres.jpg",
     audience: "Business users",
     subAudience: ["Admins", "Supervisors"],
     samples: [
@@ -86,7 +86,7 @@ const categories: CategoryData[] = [
       {
         title: "Troubleshoot issues with report creation as a Supervisor",
         company: "Personio",
-        url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
+        url: "https://support.personio.de/hc/de/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
         role: "Supervisor",
         image: "/supervisor-reports-interface.jpg",
       },
@@ -98,7 +98,7 @@ const categories: CategoryData[] = [
     icon: Video,
     description:
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
-    headerImage: "/images/instructional-videos-header.png",
+    headerImage: "/video-tutorial-interface-with-play-button-and-scre.jpg",
     audience: "Business users",
     subAudience: ["Admins"],
     samples: [
@@ -138,6 +138,7 @@ const categories: CategoryData[] = [
     icon: MessageSquare,
     description:
       "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
+    headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
     audience: "Business users",
     subAudience: ["All users"],
     samples: [],
@@ -148,7 +149,7 @@ const categories: CategoryData[] = [
     icon: FileText,
     description:
       "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
-    headerImage: "/images/7bb2ef88ce-6372-44e6-aa59-0da1e772b8b6-7d.jpg",
+    headerImage: "/software-release-announcement-with-version-number-.jpg",
     audience: "Business users",
     subAudience: ["Admins", "Supervisors", "Employees"],
     samples: [
@@ -165,6 +166,7 @@ const categories: CategoryData[] = [
     icon: Database,
     description:
       "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
+    headerImage: "/organized-knowledge-database-with-folders-and-docu.jpg",
     audience: "Internal teams",
     subAudience: ["Technical Writers", "Product Managers", "Engineers"],
     samples: [
@@ -194,6 +196,7 @@ const categories: CategoryData[] = [
     icon: Newspaper,
     description:
       "Tech journalism and articles for leading Spanish media outlets, covering innovation, science, and technology trends.",
+    headerImage: "/tech-journalism-newspaper-with-digital-elements-an.jpg",
     audience: "General public",
     subAudience: ["Tech enthusiasts", "Science readers"],
     samples: [
