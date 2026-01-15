@@ -716,11 +716,17 @@ export default function CareerMapSection() {
     return yearB - yearA // Most recent first
   })
 
-  const operationalExperiences = allSortedExperiences.filter((exp) => exp.workType === "Operational")
+  const operationalExperiences = allSortedExperiences.filter(
+    (exp) =>
+      exp.workType === "Operational" ||
+      exp.workType === "Content operations" ||
+      exp.workType === "AI-powered operations" ||
+      exp.workType === "Data-informed operations",
+  )
 
-  const groupedByCompany = operationalExperiences.reduce(
+  const groupedByCompanyAndTitle = operationalExperiences.reduce(
     (acc, exp) => {
-      const key = exp.company
+      const key = `${exp.company}-${exp.title}`
       if (!acc[key]) {
         acc[key] = []
       }
@@ -730,13 +736,13 @@ export default function CareerMapSection() {
     {} as Record<string, Experience[]>,
   )
 
-  const companyCards = Object.entries(groupedByCompany).map(([company, exps]) => {
+  const companyCards = Object.entries(groupedByCompanyAndTitle).map(([key, exps]) => {
     const mainExp = exps[0] // Use first experience for main details
-    const achievementCount = exps.reduce((sum, exp) => sum + (exp.achievements?.length || 0), 0)
+    const achievementCount = exps.length // Count individual sub-achievements
     return {
-      groupId: company.toLowerCase().replace(/\s+/g, "-"),
+      groupId: key.toLowerCase().replace(/\s+/g, "-"),
       title: mainExp.title,
-      company,
+      company: mainExp.company,
       logo: mainExp.logo,
       headerImage: mainExp.headerImage || mainExp.logo, // Use headerImage if available, fallback to logo
       location: mainExp.location,
