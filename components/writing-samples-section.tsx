@@ -35,7 +35,7 @@ const categories: CategoryData[] = [
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
     headerImage: "/images/7b4a699f73-1e53-4b3c-a4b6-5a4136bfbc6e-7d.png", // Added header image for Functional Documentation card
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"],
+    subAudience: ["Admins", "Supervisors", "Employees"], // Has End-user role sample
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -71,7 +71,7 @@ const categories: CategoryData[] = [
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
     headerImage: "/images/image.png", // Updated header image to use the exact blob URL provided by user
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"],
+    subAudience: ["Admins", "Supervisors"], // No End-user role samples, removed Employees
     samples: [
       {
         title: "Grant permissions for everyday tasks in Personio",
@@ -107,7 +107,7 @@ const categories: CategoryData[] = [
       "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
     headerImage: "/images/image.png", // Updated header image to use the exact blob URL for the video tutorial interface
     audience: "Business users",
-    subAudience: ["Admins", "Employees"],
+    subAudience: ["Admins"], // No End-user role samples, removed Employees
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -137,7 +137,7 @@ const categories: CategoryData[] = [
     description:
       "Contextual messaging, onboarding flows, tooltips, and user notifications crafted to guide users within the product interface.",
     audience: "Business users",
-    subAudience: ["Admins", "Employees"],
+    subAudience: ["Admins", "Employees"], // Kept as is - adjust if no End-user samples exist
     samples: [
       {
         title: "Product tour for new permissions framework",
@@ -170,7 +170,7 @@ const categories: CategoryData[] = [
       "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
     headerImage: "/images/7bb2ef88ce-6372-44e6-aa59-0da1e772b8b6-7d.jpg", // Added header image for Release Notes card
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"],
+    subAudience: ["Admins", "Supervisors", "Employees"], // Kept as is - typically for all user types
     samples: [
       {
         title: "Personio Product Updates",
