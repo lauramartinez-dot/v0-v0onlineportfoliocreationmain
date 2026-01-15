@@ -229,7 +229,7 @@ const categories: CategoryData[] = [
         company: "Xataka",
         year: "2014",
         url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
-        image: "/images/airplane-landing-city.png",
+        image: "/images/image.png",
       },
       {
         title: "Hallan la primera evidencia de la inflación cósmica",
