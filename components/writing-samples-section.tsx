@@ -32,7 +32,7 @@ const categories: CategoryData[] = [
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
     samples: [
       {
-        title: "Overview of permissions and employee roles (Admin)",
+        title: "Overview of permissions and employee roles",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
@@ -40,7 +40,7 @@ const categories: CategoryData[] = [
         image: "/hr-software-permissions-dashboard.jpg",
       },
       {
-        title: "Summary of the homepage cards (Admin)",
+        title: "Summary of the homepage cards",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
@@ -48,7 +48,7 @@ const categories: CategoryData[] = [
         image: "/hr-dashboard-homepage-cards.jpg",
       },
       {
-        title: "Log in and explore your new Personio account (End-users)",
+        title: "Log in and explore your new Personio account",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
@@ -66,7 +66,7 @@ const categories: CategoryData[] = [
     headerImage: "/images/7b0608ec57-3ffb-4177-9ce7-f777c78096ab-7d.png", // Added actual Personio permissions screenshot
     samples: [
       {
-        title: "Grant permissions for everyday tasks in Personio (Admin)",
+        title: "Grant permissions for everyday tasks in Personio",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
@@ -74,7 +74,7 @@ const categories: CategoryData[] = [
         image: "/images/task-based-grant-permissions.png",
       },
       {
-        title: "Troubleshoot issues with report creation as an Administrator (Admin)",
+        title: "Troubleshoot issues with report creation as an Administrator",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
@@ -82,7 +82,7 @@ const categories: CategoryData[] = [
         image: "/analytics-reports-troubleshooting.jpg",
       },
       {
-        title: "Troubleshoot issues with report creation as a Supervisor (Supervisor)",
+        title: "Troubleshoot issues with report creation as a Supervisor",
         company: "Personio",
         year: "2021",
         url: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
