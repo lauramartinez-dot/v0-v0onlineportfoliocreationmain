@@ -125,7 +125,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Users,
-    title: "6 years experience working full remote in globally distributed teams",
+    title: "6 years working fully remote in globally distributed teams",
     description:
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
