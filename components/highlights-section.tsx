@@ -255,10 +255,10 @@ export function HighlightsSection() {
                   This is also at the core of the Senior Technical Writer role.
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mt-8 mb-2">Sure, what does that actually mean?</h3>
+                <h3 className="text-xl font-semibold text-foreground mt-8 mb-2">Now, without the fluff:</h3>
 
                 <p className="text-lg text-foreground leading-relaxed">
-                  I turn complex SaaS software into{" "}
+                 <br> I turn complex SaaS software into{" "}
                   <span className="text-primary/90 font-medium">documentation tailored to the end user</span>, whether
                   that's a business user who needs clear, jargon-free guidance on using the app or a developer who needs
                   accurate, fluff-free guidance on how to work with it.
