@@ -248,11 +248,12 @@ export function HighlightsSection() {
               {/* Left side - All text content */}
               <div className="space-y-6">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I turn complex technology into content anyone can understand, whether they're into tech or not. <br> Over
-                  the past 15 years, this has been at the core of every role I've worked in, incluidng Senior Technical Writer role.
+                  I turn complex technology into content anyone can understand, whether they're into tech or not. Over
+                  the past 15 years, this has been at the core of every role I've worked in, including Senior Technical
+                  Writer role.
                 </p>
 
-                <h3 className="text-xl font-semibold text-foreground mt-8 mb-2">My role, in simple words:</h3>
+                <h3 className="text-xl font-semibold text-foreground mt-8 mb-2">My role, in plain language:</h3>
 
                 <p className="text-lg text-foreground leading-relaxed">
                   I turn complex SaaS software into{" "}
