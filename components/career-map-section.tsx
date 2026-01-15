@@ -253,7 +253,7 @@ const experiences: Experience[] = [
   },
   {
     id: "personio-senior-first-promoted",
-    title: "Senior Technical Writer | Bilingual (EN/ES)",
+    title: "Promoted to Senior",
     company: "Personio",
     workType: "Content operations",
     logo: "/personio-logo.png",
@@ -264,7 +264,7 @@ const experiences: Experience[] = [
     countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Promoted to Senior Technical Writer, becoming the first on the 10-person team to reach this level. This promotion recognized excellence in technical writing, content operations, and leadership contributions to the team's growth during Personio's transition from scale-up to mature organization.",
+      "Continued scaling documentation to support the company’s transition from a scale-up to a mature org. Promoted to Senior, with an increased focus on content operations and strategy:",
     achievements: [],
     technologies: ["Leadership", "Mentorship", "Career Development"],
     relevantSkills: ["Leadership", "Technical Excellence"],
