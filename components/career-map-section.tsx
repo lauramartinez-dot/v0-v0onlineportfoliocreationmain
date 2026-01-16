@@ -11,7 +11,6 @@ import {
   Bot,
   BarChart,
   Trash,
-  FileSpreadsheet,
   FileText,
 } from "lucide-react"
 
@@ -410,26 +409,6 @@ const experiences: Experience[] = [
     icon: Trash,
   },
   {
-    id: "personio-senior-reporting",
-    title: "Senior Technical Writer | Bilingual (EN/ES)",
-    company: "Personio",
-    workType: "Data-informed operations",
-    logo: "/personio-logo.png",
-    headerImage: "/images/personio-team.jpg",
-    year: "2023-2025",
-    location: "Barcelona",
-    country: "Spain",
-    countryFlag: "🇪🇸",
-    type: "work",
-    description:
-      "Enhanced data infrastructure and reporting capabilities, enabling the team to generate performance reports 30% faster. Improved data availability and accessibility empowered data-driven decision making, accelerated response times to content issues, and provided better visibility into documentation effectiveness and user engagement metrics.",
-    achievements: [],
-    technologies: ["Data Analytics", "Reporting", "Process Automation"],
-    relevantSkills: ["Data Operations", "Process Optimization"],
-    color: "#9931e7",
-    icon: FileSpreadsheet,
-  },
-  {
     id: "personio-tw-team-scaling",
     title: "Technical Writer | Bilingual (EN/ES)",
     company: "Personio",
@@ -442,7 +421,7 @@ const experiences: Experience[] = [
     countryFlag: "🇩🇪",
     type: "work",
     description:
-      "Joined at 300 employees as 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗳𝗶𝗿𝘀𝘁 𝗻𝗲𝗮𝗿-𝗻𝗮𝘁𝗶𝘃𝗲 𝗘𝗻𝗴𝗹𝗶𝘀𝗵 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗪𝗿𝗶𝘁𝗲𝗿𝘀 and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
+      "Joined at 300 employees as 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗳𝗶𝗿𝘀𝘁 𝗻𝗲𝗮𝗿-𝗻𝗮𝘁𝗶𝘃𝗲 𝗘𝗻𝗴𝗹𝗶𝘀𝗵 𝗧𝗲𝗰𝗻𝗶𝗰𝗮𝗹 𝗪𝗿𝗶𝘁𝗲𝗿𝘀 and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
     achievements: [],
     technologies: ["Team Building", "Scaling", "International Collaboration"],
     relevantSkills: ["Team Building", "Cross-Cultural Communication"],
@@ -640,6 +619,14 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
   },
   {
+    id: "style-guide",
+    title: "Created the First User-Facing Documentation Style Guide",
+    description:
+      "Together with the rest of founding near-native English Technical Writers, we created the first ever style guides for user-facing documentation. I also created the Spanish localization style guides based on my previous experience performing actual translation and translation QA.",
+    icon: FileText,
+    color: "#9931e7",
+  },
+  {
     id: "multilingual",
     title: "Built Multi-language & Localized Content from Scratch",
     description:
@@ -655,22 +642,6 @@ const operationalAchievements: Achievement[] = [
     icon: TrendingUp,
     color: "#9931e7",
   },
-  {
-    id: "cross-functional",
-    title: "Led Cross-functional & Cultural Initiatives",
-    description:
-      "Acted as Culture Champion, Women Committee lead, and interviewer; ran workshops and trainings to upskill teams, aligning documentation strategy with business KPIs like adoption and retention.",
-    icon: Target,
-    color: "#9931e7",
-  },
-  {
-    id: "tech-content",
-    title: "Published High-impact Tech Content",
-    description:
-      "Authored 200+ articles on emerging tech and science, some featured on front pages; translated and localized content to reach broader audiences; recognized with a Journalism Research Grant.",
-    icon: Award,
-    color: "#9931e7",
-  },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
@@ -678,16 +649,18 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group rounded-xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:border-primary/30"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
     >
-      <div className="flex items-start gap-4">
-        <div className="shrink-0 rounded-lg bg-primary/10 p-3">
-          <Icon className="h-6 w-6 text-primary" />
+      <div className="p-6">
+        <div className="flex items-start gap-4 mb-4">
+          <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+            <Icon className="h-7 w-7 text-primary" />
+          </div>
+          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors pt-2">
+            {achievement.title}
+          </h3>
         </div>
-        <div className="flex-1">
-          <h3 className="mb-2 text-lg font-semibold text-foreground">{achievement.title}</h3>
-          <p className="text-sm text-muted-foreground leading-relaxed">{achievement.description}</p>
-        </div>
+        <p className="text-sm text-muted-foreground leading-relaxed">{achievement.description}</p>
       </div>
     </div>
   )
@@ -705,7 +678,7 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-2">
           {operationalAchievements.map((achievement) => (
             <AchievementCard key={achievement.id} achievement={achievement} />
           ))}
