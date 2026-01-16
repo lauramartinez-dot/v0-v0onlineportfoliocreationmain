@@ -78,7 +78,7 @@ export const coreSkills = [
   },
   {
     icon: Layers,
-    title: "I manage multiple projects simultaneously",
+    title: "I am comfortable with shifting priorities",
     description: "",
     column: 2,
   },
