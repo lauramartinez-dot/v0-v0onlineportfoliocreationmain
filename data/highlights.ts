@@ -77,7 +77,7 @@ export const coreSkills = [
   },
   {
     icon: Target,
-    title: "Hands-On Writing & Content Operations",
+    title: "Hands-On Writing & Content Operations (Split Focus)",
     description: "",
     column: 2,
   },
