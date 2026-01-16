@@ -3,14 +3,18 @@ import {
   Users,
   Briefcase,
   Home,
-  HeartHandshake,
   Rocket,
   Clock,
   Newspaper,
   Globe,
   Target,
-  CalendarOff,
   Zap,
+  FileText,
+  Layers,
+  Building,
+  MessageSquare,
+  Bot,
+  UserCheck,
 } from "lucide-react"
 
 export const topSkills = [
@@ -41,54 +45,75 @@ export const topSkills = [
 ]
 
 export const coreSkills = [
-  // Column 2 items (Early-Stage Tech)
   {
-    icon: Target,
-    title: "Extreme Ownership",
+    icon: Layers,
+    title: "I create multi-audience, multichannel documentation",
     description: "",
-    column: 2,
+    column: 1,
   },
   {
-    icon: Zap,
-    title: "Fail-Fast Mindset",
+    icon: Heart,
+    title: "I have genuine empathy for non-technical users",
     description: "",
-    column: 2,
+    column: 1,
+  },
+  {
+    icon: FileText,
+    title: "I have foundational knowledge on clarity and readability",
+    description: "",
+    column: 1,
   },
   {
     icon: Briefcase,
-    title: "Split focus as both hands-on writer and content strategist",
+    title: "I have cross-industry transferable skills",
+    description: "",
+    column: 1,
+  },
+  {
+    icon: Target,
+    title: "I work best with a split focus: hands-on writing + content ops",
+    description: "",
+    column: 2,
+  },
+  {
+    icon: Layers,
+    title: "I manage multiple projects simultaneously",
+    description: "",
+    column: 2,
+  },
+  {
+    icon: Building,
+    title: "I build documentation teams from the ground up",
     description: "",
     column: 2,
   },
   {
     icon: Rocket,
-    title: "Business Acumen",
+    title: "I own the end-to-end documentation experience",
     description: "",
     column: 2,
   },
   {
-    icon: HeartHandshake,
-    title: "Entrepreneurial Mindset",
+    icon: Zap,
+    title: "I have a fail-fast mentality and learn fast from mistakes",
     description: "",
     column: 2,
   },
-  // Column 1 items (Tech Journalism Background)
   {
-    icon: Heart,
-    title: "Genuine Empathy for Non-Technical Users",
+    icon: MessageSquare,
+    title: "I am comfortable interacting with stakeholders at all levels",
     description: "",
-    column: 1,
+    column: 2,
   },
   {
-    icon: Users,
-    title: "Multi-Audience Documentation",
+    icon: Bot,
+    title: "I use AI beyond ChatGPT and integrate it in all workflows",
     description: "",
-    column: 1,
+    column: 2,
   },
-  // Column 3 items (International Career)
   {
-    icon: CalendarOff,
-    title: "Low-Meeting, High-Ownership Culture",
+    icon: UserCheck,
+    title: "I have an ego-free approach that values feedback",
     description: "",
     column: 3,
   },
