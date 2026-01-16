@@ -83,12 +83,6 @@ export const coreSkills = [
     column: 2,
   },
   {
-    icon: Layers,
-    title: "I am comfortable with shifting priorities",
-    description: "",
-    column: 2,
-  },
-  {
     icon: Building,
     title: "I build documentation teams from the ground up",
     description: "",
