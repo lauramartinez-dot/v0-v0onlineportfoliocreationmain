@@ -298,7 +298,7 @@ export function HighlightsSection() {
         </div>
 
         {/* Top Differentiators Section */}
-        <div className="mb-16 text-center">
+        <div className="mb-16 text-center mt-[140]">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             What Sets Me Apart
           </div>
