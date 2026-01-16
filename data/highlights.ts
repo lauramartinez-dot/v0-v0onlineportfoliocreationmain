@@ -1,5 +1,4 @@
 import {
-  Cpu,
   Heart,
   Users,
   Briefcase,
@@ -42,85 +41,56 @@ export const topSkills = [
 ]
 
 export const coreSkills = [
+  // Column 2 items (Early-Stage Tech)
   {
     icon: Target,
     title: "Extreme Ownership",
-    description:
-      "I've often joined companies as their first Spanish-native Technical Writer or in other pioneering roles, building the role from the ground up.",
-    link: "",
-    skills: ["Accountability", "Proactivity"],
-  },
-  {
-    icon: CalendarOff,
-    title: "Low-Meeting, High-Ownership Culture",
-    description:
-      "I'm used to working in environments that prioritize deep work over meetings, with clear ownership and async-first communication.",
-    link: "",
-    skills: ["Deep Work", "Async Communication"],
+    description: "",
+    column: 2,
   },
   {
     icon: Zap,
     title: "Fail-Fast Mindset",
-    description:
-      "I embrace experimentation and rapid iteration, learning quickly from what doesn't work to find what does.",
-    link: "",
-    skills: ["Experimentation", "Iteration"],
-  },
-  {
-    icon: Cpu,
-    title: "",
-    description:
-      "From years as a tech journalist explaining engineering fundamentals to my current role documenting complex SaaS products.",
-    link: "",
-    skills: ["Integrations", "API Documentation", "Data Analytics"],
-  },
-  {
-    icon: Users,
-    title: "Multi-Audience Documentation",
-    description:
-      "I'm able to switch between guides with journalist-level clarity for business users (Admins, HR, end-users) and in-depth technical guides.",
-    link: "",
-    skills: ["Troubleshooting", "Role-Based Documentation"],
-  },
-  {
-    icon: Users,
-    title: "Multi-Audience Documentation",
-    description:
-      "I'm able to switch between guides with journalist-level clarity for business users (Admins, HR, end-users) and in-depth technical guides.",
-    link: "",
-    skills: ["Troubleshooting", "Role-Based Documentation"],
-  },
-  {
-    icon: Heart,
-    title: "Geniune Empathy for Non-Technical Users",
-    description:
-      "Coming from a non-technical background, I create content that meets business users exactly where they are, without assuming prior knowledge.",
-    link: "",
-    skills: ["Plain English", "User-Friendly", "Customer Empathy"],
+    description: "",
+    column: 2,
   },
   {
     icon: Briefcase,
     title: "Split focus as both hands-on writer and content strategist",
-    description:
-      "I create AI- and data-driven processes that improve team efficiency and align documentation with company goals and KPIs.",
-    link: "",
-    skills: ["AI Workflows", "Process Automation"],
+    description: "",
+    column: 2,
   },
   {
     icon: Rocket,
     title: "Business Acumen",
-    description:
-      "I keep a big-picture view, ensuring documentation teams can keep pace as companies scale from hundreds to thousands of employees",
-    link: "",
-    skills: ["Scale-Ups", "Cross-Functional", "Business-Savvy"],
+    description: "",
+    column: 2,
   },
   {
     icon: HeartHandshake,
     title: "Entrepreneurial Mindset",
-    description:
-      "I co-founded Personio's Women Committee and led events on investing, salary negotiation, etc. I support and invest in female-founded startups.",
-    link: "",
-    skills: ["Co-Founder", "Women in Tech", "Angel Investing"],
+    description: "",
+    column: 2,
+  },
+  // Column 1 items (Tech Journalism Background)
+  {
+    icon: Heart,
+    title: "Genuine Empathy for Non-Technical Users",
+    description: "",
+    column: 1,
+  },
+  {
+    icon: Users,
+    title: "Multi-Audience Documentation",
+    description: "",
+    column: 1,
+  },
+  // Column 3 items (International Career)
+  {
+    icon: CalendarOff,
+    title: "Low-Meeting, High-Ownership Culture",
+    description: "",
+    column: 3,
   },
 ]
 

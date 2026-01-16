@@ -3,20 +3,6 @@
 import { useState } from "react"
 import { coreSkills, beyondCoreSkills } from "@/data/highlights"
 
-function renderDescription(text: string) {
-  const parts = text.split(/(\*[^*]+\*)/g)
-  return parts.map((part, index) => {
-    if (part.startsWith("*") && part.endsWith("*")) {
-      return (
-        <strong key={index} className="font-semibold text-foreground">
-          {part.slice(1, -1)}
-        </strong>
-      )
-    }
-    return part
-  })
-}
-
 function HoverExpandableCard({
   item,
 }: {
@@ -36,7 +22,7 @@ function HoverExpandableCard({
       }`}
     >
       <div className="p-5">
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-11 w-11 shadow-sm shadow-primary/10">
             <item.icon className="h-5 w-5 text-primary" />
           </div>
@@ -45,20 +31,16 @@ function HoverExpandableCard({
             <h3 className="font-semibold text-foreground text-xl leading-tight">{item.title}</h3>
           </div>
         </div>
-
-        <div
-          className={`transition-all duration-300 overflow-hidden ${
-            isHovered ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
-          }`}
-        >
-          <p className="text-lg text-muted-foreground mb-3">{renderDescription(item.description)}</p>
-        </div>
       </div>
     </div>
   )
 }
 
 export function SkillsCoreSection() {
+  const column1Skills = coreSkills.filter((s) => s.column === 1)
+  const column2Skills = coreSkills.filter((s) => s.column === 2)
+  const column3Skills = coreSkills.filter((s) => s.column === 3)
+
   return (
     <section id="skills-core" className="relative px-4 overflow-hidden py-[70px]">
       {/* Purple gradient background - matching hero section style */}
@@ -100,9 +82,9 @@ export function SkillsCoreSection() {
                 Unique Background in Tech Journalism
               </h3>
             </div>
-            <HoverExpandableCard item={coreSkills[1]} /> {/* Strong Technical Knowledge */}
-            <HoverExpandableCard item={coreSkills[2]} /> {/* Multi-Audience Documentation */}
-            <HoverExpandableCard item={coreSkills[3]} /> {/* True Non-Tech User Empathy */}
+            {column1Skills.map((skill, index) => (
+              <HoverExpandableCard key={index} item={skill} />
+            ))}
           </div>
 
           {/* Column 2: Under Early-Stage Expert */}
@@ -112,11 +94,9 @@ export function SkillsCoreSection() {
                 10 Years Focused on Early-Stage Tech
               </h3>
             </div>
-            <HoverExpandableCard item={coreSkills[0]} /> {/* Extreme Ownership */}
-            <HoverExpandableCard item={coreSkills[1]} /> {/* Low-Meeting, High-Ownership Culture */}
-            <HoverExpandableCard item={coreSkills[5]} /> {/* AI-Driven Operations & Strategy */}
-            <HoverExpandableCard item={coreSkills[6]} /> {/* Business Acumen */}
-            <HoverExpandableCard item={coreSkills[7]} /> {/* Entrepreneurial Mindset */}
+            {column2Skills.map((skill, index) => (
+              <HoverExpandableCard key={index} item={skill} />
+            ))}
           </div>
 
           {/* Column 3: Under Global Career (International Experience) */}
@@ -126,12 +106,16 @@ export function SkillsCoreSection() {
                 International Career In 4 Countries
               </h3>
             </div>
-            <HoverExpandableCard item={beyondCoreSkills[0]} /> {/* Near-Native English Writing */}
-            <HoverExpandableCard item={beyondCoreSkills[1]} /> {/* Localization Mindset */}
-            <HoverExpandableCard item={beyondCoreSkills[2]} /> {/* Global Collaboration */}
+            {column3Skills.map((skill, index) => (
+              <HoverExpandableCard key={index} item={skill} />
+            ))}
+            {beyondCoreSkills.map((skill, index) => (
+              <HoverExpandableCard key={`beyond-${index}`} item={skill} />
+            ))}
           </div>
         </div>
 
+        {/* ... existing code for tools section ... */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 relative z-10">
           {/* Column 1: Journalist-related tools + Technical knowledge */}
           <div className="flex flex-col gap-4">
@@ -194,7 +178,7 @@ export function SkillsCoreSection() {
                   "Trello / Monday.com",
                   "Zoom / Google Meet",
                   "Google Slides / Sheets / Docs",
-                  "Miro (Workshop organization)", // Added missing comma
+                  "Miro (Workshop organization)",
                   "Tableau (Data Analytics)",
                 ].map((tool, index) => {
                   const parenIndex = tool.indexOf("(")
