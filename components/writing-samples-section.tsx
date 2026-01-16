@@ -402,12 +402,10 @@ export default function WritingSamplesSection() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
-            My Work
+          What I Wrote  
           </div>
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of technical documentation, articles, and videos organized by content type
-          </p>
+         
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
