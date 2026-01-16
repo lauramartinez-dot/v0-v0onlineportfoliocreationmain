@@ -123,7 +123,7 @@ function SkillImageCard({
         src={image || "/placeholder.svg"}
         alt={item.title}
         fill
-        className="object-cover transition-transform duration-300 group-hover:scale-105"
+        className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/25 to-transparent" />
