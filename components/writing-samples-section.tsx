@@ -250,14 +250,10 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
             }
             alt={category.title}
             fill
-            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            className="object-cover opacity-70 group-hover:scale-110 transition-transform duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-purple-600/80 via-purple-400/60 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
-
-          <div className="absolute bottom-4 left-4 w-14 h-14 rounded-xl bg-white/95 backdrop-blur-sm flex items-center justify-center shadow-lg">
-            <Icon className="h-7 w-7 text-primary" />
-          </div>
+          <div className="absolute inset-0 bg-gradient-to-t from-purple-600/50 via-purple-400/25 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
         </div>
 
         <div className="p-6">
