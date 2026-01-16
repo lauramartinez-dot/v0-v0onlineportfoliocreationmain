@@ -679,7 +679,7 @@ export default function CareerMapSection() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
-            What I Worked On
+            What I Built
           </div>
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
         </div>
