@@ -140,12 +140,13 @@ const categories: CategoryData[] = [
       "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
     headerImage: "/software-release-announcement-with-version-number-.jpg",
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"],
+    subAudience: ["Admins"],
     samples: [
       {
         title: "Personio Product Updates",
         company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
+        role: "Admin",
       },
     ],
   },
