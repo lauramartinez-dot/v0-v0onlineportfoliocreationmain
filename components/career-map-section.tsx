@@ -596,50 +596,42 @@ interface Achievement {
 const operationalAchievements: Achievement[] = [
   {
     id: "scaled-teams",
-    title: "Scaled Documentation & Support Teams Globally",
+    title: "Scaled Documentation Teams Globally",
     description:
-      "Built and expanded documentation and support teams from small local groups to 10+ globally distributed writers and support staff, mentoring peers and guiding promotions (Personio, MoGi Group, Sysnet).",
+      "Was an early hire in all three companies and built documentation teams from scratch. Grew teams from small local groups to 10+ globally distributed writers, mentoring peers and guiding promotions (Personio, MoGi Group, Sysnet).",
     icon: Users,
     color: "#9931e7",
   },
   {
-    id: "ai-optimization",
-    title: "Optimized Workflows with AI & Data",
+    id: "first-senior",
+    title: "Led Content Ops and Strategy as the First Senior Technical Writer",
     description:
-      "Designed AI-powered and data-informed processes that: Reduced Spanish translation review time by 90%. Cleared 100+ outdated articles, improving content relevance. Generated operational reports 30% faster. Deprioritized low-impact tasks → saved 20% of release effort.",
-    icon: Bot,
+      "Promoted to Senior Technical Writer as the first on a 10-person team. Led content operations, strategy alignment with business objectives, and mentored 10 team members while guiding a peer to promotion.",
+    icon: TrendingUp,
     color: "#9931e7",
   },
   {
-    id: "reduced-support",
-    title: "Directly Reduced Support Load & Improved Customer Experience",
+    id: "business-impact",
+    title: "Contributed to Actual Business Impact",
     description:
-      "Authored and owned key product feature documentation, leading to: 50% fewer support tickets in six months. Clearer user guidance and reduced friction for product adoption.",
+      "Authored and owned key product feature documentation that directly reduced support tickets by 50% in six months. Designed AI-powered processes that reduced translation review time by 90% and deprioritized low-impact tasks, saving 20% of release effort.",
     icon: BarChart,
     color: "#9931e7",
   },
   {
     id: "style-guide",
-    title: "Created the First User-Facing Documentation Style Guide",
+    title: "Created First Documentation Style Guides",
     description:
-      "Together with the rest of founding near-native English Technical Writers, we created the first ever style guides for user-facing documentation. I also created the Spanish localization style guides based on my previous experience performing actual translation and translation QA.",
+      "Together with the rest of founding near-native English Technical Writers, created the first ever style guides for user-facing documentation. Also created the Spanish localization style guides based on previous experience performing actual translation and translation QA.",
     icon: FileText,
     color: "#9931e7",
   },
   {
-    id: "multilingual",
-    title: "Built Multi-language & Localized Content from Scratch",
+    id: "localization-expansion",
+    title: "Expanded Localization from 3 to 6 Languages",
     description:
-      "Created Spanish documentation from zero, managed 150+ translations per year, and localized content for global audiences, including tech journalism (Personio, Business Insider, Muy Interesante).",
+      "Led the expansion of documentation from 3 languages to 6 through strategic translation and localization initiatives. Built Personio's entire Spanish documentation library from scratch, managing 150+ translations annually.",
     icon: Globe,
-    color: "#9931e7",
-  },
-  {
-    id: "mentorship",
-    title: "Mentored & Developed Talent",
-    description:
-      "Promoted to Senior Technical Writer as the first on a 10-person team; mentored 10 team members and guided a peer to promotion, doubling senior-level coverage within the team.",
-    icon: TrendingUp,
     color: "#9931e7",
   },
 ]
