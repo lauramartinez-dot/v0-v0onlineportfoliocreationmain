@@ -54,7 +54,7 @@ const categories: CategoryData[] = [
         title: "Log in and explore your new Personio account",
         company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
-        role: "End-user",
+        role:"Basic employee",
         image: "/employee-login-welcome-screen.jpg",
       },
     ],
