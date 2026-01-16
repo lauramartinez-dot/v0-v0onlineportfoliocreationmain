@@ -54,7 +54,7 @@ export const coreSkills = [
   },
   {
     icon: Heart,
-    title: "Empathy for Non-Technical Users",
+    title: "True Empathy for Non-Technical Users",
     description: "",
     column: 1,
   },
