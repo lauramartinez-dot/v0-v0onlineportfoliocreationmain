@@ -211,7 +211,7 @@ const categories: CategoryData[] = [
   },
   {
     id: "internal-knowledge-base",
-    title: "Internal Knowledge Base Articles",
+    title: "Internal Knowledge-Base Articles",
     icon: Database,
     description:
       "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
