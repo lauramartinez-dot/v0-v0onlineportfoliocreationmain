@@ -9,8 +9,10 @@ export function Navigation() {
 
   const navItems = [
     { label: "Home", href: "#home" },
+    { label: "My Role", href: "#my-role" },
     { label: "Top Differentiators", href: "#portfolio" },
     { label: "Top Skills & Tools", href: "#skills" },
+    { label: "Top Writing Samples", href: "#writing-samples" },
     { label: "Top Achievements", href: "#contact" },
   ]
 
