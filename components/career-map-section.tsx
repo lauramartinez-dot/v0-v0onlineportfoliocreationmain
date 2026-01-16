@@ -660,7 +660,7 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
             {achievement.title}
           </h3>
         </div>
-        <p className="text-sm text-muted-foreground leading-relaxed">{achievement.description}</p>
+        <p className="text-base text-muted-foreground leading-relaxed">{achievement.description}</p>
       </div>
     </div>
   )

@@ -265,7 +265,7 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
             {category.title}
           </h3>
 
-          <p className="text-sm text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
+          <p className="text-base text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
 
           {category.audience && (
             <div className="mb-5 space-y-3">
