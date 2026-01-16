@@ -623,7 +623,7 @@ const operationalAchievements: Achievement[] = [
     id: "style-guide",
     title: "Created First Documentation Style Guides",
     description:
-      "Together with the rest of founding near-native English Technical Writers, created the first ever style guides for user-facing documentation. Also created the Spanish localization style guides based on previous experience performing actual translation and translation QA.",
+      "As an early hire, created the first ever style guides for user-facing documentation. Also created the Spanish localization style guides based on previous experience performing actual translation and translation QA.",
     icon: FileText,
     color: "#9931e7",
   },
