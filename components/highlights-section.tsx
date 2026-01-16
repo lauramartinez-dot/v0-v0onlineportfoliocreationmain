@@ -246,13 +246,14 @@ export function HighlightsSection() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left side - All text content */}
-              <div className="space-y-6">
+              <div className="space-y-6 animate-slide-in-left">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   I turn complex technology into content anyone can understand, whether they're into tech or not.
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in, including as a Senior Technical Writer.
+                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in, including as a
+                  Senior Technical Writer.
                 </p>
 
                 <h3 className="text-xl font-semibold text-foreground mt-12 mb-4">Ok, but what do I actually do?</h3>
@@ -266,7 +267,7 @@ export function HighlightsSection() {
               </div>
 
               {/* Right side - Single documentation image without background */}
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex items-center justify-center animate-slide-in-right">
                 <Image
                   src="/images/untitled.png"
                   alt="Documentation interface"
