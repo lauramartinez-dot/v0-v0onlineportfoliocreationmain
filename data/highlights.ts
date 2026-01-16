@@ -47,61 +47,61 @@ export const topSkills = [
 export const coreSkills = [
   {
     icon: Layers,
-    title: "I create multi-audience, multichannel documentation",
+    title: "Multi-audience, multichannel documentation",
     description: "",
     column: 1,
   },
   {
     icon: Heart,
-    title: "I have genuine empathy for non-technical users",
+    title: "Genuine empathy for non-technical users",
     description: "",
     column: 1,
   },
   {
     icon: FileText,
-    title: "I have foundational knowledge on clarity and readability",
+    title: "Foundational knowledge on clarity and readability",
     description: "",
     column: 1,
   },
   {
     icon: Briefcase,
-    title: "I have cross-industry transferable skills",
+    title: "Cross-industry transferable skills",
     description: "",
     column: 1,
   },
   {
     icon: MessageSquare,
-    title: "I am comfortable interacting with stakeholders at all levels",
+    title: "Comfortable interacting with stakeholders at all levels",
     description: "",
     column: 1,
   },
   {
     icon: Target,
-    title: "I work best with a split focus: hands-on writing + content ops",
+    title: "Split focus: hands-on writing + content ops",
     description: "",
     column: 2,
   },
   {
     icon: Building,
-    title: "I build documentation teams from the ground up",
+    title: "Build documentation teams from the ground up",
     description: "",
     column: 2,
   },
   {
     icon: Rocket,
-    title: "I own the end-to-end documentation experience",
+    title: "Own the end-to-end documentation experience",
     description: "",
     column: 2,
   },
   {
     icon: Zap,
-    title: "I have a fail-fast mentality and learn fast from mistakes",
+    title: "Fail-fast mentality and learn fast from mistakes",
     description: "",
     column: 2,
   },
   {
     icon: Bot,
-    title: "I use AI beyond ChatGPT and integrate it in all workflows",
+    title: "Use AI beyond ChatGPT and integrate it in all workflows",
     description: "",
     column: 2,
   },
@@ -110,7 +110,7 @@ export const coreSkills = [
 export const beyondCoreSkills = [
   {
     icon: Home,
-    title: "I speak native Spanish and near-native English",
+    title: "Native Spanish and near-native English",
     description:
       "I am bilingual (English/Spanish) and write exclusively in English, using AI-assisted proofreading to ensure native-level quality.",
     link: "",
@@ -118,14 +118,14 @@ export const beyondCoreSkills = [
   },
   {
     icon: Globe,
-    title: "I create localization-ready English documentation",
+    title: "Localization-ready English documentation",
     description: "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
     skills: ["Localization-Ready Content", "Global Audiences"],
   },
   {
     icon: Users,
-    title: "I work fully remote in globally distributed teams (6 years)",
+    title: "Fully remote in globally distributed teams (6 years)",
     description:
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
@@ -133,7 +133,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: UserCheck,
-    title: "I have an ego-free approach that values feedback",
+    title: "Ego-free approach that values feedback",
     description: "",
     link: "",
     skills: [],
