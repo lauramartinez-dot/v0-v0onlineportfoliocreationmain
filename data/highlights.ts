@@ -78,7 +78,7 @@ export const coreSkills = [
   },
   {
     icon: Target,
-    title: "50% Writing + 50% Content Ops",
+    title: "Writing + Content Ops",
     description: "",
     column: 2,
   },
