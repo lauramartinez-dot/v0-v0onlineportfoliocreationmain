@@ -15,7 +15,6 @@ import {
   MessageSquare,
   Bot,
   UserCheck,
-  CalendarOff,
 } from "lucide-react"
 
 export const topSkills = [
@@ -106,18 +105,6 @@ export const coreSkills = [
     description: "",
     column: 2,
   },
-  {
-    icon: CalendarOff,
-    title: "Low-Meeting, High-Ownership Culture",
-    description: "",
-    column: 3,
-  },
-  {
-    icon: UserCheck,
-    title: "I have an ego-free approach that values feedback",
-    description: "",
-    column: 3,
-  },
 ]
 
 export const beyondCoreSkills = [
@@ -143,5 +130,12 @@ export const beyondCoreSkills = [
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
     skills: ["Cultural Intelligence", "Cross-Cultural Communication"],
+  },
+  {
+    icon: UserCheck,
+    title: "I have an ego-free approach that values feedback",
+    description: "",
+    link: "",
+    skills: [],
   },
 ]
