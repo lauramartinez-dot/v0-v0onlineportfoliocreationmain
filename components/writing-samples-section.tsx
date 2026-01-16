@@ -28,7 +28,7 @@ interface CategoryData {
 const categories: CategoryData[] = [
   {
     id: "functional-documentation",
-    title: "Conceptual guides",
+    title: "Conceptual Guides",
     icon: BookOpen,
     description:
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
@@ -61,7 +61,7 @@ const categories: CategoryData[] = [
   },
   {
     id: "task-based-documentation",
-    title: "How-to guides",
+    title: "How-to Guides",
     icon: ListChecks,
     description:
       "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
