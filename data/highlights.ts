@@ -134,7 +134,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Languages,
-    title: "B2 German (Additional Language)",
+    title: "Cultural Intelligence",
     description: "",
     link: "",
     skills: [],
