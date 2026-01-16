@@ -637,7 +637,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "culture-champion",
-    title: "Fostered Inclusive Culture and Diversity Initiatives",
+    title: "Fostered Inclusive Culture and DEI Initiatives",
     description:
       "Recognized for contributions to team culture and morale across organizations. Co-founded initiatives supporting women and underrepresented groups in tech, promoting diversity and inclusion at scale.",
     icon: Heart,
