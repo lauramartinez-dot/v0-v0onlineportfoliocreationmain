@@ -11,6 +11,7 @@ import {
   Globe,
   Target,
   CalendarOff,
+  Zap,
 } from "lucide-react"
 
 export const topSkills = [
@@ -56,6 +57,14 @@ export const coreSkills = [
       "I'm used to working in environments that prioritize deep work over meetings, with clear ownership and async-first communication.",
     link: "",
     skills: ["Deep Work", "Async Communication"],
+  },
+  {
+    icon: Zap,
+    title: "Fail-Fast Mindset",
+    description:
+      "I embrace experimentation and rapid iteration, learning quickly from what doesn't work to find what does.",
+    link: "",
+    skills: ["Experimentation", "Iteration"],
   },
   {
     icon: Cpu,
