@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Laura Martínez | Senior Technical Writer",
   description:
     "Senior Technical Writer specializing in API documentation, developer guides, and documentation platforms. 15+ years of experience creating high-quality technical content.",
-    generator: 'v0.app'
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" style={{ zoom: 0.9 }}>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
