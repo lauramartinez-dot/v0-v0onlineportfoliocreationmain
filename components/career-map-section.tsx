@@ -607,7 +607,7 @@ const operationalAchievements: Achievement[] = [
     id: "first-senior",
     title: "Pioneered Senior Technical Writing Roles",
     description:
-      "Frequently the first Senior Technical Writer on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
+      "Frequently the first or one of the first on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
     icon: TrendingUp,
     color: "#9931e7",
   },
