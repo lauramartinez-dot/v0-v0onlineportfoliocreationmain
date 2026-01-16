@@ -71,6 +71,12 @@ export const coreSkills = [
     column: 1,
   },
   {
+    icon: MessageSquare,
+    title: "I am comfortable interacting with stakeholders at all levels",
+    description: "",
+    column: 1,
+  },
+  {
     icon: Target,
     title: "I work best with a split focus: hands-on writing + content ops",
     description: "",
@@ -97,12 +103,6 @@ export const coreSkills = [
   {
     icon: Zap,
     title: "I have a fail-fast mentality and learn fast from mistakes",
-    description: "",
-    column: 2,
-  },
-  {
-    icon: MessageSquare,
-    title: "I am comfortable interacting with stakeholders at all levels",
     description: "",
     column: 2,
   },
