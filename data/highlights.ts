@@ -48,25 +48,25 @@ export const topSkills = [
 export const coreSkills = [
   {
     icon: Layers,
-    title: "Multi-Audience, Multichannel Documentation",
+    title: "Multi-Audience Documentation",
     description: "",
     column: 1,
   },
   {
     icon: Heart,
-    title: "True Empathy for Non-Technical Users",
+    title: "Empathy for Non-Technical Users",
     description: "",
     column: 1,
   },
   {
     icon: FileText,
-    title: "Clarity & Readability Expertise",
+    title: "Clarity & Readability",
     description: "",
     column: 1,
   },
   {
     icon: Briefcase,
-    title: "Cross-Industry Transferable Skills",
+    title: "Cross-Industry Skills",
     description: "",
     column: 1,
   },
@@ -78,31 +78,31 @@ export const coreSkills = [
   },
   {
     icon: Target,
-    title: "Hands-On Writing & Content Operations (Split Focus)",
+    title: "Split Focus (Writing + Content Ops)",
     description: "",
     column: 2,
   },
   {
     icon: Building,
-    title: "Documentation Team Building",
+    title: "Team Building (From Scratch)",
     description: "",
     column: 2,
   },
   {
     icon: Rocket,
-    title: "End-to-End Documentation Ownership",
+    title: "End-to-End Ownership",
     description: "",
     column: 2,
   },
   {
     icon: Zap,
-    title: "Rapid Iteration & Learning from Failure",
+    title: "Fail-Fast Mindset",
     description: "",
     column: 2,
   },
   {
     icon: Bot,
-    title: "AI-Integrated Documentation Workflows",
+    title: "AI-Integrated Workflows",
     description: "",
     column: 2,
   },
@@ -111,7 +111,7 @@ export const coreSkills = [
 export const beyondCoreSkills = [
   {
     icon: Home,
-    title: "Native Spanish / Near-Native English",
+    title: "Native Spanish + Near-Native English",
     description:
       "I am bilingual (English/Spanish) and write exclusively in English, using AI-assisted proofreading to ensure native-level quality.",
     link: "",
@@ -119,14 +119,14 @@ export const beyondCoreSkills = [
   },
   {
     icon: Globe,
-    title: "Localization-Ready English Documentation",
+    title: "Localization-Ready Content",
     description: "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
     skills: ["Localization-Ready Content", "Global Audiences"],
   },
   {
     icon: Users,
-    title: "Remote-First, Distributed Team Experience (6+ Years)",
+    title: "Remote-First Experience (6+ Years)",
     description:
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
@@ -134,14 +134,14 @@ export const beyondCoreSkills = [
   },
   {
     icon: Languages,
-    title: "B2 German (Additional Language)",
+    title: "B2 German",
     description: "",
     link: "",
     skills: [],
   },
   {
     icon: UserCheck,
-    title: "Ego-Free, Feedback-Driven Collaboration",
+    title: "Ego-Free Collaboration",
     description: "",
     link: "",
     skills: [],
