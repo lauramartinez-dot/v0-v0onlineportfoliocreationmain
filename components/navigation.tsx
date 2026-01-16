@@ -8,7 +8,6 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "Home", href: "#home" },
     { label: "My Role", href: "#my-role" },
     { label: "Top Differentiators", href: "#portfolio" },
     { label: "Top Skills & Tools", href: "#skills" },
