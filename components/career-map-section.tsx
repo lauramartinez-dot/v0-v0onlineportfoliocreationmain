@@ -12,6 +12,7 @@ import {
   BarChart,
   Trash,
   FileText,
+  Heart,
 } from "lucide-react"
 
 interface Experience {
@@ -632,6 +633,14 @@ const operationalAchievements: Achievement[] = [
     description:
       "Led the expansion of documentation from 3 languages to 6 through strategic translation and localization initiatives. Built Personio's entire Spanish documentation library from scratch, managing 150+ translations annually.",
     icon: Globe,
+    color: "#9931e7",
+  },
+  {
+    id: "culture-champion",
+    title: "Became Culture Champion and Co-Founded Women Committee",
+    description:
+      "Recognized as Culture Champion for contributions to company culture and team morale. Co-founded the Women Committee to promote diversity, inclusion, and support for women in tech across the organization.",
+    icon: Heart,
     color: "#9931e7",
   },
 ]
