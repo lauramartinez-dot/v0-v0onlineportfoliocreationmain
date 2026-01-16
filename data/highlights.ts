@@ -109,7 +109,7 @@ export const coreSkills = [
 export const beyondCoreSkills = [
   {
     icon: Home,
-    title: "Speak Native Spanish and Near-Native English",
+    title: "I speak native Spanish and near-native English",
     description:
       "I am bilingual (English/Spanish) and write exclusively in English, using AI-assisted proofreading to ensure native-level quality.",
     link: "",
@@ -117,7 +117,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Globe,
-    title: "Create Localization-Ready English Documentation",
+    title: "I create localization-ready English documentation",
     description:
       "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
@@ -125,7 +125,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Users,
-    title: "6 years working fully remote in globally distributed teams",
+    title: "I work fully remote in globally distributed teams (6 years)",
     description:
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
