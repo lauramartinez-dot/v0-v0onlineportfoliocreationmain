@@ -133,17 +133,6 @@ const categories: CategoryData[] = [
     ],
   },
   {
-    id: "in-app-communications",
-    title: "In-app Communications",
-    icon: MessageSquare,
-    description:
-      "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
-    headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
-    audience: "Business users",
-    subAudience: ["All users"],
-    samples: [],
-  },
-  {
     id: "release-notes",
     title: "Release Notes",
     icon: FileText,
@@ -157,36 +146,6 @@ const categories: CategoryData[] = [
         title: "Personio Product Updates",
         company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
-      },
-    ],
-  },
-  {
-    id: "internal-knowledge-base",
-    title: "Internal Knowledge Base Articles",
-    icon: Database,
-    description:
-      "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
-    headerImage: "/organized-knowledge-database-with-folders-and-docu.jpg",
-    audience: "Internal teams",
-    subAudience: ["Technical Writers", "Product Managers", "Engineers"],
-    samples: [
-      {
-        title: "Content operations handbook for technical writers",
-        company: "Personio",
-        url: "#",
-        image: "/operations-handbook.jpg",
-      },
-      {
-        title: "Translation workflow and localization guidelines",
-        company: "Personio",
-        url: "#",
-        image: "/translation-workflow.jpg",
-      },
-      {
-        title: "Documentation review process and quality standards",
-        company: "Personio",
-        url: "#",
-        image: "/quality-standards-document.jpg",
       },
     ],
   },
@@ -238,6 +197,28 @@ const categories: CategoryData[] = [
         image: "/satellite-in-orbit-around-earth.jpg",
       },
     ],
+  },
+  {
+    id: "in-app-communications",
+    title: "In-app Communications",
+    icon: MessageSquare,
+    description:
+      "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
+    headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
+    audience: "Business users",
+    subAudience: ["All users"],
+    samples: [],
+  },
+  {
+    id: "internal-knowledge-base",
+    title: "Internal Knowledge Base Articles",
+    icon: Database,
+    description:
+      "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
+    headerImage: "/organized-knowledge-database-with-folders-and-docu.jpg",
+    audience: "Internal teams",
+    subAudience: ["Technical Writers", "Product Managers", "Engineers"],
+    samples: [],
   },
 ]
 
@@ -402,10 +383,9 @@ export default function WritingSamplesSection() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary mb-4">
-          What I Wrote  
+            What I Wrote
           </div>
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
-         
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
