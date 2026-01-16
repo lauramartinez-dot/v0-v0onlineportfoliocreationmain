@@ -66,7 +66,7 @@ export const coreSkills = [
   },
   {
     icon: Briefcase,
-    title: "Cross-Industry Transferable Skills",
+    title: "Purpose-Driven Long Career (15 Years)",
     description: "",
     column: 1,
   },
