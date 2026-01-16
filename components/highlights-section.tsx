@@ -256,7 +256,7 @@ export function HighlightsSection() {
                   Senior Technical Writer.
                 </p>
 
-                <h3 className="text-2xl font-semibold text-foreground mt-12 mb-4">Ok, but what do I actually do?</h3>
+                <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">Ok, but what do I actually do?</h3>
 
                 <p className="text-xl text-foreground leading-relaxed mt-4">
                   I turn complex SaaS software into{" "}
