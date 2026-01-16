@@ -66,7 +66,7 @@ export const coreSkills = [
   },
   {
     icon: Briefcase,
-    title: "Purpose-Driven Long Career",
+    title: "Cross-Industry Transferable Skills",
     description: "",
     column: 1,
   },
@@ -96,7 +96,7 @@ export const coreSkills = [
   },
   {
     icon: Zap,
-    title: "Fail-Fast, Iterative Mindset",
+    title: "Rapid Iteration & Learning from Failure",
     description: "",
     column: 2,
   },
@@ -134,7 +134,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Languages,
-    title: "Cultural Intelligence",
+    title: "B2 German (Additional Language)",
     description: "",
     link: "",
     skills: [],
