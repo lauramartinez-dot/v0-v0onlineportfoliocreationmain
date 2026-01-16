@@ -60,19 +60,19 @@ export const coreSkills = [
   },
   {
     icon: FileText,
-    title: "True Clarity & Readability Expertise",
+    title: "Backed-Up Clarity & Readability Expertise",
     description: "",
     column: 1,
   },
   {
     icon: Briefcase,
-    title: "Purpose-Driven Long Career (15 Years)",
+    title: "Purpose-Driven Long Career",
     description: "",
     column: 1,
   },
   {
     icon: MessageSquare,
-    title: "Stakeholder Communication at All Levels",
+    title: "Stakeholder Communication",
     description: "",
     column: 1,
   },
