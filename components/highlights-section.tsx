@@ -252,8 +252,7 @@ export function HighlightsSection() {
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Over the past 15 years, this has been at the core of every role I've worked in, including Senior
-                  Technical Writer role.
+                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in, including as a Senior Technical Writer.
                 </p>
 
                 <h3 className="text-xl font-semibold text-foreground mt-12 mb-4">Ok, but what do I actually do?</h3>
