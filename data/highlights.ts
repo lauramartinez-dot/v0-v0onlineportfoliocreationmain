@@ -54,7 +54,7 @@ export const coreSkills = [
   },
   {
     icon: Heart,
-    title: "Empathy for Non-Technical Users",
+    title: "Empathy for Non-Tech Users",
     description: "",
     column: 1,
   },
@@ -78,7 +78,7 @@ export const coreSkills = [
   },
   {
     icon: Target,
-    title: "Split Focus (Writing + Content Ops)",
+    title: "50% Writing + 50% Content Ops",
     description: "",
     column: 2,
   },
@@ -126,7 +126,7 @@ export const beyondCoreSkills = [
   },
   {
     icon: Users,
-    title: "Remote-First Experience (6+ Years)",
+    title: "Remote, Globally Distributed",
     description:
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
