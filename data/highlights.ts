@@ -60,7 +60,7 @@ export const coreSkills = [
   },
   {
     icon: FileText,
-    title: "Clarity & Readability",
+    title: "Academically Trained Communication",
     description: "",
     column: 1,
   },
