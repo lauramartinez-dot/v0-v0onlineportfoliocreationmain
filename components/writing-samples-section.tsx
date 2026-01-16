@@ -34,7 +34,7 @@ const categories: CategoryData[] = [
       "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
     headerImage: "/abstract-conceptual-diagram-with-connected-nodes-a.jpg",
     audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Employees"],
+    subAudience: ["Admins", "Supervisors", "Basic employees"],
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -158,7 +158,7 @@ const categories: CategoryData[] = [
       "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
     headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
     audience: "Business users",
-    subAudience: ["All users"],
+    subAudience: ["All users", "Basic employees"],
     samples: [],
   },
   {
