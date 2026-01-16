@@ -130,7 +130,7 @@ function SkillImageCard({
 
       {addPurpleOverlay && <div className="absolute inset-0 bg-primary/25 mix-blend-multiply" />}
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
       <div className="absolute bottom-0 left-0 right-0 p-8 transition-transform duration-300 group-hover:-translate-y-6">
         <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 md:text-3xl">{item.title}</h3>
