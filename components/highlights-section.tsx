@@ -276,7 +276,7 @@ export function HighlightsSection() {
                   alt="Documentation interface"
                   width={1024}
                   height={1024}
-                  className="w-full h-auto object-contain hover:scale-[1.02] transition-all duration-300 cursor-pointer"
+                  className="h-auto object-contain hover:scale-[1.02] transition-all duration-300 cursor-pointer w-[200%]"
                 />
               </div>
             </div>
