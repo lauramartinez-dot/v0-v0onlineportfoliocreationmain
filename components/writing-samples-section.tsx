@@ -152,7 +152,7 @@ const categories: CategoryData[] = [
   },
   {
     id: "technology-writing",
-    title: "Technology Writing",
+    title: "Foundational Technology Writing",
     icon: Newspaper,
     description:
       "Tech journalism and articles for leading Spanish media outlets, covering innovation, science, and technology trends.",
