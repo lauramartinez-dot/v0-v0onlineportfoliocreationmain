@@ -126,9 +126,9 @@ function SkillImageCard({
         className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/25 to-transparent" />
 
-      {addPurpleOverlay && <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />}
+      {addPurpleOverlay && <div className="absolute inset-0 bg-primary/25 mix-blend-multiply" />}
 
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
 
@@ -256,7 +256,9 @@ export function HighlightsSection() {
                   Senior Technical Writer.
                 </p>
 
-                <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">Ok, but what do I actually do?</h3>
+                <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">
+                  Ok, but what do I actually do?
+                </h3>
 
                 <p className="text-xl text-foreground leading-relaxed mt-4">
                   I turn complex SaaS software into{" "}
