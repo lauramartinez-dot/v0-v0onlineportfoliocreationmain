@@ -201,7 +201,7 @@ const categories: CategoryData[] = [
   },
   {
     id: "in-app-communications",
-    title: "In-app Communications",
+    title: "In-App Communications",
     icon: MessageSquare,
     description:
       "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
