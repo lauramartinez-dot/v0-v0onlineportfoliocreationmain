@@ -113,9 +113,10 @@ export function SkillsCoreSection() {
               </h3>
             </div>
             <HoverExpandableCard item={coreSkills[0]} /> {/* Extreme Ownership */}
-            <HoverExpandableCard item={coreSkills[4]} /> {/* AI-Driven Operations & Strategy */}
-            <HoverExpandableCard item={coreSkills[5]} /> {/* Business Acumen */}
-            <HoverExpandableCard item={coreSkills[6]} /> {/* Entrepreneurial Mindset */}
+            <HoverExpandableCard item={coreSkills[1]} /> {/* Low-Meeting, High-Ownership Culture */}
+            <HoverExpandableCard item={coreSkills[5]} /> {/* AI-Driven Operations & Strategy */}
+            <HoverExpandableCard item={coreSkills[6]} /> {/* Business Acumen */}
+            <HoverExpandableCard item={coreSkills[7]} /> {/* Entrepreneurial Mindset */}
           </div>
 
           {/* Column 3: Under Global Career (International Experience) */}

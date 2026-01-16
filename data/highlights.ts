@@ -10,6 +10,7 @@ import {
   Newspaper,
   Globe,
   Target,
+  CalendarOff,
 } from "lucide-react"
 
 export const topSkills = [
@@ -49,6 +50,14 @@ export const coreSkills = [
     skills: ["Accountability", "Proactivity"],
   },
   {
+    icon: CalendarOff,
+    title: "Low-Meeting, High-Ownership Culture",
+    description:
+      "I'm used to working in environments that prioritize deep work over meetings, with clear ownership and async-first communication.",
+    link: "",
+    skills: ["Deep Work", "Async Communication"],
+  },
+  {
     icon: Cpu,
     title: "",
     description:
@@ -64,7 +73,7 @@ export const coreSkills = [
     link: "",
     skills: ["Troubleshooting", "Role-Based Documentation"],
   },
-    {
+  {
     icon: Users,
     title: "Multi-Audience Documentation",
     description:
@@ -118,8 +127,7 @@ export const beyondCoreSkills = [
   {
     icon: Globe,
     title: "I create localization-ready English documentation",
-    description:
-      "Localization-ready English content meant to be easily translated into other languages.",
+    description: "Localization-ready English content meant to be easily translated into other languages.",
     link: "",
     skills: ["Localization-Ready Content", "Global Audiences"],
   },
