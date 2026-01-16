@@ -595,7 +595,6 @@ interface Achievement {
 }
 
 const operationalAchievements: Achievement[] = [
- [
   {
     id: "scaled-teams",
     title: "Built and Scaled Documentation Teams Globally",
