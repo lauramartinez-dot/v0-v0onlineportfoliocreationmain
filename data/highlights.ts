@@ -15,6 +15,7 @@ import {
   MessageSquare,
   Bot,
   UserCheck,
+  CalendarOff,
 } from "lucide-react"
 
 export const topSkills = [
@@ -110,6 +111,12 @@ export const coreSkills = [
     title: "I use AI beyond ChatGPT and integrate it in all workflows",
     description: "",
     column: 2,
+  },
+  {
+    icon: CalendarOff,
+    title: "Low-Meeting, High-Ownership Culture",
+    description: "",
+    column: 3,
   },
   {
     icon: UserCheck,
