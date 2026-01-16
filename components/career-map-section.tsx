@@ -595,51 +595,52 @@ interface Achievement {
 }
 
 const operationalAchievements: Achievement[] = [
+ [
   {
     id: "scaled-teams",
-    title: "Scaled Documentation Teams Globally",
+    title: "Built and Scaled Documentation Teams Globally",
     description:
-      "Was an early hire in all three companies and built documentation teams from scratch. Grew teams from small local groups to 10+ globally distributed writers, mentoring peers and guiding promotions (Personio, MoGi Group, Sysnet).",
+      "Early hire in multiple organizations, building documentation teams from scratch. Grew small local teams into globally distributed groups of 10+ writers, mentoring peers and guiding promotions across companies.",
     icon: Users,
     color: "#9931e7",
   },
   {
     id: "first-senior",
-    title: "Led Content Ops and Strategy as the First Senior Technical Writer",
+    title: "Pioneered Senior Technical Writing Roles",
     description:
-      "Promoted to Senior Technical Writer as the first on a 10-person team. Led content operations, strategy alignment with business objectives, and mentored 10 team members while guiding a peer to promotion.",
+      "Frequently the first Senior Technical Writer on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
     icon: TrendingUp,
     color: "#9931e7",
   },
   {
     id: "business-impact",
-    title: "Contributed to Actual Business Impact",
+    title: "Delivered Tangible Business Impact",
     description:
-      "Authored and owned key product feature documentation that directly reduced support tickets by 50% in six months. Designed AI-powered processes that reduced translation review time by 90% and deprioritized low-impact tasks, saving 20% of release effort.",
+      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort across organizations.",
     icon: BarChart,
     color: "#9931e7",
   },
   {
     id: "style-guide",
-    title: "Created First Documentation Style Guides",
+    title: "Established Documentation Standards",
     description:
-      "As an early hire, created the first ever style guides for user-facing documentation. Also created the Spanish localization style guides based on previous experience performing actual translation and translation QA.",
+      "Created first-ever style guides for user-facing documentation in multiple organizations. Developed localization style guides for Spanish content, leveraging hands-on translation and QA experience.",
     icon: FileText,
     color: "#9931e7",
   },
   {
     id: "localization-expansion",
-    title: "Expanded Localization from 3 to 6 Languages",
+    title: "Expanded Global Documentation Reach",
     description:
-      "Led the expansion of documentation from 3 languages to 6 through strategic translation and localization initiatives. Built Personio's entire Spanish documentation library from scratch, managing 150+ translations annually.",
+      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption across companies.",
     icon: Globe,
     color: "#9931e7",
   },
   {
     id: "culture-champion",
-    title: "Became Culture Champion and Co-Founded Women Committee",
+    title: "Fostered Inclusive Culture and Diversity Initiatives",
     description:
-      "Recognized as Culture Champion for contributions to company culture and team morale. Co-founded the Women Committee to promote diversity, inclusion, and support for women in tech across the organization.",
+      "Recognized for contributions to team culture and morale across organizations. Co-founded initiatives supporting women and underrepresented groups in tech, promoting diversity and inclusion at scale.",
     icon: Heart,
     color: "#9931e7",
   },
