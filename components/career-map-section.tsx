@@ -12,6 +12,7 @@ import {
   BarChart,
   Trash,
   FileSpreadsheet,
+  FileText,
 } from "lucide-react"
 
 interface Experience {
@@ -441,7 +442,7 @@ const experiences: Experience[] = [
     countryFlag: "🇩🇪",
     type: "work",
     description:
-      "joined at 300 employees as 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗳𝗶𝗿𝘀𝘁 𝗻𝗲𝗮𝗿-𝗻𝗮𝘁𝗶𝘃𝗲 𝗘𝗻𝗴𝗹𝗶𝘀𝗵 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗪𝗿𝗶𝘁𝗲𝗿𝘀 and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
+      "Joined at 300 employees as 𝗼𝗻𝗲 𝗼𝗳 𝘁𝗵𝗲 𝗳𝗶𝗿𝘀𝘁 𝗻𝗲𝗮𝗿-𝗻𝗮𝘁𝗶𝘃𝗲 𝗘𝗻𝗴𝗹𝗶𝘀𝗵 𝗧𝗲𝗰𝗵𝗻𝗶𝗰𝗮𝗹 𝗪𝗿𝗶𝘁𝗲𝗿𝘀 and helped scale the documentation team as the company grew from 300 to 2,000 in three years (hypergrowth).",
     achievements: [],
     technologies: ["Team Building", "Scaling", "International Collaboration"],
     relevantSkills: ["Team Building", "Cross-Cultural Communication"],
@@ -501,12 +502,32 @@ const experiences: Experience[] = [
     countryFlag: "🇩🇪",
     type: "work",
     description:
-      "Temporarily expanded role to serve as the company-wide Spanish Localization Expert, collaborating with product, design, and engineering teams. Led UX improvements specific to Spanish-speaking markets, ensuring product interfaces and documentation maintained linguistic and cultural accuracy while delivering optimal user experiences across all Spanish locales.",
+      "Temporarily served as a company-wide Spanish Localization Expert, providing guidance on localization best practices beyond documentation. Led UX writing improvements for the Spanish product interface, ensuring consistent terminology and natural language throughout the user experience while maintaining brand voice and clarity.",
     achievements: [],
-    technologies: ["Localization", "UX Design", "Cross-Functional Collaboration"],
-    relevantSkills: ["Localization Strategy", "UX Writing"],
+    technologies: ["Localization", "UX Writing", "Spanish Language"],
+    relevantSkills: ["Localization Expertise", "UX Writing"],
     color: "#9931e7",
-    icon: Award,
+    icon: Globe,
+  },
+  {
+    id: "personio-tw-style-guide",
+    title: "Technical Writer | Bilingual (EN/ES)",
+    company: "Personio",
+    workType: "Content operations",
+    logo: "/personio-logo.png",
+    headerImage: "/images/personio-team.jpg",
+    year: "2021-2023",
+    location: "Dresden",
+    country: "Germany",
+    countryFlag: "🇩🇪",
+    type: "work",
+    description:
+      "Created the first user-facing documentation style guide in the company. Together with the rest of founding near-native English Technical Writers, we created the first ever style guides for user-facing documentation. I also created the Spanish localization style guides based on my previous experience performing actual translation and translation QA.",
+    achievements: [],
+    technologies: ["Style Guide", "Documentation Standards", "Localization"],
+    relevantSkills: ["Content Strategy", "Standards Development"],
+    color: "#9931e7",
+    icon: FileText,
   },
   {
     id: "mogi-spanish-team",
