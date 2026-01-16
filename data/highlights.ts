@@ -60,7 +60,7 @@ export const coreSkills = [
   },
   {
     icon: FileText,
-    title: "Backed-Up Clarity & Readability Expertise",
+    title: "Clarity & Readability Expertise",
     description: "",
     column: 1,
   },
