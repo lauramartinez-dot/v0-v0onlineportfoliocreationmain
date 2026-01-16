@@ -252,8 +252,7 @@ export function HighlightsSection() {
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in, including as a
-                  Senior Technical Writer.
+                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in.
                 </p>
 
                 <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">
