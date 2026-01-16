@@ -15,6 +15,7 @@ import {
   MessageSquare,
   Bot,
   UserCheck,
+  Languages,
 } from "lucide-react"
 
 export const topSkills = [
@@ -130,6 +131,13 @@ export const beyondCoreSkills = [
       "I've been working remotely for the past 6 years. I now thrive in remote-first, globally distributed teams, with the occasional international onsite.",
     link: "",
     skills: ["Cultural Intelligence", "Cross-Cultural Communication"],
+  },
+  {
+    icon: Languages,
+    title: "B2 German (Additional Language)",
+    description: "",
+    link: "",
+    skills: [],
   },
   {
     icon: UserCheck,
