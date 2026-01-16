@@ -201,7 +201,7 @@ function HoverExpandableCard({
         <div className="flex-grow min-w-0">
           <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
           <p className="text-base text-muted-foreground leading-relaxed">
-            Today, as a Senior Technical Writer, I translate complex SaaS software into documentation that's clear
+            , I translate complex SaaS software into documentation that's clear
             enough for anyone to use and precise enough for engineers to trust.
           </p>
         </div>
@@ -252,11 +252,11 @@ export function HighlightsSection() {
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in.
+                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in, including as a Senior Technical Writer.
                 </p>
 
                 <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">
-                  Today, as a Sr. Technical Writer:
+                  My role:
                 </h3>
 
                 <p className="text-xl text-foreground leading-relaxed mt-4">
