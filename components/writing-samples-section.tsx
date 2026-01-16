@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Video, Newspaper, BookOpen, ListChecks, Database, FileText, MessageSquare } from "lucide-react"
+import { Video, Newspaper, BookOpen, ListChecks, Database, FileText, MessageSquare, Mail } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
 
@@ -54,7 +54,7 @@ const categories: CategoryData[] = [
         title: "Log in and explore your new Personio account",
         company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
-        role:"Basic employee",
+        role: "Basic employee",
         image: "/employee-login-welcome-screen.jpg",
       },
     ],
@@ -151,6 +151,38 @@ const categories: CategoryData[] = [
     ],
   },
   {
+    id: "in-app-communications",
+    title: "In-App Communications",
+    icon: MessageSquare,
+    description:
+      "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
+    headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
+    audience: "Business users",
+    subAudience: ["All users"],
+    samples: [],
+  },
+  {
+    id: "internal-knowledge-base",
+    title: "Internal Knowledge Base Articles",
+    icon: Database,
+    description:
+      "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
+    headerImage: "/organized-knowledge-database-with-folders-and-docu.jpg",
+    audience: "Internal teams",
+    subAudience: ["Technical Writers", "Product Managers", "Engineers"],
+    samples: [],
+  },
+  {
+    id: "newsletter-writing",
+    title: "Newsletter Writing",
+    icon: Mail,
+    description: "Engaging newsletter content for product updates, company announcements, and community engagement.",
+    headerImage: "/newsletter-email-marketing-design-template.jpg",
+    audience: "Business users",
+    subAudience: ["Customers", "Subscribers"],
+    samples: [],
+  },
+  {
     id: "technology-writing",
     title: "Foundational Technology Writing",
     icon: Newspaper,
@@ -198,28 +230,6 @@ const categories: CategoryData[] = [
         image: "/satellite-in-orbit-around-earth.jpg",
       },
     ],
-  },
-  {
-    id: "in-app-communications",
-    title: "In-App Communications",
-    icon: MessageSquare,
-    description:
-      "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
-    headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
-    audience: "Business users",
-    subAudience: ["All users"],
-    samples: [],
-  },
-  {
-    id: "internal-knowledge-base",
-    title: "Internal Knowledge Base Articles",
-    icon: Database,
-    description:
-      "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
-    headerImage: "/organized-knowledge-database-with-folders-and-docu.jpg",
-    audience: "Internal teams",
-    subAudience: ["Technical Writers", "Product Managers", "Engineers"],
-    samples: [],
   },
 ]
 
