@@ -285,9 +285,7 @@ export function HighlightsSection() {
                 <Star className="w-5 h-5 text-white" />
               </div>
               <p className="text-base leading-relaxed text-foreground opacity-[0.78]">
-                <span className="font-bold text-primary">Mission:</span> I want to help people—especially women and
-                others who haven't always been encouraged to pursue STEM—gain tech literacy. I believe it's one of the
-                most life-changing skills, especially in today's AI-driven world.
+                <span className="font-bold text-primary">Mission:</span> I help people gain tech literacy to stay relevant in today’s AI-fueled, more tech-driven-than-ever world—especially non-technical users and those historically less drawn to STEM, including women.
               </p>
             </div>
           </div>
