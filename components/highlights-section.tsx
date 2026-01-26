@@ -248,11 +248,11 @@ export function HighlightsSection() {
               {/* Left side - All text content */}
               <div className="space-y-6 animate-slide-in-left">
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  I turn complex technology into content anyone can understand, whether they're into tech or not.
+                 I turn complex technology into content anyone can understand, whether they’re into tech or not.
                 </p>
 
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Over the past 15 years, this has been at the core of every role I&apos;ve worked in, including as a Senior Technical Writer.
+                  For the past 15 years, this has been at the heart of every role I’ve held.
                 </p>
 
                 <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">
@@ -260,8 +260,7 @@ export function HighlightsSection() {
                 </h3>
 
                 <p className="text-xl text-foreground leading-relaxed mt-4">
-                  I turn complex SaaS software into{" "}
-                  <span className="text-primary/90 font-medium">documentation tailored to the end user</span>, whether
+                  As a Senior Technical Writer, I turn complex SaaS software into English documentation tailored to the end user</span>, whether
                   that's a business user who needs clear, jargon-free guidance on using the app or a developer who needs
                   accurate, fluff-free guidance on how to work with it.
                 </p>
