@@ -284,8 +284,8 @@ export function HighlightsSection() {
               <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
                 <Star className="w-5 h-5 text-white" />
               </div>
-              <p className="text-base leading-relaxed text-foreground opacity-[0.78]">
-                <span className="font-bold text-primary">Mission:</span> I help people gain tech literacy to stay relevant in today’s AI-fueled, more tech-driven-than-ever world—especially non-technical users and those historically less drawn to STEM, including women.
+<p className="text-lg leading-snug text-foreground opacity-[0.78]">
+                <span className="font-bold text-primary">Mission:</span> I help people gain tech literacy to stay relevant in today's AI-fueled, more tech-driven-than-ever world—especially non-technical users and those historically less drawn to STEM, including women.
               </p>
             </div>
           </div>
