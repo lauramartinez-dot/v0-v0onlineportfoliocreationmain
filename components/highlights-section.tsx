@@ -256,11 +256,11 @@ export function HighlightsSection() {
                 </p>
 
                 <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">
-                  But how exactly?
+                  As a Senior Technical Writer
                 </h3>
 
                 <p className="text-xl text-foreground leading-relaxed mt-4">
-                  As a Senior Technical Writer, I turn complex SaaS software into English documentation <span className="font-semibold text-primary">tailored to every end user</span>, from business users who need clear, jargon-free guidance on using the app to developers who need accurate, fluff-free guidance on how to work with it.
+                  I turn complex SaaS software into English documentation <span className="font-semibold text-primary">tailored to every end user</span>, from business users who need clear, jargon-free guidance on using the app to developers who need accurate, fluff-free guidance on how to work with it.
                 </p>
               </div>
 
