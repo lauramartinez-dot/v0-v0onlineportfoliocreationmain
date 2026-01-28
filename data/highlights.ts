@@ -47,8 +47,14 @@ export const topSkills = [
 
 export const coreSkills = [
   {
-    icon: Layers,
-    title: "Multi-Audience Documentation",
+    icon: FileText,
+    title: "Academically Trained Writer",
+    description: "",
+    column: 1,
+  },
+  {
+    icon: Newspaper,
+    title: "Tech-Newsroom Clarity",
     description: "",
     column: 1,
   },
@@ -59,14 +65,8 @@ export const coreSkills = [
     column: 1,
   },
   {
-    icon: FileText,
-    title: "Academically Trained Writer",
-    description: "",
-    column: 1,
-  },
-  {
-    icon: Briefcase,
-    title: "Cross-Industry Skills",
+    icon: Layers,
+    title: "Multi-Audience Documentation",
     description: "",
     column: 1,
   },
