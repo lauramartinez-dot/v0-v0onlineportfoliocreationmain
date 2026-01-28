@@ -32,8 +32,10 @@ export function Navigation() {
               {item.label}
             </a>
           ))}
-          <Button size="sm" className="ml-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
-            Download CV
+          <Button size="sm" className="ml-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90" asChild>
+            <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              Download CV
+            </a>
           </Button>
         </div>
 
@@ -59,8 +61,10 @@ export function Navigation() {
                 {item.label}
               </a>
             ))}
-            <Button size="sm" className="rounded-full mt-2">
-              Resume
+            <Button size="sm" className="rounded-full mt-2" asChild>
+              <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                Download CV
+              </a>
             </Button>
           </div>
         </div>
