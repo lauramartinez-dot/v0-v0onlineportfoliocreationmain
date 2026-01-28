@@ -302,7 +302,7 @@ const experiences: Experience[] = [
     countryFlag: "🇪🇸",
     type: "work",
     description:
-      "Actively mentored a peer through their career development journey, providing guidance and support that led to their promotion to Senior Technical Writer—becoming the team's second Senior role two years after my own promotion. This demonstrated the effectiveness of knowledge transfer and leadership development.",
+      "Actively mentored a peer through their career development journey, providing guidance and support that led to their promotion to  Technical Writer—becoming the team's second Senior role two years after my own promotion. This demonstrated the effectiveness of knowledge transfer and leadership development.",
     achievements: [],
     technologies: ["Mentorship", "Career Development", "Leadership"],
     relevantSkills: ["Mentorship", "Leadership"],
