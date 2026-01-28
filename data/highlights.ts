@@ -37,7 +37,7 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "An International Career in 4 Countries",
+    title: "An International Career Across 4 Countries",
     description:
       "By 30, I had lived in four countries (Spain, France, Ireland, and Germany) and become bilingual in English.",
     link: "",
