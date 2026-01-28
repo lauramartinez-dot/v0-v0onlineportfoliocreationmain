@@ -21,7 +21,7 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "A Tech Journalism Foundation",
+    title: "Foundation in Tech Journalism",
     description:
       "Tech journalist turned Senior Technical Writer—now working at the companies whose tech I once reported on.",
     link: "",
