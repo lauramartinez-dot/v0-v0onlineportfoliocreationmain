@@ -260,7 +260,7 @@ export function HighlightsSection() {
                 </h3>
 
                 <p className="text-xl text-foreground leading-relaxed mt-4">
-                  As a Senior Technical Writer, I turn complex SaaS software into English documentation <span className="font-semibold text-primary">tailored to every end user</span>, from business users who need clear, jargon-free guidance on using the app to developers who need accurate, fluff-free guidance on how to work with it.
+                  I turn complex SaaS software into English documentation <span className="font-semibold text-primary">tailored to every end user</span>, from business users who need clear, jargon-free guidance on using the app to developers who need accurate, fluff-free guidance on how to work with it.
                 </p>
               </div>
 
