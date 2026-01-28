@@ -21,7 +21,7 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "Foundation in Tech Journalism",
+    title: "A Tech Journalism Foundation",
     description:
       "Tech journalist turned Senior Technical Writer—now working at the companies whose tech I once reported on.",
     link: "",
@@ -29,7 +29,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "10 Years Working in Early-Stage Tech",
+    title: "3x Early Hire in Tech Scale-Ups",
     description:
       "For the past 10 years, I've worked exclusively in hands-on roles at early-stage companies (100–300 people).",
     link: "",
