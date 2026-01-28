@@ -246,7 +246,7 @@ export function HighlightsSection() {
           <div className="max-w-5xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Left side - All text content */}
-              <div className="space-y-6 animate-slide-in-left hover:scale-[1.02] transition-all duration-300 cursor-pointer">
+              <div className="space-y-6 animate-slide-in-left">
                 <p className="text-lg text-muted-foreground leading-relaxed">
                  I turn complex technology into content anyone can understand, whether they’re into tech or not.
                 </p>
