@@ -41,18 +41,18 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[3/4] overflow-hidden rounded-xl ring-2 ring-border shadow-xl shadow-purple-500/15 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:ring-primary/30"
+      className="relative w-full overflow-hidden rounded-xl ring-2 ring-border shadow-xl shadow-purple-500/15 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:ring-primary/30"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Before image (base layer) */}
+      {/* Before image (base layer, defines container height) */}
       <Image
         src={beforeSrc}
         alt={beforeAlt}
         width={800}
         height={1067}
-        className="absolute inset-0 w-full h-full object-contain"
+        className="w-full h-auto block"
         quality={100}
         unoptimized
       />
@@ -68,7 +68,7 @@ function DiagonalRevealImage({
           alt={afterAlt}
           width={800}
           height={1067}
-          className="w-full h-full object-contain"
+          className="w-full h-full object-cover"
           quality={100}
           unoptimized
         />
