@@ -340,7 +340,7 @@ export function HighlightsSection() {
                 <Rocket className="w-6 h-6 text-white" />
               </div>
               <p className="text-lg leading-relaxed text-foreground opacity-[0.78] text-left">
-                <span className="font-bold text-primary">Mission:</span> To make jargony, sometimes gatekeepy complex technology accessible to as many people as possible, to help them stay relevant and employable in today{"'"}s world, with a special focus on women.
+                <span className="font-bold text-primary">Mission:</span> To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
               </p>
             </div>
           </div>
