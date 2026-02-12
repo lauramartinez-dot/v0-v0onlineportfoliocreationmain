@@ -328,6 +328,11 @@ export function HighlightsSection() {
             </div>
           </div>
 
+          {/* Bridging sentence */}
+          <p className="text-center text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-10">
+            My audience used to be non-technical readers, and now they are non-technical software users, but at the core my mission remains the same:
+          </p>
+
           {/* Mission */}
           <div className="max-w-5xl mx-auto mt-12 flex justify-center">
             <div className="inline-flex items-center gap-4 rounded-2xl border-2 border-primary/20 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 px-8 py-6 shadow-sm backdrop-blur-sm max-w-3xl">
