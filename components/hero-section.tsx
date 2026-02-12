@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown, MapPin, Globe } from "lucide-react"
+import { Download, ArrowRight, ChevronDown, MapPin, Globe, Languages } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
@@ -63,7 +63,7 @@ export function HeroSection() {
                   Global Scope
                 </span>
                 <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
-                  <Globe className="h-5 w-5 text-primary" />
+                  <Languages className="h-5 w-5 text-primary" />
                   Multilingual
                   <span className="flex items-center gap-1.5 text-xl leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
                 </span>
