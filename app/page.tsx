@@ -1,5 +1,4 @@
 import { HeroSection } from "@/components/hero-section"
-import { MissionSection } from "@/components/mission-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { SkillsCoreSection } from "@/components/skills-core-section"
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <MissionSection />
       <TransitionSection />
       <HighlightsSection />
       <TransitionSection />

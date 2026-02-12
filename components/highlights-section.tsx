@@ -330,6 +330,18 @@ export function HighlightsSection() {
               </div>
             </div>
           </div>
+
+          {/* Mission */}
+          <div className="max-w-5xl mx-auto mt-12 flex justify-center">
+            <div className="inline-flex items-center gap-4 rounded-2xl border-2 border-primary/20 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 px-8 py-6 shadow-sm backdrop-blur-sm max-w-3xl">
+              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
+                <Star className="w-6 h-6 text-white" />
+              </div>
+              <p className="text-lg leading-relaxed text-foreground opacity-[0.78] text-left">
+                <span className="font-bold text-primary">Mission:</span> I help people gain tech literacy to stay relevant in today{"'"}s AI-fueled, more tech-driven-than-ever world — especially non-technical users and those historically less drawn to STEM, including women.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Top Differentiators Section */}
