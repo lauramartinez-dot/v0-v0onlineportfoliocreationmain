@@ -189,9 +189,8 @@ function HoverExpandableCard({
       data-skill-title={item.title}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`cursor-pointer rounded-xl bg-card border border-border p-5 transition-all duration-300 ${
-        isHovered ? "shadow-xl scale-[1.02] border-primary/50" : ""
-      }`}
+      className={`cursor-pointer rounded-xl bg-card border border-border p-5 transition-all duration-300 ${isHovered ? "shadow-xl scale-[1.02] border-primary/50" : ""
+        }`}
     >
       <div className="flex items-center gap-2 mb-3">
         <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/10 h-10 w-10">
@@ -207,9 +206,8 @@ function HoverExpandableCard({
         </div>
       </div>
       <div
-        className={`transition-all duration-300 overflow-hidden ${
-          isHovered ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
-        }`}
+        className={`transition-all duration-300 overflow-hidden ${isHovered ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
+          }`}
       >
         <p className="text-base text-muted-foreground mb-3">{renderDescription(item.description)}</p>
       </div>
@@ -354,7 +352,7 @@ export function HighlightsSection() {
 
           {/* Bridging sentence */}
           <p className="text-center text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-10">
-            My audience used to be non-technical readers, and now they are non-technical software users, but at the core my mission remains the same:
+            I’ve changed industries, roles, and audiences, but my mission has remained the same:
           </p>
 
           {/* Mission */}
