@@ -164,7 +164,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Before / After visual comparison */}
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto mt-10 mb-10">
             <div className="flex flex-col items-center gap-8">
               {/* Labels row on desktop */}
               <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
