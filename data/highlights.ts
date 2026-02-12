@@ -31,7 +31,7 @@ export const topSkills = [
     icon: Newspaper,
     title: "3x Early Hire in Tech Scale-Ups",
     description:
-      "For the past 10 years, I've worked exclusively in hands-on roles at early-stage companies (100–300 people).",
+      "For the past 10 years, I’ve joined companies at 100-300 employees as the first—or one of the first—in my role.",
     link: "",
     skills: ["Cross-Industry Background", "Unique Background", "Software Companies", "Tech Companies"],
   },
