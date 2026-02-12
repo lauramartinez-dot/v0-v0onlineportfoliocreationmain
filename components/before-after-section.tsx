@@ -12,8 +12,6 @@ export function BeforeAfterSection() {
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
             I turn complex technology into content anyone can understand,
             whether they're into tech or not.
-          </p>
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-2">
             For the past 15 years, this has been at the heart of every role
             I've held.
           </p>
