@@ -41,7 +41,7 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
+      className="relative w-full aspect-[3/4] overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -51,8 +51,8 @@ function DiagonalRevealImage({
         src={beforeSrc}
         alt={beforeAlt}
         width={800}
-        height={800}
-        className="w-full h-auto block"
+        height={1067}
+        className="absolute inset-0 w-full h-full object-cover"
         quality={100}
         unoptimized
       />
@@ -179,7 +179,7 @@ export function HighlightsSection() {
               </div>
 
               {/* Comparison grid */}
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4">
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
