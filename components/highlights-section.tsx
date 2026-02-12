@@ -53,7 +53,6 @@ function DiagonalRevealImage({
         width={800}
         height={1067}
         className="w-full h-auto block"
-        quality={100}
         unoptimized
       />
       {/* After image (revealed via diagonal clip-path) */}
@@ -69,7 +68,6 @@ function DiagonalRevealImage({
           width={800}
           height={1067}
           className="w-full h-full object-contain"
-          quality={100}
           unoptimized
         />
       </div>
