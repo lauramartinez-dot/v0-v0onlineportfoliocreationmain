@@ -1,9 +1,96 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useCallback } from "react"
 import { topSkills, type coreSkills, type beyondCoreSkills } from "@/data/highlights"
 import { Rocket, Star, X, ArrowRight } from "lucide-react"
 import Image from "next/image"
+
+function DiagonalRevealImage({
+  beforeSrc,
+  afterSrc,
+  beforeAlt,
+  afterAlt,
+}: {
+  beforeSrc: string
+  afterSrc: string
+  beforeAlt: string
+  afterAlt: string
+}) {
+  const [revealPercent, setRevealPercent] = useState(0)
+  const [isHovering, setIsHovering] = useState(false)
+  const containerRef = useRef<HTMLDivElement>(null)
+
+  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (!containerRef.current) return
+    const rect = containerRef.current.getBoundingClientRect()
+    const x = ((e.clientX - rect.left) / rect.width) * 100
+    setRevealPercent(Math.max(0, Math.min(100, x)))
+  }, [])
+
+  const handleMouseEnter = useCallback(() => setIsHovering(true), [])
+  const handleMouseLeave = useCallback(() => {
+    setIsHovering(false)
+    setRevealPercent(0)
+  }, [])
+
+  const skew = 12
+  const p = revealPercent
+
+  return (
+    <div
+      ref={containerRef}
+      className="relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Before image (base layer) */}
+      <Image
+        src={beforeSrc}
+        alt={beforeAlt}
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+        quality={100}
+        unoptimized
+      />
+      {/* After image (revealed via diagonal clip-path) */}
+      <div
+        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
+        style={{
+          clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
+        }}
+      >
+        <Image
+          src={afterSrc}
+          alt={afterAlt}
+          width={800}
+          height={600}
+          className="w-full h-full object-cover"
+          quality={100}
+          unoptimized
+        />
+      </div>
+      {/* Diagonal line indicator */}
+      {isHovering && (
+        <div
+          className="absolute top-0 bottom-0 w-0.5 bg-primary/40 pointer-events-none transition-none"
+          style={{
+            left: `${p}%`,
+            transform: `skewX(-${skew}deg)`,
+            transformOrigin: 'center',
+          }}
+        />
+      )}
+      {/* Hover hint */}
+      {!isHovering && (
+        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground pointer-events-none">
+          Drag across to reveal
+        </div>
+      )}
+    </div>
+  )
+}
 
 function renderDescription(text: string) {
   const parts = text.split(/(\*[^*]+\*)/g)
@@ -268,30 +355,12 @@ export function HighlightsSection() {
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
                     It used to look like this...
                   </h3>
-                  {/* Image pair 1 - hover crossfade */}
-                  <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer transition-shadow duration-500 hover:shadow-lg hover:border-primary/30">
-                    <Image
-                      src="/images/before-1.png"
-                      alt="Technical textbook page about aircraft flight mechanics"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto transition-opacity duration-700 ease-in-out group-hover:opacity-0"
-                      quality={100}
-                      unoptimized
-                    />
-                    <Image
-                      src="/images/after-1.jpg"
-                      alt="Clean, well-structured technical documentation"
-                      width={800}
-                      height={600}
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
-                      quality={100}
-                      unoptimized
-                    />
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                      Hover to reveal
-                    </div>
-                  </div>
+                  <DiagonalRevealImage
+                    beforeSrc="/images/before-1.png"
+                    afterSrc="/images/after-1.jpg"
+                    beforeAlt="Technical textbook page about aircraft flight mechanics"
+                    afterAlt="Clean, well-structured technical documentation"
+                  />
                   <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
                     <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
@@ -319,30 +388,12 @@ export function HighlightsSection() {
                   <h3 className="text-center text-lg font-semibold text-primary md:hidden">
                     Now it looks like this.
                   </h3>
-                  {/* Image pair 2 - hover crossfade */}
-                  <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer transition-shadow duration-500 hover:shadow-lg hover:border-primary/30">
-                    <Image
-                      src="/images/before-2.png"
-                      alt="Spanish-language article about why planes stay in the air"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto transition-opacity duration-700 ease-in-out group-hover:opacity-0"
-                      quality={100}
-                      unoptimized
-                    />
-                    <Image
-                      src="/images/after-2.jpg"
-                      alt="Clear visual guide explaining a technical concept simply"
-                      width={800}
-                      height={600}
-                      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
-                      quality={100}
-                      unoptimized
-                    />
-                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                      Hover to reveal
-                    </div>
-                  </div>
+                  <DiagonalRevealImage
+                    beforeSrc="/images/before-2.png"
+                    afterSrc="/images/after-2.jpg"
+                    beforeAlt="Spanish-language article about why planes stay in the air"
+                    afterAlt="Clear visual guide explaining a technical concept simply"
+                  />
                   <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
                     <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
