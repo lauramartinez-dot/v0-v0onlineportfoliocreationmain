@@ -14,6 +14,8 @@ function DiagonalRevealImage({
   afterSrc2,
   beforeAlt2,
   afterAlt2,
+  beforeLabel,
+  afterLabel,
 }: {
   beforeSrc: string
   afterSrc: string
@@ -23,6 +25,8 @@ function DiagonalRevealImage({
   afterSrc2?: string
   beforeAlt2?: string
   afterAlt2?: string
+  beforeLabel?: string
+  afterLabel?: string
 }) {
   const [revealPercent, setRevealPercent] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -103,6 +107,29 @@ function DiagonalRevealImage({
           />
         )}
       </div>
+      {/* Before label overlay */}
+      {beforeLabel && (
+        <div className="absolute bottom-4 left-4 pointer-events-none z-10">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Audience</span>
+          <span className="inline-block px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-muted-foreground text-sm font-semibold border border-border shadow-sm">
+            {beforeLabel}
+          </span>
+        </div>
+      )}
+      {/* After label overlay (inside clip) */}
+      {afterLabel && (
+        <div
+          className="absolute bottom-4 right-4 pointer-events-none z-10 transition-[clip-path] duration-100 ease-out"
+          style={{
+            clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
+          }}
+        >
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1 text-right">Audience</span>
+          <span className="inline-block px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
+            {afterLabel}
+          </span>
+        </div>
+      )}
       {/* Diagonal line indicator */}
       {isHovering && (
         <div
@@ -216,13 +243,9 @@ export function HighlightsSection() {
                     afterSrc="/images/before-2.png"
                     beforeAlt="Technical textbook page about aircraft flight mechanics with diagram of four forces"
                     afterAlt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
+                    beforeLabel="Non-technical readers"
+                    afterLabel="Non-technical readers"
                   />
-                  <div className="flex flex-col items-center gap-1.5 mt-3">
-                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
-                      Non-technical readers
-                    </span>
-                  </div>
                 </div>
 
                 {/* Arrow divider */}
@@ -249,13 +272,9 @@ export function HighlightsSection() {
                     afterSrc="/images/after-2.jpg"
                     beforeAlt="Spanish-language article about why planes stay in the air"
                     afterAlt="Clear visual guide explaining a technical concept simply"
+                    beforeLabel="Non-technical readers"
+                    afterLabel="Non-technical software users"
                   />
-                  <div className="flex flex-col items-center gap-1.5 mt-3">
-                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-                      Non-technical software users
-                    </span>
-                  </div>
                 </div>
               </div>
             </div>
