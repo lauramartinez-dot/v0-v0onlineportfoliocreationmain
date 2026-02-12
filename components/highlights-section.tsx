@@ -272,16 +272,16 @@ export function HighlightsSection() {
                   </h3>
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/50 shadow-sm opacity-60 grayscale-[30%]">
                     <Image
-                      src="/images/before-1.jpg"
-                      alt="Dense, overwhelming technical documentation with walls of jargon"
+                      src="/images/before-1.png"
+                      alt="Technical textbook page about aircraft flight mechanics with dense academic text and diagrams"
                       fill
                       className="object-cover"
                     />
                   </div>
                   <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/50 shadow-sm opacity-60 grayscale-[30%]">
                     <Image
-                      src="/images/before-2.jpg"
-                      alt="Complex system architecture diagram that is hard to follow"
+                      src="/images/before-2.png"
+                      alt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
                       fill
                       className="object-cover"
                     />
