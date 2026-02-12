@@ -240,7 +240,7 @@ export function HighlightsSection() {
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <p className="text-lg md:text-xl leading-relaxed text-foreground/85 text-left">
-                To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
+                To make technology — which can be complex, full of jargon, and sometimes a bit gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a focus on women.
               </p>
             </div>
           </div>
