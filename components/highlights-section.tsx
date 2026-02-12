@@ -10,11 +10,19 @@ function DiagonalRevealImage({
   afterSrc,
   beforeAlt,
   afterAlt,
+  beforeSrc2,
+  afterSrc2,
+  beforeAlt2,
+  afterAlt2,
 }: {
   beforeSrc: string
   afterSrc: string
   beforeAlt: string
   afterAlt: string
+  beforeSrc2?: string
+  afterSrc2?: string
+  beforeAlt2?: string
+  afterAlt2?: string
 }) {
   const [revealPercent, setRevealPercent] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -44,19 +52,32 @@ function DiagonalRevealImage({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Before image (base layer) */}
-      <Image
-        src={beforeSrc}
-        alt={beforeAlt}
-        width={800}
-        height={600}
-        className="w-full h-auto block"
-        quality={100}
-        unoptimized
-      />
-      {/* After image (revealed via diagonal clip-path) */}
+      {/* Before images (base layer) */}
+      <div className="flex flex-col">
+        <Image
+          src={beforeSrc}
+          alt={beforeAlt}
+          width={800}
+          height={600}
+          className="w-full h-auto block"
+          quality={100}
+          unoptimized
+        />
+        {beforeSrc2 && (
+          <Image
+            src={beforeSrc2}
+            alt={beforeAlt2 || ""}
+            width={800}
+            height={600}
+            className="w-full h-auto block"
+            quality={100}
+            unoptimized
+          />
+        )}
+      </div>
+      {/* After images (revealed via diagonal clip-path) */}
       <div
-        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
+        className="absolute inset-0 flex flex-col transition-[clip-path] duration-100 ease-out"
         style={{
           clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
         }}
@@ -66,10 +87,21 @@ function DiagonalRevealImage({
           alt={afterAlt}
           width={800}
           height={600}
-          className="w-full h-full object-cover"
+          className="w-full h-auto block"
           quality={100}
           unoptimized
         />
+        {afterSrc2 && (
+          <Image
+            src={afterSrc2}
+            alt={afterAlt2 || ""}
+            width={800}
+            height={600}
+            className="w-full h-auto block"
+            quality={100}
+            unoptimized
+          />
+        )}
       </div>
       {/* Diagonal line indicator */}
       {isHovering && (
@@ -184,6 +216,10 @@ export function HighlightsSection() {
                     afterSrc="/images/after-1.jpg"
                     beforeAlt="Technical textbook page about aircraft flight mechanics"
                     afterAlt="Clean, well-structured technical documentation"
+                    beforeSrc2="/images/before-2.png"
+                    afterSrc2="/images/after-2.jpg"
+                    beforeAlt2="Spanish-language article about why planes stay in the air"
+                    afterAlt2="Clear visual guide explaining a technical concept simply"
                   />
                   <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
