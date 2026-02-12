@@ -286,7 +286,12 @@ export function HighlightsSection() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-center text-sm font-medium text-muted-foreground/70 mt-1">Audience: non-technical readers</p>
+                  <div className="flex flex-col items-center gap-1.5 mt-3">
+                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
+                      Non-technical readers
+                    </span>
+                  </div>
                 </div>
 
                 {/* Arrow divider */}
@@ -324,7 +329,12 @@ export function HighlightsSection() {
                       className="object-cover"
                     />
                   </div>
-                  <p className="text-center text-sm font-medium text-primary/70 mt-1">Audience: non-technical software users</p>
+                  <div className="flex flex-col items-center gap-1.5 mt-3">
+                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
+                      Non-technical software users
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>
