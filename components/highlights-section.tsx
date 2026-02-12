@@ -41,18 +41,18 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full overflow-hidden rounded-xl ring-2 ring-border shadow-xl shadow-purple-500/15 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:ring-primary/30"
+      className="relative w-full h-full overflow-hidden rounded-xl ring-2 ring-border shadow-xl shadow-purple-500/15 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:ring-primary/30"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Before image (base layer, defines container height) */}
+      {/* Before image (base layer) */}
       <Image
         src={beforeSrc}
         alt={beforeAlt}
         width={800}
         height={1067}
-        className="w-full h-auto block"
+        className="w-full h-full object-cover"
         unoptimized
       />
       {/* After image (revealed via diagonal clip-path) */}
@@ -176,9 +176,9 @@ export function HighlightsSection() {
               </div>
 
               {/* Comparison grid */}
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-start w-full gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
                 {/* Before column */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 md:min-h-0">
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
                     It used to look like this...
                   </h3>
