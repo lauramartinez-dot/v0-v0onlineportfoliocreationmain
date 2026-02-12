@@ -55,9 +55,12 @@ function DiagonalRevealImage({
         className="w-full h-full object-cover"
         unoptimized
       />
+      {/* Gradient overlays on before image */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/25 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
       {/* After image (revealed via diagonal clip-path) */}
       <div
-        className="absolute inset-0 bg-background transition-[clip-path] duration-100 ease-out"
+        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
         style={{
           clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
         }}
@@ -70,11 +73,14 @@ function DiagonalRevealImage({
           className="w-full h-full object-cover"
           unoptimized
         />
+        {/* Gradient overlays on after image */}
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
       </div>
       {/* Centered audience label */}
       {beforeLabel && (
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 pointer-events-none z-10 flex flex-col items-center gap-2">
-          <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+          <span className="text-sm font-semibold text-white/80 uppercase tracking-wider">Audience</span>
           <span className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-base font-semibold shadow-md whitespace-nowrap">
             {beforeLabel}
           </span>
