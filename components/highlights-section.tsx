@@ -286,6 +286,7 @@ export function HighlightsSection() {
                       className="object-cover"
                     />
                   </div>
+                  <p className="text-center text-sm font-medium text-muted-foreground/70 mt-1">Audience: non-technical readers</p>
                 </div>
 
                 {/* Arrow divider */}
@@ -323,6 +324,7 @@ export function HighlightsSection() {
                       className="object-cover"
                     />
                   </div>
+                  <p className="text-center text-sm font-medium text-primary/70 mt-1">Audience: non-technical software users</p>
                 </div>
               </div>
             </div>
