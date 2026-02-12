@@ -53,19 +53,26 @@ export function HeroSection() {
             </h4>
 
             <div className="mb-8 flex flex-col items-center md:items-start">
-              <div className="flex flex-col gap-2.5 rounded-xl border border-primary/20 bg-primary/5 px-5 py-4 shadow-sm backdrop-blur-sm">
-                <span className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground">
-                  <MapPin className="h-4 w-4 text-primary" />
+              <div className="relative flex flex-col gap-4 rounded-2xl border border-primary/15 bg-gradient-to-br from-primary/8 to-primary/3 px-6 py-5 shadow-md shadow-primary/10 backdrop-blur-sm">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/10 to-transparent opacity-50 pointer-events-none" />
+                <span className="relative inline-flex items-center gap-3 text-base font-semibold text-foreground">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
+                    <MapPin className="h-4 w-4 text-primary" />
+                  </span>
                   Based in Barcelona
                 </span>
-                <span className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground">
-                  <Globe className="h-4 w-4 text-primary" />
+                <span className="relative inline-flex items-center gap-3 text-base font-semibold text-foreground">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
+                    <Globe className="h-4 w-4 text-primary" />
+                  </span>
                   Global Scope
                 </span>
-                <span className="inline-flex items-center gap-2.5 text-sm font-medium text-foreground">
-                  <Globe className="h-4 w-4 text-primary" />
+                <span className="relative inline-flex items-center gap-3 text-base font-semibold text-foreground">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
+                    <Globe className="h-4 w-4 text-primary" />
+                  </span>
                   Multilingual
-                  <span className="flex items-center gap-1 text-base leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
+                  <span className="flex items-center gap-1.5 text-lg leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
                 </span>
               </div>
             </div>
