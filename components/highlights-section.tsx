@@ -335,11 +335,11 @@ export function HighlightsSection() {
 
           {/* Mission */}
           <div className="max-w-5xl mx-auto mt-12 flex justify-center">
-            <div className="inline-flex items-center gap-4 rounded-2xl border-2 border-primary/20 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 px-8 py-6 shadow-sm backdrop-blur-sm max-w-3xl">
-              <div className="flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
-                <Rocket className="w-6 h-6 text-white" />
+            <div className="flex items-center gap-5 rounded-2xl border-2 border-primary/20 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 px-10 py-8 shadow-sm backdrop-blur-sm w-full">
+              <div className="flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
+                <Rocket className="w-7 h-7 text-white" />
               </div>
-              <p className="text-lg leading-relaxed text-foreground opacity-[0.78] text-left">
+              <p className="text-xl md:text-2xl leading-relaxed text-foreground opacity-[0.78] text-left">
                 <span className="font-bold text-primary">Mission:</span> To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
               </p>
             </div>
