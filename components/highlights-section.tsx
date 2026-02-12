@@ -1,8 +1,8 @@
 "use client"
 
 import { useState, useRef, useCallback } from "react"
-import { topSkills, type coreSkills, type beyondCoreSkills } from "@/data/highlights"
-import { Rocket, Star, X, ArrowRight } from "lucide-react"
+import { topSkills } from "@/data/highlights"
+import { Rocket, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -92,115 +92,12 @@ function DiagonalRevealImage({
   )
 }
 
-function renderDescription(text: string) {
-  const parts = text.split(/(\*[^*]+\*)/g)
-  return parts.map((part, index) => {
-    if (part.startsWith("*") && part.endsWith("*")) {
-      return (
-        <strong key={index} className="font-semibold text-foreground">
-          {part.slice(1, -1)}
-        </strong>
-      )
-    }
-    return part
-  })
-}
-
-function SkillPopup({
-  item,
-  isPinned,
-  rank,
-  onClose,
-}: {
-  item: (typeof topSkills)[number] | (typeof coreSkills)[number] | (typeof beyondCoreSkills)[number]
-  isPinned?: boolean
-  rank?: number
-  onClose: () => void
-}) {
-  return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-200"
-      onClick={onClose}
-    >
-      <div
-        className={`relative w-full max-w-md rounded-2xl border shadow-2xl p-6 animate-in zoom-in-95 duration-200 bg-card
-          ${isPinned ? "border-primary/30" : "border-border"}`}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button onClick={onClose} className="absolute top-4 right-4 p-1 rounded-full hover:bg-muted transition-colors">
-          <X className="h-5 w-5 text-muted-foreground" />
-        </button>
-
-        <div className="flex items-center gap-3 mb-4">
-          <div
-            className={`flex shrink-0 items-center justify-center rounded-lg h-12 w-12
-              ${isPinned ? "bg-primary text-primary-foreground" : "bg-primary/10"}`}
-          >
-            <item.icon className={`h-6 w-6 ${isPinned ? "text-primary-foreground" : "text-primary"}`} />
-          </div>
-
-          <h3 className="flex-grow font-semibold text-foreground text-lg leading-tight">{item.title}</h3>
-
-          {isPinned && rank && (
-            <div className="flex items-center gap-1 rounded-full bg-primary/20 px-2 py-1 text-xs font-semibold text-primary">
-              <Star className="h-3 w-3 fill-primary/50" />
-              <span>#{rank}</span>
-            </div>
-          )}
-        </div>
-
-        <p className="text-sm text-muted-foreground mb-4">{renderDescription(item.description)}</p>
-      </div>
-    </div>
-  )
-}
-
-function SkillCard({
-  item,
-  isPinned = false,
-  rank,
-  tier = "core",
-  onSelect,
-}: {
-  item: (typeof topSkills)[number] | (typeof coreSkills)[number] | (typeof beyondCoreSkills)[number]
-  isPinned?: boolean
-  rank?: number
-  tier?: "top" | "core" | "beyond"
-  onSelect: () => void
-}) {
-  return (
-    <div
-      onClick={onSelect}
-      className="group relative cursor-pointer rounded-xl bg-gradient-to-br from-purple-100 via-pink-50 to-purple-50 border border-purple-200/60 transition-all duration-300 hover:shadow-md hover:-translate-y-1 p-5"
-    >
-      <div className="flex items-center gap-3 mb-3">
-        <div className="flex shrink-0 items-center justify-center rounded-lg bg-gradient-to-br from-purple-600 to-pink-500 h-7 w-7">
-          <item.icon className="h-3.5 w-3.5 text-white" />
-        </div>
-
-        <div className="flex-grow min-w-0">
-          <h3 className="font-semibold text-foreground text-base leading-tight">{item.title}</h3>
-        </div>
-
-        {isPinned && rank && (
-          <div className="flex items-center gap-1 rounded-full bg-primary/20 px-2 py-1 text-xs font-semibold text-primary">
-            <Star className="h-3 w-3 fill-primary/50" />
-            <span>#{rank}</span>
-          </div>
-        )}
-      </div>
-
-      <p className="text-sm text-muted-foreground">{renderDescription(item.description)}</p>
-    </div>
-  )
-}
-
 function SkillImageCard({
   item,
   image,
   addPurpleOverlay = false,
 }: {
-  item: (typeof topSkills)[number] | (typeof coreSkills)[number] | (typeof beyondCoreSkills)[number]
+  item: (typeof topSkills)[number]
   image: string
   addPurpleOverlay?: boolean
 }) {
@@ -224,79 +121,6 @@ function SkillImageCard({
         <p className="text-lg text-white/90 leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-48 group-hover:opacity-100">
           {item.description}
         </p>
-      </div>
-    </div>
-  )
-}
-
-function CollapsibleSkillCard({
-  item,
-  isExpanded,
-  onToggle,
-}: {
-  item: (typeof coreSkills)[number] | (typeof beyondCoreSkills)[number]
-  isExpanded: boolean
-  onToggle: () => void
-}) {
-  return (
-    <div
-      className="group cursor-pointer rounded-lg border border-border bg-card p-4 transition-all duration-200 hover:shadow-sm hover:border-primary/30"
-      onClick={onToggle}
-    >
-      <div className="flex items-center gap-3">
-        <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/10 h-10 w-10">
-          <item.icon className="h-5 w-5 text-primary" />
-        </div>
-        <h3 className="flex-grow font-semibold text-foreground text-sm">{item.title}</h3>
-        <div className={`transition-transform duration-200 ${isExpanded ? "rotate-180" : ""}`}>
-          <svg className="h-5 w-5 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
-        </div>
-      </div>
-
-      {isExpanded && (
-        <div className="mt-3 pt-3 border-t border-border">
-          <p className="text-sm text-muted-foreground mb-3">{renderDescription(item.description)}</p>
-        </div>
-      )}
-    </div>
-  )
-}
-
-function HoverExpandableCard({
-  item,
-}: {
-  item: (typeof coreSkills)[number] | (typeof beyondCoreSkills)[number]
-}) {
-  const [isHovered, setIsHovered] = useState(false)
-
-  return (
-    <div
-      data-skill-title={item.title}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`cursor-pointer rounded-xl bg-card border border-border p-5 transition-all duration-300 ${isHovered ? "shadow-xl scale-[1.02] border-primary/50" : ""
-        }`}
-    >
-      <div className="flex items-center gap-2 mb-3">
-        <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/10 h-10 w-10">
-          <item.icon className="h-5 w-5 text-primary" />
-        </div>
-
-        <div className="flex-grow min-w-0">
-          <h3 className="text-xl font-semibold text-foreground mb-3">My role as a Senior Technical Writer</h3>
-          <p className="text-base text-muted-foreground leading-relaxed">
-            , I translate complex SaaS software into documentation that's clear
-            enough for anyone to use and precise enough for engineers to trust.
-          </p>
-        </div>
-      </div>
-      <div
-        className={`transition-all duration-300 overflow-hidden ${isHovered ? "max-h-96 opacity-100 mt-2" : "max-h-0 opacity-0"
-          }`}
-      >
-        <p className="text-base text-muted-foreground mb-3">{renderDescription(item.description)}</p>
       </div>
     </div>
   )
