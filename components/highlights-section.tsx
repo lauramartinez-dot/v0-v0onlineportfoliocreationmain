@@ -218,9 +218,6 @@ function HoverExpandableCard({
 }
 
 export function HighlightsSection() {
-  const [isHovered, setIsHovered] = useState(false)
-  const [hoveredSection, setHoveredSection] = useState<string | null>(null)
-
   return (
     <section id="highlights" className="relative px-4 overflow-hidden py-[70px]">
       {/* Purple gradient background - matching hero section style */}
