@@ -156,7 +156,8 @@ export function HighlightsSection() {
           <div className="text-center mb-12 max-w-5xl mx-auto">
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
               I turn complex technology into content anyone can understand, whether they{"'"}re into tech or not.
-              <br />
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-3">
               For the past 15 years, this has been at the heart of every role I{"'"}ve held.
             </p>
           </div>
