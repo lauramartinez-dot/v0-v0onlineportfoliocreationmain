@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown, MapPin, Globe, Languages } from "lucide-react"
+import { Download, ArrowRight, ChevronDown, MapPin, Globe, Languages, Flag } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
@@ -53,7 +53,11 @@ export function HeroSection() {
             </h4>
 
             <div className="mb-8 flex flex-col items-center md:items-start">
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-2">
+                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                  <Flag className="h-5 w-5 text-primary" />
+                  From Spain
+                </span>
                 <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
                   Based in Barcelona
