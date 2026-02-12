@@ -41,7 +41,7 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[3/4] overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize bg-background"
+      className="relative w-full aspect-[3/4] overflow-hidden rounded-xl ring-2 ring-border shadow-xl cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:ring-primary/30"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -164,7 +164,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Before / After visual comparison */}
-          <div className="max-w-5xl mx-auto rounded-3xl border border-border/40 bg-muted/30 p-6 md:p-10 shadow-sm">
+          <div className="max-w-5xl mx-auto">
             <div className="flex flex-col items-center gap-8">
               {/* Labels row on desktop */}
               <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
