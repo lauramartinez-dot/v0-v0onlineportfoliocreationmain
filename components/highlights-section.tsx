@@ -216,10 +216,6 @@ export function HighlightsSection() {
                     afterSrc="/images/after-1.jpg"
                     beforeAlt="Technical textbook page about aircraft flight mechanics"
                     afterAlt="Clean, well-structured technical documentation"
-                    beforeSrc2="/images/before-2.png"
-                    afterSrc2="/images/after-2.jpg"
-                    beforeAlt2="Spanish-language article about why planes stay in the air"
-                    afterAlt2="Clear visual guide explaining a technical concept simply"
                   />
                   <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
