@@ -215,6 +215,115 @@ function HoverExpandableCard({
   )
 }
 
+function BeforeAfterToggle() {
+  const [showAfter, setShowAfter] = useState(false)
+
+  return (
+    <div className="max-w-3xl mx-auto">
+      {/* Toggle switch */}
+      <div className="flex items-center justify-center mb-8">
+        <div className="inline-flex items-center rounded-full border border-border bg-muted/50 p-1 shadow-sm">
+          <button
+            onClick={() => setShowAfter(false)}
+            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
+              !showAfter
+                ? "bg-background text-foreground shadow-md"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            What I read
+          </button>
+          <button
+            onClick={() => setShowAfter(true)}
+            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
+              showAfter
+                ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md"
+                : "text-muted-foreground hover:text-foreground"
+            }`}
+          >
+            What I write
+          </button>
+        </div>
+      </div>
+
+      {/* Images container with crossfade */}
+      <div className="relative">
+        {/* Before images */}
+        <div
+          className={`flex flex-col gap-4 transition-all duration-500 ${
+            !showAfter ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none absolute inset-0"
+          }`}
+        >
+          <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
+            <Image
+              src="/images/before-1.png"
+              alt="Technical textbook page about aircraft flight mechanics with dense academic text and diagrams"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+              quality={100}
+              unoptimized
+            />
+          </div>
+          <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
+            <Image
+              src="/images/before-2.png"
+              alt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+              quality={100}
+              unoptimized
+            />
+          </div>
+          <div className="flex flex-col items-center gap-1.5 mt-3">
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
+              Non-technical readers
+            </span>
+          </div>
+        </div>
+
+        {/* After images */}
+        <div
+          className={`flex flex-col gap-4 transition-all duration-500 ${
+            showAfter ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none absolute inset-0"
+          }`}
+        >
+          <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
+            <Image
+              src="/images/after-1.jpg"
+              alt="Clean, well-structured technical documentation that is easy to read"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+              quality={100}
+              unoptimized
+            />
+          </div>
+          <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
+            <Image
+              src="/images/after-2.jpg"
+              alt="Clear visual guide explaining a technical concept simply"
+              width={800}
+              height={600}
+              className="w-full h-auto"
+              quality={100}
+              unoptimized
+            />
+          </div>
+          <div className="flex flex-col items-center gap-1.5 mt-3">
+            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+            <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
+              Non-technical software users
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function HighlightsSection() {
   return (
     <section id="highlights" className="relative px-4 overflow-hidden py-[70px]">
@@ -247,108 +356,8 @@ export function HighlightsSection() {
             </p>
           </div>
 
-          {/* Before / After visual comparison */}
-          <div className="max-w-5xl mx-auto">
-            <div className="flex flex-col items-center gap-8">
-              {/* Labels row on desktop */}
-              <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
-                <h3 className="text-center text-xl font-semibold text-muted-foreground/70">
-                  It used to look like this...
-                </h3>
-                <div className="w-8" />
-                <h3 className="text-center text-xl font-semibold text-primary">
-                  Now it looks like this.
-                </h3>
-              </div>
-
-              {/* Comparison grid */}
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
-                {/* Before column */}
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
-                    It used to look like this...
-                  </h3>
-                  <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
-                    <Image
-                      src="/images/before-1.png"
-                      alt="Technical textbook page about aircraft flight mechanics with dense academic text and diagrams"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                      quality={100}
-                      unoptimized
-                    />
-                  </div>
-                  <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
-                    <Image
-                      src="/images/before-2.png"
-                      alt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                      quality={100}
-                      unoptimized
-                    />
-                  </div>
-                  <div className="flex flex-col items-center gap-1.5 mt-3">
-                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
-                      Non-technical readers
-                    </span>
-                  </div>
-                </div>
-
-                {/* Arrow divider */}
-                <div className="hidden md:flex flex-col items-center justify-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
-                    <ArrowRight className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-
-                {/* Mobile arrow */}
-                <div className="flex md:hidden items-center justify-center py-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
-                    <ArrowRight className="h-4 w-4 text-primary" />
-                  </div>
-                </div>
-
-                {/* After column */}
-                <div className="flex flex-col gap-4">
-                  <h3 className="text-center text-lg font-semibold text-primary md:hidden">
-                    Now it looks like this.
-                  </h3>
-                  <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
-                    <Image
-                      src="/images/after-1.jpg"
-                      alt="Clean, well-structured technical documentation that is easy to read"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                      quality={100}
-                      unoptimized
-                    />
-                  </div>
-                  <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
-                    <Image
-                      src="/images/after-2.jpg"
-                      alt="Clear visual guide explaining a technical concept simply"
-                      width={800}
-                      height={600}
-                      className="w-full h-auto"
-                      quality={100}
-                      unoptimized
-                    />
-                  </div>
-                  <div className="flex flex-col items-center gap-1.5 mt-3">
-                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-                    <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-                      Non-technical software users
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Before / After interactive toggle */}
+          <BeforeAfterToggle />
 
           {/* Bridging sentence */}
           <p className="text-center text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-10">
