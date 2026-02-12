@@ -54,22 +54,22 @@ export function HeroSection() {
 
             <div className="mb-8 flex flex-col items-center md:items-start">
               <div className="flex flex-col gap-2">
-                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
                   <Flag className="h-5 w-5 text-primary" />
                   From Spain
                 </span>
-                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
                   <MapPin className="h-5 w-5 text-primary" />
                   Based in Barcelona
                 </span>
-                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
                   <Globe className="h-5 w-5 text-primary" />
                   Global Scope
                 </span>
-                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
                   <Languages className="h-5 w-5 text-primary" />
                   Multilingual
-                  <span className="flex items-center gap-1.5 text-xl leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
+                  <span className="flex items-center gap-1.5 text-lg leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
                 </span>
               </div>
             </div>
