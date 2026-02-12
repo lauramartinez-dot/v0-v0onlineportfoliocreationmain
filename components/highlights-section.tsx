@@ -270,20 +270,26 @@ export function HighlightsSection() {
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
                     It used to look like this...
                   </h3>
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/50 shadow-sm opacity-60 grayscale-[30%]">
+                  <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
                     <Image
                       src="/images/before-1.png"
                       alt="Technical textbook page about aircraft flight mechanics with dense academic text and diagrams"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                      quality={100}
+                      unoptimized
                     />
                   </div>
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-border/50 shadow-sm opacity-60 grayscale-[30%]">
+                  <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
                     <Image
                       src="/images/before-2.png"
                       alt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                      quality={100}
+                      unoptimized
                     />
                   </div>
                   <div className="flex flex-col items-center gap-1.5 mt-3">
@@ -313,20 +319,26 @@ export function HighlightsSection() {
                   <h3 className="text-center text-lg font-semibold text-primary md:hidden">
                     Now it looks like this.
                   </h3>
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
+                  <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
                     <Image
                       src="/images/after-1.jpg"
                       alt="Clean, well-structured technical documentation that is easy to read"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                      quality={100}
+                      unoptimized
                     />
                   </div>
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
+                  <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
                     <Image
                       src="/images/after-2.jpg"
                       alt="Clear visual guide explaining a technical concept simply"
-                      fill
-                      className="object-cover"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto"
+                      quality={100}
+                      unoptimized
                     />
                   </div>
                   <div className="flex flex-col items-center gap-1.5 mt-3">
