@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
-import { Rocket, ArrowRight } from "lucide-react"
+import { Rocket } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -158,10 +158,10 @@ export function HighlightsSection() {
 
           {/* Intro text */}
           <div className="text-center mb-12 max-w-5xl mx-auto">
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/85 leading-relaxed">
               I turn complex technology into content anyone can understand, whether they{"'"}re into tech or not.
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-3">
+            <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mt-3">
               For the past 15 years, this has been at the heart of every role I{"'"}ve held.
             </p>
           </div>
@@ -181,7 +181,7 @@ export function HighlightsSection() {
               </div>
 
               {/* Comparison grid */}
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 items-stretch w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
@@ -194,20 +194,6 @@ export function HighlightsSection() {
                     afterAlt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
                     beforeLabel="Non-technical readers"
                   />
-                </div>
-
-                {/* Arrow divider */}
-                <div className="hidden md:flex flex-col items-center justify-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
-                    <ArrowRight className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-
-                {/* Mobile arrow */}
-                <div className="flex md:hidden items-center justify-center py-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
-                    <ArrowRight className="h-4 w-4 text-primary" />
-                  </div>
                 </div>
 
                 {/* After column */}
