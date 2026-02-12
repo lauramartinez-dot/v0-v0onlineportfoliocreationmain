@@ -41,7 +41,7 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-square overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
+      className="relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -52,7 +52,7 @@ function DiagonalRevealImage({
         alt={beforeAlt}
         width={800}
         height={800}
-        className="w-full h-full object-cover absolute inset-0"
+        className="w-full h-auto block"
         quality={100}
         unoptimized
       />
