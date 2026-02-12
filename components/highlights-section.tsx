@@ -225,17 +225,25 @@ export function HighlightsSection() {
             </div>
           </div>
 
-          {/* Bridging sentence */}
-          <p className="text-center text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto mt-10">
-            I’ve changed industries, roles, languages, and audiences, but my mission has remained the same:
-          </p>
+          {/* Bridging sentence + Mission side by side */}
+          <div className="max-w-5xl mx-auto mt-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            {/* Bridging sentence - left */}
+            <p className="text-left text-lg md:text-xl text-muted-foreground leading-relaxed md:w-1/3 flex-shrink-0">
+              I{"'"}ve changed industries, roles, languages, and audiences, but my mission has remained the same:
+            </p>
 
-          {/* Mission */}
-          <div className="max-w-5xl mx-auto mt-12 flex justify-center">
-            <div className="flex items-start gap-5 rounded-2xl border border-primary/25 bg-gradient-to-r from-purple-50/80 to-pink-50/80 dark:from-purple-950/30 dark:to-pink-950/30 px-8 py-7 shadow-md shadow-primary/5 backdrop-blur-sm w-full">
+            {/* Mission box - right */}
+            <div className="flex items-start gap-5 rounded-2xl border border-primary/25 bg-gradient-to-r from-purple-50/80 to-pink-50/80 dark:from-purple-950/30 dark:to-pink-950/30 px-8 py-7 shadow-md shadow-primary/5 backdrop-blur-sm md:flex-1">
               <div className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0 mt-0.5">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
+              <p className="text-lg leading-relaxed text-foreground/85 text-left">
+                <span className="font-semibold text-primary tracking-wide uppercase text-sm">15-year long mission</span>
+                <br />
+                To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
+              </p>
+            </div>
+          </div>
               <p className="text-lg leading-relaxed text-foreground/85 text-left">
                 <span className="font-semibold text-primary tracking-wide uppercase text-sm">15-year long mission</span>
                 <br />
