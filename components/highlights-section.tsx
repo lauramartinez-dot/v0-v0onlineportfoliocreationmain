@@ -6,11 +6,15 @@ import { Rocket, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
-  beforeImages,
-  afterImages,
+  beforeSrc,
+  afterSrc,
+  beforeAlt,
+  afterAlt,
 }: {
-  beforeImages: { src: string; alt: string }[]
-  afterImages: { src: string; alt: string }[]
+  beforeSrc: string
+  afterSrc: string
+  beforeAlt: string
+  afterAlt: string
 }) {
   const [revealPercent, setRevealPercent] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -40,40 +44,32 @@ function DiagonalRevealImage({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Before images (base layer, stacked) */}
-      <div className="flex flex-col">
-        {beforeImages.map((img, i) => (
-          <Image
-            key={i}
-            src={img.src}
-            alt={img.alt}
-            width={800}
-            height={600}
-            className="w-full h-auto block"
-            quality={100}
-            unoptimized
-          />
-        ))}
-      </div>
-      {/* After images (revealed via diagonal clip-path) */}
+      {/* Before image (base layer) */}
+      <Image
+        src={beforeSrc}
+        alt={beforeAlt}
+        width={800}
+        height={600}
+        className="w-full h-auto block"
+        quality={100}
+        unoptimized
+      />
+      {/* After image (revealed via diagonal clip-path) */}
       <div
-        className="absolute inset-0 flex flex-col transition-[clip-path] duration-100 ease-out"
+        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
         style={{
           clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
         }}
       >
-        {afterImages.map((img, i) => (
-          <Image
-            key={i}
-            src={img.src}
-            alt={img.alt}
-            width={800}
-            height={600}
-            className="w-full h-auto block"
-            quality={100}
-            unoptimized
-          />
-        ))}
+        <Image
+          src={afterSrc}
+          alt={afterAlt}
+          width={800}
+          height={600}
+          className="w-full h-full object-cover"
+          quality={100}
+          unoptimized
+        />
       </div>
       {/* Diagonal line indicator */}
       {isHovering && (
@@ -176,27 +172,53 @@ export function HighlightsSection() {
                 </h3>
               </div>
 
-              {/* Single image box with diagonal hover reveal */}
-              <div className="max-w-3xl mx-auto w-full">
-                <DiagonalRevealImage
-                  beforeImages={[
-                    { src: "/images/before-1.png", alt: "Technical textbook page about aircraft flight mechanics" },
-                    { src: "/images/before-2.png", alt: "Spanish-language article about why planes stay in the air" },
-                  ]}
-                  afterImages={[
-                    { src: "/images/after-1.jpg", alt: "Clean, well-structured technical documentation" },
-                    { src: "/images/after-2.jpg", alt: "Clear visual guide explaining a technical concept simply" },
-                  ]}
-                />
-                <div className="flex items-center justify-center gap-6 mt-6">
-                  <div className="flex flex-col items-center gap-1.5">
+              {/* Comparison grid */}
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
+                {/* Before column */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
+                    It used to look like this...
+                  </h3>
+                  <DiagonalRevealImage
+                    beforeSrc="/images/before-1.png"
+                    afterSrc="/images/after-1.jpg"
+                    beforeAlt="Technical textbook page about aircraft flight mechanics"
+                    afterAlt="Clean, well-structured technical documentation"
+                  />
+                  <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
                     <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
                       Non-technical readers
                     </span>
                   </div>
-                  <ArrowRight className="h-4 w-4 text-primary mt-4" />
-                  <div className="flex flex-col items-center gap-1.5">
+                </div>
+
+                {/* Arrow divider */}
+                <div className="hidden md:flex flex-col items-center justify-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                    <ArrowRight className="h-5 w-5 text-primary" />
+                  </div>
+                </div>
+
+                {/* Mobile arrow */}
+                <div className="flex md:hidden items-center justify-center py-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                  </div>
+                </div>
+
+                {/* After column */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-lg font-semibold text-primary md:hidden">
+                    Now it looks like this.
+                  </h3>
+                  <DiagonalRevealImage
+                    beforeSrc="/images/before-2.png"
+                    afterSrc="/images/after-2.jpg"
+                    beforeAlt="Spanish-language article about why planes stay in the air"
+                    afterAlt="Clear visual guide explaining a technical concept simply"
+                  />
+                  <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
                     <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
                       Non-technical software users
