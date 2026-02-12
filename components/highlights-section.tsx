@@ -215,109 +215,68 @@ function HoverExpandableCard({
   )
 }
 
-function BeforeAfterToggle() {
-  const [showAfter, setShowAfter] = useState(false)
-
+function HoverRevealImage({ beforeSrc, afterSrc, beforeAlt, afterAlt }: { beforeSrc: string; afterSrc: string; beforeAlt: string; afterAlt: string }) {
   return (
-    <div className="max-w-3xl mx-auto">
-      {/* Toggle switch */}
-      <div className="flex items-center justify-center mb-8">
-        <div className="inline-flex items-center rounded-full border border-border bg-muted/50 p-1 shadow-sm">
-          <button
-            onClick={() => setShowAfter(false)}
-            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
-              !showAfter
-                ? "bg-background text-foreground shadow-md"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            What I read
-          </button>
-          <button
-            onClick={() => setShowAfter(true)}
-            className={`flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 ${
-              showAfter
-                ? "bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-md"
-                : "text-muted-foreground hover:text-foreground"
-            }`}
-          >
-            What I write
-          </button>
-        </div>
+    <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer">
+      {/* Before image (default) */}
+      <Image
+        src={beforeSrc}
+        alt={beforeAlt}
+        width={800}
+        height={600}
+        className="w-full h-auto transition-opacity duration-500 group-hover:opacity-0"
+        quality={100}
+        unoptimized
+      />
+      {/* After image (on hover) */}
+      <Image
+        src={afterSrc}
+        alt={afterAlt}
+        width={800}
+        height={600}
+        className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+        quality={100}
+        unoptimized
+      />
+      {/* Hover hint */}
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex items-center gap-1.5 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground opacity-70 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none">
+        <ArrowRight className="h-3 w-3" />
+        Hover to reveal
       </div>
+    </div>
+  )
+}
 
-      {/* Images container with crossfade */}
-      <div className="relative">
-        {/* Before images */}
-        <div
-          className={`flex flex-col gap-4 transition-all duration-500 ${
-            !showAfter ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none absolute inset-0"
-          }`}
-        >
-          <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
-            <Image
-              src="/images/before-1.png"
-              alt="Technical textbook page about aircraft flight mechanics with dense academic text and diagrams"
-              width={800}
-              height={600}
-              className="w-full h-auto"
-              quality={100}
-              unoptimized
-            />
-          </div>
-          <div className="w-full overflow-hidden rounded-xl border border-border/50 shadow-sm">
-            <Image
-              src="/images/before-2.png"
-              alt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
-              width={800}
-              height={600}
-              className="w-full h-auto"
-              quality={100}
-              unoptimized
-            />
-          </div>
-          <div className="flex flex-col items-center gap-1.5 mt-3">
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
-              Non-technical readers
-            </span>
-          </div>
+function BeforeAfterToggle() {
+  return (
+    <div className="max-w-4xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <HoverRevealImage
+          beforeSrc="/images/before-1.png"
+          afterSrc="/images/after-1.jpg"
+          beforeAlt="Technical textbook page about aircraft flight mechanics"
+          afterAlt="Clean, well-structured technical documentation"
+        />
+        <HoverRevealImage
+          beforeSrc="/images/before-2.png"
+          afterSrc="/images/after-2.jpg"
+          beforeAlt="Spanish-language article about why planes stay in the air"
+          afterAlt="Clear visual guide explaining a technical concept simply"
+        />
+      </div>
+      <div className="flex items-center justify-center gap-6 mt-6">
+        <div className="flex flex-col items-center gap-1.5">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Default</span>
+          <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
+            What I read
+          </span>
         </div>
-
-        {/* After images */}
-        <div
-          className={`flex flex-col gap-4 transition-all duration-500 ${
-            showAfter ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2 pointer-events-none absolute inset-0"
-          }`}
-        >
-          <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
-            <Image
-              src="/images/after-1.jpg"
-              alt="Clean, well-structured technical documentation that is easy to read"
-              width={800}
-              height={600}
-              className="w-full h-auto"
-              quality={100}
-              unoptimized
-            />
-          </div>
-          <div className="w-full overflow-hidden rounded-xl border border-primary/20 shadow-md shadow-primary/5">
-            <Image
-              src="/images/after-2.jpg"
-              alt="Clear visual guide explaining a technical concept simply"
-              width={800}
-              height={600}
-              className="w-full h-auto"
-              quality={100}
-              unoptimized
-            />
-          </div>
-          <div className="flex flex-col items-center gap-1.5 mt-3">
-            <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-            <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-              Non-technical software users
-            </span>
-          </div>
+        <ArrowRight className="h-4 w-4 text-primary" />
+        <div className="flex flex-col items-center gap-1.5">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">On hover</span>
+          <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
+            What I write
+          </span>
         </div>
       </div>
     </div>
