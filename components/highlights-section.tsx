@@ -41,7 +41,7 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full aspect-[3/4] overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
+      className="relative w-full aspect-[3/4] overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize bg-background"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -52,13 +52,13 @@ function DiagonalRevealImage({
         alt={beforeAlt}
         width={800}
         height={1067}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-contain"
         quality={100}
         unoptimized
       />
       {/* After image (revealed via diagonal clip-path) */}
       <div
-        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
+        className="absolute inset-0 bg-background transition-[clip-path] duration-100 ease-out"
         style={{
           clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
         }}
@@ -67,8 +67,8 @@ function DiagonalRevealImage({
           src={afterSrc}
           alt={afterAlt}
           width={800}
-          height={800}
-          className="w-full h-full object-cover"
+          height={1067}
+          className="w-full h-full object-contain"
           quality={100}
           unoptimized
         />
