@@ -331,57 +331,6 @@ export function HighlightsSection() {
             </div>
           </div>
         </div>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
-          </div>
-
-          {/* Text content - centered and above images */}
-          <div className="max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Left side - All text content */}
-              <div className="space-y-6 animate-slide-in-left">
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                 I turn complex technology into content anyone can understand, whether they’re into tech or not.
-                </p>
-
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  For the past 15 years, this has been at the heart of every role I’ve held.
-                </p>
-
-                <h3 className="text-2xl font-semibold mt-12 mb-4 text-primary opacity-100">
-                  Today, as a Senior Technical Writer:
-                </h3>
-
-                <p className="text-xl text-foreground leading-relaxed mt-4">
-                  I turn complex SaaS software into English documentation <span className="font-semibold text-primary">tailored to every end user</span>, from business users who need clear, jargon-free guidance on using the app to developers who need accurate, fluff-free guidance on how to work with it.
-                </p>
-              </div>
-
-              {/* Right side - Single documentation image without background */}
-              <div className="relative flex items-center justify-center animate-slide-in-right">
-                {/* Removed rounded-xl shadow-lg to display transparent PNG without background effects */}
-                <Image
-                  src="/images/untitled.png"
-                  alt="Documentation interface"
-                  width={1024}
-                  height={1024}
-                  className="h-auto object-contain hover:scale-[1.02] transition-all duration-300 cursor-pointer w-[200%]"
-                />
-              </div>
-            </div>
-          </div>
-
-          {/* Why Section */}
-          <div className="max-w-5xl mx-auto mt-12">
-            <div className="inline-flex items-center gap-3 rounded-full border-2 border-primary/30 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 px-6 py-4 shadow-sm backdrop-blur-sm">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
-                <Star className="w-5 h-5 text-white" />
-              </div>
-<p className="text-lg leading-snug text-foreground opacity-[0.78]">
-                <span className="font-bold text-primary">Mission:</span> I help people gain tech literacy to stay relevant in today's AI-fueled, more tech-driven-than-ever world—especially non-technical users and those historically less drawn to STEM, including women.
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
