@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
-import { Rocket } from "lucide-react"
+import { Rocket, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -11,12 +11,14 @@ function DiagonalRevealImage({
   beforeAlt,
   afterAlt,
   beforeLabel,
+  href,
 }: {
   beforeSrc: string
   afterSrc: string
   beforeAlt: string
   afterAlt: string
   beforeLabel?: string
+  href?: string
 }) {
   const [revealPercent, setRevealPercent] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -38,10 +40,14 @@ function DiagonalRevealImage({
   const skew = 12
   const p = revealPercent
 
+  const Wrapper = href ? "a" : "div"
+  const wrapperProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {}
+
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full h-full overflow-hidden rounded-xl ring-2 ring-purple-400/40 shadow-xl shadow-purple-500/25 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/35 hover:ring-purple-400/60"
+    <Wrapper
+      {...wrapperProps}
+      ref={containerRef as React.RefObject<HTMLDivElement & HTMLAnchorElement>}
+      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-purple-400/40 shadow-xl shadow-purple-500/25 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/35 hover:ring-purple-400/60 ${href ? "block" : ""}`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -96,7 +102,7 @@ function DiagonalRevealImage({
         />
       )}
 
-    </div>
+    </Wrapper>
   )
 }
 
@@ -181,7 +187,7 @@ export function HighlightsSection() {
               </div>
 
               {/* Comparison grid */}
-              <div className="grid grid-cols-1 md:grid-cols-2 items-stretch w-full gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
@@ -193,7 +199,22 @@ export function HighlightsSection() {
                     beforeAlt="Technical textbook page about aircraft flight mechanics with diagram of four forces"
                     afterAlt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
                     beforeLabel="Non-technical readers"
+                    href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
                   />
+                </div>
+
+                {/* Arrow divider */}
+                <div className="hidden md:flex flex-col items-center justify-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                    <ArrowRight className="h-5 w-5 text-primary" />
+                  </div>
+                </div>
+
+                {/* Mobile arrow */}
+                <div className="flex md:hidden items-center justify-center py-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                  </div>
                 </div>
 
                 {/* After column */}
