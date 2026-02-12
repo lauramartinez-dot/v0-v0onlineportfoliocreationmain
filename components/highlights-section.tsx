@@ -237,8 +237,8 @@ export function HighlightsSection() {
               <div className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0 mt-0.5">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
-              <p className="text-lg leading-relaxed text-foreground/85 text-left">
-                <span className="font-semibold text-primary tracking-wide uppercase text-sm">15-year long mission</span>
+              <p className="text-base md:text-lg leading-relaxed text-foreground/85 text-left">
+                <span className="font-semibold text-primary tracking-wide uppercase text-xs md:text-sm">15-year long mission</span>
                 <br />
                 To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
               </p>
