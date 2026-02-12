@@ -41,7 +41,7 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full h-full overflow-hidden rounded-xl ring-2 ring-border shadow-xl shadow-purple-500/15 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/25 hover:ring-primary/30"
+      className="relative w-full h-full overflow-hidden rounded-xl ring-2 ring-purple-400/40 shadow-xl shadow-purple-500/25 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/35 hover:ring-purple-400/60"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
