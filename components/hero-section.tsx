@@ -63,8 +63,9 @@ export function HeroSection() {
                   <span>Based in Barcelona</span>
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-2">
-                  <span className="text-primary text-sm">🇪🇸 🇬🇧 🇩🇪</span>
-                  <span>Multilingual (Spanish, English, German)</span>
+                  <Globe className="h-4 w-4 text-primary" />
+                  <span>Multilingual</span>
+                  <span className="flex items-center gap-1 text-base">🇪🇸 🇬🇧 🇩🇪</span>
                 </span>
               </div>
             </div>
