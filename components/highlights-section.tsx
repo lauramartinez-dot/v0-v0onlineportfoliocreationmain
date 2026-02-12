@@ -10,23 +10,13 @@ function DiagonalRevealImage({
   afterSrc,
   beforeAlt,
   afterAlt,
-  beforeSrc2,
-  afterSrc2,
-  beforeAlt2,
-  afterAlt2,
   beforeLabel,
-  afterLabel,
 }: {
   beforeSrc: string
   afterSrc: string
   beforeAlt: string
   afterAlt: string
-  beforeSrc2?: string
-  afterSrc2?: string
-  beforeAlt2?: string
-  afterAlt2?: string
   beforeLabel?: string
-  afterLabel?: string
 }) {
   const [revealPercent, setRevealPercent] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
@@ -51,37 +41,24 @@ function DiagonalRevealImage({
   return (
     <div
       ref={containerRef}
-      className="relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
+      className="relative w-full aspect-square overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-ew-resize"
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {/* Before images (base layer) */}
-      <div className="flex flex-col">
-        <Image
-          src={beforeSrc}
-          alt={beforeAlt}
-          width={800}
-          height={600}
-          className="w-full h-auto block"
-          quality={100}
-          unoptimized
-        />
-        {beforeSrc2 && (
-          <Image
-            src={beforeSrc2}
-            alt={beforeAlt2 || ""}
-            width={800}
-            height={600}
-            className="w-full h-auto block"
-            quality={100}
-            unoptimized
-          />
-        )}
-      </div>
-      {/* After images (revealed via diagonal clip-path) */}
+      {/* Before image (base layer) */}
+      <Image
+        src={beforeSrc}
+        alt={beforeAlt}
+        width={800}
+        height={800}
+        className="w-full h-full object-cover absolute inset-0"
+        quality={100}
+        unoptimized
+      />
+      {/* After image (revealed via diagonal clip-path) */}
       <div
-        className="absolute inset-0 flex flex-col transition-[clip-path] duration-100 ease-out"
+        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
         style={{
           clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
         }}
@@ -90,43 +67,18 @@ function DiagonalRevealImage({
           src={afterSrc}
           alt={afterAlt}
           width={800}
-          height={600}
-          className="w-full h-auto block"
+          height={800}
+          className="w-full h-full object-cover"
           quality={100}
           unoptimized
         />
-        {afterSrc2 && (
-          <Image
-            src={afterSrc2}
-            alt={afterAlt2 || ""}
-            width={800}
-            height={600}
-            className="w-full h-auto block"
-            quality={100}
-            unoptimized
-          />
-        )}
       </div>
-      {/* Before label overlay */}
+      {/* Centered audience label */}
       {beforeLabel && (
-        <div className="absolute bottom-4 left-4 pointer-events-none z-10">
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1">Audience</span>
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 pointer-events-none z-10 flex flex-col items-center gap-1">
+          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
           <span className="inline-block px-3 py-1.5 rounded-full bg-background/90 backdrop-blur-sm text-muted-foreground text-sm font-semibold border border-border shadow-sm">
             {beforeLabel}
-          </span>
-        </div>
-      )}
-      {/* After label overlay (inside clip) */}
-      {afterLabel && (
-        <div
-          className="absolute bottom-4 right-4 pointer-events-none z-10 transition-[clip-path] duration-100 ease-out"
-          style={{
-            clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
-          }}
-        >
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider block mb-1 text-right">Audience</span>
-          <span className="inline-block px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-            {afterLabel}
           </span>
         </div>
       )}
@@ -141,12 +93,7 @@ function DiagonalRevealImage({
           }}
         />
       )}
-      {/* Hover hint */}
-      {!isHovering && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground pointer-events-none">
-          Drag across to reveal
-        </div>
-      )}
+
     </div>
   )
 }
@@ -244,7 +191,6 @@ export function HighlightsSection() {
                     beforeAlt="Technical textbook page about aircraft flight mechanics with diagram of four forces"
                     afterAlt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
                     beforeLabel="Non-technical readers"
-                    afterLabel="Non-technical readers"
                   />
                 </div>
 
@@ -272,8 +218,7 @@ export function HighlightsSection() {
                     afterSrc="/images/after-2.jpg"
                     beforeAlt="Spanish-language article about why planes stay in the air"
                     afterAlt="Clear visual guide explaining a technical concept simply"
-                    beforeLabel="Non-technical readers"
-                    afterLabel="Non-technical software users"
+                    beforeLabel="Non-technical software users"
                   />
                 </div>
               </div>
