@@ -212,10 +212,10 @@ export function HighlightsSection() {
                     It used to look like this...
                   </h3>
                   <DiagonalRevealImage
-                    beforeSrc="/images/before-1.png"
-                    afterSrc="/images/after-1.jpg"
-                    beforeAlt="Technical textbook page about aircraft flight mechanics"
-                    afterAlt="Clean, well-structured technical documentation"
+                    beforeSrc="/images/before-1-new.png"
+                    afterSrc="/images/before-2.png"
+                    beforeAlt="Technical textbook page about aircraft flight mechanics with diagram of four forces"
+                    afterAlt="Spanish-language article about why planes stay in the air, by Laura Martinez Montero"
                   />
                   <div className="flex flex-col items-center gap-1.5 mt-3">
                     <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
