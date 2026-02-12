@@ -244,13 +244,6 @@ export function HighlightsSection() {
               </p>
             </div>
           </div>
-              <p className="text-lg leading-relaxed text-foreground/85 text-left">
-                <span className="font-semibold text-primary tracking-wide uppercase text-sm">15-year long mission</span>
-                <br />
-                To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
-              </p>
-            </div>
-          </div>
         </div>
 
         {/* Top Differentiators Section */}
