@@ -53,25 +53,19 @@ export function HeroSection() {
             </h4>
 
             <div className="mb-8 flex flex-col items-center md:items-start">
-              <div className="flex flex-col gap-4 px-1 py-1">
-                <span className="inline-flex items-center gap-3 text-base font-semibold text-foreground">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
-                    <MapPin className="h-4 w-4 text-primary" />
-                  </span>
+              <div className="flex flex-col gap-3">
+                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                  <MapPin className="h-5 w-5 text-primary" />
                   Based in Barcelona
                 </span>
-                <span className="inline-flex items-center gap-3 text-base font-semibold text-foreground">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
-                    <Globe className="h-4 w-4 text-primary" />
-                  </span>
+                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                  <Globe className="h-5 w-5 text-primary" />
                   Global Scope
                 </span>
-                <span className="inline-flex items-center gap-3 text-base font-semibold text-foreground">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15">
-                    <Globe className="h-4 w-4 text-primary" />
-                  </span>
+                <span className="inline-flex items-center gap-3 text-lg md:text-xl text-muted-foreground">
+                  <Globe className="h-5 w-5 text-primary" />
                   Multilingual
-                  <span className="flex items-center gap-1.5 text-lg leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
+                  <span className="flex items-center gap-1.5 text-xl leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
                 </span>
               </div>
             </div>
