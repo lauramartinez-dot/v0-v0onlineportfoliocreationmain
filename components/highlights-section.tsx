@@ -75,7 +75,7 @@ function DiagonalRevealImage({
       {beforeLabel && (
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 pointer-events-none z-10 flex flex-col items-center gap-2">
           <span className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
-          <span className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-base font-semibold shadow-md">
+          <span className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-base font-semibold shadow-md whitespace-nowrap">
             {beforeLabel}
           </span>
         </div>
@@ -234,7 +234,7 @@ export function HighlightsSection() {
               <div className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0 mt-0.5">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
-              <p className="text-base md:text-lg leading-relaxed text-foreground/85 text-left">
+              <p className="text-lg md:text-xl leading-relaxed text-foreground/85 text-left">
                 To make technology — often complex, jargon-filled, and sometimes borderline gatekeepy — accessible to everyone, helping people stay relevant and employable in 2026, with a special focus on women.
               </p>
             </div>
