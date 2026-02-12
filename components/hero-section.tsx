@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown, MapPin, Globe, Mail } from "lucide-react"
+import { Download, ArrowRight, ChevronDown, MapPin, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
@@ -52,26 +52,22 @@ export function HeroSection() {
               Senior Technical Writer
             </h4>
 
-            <p className="mb-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              <span className="flex flex-col gap-1.5">
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>From Spain</span>
-                </span>
+            <div className="mb-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
+              <div className="flex flex-col gap-1.5">
                 <span className="flex items-center justify-center md:justify-start gap-2">
                   <Globe className="h-4 w-4 text-primary" />
-                  <span>Bilingual (English / Spanish)</span>
+                  <span>Global</span>
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-2">
                   <MapPin className="h-4 w-4 text-primary" />
                   <span>Based in Barcelona</span>
                 </span>
                 <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Mail className="h-4 w-4 text-primary" />
-                  <span>lmartmont@gmail.com</span>
+                  <span className="text-primary text-sm">🇪🇸 🇬🇧 🇩🇪</span>
+                  <span>Multilingual (Spanish, English, German)</span>
                 </span>
-              </span>
-            </p>
+              </div>
+            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
