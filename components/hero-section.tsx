@@ -52,22 +52,20 @@ export function HeroSection() {
               Senior Technical Writer
             </h4>
 
-            <div className="mb-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              <div className="flex flex-col gap-1.5">
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Globe className="h-4 w-4 text-primary" />
-                  <span>Global</span>
-                </span>
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>Based in Barcelona</span>
-                </span>
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Globe className="h-4 w-4 text-primary" />
-                  <span>Multilingual</span>
-                  <span className="flex items-center gap-1 text-base">🇪🇸 🇬🇧 🇩🇪</span>
-                </span>
-              </div>
+            <div className="mb-8 flex flex-wrap items-center justify-center md:justify-start gap-3">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm">
+                <MapPin className="h-4 w-4 text-primary" />
+                Based in Barcelona
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm">
+                <Globe className="h-4 w-4 text-primary" />
+                Global Scope
+              </span>
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-foreground shadow-sm backdrop-blur-sm">
+                <Globe className="h-4 w-4 text-primary" />
+                Multilingual
+                <span className="flex items-center gap-1 text-base leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
+              </span>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
