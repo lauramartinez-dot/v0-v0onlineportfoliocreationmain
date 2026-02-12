@@ -247,78 +247,109 @@ export function HighlightsSection() {
             </p>
           </div>
 
-          {/* Before / After hover-reveal comparison */}
-          <div className="max-w-4xl mx-auto">
-            <p className="text-center text-lg font-semibold text-muted-foreground mb-8">
-              It used to look like this... <span className="text-primary">hover to see what it looks like now.</span>
-            </p>
+          {/* Before / After visual comparison */}
+          <div className="max-w-5xl mx-auto">
+            <div className="flex flex-col items-center gap-8">
+              {/* Labels row on desktop */}
+              <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
+                <h3 className="text-center text-xl font-semibold text-muted-foreground/70">
+                  It used to look like this...
+                </h3>
+                <div className="w-8" />
+                <h3 className="text-center text-xl font-semibold text-primary">
+                  Now it looks like this.
+                </h3>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Image pair 1 */}
-              <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer transition-shadow duration-500 hover:shadow-lg hover:border-primary/30">
-                <Image
-                  src="/images/before-1.png"
-                  alt="Technical textbook page about aircraft flight mechanics"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto transition-opacity duration-700 ease-in-out group-hover:opacity-0"
-                  quality={100}
-                  unoptimized
-                />
-                <Image
-                  src="/images/after-1.jpg"
-                  alt="Clean, well-structured technical documentation"
-                  width={800}
-                  height={600}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
-                  quality={100}
-                  unoptimized
-                />
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                  Hover to reveal
+              {/* Comparison grid */}
+              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
+                {/* Before column - hover to reveal after */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
+                    It used to look like this...
+                  </h3>
+                  {/* Image pair 1 - hover crossfade */}
+                  <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer transition-shadow duration-500 hover:shadow-lg hover:border-primary/30">
+                    <Image
+                      src="/images/before-1.png"
+                      alt="Technical textbook page about aircraft flight mechanics"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto transition-opacity duration-700 ease-in-out group-hover:opacity-0"
+                      quality={100}
+                      unoptimized
+                    />
+                    <Image
+                      src="/images/after-1.jpg"
+                      alt="Clean, well-structured technical documentation"
+                      width={800}
+                      height={600}
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+                      quality={100}
+                      unoptimized
+                    />
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
+                      Hover to reveal
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center gap-1.5 mt-3">
+                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
+                      Non-technical readers
+                    </span>
+                  </div>
                 </div>
-              </div>
 
-              {/* Image pair 2 */}
-              <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer transition-shadow duration-500 hover:shadow-lg hover:border-primary/30">
-                <Image
-                  src="/images/before-2.png"
-                  alt="Spanish-language article about why planes stay in the air"
-                  width={800}
-                  height={600}
-                  className="w-full h-auto transition-opacity duration-700 ease-in-out group-hover:opacity-0"
-                  quality={100}
-                  unoptimized
-                />
-                <Image
-                  src="/images/after-2.jpg"
-                  alt="Clear visual guide explaining a technical concept simply"
-                  width={800}
-                  height={600}
-                  className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
-                  quality={100}
-                  unoptimized
-                />
-                <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
-                  Hover to reveal
+                {/* Arrow divider */}
+                <div className="hidden md:flex flex-col items-center justify-center">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                    <ArrowRight className="h-5 w-5 text-primary" />
+                  </div>
                 </div>
-              </div>
-            </div>
 
-            {/* Audience labels */}
-            <div className="flex items-center justify-center gap-6 mt-6">
-              <div className="flex flex-col items-center gap-1.5">
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Before</span>
-                <span className="inline-block px-4 py-1.5 rounded-full bg-muted text-muted-foreground text-sm font-semibold border border-border shadow-sm">
-                  Non-technical readers
-                </span>
-              </div>
-              <ArrowRight className="h-4 w-4 text-primary mt-4" />
-              <div className="flex flex-col items-center gap-1.5">
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">After</span>
-                <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-                  Non-technical software users
-                </span>
+                {/* Mobile arrow */}
+                <div className="flex md:hidden items-center justify-center py-2">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
+                    <ArrowRight className="h-4 w-4 text-primary" />
+                  </div>
+                </div>
+
+                {/* After column - hover to reveal after */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-lg font-semibold text-primary md:hidden">
+                    Now it looks like this.
+                  </h3>
+                  {/* Image pair 2 - hover crossfade */}
+                  <div className="group relative w-full overflow-hidden rounded-xl border border-border/50 shadow-sm cursor-pointer transition-shadow duration-500 hover:shadow-lg hover:border-primary/30">
+                    <Image
+                      src="/images/before-2.png"
+                      alt="Spanish-language article about why planes stay in the air"
+                      width={800}
+                      height={600}
+                      className="w-full h-auto transition-opacity duration-700 ease-in-out group-hover:opacity-0"
+                      quality={100}
+                      unoptimized
+                    />
+                    <Image
+                      src="/images/after-2.jpg"
+                      alt="Clear visual guide explaining a technical concept simply"
+                      width={800}
+                      height={600}
+                      className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-700 ease-in-out group-hover:opacity-100"
+                      quality={100}
+                      unoptimized
+                    />
+                    <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 px-3 py-1.5 text-xs font-medium text-muted-foreground transition-opacity duration-300 group-hover:opacity-0 pointer-events-none">
+                      Hover to reveal
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center gap-1.5 mt-3">
+                    <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Audience</span>
+                    <span className="inline-block px-4 py-1.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
+                      Non-technical software users
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
