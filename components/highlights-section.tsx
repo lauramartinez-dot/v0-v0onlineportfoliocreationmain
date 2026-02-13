@@ -61,8 +61,8 @@ function DiagonalRevealImage({
         className="w-full h-full object-cover"
         unoptimized
       />
-      {/* Gradient overlay - subtle black at bottom */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+      {/* Gradient overlay - dark at bottom for label readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
       {/* After image (revealed via diagonal clip-path) */}
       <div
         className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
@@ -78,14 +78,14 @@ function DiagonalRevealImage({
           className="w-full h-full object-cover"
           unoptimized
         />
-        {/* Gradient overlay - subtle black at bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+        {/* Gradient overlay - dark at bottom for label readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
       </div>
       {/* Centered audience label */}
       {beforeLabel && (
         <div className="absolute bottom-5 left-1/2 -translate-x-1/2 pointer-events-none z-10 flex flex-col items-center gap-2">
-          <span className="text-sm font-semibold text-white/80 uppercase tracking-wider">Audience</span>
-          <span className="inline-block px-6 py-2.5 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-base font-semibold shadow-md whitespace-nowrap">
+          <span className="text-sm font-semibold text-white uppercase tracking-wider">Audience</span>
+          <span className="inline-block px-6 py-2.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-base font-semibold shadow-md whitespace-nowrap">
             {beforeLabel}
           </span>
         </div>
