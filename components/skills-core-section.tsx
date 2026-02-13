@@ -16,8 +16,8 @@ function HoverExpandableCard({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${isHovered
-          ? "shadow-xl shadow-primary/20 scale-[1.03] border-primary/60 -translate-y-2"
-          : "shadow-lg shadow-primary/5 border-border/70"
+        ? "shadow-xl shadow-primary/20 scale-[1.03] border-primary/60 -translate-y-2"
+        : "shadow-lg shadow-primary/5 border-border/70"
         }`}
     >
       <div className="p-5">
@@ -90,7 +90,7 @@ export function SkillsCoreSection() {
           <div className="relative flex flex-col gap-4 pt-12 z-10">
             <div className="text-center mb-6 px-2">
               <h3 className="text-xs font-bold text-muted-foreground/70 uppercase tracking-widest">
-                10 Years Focused on Early-Stage Tech
+                3x Early Hire in Tech Scale-Ups
               </h3>
             </div>
             {column2Skills.map((skill, index) => (
@@ -102,7 +102,7 @@ export function SkillsCoreSection() {
           <div className="relative flex flex-col gap-4 pt-12 z-10">
             <div className="text-center mb-6 px-2">
               <h3 className="text-xs font-bold text-muted-foreground/70 uppercase tracking-widest">
-                International Career In 4 Countries
+                An International Career Across 4 Countries
               </h3>
             </div>
             {column3Skills.map((skill, index) => (
