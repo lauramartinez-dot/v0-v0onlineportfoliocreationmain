@@ -15,11 +15,10 @@ function HoverExpandableCard({
       data-skill-title={item.title}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${
-        isHovered
+      className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${isHovered
           ? "shadow-xl shadow-primary/20 scale-[1.03] border-primary/60 -translate-y-2"
           : "shadow-lg shadow-primary/5 border-border/70"
-      }`}
+        }`}
     >
       <div className="p-5">
         <div className="flex items-center gap-2">
@@ -79,7 +78,7 @@ export function SkillsCoreSection() {
           <div className="relative flex flex-col gap-4 pt-12 z-10">
             <div className="text-center mb-6 px-2">
               <h3 className="text-xs font-bold text-muted-foreground/70 uppercase tracking-widest">
-                Unique Background in Tech Journalism
+                A Foundation in Tech Journalism
               </h3>
             </div>
             {column1Skills.map((skill, index) => (
