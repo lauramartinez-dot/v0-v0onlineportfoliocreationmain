@@ -61,8 +61,8 @@ function DiagonalRevealImage({
         className="w-full h-full object-cover"
         unoptimized
       />
-      {/* Gradient overlay - dark at bottom for label readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+      {/* Gradient overlay - purple at bottom for label readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/40 to-transparent" />
       {/* After image (revealed via diagonal clip-path) */}
       <div
         className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
@@ -78,8 +78,8 @@ function DiagonalRevealImage({
           className="w-full h-full object-cover"
           unoptimized
         />
-        {/* Gradient overlay - dark at bottom for label readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
+        {/* Gradient overlay - purple at bottom for label readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/40 to-transparent" />
       </div>
       {/* Centered audience label */}
       {beforeLabel && (
