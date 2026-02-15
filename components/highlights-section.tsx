@@ -83,9 +83,9 @@ function DiagonalRevealImage({
       </div>
       {/* Centered audience label */}
       {beforeLabel && (
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 pointer-events-none z-10 flex flex-col items-center gap-2">
-          <span className="text-sm font-semibold text-white uppercase tracking-wider">Audience</span>
-          <span className="inline-block px-6 py-2.5 rounded-full border border-white/30 bg-white/15 backdrop-blur-sm text-white text-base font-semibold shadow-md whitespace-nowrap">
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 pointer-events-none z-10">
+          <span className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/20 bg-white/10 backdrop-blur-md text-white/90 text-base font-medium shadow-lg whitespace-nowrap">
+            <span className="text-xs font-semibold uppercase tracking-wider text-white/60">Audience:</span>
             {beforeLabel}
           </span>
         </div>
