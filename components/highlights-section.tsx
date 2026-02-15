@@ -218,15 +218,15 @@ export function HighlightsSection() {
                 </div>
 
                 {/* After column */}
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-4 md:min-h-0">
                   <h3 className="text-center text-lg font-semibold text-primary md:hidden">
                     Now it looks like this.
                   </h3>
                   <DiagonalRevealImage
                     beforeSrc="/images/before-2-new.png"
                     afterSrc="/images/after-2-new.png"
-                    beforeAlt="Role-Based Access Control Policy diagram showing organization, users, roles, and permissions hierarchy"
-                    afterAlt="Personio help center article explaining how to set up permissions and employee roles"
+                    beforeAlt="Role-Based Access Control Policy diagram showing organization, users, roles, and permissions"
+                    afterAlt="Help center article: Set up permissions and employee roles"
                     beforeLabel="Non-technical software users"
                   />
                 </div>
