@@ -62,7 +62,7 @@ function DiagonalRevealImage({
         unoptimized
       />
       {/* Gradient overlay - purple at bottom for label readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/40 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-purple-800 via-purple-600/30 to-transparent" />
       {/* After image (revealed via diagonal clip-path) */}
       <div
         className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
@@ -79,7 +79,7 @@ function DiagonalRevealImage({
           unoptimized
         />
         {/* Gradient overlay - purple at bottom for label readability */}
-        <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-purple-800 via-purple-600/30 to-transparent" />
       </div>
       {/* Centered audience label */}
       {beforeLabel && (
