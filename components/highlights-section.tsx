@@ -223,10 +223,10 @@ export function HighlightsSection() {
                     Now it looks like this.
                   </h3>
                   <DiagonalRevealImage
-                    beforeSrc="/images/before-2.png"
-                    afterSrc="/images/after-2.jpg"
-                    beforeAlt="Spanish-language article about why planes stay in the air"
-                    afterAlt="Clear visual guide explaining a technical concept simply"
+                    beforeSrc="/images/before-2-new.png"
+                    afterSrc="/images/after-2-new.png"
+                    beforeAlt="Role-Based Access Control Policy diagram showing organization, users, roles, and permissions hierarchy"
+                    afterAlt="Personio help center article explaining how to set up permissions and employee roles"
                     beforeLabel="Non-technical software users"
                   />
                 </div>
