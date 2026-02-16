@@ -152,11 +152,11 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
           : "shadow-sm border-purple-200 dark:border-purple-400/20 hover:shadow-md hover:border-primary/30"
       }`}
     >
-      <div className="flex items-center gap-2.5 px-4 py-3">
-        <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-8 w-8">
-          <item.icon className="h-4 w-4 text-primary" />
+      <div className="flex items-center gap-3 px-5 py-4">
+        <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
+          <item.icon className="h-5 w-5 text-primary" />
         </div>
-        <h4 className="font-semibold text-foreground text-sm leading-tight flex-1">{item.title}</h4>
+        <h4 className="font-bold text-foreground text-base md:text-lg leading-tight flex-1">{item.title}</h4>
         <svg
           className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           xmlns="http://www.w3.org/2000/svg"
