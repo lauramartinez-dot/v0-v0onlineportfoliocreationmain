@@ -146,11 +146,10 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <div
       onClick={() => setIsOpen(!isOpen)}
-      className={`cursor-pointer rounded-xl bg-purple-50 border transition-all duration-300 dark:bg-purple-500/10 ${
-        isOpen
+      className={`cursor-pointer rounded-xl bg-purple-50 border transition-all duration-300 dark:bg-purple-500/10 ${isOpen
           ? "shadow-lg shadow-primary/15 border-primary/40"
           : "shadow-sm border-purple-200 dark:border-purple-400/20 hover:shadow-md hover:border-primary/30"
-      }`}
+        }`}
     >
       <div className="flex items-center gap-3 px-5 py-4">
         <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
@@ -312,7 +311,7 @@ export function HighlightsSection() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             What Sets Me Apart
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Differentiators</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Differentiators & Skills</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
