@@ -356,33 +356,39 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 1: A Foundation in Tech Journalism */}
-          <div className="relative z-10 flex flex-col gap-4">
+          <div className="relative z-10 flex flex-col gap-3">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
-            {coreSkills
-              .filter((s) => s.column === 1)
-              .map((skill, i) => (
-                <SkillCard key={i} item={skill} />
-              ))}
+            <div className="flex flex-col gap-3 mt-4">
+              {coreSkills
+                .filter((s) => s.column === 1)
+                .map((skill, i) => (
+                  <SkillCard key={i} item={skill} />
+                ))}
+            </div>
           </div>
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
-          <div className="relative z-10 flex flex-col gap-4">
+          <div className="relative z-10 flex flex-col gap-3">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
-            {coreSkills
-              .filter((s) => s.column === 2)
-              .map((skill, i) => (
-                <SkillCard key={i} item={skill} />
-              ))}
+            <div className="flex flex-col gap-3 mt-4">
+              {coreSkills
+                .filter((s) => s.column === 2)
+                .map((skill, i) => (
+                  <SkillCard key={i} item={skill} />
+                ))}
+            </div>
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
-          <div className="relative z-10 flex flex-col gap-4">
+          <div className="relative z-10 flex flex-col gap-3">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-            {coreSkills
-              .filter((s) => s.column === 3)
-              .map((skill, i) => (
-                <SkillCard key={i} item={skill} />
-              ))}
+            <div className="flex flex-col gap-3 mt-4">
+              {coreSkills
+                .filter((s) => s.column === 3)
+                .map((skill, i) => (
+                  <SkillCard key={i} item={skill} />
+                ))}
+            </div>
           </div>
         </div>
       </div>
