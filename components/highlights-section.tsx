@@ -243,9 +243,9 @@ export function HighlightsSection() {
             <div className="flex flex-col items-center gap-8">
               {/* Labels row on desktop */}
               <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
-                <p className="text-center text-xs font-medium text-muted-foreground/40 uppercase tracking-widest">
+                <h3 className="text-center text-base font-medium text-muted-foreground/60">
                   It used to look like this...
-                </p>
+                </h3>
                 <div className="w-8" />
                 <h3 className="text-center text-xl font-semibold text-primary">
                   Now it looks like this.
@@ -256,9 +256,9 @@ export function HighlightsSection() {
               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
-                  <p className="text-center text-xs font-medium text-muted-foreground/40 uppercase tracking-widest md:hidden">
+                  <h3 className="text-center text-sm font-medium text-muted-foreground/60 md:hidden">
                     It used to look like this...
-                  </p>
+                  </h3>
                   <DiagonalRevealImage
                     beforeSrc="/images/before-1-new.png"
                     afterSrc="/images/before-2.png"
