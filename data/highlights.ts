@@ -71,7 +71,7 @@ export const coreSkills = [
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
     icon: Target,
-    title: "Dual Role With Hands-On Writing + Content Ops",
+    title: "Hands-On Writing With Content Operations",
     description: "Description coming soon.",
     column: 2,
     tools: ["Notion", "GitHub", "JavaScript basics"],
