@@ -78,15 +78,7 @@ function DiagonalRevealImage({
           unoptimized
         />
       </div>
-      {/* Centered audience label */}
-      {beforeLabel && (
-        <div className="absolute bottom-3 left-1/2 -translate-x-1/2 pointer-events-none z-10">
-          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-background/90 backdrop-blur-sm border border-primary/20 text-foreground text-sm font-semibold shadow-md whitespace-nowrap">
-            <span className="text-xs font-semibold uppercase tracking-wider text-primary">Audience:</span>
-            {beforeLabel}
-          </span>
-        </div>
-      )}
+
       {/* Diagonal line indicator */}
       {isHovering && (
         <div
@@ -275,6 +267,7 @@ export function HighlightsSection() {
                     beforeLabel="Non-technical readers"
                     href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
                   />
+                  <p className="text-center text-xs text-muted-foreground/60 mt-2 tracking-wide uppercase">Audience: Non-technical readers</p>
                 </div>
 
                 {/* Arrow divider */}
@@ -303,6 +296,7 @@ export function HighlightsSection() {
                     afterAlt="Help center article: Set up permissions and employee roles"
                     beforeLabel="Non-technical software users"
                   />
+                  <p className="text-center text-xs text-muted-foreground/60 mt-2 tracking-wide uppercase">Audience: Non-technical software users</p>
                 </div>
               </div>
             </div>
