@@ -81,8 +81,8 @@ function DiagonalRevealImage({
       {/* Centered audience label */}
       {beforeLabel && (
         <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 pointer-events-none z-10">
-          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-purple-700 text-white text-sm font-semibold shadow-lg whitespace-nowrap">
-            <span className="text-xs font-semibold uppercase tracking-wider text-purple-200">Audience:</span>
+          <span className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-primary/10 border border-primary/20 text-foreground text-sm font-semibold shadow-md whitespace-nowrap">
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">Audience:</span>
             {beforeLabel}
           </span>
         </div>
@@ -247,15 +247,15 @@ export function HighlightsSection() {
           </div>
 
           {/* Before / After visual comparison */}
-          <div className="max-w-5xl mx-auto mt-16 mb-16 rounded-3xl bg-gradient-to-br from-purple-600 via-purple-700 to-purple-800 p-8 md:p-12 shadow-2xl shadow-purple-900/30">
+          <div className="max-w-5xl mx-auto mt-16 mb-16 rounded-3xl bg-primary/5 border border-primary/10 p-8 md:p-12 shadow-lg shadow-primary/5">
             <div className="flex flex-col items-center gap-8">
               {/* Labels row on desktop */}
               <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
-                <h3 className="text-center text-xl font-semibold text-purple-200">
+                <h3 className="text-center text-xl font-semibold text-muted-foreground">
                   It used to look like this...
                 </h3>
                 <div className="w-8" />
-                <h3 className="text-center text-xl font-semibold text-white">
+                <h3 className="text-center text-xl font-semibold text-primary">
                   It looks something like this.
                 </h3>
               </div>
@@ -264,7 +264,7 @@ export function HighlightsSection() {
               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
-                  <h3 className="text-center text-lg font-semibold text-purple-200 md:hidden">
+                  <h3 className="text-center text-lg font-semibold text-muted-foreground md:hidden">
                     It used to look like this...
                   </h3>
                   <DiagonalRevealImage
@@ -279,21 +279,21 @@ export function HighlightsSection() {
 
                 {/* Arrow divider */}
                 <div className="hidden md:flex flex-col items-center justify-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white/15 border border-white/25">
-                    <ArrowRight className="h-5 w-5 text-white" />
+                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
+                    <ArrowRight className="h-5 w-5 text-primary" />
                   </div>
                 </div>
 
                 {/* Mobile arrow */}
                 <div className="flex md:hidden items-center justify-center py-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 border border-white/25 rotate-90">
-                    <ArrowRight className="h-4 w-4 text-white" />
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
+                    <ArrowRight className="h-4 w-4 text-primary" />
                   </div>
                 </div>
 
                 {/* After column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
-                  <h3 className="text-center text-lg font-semibold text-white md:hidden">
+                  <h3 className="text-center text-lg font-semibold text-primary md:hidden">
                     Now it looks like this.
                   </h3>
                   <DiagonalRevealImage
