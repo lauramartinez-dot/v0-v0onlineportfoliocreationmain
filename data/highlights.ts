@@ -52,21 +52,21 @@ export const coreSkills = [
     title: "Academically Trained Writer",
     description: "Description coming soon.",
     column: 1,
-    tools: ["CMS", "HTML/CSS/Markdown", "Grammarly/LanguageTool", "Adobe InDesign/Photoshop"],
+    tools: ["SEO", "CMS", "HTML/CSS/Markdown", "Grammarly/LanguageTool", "Adobe InDesign/Photoshop"],
   },
   {
     icon: Heart,
     title: "True Empathy for Non-Technical Users",
     description: "Description coming soon.",
     column: 1,
-    tools: ["ChatGPT/Clueso (Gen AI)", "Lucidchart/Draw.io (Diagramming)"],
+    tools: ["Zendesk/Confluence", "Tableau (User Feedback)", "Clueso (AI video tools)", "Lucidchart/Draw.io (Diagramming)"],
   },
   {
     icon: Layers,
-    title: "Multi-Audience Documentation",
+    title: "True Audience Awerness",
     description: "Description coming soon.",
     column: 1,
-    tools: ["SEO", "Zendesk/Confluence", "v0.app"],
+    tools: [, "e"],
   },
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
@@ -74,7 +74,7 @@ export const coreSkills = [
     title: "Hands-On Writing With Content Operations",
     description: "Description coming soon.",
     column: 2,
-    tools: ["Notion", "GitHub", "JavaScript basics"],
+    tools: ["Zendesk", "Brandfolder", "Frontify", "Tableau"],
   },
   {
     icon: Rocket,
@@ -88,7 +88,7 @@ export const coreSkills = [
     title: "Fail-Fast Mentality",
     description: "Description coming soon.",
     column: 2,
-    tools: ["Slack", "Zoom/Google Meet", "Tableau", "Google Slides/Sheets/Docs"],
+    tools: ["ChatGPT/Claude (Gen AI)", "v0.app", "Loveable"],
   },
   // Column 3: An International Career Across 4 Countries
   {
@@ -110,6 +110,6 @@ export const coreSkills = [
     title: "Used to Remote-First & Global Teams",
     description: "Description coming soon.",
     column: 3,
-    tools: ["Slack", "Zoom/Google Meet", "Google Docs", "Miro"],
+    tools: ["Jira", "Slack", "Zoom/Google Meet", "Google Slides", "Miro"],
   },
 ]
