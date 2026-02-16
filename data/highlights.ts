@@ -71,7 +71,7 @@ export const coreSkills = [
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
     icon: Target,
-    title: "Hands-On Writing With Content Operations",
+    title: "Hands-On Writing + Content Ops",
     description: "Description coming soon.",
     column: 2,
     tools: ["Zendesk", "Brandfolder", "Frontify", "Tableau"],
