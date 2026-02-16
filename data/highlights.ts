@@ -66,7 +66,7 @@ export const coreSkills = [
     title: "Audience-Centric Writing",
     description: "Description coming soon.",
     column: 1,
-    tools: [, "e"],
+    tools: ["Google Forms", "Typeform", "Tableau (User Feedback)", "Style Guides"],
   },
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
