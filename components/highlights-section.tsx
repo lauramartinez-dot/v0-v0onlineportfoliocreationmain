@@ -147,11 +147,10 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
     <div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${
-        isHovered
+      className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${isHovered
           ? "shadow-xl shadow-primary/20 scale-[1.03] border-primary/60 -translate-y-1"
           : "shadow-lg shadow-primary/5 border-border/70"
-      }`}
+        }`}
     >
       <div className="p-4">
         <div className="flex items-center gap-2 mb-2">
@@ -219,7 +218,7 @@ export function HighlightsSection() {
                 </h3>
                 <div className="w-8" />
                 <h3 className="text-center text-xl font-semibold text-primary">
-                  Now it looks like this.
+                  It looks something like this.
                 </h3>
               </div>
 
