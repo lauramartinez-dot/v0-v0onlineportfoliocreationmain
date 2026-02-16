@@ -239,7 +239,7 @@ export function HighlightsSection() {
           </div>
 
           {/* Before / After visual comparison */}
-          <div className="max-w-5xl mx-auto mt-16 mb-16 rounded-3xl bg-primary/8 border border-primary/15 p-8 md:p-12 shadow-xl shadow-primary/10">
+          <div className="max-w-5xl mx-auto mt-16 mb-16 rounded-3xl bg-purple-100 border border-purple-200/60 p-8 md:p-12 shadow-xl shadow-primary/10 dark:bg-purple-500/15 dark:border-purple-400/20">
             <div className="flex flex-col items-center gap-8">
               {/* Labels row on desktop */}
               <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
