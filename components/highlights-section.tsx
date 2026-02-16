@@ -315,7 +315,7 @@ export function HighlightsSection() {
                 <Rocket className="w-5 h-5 text-white" />
               </div>
               <p className="text-lg md:text-xl leading-relaxed text-foreground/85 text-left">
-                I help non-technical people make sense of technology — complex, jargon-filled, and sometimes a little gatekeepy. In 2026, knowing your way around new technology, especially software and AI tools, is basically what keeps you employed.
+                I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI in today’s post-ChatGPT world — is what keeps you employed.
               </p>
             </div>
           </div>

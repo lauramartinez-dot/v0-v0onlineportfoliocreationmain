@@ -56,7 +56,7 @@ export const coreSkills = [
   },
   {
     icon: Heart,
-    title: "True Empathy for Non-Technical Users",
+    title: "Empathy for Non-Technical Users",
     description: "Description coming soon.",
     column: 1,
     tools: ["Zendesk/Confluence", "Tableau (User Feedback)", "Clueso (AI video tools)", "Lucidchart/Draw.io (Diagramming)"],
