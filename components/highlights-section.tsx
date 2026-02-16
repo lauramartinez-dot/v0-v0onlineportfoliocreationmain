@@ -256,7 +256,7 @@ export function HighlightsSection() {
                 </h3>
                 <div className="w-8" />
                 <h3 className="text-center text-xl font-semibold text-primary">
-                  It looks something like this.
+                  Now it looks like this.
                 </h3>
               </div>
 
