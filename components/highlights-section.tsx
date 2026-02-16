@@ -155,7 +155,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
         <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
           <item.icon className="h-5 w-5 text-primary" />
         </div>
-        <h4 className="font-bold text-foreground text-base md:text-lg leading-tight flex-1">{item.title}</h4>
+        <h4 className="font-bold text-foreground text-xl md:text-2xl leading-tight flex-1">{item.title}</h4>
         <svg
           className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
           xmlns="http://www.w3.org/2000/svg"
