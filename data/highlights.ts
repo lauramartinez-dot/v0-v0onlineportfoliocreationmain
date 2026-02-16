@@ -100,7 +100,7 @@ export const coreSkills = [
   },
   {
     icon: Globe,
-    title: "Localization-Ready Guides",
+    title: "Localization-Ready English Docs",
     description: "Description coming soon.",
     column: 3,
     tools: ["Phrase", "Smartling"],
