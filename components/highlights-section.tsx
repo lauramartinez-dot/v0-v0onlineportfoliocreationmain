@@ -310,14 +310,11 @@ export function HighlightsSection() {
             </p>
 
             {/* Mission box - right */}
-            <div className="rounded-2xl border border-primary/25 bg-gradient-to-r from-purple-50/80 to-pink-50/80 dark:from-purple-950/30 dark:to-pink-950/30 px-8 py-7 shadow-md shadow-primary/5 backdrop-blur-sm md:flex-1">
-              <div className="flex items-center gap-2.5 mb-3">
-                <div className="flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0">
-                  <Rocket className="w-4 h-4 text-white" />
-                </div>
-                <span className="text-xs font-semibold text-primary uppercase tracking-widest">My Mission</span>
+            <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-950/40 dark:to-pink-950/40 px-8 py-7 shadow-lg shadow-primary/10 backdrop-blur-sm md:flex-1">
+              <div className="absolute -top-4 left-7 flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
+                <Rocket className="w-4 h-4 text-white" />
               </div>
-              <p className="text-base md:text-lg leading-relaxed text-foreground text-left text-balance">
+              <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-1">
                 I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
               </p>
             </div>
