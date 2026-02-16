@@ -93,7 +93,7 @@ export const coreSkills = [
   // Column 3: An International Career Across 4 Countries
   {
     icon: Home,
-    title: "Fully Bilingual English/Spanish (+ German)",
+    title: "Fully Bilingual English & Spanish",
     description: "Description coming soon.",
     column: 3,
     tools: ["Spanish (Native)", "English (C2)", "German (B2)", "French (A2)"],
