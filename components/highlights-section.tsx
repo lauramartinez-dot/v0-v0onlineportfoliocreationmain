@@ -145,7 +145,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer rounded-xl bg-purple-50 border shadow-sm border-purple-200 dark:bg-purple-500/10 dark:border-purple-400/20 hover:shadow-md hover:border-primary/30 transition-all duration-300"
+        className="cursor-pointer rounded-xl bg-purple-50/80 border shadow-sm border-purple-200/60 dark:bg-purple-500/10 dark:border-purple-400/20 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/40 hover:bg-purple-50 hover:-translate-y-0.5 transition-all duration-300"
       >
         <div className="flex items-center gap-3 px-5 py-4">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
@@ -346,9 +346,10 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 1: A Foundation in Tech Journalism */}
-          <div className="relative z-10 flex flex-col gap-3">
+          <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
-            <div className="flex flex-col gap-3 mt-4">
+            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Core Skills</p>
               {coreSkills
                 .filter((s) => s.column === 1)
                 .map((skill, i) => (
@@ -358,9 +359,10 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
-          <div className="relative z-10 flex flex-col gap-3">
+          <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
-            <div className="flex flex-col gap-3 mt-4">
+            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Core Skills</p>
               {coreSkills
                 .filter((s) => s.column === 2)
                 .map((skill, i) => (
@@ -370,9 +372,10 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
-          <div className="relative z-10 flex flex-col gap-3">
+          <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-            <div className="flex flex-col gap-3 mt-4">
+            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Core Skills</p>
               {coreSkills
                 .filter((s) => s.column === 3)
                 .map((skill, i) => (
