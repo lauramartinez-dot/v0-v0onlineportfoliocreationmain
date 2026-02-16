@@ -63,7 +63,7 @@ export const coreSkills = [
   },
   {
     icon: Layers,
-    title: "Multi-Audience Documentation",
+    title: "Able to Adapt to Many Audiences",
     description: "Description coming soon.",
     column: 1,
     tools: ["SEO", "Zendesk/Confluence", "v0.app"],
