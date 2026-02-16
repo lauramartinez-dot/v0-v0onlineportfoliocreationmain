@@ -1,8 +1,8 @@
 "use client"
 
-import { useState, useRef, useCallback } from "react"
+import { useState, useRef, useCallback, useEffect } from "react"
 import { topSkills, coreSkills } from "@/data/highlights"
-import { Rocket, ArrowRight } from "lucide-react"
+import { Rocket, ArrowRight, X } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -143,53 +143,76 @@ function SkillImageCard({
 function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   const [isOpen, setIsOpen] = useState(false)
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+    return () => { document.body.style.overflow = "" }
+  }, [isOpen])
+
   return (
-    <div
-      onClick={() => setIsOpen(!isOpen)}
-      className={`cursor-pointer rounded-xl bg-purple-50 border transition-all duration-300 dark:bg-purple-500/10 ${isOpen
-          ? "shadow-lg shadow-primary/15 border-primary/40"
-          : "shadow-sm border-purple-200 dark:border-purple-400/20 hover:shadow-md hover:border-primary/30"
-        }`}
-    >
-      <div className="flex items-center gap-3 px-5 py-4">
-        <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
-          <item.icon className="h-5 w-5 text-primary" />
+    <>
+      <div
+        onClick={() => setIsOpen(true)}
+        className="cursor-pointer rounded-xl bg-purple-50 border shadow-sm border-purple-200 dark:bg-purple-500/10 dark:border-purple-400/20 hover:shadow-md hover:border-primary/30 transition-all duration-300"
+      >
+        <div className="flex items-center gap-3 px-5 py-4">
+          <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
+            <item.icon className="h-5 w-5 text-primary" />
+          </div>
+          <h4 className="font-bold text-foreground text-xl md:text-2xl leading-tight flex-1">{item.title}</h4>
         </div>
-        <h4 className="font-bold text-foreground text-xl md:text-2xl leading-tight flex-1">{item.title}</h4>
-        <svg
-          className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="m6 9 6 6 6-6" />
-        </svg>
       </div>
+
       {isOpen && (
-        <div className="px-4 pb-4 pt-1 border-t border-purple-200/60 dark:border-purple-400/15">
-          {item.description && (
-            <p className="text-sm text-muted-foreground leading-relaxed mb-2.5">{item.description}</p>
-          )}
-          {item.tools && item.tools.length > 0 && (
-            <div className="flex flex-wrap items-center gap-1.5">
-              <span className="text-xs font-semibold text-primary uppercase tracking-wide">Tools:</span>
-              {item.tools.map((tool, i) => (
-                <span
-                  key={i}
-                  className="inline-block rounded-full bg-purple-100 border border-purple-300 px-2.5 py-0.5 text-xs font-semibold text-purple-700 dark:bg-purple-500/20 dark:border-purple-400/40 dark:text-purple-300"
-                >
-                  {tool}
-                </span>
-              ))}
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+          <div
+            className="relative w-full max-w-lg rounded-2xl bg-background border border-border shadow-2xl shadow-purple-500/20 animate-in fade-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-4 right-4 flex items-center justify-center h-8 w-8 rounded-full bg-muted hover:bg-muted-foreground/20 transition-colors"
+              aria-label="Close"
+            >
+              <X className="h-4 w-4 text-muted-foreground" />
+            </button>
+
+            <div className="p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="flex shrink-0 items-center justify-center rounded-xl bg-primary/15 h-12 w-12">
+                  <item.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-bold text-foreground text-2xl md:text-3xl leading-tight">{item.title}</h3>
+              </div>
+
+              {item.description && (
+                <p className="text-base text-muted-foreground leading-relaxed mb-5">{item.description}</p>
+              )}
+
+              {item.tools && item.tools.length > 0 && (
+                <div>
+                  <span className="text-sm font-semibold text-primary uppercase tracking-wide mb-3 block">Tools</span>
+                  <div className="flex flex-wrap gap-2">
+                    {item.tools.map((tool, i) => (
+                      <span
+                        key={i}
+                        className="inline-block rounded-full bg-purple-100 border border-purple-300 px-3.5 py-1.5 text-sm font-semibold text-purple-700 dark:bg-purple-500/20 dark:border-purple-400/40 dark:text-purple-300"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       )}
-    </div>
+    </>
   )
 }
 
