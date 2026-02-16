@@ -157,7 +157,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-9 w-9 shadow-sm shadow-primary/10">
             <item.icon className="h-4 w-4 text-primary" />
           </div>
-          <h4 className="font-semibold text-foreground text-base leading-tight">{item.title}</h4>
+          <h4 className="font-bold text-foreground text-xl md:text-2xl leading-tight">{item.title}</h4>
         </div>
         {item.tools && item.tools.length > 0 && (
           <div className="flex flex-wrap gap-1.5 mt-2">
