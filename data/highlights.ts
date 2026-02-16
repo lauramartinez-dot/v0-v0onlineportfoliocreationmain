@@ -23,7 +23,7 @@ export const topSkills = [
     icon: Clock,
     title: "A Foundation in Tech Journalism",
     description:
-      "Tech journalist turned Senior Technical Writer—now bringing newsroom clarity to the tech industry.",
+      "Tech journalist turned Senior Technical Writer—now bringing tech newsroom clarity to the tech industry.",
     link: "",
     skills: ["Consistency", "Deep Expertise", "Long-Term Focus"],
   },
