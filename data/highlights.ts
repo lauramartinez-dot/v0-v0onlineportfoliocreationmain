@@ -56,14 +56,14 @@ export const coreSkills = [
   },
   {
     icon: Heart,
-    title: "Empathy for Non-Technical Users",
+    title: "Empathy for Non-Tech Users",
     description: "Description coming soon.",
     column: 1,
     tools: ["Zendesk/Confluence", "Tableau (User Feedback)", "Clueso (AI video tools)", "Lucidchart/Draw.io (Diagramming)"],
   },
   {
     icon: Layers,
-    title: "True Audience Awerness",
+    title: "Audience-Centric Writing",
     description: "Description coming soon.",
     column: 1,
     tools: [, "e"],
@@ -71,7 +71,7 @@ export const coreSkills = [
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
     icon: Target,
-    title: "Hands-On Writing + Content Ops",
+    title: "Hybryd Writing + Content Ops",
     description: "Description coming soon.",
     column: 2,
     tools: ["Zendesk", "Brandfolder", "Frontify", "Tableau"],
