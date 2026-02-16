@@ -93,7 +93,7 @@ export const coreSkills = [
   // Column 3: An International Career Across 4 Countries
   {
     icon: Home,
-    title: "Near-Native English Writing",
+    title: "Multilingual English, Spanish and German",
     description: "Description coming soon.",
     column: 3,
     tools: ["Spanish (Native)", "English (C2)", "German (B2)", "French (A2)"],
