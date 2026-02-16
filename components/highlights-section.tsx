@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useRef, useCallback } from "react"
-import { topSkills } from "@/data/highlights"
+import { topSkills, coreSkills } from "@/data/highlights"
 import { Rocket, ArrowRight } from "lucide-react"
 import Image from "next/image"
 
@@ -135,6 +135,43 @@ function SkillImageCard({
         <p className="text-lg text-white/90 leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-48 group-hover:opacity-100">
           {item.description}
         </p>
+      </div>
+    </div>
+  )
+}
+
+function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
+  const [isHovered, setIsHovered] = useState(false)
+
+  return (
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${
+        isHovered
+          ? "shadow-xl shadow-primary/20 scale-[1.03] border-primary/60 -translate-y-1"
+          : "shadow-lg shadow-primary/5 border-border/70"
+      }`}
+    >
+      <div className="p-4">
+        <div className="flex items-center gap-2 mb-2">
+          <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-9 w-9 shadow-sm shadow-primary/10">
+            <item.icon className="h-4 w-4 text-primary" />
+          </div>
+          <h4 className="font-semibold text-foreground text-base leading-tight">{item.title}</h4>
+        </div>
+        {item.tools && item.tools.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 mt-2">
+            {item.tools.map((tool, i) => (
+              <span
+                key={i}
+                className="inline-block rounded-full bg-primary/8 border border-primary/15 px-2.5 py-0.5 text-xs font-medium text-muted-foreground"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -277,19 +314,34 @@ export function HighlightsSection() {
             </div>
           </div>
 
-          {/* Column 1 */}
-          <div className="relative z-10">
+          {/* Column 1: A Foundation in Tech Journalism */}
+          <div className="relative z-10 flex flex-col gap-4">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
+            {coreSkills
+              .filter((s) => s.column === 1)
+              .map((skill, i) => (
+                <SkillCard key={i} item={skill} />
+              ))}
           </div>
 
-          {/* Column 2 */}
-          <div className="relative z-10">
+          {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
+          <div className="relative z-10 flex flex-col gap-4">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
+            {coreSkills
+              .filter((s) => s.column === 2)
+              .map((skill, i) => (
+                <SkillCard key={i} item={skill} />
+              ))}
           </div>
 
-          {/* Column 3 */}
-          <div className="relative z-10">
+          {/* Column 3: An International Career Across 4 Countries */}
+          <div className="relative z-10 flex flex-col gap-4">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
+            {coreSkills
+              .filter((s) => s.column === 3)
+              .map((skill, i) => (
+                <SkillCard key={i} item={skill} />
+              ))}
           </div>
         </div>
       </div>

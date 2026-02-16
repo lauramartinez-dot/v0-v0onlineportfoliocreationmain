@@ -1,7 +1,7 @@
 import { HeroSection } from "@/components/hero-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
-import { SkillsCoreSection } from "@/components/skills-core-section"
+
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
 import WritingSamplesSection from "@/components/writing-samples-section"
@@ -15,8 +15,6 @@ export default function Home() {
       <HeroSection />
       <TransitionSection />
       <HighlightsSection />
-      <TransitionSection />
-      <SkillsCoreSection />
       <ScrollTransitionSection />
       <TransitionSection />
       <CareerMapSection />
