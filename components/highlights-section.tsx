@@ -141,41 +141,55 @@ function SkillImageCard({
 }
 
 function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
-  const [isHovered, setIsHovered] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className={`cursor-pointer rounded-xl bg-card border transition-all duration-300 ${isHovered
-          ? "shadow-xl shadow-primary/20 scale-[1.03] border-primary/60 -translate-y-1"
-          : "shadow-lg shadow-primary/5 border-border/70"
-        }`}
+      onClick={() => setIsOpen(!isOpen)}
+      className={`cursor-pointer rounded-xl bg-purple-50 border transition-all duration-300 dark:bg-purple-500/10 ${
+        isOpen
+          ? "shadow-lg shadow-primary/15 border-primary/40"
+          : "shadow-sm border-purple-200 dark:border-purple-400/20 hover:shadow-md hover:border-primary/30"
+      }`}
     >
-      <div className="p-4">
-        <div className="flex items-center gap-2 mb-1.5">
-          <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-9 w-9 shadow-sm shadow-primary/10">
-            <item.icon className="h-4 w-4 text-primary" />
-          </div>
-          <h4 className="font-bold text-foreground text-base md:text-lg leading-tight">{item.title}</h4>
+      <div className="flex items-center gap-2.5 px-4 py-3">
+        <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-8 w-8">
+          <item.icon className="h-4 w-4 text-primary" />
         </div>
-        {item.description && (
-          <p className="text-sm text-muted-foreground leading-relaxed mb-2 ml-11">{item.description}</p>
-        )}
-        {item.tools && item.tools.length > 0 && (
-          <div className="flex flex-wrap items-center gap-1.5 mt-2 ml-11">
-            <span className="text-xs font-semibold text-primary uppercase tracking-wide">Tools:</span>
-            {item.tools.map((tool, i) => (
-              <span
-                key={i}
-                className="inline-block rounded-full bg-purple-100 border border-purple-300 px-2.5 py-0.5 text-xs font-semibold text-purple-700 dark:bg-purple-500/20 dark:border-purple-400/40 dark:text-purple-300"
-              >
-                {tool}
-              </span>
-            ))}
-          </div>
-        )}
+        <h4 className="font-semibold text-foreground text-sm leading-tight flex-1">{item.title}</h4>
+        <svg
+          className={`h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="m6 9 6 6 6-6" />
+        </svg>
       </div>
+      {isOpen && (
+        <div className="px-4 pb-4 pt-1 border-t border-purple-200/60 dark:border-purple-400/15">
+          {item.description && (
+            <p className="text-sm text-muted-foreground leading-relaxed mb-2.5">{item.description}</p>
+          )}
+          {item.tools && item.tools.length > 0 && (
+            <div className="flex flex-wrap items-center gap-1.5">
+              <span className="text-xs font-semibold text-primary uppercase tracking-wide">Tools:</span>
+              {item.tools.map((tool, i) => (
+                <span
+                  key={i}
+                  className="inline-block rounded-full bg-purple-100 border border-purple-300 px-2.5 py-0.5 text-xs font-semibold text-purple-700 dark:bg-purple-500/20 dark:border-purple-400/40 dark:text-purple-300"
+                >
+                  {tool}
+                </span>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }
