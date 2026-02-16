@@ -267,7 +267,7 @@ export function HighlightsSection() {
                     beforeLabel="Non-technical readers"
                     href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
                   />
-                  <p className="text-center text-xs text-muted-foreground/60 mt-2 tracking-wide uppercase">Audience: Non-technical readers</p>
+                  <p className="text-center text-sm text-muted-foreground/50 mt-3 font-medium"><span className="text-primary/40 uppercase tracking-wider text-xs mr-1.5">Audience:</span>Non-technical readers</p>
                 </div>
 
                 {/* Arrow divider */}
@@ -296,7 +296,7 @@ export function HighlightsSection() {
                     afterAlt="Help center article: Set up permissions and employee roles"
                     beforeLabel="Non-technical software users"
                   />
-                  <p className="text-center text-xs text-muted-foreground/60 mt-2 tracking-wide uppercase">Audience: Non-technical software users</p>
+                  <p className="text-center text-sm text-muted-foreground/50 mt-3 font-medium"><span className="text-primary/40 uppercase tracking-wider text-xs mr-1.5">Audience:</span>Non-technical software users</p>
                 </div>
               </div>
             </div>
