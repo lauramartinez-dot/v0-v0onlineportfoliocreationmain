@@ -314,8 +314,8 @@ export function HighlightsSection() {
               <div className="flex items-center justify-center w-11 h-11 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 flex-shrink-0 mt-0.5">
                 <Rocket className="w-5 h-5 text-white" />
               </div>
-              <p className="text-lg md:text-xl leading-relaxed text-foreground/85 text-left">
-                I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today’s post-ChatGPT world — is what keeps you employed.
+              <p className="text-base md:text-lg leading-relaxed text-foreground/85 text-left text-balance">
+                I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
               </p>
             </div>
           </div>
