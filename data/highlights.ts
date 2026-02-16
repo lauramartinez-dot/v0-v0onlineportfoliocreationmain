@@ -71,7 +71,7 @@ export const coreSkills = [
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
     icon: Target,
-    title: "Writing + Content Ops",
+    title: "Dual Role With Hands-On Writing + Content Ops",
     description: "Description coming soon.",
     column: 2,
     tools: ["Notion", "GitHub", "JavaScript basics"],
@@ -100,7 +100,7 @@ export const coreSkills = [
   },
   {
     icon: Globe,
-    title: "Localization-Ready Documentation",
+    title: "Creates Localization-Ready Documentation",
     description: "Description coming soon.",
     column: 3,
     tools: ["Phrase", "Smartling"],
