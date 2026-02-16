@@ -31,7 +31,7 @@ export function HeroSection() {
               <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
 
               {/* Profile image */}
-              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
+              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden ring-4 ring-purple-400/50 shadow-2xl shadow-purple-500/30 hover:shadow-[0_20px_60px_-10px_rgba(168,85,247,0.4)] hover:ring-purple-400/70 transition-all duration-300 z-10">
                 <Image
                   src="/main-headshot.jpg"
                   alt="Laura Martínez - Senior Technical Writer"

@@ -47,7 +47,7 @@ function DiagonalRevealImage({
     <Wrapper
       {...wrapperProps}
       ref={containerRef as React.RefObject<HTMLDivElement & HTMLAnchorElement>}
-      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-purple-400/40 shadow-xl shadow-purple-500/25 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/35 hover:ring-purple-400/60 ${href ? "block" : ""}`}
+      className={`relative w-full h-full overflow-hidden rounded-2xl ring-4 ring-purple-400/50 shadow-2xl shadow-purple-500/30 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-[0_20px_60px_-10px_rgba(168,85,247,0.4)] hover:ring-purple-400/70 ${href ? "block" : ""}`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
