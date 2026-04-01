@@ -53,26 +53,26 @@
   opacity: 0;
 }
 
-/* Dark teal-blue theme with fuchsia/pink accents - matching hero image top color */
+/* Dark navy blue theme with fuchsia/pink accents - matching Carmen Tajuelo portfolio (#0f172a) */
 :root {
-  --background: #0d1f2d;
-  --foreground: #f0f9ff;
-  --card: #153040;
-  --card-foreground: #f0f9ff;
-  --popover: #153040;
-  --popover-foreground: #f0f9ff;
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
   --primary: #e879f9;
-  --primary-foreground: #0d1f2d;
-  --secondary: #1e4055;
-  --secondary-foreground: #f0f9ff;
-  --muted: #153040;
-  --muted-foreground: #7dd3c9;
+  --primary-foreground: #0f172a;
+  --secondary: #334155;
+  --secondary-foreground: #f1f5f9;
+  --muted: #1e293b;
+  --muted-foreground: #94a3b8;
   --accent: #e879f9;
-  --accent-foreground: #0d1f2d;
+  --accent-foreground: #0f172a;
   --destructive: #ef4444;
-  --destructive-foreground: #f0f9ff;
-  --border: #1e4055;
-  --input: #153040;
+  --destructive-foreground: #f1f5f9;
+  --border: #334155;
+  --input: #1e293b;
   --ring: #e879f9;
   --chart-1: #e879f9;
   --chart-2: #f0abfc;
@@ -80,13 +80,13 @@
   --chart-4: #a855f7;
   --chart-5: #8b5cf6;
   --radius: 0.5rem;
-  --sidebar: #153040;
-  --sidebar-foreground: #f0f9ff;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
   --sidebar-primary: #e879f9;
-  --sidebar-primary-foreground: #f0f9ff;
-  --sidebar-accent: #1e4055;
-  --sidebar-accent-foreground: #f0f9ff;
-  --sidebar-border: #1e4055;
+  --sidebar-primary-foreground: #f1f5f9;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f1f5f9;
+  --sidebar-border: #334155;
   --sidebar-ring: #e879f9;
 }
 
