@@ -231,7 +231,7 @@ export function HighlightsSection() {
           {/* Intro text */}
           <div className="text-center mb-12 max-w-5xl mx-auto">
             <p className="text-lg md:text-xl text-foreground leading-relaxed">
-              I{"'"}m a writer who builds. I have a hybrid profile where I write but also build stuff.
+              I{"'"} have a hybrid Technical Writer profile:
             </p>
           </div>
 
