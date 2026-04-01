@@ -23,7 +23,7 @@ export const topSkills = [
     icon: Clock,
     title: "A Foundation in Tech Journalism",
     description:
-      "Tech journalist turned Senior Technical Writer—now bringing tech newsroom clarity to the tech industry.",
+      "I write about complex technology and STEM. Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone—from Tech Journalist to Technical Writer.",
     link: "",
     skills: ["Consistency", "Deep Expertise", "Long-Term Focus"],
   },
@@ -31,7 +31,7 @@ export const topSkills = [
     icon: Newspaper,
     title: "3x Early Hire in Tech Scale-Ups",
     description:
-      "For the past 10 years, I've joined companies at 100-300 employees as the first—or one of the first—in my role.",
+      "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
     skills: ["Cross-Industry Background", "Unique Background", "Software Companies", "Tech Companies"],
   },
@@ -39,7 +39,7 @@ export const topSkills = [
     icon: Globe,
     title: "An International Career Across 4 Countries",
     description:
-      "By 30, I had lived in four countries (Spain, France, Ireland, and Germany) and become bilingual in English.",
+      "I speak 3 languages and have wide experience managing localization.",
     link: "",
     skills: ["English Writing", "Global Audiences", "Localization-Ready Content", "Multilingual"],
   },
