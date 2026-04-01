@@ -253,9 +253,6 @@ export function HighlightsSection() {
               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
-                  <p className="text-center text-base md:text-lg text-foreground/80 leading-relaxed mb-2">
-                    I write about complex technology and systems in a way anyone can understand, whether they{"'"}re into tech or not (have been doing so for 15 years).
-                  </p>
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
                     It used to look like this...
                   </h3>
@@ -286,9 +283,6 @@ export function HighlightsSection() {
 
                 {/* After column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
-                  <p className="text-center text-base md:text-lg text-foreground/80 leading-relaxed mb-2">
-                    I also turn messy, &quot;works for now&quot; documentation into scalable, localization-ready English documentation (this is more new, only 5 years).
-                  </p>
                   <h3 className="text-center text-lg font-semibold text-primary md:hidden">
                     Now it looks like this.
                   </h3>
