@@ -48,7 +48,7 @@ export function HeroSection() {
               Laura Martínez
             </h1>
 
-            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
+            <h4 className="mb-8 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
               Global-First Senior Technical Writer
             </h4>
 
