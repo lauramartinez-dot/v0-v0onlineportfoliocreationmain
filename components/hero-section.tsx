@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown, MapPin, Globe, Languages, Flag } from "lucide-react"
+import { Download, ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
@@ -48,31 +48,13 @@ export function HeroSection() {
               Laura Martínez
             </h1>
 
-            <h4 className="mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
+            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
               Senior Technical Writer
             </h4>
 
-            <div className="mb-8 flex flex-col items-center md:items-start">
-              <div className="flex flex-col gap-2">
-                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
-                  <Flag className="h-5 w-5 text-primary" />
-                  From Spain
-                </span>
-                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
-                  <MapPin className="h-5 w-5 text-primary" />
-                  Based in Barcelona
-                </span>
-                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
-                  <Globe className="h-5 w-5 text-primary" />
-                  Global Scope
-                </span>
-                <span className="inline-flex items-center gap-3 text-base md:text-lg text-muted-foreground">
-                  <Languages className="h-5 w-5 text-primary" />
-                  Multilingual
-                  <span className="flex items-center gap-1.5 text-lg leading-none">{"🇪🇸"} {"🇬🇧"} {"🇩🇪"}</span>
-                </span>
-              </div>
-            </div>
+            <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl">
+              I&apos;m the Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global—before your documentation turns into a mess across teams and languages.
+            </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
