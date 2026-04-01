@@ -56,7 +56,7 @@ export function HeroSection() {
               I&apos;m the kind of Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global.
               <br></br>
               <br></br>
-              I'm the early hire who takes over and turns “works for now” documentation into something that scales accross markets.
+              Aka the early hire who turns “works for now” documentation (held together by multiple roles) into a sustainable system that scales.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
