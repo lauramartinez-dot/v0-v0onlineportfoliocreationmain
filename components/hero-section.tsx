@@ -55,9 +55,9 @@ export function HeroSection() {
             <p className="mb-4 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
               I&apos;m the kind of Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global.
             </p>
-            <div className="mb-8 max-w-xl rounded-xl bg-white/5 backdrop-blur-sm px-5 py-4 border border-white/10">
-              <span className="text-xs uppercase tracking-widest text-foreground/50 mb-2 block">in non-corporate jargon:</span>
-              <p className="text-lg md:text-xl text-foreground/90 leading-relaxed font-normal">
+            <div className="mb-8 max-w-xl rounded-lg bg-white/[0.02] px-4 py-3 border border-white/5">
+              <span className="text-[10px] uppercase tracking-widest text-foreground/40 mb-1.5 block">in non-corporate jargon:</span>
+              <p className="text-sm md:text-base text-foreground/80 leading-relaxed font-normal">
                 Aka the early hire who turns &quot;works for now&quot; documentation (held together by multiple roles) into a sustainable system that scales.
               </p>
             </div>
