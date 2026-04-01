@@ -56,7 +56,7 @@ export function HeroSection() {
               I&apos;m the kind of <span className="text-primary font-semibold">global-first</span> Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and growing internationally.
             </p>
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I turn &quot;works for now&quot; documentation (articles written by whoever had time) into scalable, translatable documentation.
+              I turn messy, “works for now” documentation into scalable, localization-ready English documentation..
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
