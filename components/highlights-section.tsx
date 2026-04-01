@@ -238,23 +238,12 @@ export function HighlightsSection() {
           {/* Before / After visual comparison */}
           <div className="max-w-5xl mx-auto mt-16 mb-16 rounded-3xl bg-purple-500/10 border border-purple-400/20 p-8 md:p-12 shadow-xl shadow-primary/15">
             <div className="flex flex-col items-center gap-8">
-              {/* Labels row on desktop */}
-              <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
-                <h3 className="text-center text-xl font-semibold text-muted-foreground/70">
-                  I write about tech in a way anyone can understand, whether they're into tech or not:
-                </h3>
-                <div className="w-8" />
-                <h3 className="text-center text-xl font-semibold text-primary">
-                  Now it looks like this.
-                </h3>
-              </div>
-
-              {/* Comparison grid */}
-              <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
-                {/* Before column */}
-                <div className="flex flex-col gap-4 md:min-h-0">
-                  <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
-                    It used to look like this...
+              {/* Three column grid: I write, I build, I translate */}
+              <div className="grid grid-cols-1 md:grid-cols-3 items-start w-full gap-8">
+                {/* I write column */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-xl font-semibold text-primary mb-2">
+                    I write
                   </h3>
                   <DiagonalRevealImage
                     beforeSrc="/images/before-1-new.png"
@@ -264,27 +253,15 @@ export function HighlightsSection() {
                     beforeLabel="Non-technical readers"
                     href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
                   />
-                  <p className="text-center text-sm text-muted-foreground/50 mt-3 font-medium"><span className="text-primary/40 uppercase tracking-wider text-xs mr-1.5">Audience:</span>Non-technical readers</p>
+                  <p className="text-center text-sm text-muted-foreground/60 mt-2 leading-relaxed">
+                    I write about tech in a way anyone can understand, whether they{"'"}re into tech or not.
+                  </p>
                 </div>
 
-                {/* Arrow divider */}
-                <div className="hidden md:flex flex-col items-center justify-center">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 border border-primary/20">
-                    <ArrowRight className="h-5 w-5 text-primary" />
-                  </div>
-                </div>
-
-                {/* Mobile arrow */}
-                <div className="flex md:hidden items-center justify-center py-2">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 border border-primary/20 rotate-90">
-                    <ArrowRight className="h-4 w-4 text-primary" />
-                  </div>
-                </div>
-
-                {/* After column */}
-                <div className="flex flex-col gap-4 md:min-h-0">
-                  <h3 className="text-center text-lg font-semibold text-primary md:hidden">
-                    Now it looks like this.
+                {/* I build column */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-xl font-semibold text-primary mb-2">
+                    I build
                   </h3>
                   <DiagonalRevealImage
                     beforeSrc="/images/before-2-new.png"
@@ -293,7 +270,26 @@ export function HighlightsSection() {
                     afterAlt="Help center article: Set up permissions and employee roles"
                     beforeLabel="Non-technical software users"
                   />
-                  <p className="text-center text-sm text-muted-foreground/50 mt-3 font-medium"><span className="text-primary/40 uppercase tracking-wider text-xs mr-1.5">Audience:</span>Non-technical software users</p>
+                  <p className="text-center text-sm text-muted-foreground/60 mt-2 leading-relaxed">
+                    I turn messy, &quot;works for now&quot; documentation into scalable, structured systems.
+                  </p>
+                </div>
+
+                {/* I translate column */}
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-center text-xl font-semibold text-primary mb-2">
+                    I translate
+                  </h3>
+                  <DiagonalRevealImage
+                    beforeSrc="/images/before-2-new.png"
+                    afterSrc="/images/after-2-new.png"
+                    beforeAlt="English documentation before localization"
+                    afterAlt="Localized documentation ready for global markets"
+                    beforeLabel="Global markets"
+                  />
+                  <p className="text-center text-sm text-muted-foreground/60 mt-2 leading-relaxed">
+                    I create localization-ready English documentation for global expansion.
+                  </p>
                 </div>
               </div>
             </div>
