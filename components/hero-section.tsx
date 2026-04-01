@@ -55,6 +55,7 @@ export function HeroSection() {
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
               I&apos;m the kind of global-first Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global.
               <br></br>
+              <br></br>
               Basically, the early hire who takes over and turns “works for now” documentation into something that scales accross markets.
             </p>
 
