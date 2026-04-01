@@ -52,11 +52,8 @@ export function HeroSection() {
               {"🌍"} Global-First Technical Writer
             </h4>
 
-            <p className="mb-3 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I&apos;m the kind of Technical Writer you hire when your company is scaling fast—from ~100 to 1,000+ people—and your documentation needs to grow from &quot;works for now&quot; to <span className="text-primary font-semibold">globally scalable</span>.
-            </p>
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              Scroll down to learn why.
+              I&apos;m the kind of Technical Writer you hire when your company is scaling fast—from ~100 to 1,000+ people—and your documentation needs to grow from &quot;works for now&quot; to <span className="text-primary font-semibold">globally scalable</span>.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
