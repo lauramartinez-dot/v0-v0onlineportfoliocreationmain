@@ -151,7 +151,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
             <item.icon className="h-5 w-5 text-primary" />
           </div>
-          <h4 className="font-semibold text-foreground/85 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+          <h4 className="font-semibold text-foreground text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
         </div>
       </div>
 
@@ -179,7 +179,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
               </div>
 
               {item.description && (
-                <p className="text-base text-muted-foreground leading-relaxed mb-5">{item.description}</p>
+                <p className="text-base text-foreground leading-relaxed mb-5">{item.description}</p>
               )}
 
               {item.tools && item.tools.length > 0 && (
@@ -230,10 +230,10 @@ export function HighlightsSection() {
 
           {/* Intro text */}
           <div className="text-center mb-12 max-w-5xl mx-auto">
-            <p className="text-lg md:text-xl text-foreground/85 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground leading-relaxed">
               I turn complex technology into content anyone can understand, whether they{"'"}re into tech or not.
             </p>
-            <p className="text-lg md:text-xl text-foreground/85 leading-relaxed mt-3">
+            <p className="text-lg md:text-xl text-foreground leading-relaxed mt-3">
               For the past 15 years, this has been at the heart of every role I{"'"}ve held.
             </p>
           </div>
@@ -305,7 +305,7 @@ export function HighlightsSection() {
           {/* Bridging sentence + Mission side by side */}
           <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
             {/* Bridging sentence - left */}
-            <p className="text-left text-lg md:text-xl text-muted-foreground leading-relaxed md:w-1/3 flex-shrink-0">
+            <p className="text-left text-lg md:text-xl text-foreground leading-relaxed md:w-1/3 flex-shrink-0">
               I{"'"}ve changed industries, roles, languages, and audiences, but my mission has remained the same:
             </p>
 
