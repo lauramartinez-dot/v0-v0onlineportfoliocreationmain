@@ -179,7 +179,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
               </div>
 
               {item.description && (
-                <p className="text-base text-foreground leading-relaxed mb-5">{item.description}</p>
+                <p className="text-lg text-foreground leading-relaxed mb-5">{item.description}</p>
               )}
 
               {item.tools && item.tools.length > 0 && (
