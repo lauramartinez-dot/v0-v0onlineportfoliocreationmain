@@ -53,26 +53,26 @@
   opacity: 0;
 }
 
-/* Dark navy blue theme with fuchsia/pink accents - matching Carmen Tajuelo portfolio (#0f172a) */
+/* Dark blue theme with fuchsia/pink accents inspired by Carmen Tajuelo portfolio */
 :root {
-  --background: #0f172a;
-  --foreground: #f1f5f9;
-  --card: #1e293b;
-  --card-foreground: #f1f5f9;
-  --popover: #1e293b;
-  --popover-foreground: #f1f5f9;
+  --background: oklch(0.13 0.035 250);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.17 0.04 250);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.17 0.04 250);
+  --popover-foreground: oklch(0.95 0.01 250);
   --primary: #e879f9;
-  --primary-foreground: #0f172a;
-  --secondary: #334155;
-  --secondary-foreground: #f1f5f9;
-  --muted: #1e293b;
-  --muted-foreground: #94a3b8;
-  --accent: #e879f9;
-  --accent-foreground: #0f172a;
-  --destructive: #ef4444;
-  --destructive-foreground: #f1f5f9;
-  --border: #334155;
-  --input: #1e293b;
+  --primary-foreground: oklch(0.13 0.035 250);
+  --secondary: oklch(0.22 0.05 250);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.2 0.03 250);
+  --muted-foreground: oklch(0.7 0.02 250);
+  --accent: oklch(0.5 0.2 320);
+  --accent-foreground: oklch(0.95 0.01 250);
+  --destructive: oklch(0.5 0.2 25);
+  --destructive-foreground: oklch(0.95 0.01 250);
+  --border: oklch(0.25 0.04 250);
+  --input: oklch(0.2 0.03 250);
   --ring: #e879f9;
   --chart-1: #e879f9;
   --chart-2: #f0abfc;
@@ -80,13 +80,13 @@
   --chart-4: #a855f7;
   --chart-5: #8b5cf6;
   --radius: 0.5rem;
-  --sidebar: #1e293b;
-  --sidebar-foreground: #f1f5f9;
+  --sidebar: oklch(0.15 0.035 250);
+  --sidebar-foreground: oklch(0.95 0.01 250);
   --sidebar-primary: #e879f9;
-  --sidebar-primary-foreground: #f1f5f9;
-  --sidebar-accent: #334155;
-  --sidebar-accent-foreground: #f1f5f9;
-  --sidebar-border: #334155;
+  --sidebar-primary-foreground: oklch(0.95 0.01 250);
+  --sidebar-accent: oklch(0.22 0.05 250);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.25 0.04 250);
   --sidebar-ring: #e879f9;
 }
 
