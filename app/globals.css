@@ -55,24 +55,24 @@
 
 /* Dark navy theme with pink/magenta + cyan accents from reference */
 :root {
-  --background: #1a2332;
+  --background: #0d1b2a;
   --foreground: #ffffff;
-  --card: #232d3f;
+  --card: #152238;
   --card-foreground: #ffffff;
-  --popover: #232d3f;
+  --popover: #152238;
   --popover-foreground: #ffffff;
   --primary: #c850c0;
   --primary-foreground: #ffffff;
-  --secondary: #2a3649;
+  --secondary: #1c2d42;
   --secondary-foreground: #ffffff;
-  --muted: #232d3f;
+  --muted: #152238;
   --muted-foreground: #94a3b8;
   --accent: #06b6d4;
   --accent-foreground: #ffffff;
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #334155;
-  --input: #232d3f;
+  --border: #243447;
+  --input: #152238;
   --ring: #c850c0;
   --chart-1: #c850c0;
   --chart-2: #06b6d4;
@@ -80,13 +80,13 @@
   --chart-4: #22d3ee;
   --chart-5: #a855f7;
   --radius: 0.5rem;
-  --sidebar: #232d3f;
+  --sidebar: #152238;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #c850c0;
   --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #2a3649;
+  --sidebar-accent: #1c2d42;
   --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #334155;
+  --sidebar-border: #243447;
   --sidebar-ring: #c850c0;
 }
 
