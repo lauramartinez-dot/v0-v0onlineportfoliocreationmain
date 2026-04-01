@@ -107,7 +107,7 @@ export const coreSkills = [
   },
   {
     icon: Users,
-    title: "6 Years in Remote-First & Global Teams",
+    title: "Remote-First & Global Teams",
     description: "Experienced in collaborating across time zones, cultures, and distributed workflows.",
     column: 3,
     tools: ["Jira", "Slack", "Zoom/Google Meet", "Google Slides", "Miro"],
