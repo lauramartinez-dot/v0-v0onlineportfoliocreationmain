@@ -49,14 +49,14 @@ export const coreSkills = [
   // Column 1: A Foundation in Tech Journalism
   {
     icon: FileText,
-    title: "Mission-Driven Technical Writer",
+    title: "Mission-Driven (Stubborn)",
     description: "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone. I intend to keep doing the same, even if AI drastically changes the role's name.",
     column: 1,
     tools: ["SEO", "CMS", "HTML/CSS/Markdown", "Grammarly/LanguageTool", "Adobe InDesign/Photoshop"],
   },
   {
     icon: Newspaper,
-    title: "Tech Newsroom-Level Editorial Quality",
+    title: "Tech-Newsroom Clarity",
     description: "Thanks to a strong foundation in tech journalism both academically and professionally (e.g., ex-Business Insider).",
     column: 1,
     tools: ["Zendesk/Confluence", "Tableau (User Feedback)", "Clueso (AI video tools)", "Lucidchart/Draw.io (Diagramming)"],
@@ -100,7 +100,7 @@ export const coreSkills = [
   },
   {
     icon: Globe,
-    title: "Other Languages for Key European Markets",
+    title: "Multilingual",
     description: "Other than English, I speak native Spanish and intermediate German, and I have extensive experience in localization.",
     column: 3,
     tools: ["Phrase", "Smartling"],
