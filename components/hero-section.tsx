@@ -48,12 +48,12 @@ export function HeroSection() {
               Laura Martínez
             </h1>
 
-            <h4 className="mb-8 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
+            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
               Global-First Senior Technical Writer
             </h4>
 
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I&apos;m the kind of global-first Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global.
+              I&apos;m the kind of Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global.
               <br></br>
               <br></br>
               I'm the early hire who takes over and turns “works for now” documentation into something that scales accross markets.
