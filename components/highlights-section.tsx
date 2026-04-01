@@ -231,10 +231,7 @@ export function HighlightsSection() {
           {/* Intro text */}
           <div className="text-center mb-12 max-w-5xl mx-auto">
             <p className="text-lg md:text-xl text-foreground leading-relaxed">
-              I turn complex technology into content anyone can understand, whether they{"'"}re into tech or not.
-            </p>
-            <p className="text-lg md:text-xl text-foreground leading-relaxed mt-3">
-              For the past 15 years, this has been at the heart of every role I{"'"}ve held.
+              I{"'"}m a writer who builds. I have a hybrid profile where I write but also build stuff.
             </p>
           </div>
 
@@ -256,6 +253,9 @@ export function HighlightsSection() {
               <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-stretch w-full gap-6">
                 {/* Before column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
+                  <p className="text-center text-base md:text-lg text-foreground/80 leading-relaxed mb-2">
+                    I write about complex technology and systems in a way anyone can understand, whether they{"'"}re into tech or not (have been doing so for 15 years).
+                  </p>
                   <h3 className="text-center text-lg font-semibold text-muted-foreground/70 md:hidden">
                     It used to look like this...
                   </h3>
@@ -286,6 +286,9 @@ export function HighlightsSection() {
 
                 {/* After column */}
                 <div className="flex flex-col gap-4 md:min-h-0">
+                  <p className="text-center text-base md:text-lg text-foreground/80 leading-relaxed mb-2">
+                    I also turn messy, &quot;works for now&quot; documentation into scalable, localization-ready English documentation (this is more new, only 5 years).
+                  </p>
                   <h3 className="text-center text-lg font-semibold text-primary md:hidden">
                     Now it looks like this.
                   </h3>
