@@ -52,15 +52,11 @@ export function HeroSection() {
               Global-First Senior Technical Writer
             </h4>
 
-            <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
+            <p className="mb-4 text-xl md:text-2xl text-foreground/90 leading-relaxed max-w-xl font-normal">
               I&apos;m the kind of <span className="text-primary font-semibold">global-first</span> Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and expanding internationally.
-              <br></br>
-              <br></br>
-              Aka that early hire who turns &quot;works for now&quot; messy documentation into something that can be easily mantained and translated.
-
-
-
-
+            </p>
+            <p className="mb-8 text-base md:text-lg text-foreground/70 leading-relaxed max-w-xl font-normal">
+              Aka that early hire who turns &quot;works for now&quot; messy documentation into something that can be easily maintained and translated.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
