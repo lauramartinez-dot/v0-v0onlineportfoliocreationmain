@@ -119,9 +119,9 @@ function SkillImageCard({
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
-      <div className="absolute bottom-0 left-0 right-0 p-8 transition-transform duration-300 group-hover:-translate-y-6">
-        <h3 className="text-2xl font-bold text-white mb-2 transition-all duration-300 md:text-3xl">{item.title}</h3>
-        <p className="text-lg text-white/90 leading-relaxed max-h-0 opacity-0 overflow-hidden transition-all duration-300 group-hover:max-h-48 group-hover:opacity-100">
+      <div className="absolute bottom-0 left-0 right-0 p-8">
+        <h3 className="text-2xl font-bold text-white mb-3 md:text-3xl">{item.title}</h3>
+        <p className="text-base md:text-lg text-white/85 leading-relaxed">
           {item.description}
         </p>
       </div>
