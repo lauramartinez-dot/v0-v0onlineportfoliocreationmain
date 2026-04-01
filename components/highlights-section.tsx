@@ -253,6 +253,9 @@ export function HighlightsSection() {
             What Sets Me Apart
           </div>
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Differentiators</h2>
+          <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
+            My role goes beyond writing. It spans three core pillars that set it apart.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
