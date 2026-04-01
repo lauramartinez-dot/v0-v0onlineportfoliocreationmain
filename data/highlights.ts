@@ -21,9 +21,9 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "A Foundation in Tech Journalism",
+    title: "I write about complex technology and systems",
     description:
-      "I write about complex technology and STEM. Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone—from Tech Journalist to Technical Writer.",
+      "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone—from Tech Journalist to Technical Writer.",
     link: "",
     skills: ["Consistency", "Deep Expertise", "Long-Term Focus"],
   },
