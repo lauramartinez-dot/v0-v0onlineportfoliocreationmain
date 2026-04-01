@@ -52,8 +52,8 @@ export function HeroSection() {
               Senior Technical Writer
             </h4>
 
-            <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl">
-              I&apos;m the *global-first* Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global—before your documentation turns into a mess across teams and languages.
+            <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
+              I&apos;m the global-first Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global—before your documentation turns into a mess across teams and languages.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
