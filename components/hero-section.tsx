@@ -53,7 +53,7 @@ export function HeroSection() {
             </h4>
 
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I&apos;m the kind of Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global. Aka the early hire who turns &quot;works for now&quot; documentation (held together by multiple roles) into a sustainable system that scales.
+              I&apos;m the kind of Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and going global. The early hire who turns &quot;works for now&quot; documentation (held together by multiple roles) into a sustainable system that scales.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
