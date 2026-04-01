@@ -53,7 +53,7 @@ export function HeroSection() {
             </h4>
 
             <p className="mb-3 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I&apos;m the kind of <span className="text-primary font-semibold">global-first</span> Technical Writer you bring in when your company starts scaling from ~100 to 1,000+ people and growing internationally.
+              I&apos;m the kind of <span className="text-primary font-semibold">global-first</span> Technical Writer you bring in when your company is scaling fast—from ~100 to 1,000+ people—and your documentation needs to grow from "works for now" to globally scalable.
             </p>
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
               Keep reading to learn why.
