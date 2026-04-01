@@ -241,7 +241,7 @@ export function HighlightsSection() {
               {/* Labels row on desktop */}
               <div className="hidden md:grid md:grid-cols-[1fr_auto_1fr] items-center w-full gap-6">
                 <h3 className="text-center text-xl font-semibold text-muted-foreground/70">
-                  I write about tech in a way anyone can understand, whether they're into tech or not
+                  I write about tech in a way anyone can understand, whether they're into tech or not:
                 </h3>
                 <div className="w-8" />
                 <h3 className="text-center text-xl font-semibold text-primary">
