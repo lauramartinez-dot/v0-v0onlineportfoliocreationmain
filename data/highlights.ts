@@ -29,7 +29,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I turn your documentation from 'works for now' to a global system that works across languages, teams, and markets",
+    title: "I build documentation systems that allow companies to scale",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
