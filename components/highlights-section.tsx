@@ -246,10 +246,7 @@ export function HighlightsSection() {
 
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
-          <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-            What Sets Me Apart
-          </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Differentiators</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">My Role and What Sets Me Apart</h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
             My role goes beyond writing. It spans three core pillars that set it apart.
           </p>
