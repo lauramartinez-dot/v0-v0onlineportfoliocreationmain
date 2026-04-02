@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth" style={{ zoom: 0.9 }}>
+    <html lang="en" className="scroll-smooth">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />
