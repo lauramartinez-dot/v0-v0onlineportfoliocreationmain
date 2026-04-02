@@ -21,9 +21,9 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "I am an expert in technology and software writing",
+    title: "I write about software with the rigor of a tech newsroom",
     description:
-      "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone—from Tech Journalist to Technical Writer.",
+      "I've written articles for tech media with 8 M monthy readers. I write about software with the same atrention for detail and high standarss,",
     link: "",
     skills: ["Consistency", "Deep Expertise", "Long-Term Focus"],
   },
