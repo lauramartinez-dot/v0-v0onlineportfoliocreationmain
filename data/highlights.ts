@@ -37,7 +37,7 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "An International Career Across 4 Countries",
+    title: "I get your documentation translated for key European markets",
     description:
       "I speak 3 languages and have wide experience managing localization.",
     link: "",
