@@ -53,7 +53,7 @@ export function HeroSection() {
             </h4>
 
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I&apos;m that writer you hire when your company is growing fast<span className="text-primary font-semibold"> (from ~100 to 1,000+ people, expanding into new countries) </span>and your documentation needs to go from &quot;works for now&quot; to something you can keep building on—more pages, more languages—without it becoming a mess.
+              I&apos;m that writer you hire when your company is growing fast<span className="text-primary font-semibold"> (from ~100 to 1,000+ people) </span>and your documentation needs to keep up as you ship more features, support more customers, and expand into more countries and markets.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
