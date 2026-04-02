@@ -29,7 +29,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I build documentation systems that allow companies to scale",
+    title: "I build documentation systems that help writers do more in less time",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
@@ -37,7 +37,7 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "I get your documentation translated for key European markets",
+    title: "I get documentation translated for key European markets",
     description:
       "I speak 3 languages and have wide experience managing localization.",
     link: "",
