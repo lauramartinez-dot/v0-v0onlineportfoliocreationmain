@@ -216,34 +216,6 @@ export function HighlightsSection() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        {/* My Role Section */}
-        <div className="mb-20">
-          <div className="text-center mb-8">
-            <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-              What I do
-            </div>
-            <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">My role</h2>
-          </div>
-
-          {/* Bridging sentence + Mission side by side */}
-          <div className="max-w-6xl mx-auto mt-10 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-            {/* Bridging sentence - left */}
-            <p className="text-left text-lg md:text-xl text-foreground leading-relaxed md:w-1/3 flex-shrink-0">
-              I{"'"}ve changed industries, roles, languages, and audiences, but my mission has remained the same:
-            </p>
-
-            {/* Mission box - right */}
-            <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/40 to-pink-950/40 px-8 py-7 shadow-lg shadow-primary/15 backdrop-blur-sm md:flex-1">
-              <div className="absolute -top-4 left-7 flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
-                <Rocket className="w-4 h-4 text-white" />
-              </div>
-              <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-1">
-                I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">My Role and What Sets Me Apart</h2>
@@ -311,6 +283,24 @@ export function HighlightsSection() {
                   <SkillCard key={i} item={skill} />
                 ))}
             </div>
+          </div>
+        </div>
+
+        {/* Mission box - moved to bottom */}
+        <div className="max-w-6xl mx-auto mt-20 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+          {/* Bridging sentence - left */}
+          <p className="text-left text-lg md:text-xl text-foreground leading-relaxed md:w-1/3 flex-shrink-0">
+            I{"'"}ve changed industries, roles, languages, and audiences, but my mission has remained the same:
+          </p>
+
+          {/* Mission box - right */}
+          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/40 to-pink-950/40 px-8 py-7 shadow-lg shadow-primary/15 backdrop-blur-sm md:flex-1">
+            <div className="absolute -top-4 left-7 flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
+              <Rocket className="w-4 h-4 text-white" />
+            </div>
+            <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-1">
+              I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
+            </p>
           </div>
         </div>
       </div>
