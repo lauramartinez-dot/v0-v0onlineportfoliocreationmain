@@ -248,13 +248,13 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">My Role and What Sets Me Apart</h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-            At my core, I write about complex technology and software in the plainest, least jargony way.
+            I write about complex technology and software in the plainest, least jargony way.
             <br></br>
             <br></br>
             This has been at the core of every role I’ve had over the past 15 years.
             <br></br>
             <br></br>
-            Nowadays though my role goes beyond 'just' writing. It spans three core pillars.
+            Nowadays, my role is more than just writing. I mainly do three things:
           </p>
         </div>
 
