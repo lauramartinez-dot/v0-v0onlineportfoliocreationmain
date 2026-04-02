@@ -21,7 +21,7 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "I write about complex technology and systems",
+    title: "I write about complex technology and systems so that anyone can understand it",
     description:
       "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone—from Tech Journalist to Technical Writer.",
     link: "",
@@ -29,7 +29,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "3x Early Hire in Tech Scale-Ups",
+    title: "I turn your documentation from "works for now" to a global system that works across languages, teams, and markets",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
