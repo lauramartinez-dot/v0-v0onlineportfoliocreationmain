@@ -88,6 +88,6 @@ export function HeroSection() {
           <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
         </div>
       </div>
-    </section >
+    </section>
   )
 }
