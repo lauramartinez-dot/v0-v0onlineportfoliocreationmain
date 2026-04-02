@@ -250,7 +250,9 @@ export function HighlightsSection() {
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
             At my core, I write about complex technology and software in the plainest, least jargony way.
             <br></br>
-            For the past 15 years, this has been at the heart of every role I’ve held.
+            <br></br>
+            This has been at the core of every role I’ve had over the past 15 years.
+            <br></br>
             <br></br>
             Nowadays though my role goes beyond 'just' writing. It spans three core pillars.
           </p>
