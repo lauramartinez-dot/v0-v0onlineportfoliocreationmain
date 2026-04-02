@@ -83,10 +83,9 @@ export function HeroSection() {
         </div>
       </div>
 
-        <div className="flex flex-col items-center gap-0.5 mt-40">
-          <span className="text-sm text-muted-foreground">Scroll to explore</span>
-          <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
-        </div>
+      <div className="flex flex-col items-center gap-0.5 mt-40">
+        <span className="text-sm text-muted-foreground">Scroll to explore</span>
+        <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
       </div>
     </section>
   )
