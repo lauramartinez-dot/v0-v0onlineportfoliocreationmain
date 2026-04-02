@@ -29,7 +29,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I build documentation systems that help writers do more in less time",
+    title: "I build systems that help technical writers do more in less time",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
