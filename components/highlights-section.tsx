@@ -223,7 +223,7 @@ export function HighlightsSection() {
             In general terms, I write about complex technology and software in the simplest, least jargony way possible.
             <br></br>
             <br></br>
-            This is at the core of the Technical Wrtier role but also every other role I’ve had over the past 15 years.
+            This is at the core of the Technical Writer role, as well as every other role I’ve had over the past 15 years.
             <br></br>
             <br></br>
             However, nowadays, my role is more than just writing:
