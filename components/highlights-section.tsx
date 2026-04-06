@@ -142,13 +142,13 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer rounded-xl bg-white/10 border shadow-sm border-white/20 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-300"
+        className="cursor-pointer rounded-xl bg-black/20 border shadow-sm border-white/10 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 hover:bg-black/30 hover:-translate-y-0.5 transition-all duration-300"
       >
         <div className="flex items-center gap-3 px-5 py-4">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
             <item.icon className="h-5 w-5 text-primary" />
           </div>
-          <h4 className="font-semibold text-foreground text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+          <h4 className="font-normal text-foreground/70 text-base md:text-lg leading-tight flex-1">{item.title}</h4>
         </div>
       </div>
 
