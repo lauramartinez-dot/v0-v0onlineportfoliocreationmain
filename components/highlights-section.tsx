@@ -220,7 +220,7 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">My Role</h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-            In general terms, I write about complex technology and software in the simplest, least jargon-heavy way possible.
+            In general terms, I write about complex technology and software in the simplest, least jargony way possible.
             <br></br>
             <br></br>
             This is at the core of the Technical Wrtier role but also every other role I’ve had over the past 15 years.
