@@ -121,7 +121,7 @@ export const coreSkills = [
   },
   {
     icon: Globe,
-    title: "Multilingual \uD83C\uDDEC\uD83C\uDDE7 \uD83C\uDDEA\uD83C\uDDF8 \uD83C\uDDE9\uD83C\uDDEA",
+    title: "Multilingual 🇬🇧 🇪🇸 🇩🇪",
     description: "Other than English, I speak native Spanish and intermediate German, and I have extensive experience in localization.",
     column: 3,
     tools: ["Phrase", "Smartling"],
