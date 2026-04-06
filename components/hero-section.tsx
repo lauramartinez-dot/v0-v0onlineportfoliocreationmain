@@ -53,8 +53,8 @@ export function HeroSection() {
             </h4>
 
             <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
-              I&apos;m that writer you hire when your company is growing fast —from ~100 to 1,000+ people and from one country to Europe— and your product is changing every day. <br></br><br></br> Now you need <span className="text-white font-medium">more docs. More visuals. More languages.</span>
-              But you also need it not to break.
+              I&apos;m that writer you hire when your company is growing fast —from ~100 to 1,000+ people and from one country to Europe— and your product is changing every day. <br></br><br></br> Now you need <span className="text-white font-medium">more docs. More visuals. More languages. Without everything turning into chaos six months later.</span>
+
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
