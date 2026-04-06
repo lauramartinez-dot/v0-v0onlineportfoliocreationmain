@@ -49,7 +49,7 @@ export const coreSkills = [
   // Column 1: A Foundation in Tech Journalism
   {
     icon: FileText,
-    title: "Mission-Driven (Stubborn)",
+    title: "15-years writing about tech",
     description: "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone. I intend to keep doing the same, even if AI drastically changes the role's name.",
     column: 1,
     tools: ["SEO", "CMS", "HTML/CSS/Markdown", "Grammarly/LanguageTool", "Adobe InDesign/Photoshop"],
@@ -71,10 +71,17 @@ export const coreSkills = [
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
     icon: Layers,
-    title: "Systems Thinker",
+    title: "Information Architecture",
     description: "You tell me to write a single page; I create a piece that fits a hypothetical template, is tailored to a hypothetical audience, and is labeled according to a hypothetical taxonomy. I don't do this to be extra, it's just how I think.",
     column: 2,
     tools: ["Zendesk", "Brandfolder", "Frontify", "Tableau"],
+  },
+  {
+    icon: Target,
+    title: "Systems Thinker",
+    description: "I value evidence and accuracy above all, and base every decision, analysis, and piece of content on data rather than intuition or guesswork.",
+    column: 2,
+    tools: ["Jira", "Trello/Monday.com", "Figma", "Miro"],
   },
   {
     icon: Target,
@@ -92,6 +99,13 @@ export const coreSkills = [
   },
   // Column 3: An International Career Across 4 Countries
   {
+    icon: Globe,
+    title: "Lived in 4 Countries",
+    description: "By 30, I had lived in four countries (Spain, France, Ireland, and Germany) and become bilingual in English.",
+    column: 3,
+    tools: ["Spanish (Native)", "English (C2)", "German (B2)", "French (A2)"],
+  },
+  {
     icon: Languages,
     title: "Real Near-Native English (C2)",
     description: "Acquired not through academics but through living in four countries and working exclusively in English for the past 10 years.",
@@ -100,7 +114,7 @@ export const coreSkills = [
   },
   {
     icon: Globe,
-    title: "Multilingual",
+    title: "Multilingual \uD83C\uDDEC\uD83C\uDDE7 \uD83C\uDDEA\uD83C\uDDF8 \uD83C\uDDE9\uD83C\uDDEA",
     description: "Other than English, I speak native Spanish and intermediate German, and I have extensive experience in localization.",
     column: 3,
     tools: ["Phrase", "Smartling"],
