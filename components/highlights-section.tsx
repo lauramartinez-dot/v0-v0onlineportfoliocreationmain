@@ -277,7 +277,7 @@ export function HighlightsSection() {
           </p>
 
           {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-white/20 bg-white/10 px-8 py-7 shadow-lg shadow-white/5 backdrop-blur-sm md:flex-1">
+          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/60 to-pink-950/60 px-8 py-7 shadow-lg shadow-primary/20 backdrop-blur-sm md:flex-1">
             <div className="absolute -top-4 left-7 flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
               <Rocket className="w-4 h-4 text-white" />
             </div>
