@@ -222,7 +222,7 @@ export function HighlightsSection() {
           <div className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-4xl mx-auto space-y-6">
             <p className="whitespace-nowrap">In general terms, I write about complex technology and software in the <span className="text-primary font-semibold">simplest, least <em>jargony</em> way possible</span>.</p>
             <p className="whitespace-nowrap">This is at the core of the Technical Writer role, as well as every other role I{"'"}ve had over the past 15 years.</p>
-            <p className="whitespace-nowrap">However, nowadays, my role is more than just writing:</p>
+            <p className="whitespace-nowrap">However, nowadays, my role is more than just writing. I mainly do three things:</p>
           </div>
         </div>
 
