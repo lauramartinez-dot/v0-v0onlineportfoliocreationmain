@@ -49,10 +49,17 @@ export const coreSkills = [
   // Column 1: A Foundation in Tech Journalism
   {
     icon: FileText,
-    title: "15-years writing about tech",
+    title: "15 Years Writing About Tech",
     description: "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone. I intend to keep doing the same, even if AI drastically changes the role's name.",
     column: 1,
     tools: ["SEO", "CMS", "HTML/CSS/Markdown", "Grammarly/LanguageTool", "Adobe InDesign/Photoshop"],
+  },
+  {
+    icon: Newspaper,
+    title: "Ex- Business Insider, Ex- Xataka",
+    description: "Professional experience at major tech publications including Business Insider and Xataka.",
+    column: 1,
+    tools: ["Editorial Tools", "CMS", "Publishing Platforms"],
   },
   {
     icon: Newspaper,
