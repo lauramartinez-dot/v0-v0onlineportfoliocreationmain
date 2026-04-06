@@ -53,7 +53,7 @@ export function HeroSection() {
             </h4>
 
             <p className="mb-8 text-lg md:text-xl text-foreground/90 leading-relaxed max-w-xl font-normal">
-              I&apos;m that writer you hire when your company is growing fast<span className="text-primary font-semibold"> —from ~100 to 1,000+ people— </span>and your &quot;this will do for now&quot; documentation stops working. Now you need a system that doesn’t break as you publish more and more content every week, and in more languages.
+              I&apos;m that writer you hire when your company is growing fast<span className="text-primary font-semibold"> —from ~100 to 1,000+ people— </span>and your &quot;this will do for now&quot; documentation stops working. Right at the point when your product is changing quickly, and you need to publish more content, for more teams, and in more languages.
 
               <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
                 <Button
