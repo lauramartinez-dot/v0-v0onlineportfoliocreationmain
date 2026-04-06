@@ -142,7 +142,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
     <>
       <div
         onClick={() => setIsOpen(true)}
-        className="cursor-pointer rounded-xl bg-purple-500/10 border shadow-sm border-purple-400/20 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 hover:bg-purple-500/15 hover:-translate-y-0.5 transition-all duration-300"
+        className="cursor-pointer rounded-xl bg-white/10 border shadow-sm border-white/20 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 hover:bg-white/15 hover:-translate-y-0.5 transition-all duration-300"
       >
         <div className="flex items-center gap-3 px-5 py-4">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
@@ -277,7 +277,7 @@ export function HighlightsSection() {
           </p>
 
           {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/40 to-pink-950/40 px-8 py-7 shadow-lg shadow-primary/15 backdrop-blur-sm md:flex-1">
+          <div className="relative rounded-2xl border-2 border-white/20 bg-white/10 px-8 py-7 shadow-lg shadow-white/5 backdrop-blur-sm md:flex-1">
             <div className="absolute -top-4 left-7 flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
               <Rocket className="w-4 h-4 text-white" />
             </div>
