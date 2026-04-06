@@ -218,9 +218,9 @@ export function HighlightsSection() {
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">My Role and What Sets Me Apart</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">My Role</h2>
           <p className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-2xl mx-auto">
-            I write about complex technology and software in the plainest, least jargony way.
+            In general terms, my role as a Technical Writer is to write about complex technology and software in the plainest, least jargony posible way.
             <br></br>
             <br></br>
             This has been at the core of every role I’ve had over the past 15 years.
