@@ -141,13 +141,13 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="rounded-xl bg-black/20 border shadow-sm border-white/10"
+        className="rounded-none border-l-2 border-primary/50 bg-transparent pl-4 py-2 hover:border-primary hover:bg-primary/5 transition-all duration-200"
       >
-        <div className="flex items-center gap-3 px-5 py-4">
-          <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
-            <item.icon className="h-5 w-5 text-primary" />
+        <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center justify-center">
+            <item.icon className="h-4 w-4 text-primary/70" />
           </div>
-          <h4 className="font-semibold text-purple-200 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+          <h4 className="font-medium text-purple-200/90 text-base md:text-lg leading-tight flex-1">{item.title}</h4>
         </div>
       </div>
 
