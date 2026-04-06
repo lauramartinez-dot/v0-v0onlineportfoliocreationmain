@@ -227,20 +227,7 @@ export function HighlightsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Connecting lines that extend down */}
-          <div className="hidden md:block absolute left-0 right-0 top-0 bottom-0 pointer-events-none">
-            <div className="grid grid-cols-3 gap-8 h-full">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gray-200/30 dark:bg-gray-800/20 rounded-t-3xl" />
-              </div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gray-200/30 dark:bg-gray-800/20 rounded-t-3xl" />
-              </div>
-              <div className="relative">
-                <div className="absolute inset-0 bg-gray-200/30 dark:bg-gray-800/20 rounded-t-3xl" />
-              </div>
-            </div>
-          </div>
+
 
           {/* Column 1: A Foundation in Tech Journalism */}
           <div className="relative z-10 flex flex-col">
