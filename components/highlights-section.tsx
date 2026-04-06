@@ -141,8 +141,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        onClick={() => setIsOpen(true)}
-        className="cursor-pointer rounded-xl bg-black/20 border shadow-sm border-white/10 hover:shadow-lg hover:shadow-primary/20 hover:border-primary/40 hover:bg-black/30 hover:-translate-y-0.5 transition-all duration-300"
+        className="rounded-xl bg-black/20 border shadow-sm border-white/10"
       >
         <div className="flex items-center gap-3 px-5 py-4">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/15 h-10 w-10">
