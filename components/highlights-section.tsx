@@ -223,10 +223,10 @@ export function HighlightsSection() {
             In general terms, my role as a Technical Writer is to write about complex technology and software in the plainest, least jargony posible way.
             <br></br>
             <br></br>
-            This has been at the core of every role I’ve had over the past 15 years.
+            This is at the core of the Technical Wrtier role but also every other role I’ve had over the past 15 years.
             <br></br>
             <br></br>
-            Nowadays, my role is more than just writing. I mainly do three things:
+            However, nowadays, my role is more than just writing:
           </p>
         </div>
 
