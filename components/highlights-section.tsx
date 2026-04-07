@@ -277,11 +277,9 @@ export function HighlightsSection() {
 
           {/* Mission box - right */}
           <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/60 to-pink-950/60 px-8 py-7 shadow-lg shadow-primary/20 backdrop-blur-sm md:flex-1">
-            <div className="absolute -top-4 left-7 flex items-center gap-2">
-              <div className="flex items-center justify-center w-8 h-8 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
-                <Rocket className="w-4 h-4 text-white" />
-              </div>
-              <span className="text-xs font-semibold uppercase tracking-wider text-primary bg-background px-2 py-0.5 rounded-full">Mission</span>
+            <div className="absolute -top-4 left-7 flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
+              <Rocket className="w-4 h-4 text-white" />
+              <span className="text-xs font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
             <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-1">
               I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
