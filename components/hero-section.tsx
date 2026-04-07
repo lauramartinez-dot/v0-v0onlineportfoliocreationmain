@@ -55,7 +55,7 @@ export function HeroSection() {
             <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
               I&apos;m the writer you hire when your software company starts growing like crazy. When you go from ~100 to 1,000+ employees and into new markets.
               <br /><br />
-              Right when documentation stops being about adding more pages, and becomes about <span className="text-white font-medium"> guaranteeing you can keep adding more—pages, channels, languages—every month.</span>
+              Right when documentation stops being about adding more pages, and becomes about making sure <span className="text-white font-medium">you can keep adding more every month—more pages, channels, languages</span>
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
