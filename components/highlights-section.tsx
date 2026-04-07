@@ -218,13 +218,9 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[200px] scroll-mt-20">
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
-          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-start gap-8 md:gap-12 mb-8">
-            <div className="text-lg md:text-xl text-foreground/80 leading-relaxed md:w-3/5">
-              <p>In general terms, <span className="text-white font-medium">I write about complex technology and software in the simplest, least <em>jargony</em> way possible</span>.</p>
-            </div>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed md:w-2/5 flex-shrink-0">
-              However, nowadays, my role is more than just writing. I mainly do three things:
-            </p>
+          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">In general terms, <span className="text-white font-medium">I write about complex technology and software in the simplest, least <em>jargony</em> way possible</span>.</p>
+            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">However, nowadays, my role is more than just writing. I mainly do three things:</p>
           </div>
         </div>
 
