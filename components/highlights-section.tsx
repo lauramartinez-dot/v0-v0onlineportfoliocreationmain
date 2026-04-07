@@ -219,7 +219,7 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 text-center mt-[200px] scroll-mt-20">
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl">Top Skills</h2>
           <div className="text-lg md:text-xl text-foreground/80 leading-relaxed max-w-4xl mx-auto space-y-6">
-            <p className="whitespace-nowrap">In general terms<span className="inline-block px-4 py-1 mx-2 rounded-full bg-gradient-to-r from-purple-500/30 to-pink-500/30 border border-primary/40 text-white font-medium">, I write about complex technology and software in the simplest, least <em>jargony</em> way possible</span>.</p>
+            <p className="whitespace-nowrap">In general terms, <span className="text-white font-medium">I write about complex technology and software in the simplest, least <em>jargony</em> way possible</span>.</p>
             <p className="whitespace-nowrap">This is at the core of the Technical Writer role, as well as every other role I{"'"}ve had over the past 15 years.</p>
             <p className="whitespace-nowrap">However, nowadays, my role is more than just writing. I mainly do three things:</p>
           </div>
