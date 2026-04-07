@@ -243,7 +243,7 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
         onClick={() => setOpen(true)}
         className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
       >
-        <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-purple-100 to-pink-50">
+        <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-purple-900/50 to-pink-900/30">
           <Image
             src={
               category.headerImage || `/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`
@@ -352,7 +352,7 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
                       {sample.company}
                     </span>
                     {sample.role && (
-                      <span className="text-sm px-3 py-1.5 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 font-medium">
+                      <span className="text-sm px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 font-medium">
                         {sample.role}
                       </span>
                     )}

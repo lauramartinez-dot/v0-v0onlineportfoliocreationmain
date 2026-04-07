@@ -1,6 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown, MapPin, Globe, Mail } from "lucide-react"
+import { Download, ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState } from "react"
@@ -48,29 +48,14 @@ export function HeroSection() {
               Laura Martínez
             </h1>
 
-            <h4 className="mb-4 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary">
-              Senior Technical Writer
+            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
+              {"🌍"} Global-First Technical Writer
             </h4>
 
-            <p className="mb-6 text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed">
-              <span className="flex flex-col gap-1.5">
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>From Spain</span>
-                </span>
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Globe className="h-4 w-4 text-primary" />
-                  <span>Bilingual (English / Spanish)</span>
-                </span>
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <MapPin className="h-4 w-4 text-primary" />
-                  <span>Based in Barcelona</span>
-                </span>
-                <span className="flex items-center justify-center md:justify-start gap-2">
-                  <Mail className="h-4 w-4 text-primary" />
-                  <span>lmartmont@gmail.com</span>
-                </span>
-              </span>
+            <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
+              I&apos;m the writer you hire when your software company starts growing fast—going from ~100 to 1,000+ employees and expanding into new markets.
+              <br></br><br></br>
+              Right when documentation stops being about adding more, and becomes about being able to keep adding—month after month.</span>.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
@@ -98,12 +83,12 @@ export function HeroSection() {
             </div>
           </div>
         </div>
-
-        <div className="flex flex-col items-center gap-0.5 mt-40">
-          <span className="text-sm text-muted-foreground">Scroll to explore</span>
-          <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
-        </div>
       </div>
-    </section>
+
+      <div className="flex flex-col items-center gap-0.5 mt-40">
+        <span className="text-sm text-muted-foreground">Scroll to explore</span>
+        <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
+      </div>
+    </section >
   )
 }
