@@ -52,10 +52,15 @@ export function HeroSection() {
               {"🌍"} Global-First Technical Writer
             </h4>
 
-            <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
-              I&apos;m the writer you hire when your software company starts growing fast—going from ~100 to 1,000+ employees and expanding into new markets.
-              Right when documentation stops being about adding more, and becomes about <span className="text-white font-medium">making sure it doesn’t turn into a mess as you keep adding to it</span>.
-            </p>
+            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
+              <p className="mb-4">I&apos;m the writer you hire when your company:</p>
+              <ul className="list-disc list-inside space-y-2 mb-4 pl-2">
+                <li>starts growing fast</li>
+                <li>goes from ~100 to 1,000+ people</li>
+                <li>moves into new countries</li>
+              </ul>
+              <p>Right when documentation stops being about adding more, and becomes about <span className="text-white font-medium">making sure it doesn&apos;t turn into a mess as you keep adding to it</span>.</p>
+            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
