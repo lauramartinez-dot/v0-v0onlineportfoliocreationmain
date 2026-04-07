@@ -268,33 +268,32 @@ export function HighlightsSection() {
           </div>
         </div>
 
-        {/* AI Apps Image */}
-        <div className="max-w-4xl mx-auto mt-32 mb-8">
-          <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-primary/20 border border-white/10">
-            <img 
-              src="/images/ai-apps.png" 
-              alt="Smartphone displaying AI assistant apps including ChatGPT, Gemini, Claude, Perplexity, Copilot, and Grok" 
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        </div>
-
         {/* Mission box - moved to bottom */}
-        <div className="max-w-6xl mx-auto mt-8 flex flex-col md:flex-row items-center gap-6 md:gap-8">
+        <div className="max-w-6xl mx-auto mt-32 flex flex-col md:flex-row items-center gap-6 md:gap-8">
           {/* Bridging sentence - left */}
           <p className="text-left text-lg md:text-xl text-foreground/70 leading-relaxed md:w-1/3 flex-shrink-0">
             Over the past 15 years I{"'"}ve changed industries, roles, and languages, but my mission has remained the same:
           </p>
 
           {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/60 to-pink-950/60 px-8 py-7 shadow-lg shadow-primary/20 backdrop-blur-sm md:flex-1">
-            <div className="absolute -top-4 left-7 flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
-              <Rocket className="w-4 h-4 text-white" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-white">Mission</span>
+          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/60 to-pink-950/60 shadow-lg shadow-primary/20 backdrop-blur-sm md:flex-1 overflow-hidden">
+            {/* AI Apps Image */}
+            <div className="w-full h-40 md:h-48 overflow-hidden">
+              <img 
+                src="/images/ai-apps.png" 
+                alt="Smartphone displaying AI assistant apps including ChatGPT, Gemini, Claude, Perplexity, Copilot, and Grok" 
+                className="w-full h-full object-cover object-center"
+              />
             </div>
-            <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-1">
-              I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
-            </p>
+            <div className="px-8 py-6 relative">
+              <div className="absolute -top-4 left-7 flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
+                <Rocket className="w-4 h-4 text-white" />
+                <span className="text-xs font-semibold uppercase tracking-wider text-white">Mission</span>
+              </div>
+              <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-2">
+                I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
+              </p>
+            </div>
           </div>
         </div>
       </div>
