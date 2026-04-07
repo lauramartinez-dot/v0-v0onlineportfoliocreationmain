@@ -53,10 +53,9 @@ export function HeroSection() {
             </h4>
 
             <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
-              I&apos;m the writer you hire when your software company starts growing like crazy. When you go from ~100 to 1,000+ employees. <I></I> Into new markets. Have a product that changes daily.
-              <br></br><br></br>
-              . <br></br><br></br><span className="text-white font-medium"> Right when you do not need to add more pages, but to be able to add more and more pages every month.</span>
-
+              I&apos;m the writer you hire when your software company starts growing like crazy. When you go from ~100 to 1,000+ employees. Into new markets. Have a product that changes daily.
+              <br /><br />
+              <span className="text-white font-medium">Right when you do not need to add more pages, but to be able to add more and more pages every month.</span>
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
