@@ -276,24 +276,15 @@ export function HighlightsSection() {
           </p>
 
           {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-purple-950/60 to-pink-950/60 shadow-lg shadow-primary/20 backdrop-blur-sm md:flex-1 overflow-hidden">
-            {/* AI Apps Image */}
-            <div className="w-full h-40 md:h-48 overflow-hidden">
-              <img 
-                src="/images/ai-apps.png" 
-                alt="Smartphone displaying AI assistant apps including ChatGPT, Gemini, Claude, Perplexity, Copilot, and Grok" 
-                className="w-full h-full object-cover object-center"
-              />
+          <div className="relative rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-purple-900/70 via-purple-800/50 to-pink-900/70 shadow-2xl shadow-primary/30 backdrop-blur-md md:flex-1 ring-1 ring-white/10 px-8 py-7">
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/5 via-transparent to-white/10 pointer-events-none" />
+            <div className="absolute -top-4 left-7 flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
+              <Rocket className="w-4 h-4 text-white" />
+              <span className="text-xs font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
-            <div className="px-8 py-6 relative">
-              <div className="absolute -top-4 left-7 flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-br from-purple-600 to-pink-500 shadow-md shadow-purple-500/30 ring-4 ring-background">
-                <Rocket className="w-4 h-4 text-white" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Mission</span>
-              </div>
-              <p className="text-base md:text-lg leading-relaxed text-foreground font-medium text-left text-balance mt-2">
-                I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
-              </p>
-            </div>
+            <p className="text-base md:text-lg leading-relaxed text-white/90 font-medium text-left text-balance mt-1 relative z-10">
+              I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
+            </p>
           </div>
         </div>
       </div>
