@@ -55,7 +55,7 @@ export function HeroSection() {
             <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
               I&apos;m the writer you hire when your software company starts growing fast—going from ~100 to 1,000+ employees and expanding into new markets.
               <br></br><br></br>
-              Right when documentation stops being about adding more pages, and becomes about <span className="text-white font-medium">making sure you can keep adding more and more every month</span>.
+              Right when documentation stops being about adding more, and becomes about being able to keep adding—month after month.</span>.
             </p>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
@@ -89,6 +89,6 @@ export function HeroSection() {
         <span className="text-sm text-muted-foreground">Scroll to explore</span>
         <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
       </div>
-    </section>
+    </section >
   )
 }
