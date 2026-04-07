@@ -54,7 +54,7 @@ export function HeroSection() {
 
             <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
               <p className="mb-4">I&apos;m the writer you hire when your company:</p>
-              <ul className="list-disc list-inside space-y-2 mb-4 pl-2">
+              <ul className="list-disc list-inside space-y-1 mb-4 pl-2">
                 <li>starts growing fast</li>
                 <li>goes from ~100 to 1,000+ people</li>
                 <li>moves into new countries</li>
