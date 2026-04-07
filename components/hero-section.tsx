@@ -55,7 +55,7 @@ export function HeroSection() {
             <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
               I&apos;m the writer you hire when your software company starts growing like crazy.
               <br></br><br></br>
-              From ~100 to 1,000+ employees. New markets. New countries. A product that changes daily. <br></br><br></br><span className="text-white font-medium"> Right when you need more pages. More visuals. More languages. But also not a hot mess in a few months from now.</span>
+              When you go from ~100 to 1,000+ employees. Expand into new markets. Have a product that changes daily. <br></br><br></br><span className="text-white font-medium"> Right when you do not need to add more pages, but to be able to add more and more pages every month.</span>
 
             </p>
 
