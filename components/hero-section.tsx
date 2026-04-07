@@ -59,7 +59,7 @@ export function HeroSection() {
                 <li>goes from ~100 to 1,000+ people</li>
                 <li>moves into new countries</li>
               </ul>
-              <p>stops being about adding more now, and becomes about <span className="text-white font-medium">making sure you can add a lot more later—more languages, more visuals, more pages.
+              <p>Right when documentation stops being about adding more now, and becomes about <span className="text-white font-medium">making sure you can add a lot more later—more languages, more visuals, more pages.
               </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
