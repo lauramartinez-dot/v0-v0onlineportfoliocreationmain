@@ -141,7 +141,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="rounded-xl bg-gradient-to-br from-black/30 to-black/10 border border-white/10 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-primary/50 transition-colors duration-200"
+        className="rounded-xl bg-gradient-to-br from-black/30 to-black/10 border border-white/10 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-primary/50 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/10 transition-all duration-200 cursor-default"
       >
         <div className="flex items-center gap-3 px-5 py-4">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/20 h-10 w-10 ring-1 ring-primary/30">
