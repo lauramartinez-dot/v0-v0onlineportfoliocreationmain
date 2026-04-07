@@ -105,7 +105,7 @@ function SkillImageCard({
   addPurpleOverlay?: boolean
 }) {
   return (
-    <div className="group relative min-h-[600px] overflow-hidden rounded-xl shadow-lg">
+    <div className="group relative min-h-[600px] overflow-hidden rounded-xl shadow-xl shadow-purple-900/40">
       <Image
         src={image || "/placeholder.svg"}
         alt={item.title}
@@ -141,7 +141,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="rounded-xl bg-gradient-to-br from-black/30 to-black/10 border border-white/10 shadow-lg shadow-black/20 backdrop-blur-sm"
+        className="rounded-xl bg-gradient-to-br from-black/30 to-black/10 border border-white/10 shadow-xl shadow-purple-900/30 backdrop-blur-sm"
       >
         <div className="flex items-center gap-3 px-5 py-4">
           <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/20 h-10 w-10 ring-1 ring-primary/30">
