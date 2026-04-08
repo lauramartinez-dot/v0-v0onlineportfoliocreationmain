@@ -604,7 +604,7 @@ const operationalAchievements: Achievement[] = [
       "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
     color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+    image: "/images/team-collaboration.jpeg",
   },
   {
     id: "first-senior",
