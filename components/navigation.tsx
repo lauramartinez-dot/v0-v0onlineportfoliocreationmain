@@ -15,19 +15,19 @@ export function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
-      <div className="mx-auto max-w-4xl">
-        <div className="flex items-center justify-between rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-6 py-4">
+      <div className="mx-auto max-w-5xl">
+        <div className="flex items-center justify-between rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-8 py-5">
           <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Sparkles className="h-4 w-4 text-primary" />
-            <span className="font-semibold text-primary">Laura Martínez</span>
+            <Sparkles className="h-5 w-5 text-primary" />
+            <span className="font-semibold text-primary text-base">Laura Martínez</span>
           </a>
 
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm text-foreground/70 transition-colors hover:text-foreground"
+                className="text-base text-foreground/70 transition-colors hover:text-foreground"
               >
                 {item.label}
               </a>
@@ -35,7 +35,7 @@ export function Navigation() {
           </div>
 
           <div className="hidden md:flex items-center">
-            <Button size="sm" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
+            <Button size="default" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
               <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Download CV
               </a>
