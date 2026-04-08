@@ -282,7 +282,7 @@ export function HighlightsSection() {
               <Rocket className="w-4 h-4 text-white" />
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
-            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-2 relative z-10">
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-2 relative z-10 px-[7px]">
               I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
             </p>
           </div>
