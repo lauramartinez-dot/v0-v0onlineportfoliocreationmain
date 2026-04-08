@@ -78,7 +78,7 @@ export const coreSkills = [
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
     icon: Heart,
-    title: "Culture Builder",
+    title: "Specialised in Scale-Ups",
     description: "I go beyond just doing my job and actively help create a healthy, engaging work environment, with a focus on Women in Tech.",
     column: 2,
     tools: ["ChatGPT/Claude (Gen AI)", "v0.app", "Loveable"],
