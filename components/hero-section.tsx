@@ -52,43 +52,47 @@ export function HeroSection() {
               {"🌍"} Global-First Technical Writer
             </h4>
 
-            <p className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
-              I&apos;m the writer you hire when your software company starts growing fast—going from ~100 to 1,000+ employees and expanding into new markets.
-              <br></br><br></br>
-              Right when documentation stops being about adding more, and becomes about being able to keep adding—month after month.</span>.
-            </p>
+            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-xl font-normal">
+              <p className="mb-4">I&apos;m the writer you hire when your company:</p>
+              <ul className="list-disc list-inside space-y-1 mb-4 pl-2">
+                <li>starts growing fast</li>
+                <li>goes from ~100 to 1,000+ people</li>
+                <li>moves into new countries</li>
+              </ul>
+              <p>Right when documentation stops being about adding more now, and becomes about <span className="text-white font-medium">making sure you can add a lot more later—more languages, more visuals, more pages</span>.</p>
+            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <Button
-                size="lg"
-                className="group rounded-full px-8 py-6 text-base font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
-                  Connect on LinkedIn
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Download CV
-                  <Download className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
-                </a>
-              </Button>
+                  <Button
+                    size="lg"
+                    className="group rounded-full px-8 py-6 text-base font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
+                    asChild
+                  >
+                    <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
+                      Connect on LinkedIn
+                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
+                  </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
+                    asChild
+                  >
+                    <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                      Download CV
+                      <Download className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
+                    </a>
+                  </Button>
+                </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="flex flex-col items-center gap-0.5 mt-40">
-        <span className="text-sm text-muted-foreground">Scroll to explore</span>
-        <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
-      </div>
+        <div className="flex flex-col items-center gap-0.5 mt-40">
+          <span className="text-sm text-muted-foreground">Scroll to explore</span>
+          <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
+        </div>
     </section >
   )
 }
