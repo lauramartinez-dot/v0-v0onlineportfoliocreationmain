@@ -115,7 +115,7 @@ function SkillImageCard({
 
       <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
 
-      {addPurpleOverlay && <div className="absolute inset-0 bg-primary/50 mix-blend-multiply" />}
+      {addPurpleOverlay && <div className="absolute inset-0 bg-primary/35 mix-blend-multiply" />}
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
