@@ -276,13 +276,13 @@ export function HighlightsSection() {
           </p>
 
           {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 shadow-2xl shadow-primary/20 backdrop-blur-md md:flex-1 ring-1 ring-white/5 px-6 py-6">
+          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 shadow-2xl shadow-primary/20 backdrop-blur-md md:flex-1 ring-1 ring-white/5 px-6 pt-4 pb-4">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05] pointer-events-none" />
             <div className="absolute -top-4 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
               <Rocket className="w-4 h-4 text-white" />
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
-            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-2 relative z-10 px-[7px]">
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[9px] mb-[9px] relative z-10 px-[7px]">
               I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
             </p>
           </div>
