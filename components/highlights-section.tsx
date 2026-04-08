@@ -141,13 +141,14 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="rounded-xl bg-gradient-to-br from-black/30 to-black/10 border border-white/10 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-primary/50 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/10 transition-all duration-200 cursor-default"
+        className="relative rounded-xl bg-gradient-to-br from-purple-950/40 via-black/30 to-pink-950/30 border border-primary/20 shadow-lg shadow-purple-900/30 backdrop-blur-md hover:border-primary/60 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default overflow-hidden"
       >
-        <div className="flex items-center gap-3 px-5 py-4">
-          <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/20 h-10 w-10 ring-1 ring-primary/30">
-            <item.icon className="h-5 w-5 text-primary" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
+        <div className="relative flex items-center gap-4 px-5 py-4">
+          <div className="flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/30 to-pink-500/20 h-11 w-11 ring-1 ring-primary/40 shadow-inner shadow-primary/10">
+            <item.icon className="h-5 w-5 text-primary drop-shadow-sm" />
           </div>
-          <h4 className="font-semibold text-purple-200 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
         </div>
       </div>
 
