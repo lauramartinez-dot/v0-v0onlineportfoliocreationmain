@@ -597,9 +597,9 @@ interface Achievement {
 const operationalAchievements: Achievement[] = [
   {
     id: "scaled-teams",
-    title: "Built and Scaled Documentation Teams Globally",
+    title: "Grew a small documentation team into a global one",
     description:
-      "Early hire in multiple organizations, building documentation teams from scratch. Grew small local teams into globally distributed groups of 10+ writers, mentoring peers and guiding promotions across companies.",
+      "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
     color: "#9931e7",
   },
