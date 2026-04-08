@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image"
 import {
   GraduationCap,
   Plane,
@@ -592,16 +593,18 @@ interface Achievement {
   description: string
   icon: any
   color: string
+  image?: string
 }
 
 const operationalAchievements: Achievement[] = [
   {
     id: "scaled-teams",
-    title: "Built and Scaled Documentation Teams Globally",
+    title: "Grew a small documentation team into a global one",
     description:
-      "Early hire in multiple organizations, building documentation teams from scratch. Grew small local teams into globally distributed groups of 10+ writers, mentoring peers and guiding promotions across companies.",
+      "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
     color: "#9931e7",
+    image: "/images/team-collaboration.jpeg",
   },
   {
     id: "first-senior",
@@ -610,6 +613,7 @@ const operationalAchievements: Achievement[] = [
       "Frequently the first or one of the first on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
     icon: TrendingUp,
     color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
   },
   {
     id: "business-impact",
@@ -618,6 +622,7 @@ const operationalAchievements: Achievement[] = [
       "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort across organizations.",
     icon: BarChart,
     color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
   },
   {
     id: "style-guide",
@@ -626,6 +631,7 @@ const operationalAchievements: Achievement[] = [
       "Created first-ever style guides for user-facing documentation in multiple organizations. Developed localization style guides for Spanish content, leveraging hands-on translation and QA experience.",
     icon: FileText,
     color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
   },
   {
     id: "localization-expansion",
@@ -634,6 +640,7 @@ const operationalAchievements: Achievement[] = [
       "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption across companies.",
     icon: Globe,
     color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
   },
   {
     id: "culture-champion",
@@ -642,6 +649,7 @@ const operationalAchievements: Achievement[] = [
       "Recognized for contributions to team culture and morale across organizations. Co-founded initiatives supporting women and underrepresented groups in tech, promoting diversity and inclusion at scale.",
     icon: Heart,
     color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
   },
 ]
 
@@ -650,18 +658,31 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 min-h-[420px] flex flex-col"
     >
-      <div className="p-6">
-        <div className="flex items-start gap-4 mb-4">
-          <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
-            <Icon className="h-7 w-7 text-primary" />
-          </div>
-          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors pt-2">
-            {achievement.title}
-          </h3>
+      {/* Image Section */}
+      <div className="relative h-48 overflow-hidden">
+        {achievement.image ? (
+          <Image
+            src={achievement.image}
+            alt={achievement.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        ) : (
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-pink-900/40" />
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+        <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
+          <Icon className="h-6 w-6 text-primary" />
         </div>
-        <p className="text-base text-foreground leading-relaxed">{achievement.description}</p>
+      </div>
+      {/* Content Section */}
+      <div className="p-6 flex-1 flex flex-col">
+        <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-4">
+          {achievement.title}
+        </h3>
+        <p className="text-lg text-foreground/80 leading-relaxed">{achievement.description}</p>
       </div>
     </div>
   )
