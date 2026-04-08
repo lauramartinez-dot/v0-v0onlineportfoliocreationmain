@@ -59,10 +59,10 @@ export function HeroSection() {
                 <li>goes from ~100 to 1,000+ people</li>
                 <li>moves into new countries</li>
               </ul>
-              <p>Right when documentation stops being about adding more now, and becomes about <span className="text-white font-medium">making sure you can add a lot more later—more languages, more visuals, more pages.
-              </div>
+              <p>Right when documentation stops being about adding more now, and becomes about <span className="text-white font-medium">making sure you can add a lot more later—more languages, more visuals, more pages</span>.</p>
+            </div>
 
-                <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
                   <Button
                     size="lg"
                     className="group rounded-full px-8 py-6 text-base font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
