@@ -52,7 +52,7 @@ export function HeroSection() {
               {"🌍"} Global-First Technical Writer
             </h4>
 
-            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-2xl font-normal">
+            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed max-w-3xl font-normal">
               <p className="mb-4">I&apos;m the writer you hire when your company:</p>
               <ul className="list-disc list-inside space-y-1 mb-4 pl-2">
                 <li>starts growing fast</li>
