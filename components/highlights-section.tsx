@@ -141,13 +141,14 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="rounded-xl bg-gradient-to-br from-black/30 to-black/10 border border-white/10 shadow-lg shadow-black/20 backdrop-blur-sm hover:border-primary/50 hover:scale-[1.02] hover:shadow-xl hover:shadow-primary/10 transition-all duration-200 cursor-default"
+        className="relative rounded-xl bg-gradient-to-br from-purple-950/40 via-black/30 to-pink-950/30 border border-primary/20 shadow-lg shadow-purple-900/30 backdrop-blur-md hover:border-primary/60 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default overflow-hidden"
       >
-        <div className="flex items-center gap-3 px-5 py-4">
-          <div className="flex shrink-0 items-center justify-center rounded-lg bg-primary/20 h-10 w-10 ring-1 ring-primary/30">
-            <item.icon className="h-5 w-5 text-primary" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
+        <div className="relative flex items-center gap-4 px-5 py-4">
+          <div className="flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/30 to-pink-500/20 h-11 w-11 ring-1 ring-primary/40 shadow-inner shadow-primary/10">
+            <item.icon className="h-5 w-5 text-primary drop-shadow-sm" />
           </div>
-          <h4 className="font-semibold text-purple-200 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
         </div>
       </div>
 
@@ -216,12 +217,11 @@ export function HighlightsSection() {
 
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
-        <div id="top-differentiators" className="mb-16 mt-[200px] scroll-mt-20">
+        <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed whitespace-nowrap">In general terms, <span className="text-white font-medium">I write about complex technology and software in the simplest, least <em>jargony</em> way possible</span>.</p>
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">This was at the core of every role I{"'"}ve held for the past 15 years.</p>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">However, nowadays, my role is more than just writing. I mainly do three things:</p>
+            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">But these days, I do a lot more than just writing:</p>
           </div>
         </div>
 
@@ -276,13 +276,13 @@ export function HighlightsSection() {
           </p>
 
           {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-purple-900/70 via-purple-800/50 to-pink-900/70 shadow-2xl shadow-primary/30 backdrop-blur-md md:flex-1 ring-1 ring-white/10 px-10 py-9">
+          <div className="relative rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-purple-900/70 via-purple-800/50 to-pink-900/70 shadow-2xl shadow-primary/30 backdrop-blur-md md:flex-1 ring-1 ring-white/10 px-6 py-6">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/5 via-transparent to-white/10 pointer-events-none" />
-            <div className="absolute -top-4 left-8 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
+            <div className="absolute -top-4 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
               <Rocket className="w-4 h-4 text-white" />
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
-            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left text-balance mt-1 relative z-10">
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-2 relative z-10">
               I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
             </p>
           </div>

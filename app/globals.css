@@ -170,7 +170,7 @@
     @apply border-border outline-ring/50;
   }
   html {
-    font-size: 90%;
+    font-size: 87.5%;
   }
   body {
     @apply bg-background text-foreground;
