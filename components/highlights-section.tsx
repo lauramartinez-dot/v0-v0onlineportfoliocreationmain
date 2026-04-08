@@ -110,7 +110,7 @@ function SkillImageCard({
         src={image || "/placeholder.svg"}
         alt={item.title}
         fill
-        className={`object-cover transition-transform duration-300 group-hover:scale-105 opacity-70 ${addPurpleOverlay ? "saturate-[0.4] brightness-90 hue-rotate-[20deg]" : ""}`}
+        className={`object-cover transition-transform duration-300 group-hover:scale-105 opacity-70 ${addPurpleOverlay ? "saturate-[0.7] hue-rotate-[10deg]" : ""}`}
       />
 
       <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
