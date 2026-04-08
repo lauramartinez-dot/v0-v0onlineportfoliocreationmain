@@ -77,6 +77,13 @@ export const coreSkills = [
   },
   // Column 2: 3x Early Hire in Tech Scale-Ups
   {
+    icon: Heart,
+    title: "Culture Builder",
+    description: "I go beyond just doing my job and actively help create a healthy, engaging work environment, with a focus on Women in Tech.",
+    column: 2,
+    tools: ["ChatGPT/Claude (Gen AI)", "v0.app", "Loveable"],
+  },
+  {
     icon: Layers,
     title: "Information Architecture",
     description: "You tell me to write a single page; I create a piece that fits a hypothetical template, is tailored to a hypothetical audience, and is labeled according to a hypothetical taxonomy. I don't do this to be extra, it's just how I think.",
@@ -97,13 +104,7 @@ export const coreSkills = [
     column: 2,
     tools: ["Jira", "Trello/Monday.com", "Figma", "Miro"],
   },
-  {
-    icon: Heart,
-    title: "Culture Builder",
-    description: "I go beyond just doing my job and actively help create a healthy, engaging work environment, with a focus on Women in Tech.",
-    column: 2,
-    tools: ["ChatGPT/Claude (Gen AI)", "v0.app", "Loveable"],
-  },
+
   // Column 3: An International Career Across 4 Countries
   {
     icon: Globe,
