@@ -667,13 +667,12 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
             src={achievement.image}
             alt={achievement.title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-80"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-pink-900/40" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
         <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
           <Icon className="h-6 w-6 text-primary" />
         </div>
