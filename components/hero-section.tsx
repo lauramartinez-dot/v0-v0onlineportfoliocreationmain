@@ -57,7 +57,7 @@ export function HeroSection() {
               <ul className="list-disc list-inside space-y-1 mb-4 pl-2">
                 <li>starts growing fast</li>
                 <li>goes from ~100 to 1,000+ people</li>
-                <li>moves into new countries</li>
+                <li>expands into new countries</li>
               </ul>
               <p className="md:w-[120%]"><span className="text-white font-medium">Right when documentation stops being about adding more now, and becomes about making sure you can add a lot more later.</span></p>
             </div>
