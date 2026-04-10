@@ -49,7 +49,7 @@ export function HeroSection() {
             </h1>
 
             <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
-              {"🌍"} Global-First Technical Writer
+              {"🌍"} Senior Global Technical Writer
             </h4>
 
             <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-normal">
