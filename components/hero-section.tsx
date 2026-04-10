@@ -48,12 +48,9 @@ export function HeroSection() {
               Laura Martínez
             </h1>
 
-            <h4 className="mb-2 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
+            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
               {"🌍"} Senior Technical Writer
             </h4>
-            <p className="mb-6 text-lg md:text-xl text-foreground/60 font-medium tracking-wide">
-              Global &middot; Multilingual
-            </p>
 
             <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-normal">
               <p className="mb-4">I&apos;m the writer you hire when your software company:</p>
