@@ -726,10 +726,10 @@ export default function CareerMapSection() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-foreground">Personio</h3>
-              <p className="text-foreground/60">Senior Technical Writer &middot; 2019 - 2024</p>
+              <p className="text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
             </div>
           </div>
-          
+
           {/* Achievement Grid */}
           <div className="grid gap-6 md:grid-cols-3">
             {/* Column 1 */}
