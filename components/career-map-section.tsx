@@ -721,11 +721,11 @@ export default function CareerMapSection() {
           <div className="grid gap-6 md:grid-cols-3">
             {/* Column 1 - Writing */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-16 rounded-xl overflow-hidden">
-                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Writing</p>
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
                 </div>
               </div>
               {operationalAchievements
@@ -736,11 +736,11 @@ export default function CareerMapSection() {
             </div>
             {/* Column 2 - Operations */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-16 rounded-xl overflow-hidden">
-                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Building</p>
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
                 </div>
               </div>
               {operationalAchievements
@@ -751,11 +751,11 @@ export default function CareerMapSection() {
             </div>
             {/* Column 3 - Global */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-16 rounded-xl overflow-hidden">
-                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Translating</p>
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
                 </div>
               </div>
               {operationalAchievements
