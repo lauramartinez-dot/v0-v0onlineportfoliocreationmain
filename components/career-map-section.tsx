@@ -717,30 +717,45 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {/* Column 1 */}
-          <div className="flex flex-col gap-6">
-            {operationalAchievements
-              .filter((a) => a.column === 1)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
+        {/* Personio Company Card */}
+        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
+          {/* Company Header */}
+          <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
+            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+              <span className="text-2xl font-bold text-primary">P</span>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-foreground">Personio</h3>
+              <p className="text-foreground/60">Senior Technical Writer &middot; 2019 - 2024</p>
+            </div>
           </div>
-          {/* Column 2 */}
-          <div className="flex flex-col gap-6">
-            {operationalAchievements
-              .filter((a) => a.column === 2)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </div>
-          {/* Column 3 */}
-          <div className="flex flex-col gap-6">
-            {operationalAchievements
-              .filter((a) => a.column === 3)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
+          
+          {/* Achievement Grid */}
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Column 1 */}
+            <div className="flex flex-col gap-6">
+              {operationalAchievements
+                .filter((a) => a.column === 1)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </div>
+            {/* Column 2 */}
+            <div className="flex flex-col gap-6">
+              {operationalAchievements
+                .filter((a) => a.column === 2)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </div>
+            {/* Column 3 */}
+            <div className="flex flex-col gap-6">
+              {operationalAchievements
+                .filter((a) => a.column === 3)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </div>
           </div>
         </div>
       </div>
