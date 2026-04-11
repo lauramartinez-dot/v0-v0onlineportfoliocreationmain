@@ -99,7 +99,7 @@ export const coreSkills = [
   },
   {
     icon: Target,
-    title: "Data-Driven & Analytical",
+    title: "Data-Driven & AI-First",
     description: "I value evidence and accuracy above all, and base every decision, analysis, and piece of content on data rather than intuition or guesswork.",
     column: 2,
     tools: ["Jira", "Trello/Monday.com", "Figma", "Miro"],
