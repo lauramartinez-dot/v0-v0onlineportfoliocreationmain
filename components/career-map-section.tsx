@@ -601,20 +601,20 @@ const operationalAchievements: Achievement[] = [
   // Column 1: Writing/Journalism achievements
   {
     id: "style-guide",
-    title: "Established Documentation Standards",
+    title: "Created Documentation Style Guide",
     description:
-      "Created first-ever style guides for user-facing documentation in multiple organizations. Developed localization style guides for Spanish content, leveraging hands-on translation and QA experience.",
+      "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
     column: 1,
   },
   {
-    id: "business-impact",
-    title: "Delivered Tangible Business Impact",
+    id: "content-ownership",
+    title: "Owned 100+ Pages of Product Documentation",
     description:
-      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort across organizations.",
-    icon: BarChart,
+      "Managed and was responsible for over 100 pages of documentation covering multiple product features and apps, ensuring accuracy, consistency, and user-friendliness.",
+    icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
@@ -622,34 +622,13 @@ const operationalAchievements: Achievement[] = [
   // Column 2: Systems/Operations achievements
   {
     id: "scaled-teams",
-    title: "Grew a small documentation team into a global one",
+    title: "Grew a Small Documentation Team into a Global One",
     description:
       "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
     color: "#9931e7",
     image: "/images/team-collaboration.jpeg",
     column: 2,
-  },
-  {
-    id: "first-senior",
-    title: "Pioneered Documentation Roles",
-    description:
-      "Frequently the first or one of the first on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
-    icon: TrendingUp,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-    column: 2,
-  },
-  // Column 3: Global/Multilingual achievements
-  {
-    id: "localization-expansion",
-    title: "Expanded Global Documentation Reach",
-    description:
-      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption across companies.",
-    icon: Globe,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
-    column: 3,
   },
   {
     id: "culture-champion",
@@ -659,6 +638,37 @@ const operationalAchievements: Achievement[] = [
     icon: Heart,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "business-impact",
+    title: "Delivered Tangible Business Impact",
+    description:
+      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort.",
+    icon: BarChart,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  // Column 3: Global/Multilingual achievements
+  {
+    id: "localization-standards",
+    title: "Established Localization Standards",
+    description:
+      "Created localization style guides for Spanish and other languages, leveraging hands-on translation and QA experience to ensure consistent quality across all markets.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
+  {
+    id: "localization-expansion",
+    title: "Expanded Help Center from 3 to 6+ Languages",
+    description:
+      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
 ]
