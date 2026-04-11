@@ -594,26 +594,20 @@ interface Achievement {
   icon: any
   color: string
   image?: string
+  column?: number
 }
 
 const operationalAchievements: Achievement[] = [
+  // Column 1: Writing/Journalism achievements
   {
-    id: "scaled-teams",
-    title: "Grew a small documentation team into a global one",
+    id: "style-guide",
+    title: "Established Documentation Standards",
     description:
-      "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
-    icon: Users,
+      "Created first-ever style guides for user-facing documentation in multiple organizations. Developed localization style guides for Spanish content, leveraging hands-on translation and QA experience.",
+    icon: FileText,
     color: "#9931e7",
-    image: "/images/team-collaboration.jpeg",
-  },
-  {
-    id: "first-senior",
-    title: "Pioneered Documentation Roles",
-    description:
-      "Frequently the first or one of the first on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
-    icon: TrendingUp,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    column: 1,
   },
   {
     id: "business-impact",
@@ -623,16 +617,30 @@ const operationalAchievements: Achievement[] = [
     icon: BarChart,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+  },
+  // Column 2: Systems/Operations achievements
+  {
+    id: "scaled-teams",
+    title: "Grew a small documentation team into a global one",
+    description:
+      "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
+    icon: Users,
+    color: "#9931e7",
+    image: "/images/team-collaboration.jpeg",
+    column: 2,
   },
   {
-    id: "style-guide",
-    title: "Established Documentation Standards",
+    id: "first-senior",
+    title: "Pioneered Documentation Roles",
     description:
-      "Created first-ever style guides for user-facing documentation in multiple organizations. Developed localization style guides for Spanish content, leveraging hands-on translation and QA experience.",
-    icon: FileText,
+      "Frequently the first or one of the first on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
+    icon: TrendingUp,
     color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
   },
+  // Column 3: Global/Multilingual achievements
   {
     id: "localization-expansion",
     title: "Expanded Global Documentation Reach",
@@ -641,6 +649,7 @@ const operationalAchievements: Achievement[] = [
     icon: Globe,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
   },
   {
     id: "culture-champion",
@@ -650,6 +659,7 @@ const operationalAchievements: Achievement[] = [
     icon: Heart,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
+    column: 3,
   },
 ]
 
@@ -697,10 +707,31 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {operationalAchievements.map((achievement) => (
-            <AchievementCard key={achievement.id} achievement={achievement} />
-          ))}
+        <div className="grid gap-6 md:grid-cols-3">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-6">
+            {operationalAchievements
+              .filter((a) => a.column === 1)
+              .map((achievement) => (
+                <AchievementCard key={achievement.id} achievement={achievement} />
+              ))}
+          </div>
+          {/* Column 2 */}
+          <div className="flex flex-col gap-6">
+            {operationalAchievements
+              .filter((a) => a.column === 2)
+              .map((achievement) => (
+                <AchievementCard key={achievement.id} achievement={achievement} />
+              ))}
+          </div>
+          {/* Column 3 */}
+          <div className="flex flex-col gap-6">
+            {operationalAchievements
+              .filter((a) => a.column === 3)
+              .map((achievement) => (
+                <AchievementCard key={achievement.id} achievement={achievement} />
+              ))}
+          </div>
         </div>
       </div>
     </section>
