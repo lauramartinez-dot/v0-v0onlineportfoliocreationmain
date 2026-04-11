@@ -721,11 +721,12 @@ export default function CareerMapSection() {
           <div className="grid gap-6 md:grid-cols-3">
             {/* Column 1 - Writing */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-16 rounded-xl overflow-hidden">
-                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Writing</p>
+              <div className="relative h-24 rounded-2xl overflow-hidden">
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover object-top" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-card" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-purple-600/20" />
+                <div className="absolute bottom-3 left-0 right-0 flex justify-center">
+                  <p className="text-sm font-semibold text-white/90 uppercase tracking-widest">Writing</p>
                 </div>
               </div>
               {operationalAchievements
@@ -736,11 +737,12 @@ export default function CareerMapSection() {
             </div>
             {/* Column 2 - Operations */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-16 rounded-xl overflow-hidden">
-                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Building</p>
+              <div className="relative h-24 rounded-2xl overflow-hidden">
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-card" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-purple-600/20" />
+                <div className="absolute bottom-3 left-0 right-0 flex justify-center">
+                  <p className="text-sm font-semibold text-white/90 uppercase tracking-widest">Building</p>
                 </div>
               </div>
               {operationalAchievements
@@ -751,11 +753,12 @@ export default function CareerMapSection() {
             </div>
             {/* Column 3 - Global */}
             <div className="flex flex-col gap-4">
-              <div className="relative h-16 rounded-xl overflow-hidden">
-                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-60" />
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
-                <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Translating</p>
+              <div className="relative h-24 rounded-2xl overflow-hidden">
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover object-center" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/30 to-card" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 via-transparent to-purple-600/20" />
+                <div className="absolute bottom-3 left-0 right-0 flex justify-center">
+                  <p className="text-sm font-semibold text-white/90 uppercase tracking-widest">Translating</p>
                 </div>
               </div>
               {operationalAchievements
