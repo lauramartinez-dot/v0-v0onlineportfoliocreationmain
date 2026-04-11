@@ -227,11 +227,11 @@ export function HighlightsSection() {
 
 
           {/* Column 1: A Foundation in Tech Journalism */}
-          <div className="relative z-10 flex flex-col rounded-2xl border border-primary/10 bg-gradient-to-b from-primary/5 via-transparent to-transparent p-3 pb-4">
+          <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
             {/* Connector line */}
             <div className="flex justify-center my-4">
-              <div className="w-px h-8 bg-gradient-to-b from-primary/40 to-primary/10" />
+              <div className="w-0.5 h-10 bg-gradient-to-b from-primary/50 to-transparent rounded-full" />
             </div>
             <div className="flex flex-col gap-2.5">
               {coreSkills
@@ -243,11 +243,11 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
-          <div className="relative z-10 flex flex-col rounded-2xl border border-primary/10 bg-gradient-to-b from-primary/5 via-transparent to-transparent p-3 pb-4">
+          <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
             {/* Connector line */}
             <div className="flex justify-center my-4">
-              <div className="w-px h-8 bg-gradient-to-b from-primary/40 to-primary/10" />
+              <div className="w-0.5 h-10 bg-gradient-to-b from-primary/50 to-transparent rounded-full" />
             </div>
             <div className="flex flex-col gap-2.5">
               {coreSkills
@@ -259,11 +259,11 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
-          <div className="relative z-10 flex flex-col rounded-2xl border border-primary/10 bg-gradient-to-b from-primary/5 via-transparent to-transparent p-3 pb-4">
+          <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
             {/* Connector line */}
             <div className="flex justify-center my-4">
-              <div className="w-px h-8 bg-gradient-to-b from-primary/40 to-primary/10" />
+              <div className="w-0.5 h-10 bg-gradient-to-b from-primary/50 to-transparent rounded-full" />
             </div>
             <div className="flex flex-col gap-2.5">
               {coreSkills
