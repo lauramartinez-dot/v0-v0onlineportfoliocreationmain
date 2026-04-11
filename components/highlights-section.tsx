@@ -227,9 +227,13 @@ export function HighlightsSection() {
 
 
           {/* Column 1: A Foundation in Tech Journalism */}
-          <div className="relative z-10 flex flex-col">
+          <div className="relative z-10 flex flex-col rounded-2xl border border-primary/10 bg-gradient-to-b from-primary/5 via-transparent to-transparent p-3 pb-4">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
-            <div className="flex flex-col gap-2.5 mt-3">
+            {/* Connector line */}
+            <div className="flex justify-center my-4">
+              <div className="w-px h-8 bg-gradient-to-b from-primary/40 to-primary/10" />
+            </div>
+            <div className="flex flex-col gap-2.5">
               {coreSkills
                 .filter((s) => s.column === 1)
                 .map((skill, i) => (
@@ -239,9 +243,13 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
-          <div className="relative z-10 flex flex-col">
+          <div className="relative z-10 flex flex-col rounded-2xl border border-primary/10 bg-gradient-to-b from-primary/5 via-transparent to-transparent p-3 pb-4">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
-            <div className="flex flex-col gap-2.5 mt-3">
+            {/* Connector line */}
+            <div className="flex justify-center my-4">
+              <div className="w-px h-8 bg-gradient-to-b from-primary/40 to-primary/10" />
+            </div>
+            <div className="flex flex-col gap-2.5">
               {coreSkills
                 .filter((s) => s.column === 2)
                 .map((skill, i) => (
@@ -251,9 +259,13 @@ export function HighlightsSection() {
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
-          <div className="relative z-10 flex flex-col">
+          <div className="relative z-10 flex flex-col rounded-2xl border border-primary/10 bg-gradient-to-b from-primary/5 via-transparent to-transparent p-3 pb-4">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-            <div className="flex flex-col gap-2.5 mt-3">
+            {/* Connector line */}
+            <div className="flex justify-center my-4">
+              <div className="w-px h-8 bg-gradient-to-b from-primary/40 to-primary/10" />
+            </div>
+            <div className="flex flex-col gap-2.5">
               {coreSkills
                 .filter((s) => s.column === 3)
                 .map((skill, i) => (
