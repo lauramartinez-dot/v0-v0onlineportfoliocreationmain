@@ -229,11 +229,8 @@ export function HighlightsSection() {
           {/* Column 1: A Foundation in Tech Journalism */}
           <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
-            {/* Connector line */}
-            <div className="flex justify-center my-4">
-              <div className="w-0.5 h-10 bg-gradient-to-b from-primary/50 to-transparent rounded-full" />
-            </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Writing Skills</p>
               {coreSkills
                 .filter((s) => s.column === 1)
                 .map((skill, i) => (
@@ -245,11 +242,8 @@ export function HighlightsSection() {
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
           <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
-            {/* Connector line */}
-            <div className="flex justify-center my-4">
-              <div className="w-0.5 h-10 bg-gradient-to-b from-primary/50 to-transparent rounded-full" />
-            </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Content Ops Skills</p>
               {coreSkills
                 .filter((s) => s.column === 2)
                 .map((skill, i) => (
@@ -261,11 +255,8 @@ export function HighlightsSection() {
           {/* Column 3: An International Career Across 4 Countries */}
           <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-            {/* Connector line */}
-            <div className="flex justify-center my-4">
-              <div className="w-0.5 h-10 bg-gradient-to-b from-primary/50 to-transparent rounded-full" />
-            </div>
-            <div className="flex flex-col gap-2.5">
+            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Localization Skills</p>
               {coreSkills
                 .filter((s) => s.column === 3)
                 .map((skill, i) => (
