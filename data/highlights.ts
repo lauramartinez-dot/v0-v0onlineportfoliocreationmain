@@ -1,21 +1,8 @@
 import {
-  Heart,
-  Users,
-  Briefcase,
-  Home,
-  Rocket,
   Clock,
   Newspaper,
   Globe,
-  Target,
-  Zap,
-  FileText,
   Layers,
-  Building,
-  MessageSquare,
-  Bot,
-  UserCheck,
-  Languages,
 } from "lucide-react"
 
 export const topSkills = [
@@ -46,9 +33,9 @@ export const topSkills = [
 ]
 
 export const coreSkills = [
-  // Column 1: A Foundation in Tech Journalism
+  // Column 1: A Foundation in Tech Journalism (all Newspaper icons)
   {
-    icon: FileText,
+    icon: Newspaper,
     title: "15 Years Writing About Tech",
     description: "Every role I've held over the past 15 years has revolved around making complex STEM information accessible to everyone. I intend to keep doing the same, even if AI drastically changes the role's name.",
     column: 1,
@@ -69,15 +56,15 @@ export const coreSkills = [
     tools: ["Zendesk/Confluence", "Tableau (User Feedback)", "Clueso (AI video tools)", "Lucidchart/Draw.io (Diagramming)"],
   },
   {
-    icon: Heart,
+    icon: Newspaper,
     title: "Empathy for Non-Tech Users",
     description: "I understand the frustration of trying to use software that wasn't designed with real users in mind, and I write content that bridges that gap.",
     column: 1,
     tools: ["Google Forms", "Typeform", "Tableau (User Feedback)", "Style Guides"],
   },
-  // Column 2: 3x Early Hire in Tech Scale-Ups
+  // Column 2: 3x Early Hire in Tech Scale-Ups (all Layers icons for systems/architecture)
   {
-    icon: Heart,
+    icon: Layers,
     title: "Specialised in Scale-Ups",
     description: "I go beyond just doing my job and actively help create a healthy, engaging work environment, with a focus on Women in Tech.",
     column: 2,
@@ -91,21 +78,21 @@ export const coreSkills = [
     tools: ["Zendesk", "Brandfolder", "Frontify", "Tableau"],
   },
   {
-    icon: Target,
+    icon: Layers,
     title: "Systems Thinker",
     description: "I value evidence and accuracy above all, and base every decision, analysis, and piece of content on data rather than intuition or guesswork.",
     column: 2,
     tools: ["Jira", "Trello/Monday.com", "Figma", "Miro"],
   },
   {
-    icon: Target,
+    icon: Layers,
     title: "Data-Driven & AI-First",
     description: "I value evidence and accuracy above all, and base every decision, analysis, and piece of content on data rather than intuition or guesswork.",
     column: 2,
     tools: ["Jira", "Trello/Monday.com", "Figma", "Miro"],
   },
 
-  // Column 3: An International Career Across 4 Countries
+  // Column 3: An International Career Across 4 Countries (all Globe icons)
   {
     icon: Globe,
     title: "Lived in 4 Countries",
@@ -114,7 +101,7 @@ export const coreSkills = [
     tools: ["Spanish (Native)", "English (C2)", "German (B2)", "French (A2)"],
   },
   {
-    icon: Languages,
+    icon: Globe,
     title: "Real Near-Native English (C2)",
     description: "Acquired not through academics but through living in four countries and working exclusively in English for the past 10 years.",
     column: 3,
@@ -128,7 +115,7 @@ export const coreSkills = [
     tools: ["Phrase", "Smartling"],
   },
   {
-    icon: Users,
+    icon: Globe,
     title: "Remote-First & Global Teams",
     description: "Experienced in collaborating across time zones, cultures, and distributed workflows.",
     column: 3,
