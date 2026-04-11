@@ -116,7 +116,7 @@ export const coreSkills = [
   },
   {
     icon: Globe,
-    title: "Remote-First & Global Teams",
+    title: "Localization & Vendor Management",
     description: "Experienced in collaborating across time zones, cultures, and distributed workflows.",
     column: 3,
     tools: ["Jira", "Slack", "Zoom/Google Meet", "Google Slides", "Miro"],
