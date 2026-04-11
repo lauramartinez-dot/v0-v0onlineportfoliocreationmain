@@ -753,7 +753,7 @@ export default function CareerMapSection() {
                 <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-60" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
                 <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Operations</p>
+                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Building</p>
                 </div>
               </div>
               {operationalAchievements
@@ -768,7 +768,7 @@ export default function CareerMapSection() {
                 <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-60" />
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
                 <div className="absolute inset-0 flex items-center px-4">
-                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Global</p>
+                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Translating</p>
                 </div>
               </div>
               {operationalAchievements
@@ -780,6 +780,6 @@ export default function CareerMapSection() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
