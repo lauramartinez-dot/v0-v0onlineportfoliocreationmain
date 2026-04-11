@@ -732,24 +732,45 @@ export default function CareerMapSection() {
 
           {/* Achievement Grid */}
           <div className="grid gap-6 md:grid-cols-3">
-            {/* Column 1 */}
-            <div className="flex flex-col gap-6">
+            {/* Column 1 - Writing */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-16 rounded-xl overflow-hidden">
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
+                <div className="absolute inset-0 flex items-center px-4">
+                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Writing</p>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 1)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </div>
-            {/* Column 2 */}
-            <div className="flex flex-col gap-6">
+            {/* Column 2 - Operations */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-16 rounded-xl overflow-hidden">
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
+                <div className="absolute inset-0 flex items-center px-4">
+                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Operations</p>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 2)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </div>
-            {/* Column 3 */}
-            <div className="flex flex-col gap-6">
+            {/* Column 3 - Global */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-16 rounded-xl overflow-hidden">
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/40 to-transparent" />
+                <div className="absolute inset-0 flex items-center px-4">
+                  <p className="text-xs font-semibold text-white uppercase tracking-widest">Global</p>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 3)
                 .map((achievement) => (
