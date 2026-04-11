@@ -678,31 +678,18 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 min-h-[420px] flex flex-col"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1"
     >
-      {/* Image Section */}
-      <div className="relative h-48 overflow-hidden">
-        {achievement.image ? (
-          <Image
-            src={achievement.image}
-            alt={achievement.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-pink-900/40" />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-        <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
-          <Icon className="h-6 w-6 text-primary" />
+      <div className="p-5 flex flex-col">
+        <div className="flex items-start gap-4 mb-3">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+            <Icon className="h-5 w-5 text-primary" />
+          </div>
+          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+            {achievement.title}
+          </h3>
         </div>
-      </div>
-      {/* Content Section */}
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-4">
-          {achievement.title}
-        </h3>
-        <p className="text-lg text-foreground/80 leading-relaxed">{achievement.description}</p>
+        <p className="text-base text-foreground/70 leading-relaxed">{achievement.description}</p>
       </div>
     </div>
   )
