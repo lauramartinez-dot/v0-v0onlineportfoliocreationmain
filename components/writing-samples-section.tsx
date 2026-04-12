@@ -26,7 +26,7 @@ const contentTypes: ContentTypeData[] = [
     name: "Help Guides",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
-    image: "/vr-person-blue-tech.png",
+    image: "/help-guides-header.png",
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -150,7 +150,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
       className="group cursor-pointer rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
     >
       {/* Image */}
-      <div className="relative h-40 md:h-48 overflow-hidden">
+      <div className="relative h-56 md:h-72 overflow-hidden">
         <Image
           src={contentType.image}
           alt={contentType.name}
