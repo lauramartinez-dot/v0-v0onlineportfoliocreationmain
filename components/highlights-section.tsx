@@ -223,7 +223,7 @@ export function HighlightsSection() {
               <br />
               <span>— not just the ones with a STEM degree.</span>
             </p>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer, writing is just part of what I do:</p>
+            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, writing is just part of what I do:</p>
           </div>
         </div>
 
