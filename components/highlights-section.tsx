@@ -220,8 +220,8 @@ export function HighlightsSection() {
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
               I write docs for complex software products so that <span className="text-white font-medium">all humans </span>can understand it and use it.
-              <br />
-              <span>— not just the ones with a STEM degree.</span>
+              <br /><br></br>
+              <span>Not just the ones with a STEM degree.</span>
             </p>
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, writing is just part of what I do:</p>
           </div>
@@ -290,6 +290,6 @@ export function HighlightsSection() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
