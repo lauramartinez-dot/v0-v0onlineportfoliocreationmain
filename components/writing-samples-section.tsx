@@ -53,13 +53,23 @@ const contentTypes: ContentTypeData[] = [
     image: "/startup-workspace.jpg",
     samples: [
       {
-        title: "Overview of permissions (Video EN)",
+        title: "Overview of permissions and employee roles (English)",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         company: "Personio",
       },
       {
-        title: "Overview of permissions (Video DE)",
+        title: "Overview of permissions and employee roles (German)",
         url: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+        company: "Personio",
+      },
+      {
+        title: "Overview of the Analytics area (English)",
+        url: "https://support.personio.de/hc/en-us/articles/360005430773-Overview-of-the-Analytics-area",
+        company: "Personio",
+      },
+      {
+        title: "Overview of the Analytics area (German)",
+        url: "https://support.personio.de/hc/de/articles/360005430773-Overview-of-the-Analytics-area",
         company: "Personio",
       },
     ],
