@@ -142,11 +142,9 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
         className="relative rounded-xl bg-gradient-to-br from-purple-950/40 via-black/30 to-pink-950/30 border border-primary/20 shadow-lg shadow-purple-900/30 backdrop-blur-md hover:border-primary/60 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default overflow-hidden"
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
-        <div className="relative flex items-center gap-4 px-5 py-4">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
-            <item.icon className="h-5 w-5 text-primary" />
-          </div>
-          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-primary via-primary/60 to-transparent rounded-l-xl" />
+        <div className="relative px-5 py-4">
+          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight">{item.title}</h4>
         </div>
       </div>
 
@@ -166,10 +164,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
             </button>
 
             <div className="p-6 md:p-8">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="flex shrink-0 items-center justify-center rounded-xl bg-primary/15 h-12 w-12">
-                  <item.icon className="h-6 w-6 text-primary" />
-                </div>
+              <div className="mb-5">
                 <h3 className="font-bold text-foreground text-2xl md:text-3xl leading-tight">{item.title}</h3>
               </div>
 
