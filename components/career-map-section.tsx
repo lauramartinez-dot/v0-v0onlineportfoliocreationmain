@@ -624,7 +624,7 @@ const operationalAchievements: Achievement[] = [
     id: "scaled-teams",
     title: "Grew a Small Documentation Team into a Global One",
     description:
-      "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
+      "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
     color: "#9931e7",
     image: "/images/team-collaboration.jpeg",

@@ -90,7 +90,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "journalism",
-    name: "Foundational tech journalism writing",
+    name: "Foundational Tech Journalism Writing",
     description: "Science and technology articles for leading publications",
     icon: Newspaper,
     image: "/images/team-collaboration.jpeg",
