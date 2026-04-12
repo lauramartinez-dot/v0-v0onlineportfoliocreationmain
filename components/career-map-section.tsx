@@ -723,7 +723,7 @@ export default function CareerMapSection() {
             <div className="flex flex-col gap-4">
               <div className="relative h-20 rounded-xl overflow-hidden">
                 <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/70 to-purple-800/40" />
                 <div className="absolute inset-0 flex items-end px-4 pb-3">
                   <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
                 </div>
@@ -738,7 +738,7 @@ export default function CareerMapSection() {
             <div className="flex flex-col gap-4">
               <div className="relative h-20 rounded-xl overflow-hidden">
                 <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/70 to-purple-800/40" />
                 <div className="absolute inset-0 flex items-end px-4 pb-3">
                   <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
                 </div>
@@ -753,7 +753,7 @@ export default function CareerMapSection() {
             <div className="flex flex-col gap-4">
               <div className="relative h-20 rounded-xl overflow-hidden">
                 <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-purple-950 via-purple-900/70 to-purple-800/40" />
                 <div className="absolute inset-0 flex items-end px-4 pb-3">
                   <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
                 </div>
