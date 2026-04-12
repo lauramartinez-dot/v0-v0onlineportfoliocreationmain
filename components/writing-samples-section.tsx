@@ -17,6 +17,8 @@ interface ContentTypeData {
   description: string
   icon: any
   image: string
+  audience: string
+  subAudience?: string[]
   samples: WritingSample[]
 }
 
@@ -27,6 +29,8 @@ const contentTypes: ContentTypeData[] = [
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/help-guides-header.png",
+    audience: "End Users",
+    subAudience: ["HR Managers", "Administrators", "Employees"],
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -51,6 +55,8 @@ const contentTypes: ContentTypeData[] = [
     description: "Educational videos and tutorials in multiple languages",
     icon: Video,
     image: "/startup-workspace.jpg",
+    audience: "End Users",
+    subAudience: ["Visual Learners", "Non-native Speakers"],
     samples: [
       {
         title: "Overview of permissions and employee roles (English)",
@@ -80,6 +86,8 @@ const contentTypes: ContentTypeData[] = [
     description: "Product updates and feature announcements",
     icon: Mail,
     image: "/still-life-supply-chain.jpg",
+    audience: "All Users",
+    subAudience: ["Product Managers", "Administrators"],
     samples: [
       {
         title: "Personio Product Updates",
@@ -94,6 +102,8 @@ const contentTypes: ContentTypeData[] = [
     description: "Technical reference documentation for developers and integrations",
     icon: BookOpen,
     image: "/vr-person-blue-tech.png",
+    audience: "Developers",
+    subAudience: ["Integration Engineers", "Technical Architects"],
     samples: [
       {
         title: "Personio API Documentation",
@@ -113,6 +123,8 @@ const contentTypes: ContentTypeData[] = [
     description: "In-product copy, microcopy, and user interface text",
     icon: Pen,
     image: "/startup-workspace.jpg",
+    audience: "End Users",
+    subAudience: ["Product Teams", "Designers"],
     samples: [
       {
         title: "Personio Help Center In-App Guidance",
@@ -127,6 +139,8 @@ const contentTypes: ContentTypeData[] = [
     description: "Science and technology articles for leading publications",
     icon: Newspaper,
     image: "/journalism-header.png",
+    audience: "General Public",
+    subAudience: ["Tech Enthusiasts", "Science Readers"],
     samples: [
       {
         title: "A day in the life of an online content moderator",
@@ -219,7 +233,22 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
             {contentType.name}
           </h3>
         </div>
-        <p className="text-sm text-foreground/60 leading-relaxed">{contentType.description}</p>
+        <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
+        
+        {/* Audience */}
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-semibold">
+            {contentType.audience}
+          </span>
+          {contentType.subAudience?.map((sub, idx) => (
+            <span
+              key={idx}
+              className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20"
+            >
+              {sub}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   )
