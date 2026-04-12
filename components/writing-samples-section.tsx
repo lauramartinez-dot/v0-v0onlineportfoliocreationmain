@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { FileText, ExternalLink, Code, Newspaper } from "lucide-react"
 
 interface WritingSample {
@@ -14,6 +15,7 @@ interface CategoryData {
   name: string
   description: string
   icon: any
+  image: string
   samples: WritingSample[]
 }
 
@@ -23,6 +25,7 @@ const categories: CategoryData[] = [
     name: "Technology Writing",
     description: "Technical documentation, how-to guides, and product content for software companies",
     icon: Code,
+    image: "/vr-person-blue-tech.png",
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -67,6 +70,7 @@ const categories: CategoryData[] = [
     name: "Media & Journalism",
     description: "Science and technology journalism across leading Spanish-language publications",
     icon: Newspaper,
+    image: "/startup-workspace.jpg",
     samples: [
       {
         title: "A day in the life of an online content moderator",
@@ -142,23 +146,39 @@ const CategoryCard = ({ category }: { category: CategoryData }) => {
   const Icon = category.icon
   
   return (
-    <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
-      {/* Category Header */}
-      <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
-        <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center ring-2 ring-primary/30 shadow-md">
-          <Icon className="h-8 w-8 text-primary" />
-        </div>
-        <div>
-          <h3 className="text-2xl font-bold text-foreground">{category.name}</h3>
-          <p className="text-foreground/60">{category.description}</p>
+    <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 shadow-xl shadow-primary/10 overflow-hidden">
+      {/* Category Image Header */}
+      <div className="relative h-48 md:h-64 overflow-hidden">
+        <Image
+          src={category.image}
+          alt={category.name}
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+        
+        {/* Content overlay */}
+        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
+              <Icon className="h-7 w-7 text-primary" />
+            </div>
+            <div>
+              <h3 className="text-2xl md:text-3xl font-bold text-white">{category.name}</h3>
+              <p className="text-white/70 text-sm md:text-base">{category.description}</p>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Samples Grid */}
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {category.samples.map((sample, i) => (
-          <SampleCard key={i} sample={sample} />
-        ))}
+      <div className="p-6 md:p-8">
+        <div className="grid gap-4 md:grid-cols-2">
+          {category.samples.map((sample, i) => (
+            <SampleCard key={i} sample={sample} />
+          ))}
+        </div>
       </div>
     </div>
   )
