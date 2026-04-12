@@ -143,8 +143,8 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
       >
         <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
         <div className="relative flex items-center gap-4 px-5 py-4">
-          <div className="flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/30 to-pink-500/20 h-11 w-11 ring-1 ring-primary/40 shadow-inner shadow-primary/10">
-            <item.icon className="h-5 w-5 text-primary drop-shadow-sm" />
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+            <item.icon className="h-5 w-5 text-primary" />
           </div>
           <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
         </div>
