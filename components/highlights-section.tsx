@@ -284,21 +284,21 @@ export function HighlightsSection() {
               <Rocket className="w-4 h-4 text-white" />
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
-            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-[9px] relative z-10 px-[7px]">
+            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-4 relative z-10 px-[7px]">
               I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
             </p>
+            
+            {/* Bernard Marr Quote */}
+            <div className="relative z-10 rounded-xl overflow-hidden">
+              <Image
+                src="/disclaimer-quote.png"
+                alt="Quote by Bernard Marr about digital literacy"
+                width={800}
+                height={300}
+                className="w-full h-auto"
+              />
+            </div>
           </div>
-        </div>
-        
-        {/* Bernard Marr Quote */}
-        <div className="mt-12 max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl shadow-purple-900/20 border border-primary/10">
-          <Image
-            src="/disclaimer-quote.png"
-            alt="Quote by Bernard Marr about digital literacy"
-            width={800}
-            height={300}
-            className="w-full h-auto"
-          />
         </div>
       </div>
     </section >
