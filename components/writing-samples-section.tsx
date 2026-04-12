@@ -160,8 +160,6 @@ const SampleCard = ({ sample }: { sample: WritingSample }) => {
 }
 
 const CompanyCard = ({ company }: { company: CompanyData }) => {
-  const hasMultipleColumns = company.samples.some((s) => s.column === 2) || company.samples.some((s) => s.column === 3)
-
   return (
     <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
       {/* Company Header */}
@@ -178,64 +176,11 @@ const CompanyCard = ({ company }: { company: CompanyData }) => {
       </div>
 
       {/* Samples Grid */}
-      {hasMultipleColumns ? (
-        <div className="grid gap-6 md:grid-cols-3">
-          {/* Column 1 - Writing */}
-          <div className="flex flex-col gap-4">
-            <div className="relative h-20 rounded-xl overflow-hidden">
-              <Image src="/vr-person-blue-tech.png" alt="Writing" fill className="object-cover opacity-70" />
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-              <div className="absolute inset-0 flex items-end px-4 pb-3">
-                <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
-              </div>
-            </div>
-            {company.samples
-              .filter((s) => s.column === 1)
-              .map((sample, i) => (
-                <SampleCard key={i} sample={sample} />
-              ))}
-          </div>
-          {/* Column 2 - Building */}
-          <div className="flex flex-col gap-4">
-            <div className="relative h-20 rounded-xl overflow-hidden">
-              <Image src="/startup-workspace.jpg" alt="Building" fill className="object-cover opacity-70" />
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-              <div className="absolute inset-0 flex items-end px-4 pb-3">
-                <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
-              </div>
-            </div>
-            {company.samples
-              .filter((s) => s.column === 2)
-              .map((sample, i) => (
-                <SampleCard key={i} sample={sample} />
-              ))}
-          </div>
-          {/* Column 3 - Translating */}
-          <div className="flex flex-col gap-4">
-            <div className="relative h-20 rounded-xl overflow-hidden">
-              <Image src="/still-life-supply-chain.jpg" alt="Translating" fill className="object-cover opacity-70" />
-              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-              <div className="absolute inset-0 flex items-end px-4 pb-3">
-                <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
-              </div>
-            </div>
-            {company.samples
-              .filter((s) => s.column === 3)
-              .map((sample, i) => (
-                <SampleCard key={i} sample={sample} />
-              ))}
-          </div>
-        </div>
-      ) : (
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-          {company.samples.map((sample, i) => (
-            <SampleCard key={i} sample={sample} />
-          ))}
-        </div>
-      )}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {company.samples.map((sample, i) => (
+          <SampleCard key={i} sample={sample} />
+        ))}
+      </div>
     </div>
   )
 }
