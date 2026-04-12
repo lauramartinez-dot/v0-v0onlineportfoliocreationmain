@@ -708,8 +708,8 @@ export default function CareerMapSection() {
         <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
           {/* Company Header */}
           <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
-            <div className="relative w-14 h-14 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-primary/20">
-              <Image src="/personio-logo.png" alt="Personio" fill className="object-contain p-2" />
+            <div className="relative w-20 h-20 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
+              <Image src="/personio-logo.png" alt="Personio" fill className="object-contain p-2.5" />
             </div>
             <div>
               <h3 className="text-2xl font-bold text-foreground">Personio</h3>
