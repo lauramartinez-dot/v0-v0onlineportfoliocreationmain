@@ -143,12 +143,12 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
       >
         {/* Top accent line */}
         <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-        
+
         {/* Content */}
         <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
           <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
         </div>
-        
+
         {/* Bottom subtle glow on hover */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
       </div>
@@ -285,9 +285,9 @@ export function HighlightsSection() {
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
             <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-4 relative z-10 px-[7px]">
-              I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
+              I help non-technical people make sense of technology because:
             </p>
-            
+
             {/* Bernard Marr Quote */}
             <div className="relative z-10 rounded-xl overflow-hidden">
               <Image
