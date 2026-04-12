@@ -236,18 +236,11 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
         
         {/* Audience */}
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Audience:</span>
           <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-semibold">
             {contentType.audience}
           </span>
-          {contentType.subAudience?.map((sub, idx) => (
-            <span
-              key={idx}
-              className="px-2.5 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20"
-            >
-              {sub}
-            </span>
-          ))}
         </div>
       </div>
     </div>
