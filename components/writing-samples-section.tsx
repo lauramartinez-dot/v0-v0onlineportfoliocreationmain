@@ -64,12 +64,12 @@ const contentTypes: ContentTypeData[] = [
       },
       {
         title: "Overview of the Analytics area (English)",
-        url: "https://support.personio.de/hc/en-us/articles/360005430773-Overview-of-the-Analytics-area",
+        url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
         company: "Personio",
       },
       {
         title: "Overview of the Analytics area (German)",
-        url: "https://support.personio.de/hc/de/articles/360005430773-Overview-of-the-Analytics-area",
+        url: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
         company: "Personio",
       },
     ],
