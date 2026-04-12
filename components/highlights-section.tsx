@@ -139,14 +139,13 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="relative rounded-xl bg-gradient-to-br from-purple-950/40 via-black/30 to-pink-950/30 border border-primary/20 shadow-lg shadow-purple-900/30 backdrop-blur-md hover:border-primary/60 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default overflow-hidden"
+        className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
-        <div className="relative flex items-center gap-4 px-5 py-4">
+        <div className="p-5 flex items-center gap-4">
           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
             <item.icon className="h-5 w-5 text-primary" />
           </div>
-          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+          <h4 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">{item.title}</h4>
         </div>
       </div>
 
