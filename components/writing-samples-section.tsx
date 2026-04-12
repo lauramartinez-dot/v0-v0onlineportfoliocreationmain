@@ -90,7 +90,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "journalism",
-    name: "Journalism",
+    name: "Foundational tech journalism writing",
     description: "Science and technology articles for leading publications",
     icon: Newspaper,
     image: "/images/team-collaboration.jpeg",
@@ -153,7 +153,7 @@ const SampleCard = ({ sample }: { sample: WritingSample }) => {
 
 const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeData; onClick: () => void }) => {
   const Icon = contentType.icon
-  
+
   return (
     <div
       onClick={onClick}
@@ -169,13 +169,13 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         />
         <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-        
+
         {/* Sample count badge */}
         <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold">
           {contentType.samples.length} samples
         </div>
       </div>
-      
+
       {/* Content */}
       <div className="p-5">
         <div className="flex items-center gap-3 mb-2">
@@ -206,15 +206,15 @@ export default function WritingSamplesSection() {
         {/* 2-column grid of content types */}
         <div className="grid gap-6 md:grid-cols-2">
           {contentTypes.map((contentType) => (
-            <ContentTypeCard 
-              key={contentType.id} 
-              contentType={contentType} 
+            <ContentTypeCard
+              key={contentType.id}
+              contentType={contentType}
               onClick={() => setSelectedType(contentType)}
             />
           ))}
         </div>
       </div>
-      
+
       {/* Dialog for samples */}
       <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
         <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-6">
