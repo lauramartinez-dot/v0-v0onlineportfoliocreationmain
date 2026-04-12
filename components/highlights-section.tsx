@@ -219,7 +219,7 @@ export function HighlightsSection() {
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              <span className="text-white font-medium">I write docs for complex software products so that all humans can understand it and use it</span>
+              I write docs for complex software products so that <span className="text-white font-medium">all humans </span>can understand it and use it.
               <br />
               <span>— not just the ones with a STEM degree.</span>
             </p>
