@@ -146,7 +146,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
         
         {/* Content */}
         <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
-          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
+          <h4 className="font-semibold text-purple-100 text-xl md:text-2xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
         </div>
         
         {/* Bottom subtle glow on hover */}
