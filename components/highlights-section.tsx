@@ -139,21 +139,18 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="group relative rounded-2xl bg-gradient-to-br from-purple-950/50 via-card to-pink-950/30 border border-primary/25 shadow-lg shadow-purple-900/30 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/30 transition-all duration-300 cursor-default overflow-hidden"
+        className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 cursor-default overflow-hidden"
       >
         {/* Top accent line */}
-        <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary/70 to-transparent" />
-        
-        {/* Inner glow */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
         
         {/* Content */}
         <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
-          <h4 className="font-bold text-white text-xl md:text-2xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
+          <h4 className="font-semibold text-purple-100 text-xl md:text-2xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
         </div>
         
         {/* Bottom subtle glow on hover */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-12 bg-primary/0 group-hover:bg-primary/15 blur-xl transition-all duration-300 pointer-events-none" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
       </div>
 
       {isOpen && createPortal(
