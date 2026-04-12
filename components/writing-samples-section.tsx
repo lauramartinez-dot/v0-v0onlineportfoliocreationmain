@@ -233,171 +233,227 @@ const categories: CategoryData[] = [
   },
 ]
 
-const CategoryCard = ({ category }: { category: CategoryData }) => {
-  const [open, setOpen] = useState(false)
+const SampleDialog = ({ category, open, onOpenChange }: { category: CategoryData; open: boolean; onOpenChange: (open: boolean) => void }) => {
   const Icon = category.icon
-
+  
   return (
-    <>
-      <div
-        onClick={() => setOpen(true)}
-        className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-      >
-        <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-purple-900/50 to-pink-900/30">
-          <Image
-            src={
-              category.headerImage || `/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`
-            }
-            alt={category.title}
-            fill
-            className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-600/60 via-purple-500/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="!w-[75vw] !max-w-none max-h-[90vh] overflow-y-auto p-6">
+        <DialogHeader>
+          <div className="flex items-center gap-3">
+            <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+              <Icon className="h-6 w-6 text-primary" />
+            </div>
+            <DialogTitle className="text-3xl font-bold">{category.title}</DialogTitle>
+          </div>
+        </DialogHeader>
+
+        <div className="mb-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+          <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200">
+            {category.description}
+          </p>
         </div>
 
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-            {category.title}
-          </h3>
+        <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Samples</h3>
 
-          <p className="text-base text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
-
-          {category.audience && (
-            <div className="mb-5 space-y-3">
-              <div>
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 block">
-                  Audience
-                </span>
-                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-                  {category.audience}
-                </span>
-              </div>
-              {category.subAudience && category.subAudience.length > 0 && (
-                <div>
-                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 block">
-                    Sub-audience
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {category.subAudience.map((subAud, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20"
-                      >
-                        {subAud}
-                      </span>
-                    ))}
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {category.samples.map((sample, idx) => (
+            <a
+              key={idx}
+              href={sample.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+            >
+              {category.id === "technology-writing" && (
+                <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
+                  <Image
+                    src={sample.image || "/placeholder.svg?height=200&width=400"}
+                    alt={sample.title}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
                 </div>
               )}
-            </div>
-          )}
 
-          <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
-            <span>View {category.samples.length} samples</span>
-            <svg
-              className="h-4 w-4 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="!w-[75vw] !max-w-none max-h-[90vh] overflow-y-auto p-6">
-          <DialogHeader>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Icon className="h-6 w-6 text-primary" />
-              </div>
-              <DialogTitle className="text-3xl font-bold">{category.title}</DialogTitle>
-            </div>
-          </DialogHeader>
-
-          <div className="mb-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-            <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200">
-              {category.description}
-            </p>
-          </div>
-
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Samples</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {category.samples.map((sample, idx) => (
-              <a
-                key={idx}
-                href={sample.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-              >
-                {category.id === "technology-writing" && (
-                  <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
-                    <Image
-                      src={sample.image || "/placeholder.svg?height=200&width=400"}
-                      alt={sample.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
-
-                <div className="p-8 flex-1 flex flex-col gap-4">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-sm px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
-                      {sample.company}
+              <div className="p-8 flex-1 flex flex-col gap-4">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-sm px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
+                    {sample.company}
+                  </span>
+                  {sample.role && (
+                    <span className="text-sm px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 font-medium">
+                      {sample.role}
                     </span>
-                    {sample.role && (
-                      <span className="text-sm px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 font-medium">
-                        {sample.role}
-                      </span>
-                    )}
-                  </div>
-                  <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">
-                    {sample.title}
-                  </h4>
-                  {sample.germanUrl && (
-                    <a
-                      href={sample.germanUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-primary hover:text-primary/80 font-medium flex items-center gap-2 mt-2"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <span>🇩🇪 German version</span>
-                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
                   )}
                 </div>
-              </a>
-            ))}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
+                <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">
+                  {sample.title}
+                </h4>
+                {sample.germanUrl && (
+                  <a
+                    href={sample.germanUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm text-primary hover:text-primary/80 font-medium flex items-center gap-2 mt-2"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    <span>German version</span>
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      </DialogContent>
+    </Dialog>
   )
 }
 
 export default function WritingSamplesSection() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [dialogOpen, setDialogOpen] = useState(false)
+  
+  const currentCategory = categories[currentIndex]
+  const Icon = currentCategory.icon
+  
+  const goToPrevious = () => {
+    setCurrentIndex((prev) => (prev === 0 ? categories.length - 1 : prev - 1))
+  }
+  
+  const goToNext = () => {
+    setCurrentIndex((prev) => (prev === categories.length - 1 ? 0 : prev + 1))
+  }
+
   return (
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="mb-12 text-center">
+        <div className="mb-8 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
+          <p className="text-muted-foreground text-lg">Click through to explore different types of content I create</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
+        {/* Carousel */}
+        <div className="relative">
+          {/* Main carousel item */}
+          <div 
+            onClick={() => setDialogOpen(true)}
+            className="group relative cursor-pointer overflow-hidden rounded-3xl border border-primary/20 shadow-2xl shadow-purple-900/20"
+          >
+            {/* Big Image */}
+            <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden">
+              <Image
+                src={currentCategory.headerImage || "/placeholder.svg"}
+                alt={currentCategory.title}
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              {/* Overlays */}
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+              
+              {/* Content overlay */}
+              <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-12">
+                {/* Icon and category indicator */}
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <span className="text-sm font-medium text-white/70 uppercase tracking-wider">
+                    {currentIndex + 1} of {categories.length}
+                  </span>
+                </div>
+                
+                {/* Title */}
+                <h3 className="text-3xl md:text-5xl font-bold text-white mb-4 group-hover:text-primary transition-colors">
+                  {currentCategory.title}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mb-6">
+                  {currentCategory.description}
+                </p>
+                
+                {/* Audience tags */}
+                {currentCategory.audience && (
+                  <div className="flex flex-wrap items-center gap-3 mb-6">
+                    <span className="px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-lg">
+                      {currentCategory.audience}
+                    </span>
+                    {currentCategory.subAudience?.map((sub, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-sm text-white/90 text-sm font-medium border border-white/20"
+                      >
+                        {sub}
+                      </span>
+                    ))}
+                  </div>
+                )}
+                
+                {/* View samples CTA */}
+                <div className="flex items-center gap-2 text-primary font-semibold text-lg group-hover:gap-3 transition-all">
+                  <span>View {currentCategory.samples.length} samples</span>
+                  <svg
+                    className="h-5 w-5 group-hover:translate-x-1 transition-transform"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Navigation arrows */}
+          <button
+            onClick={goToPrevious}
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 shadow-lg"
+            aria-label="Previous category"
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={goToNext}
+            className="absolute right-4 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-black/50 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all duration-300 shadow-lg"
+            aria-label="Next category"
+          >
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Dot indicators */}
+        <div className="flex justify-center gap-2 mt-8">
+          {categories.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentIndex(idx)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                idx === currentIndex 
+                  ? "bg-primary w-8" 
+                  : "bg-foreground/20 hover:bg-foreground/40"
+              }`}
+              aria-label={`Go to category ${idx + 1}`}
+            />
           ))}
         </div>
       </div>
+      
+      {/* Dialog for samples */}
+      <SampleDialog 
+        category={currentCategory} 
+        open={dialogOpen} 
+        onOpenChange={setDialogOpen} 
+      />
     </section>
   )
 }
