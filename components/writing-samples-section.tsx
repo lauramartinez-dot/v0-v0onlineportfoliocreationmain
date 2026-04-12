@@ -1,16 +1,17 @@
 "use client"
 
+import { useState } from "react"
 import Image from "next/image"
-import { FileText, ExternalLink, Code, Newspaper } from "lucide-react"
+import { FileText, ExternalLink, BookOpen, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface WritingSample {
   title: string
   url: string
   company: string
-  type: string
 }
 
-interface CategoryData {
+interface ContentTypeData {
   id: string
   name: string
   description: string
@@ -19,94 +20,100 @@ interface CategoryData {
   samples: WritingSample[]
 }
 
-const categories: CategoryData[] = [
+const contentTypes: ContentTypeData[] = [
   {
-    id: "technology-writing",
-    name: "Technology Writing",
-    description: "Technical documentation, how-to guides, and product content for software companies",
-    icon: Code,
+    id: "help-guides",
+    name: "Help Guides",
+    description: "Step-by-step instructions and conceptual documentation for end users",
+    icon: HelpCircle,
     image: "/vr-person-blue-tech.png",
     samples: [
       {
         title: "Overview of permissions and employee roles",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         company: "Personio",
-        type: "Conceptual Guide",
       },
       {
         title: "Summary of the homepage cards",
         url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
         company: "Personio",
-        type: "Conceptual Guide",
       },
       {
         title: "Grant permissions for everyday tasks",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
         company: "Personio",
-        type: "How-to Guide",
       },
-      {
-        title: "Personio Product Updates",
-        url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
-        company: "Personio",
-        type: "Release Notes",
-      },
+    ],
+  },
+  {
+    id: "video-content",
+    name: "Video Content",
+    description: "Educational videos and tutorials in multiple languages",
+    icon: Video,
+    image: "/startup-workspace.jpg",
+    samples: [
       {
         title: "Overview of permissions (Video EN)",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         company: "Personio",
-        type: "Video",
       },
       {
         title: "Overview of permissions (Video DE)",
         url: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
         company: "Personio",
-        type: "Video",
       },
     ],
   },
   {
-    id: "media-journalism",
-    name: "Media & Journalism",
-    description: "Science and technology journalism across leading Spanish-language publications",
+    id: "release-notes",
+    name: "Release Notes",
+    description: "Product updates and feature announcements",
+    icon: Mail,
+    image: "/still-life-supply-chain.jpg",
+    samples: [
+      {
+        title: "Personio Product Updates",
+        url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "journalism",
+    name: "Journalism",
+    description: "Science and technology articles for leading publications",
     icon: Newspaper,
-    image: "/startup-workspace.jpg",
+    image: "/images/team-collaboration.jpeg",
     samples: [
       {
         title: "A day in the life of an online content moderator",
         url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
         company: "Business Insider Spain",
-        type: "Feature Article",
       },
       {
         title: "Working at tech companies in Dublin: Free beer and laundry",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405147000",
         company: "Business Insider Spain",
-        type: "Feature Article",
       },
       {
         title: "Why we still don't fully understand how planes stay in the air",
         url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
         company: "Xataka",
-        type: "Science Article",
       },
       {
         title: "First evidence of cosmic inflation found",
         url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
         company: "Muy Interesante",
-        type: "Science Article",
       },
       {
         title: "What would happen if we traveled at the speed of light?",
         url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
         company: "Muy Interesante",
-        type: "Science Article",
       },
       {
         title: "Spanish satellite Deimos-2 is now in orbit",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
         company: "Muy Interesante",
-        type: "Science Article",
       },
     ],
   },
@@ -118,87 +125,112 @@ const SampleCard = ({ sample }: { sample: WritingSample }) => {
       href={sample.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1"
+      className="group flex items-start gap-4 p-4 rounded-xl border border-primary/20 bg-card hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
     >
-      <div className="p-5 flex flex-col gap-3">
-        <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
-            <FileText className="h-5 w-5 text-primary" />
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs font-medium text-primary/60 uppercase tracking-wider">{sample.type}</span>
-              <span className="text-xs text-foreground/40">|</span>
-              <span className="text-xs font-medium text-foreground/50">{sample.company}</span>
-            </div>
-            <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors">
-              {sample.title}
-            </h4>
-          </div>
-          <ExternalLink className="h-4 w-4 text-foreground/40 group-hover:text-primary transition-colors shrink-0" />
-        </div>
+      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+        <FileText className="h-5 w-5 text-primary" />
       </div>
+      <div className="flex-1 min-w-0">
+        <h4 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+          {sample.title}
+        </h4>
+        <p className="text-sm text-foreground/50 mt-1">{sample.company}</p>
+      </div>
+      <ExternalLink className="h-4 w-4 text-foreground/40 group-hover:text-primary transition-colors shrink-0 mt-1" />
     </a>
   )
 }
 
-const CategoryCard = ({ category }: { category: CategoryData }) => {
-  const Icon = category.icon
+const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeData; onClick: () => void }) => {
+  const Icon = contentType.icon
   
   return (
-    <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 shadow-xl shadow-primary/10 overflow-hidden">
-      {/* Category Image Header */}
-      <div className="relative h-48 md:h-64 overflow-hidden">
+    <div
+      onClick={onClick}
+      className="group cursor-pointer rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+    >
+      {/* Image */}
+      <div className="relative h-40 md:h-48 overflow-hidden">
         <Image
-          src={category.image}
-          alt={category.name}
+          src={contentType.image}
+          alt={contentType.name}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
         
-        {/* Content overlay */}
-        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8">
-          <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
-              <Icon className="h-7 w-7 text-primary" />
-            </div>
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white">{category.name}</h3>
-              <p className="text-white/70 text-sm md:text-base">{category.description}</p>
-            </div>
-          </div>
+        {/* Sample count badge */}
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold">
+          {contentType.samples.length} samples
         </div>
       </div>
-
-      {/* Samples Grid */}
-      <div className="p-6 md:p-8">
-        <div className="grid gap-4 md:grid-cols-2">
-          {category.samples.map((sample, i) => (
-            <SampleCard key={i} sample={sample} />
-          ))}
+      
+      {/* Content */}
+      <div className="p-5">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+            <Icon className="h-5 w-5 text-primary" />
+          </div>
+          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+            {contentType.name}
+          </h3>
         </div>
+        <p className="text-sm text-foreground/60 leading-relaxed">{contentType.description}</p>
       </div>
     </div>
   )
 }
 
 export default function WritingSamplesSection() {
+  const [selectedType, setSelectedType] = useState<ContentTypeData | null>(null)
+
   return (
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
-          <p className="text-muted-foreground text-lg">Work samples organized by type</p>
+          <p className="text-muted-foreground text-lg">Click on a content type to explore samples</p>
         </div>
 
-        <div className="space-y-12">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
+        {/* 2-column grid of content types */}
+        <div className="grid gap-6 md:grid-cols-2">
+          {contentTypes.map((contentType) => (
+            <ContentTypeCard 
+              key={contentType.id} 
+              contentType={contentType} 
+              onClick={() => setSelectedType(contentType)}
+            />
           ))}
         </div>
       </div>
+      
+      {/* Dialog for samples */}
+      <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
+        <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-6">
+          {selectedType && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+                    <selectedType.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
+                    <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
+                  </div>
+                </div>
+              </DialogHeader>
+
+              <div className="mt-6 space-y-3">
+                {selectedType.samples.map((sample, idx) => (
+                  <SampleCard key={idx} sample={sample} />
+                ))}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }
