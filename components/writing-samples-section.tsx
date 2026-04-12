@@ -1,403 +1,294 @@
 "use client"
 
 import { useState } from "react"
-import { Video, Newspaper, BookOpen, ListChecks, Database, FileText, MessageSquare, Mail } from "lucide-react"
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import Image from "next/image"
+import { FileText, ExternalLink, BookOpen, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface WritingSample {
   title: string
-  company: string
   url: string
-  role?: string
-  image?: string
-  germanUrl?: string
+  company: string
 }
 
-interface CategoryData {
+interface ContentTypeData {
   id: string
-  title: string
-  icon: any
+  name: string
   description: string
+  icon: any
+  image: string
+  audience: string
   samples: WritingSample[]
-  headerImage?: string
-  audience?: string
-  subAudience?: string[]
 }
 
-const categories: CategoryData[] = [
+const contentTypes: ContentTypeData[] = [
   {
-    id: "functional-documentation",
-    title: "Conceptual Guides",
-    icon: BookOpen,
-    description:
-      "Comprehensive overviews explaining how systems work, covering permissions, roles, and feature capabilities.",
-    headerImage: "/abstract-conceptual-diagram-with-connected-nodes-a.jpg",
-    audience: "Business users",
-    subAudience: ["Admins", "Supervisors", "Basic employees"],
+    id: "help-guides",
+    name: "Help Guides",
+    description: "Step-by-step instructions and conceptual documentation for end users",
+    icon: HelpCircle,
+    image: "/help-guides-header.png",
+    audience: "Business Users",
     samples: [
       {
         title: "Overview of permissions and employee roles",
-        company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-        role: "Admin",
-        image: "/hr-software-permissions-dashboard.jpg",
+        company: "Personio",
       },
       {
         title: "Summary of the homepage cards",
-        company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
-        role: "Admin",
-        image: "/hr-dashboard-homepage-cards.jpg",
+        company: "Personio",
       },
       {
-        title: "Log in and explore your new Personio account",
-        company: "Personio",
-        url: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
-        role: "Basic employee",
-        image: "/employee-login-welcome-screen.jpg",
-      },
-    ],
-  },
-  {
-    id: "task-based-documentation",
-    title: "How-to Guides",
-    icon: ListChecks,
-    description:
-      "Step-by-step guides helping users accomplish specific tasks, from granting permissions to troubleshooting issues.",
-    headerImage: "/step-by-step-checklist-with-checkmarks-and-progres.jpg",
-    audience: "Business users",
-    subAudience: ["Admins", "Supervisors"],
-    samples: [
-      {
-        title: "Grant permissions for everyday tasks in Personio",
-        company: "Personio",
+        title: "Grant permissions for everyday tasks",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
-        role: "Admin",
-        image: "/images/task-based-grant-permissions.png",
-      },
-      {
-        title: "Troubleshoot issues with report creation as an Administrator",
         company: "Personio",
-        url: "https://support.personio.de/hc/en-us/articles/30194753521565-Troubleshoot-issues-with-report-creation-as-an-Administrator",
-        role: "Admin",
-        image: "/analytics-reports-troubleshooting.jpg",
-      },
-      {
-        title: "Troubleshoot issues with report creation as a Supervisor",
-        company: "Personio",
-        url: "https://support.personio.de/hc/de/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
-        role: "Supervisor",
-        image: "/supervisor-reports-interface.jpg",
       },
     ],
   },
   {
-    id: "instructional-videos",
-    title: "Instructional Videos",
+    id: "video-content",
+    name: "Video Content",
+    description: "Educational videos and tutorials in multiple languages",
     icon: Video,
-    description:
-      "AI-assisted instructional videos produced and translated into multiple languages for global audiences.",
-    headerImage: "/video-tutorial-interface-with-play-button-and-scre.jpg",
-    audience: "Business users",
-    subAudience: ["Admins"],
+    image: "/startup-workspace.jpg",
+    audience: "Business Users",
     samples: [
       {
         title: "Overview of permissions and employee roles (English)",
-        company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-        role: "Admin",
-        image: "/video-tutorial-permissions-thumbnail.jpg",
+        company: "Personio",
       },
       {
         title: "Overview of permissions and employee roles (German)",
-        company: "Personio",
         url: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-        role: "Admin",
-        image: "/video-tutorial-permissions-thumbnail.jpg",
+        company: "Personio",
       },
       {
         title: "Overview of the Analytics area (English)",
-        company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
-        role: "Admin",
-        image: "/video-analytics-dashboard-thumbnail.jpg",
+        company: "Personio",
       },
       {
         title: "Overview of the Analytics area (German)",
+        url: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
         company: "Personio",
-        url: "https://support.personio.de/hc/de/articles/15717723889437-Overview-of-the-Analytics-area",
-        role: "Admin",
-        image: "/video-analytics-dashboard-thumbnail.jpg",
       },
     ],
   },
   {
     id: "release-notes",
-    title: "Release Notes",
-    icon: FileText,
-    description:
-      "Clear, user-focused release notes explaining new features, improvements, and bug fixes in accessible language.",
-    headerImage: "/software-release-announcement-with-version-number-.jpg",
-    audience: "Business users",
-    subAudience: ["Admins"],
+    name: "Release Notes",
+    description: "Product updates and feature announcements",
+    icon: Mail,
+    image: "/still-life-supply-chain.jpg",
+    audience: "Business Users",
     samples: [
       {
         title: "Personio Product Updates",
-        company: "Personio",
         url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
-        role: "Admin",
+        company: "Personio",
       },
     ],
   },
   {
-    id: "in-app-communications",
-    title: "In-App Communications",
-    icon: MessageSquare,
-    description:
-      "Microcopy, tooltips, banners, and in-product messaging designed to guide users through features and workflows.",
-    headerImage: "/modern-app-interface-with-tooltip-popup-and-notifi.jpg",
-    audience: "Business users",
-    subAudience: ["All users", "Basic employees"],
-    samples: [],
-  },
-  {
-    id: "internal-knowledge-base",
-    title: "Internal Knowledge Base Articles",
-    icon: Database,
-    description:
-      "Internal documentation for teams including process guides, best practices, and technical specifications for internal stakeholders.",
-    headerImage: "/organized-knowledge-database-with-folders-and-docu.jpg",
-    audience: "Internal teams",
-    subAudience: ["Technical Writers", "Product Managers", "Engineers"],
-    samples: [],
-  },
-  {
-    id: "newsletter-writing",
-    title: "Newsletter Writing",
-    icon: Mail,
-    description: "Engaging newsletter content for product updates, company announcements, and community engagement.",
-    headerImage: "/newsletter-email-marketing-design-template.jpg",
-    audience: "Business users",
-    subAudience: ["Customers", "Subscribers"],
-    samples: [],
-  },
-  {
-    id: "technology-writing",
-    title: "Foundational Technology Writing",
-    icon: Newspaper,
-    description:
-      "Tech journalism and articles for leading Spanish media outlets, covering innovation, science, and technology trends.",
-    headerImage: "/tech-journalism-newspaper-with-digital-elements-an.jpg",
-    audience: "General public",
-    subAudience: ["Tech enthusiasts", "Science readers"],
+    id: "api-documentation",
+    name: "API Documentation",
+    description: "Technical reference documentation for developers and integrations",
+    icon: BookOpen,
+    image: "/vr-person-blue-tech.png",
+    audience: "Developers",
     samples: [
       {
-        title:
-          "Execution videos, sex in the office, PTSD and ISIS sing-alongs: A day in the life of an online content moderator",
-        company: "Business Insider Spain",
+        title: "Personio API Documentation",
+        url: "https://developer.personio.de/reference/introduction",
+        company: "Personio",
+      },
+      {
+        title: "Authentication Guide",
+        url: "https://developer.personio.de/reference/authentication",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "ux-writing",
+    name: "UX Writing",
+    description: "In-product copy, microcopy, and user interface text",
+    icon: Pen,
+    image: "/startup-workspace.jpg",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio Help Center In-App Guidance",
+        url: "https://support.personio.de/hc/en-us",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "journalism",
+    name: "Foundational Tech Journalism Writing",
+    description: "Science and technology articles for leading publications",
+    icon: Newspaper,
+    image: "/journalism-header.png",
+    audience: "General Public",
+    samples: [
+      {
+        title: "A day in the life of an online content moderator",
         url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
-        image: "/content-moderator-reviewing-social-media.jpg",
-      },
-      {
-        title: "Cerveza gratis, servicio de lavandería y billar: Así se trabaja en las tecnológicas de moda en Dublín",
         company: "Business Insider Spain",
+      },
+      {
+        title: "Working at tech companies in Dublin: Free beer and laundry",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405147000",
-        image: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
+        company: "Business Insider Spain",
       },
       {
-        title: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
-        company: "Xataka",
+        title: "Why we still don't fully understand how planes stay in the air",
         url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
-        image: "/airplane-in-flight-aerodynamics.jpg",
+        company: "Xataka",
       },
       {
-        title: "Hallan la primera evidencia de la inflación cósmica",
-        company: "Muy Interesante",
+        title: "First evidence of cosmic inflation found",
         url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
-        image: "/cosmic-inflation-universe-expansion.jpg",
+        company: "Muy Interesante",
       },
       {
-        title: "¿Qué nos pasaría si viajáramos a la velocidad de la luz?",
-        company: "Muy Interesante",
+        title: "What would happen if we traveled at the speed of light?",
         url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
-        image: "/traveling-at-the-speed-of-light-space.jpg",
+        company: "Muy Interesante",
       },
       {
-        title: "El satélite español Deimos-2 está ya en órbita",
-        company: "Muy Interesante",
+        title: "Spanish satellite Deimos-2 is now in orbit",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
-        image: "/satellite-in-orbit-around-earth.jpg",
+        company: "Muy Interesante",
       },
     ],
   },
 ]
 
-const CategoryCard = ({ category }: { category: CategoryData }) => {
-  const [open, setOpen] = useState(false)
-  const Icon = category.icon
+const SampleCard = ({ sample }: { sample: WritingSample }) => {
+  return (
+    <a
+      href={sample.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-start gap-4 p-4 rounded-xl border border-primary/20 bg-card hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
+    >
+      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+        <FileText className="h-5 w-5 text-primary" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h4 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+          {sample.title}
+        </h4>
+        <p className="text-sm text-foreground/50 mt-1">{sample.company}</p>
+      </div>
+      <ExternalLink className="h-4 w-4 text-foreground/40 group-hover:text-primary transition-colors shrink-0 mt-1" />
+    </a>
+  )
+}
+
+const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeData; onClick: () => void }) => {
+  const Icon = contentType.icon
 
   return (
-    <>
-      <div
-        onClick={() => setOpen(true)}
-        className="group relative cursor-pointer overflow-hidden rounded-2xl border border-border bg-card shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
-      >
-        <div className="relative w-full h-48 overflow-hidden bg-gradient-to-br from-purple-900/50 to-pink-900/30">
-          <Image
-            src={
-              category.headerImage || `/.jpg?key=cghrj&height=300&width=600&query=${encodeURIComponent(category.title)}`
-            }
-            alt={category.title}
-            fill
-            className="object-cover opacity-60 group-hover:scale-110 transition-transform duration-500"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-purple-600/60 via-purple-500/40 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-        </div>
+    <div
+      onClick={onClick}
+      className="group cursor-pointer rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+    >
+      {/* Image */}
+      <div className="relative h-56 md:h-72 overflow-hidden">
+        <Image
+          src={contentType.image}
+          alt={contentType.name}
+          fill
+          className="object-cover transition-transform duration-500 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-            {category.title}
-          </h3>
-
-          <p className="text-base text-muted-foreground leading-relaxed mb-5 min-h-[60px]">{category.description}</p>
-
-          {category.audience && (
-            <div className="mb-5 space-y-3">
-              <div>
-                <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 block">
-                  Audience
-                </span>
-                <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-sm font-semibold shadow-md">
-                  {category.audience}
-                </span>
-              </div>
-              {category.subAudience && category.subAudience.length > 0 && (
-                <div>
-                  <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 block">
-                    Sub-audience
-                  </span>
-                  <div className="flex flex-wrap gap-2">
-                    {category.subAudience.map((subAud, idx) => (
-                      <span
-                        key={idx}
-                        className="px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-medium border border-primary/20"
-                      >
-                        {subAud}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-
-          <div className="flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all">
-            <span>View {category.samples.length} samples</span>
-            <svg
-              className="h-4 w-4 group-hover:translate-x-1 transition-transform"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </div>
+        {/* Sample count badge */}
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold">
+          {contentType.samples.length} samples
         </div>
       </div>
 
-      <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="!w-[75vw] !max-w-none max-h-[90vh] overflow-y-auto p-6">
-          <DialogHeader>
-            <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Icon className="h-6 w-6 text-primary" />
-              </div>
-              <DialogTitle className="text-3xl font-bold">{category.title}</DialogTitle>
-            </div>
-          </DialogHeader>
-
-          <div className="mb-6 p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-            <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-200">
-              {category.description}
-            </p>
+      {/* Content */}
+      <div className="p-5">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+            <Icon className="h-5 w-5 text-primary" />
           </div>
-
-          <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Samples</h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {category.samples.map((sample, idx) => (
-              <a
-                key={idx}
-                href={sample.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex flex-col overflow-hidden rounded-lg border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-primary hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
-              >
-                {category.id === "technology-writing" && (
-                  <div className="relative w-full aspect-video overflow-hidden bg-gray-100 dark:bg-gray-700">
-                    <Image
-                      src={sample.image || "/placeholder.svg?height=200&width=400"}
-                      alt={sample.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                )}
-
-                <div className="p-8 flex-1 flex flex-col gap-4">
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <span className="text-sm px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">
-                      {sample.company}
-                    </span>
-                    {sample.role && (
-                      <span className="text-sm px-3 py-1.5 rounded-full bg-purple-900/30 text-purple-300 font-medium">
-                        {sample.role}
-                      </span>
-                    )}
-                  </div>
-                  <h4 className="text-lg md:text-xl font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors leading-snug">
-                    {sample.title}
-                  </h4>
-                  {sample.germanUrl && (
-                    <a
-                      href={sample.germanUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-sm text-primary hover:text-primary/80 font-medium flex items-center gap-2 mt-2"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <span>🇩🇪 German version</span>
-                      <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </a>
-                  )}
-                </div>
-              </a>
-            ))}
-          </div>
-        </DialogContent>
-      </Dialog>
-    </>
+          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+            {contentType.name}
+          </h3>
+        </div>
+        <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
+        
+        {/* Audience */}
+        <div className="flex items-center gap-2">
+          <span className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Audience:</span>
+          <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-semibold">
+            {contentType.audience}
+          </span>
+        </div>
+      </div>
+    </div>
   )
 }
 
 export default function WritingSamplesSection() {
+  const [selectedType, setSelectedType] = useState<ContentTypeData | null>(null)
+
   return (
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
+          <p className="text-muted-foreground text-lg">Click on a content type to explore samples</p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {categories.map((category) => (
-            <CategoryCard key={category.id} category={category} />
+        {/* 2-column grid of content types */}
+        <div className="grid gap-6 md:grid-cols-2">
+          {contentTypes.map((contentType) => (
+            <ContentTypeCard
+              key={contentType.id}
+              contentType={contentType}
+              onClick={() => setSelectedType(contentType)}
+            />
           ))}
         </div>
       </div>
+
+      {/* Dialog for samples */}
+      <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
+        <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-6">
+          {selectedType && (
+            <>
+              <DialogHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+                    <selectedType.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
+                    <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
+                  </div>
+                </div>
+              </DialogHeader>
+
+              <div className="mt-6 space-y-3">
+                {selectedType.samples.map((sample, idx) => (
+                  <SampleCard key={idx} sample={sample} />
+                ))}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </section>
   )
 }

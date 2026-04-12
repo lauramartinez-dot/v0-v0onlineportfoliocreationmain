@@ -113,7 +113,7 @@ function SkillImageCard({
         className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
       />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
+      <div className={`absolute inset-0 bg-gradient-to-b ${addPurpleOverlay ? "from-purple-600/50 via-purple-500/35" : "from-purple-600/30 via-purple-500/15"} to-transparent`} />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
@@ -139,15 +139,18 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="relative rounded-xl bg-gradient-to-br from-purple-950/40 via-black/30 to-pink-950/30 border border-primary/20 shadow-lg shadow-purple-900/30 backdrop-blur-md hover:border-primary/60 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default overflow-hidden"
+        className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 cursor-default overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
-        <div className="relative flex items-center gap-4 px-5 py-4">
-          <div className="flex shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary/30 to-pink-500/20 h-11 w-11 ring-1 ring-primary/40 shadow-inner shadow-primary/10">
-            <item.icon className="h-5 w-5 text-primary drop-shadow-sm" />
-          </div>
-          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight flex-1">{item.title}</h4>
+        {/* Top accent line */}
+        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
+          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
         </div>
+        
+        {/* Bottom subtle glow on hover */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
       </div>
 
       {isOpen && createPortal(
@@ -166,10 +169,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
             </button>
 
             <div className="p-6 md:p-8">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="flex shrink-0 items-center justify-center rounded-xl bg-primary/15 h-12 w-12">
-                  <item.icon className="h-6 w-6 text-primary" />
-                </div>
+              <div className="mb-5">
                 <h3 className="font-bold text-foreground text-2xl md:text-3xl leading-tight">{item.title}</h3>
               </div>
 
@@ -218,8 +218,12 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed whitespace-nowrap">As a Technical Writer, <span className="text-white font-medium">I write about complex technology so that all humans can understand it <br></br></span>— not just the ones with a STEM degree.</p>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">But these days, I do a lot more than just writing:</p>
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+              I write docs for complex software products so that <span className="text-white font-medium">all humans </span>can understand it and use it.
+              <br /><br></br>
+              <span>Not just the ones with a STEM degree.</span>
+            </p>
+            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, writing is just part of what I do:</p>
           </div>
         </div>
 
@@ -230,7 +234,7 @@ export function HighlightsSection() {
           <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
             <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
-              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Core Skills</p>
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1 text-center">Top Skills</p>
               {coreSkills
                 .filter((s) => s.column === 1)
                 .map((skill, i) => (
@@ -243,7 +247,7 @@ export function HighlightsSection() {
           <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
             <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
-              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Core Skills</p>
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1 text-center">Top Skills</p>
               {coreSkills
                 .filter((s) => s.column === 2)
                 .map((skill, i) => (
@@ -256,7 +260,7 @@ export function HighlightsSection() {
           <div className="relative z-10 flex flex-col">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
             <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
-              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1">Core Skills</p>
+              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1 text-center">Top Skills</p>
               {coreSkills
                 .filter((s) => s.column === 3)
                 .map((skill, i) => (
@@ -286,6 +290,6 @@ export function HighlightsSection() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }

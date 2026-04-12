@@ -594,53 +594,41 @@ interface Achievement {
   icon: any
   color: string
   image?: string
+  column?: number
 }
 
 const operationalAchievements: Achievement[] = [
-  {
-    id: "scaled-teams",
-    title: "Grew a small documentation team into a global one",
-    description:
-      "I joined Personio at around 300 people as one of the first technical writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
-    icon: Users,
-    color: "#9931e7",
-    image: "/images/team-collaboration.jpeg",
-  },
-  {
-    id: "first-senior",
-    title: "Pioneered Documentation Roles",
-    description:
-      "Frequently the first or one of the first on a team, leading content operations and aligning documentation strategy with business goals. Mentored team members and supported career growth in multiple companies.",
-    icon: TrendingUp,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-  },
-  {
-    id: "business-impact",
-    title: "Delivered Tangible Business Impact",
-    description:
-      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort across organizations.",
-    icon: BarChart,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
-  },
+  // Column 1: Writing/Journalism achievements
   {
     id: "style-guide",
-    title: "Established Documentation Standards",
+    title: "Created Documentation Style Guide",
     description:
-      "Created first-ever style guides for user-facing documentation in multiple organizations. Developed localization style guides for Spanish content, leveraging hands-on translation and QA experience.",
+      "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    column: 1,
   },
   {
-    id: "localization-expansion",
-    title: "Expanded Global Documentation Reach",
+    id: "content-ownership",
+    title: "Owned 100+ Pages of Product Documentation",
     description:
-      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption across companies.",
-    icon: Globe,
+      "Managed and was responsible for over 100 pages of documentation covering multiple product features and apps, ensuring accuracy, consistency, and user-friendliness.",
+    icon: FileText,
     color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+  },
+  // Column 2: Systems/Operations achievements
+  {
+    id: "scaled-teams",
+    title: "Grew a Small Documentation Team into a Global One",
+    description:
+      "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
+    icon: Users,
+    color: "#9931e7",
+    image: "/images/team-collaboration.jpeg",
+    column: 2,
   },
   {
     id: "culture-champion",
@@ -650,6 +638,38 @@ const operationalAchievements: Achievement[] = [
     icon: Heart,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "business-impact",
+    title: "Delivered Tangible Business Impact",
+    description:
+      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort.",
+    icon: BarChart,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  // Column 3: Global/Multilingual achievements
+  {
+    id: "localization-standards",
+    title: "Established Localization Standards",
+    description:
+      "Created localization style guides for Spanish and other languages, leveraging hands-on translation and QA experience to ensure consistent quality across all markets.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
+  {
+    id: "localization-expansion",
+    title: "Expanded Help Center from 3 to 6+ Languages",
+    description:
+      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
   },
 ]
 
@@ -658,31 +678,18 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-2 min-h-[420px] flex flex-col"
+      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1"
     >
-      {/* Image Section */}
-      <div className="relative h-48 overflow-hidden">
-        {achievement.image ? (
-          <Image
-            src={achievement.image}
-            alt={achievement.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-          />
-        ) : (
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-pink-900/40" />
-        )}
-        <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
-        <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-primary/20 backdrop-blur-sm flex items-center justify-center ring-1 ring-primary/30">
-          <Icon className="h-6 w-6 text-primary" />
+      <div className="p-5 flex flex-col">
+        <div className="flex items-start gap-4 mb-3">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+            <Icon className="h-5 w-5 text-primary" />
+          </div>
+          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+            {achievement.title}
+          </h3>
         </div>
-      </div>
-      {/* Content Section */}
-      <div className="p-6 flex-1 flex flex-col">
-        <h3 className="text-xl md:text-2xl font-bold text-foreground group-hover:text-primary transition-colors mb-4">
-          {achievement.title}
-        </h3>
-        <p className="text-lg text-foreground/80 leading-relaxed">{achievement.description}</p>
+        <p className="text-base text-foreground/70 leading-relaxed">{achievement.description}</p>
       </div>
     </div>
   )
@@ -694,15 +701,75 @@ export default function CareerMapSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Operational Achievements</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Achievements</h2>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2">
-          {operationalAchievements.map((achievement) => (
-            <AchievementCard key={achievement.id} achievement={achievement} />
-          ))}
+        {/* Personio Company Card */}
+        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
+          {/* Company Header */}
+          <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
+            <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
+              <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-foreground">Personio</h3>
+              <p className="text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
+            </div>
+          </div>
+
+          {/* Achievement Grid */}
+          <div className="grid gap-6 md:grid-cols-3">
+            {/* Column 1 - Writing */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+                </div>
+              </div>
+              {operationalAchievements
+                .filter((a) => a.column === 1)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </div>
+            {/* Column 2 - Operations */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
+                </div>
+              </div>
+              {operationalAchievements
+                .filter((a) => a.column === 2)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </div>
+            {/* Column 3 - Global */}
+            <div className="flex flex-col gap-4">
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
+                </div>
+              </div>
+              {operationalAchievements
+                .filter((a) => a.column === 3)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </div>
+          </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
