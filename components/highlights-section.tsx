@@ -218,8 +218,13 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed whitespace-nowrap">As a Technical Writer, <span className="text-white font-medium">I write about complex technology so that all humans can understand it <br></br></span>— not just the ones with a STEM degree.</p>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">But these days, I do a lot more than just writing:</p>
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+              <span className="text-white font-medium">I&apos;ve always written about complex technology so that all humans can understand it</span>
+              <br />
+              <span>— not just the ones with a STEM degree.</span>
+            </p>
+            <p className="text-white font-medium">First as a Tech Journalist, for anyone curious enough to read. Now as a Technical Writer, for SaaS users who need to get things done. But at the Senior level, the job is bigger than writing alone:</p>
+            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, I do a lot more than just writing:</p>
           </div>
         </div>
 
