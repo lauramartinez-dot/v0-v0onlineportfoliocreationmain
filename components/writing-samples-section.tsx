@@ -89,6 +89,39 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
+    id: "api-documentation",
+    name: "API Documentation",
+    description: "Technical reference documentation for developers and integrations",
+    icon: BookOpen,
+    image: "/vr-person-blue-tech.png",
+    samples: [
+      {
+        title: "Personio API Documentation",
+        url: "https://developer.personio.de/reference/introduction",
+        company: "Personio",
+      },
+      {
+        title: "Authentication Guide",
+        url: "https://developer.personio.de/reference/authentication",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "ux-writing",
+    name: "UX Writing",
+    description: "In-product copy, microcopy, and user interface text",
+    icon: Pen,
+    image: "/startup-workspace.jpg",
+    samples: [
+      {
+        title: "Personio Help Center In-App Guidance",
+        url: "https://support.personio.de/hc/en-us",
+        company: "Personio",
+      },
+    ],
+  },
+  {
     id: "journalism",
     name: "Foundational Tech Journalism Writing",
     description: "Science and technology articles for leading publications",
