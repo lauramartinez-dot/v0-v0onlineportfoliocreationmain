@@ -289,6 +289,17 @@ export function HighlightsSection() {
             </p>
           </div>
         </div>
+        
+        {/* Bernard Marr Quote */}
+        <div className="mt-12 max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl shadow-purple-900/20 border border-primary/10">
+          <Image
+            src="/disclaimer-quote.png"
+            alt="Quote by Bernard Marr about digital literacy"
+            width={800}
+            height={300}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </section >
   )
