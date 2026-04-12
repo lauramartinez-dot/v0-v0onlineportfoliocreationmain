@@ -18,7 +18,6 @@ interface ContentTypeData {
   icon: any
   image: string
   audience: string
-  subAudience?: string[]
   samples: WritingSample[]
 }
 
@@ -29,8 +28,7 @@ const contentTypes: ContentTypeData[] = [
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/help-guides-header.png",
-    audience: "End Users",
-    subAudience: ["HR Managers", "Administrators", "Employees"],
+    audience: "Business Users",
     samples: [
       {
         title: "Overview of permissions and employee roles",
@@ -55,8 +53,7 @@ const contentTypes: ContentTypeData[] = [
     description: "Educational videos and tutorials in multiple languages",
     icon: Video,
     image: "/startup-workspace.jpg",
-    audience: "End Users",
-    subAudience: ["Visual Learners", "Non-native Speakers"],
+    audience: "Business Users",
     samples: [
       {
         title: "Overview of permissions and employee roles (English)",
@@ -86,8 +83,7 @@ const contentTypes: ContentTypeData[] = [
     description: "Product updates and feature announcements",
     icon: Mail,
     image: "/still-life-supply-chain.jpg",
-    audience: "All Users",
-    subAudience: ["Product Managers", "Administrators"],
+    audience: "Business Users",
     samples: [
       {
         title: "Personio Product Updates",
@@ -103,7 +99,6 @@ const contentTypes: ContentTypeData[] = [
     icon: BookOpen,
     image: "/vr-person-blue-tech.png",
     audience: "Developers",
-    subAudience: ["Integration Engineers", "Technical Architects"],
     samples: [
       {
         title: "Personio API Documentation",
@@ -123,8 +118,7 @@ const contentTypes: ContentTypeData[] = [
     description: "In-product copy, microcopy, and user interface text",
     icon: Pen,
     image: "/startup-workspace.jpg",
-    audience: "End Users",
-    subAudience: ["Product Teams", "Designers"],
+    audience: "Business Users",
     samples: [
       {
         title: "Personio Help Center In-App Guidance",
@@ -140,7 +134,6 @@ const contentTypes: ContentTypeData[] = [
     icon: Newspaper,
     image: "/journalism-header.png",
     audience: "General Public",
-    subAudience: ["Tech Enthusiasts", "Science Readers"],
     samples: [
       {
         title: "A day in the life of an online content moderator",
