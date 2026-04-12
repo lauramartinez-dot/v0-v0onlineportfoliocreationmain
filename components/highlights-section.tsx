@@ -139,12 +139,18 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   return (
     <>
       <div
-        className="relative rounded-xl bg-gradient-to-br from-purple-950/40 via-black/30 to-pink-950/30 border border-primary/20 shadow-lg shadow-purple-900/30 backdrop-blur-md hover:border-primary/60 hover:scale-[1.03] hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-default overflow-hidden"
+        className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 cursor-default overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-white/[0.03] via-transparent to-white/[0.05] pointer-events-none" />
-        <div className="relative flex items-center justify-center px-5 py-5 min-h-[72px]">
-          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight text-center">{item.title}</h4>
+        {/* Top accent line */}
+        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+        
+        {/* Content */}
+        <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
+          <h4 className="font-semibold text-foreground text-base md:text-lg leading-snug text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
         </div>
+        
+        {/* Bottom subtle glow on hover */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
       </div>
 
       {isOpen && createPortal(
