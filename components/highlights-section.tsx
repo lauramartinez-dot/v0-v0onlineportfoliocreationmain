@@ -217,11 +217,12 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
-          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
+          <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              I write docs for complex software products so that <span className="text-white font-medium">all humans </span>can understand it and use it.
-              <br /><br></br>
-              <span>Not just the ones with a STEM degree.</span>
+              I write docs for complex software products so that <span className="text-white font-medium">all humans</span> can understand it and use it.
+            </p>
+            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
+              Not just the ones with a STEM degree.
             </p>
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, writing is just part of what I do:</p>
           </div>
