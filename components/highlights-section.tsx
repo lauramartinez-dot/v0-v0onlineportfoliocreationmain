@@ -293,7 +293,6 @@ export function HighlightsSection() {
           </div>
         </div>
       </div>
-    </div>
     </section>
   )
 }
