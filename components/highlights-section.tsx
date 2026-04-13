@@ -286,7 +286,7 @@ export function HighlightsSection() {
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
             <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-4 relative z-10 px-[7px]">
-              I help non-technical people make sense of technology because:
+              I help all humans — with a specific focus on non-technical people and women — get more comfortable using new software and AI tools because:
             </p>
 
             {/* Bernard Marr Quote */}
