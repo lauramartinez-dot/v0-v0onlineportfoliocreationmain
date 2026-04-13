@@ -704,70 +704,90 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Achievements</h2>
         </div>
 
-        {/* Column Headers - Outside company boxes */}
-        <div className="grid gap-6 md:grid-cols-3 mb-8">
-          {/* Column 1 Header - Writing */}
-          <div className="relative h-20 rounded-xl overflow-hidden">
-            <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-            <div className="absolute inset-0 flex items-end px-4 pb-3">
-              <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+        {/* Three Pillars Container */}
+        <div className="grid gap-6 md:grid-cols-3">
+          {/* Pillar 1 - Writing */}
+          <div className="flex flex-col">
+            {/* Pillar Header */}
+            <div className="relative h-24 rounded-t-2xl overflow-hidden border-x border-t border-primary/20">
+              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/30 to-purple-950/80" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-white md:text-3xl tracking-wide">I write</h3>
+              </div>
             </div>
-          </div>
-          {/* Column 2 Header - Operations */}
-          <div className="relative h-20 rounded-xl overflow-hidden">
-            <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-            <div className="absolute inset-0 flex items-end px-4 pb-3">
-              <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
-            </div>
-          </div>
-          {/* Column 3 Header - Global */}
-          <div className="relative h-20 rounded-xl overflow-hidden">
-            <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-            <div className="absolute inset-0 flex items-end px-4 pb-3">
-              <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
-            </div>
-          </div>
-        </div>
-
-        {/* Personio Company Card */}
-        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
-          {/* Company Header */}
-          <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
-            <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
-              <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-foreground">Personio</h3>
-              <p className="text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
-            </div>
-          </div>
-
-          {/* Achievement Grid - Company specific */}
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Column 1 - Writing */}
-            <div className="flex flex-col gap-4">
+            {/* Pillar Content */}
+            <div className="flex-1 rounded-b-2xl border-x border-b border-primary/20 bg-gradient-to-b from-purple-950/40 to-background p-4 space-y-4">
+              {/* Personio achievements for column 1 */}
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-primary/10">
+                <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center ring-1 ring-primary/20">
+                  <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">Personio</p>
+                  <p className="text-xs text-foreground/50">2021 - 2025</p>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 1)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </div>
-            {/* Column 2 - Operations */}
-            <div className="flex flex-col gap-4">
+          </div>
+
+          {/* Pillar 2 - Operations */}
+          <div className="flex flex-col">
+            {/* Pillar Header */}
+            <div className="relative h-24 rounded-t-2xl overflow-hidden border-x border-t border-primary/20">
+              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/30 to-purple-950/80" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-white md:text-3xl tracking-wide">I build</h3>
+              </div>
+            </div>
+            {/* Pillar Content */}
+            <div className="flex-1 rounded-b-2xl border-x border-b border-primary/20 bg-gradient-to-b from-purple-950/40 to-background p-4 space-y-4">
+              {/* Personio achievements for column 2 */}
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-primary/10">
+                <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center ring-1 ring-primary/20">
+                  <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">Personio</p>
+                  <p className="text-xs text-foreground/50">2021 - 2025</p>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 2)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </div>
-            {/* Column 3 - Global */}
-            <div className="flex flex-col gap-4">
+          </div>
+
+          {/* Pillar 3 - Global */}
+          <div className="flex flex-col">
+            {/* Pillar Header */}
+            <div className="relative h-24 rounded-t-2xl overflow-hidden border-x border-t border-primary/20">
+              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-60" />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/30 to-purple-950/80" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <h3 className="text-2xl font-bold text-white md:text-3xl tracking-wide">I translate</h3>
+              </div>
+            </div>
+            {/* Pillar Content */}
+            <div className="flex-1 rounded-b-2xl border-x border-b border-primary/20 bg-gradient-to-b from-purple-950/40 to-background p-4 space-y-4">
+              {/* Personio achievements for column 3 */}
+              <div className="flex items-center gap-3 mb-4 pb-3 border-b border-primary/10">
+                <div className="relative w-10 h-10 rounded-lg overflow-hidden bg-white flex items-center justify-center ring-1 ring-primary/20">
+                  <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
+                </div>
+                <div>
+                  <p className="text-sm font-semibold text-foreground">Personio</p>
+                  <p className="text-xs text-foreground/50">2021 - 2025</p>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 3)
                 .map((achievement) => (
