@@ -286,22 +286,13 @@ export function HighlightsSection() {
               <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
             </div>
             <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-4 relative z-10 px-[7px]">
-              I help all humans — with a specific focus on non-technical people and women — get more comfortable using new software and AI tools because:
+              I help all humans — with a specific focus on non-technical people and women — get more comfortable using new software and AI tools because over 90% of European jobs now require digital skills, yet nearly 1 in 3 Europeans still doesn't have them.
+              — Eurostat, European Commission
             </p>
-
-            {/* Bernard Marr Quote */}
-            <div className="relative z-10 rounded-xl overflow-hidden">
-              <Image
-                src="/disclaimer-quote.png"
-                alt="Quote by Bernard Marr about digital literacy"
-                width={800}
-                height={300}
-                className="w-full h-auto"
-              />
-            </div>
           </div>
         </div>
       </div>
+    </div>
     </section >
   )
 }
