@@ -704,34 +704,6 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Achievements</h2>
         </div>
 
-        {/* Column Headers - Outside company boxes */}
-        <div className="grid gap-6 md:grid-cols-3 mb-6">
-          {/* Column 1 Header - Writing */}
-          <div className="relative h-20 rounded-xl overflow-hidden border border-primary/20 shadow-lg">
-            <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-60" />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/30 to-purple-950/90" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-xl font-bold text-white md:text-2xl tracking-wide">I write</h3>
-            </div>
-          </div>
-          {/* Column 2 Header - Operations */}
-          <div className="relative h-20 rounded-xl overflow-hidden border border-primary/20 shadow-lg">
-            <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-60" />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/30 to-purple-950/90" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-xl font-bold text-white md:text-2xl tracking-wide">I build</h3>
-            </div>
-          </div>
-          {/* Column 3 Header - Global */}
-          <div className="relative h-20 rounded-xl overflow-hidden border border-primary/20 shadow-lg">
-            <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-60" />
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/30 to-purple-950/90" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <h3 className="text-xl font-bold text-white md:text-2xl tracking-wide">I translate</h3>
-            </div>
-          </div>
-        </div>
-
         {/* Personio Company Card */}
         <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
           {/* Company Header */}
@@ -749,6 +721,14 @@ export default function CareerMapSection() {
           <div className="grid gap-6 md:grid-cols-3">
             {/* Column 1 - Writing */}
             <div className="flex flex-col gap-4">
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 1)
                 .map((achievement) => (
@@ -757,6 +737,14 @@ export default function CareerMapSection() {
             </div>
             {/* Column 2 - Operations */}
             <div className="flex flex-col gap-4">
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 2)
                 .map((achievement) => (
@@ -765,6 +753,14 @@ export default function CareerMapSection() {
             </div>
             {/* Column 3 - Global */}
             <div className="flex flex-col gap-4">
+              <div className="relative h-20 rounded-xl overflow-hidden">
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                <div className="absolute inset-0 flex items-end px-4 pb-3">
+                  <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
+                </div>
+              </div>
               {operationalAchievements
                 .filter((a) => a.column === 3)
                 .map((achievement) => (
@@ -774,6 +770,6 @@ export default function CareerMapSection() {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   )
 }
