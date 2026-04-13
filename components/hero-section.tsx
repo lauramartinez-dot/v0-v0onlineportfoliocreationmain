@@ -60,6 +60,7 @@ export function HeroSection() {
                 <li>expands into new countries</li>
               </ul>
               <p className="md:w-[120%]"><span className="text-white font-medium">Right when documentation stops being about adding more now, and becomes about making sure you can add a lot more later.</span></p>
+              <br></br>Way more docs. With more visuals. For more audiences. In more languages.
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
