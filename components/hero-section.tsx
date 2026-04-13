@@ -52,14 +52,17 @@ export function HeroSection() {
               {"🌍"} Senior Technical Writer
             </h4>
 
-            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-normal">
-              <p className="mb-4">I&apos;m the writer you hire when your software company:</p>
-              <ul className="list-disc list-inside space-y-1 mb-4 pl-2">
+            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-normal space-y-4">
+              <p>I&apos;m the writer you hire when your software company:</p>
+              <ul className="list-disc list-inside space-y-1 pl-2">
                 <li>starts growing fast</li>
                 <li>goes from ~100 to 1,000+ people</li>
                 <li>expands into new countries</li>
               </ul>
-              <p className="md:w-[120%]"><span className="text-white font-medium">Right when documentation stops being about adding more now, <br></br>and becomes about making sure you can add a lot more later.</span><br></br><span className="whitespace-nowrap"><br></br>Way more docs. With more visuals. For more audiences. In more languages.</span></p>
+              <p className="text-white font-medium md:w-[120%]">
+                Right when documentation stops being about adding more now,<br />and becomes about making sure you can add a lot more later.
+              </p>
+              <p className="whitespace-nowrap">Way more docs. With more visuals. For more audiences. In more languages.</p>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
