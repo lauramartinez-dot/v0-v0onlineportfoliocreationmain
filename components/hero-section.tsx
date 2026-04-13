@@ -62,7 +62,7 @@ export function HeroSection() {
               <p className="text-white font-medium md:w-[120%]">
                 Right when documentation stops being about adding more now,<br />and becomes about making sure you can add a lot more later.
               </p>
-              <p className="whitespace-nowrap">Way more docs. With more visuals. For more audiences. In more languages.</p>
+              <p className="whitespace-nowrap">Way more pages. With more visuals. For more audiences. In more languages.</p>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
