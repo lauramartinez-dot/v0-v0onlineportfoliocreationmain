@@ -294,6 +294,6 @@ export function HighlightsSection() {
         </div>
       </div>
     </div>
-    </section >
+    </section>
   )
 }
