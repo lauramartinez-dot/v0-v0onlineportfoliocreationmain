@@ -59,8 +59,8 @@ export function HeroSection() {
                 <li>goes from ~100 to 1,000+ people</li>
                 <li>expands into new countries</li>
               </ul>
-              <p className="text-white font-semibold md:w-[120%]">
-                Right when documentation stops being about adding more now,<br />and becomes about making sure you can add a lot more later.
+              <p className="md:w-[120%]">
+                Right when documentation stops being about adding more now,<br />and becomes about making sure <span className="text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">you can add a lot more later</span>.
               </p>
               <p className="whitespace-nowrap">Way more pages. With more visuals. For more audiences. In more languages.</p>
             </div>
