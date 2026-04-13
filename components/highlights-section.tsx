@@ -222,7 +222,7 @@ export function HighlightsSection() {
               I write docs for complex software products so that <span className="text-white font-medium">all humans</span> can understand it and use it.
             </p>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              Not just the ones with a STEM degree.
+              Not just the ones with an IT background.
             </p>
             <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, writing is just part of what I do:</p>
           </div>
