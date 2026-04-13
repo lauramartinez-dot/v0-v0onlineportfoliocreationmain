@@ -219,7 +219,7 @@ export function HighlightsSection() {
           <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
           <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              I write about complex software products so that <span className="text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">all humans</span> can understand it and use it.
+              I write about complex software products so that <span className="text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">all humans</span> can understand and use them.
             </p>
             <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
               Not just the ones with an IT background.
