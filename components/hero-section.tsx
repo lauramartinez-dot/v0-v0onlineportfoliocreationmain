@@ -59,7 +59,7 @@ export function HeroSection() {
                 <li>goes from ~100 to 1,000+ people</li>
                 <li>expands into new countries</li>
               </ul>
-              <p className="text-white font-medium md:w-[120%]">
+              <p className="text-white font-semibold md:w-[120%]">
                 Right when documentation stops being about adding more now,<br />and becomes about making sure you can add a lot more later.
               </p>
               <p className="whitespace-nowrap">Way more pages. With more visuals. For more audiences. In more languages.</p>
