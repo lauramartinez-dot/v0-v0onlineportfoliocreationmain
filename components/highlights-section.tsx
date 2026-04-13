@@ -287,7 +287,8 @@ export function HighlightsSection() {
             </div>
             <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-4 relative z-10 px-[7px]">
               I help all humans — with a specific focus on non-technical people and women — get more comfortable using new software and AI tools because over 90% of European jobs now require digital skills, yet nearly 1 in 3 Europeans still doesn't have them.
-              — Eurostat, European Commission
+              <br></br>
+              — Eurostat · Regional Yearbook, European Commission, 2025
             </p>
           </div>
         </div>
