@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import Image from "next/image"
 import {
   GraduationCap,
@@ -595,77 +596,54 @@ interface Achievement {
   color: string
   image?: string
   column?: number
+  bulletPoints?: string[]
 }
 
 const operationalAchievements: Achievement[] = [
-  // Column 1: Writing/Journalism achievements
-  {
-    id: "style-guide",
-    title: "Created Documentation Style Guide",
-    description:
-      "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
-    icon: FileText,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
-    column: 1,
-  },
+  // Column 1: Writing achievements
   {
     id: "content-ownership",
     title: "Owned 100+ Pages of Product Documentation",
     description:
-      "Managed and was responsible for over 100 pages of documentation covering multiple product features and apps, ensuring accuracy, consistency, and user-friendliness.",
+      "Managed and was responsible for over 100 pages of documentation covering multiple product features and apps, including analytics and account set up.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
   },
-  // Column 2: Systems/Operations achievements
+  // Column 2: Build/Operations achievements
   {
-    id: "scaled-teams",
-    title: "Grew a Small Documentation Team into a Global One",
+    id: "ai-powered-processes",
+    title: "Built AI-Powered, Data-Informed Processes",
     description:
-      "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
-    icon: Users,
+      "Built AI-powered, data-informed processes to optimize team operations.",
+    icon: Bot,
     color: "#9931e7",
-    image: "/images/team-collaboration.jpeg",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
     column: 2,
+    bulletPoints: [
+      "Created an AI assistant for Spanish translation review, reducing review time by 90%.",
+      "Enabled the team to deprioritize 20% of feature release tasks with low audience impact.",
+      "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance.",
+      "Enabled the team to generate reports 30% faster by working with Data Analysts to enhance Tableau.",
+    ],
   },
   {
-    id: "culture-champion",
-    title: "Fostered Inclusive Culture and DEI Initiatives",
+    id: "womens-committee",
+    title: "Co-Founded Personio's First Women's Committee",
     description:
-      "Recognized for contributions to team culture and morale across organizations. Co-founded initiatives supporting women and underrepresented groups in tech, promoting diversity and inclusion at scale.",
+      "Co-founded Personio's first Women's Committee, hosting informal lunches on topics like salary negotiation, assertive communication, and financial investment to empower female colleagues and spark knowledge sharing.",
     icon: Heart,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
-  {
-    id: "business-impact",
-    title: "Delivered Tangible Business Impact",
-    description:
-      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort.",
-    icon: BarChart,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-    column: 2,
-  },
-  // Column 3: Global/Multilingual achievements
-  {
-    id: "localization-standards",
-    title: "Established Localization Standards",
-    description:
-      "Created localization style guides for Spanish and other languages, leveraging hands-on translation and QA experience to ensure consistent quality across all markets.",
-    icon: Globe,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
-    column: 3,
-  },
+  // Column 3: Translate/Global achievements
   {
     id: "localization-expansion",
-    title: "Expanded Help Center from 3 to 6+ Languages",
+    title: "Grew Documentation from 3 to 6 Languages",
     description:
-      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption.",
+      "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
     icon: Globe,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
@@ -675,21 +653,44 @@ const operationalAchievements: Achievement[] = [
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   const Icon = achievement.icon
+  const [isExpanded, setIsExpanded] = React.useState(false)
+  const hasBulletPoints = achievement.bulletPoints && achievement.bulletPoints.length > 0
+
   return (
     <div
       key={achievement.id}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1"
+      className={`group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 ${hasBulletPoints ? 'cursor-pointer' : ''}`}
+      onClick={() => hasBulletPoints && setIsExpanded(!isExpanded)}
     >
       <div className="p-5 flex flex-col">
         <div className="flex items-start gap-4 mb-3">
           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
             <Icon className="h-5 w-5 text-primary" />
           </div>
-          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-            {achievement.title}
-          </h3>
+          <div className="flex-1">
+            <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+              {achievement.title}
+            </h3>
+            {hasBulletPoints && (
+              <span className="text-xs text-primary/70 mt-1 inline-block">
+                {isExpanded ? 'Click to collapse' : 'Click to see details'}
+              </span>
+            )}
+          </div>
         </div>
         <p className="text-base text-foreground/70 leading-relaxed">{achievement.description}</p>
+        
+        {/* Expandable bullet points */}
+        {hasBulletPoints && isExpanded && (
+          <ul className="mt-4 space-y-2 border-t border-primary/10 pt-4">
+            {achievement.bulletPoints?.map((point, index) => (
+              <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
+                <span className="text-primary mt-0.5">✓</span>
+                <span>{point}</span>
+              </li>
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   )
