@@ -658,6 +658,36 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
+  {
+    id: "first-senior-promotion",
+    title: "First Technical Writer Promoted to Senior",
+    description:
+      "First Technical Writer on a 10-person team to be promoted to Senior.",
+    icon: Award,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "mentored-teammates",
+    title: "Mentored 10 Teammates",
+    description:
+      "Mentored 10 teammates, resulting in one being promoted to our second Senior role.",
+    icon: Users,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "training-sessions",
+    title: "Led Training Sessions and Workshops",
+    description:
+      "Led training sessions and workshops to upskill writers on new tools and processes.",
+    icon: GraduationCap,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
   // Column 3: Translate/Global achievements
   {
     id: "localization-expansion",
