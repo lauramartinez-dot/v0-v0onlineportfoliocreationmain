@@ -82,7 +82,7 @@ export function HeroSection() {
                 className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
                 asChild
               >
-                <a href="https://drive.google.com/file/d/1x6TCtCtVdiyf0thyoT82XBYd8SANmQJs/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV
                   <Download className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
                 </a>
