@@ -36,7 +36,7 @@ export function Navigation() {
 
           <div className="hidden md:flex items-center">
             <Button size="default" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
-              <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1x6TCtCtVdiyf0thyoT82XBYd8SANmQJs/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Download CV
               </a>
             </Button>
@@ -67,7 +67,7 @@ export function Navigation() {
                 </a>
               ))}
               <Button size="sm" className="rounded-full mt-2 bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
-                <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1x6TCtCtVdiyf0thyoT82XBYd8SANmQJs/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>
               </Button>
