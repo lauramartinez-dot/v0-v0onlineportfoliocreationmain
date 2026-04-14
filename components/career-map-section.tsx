@@ -602,6 +602,16 @@ interface Achievement {
 const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
   {
+    id: "style-guide",
+    title: "Created Documentation Style Guide",
+    description:
+      "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+  },
+  {
     id: "content-ownership",
     title: "Owned 100+ Pages of Product Documentation",
     description:
@@ -612,6 +622,16 @@ const operationalAchievements: Achievement[] = [
     column: 1,
   },
   // Column 2: Build/Operations achievements
+  {
+    id: "scaled-teams",
+    title: "Grew a Small Documentation Team into a Global One",
+    description:
+      "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
+    icon: Users,
+    color: "#9931e7",
+    image: "/images/team-collaboration.jpeg",
+    column: 2,
+  },
   {
     id: "ai-powered-processes",
     title: "Built AI-Powered, Data-Informed Processes",
