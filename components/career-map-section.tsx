@@ -748,6 +748,7 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
 }
 
 export default function CareerMapSection() {
+  const [isOMPExpanded, setIsOMPExpanded] = React.useState(false)
   const [isPersonioExpanded, setIsPersonioExpanded] = React.useState(false)
 
   return (
@@ -756,6 +757,69 @@ export default function CareerMapSection() {
         {/* Section Header */}
         <div className="mb-16 text-center">
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Achievements</h2>
+        </div>
+
+        {/* OMP Company Card */}
+        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10 mb-6">
+          {/* Company Header - Clickable */}
+          <div 
+            className="flex items-center gap-4 cursor-pointer group"
+            onClick={() => setIsOMPExpanded(!isOMPExpanded)}
+          >
+            <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
+              <span className="text-2xl font-bold text-primary">OMP</span>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">OMP</h3>
+              <p className="text-foreground/60">Technical Writer &middot; 2019 - 2021</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-primary/70">{isOMPExpanded ? 'Click to collapse' : 'Click to expand'}</span>
+              <ChevronDown className={`w-6 h-6 text-primary transition-transform duration-300 ${isOMPExpanded ? 'rotate-180' : ''}`} />
+            </div>
+          </div>
+
+          {/* Achievement Grid - Collapsible */}
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOMPExpanded ? 'max-h-[3000px] opacity-100 mt-8 pt-6 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
+            <div className="grid gap-6 md:grid-cols-3">
+              {/* Column 1 - Writing */}
+              <div className="flex flex-col gap-4">
+                <div className="relative h-20 rounded-xl overflow-hidden">
+                  <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                  <div className="absolute inset-0 flex items-end px-4 pb-3">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+                  </div>
+                </div>
+                <p className="text-foreground/50 text-sm italic">No achievements added yet</p>
+              </div>
+              {/* Column 2 - Operations */}
+              <div className="flex flex-col gap-4">
+                <div className="relative h-20 rounded-xl overflow-hidden">
+                  <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                  <div className="absolute inset-0 flex items-end px-4 pb-3">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
+                  </div>
+                </div>
+                <p className="text-foreground/50 text-sm italic">No achievements added yet</p>
+              </div>
+              {/* Column 3 - Global */}
+              <div className="flex flex-col gap-4">
+                <div className="relative h-20 rounded-xl overflow-hidden">
+                  <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                  <div className="absolute inset-0 flex items-end px-4 pb-3">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
+                  </div>
+                </div>
+                <p className="text-foreground/50 text-sm italic">No achievements added yet</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Personio Company Card */}
