@@ -730,7 +730,7 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
           </div>
         </div>
         <p className="text-base text-foreground/70 leading-relaxed">{achievement.description}</p>
-        
+
         {/* Expandable bullet points */}
         {hasBulletPoints && isExpanded && (
           <ul className="mt-4 space-y-2 border-t border-primary/10 pt-4">
@@ -762,7 +762,7 @@ export default function CareerMapSection() {
         {/* OMP Company Card */}
         <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300">
           {/* Company Header - Clickable */}
-          <div 
+          <div
             className="flex items-center gap-6 cursor-pointer group"
             onClick={() => setIsOMPExpanded(!isOMPExpanded)}
           >
@@ -792,7 +792,7 @@ export default function CareerMapSection() {
                     <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
                   </div>
                 </div>
-                <p className="text-foreground/50 text-sm italic">No achievements added yet</p>
+                <p className="text-foreground/50 text-sm italic">WIP - I'm still getting onboarded :) </p>
               </div>
               {/* Column 2 - Operations */}
               <div className="flex flex-col gap-4">
@@ -804,7 +804,7 @@ export default function CareerMapSection() {
                     <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
                   </div>
                 </div>
-                <p className="text-foreground/50 text-sm italic">No achievements added yet</p>
+                <p className="text-foreground/50 text-sm italic">WIP - I'm still getting onboarded :)</p>
               </div>
               {/* Column 3 - Global */}
               <div className="flex flex-col gap-4">
@@ -816,7 +816,7 @@ export default function CareerMapSection() {
                     <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
                   </div>
                 </div>
-                <p className="text-foreground/50 text-sm italic">No achievements added yet</p>
+                <p className="text-foreground/50 text-sm italic">WIP - I'm still getting onboarded :)</p>
               </div>
             </div>
           </div>
@@ -825,7 +825,7 @@ export default function CareerMapSection() {
         {/* Personio Company Card */}
         <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 hover:border-primary/50 transition-all duration-300">
           {/* Company Header - Clickable */}
-          <div 
+          <div
             className="flex items-center gap-6 cursor-pointer group"
             onClick={() => setIsPersonioExpanded(!isPersonioExpanded)}
           >
@@ -845,54 +845,54 @@ export default function CareerMapSection() {
           {/* Achievement Grid - Collapsible */}
           <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isPersonioExpanded ? 'max-h-[3000px] opacity-100 mt-8 pt-6 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
             <div className="grid gap-6 md:grid-cols-3">
-            {/* Column 1 - Writing */}
-            <div className="flex flex-col gap-4">
-              <div className="relative h-20 rounded-xl overflow-hidden">
-                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                <div className="absolute inset-0 flex items-end px-4 pb-3">
-                  <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+              {/* Column 1 - Writing */}
+              <div className="flex flex-col gap-4">
+                <div className="relative h-20 rounded-xl overflow-hidden">
+                  <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                  <div className="absolute inset-0 flex items-end px-4 pb-3">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+                  </div>
                 </div>
+                {operationalAchievements
+                  .filter((a) => a.column === 1)
+                  .map((achievement) => (
+                    <AchievementCard key={achievement.id} achievement={achievement} />
+                  ))}
               </div>
-              {operationalAchievements
-                .filter((a) => a.column === 1)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </div>
-            {/* Column 2 - Operations */}
-            <div className="flex flex-col gap-4">
-              <div className="relative h-20 rounded-xl overflow-hidden">
-                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                <div className="absolute inset-0 flex items-end px-4 pb-3">
-                  <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
+              {/* Column 2 - Operations */}
+              <div className="flex flex-col gap-4">
+                <div className="relative h-20 rounded-xl overflow-hidden">
+                  <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                  <div className="absolute inset-0 flex items-end px-4 pb-3">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
+                  </div>
                 </div>
+                {operationalAchievements
+                  .filter((a) => a.column === 2)
+                  .map((achievement) => (
+                    <AchievementCard key={achievement.id} achievement={achievement} />
+                  ))}
               </div>
-              {operationalAchievements
-                .filter((a) => a.column === 2)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </div>
-            {/* Column 3 - Global */}
-            <div className="flex flex-col gap-4">
-              <div className="relative h-20 rounded-xl overflow-hidden">
-                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                <div className="absolute inset-0 flex items-end px-4 pb-3">
-                  <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
+              {/* Column 3 - Global */}
+              <div className="flex flex-col gap-4">
+                <div className="relative h-20 rounded-xl overflow-hidden">
+                  <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
+                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+                  <div className="absolute inset-0 flex items-end px-4 pb-3">
+                    <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
+                  </div>
                 </div>
+                {operationalAchievements
+                  .filter((a) => a.column === 3)
+                  .map((achievement) => (
+                    <AchievementCard key={achievement.id} achievement={achievement} />
+                  ))}
               </div>
-              {operationalAchievements
-                .filter((a) => a.column === 3)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </div>
             </div>
           </div>
         </div>
