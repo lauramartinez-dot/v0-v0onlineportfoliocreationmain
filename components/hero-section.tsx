@@ -60,7 +60,7 @@ export function HeroSection() {
                 <li>expands into new countries</li>
               </ul>
               <p className="md:w-[120%]">
-                Right when documentation stops being about adding more now,<br />and becomes about <span className="relative group/tooltip cursor-pointer text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">making sure you can add a lot more later<span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">Way more pages. With more visuals. For more audiences. In more languages.</span></span>.
+                Right when documentation stops being about adding more now,<br />and becomes about <span className="relative group/tooltip cursor-pointer text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">making sure you can add a lot more later<span className="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg">Way more pages. With more visuals. For more audiences. In more languages.</span></span>.
               </p>
             </div>
 
