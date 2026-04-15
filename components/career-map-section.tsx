@@ -771,7 +771,7 @@ export default function CareerMapSection() {
             </div>
             <div className="flex-1">
               <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">OMP</h3>
-              <p className="text-lg text-foreground/60">Technical Writer &middot; 2019 - 2021</p>
+              <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2026 - Present</p>
             </div>
             <div className="flex items-center gap-3 bg-primary/10 px-4 py-2 rounded-full group-hover:bg-primary/20 transition-all">
               <span className="text-sm font-medium text-primary/80">{isOMPExpanded ? 'Collapse' : 'Expand'}</span>
