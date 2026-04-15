@@ -15,6 +15,7 @@ import {
   Trash,
   FileText,
   Heart,
+  ChevronDown,
 } from "lucide-react"
 
 interface Experience {
@@ -747,6 +748,8 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
 }
 
 export default function CareerMapSection() {
+  const [isPersonioExpanded, setIsPersonioExpanded] = React.useState(false)
+
   return (
     <section id="top-achievements" className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -757,19 +760,27 @@ export default function CareerMapSection() {
 
         {/* Personio Company Card */}
         <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
-          {/* Company Header */}
-          <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
+          {/* Company Header - Clickable */}
+          <div 
+            className="flex items-center gap-4 cursor-pointer group"
+            onClick={() => setIsPersonioExpanded(!isPersonioExpanded)}
+          >
             <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
               <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
             </div>
-            <div>
-              <h3 className="text-2xl font-bold text-foreground">Personio</h3>
+            <div className="flex-1">
+              <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">Personio</h3>
               <p className="text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-primary/70">{isPersonioExpanded ? 'Click to collapse' : 'Click to expand'}</span>
+              <ChevronDown className={`w-6 h-6 text-primary transition-transform duration-300 ${isPersonioExpanded ? 'rotate-180' : ''}`} />
             </div>
           </div>
 
-          {/* Achievement Grid */}
-          <div className="grid gap-6 md:grid-cols-3">
+          {/* Achievement Grid - Collapsible */}
+          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isPersonioExpanded ? 'max-h-[3000px] opacity-100 mt-8 pt-6 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
+            <div className="grid gap-6 md:grid-cols-3">
             {/* Column 1 - Writing */}
             <div className="flex flex-col gap-4">
               <div className="relative h-20 rounded-xl overflow-hidden">
@@ -818,9 +829,10 @@ export default function CareerMapSection() {
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </div>
+            </div>
           </div>
         </div>
       </div>
-    </section >
+    </section>
   )
 }
