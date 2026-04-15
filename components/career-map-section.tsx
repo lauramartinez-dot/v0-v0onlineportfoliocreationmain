@@ -760,22 +760,22 @@ export default function CareerMapSection() {
         </div>
 
         {/* OMP Company Card */}
-        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10 mb-6">
+        <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300">
           {/* Company Header - Clickable */}
           <div 
-            className="flex items-center gap-4 cursor-pointer group"
+            className="flex items-center gap-6 cursor-pointer group"
             onClick={() => setIsOMPExpanded(!isOMPExpanded)}
           >
-            <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
-              <span className="text-2xl font-bold text-primary">OMP</span>
+            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg group-hover:ring-primary/50 transition-all">
+              <Image src="/omp-logo.png" alt="OMP" fill className="object-contain p-2" />
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">OMP</h3>
-              <p className="text-foreground/60">Technical Writer &middot; 2019 - 2021</p>
+              <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">OMP</h3>
+              <p className="text-lg text-foreground/60">Technical Writer &middot; 2019 - 2021</p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-primary/70">{isOMPExpanded ? 'Click to collapse' : 'Click to expand'}</span>
-              <ChevronDown className={`w-6 h-6 text-primary transition-transform duration-300 ${isOMPExpanded ? 'rotate-180' : ''}`} />
+            <div className="flex items-center gap-3 bg-primary/10 px-4 py-2 rounded-full group-hover:bg-primary/20 transition-all">
+              <span className="text-sm font-medium text-primary/80">{isOMPExpanded ? 'Collapse' : 'Expand'}</span>
+              <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${isOMPExpanded ? 'rotate-180' : ''}`} />
             </div>
           </div>
 
@@ -823,22 +823,22 @@ export default function CareerMapSection() {
         </div>
 
         {/* Personio Company Card */}
-        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
+        <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 hover:border-primary/50 transition-all duration-300">
           {/* Company Header - Clickable */}
           <div 
-            className="flex items-center gap-4 cursor-pointer group"
+            className="flex items-center gap-6 cursor-pointer group"
             onClick={() => setIsPersonioExpanded(!isPersonioExpanded)}
           >
-            <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
-              <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
+            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg group-hover:ring-primary/50 transition-all">
+              <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-2" />
             </div>
             <div className="flex-1">
-              <h3 className="text-2xl font-bold text-foreground group-hover:text-primary transition-colors">Personio</h3>
-              <p className="text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
+              <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">Personio</h3>
+              <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-primary/70">{isPersonioExpanded ? 'Click to collapse' : 'Click to expand'}</span>
-              <ChevronDown className={`w-6 h-6 text-primary transition-transform duration-300 ${isPersonioExpanded ? 'rotate-180' : ''}`} />
+            <div className="flex items-center gap-3 bg-primary/10 px-4 py-2 rounded-full group-hover:bg-primary/20 transition-all">
+              <span className="text-sm font-medium text-primary/80">{isPersonioExpanded ? 'Collapse' : 'Expand'}</span>
+              <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${isPersonioExpanded ? 'rotate-180' : ''}`} />
             </div>
           </div>
 
