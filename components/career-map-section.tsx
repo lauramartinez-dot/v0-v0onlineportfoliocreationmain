@@ -624,7 +624,7 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    tools: ["Zendesk", "Contentful", "Jira", "GitHub"],
+    tools: ["Zendesk", "Jira", "Figma"],
   },
   {
     id: "subaudiences",
