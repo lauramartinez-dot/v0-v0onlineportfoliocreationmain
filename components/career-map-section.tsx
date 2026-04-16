@@ -606,7 +606,7 @@ const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
   {
     id: "style-guide",
-    title: "Created the First Style Guides for User-Facing Product Documentation",
+    title: "Created the team's first style guides for user-facing documentation",
     description:
       "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
     icon: FileText,
@@ -757,16 +757,16 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
 
       {/* Modal Popup */}
       {isModalOpen && (
-        <div 
+        <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
           onClick={() => setIsModalOpen(false)}
         >
-          <div 
+          <div
             className="relative w-full max-w-lg bg-card border-2 border-primary/30 rounded-3xl shadow-2xl shadow-primary/30 overflow-hidden animate-in fade-in zoom-in-95 duration-200"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Close button */}
-            <button 
+            <button
               onClick={() => setIsModalOpen(false)}
               className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-background/80 border border-primary/30 flex items-center justify-center hover:bg-primary/20 transition-colors"
             >
@@ -776,10 +776,10 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
             {/* Image header */}
             {achievement.image && (
               <div className="relative h-48 w-full">
-                <Image 
-                  src={achievement.image} 
-                  alt={achievement.title} 
-                  fill 
+                <Image
+                  src={achievement.image}
+                  alt={achievement.title}
+                  fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
@@ -819,7 +819,7 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
                   <h4 className="text-sm font-semibold text-foreground/60 mb-3">Tools Used</h4>
                   <div className="flex flex-wrap gap-2">
                     {achievement.tools?.map((tool, index) => (
-                      <span 
+                      <span
                         key={index}
                         className="px-3 py-1.5 text-sm bg-primary/10 text-primary rounded-full border border-primary/20"
                       >
