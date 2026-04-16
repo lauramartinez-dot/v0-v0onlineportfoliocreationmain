@@ -751,16 +751,16 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
       className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
       onClick={() => setIsExpanded(!isExpanded)}
     >
-      <div className="p-5 flex flex-col">
+      <div className="p-6 flex flex-col">
         {/* Always visible: Icon + Title + Chevron */}
         <div className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20 group-hover:bg-primary/20 group-hover:ring-primary/40 transition-all mt-0.5">
+          <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20 group-hover:bg-primary/20 group-hover:ring-primary/40 transition-all mt-0.5">
             <Icon className="h-5 w-5 text-primary" />
           </div>
-          <h3 className="flex-1 text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug min-h-[2.5rem]">
+          <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
             {achievement.title}
           </h3>
-          <ChevronDown className={`w-5 h-5 text-primary/60 shrink-0 transition-transform duration-300 mt-0.5 ${isExpanded ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`w-5 h-5 text-primary/60 shrink-0 transition-transform duration-300 mt-1 ${isExpanded ? 'rotate-180' : ''}`} />
         </div>
 
         {/* Expandable content: Description + Bullet points + Tools */}
@@ -830,7 +830,7 @@ export default function CareerMapSection() {
 
           {/* Achievement Grid */}
           <div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3">
               {/* Column 1 - Writing */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
                 {/* Full background image */}
@@ -838,16 +838,16 @@ export default function CareerMapSection() {
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Subtle label - centered, elegant */}
-                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
+                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-12" />
+                  <div className="h-14" />
                   {/* Cards area */}
-                  <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
-                    <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                  <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                    <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                   </div>
                 </div>
               </div>
@@ -858,16 +858,16 @@ export default function CareerMapSection() {
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Subtle label - centered, elegant */}
-                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
+                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-12" />
+                  <div className="h-14" />
                   {/* Cards area */}
-                  <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
-                    <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                  <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                    <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                   </div>
                 </div>
               </div>
@@ -878,16 +878,16 @@ export default function CareerMapSection() {
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Subtle label - centered, elegant */}
-                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
+                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-12" />
+                  <div className="h-14" />
                   {/* Cards area */}
-                  <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
-                    <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                  <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                    <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                   </div>
                 </div>
               </div>
@@ -915,7 +915,7 @@ export default function CareerMapSection() {
 
           {/* Achievement Grid */}
           <div>
-            <div className="grid gap-6 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-3">
               {/* Column 1 - Writing */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
                 {/* Full background image */}
@@ -923,15 +923,15 @@ export default function CareerMapSection() {
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Subtle label - centered, elegant */}
-                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
+                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-12" />
+                  <div className="h-14" />
                   {/* Cards area */}
-                  <div className="p-4 flex flex-col gap-4">
+                  <div className="p-5 flex flex-col gap-5">
                     {operationalAchievements
                       .filter((a) => a.column === 1)
                       .map((achievement) => (
@@ -947,15 +947,15 @@ export default function CareerMapSection() {
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Subtle label - centered, elegant */}
-                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
+                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-12" />
+                  <div className="h-14" />
                   {/* Cards area */}
-                  <div className="p-4 flex flex-col gap-4">
+                  <div className="p-5 flex flex-col gap-5">
                     {operationalAchievements
                       .filter((a) => a.column === 2)
                       .map((achievement) => (
@@ -971,15 +971,15 @@ export default function CareerMapSection() {
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Subtle label - centered, elegant */}
-                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
+                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-12" />
+                  <div className="h-14" />
                   {/* Cards area */}
-                  <div className="p-4 flex flex-col gap-4">
+                  <div className="p-5 flex flex-col gap-5">
                     {operationalAchievements
                       .filter((a) => a.column === 3)
                       .map((achievement) => (
