@@ -829,7 +829,7 @@ export default function CareerMapSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-24" />
+                  <div className="h-14" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
                     <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
@@ -845,7 +845,7 @@ export default function CareerMapSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-24" />
+                  <div className="h-14" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
                     <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
@@ -861,7 +861,7 @@ export default function CareerMapSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-24" />
+                  <div className="h-14" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
                     <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
@@ -902,7 +902,7 @@ export default function CareerMapSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-24" />
+                  <div className="h-14" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4">
                     {operationalAchievements
@@ -922,7 +922,7 @@ export default function CareerMapSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-24" />
+                  <div className="h-14" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4">
                     {operationalAchievements
@@ -942,7 +942,7 @@ export default function CareerMapSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-24" />
+                  <div className="h-14" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4">
                     {operationalAchievements
