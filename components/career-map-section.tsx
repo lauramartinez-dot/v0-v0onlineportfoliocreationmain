@@ -710,47 +710,43 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className={`group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 ${hasBulletPoints ? 'cursor-pointer' : ''}`}
-      onClick={() => hasBulletPoints && setIsExpanded(!isExpanded)}
+      className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
+      onClick={() => setIsExpanded(!isExpanded)}
     >
-      <div className="p-5 flex flex-col">
-        <div className="flex items-start gap-4 mb-3">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
-            <Icon className="h-5 w-5 text-primary" />
+      <div className="p-4 flex flex-col">
+        {/* Always visible: Icon + Title + Chevron */}
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+            <Icon className="h-4 w-4 text-primary" />
           </div>
-          <div className="flex-1">
-            <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-              {achievement.title}
-            </h3>
-            {hasBulletPoints && (
-              <span className="text-xs text-primary/70 mt-1 inline-block">
-                {isExpanded ? 'Click to collapse' : 'Click to see details'}
-              </span>
-            )}
-          </div>
+          <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+            {achievement.title}
+          </h3>
+          <ChevronDown className={`w-4 h-4 text-primary/60 shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
         </div>
-        <p className="text-base text-foreground/70 leading-relaxed">{achievement.description}</p>
 
-        {/* Expandable bullet points */}
-        {hasBulletPoints && isExpanded && (
-          <ul className="mt-4 space-y-2 border-t border-primary/10 pt-4">
-            {achievement.bulletPoints?.map((point, index) => (
-              <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
-                <span className="text-primary mt-0.5">✓</span>
-                <span>{point}</span>
-              </li>
-            ))}
-          </ul>
-        )}
+        {/* Expandable content: Description + Bullet points */}
+        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100 mt-3 pt-3 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
+          <p className="text-sm text-foreground/70 leading-relaxed">{achievement.description}</p>
+
+          {/* Bullet points if available */}
+          {hasBulletPoints && (
+            <ul className="mt-3 space-y-2">
+              {achievement.bulletPoints?.map((point, index) => (
+                <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
+                  <span className="text-primary mt-0.5">✓</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
     </div>
   )
 }
 
 export default function CareerMapSection() {
-  const [isOMPExpanded, setIsOMPExpanded] = React.useState(false)
-  const [isPersonioExpanded, setIsPersonioExpanded] = React.useState(false)
-
   return (
     <section id="top-achievements" className="py-24 bg-background">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -761,31 +757,24 @@ export default function CareerMapSection() {
 
         {/* OMP Company Card */}
         <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300">
-          {/* Company Header - Clickable */}
-          <div
-            className="flex items-center gap-6 cursor-pointer group"
-            onClick={() => setIsOMPExpanded(!isOMPExpanded)}
-          >
+          {/* Company Header */}
+          <div className="flex items-center gap-6 mb-8 pb-6 border-b border-primary/10">
             {/* Country Flag */}
             <div className="flex flex-col items-center gap-1">
               <span className="text-3xl" title="Belgium">🇧🇪</span>
               <span className="text-xs text-foreground/50">Belgium</span>
             </div>
-            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg group-hover:ring-primary/50 transition-all">
+            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg">
               <Image src="/omp-logo.png" alt="OMP" fill className="object-contain p-2" />
             </div>
             <div className="flex-1">
-              <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">OMP</h3>
+              <h3 className="text-3xl font-bold text-foreground">OMP</h3>
               <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2026 - Present</p>
-            </div>
-            <div className="flex items-center gap-3 bg-primary/10 px-4 py-2 rounded-full group-hover:bg-primary/20 transition-all">
-              <span className="text-sm font-medium text-primary/80">{isOMPExpanded ? 'Collapse' : 'Expand'}</span>
-              <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${isOMPExpanded ? 'rotate-180' : ''}`} />
             </div>
           </div>
 
-          {/* Achievement Grid - Collapsible */}
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOMPExpanded ? 'max-h-[3000px] opacity-100 mt-8 pt-6 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
+          {/* Achievement Grid */}
+          <div>
             <div className="grid gap-6 md:grid-cols-3">
               {/* Column 1 - Writing */}
               <div className="flex flex-col gap-4">
@@ -828,31 +817,24 @@ export default function CareerMapSection() {
 
         {/* Personio Company Card */}
         <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 hover:border-primary/50 transition-all duration-300">
-          {/* Company Header - Clickable */}
-          <div
-            className="flex items-center gap-6 cursor-pointer group"
-            onClick={() => setIsPersonioExpanded(!isPersonioExpanded)}
-          >
+          {/* Company Header */}
+          <div className="flex items-center gap-6 mb-8 pb-6 border-b border-primary/10">
             {/* Country Flag */}
             <div className="flex flex-col items-center gap-1">
               <span className="text-3xl" title="Germany">🇩🇪</span>
               <span className="text-xs text-foreground/50">Germany</span>
             </div>
-            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg group-hover:ring-primary/50 transition-all">
+            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg">
               <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-2" />
             </div>
             <div className="flex-1">
-              <h3 className="text-3xl font-bold text-foreground group-hover:text-primary transition-colors">Personio</h3>
+              <h3 className="text-3xl font-bold text-foreground">Personio</h3>
               <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
-            </div>
-            <div className="flex items-center gap-3 bg-primary/10 px-4 py-2 rounded-full group-hover:bg-primary/20 transition-all">
-              <span className="text-sm font-medium text-primary/80">{isPersonioExpanded ? 'Collapse' : 'Expand'}</span>
-              <ChevronDown className={`w-5 h-5 text-primary transition-transform duration-300 ${isPersonioExpanded ? 'rotate-180' : ''}`} />
             </div>
           </div>
 
-          {/* Achievement Grid - Collapsible */}
-          <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isPersonioExpanded ? 'max-h-[3000px] opacity-100 mt-8 pt-6 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
+          {/* Achievement Grid */}
+          <div>
             <div className="grid gap-6 md:grid-cols-3">
               {/* Column 1 - Writing */}
               <div className="flex flex-col gap-4">
