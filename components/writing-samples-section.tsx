@@ -54,23 +54,7 @@ const contentTypes: ContentTypeData[] = [
     icon: FileText,
     image: "/startup-workspace.jpg",
     audience: "Internal Teams",
-    samples: [
-      {
-        title: "Technical Writing Style Guide",
-        url: "#",
-        company: "Personio",
-      },
-      {
-        title: "Documentation Standards & Best Practices",
-        url: "#",
-        company: "Personio",
-      },
-      {
-        title: "Content Strategy Guidelines",
-        url: "#",
-        company: "Personio",
-      },
-    ],
+    samples: [],
   },
   {
     id: "video-content",
