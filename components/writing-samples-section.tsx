@@ -24,7 +24,7 @@ interface ContentTypeData {
 const contentTypes: ContentTypeData[] = [
   {
     id: "user-facing-pages",
-    name: "User-Facing Pages",
+    name: "User-Facing Documentation",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/help-guides-header.png",
@@ -49,7 +49,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "internal-facing-pages",
-    name: "Internal-Facing Pages",
+    name: "Internal-Facing Documentation",
     description: "Internal documentation, style guides, and knowledge base articles for teams",
     icon: FileText,
     image: "/startup-workspace.jpg",
@@ -236,7 +236,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
           </h3>
         </div>
         <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
-        
+
         {/* Audience */}
         <div className="flex items-center gap-2">
           <span className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Audience:</span>
