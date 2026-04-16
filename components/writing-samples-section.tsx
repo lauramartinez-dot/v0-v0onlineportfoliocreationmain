@@ -50,7 +50,7 @@ const contentTypes: ContentTypeData[] = [
   {
     id: "internal-facing-pages",
     name: "Internal-facing documentation",
-    description: "Internal documentation, style guides, and knowledge base articles for teams",
+    description: "Internal documentation and knowledge base articles for teams",
     icon: FileText,
     image: "/startup-workspace.jpg",
     audience: "Internal Teams",
@@ -255,9 +255,9 @@ export default function WritingSamplesSection() {
   return (
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
-  <div className="mb-12 text-center">
-  <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
-  </div>
+        <div className="mb-12 text-center">
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
+        </div>
 
         {/* 2-column grid of content types */}
         <div className="grid gap-6 md:grid-cols-2">
