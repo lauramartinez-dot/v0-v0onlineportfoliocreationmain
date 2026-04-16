@@ -23,8 +23,8 @@ interface ContentTypeData {
 
 const contentTypes: ContentTypeData[] = [
   {
-    id: "documentation-pages",
-    name: "Documentation Pages",
+    id: "user-facing-pages",
+    name: "User-Facing Pages",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/help-guides-header.png",
@@ -43,6 +43,31 @@ const contentTypes: ContentTypeData[] = [
       {
         title: "Grant permissions for everyday tasks",
         url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "internal-facing-pages",
+    name: "Internal-Facing Pages",
+    description: "Internal documentation, style guides, and knowledge base articles for teams",
+    icon: FileText,
+    image: "/startup-workspace.jpg",
+    audience: "Internal Teams",
+    samples: [
+      {
+        title: "Technical Writing Style Guide",
+        url: "#",
+        company: "Personio",
+      },
+      {
+        title: "Documentation Standards & Best Practices",
+        url: "#",
+        company: "Personio",
+      },
+      {
+        title: "Content Strategy Guidelines",
+        url: "#",
         company: "Personio",
       },
     ],
