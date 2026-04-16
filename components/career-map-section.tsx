@@ -16,6 +16,7 @@ import {
   FileText,
   Heart,
   ChevronDown,
+  X,
 } from "lucide-react"
 
 interface Experience {
@@ -598,6 +599,7 @@ interface Achievement {
   image?: string
   column?: number
   bulletPoints?: string[]
+  tools?: string[]
 }
 
 const operationalAchievements: Achievement[] = [
@@ -611,6 +613,7 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
     column: 1,
+    tools: ["Confluence", "Notion", "Google Docs"],
   },
   {
     id: "content-ownership",
@@ -621,6 +624,7 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
+    tools: ["Zendesk", "Contentful", "Jira", "GitHub"],
   },
   {
     id: "subaudiences",
@@ -658,6 +662,7 @@ const operationalAchievements: Achievement[] = [
       "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance.",
       "Enabled the team to generate reports 30% faster by working with Data Analysts to enhance Tableau.",
     ],
+    tools: ["ChatGPT", "Tableau", "Google Analytics", "Looker", "Python"],
   },
   {
     id: "womens-committee",
@@ -709,6 +714,7 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
+    tools: ["Smartling", "Phrase", "Zendesk Localization"],
   },
   {
     id: "spanish-localization-guides",
@@ -719,50 +725,116 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
     column: 3,
+    tools: ["Confluence", "Google Docs", "Phrase"],
   },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   const Icon = achievement.icon
-  const [isExpanded, setIsExpanded] = React.useState(false)
+  const [isModalOpen, setIsModalOpen] = React.useState(false)
   const hasBulletPoints = achievement.bulletPoints && achievement.bulletPoints.length > 0
+  const hasTools = achievement.tools && achievement.tools.length > 0
 
   return (
-    <div
-      key={achievement.id}
-      className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
-      onClick={() => setIsExpanded(!isExpanded)}
-    >
-      <div className="p-4 flex flex-col">
-        {/* Always visible: Icon + Title + Chevron */}
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
-            <Icon className="h-4 w-4 text-primary" />
+    <>
+      {/* Card - Click to open modal */}
+      <div
+        key={achievement.id}
+        className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer hover:-translate-y-1"
+        onClick={() => setIsModalOpen(true)}
+      >
+        <div className="p-4 flex flex-col">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+              <Icon className="h-4 w-4 text-primary" />
+            </div>
+            <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+              {achievement.title}
+            </h3>
+            <span className="text-xs text-primary/60 shrink-0">View</span>
           </div>
-          <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-            {achievement.title}
-          </h3>
-          <ChevronDown className={`w-4 h-4 text-primary/60 shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
-        </div>
-
-        {/* Expandable content: Description + Bullet points */}
-        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[500px] opacity-100 mt-3 pt-3 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
-          <p className="text-sm text-foreground/70 leading-relaxed">{achievement.description}</p>
-
-          {/* Bullet points if available */}
-          {hasBulletPoints && (
-            <ul className="mt-3 space-y-2">
-              {achievement.bulletPoints?.map((point, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
-                  <span className="text-primary mt-0.5">✓</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          )}
         </div>
       </div>
-    </div>
+
+      {/* Modal Popup */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
+          onClick={() => setIsModalOpen(false)}
+        >
+          <div 
+            className="relative w-full max-w-lg bg-card border-2 border-primary/30 rounded-3xl shadow-2xl shadow-primary/30 overflow-hidden animate-in fade-in zoom-in-95 duration-200"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button 
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-background/80 border border-primary/30 flex items-center justify-center hover:bg-primary/20 transition-colors"
+            >
+              <X className="w-4 h-4 text-foreground" />
+            </button>
+
+            {/* Image header */}
+            {achievement.image && (
+              <div className="relative h-48 w-full">
+                <Image 
+                  src={achievement.image} 
+                  alt={achievement.title} 
+                  fill 
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent" />
+              </div>
+            )}
+
+            {/* Content */}
+            <div className="p-6 -mt-12 relative">
+              {/* Icon + Title */}
+              <div className="flex items-start gap-4 mb-4">
+                <div className="w-14 h-14 rounded-xl bg-primary/20 flex items-center justify-center shrink-0 ring-2 ring-primary/30 shadow-lg">
+                  <Icon className="h-7 w-7 text-primary" />
+                </div>
+                <div className="flex-1 pt-2">
+                  <h3 className="text-xl font-bold text-foreground">{achievement.title}</h3>
+                </div>
+              </div>
+
+              {/* Description */}
+              <p className="text-foreground/80 leading-relaxed mb-4">{achievement.description}</p>
+
+              {/* Bullet points */}
+              {hasBulletPoints && (
+                <ul className="space-y-2 mb-4">
+                  {achievement.bulletPoints?.map((point, index) => (
+                    <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <span className="text-primary mt-0.5">&#10003;</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {/* Tools section */}
+              {hasTools && (
+                <div className="pt-4 border-t border-primary/10">
+                  <h4 className="text-sm font-semibold text-foreground/60 mb-3">Tools Used</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {achievement.tools?.map((tool, index) => (
+                      <span 
+                        key={index}
+                        className="px-3 py-1.5 text-sm bg-primary/10 text-primary rounded-full border border-primary/20"
+                      >
+                        {tool}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
