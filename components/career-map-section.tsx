@@ -751,16 +751,16 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
       className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
       onClick={() => setIsExpanded(!isExpanded)}
     >
-      <div className="p-4 flex flex-col">
+      <div className="p-5 flex flex-col">
         {/* Always visible: Icon + Title + Chevron */}
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20 group-hover:bg-primary/20 group-hover:ring-primary/40 transition-all">
-            <Icon className="h-4 w-4 text-primary" />
+        <div className="flex items-start gap-4">
+          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20 group-hover:bg-primary/20 group-hover:ring-primary/40 transition-all mt-0.5">
+            <Icon className="h-5 w-5 text-primary" />
           </div>
-          <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+          <h3 className="flex-1 text-sm font-semibold text-foreground group-hover:text-primary transition-colors leading-snug min-h-[2.5rem]">
             {achievement.title}
           </h3>
-          <ChevronDown className={`w-4 h-4 text-primary/60 shrink-0 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`w-5 h-5 text-primary/60 shrink-0 transition-transform duration-300 mt-0.5 ${isExpanded ? 'rotate-180' : ''}`} />
         </div>
 
         {/* Expandable content: Description + Bullet points + Tools */}
