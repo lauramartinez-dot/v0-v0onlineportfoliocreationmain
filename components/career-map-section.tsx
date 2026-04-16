@@ -606,7 +606,7 @@ const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
   {
     id: "style-guide",
-    title: "Created Documentation Style Guide",
+    title: "Created the First Style Guides for User-Facing Product Documentation",
     description:
       "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
     icon: FileText,
@@ -745,13 +745,12 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
       >
         <div className="p-4 flex flex-col">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+            <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20 group-hover:bg-primary/20 group-hover:ring-primary/40 transition-all">
               <Icon className="h-4 w-4 text-primary" />
             </div>
             <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
               {achievement.title}
             </h3>
-            <span className="text-xs text-primary/60 shrink-0">View</span>
           </div>
         </div>
       </div>
