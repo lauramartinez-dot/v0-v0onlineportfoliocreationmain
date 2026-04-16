@@ -87,7 +87,7 @@ const contentTypes: ContentTypeData[] = [
     samples: [
       {
         title: "Personio Product Updates",
-        url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
+        url: "https://web.archive.org/web/20260308130635/https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
         company: "Personio",
       },
     ],
