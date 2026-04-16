@@ -24,7 +24,7 @@ interface ContentTypeData {
 const contentTypes: ContentTypeData[] = [
   {
     id: "user-facing-pages",
-    name: "User-Facing Documentation",
+    name: "User-facing documentation",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/help-guides-header.png",
@@ -49,7 +49,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "internal-facing-pages",
-    name: "Internal-Facing Documentation",
+    name: "Internal-facing documentation",
     description: "Internal documentation, style guides, and knowledge base articles for teams",
     icon: FileText,
     image: "/startup-workspace.jpg",
@@ -64,7 +64,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "video-content",
-    name: "Video Content",
+    name: "Video content",
     description: "Educational videos and tutorials in multiple languages",
     icon: Video,
     image: "/video-example-personio.png",
@@ -94,14 +94,14 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "release-notes",
-    name: "Release Notes",
+    name: "Release notes",
     description: "Product updates and feature announcements",
     icon: Mail,
     image: "/release-notes-example.png",
     audience: "Business Users",
     samples: [
       {
-        title: "Personio Product Updates",
+        title: "Personio product updates",
         url: "https://web.archive.org/web/20260308130635/https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
         company: "Personio",
       },
@@ -109,14 +109,14 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "ux-writing",
-    name: "UX Writing",
+    name: "UX writing",
     description: "In-product copy, microcopy, and user interface text",
     icon: Pen,
     image: "/startup-workspace.jpg",
     audience: "Business Users",
     samples: [
       {
-        title: "Personio Help Center In-App Guidance",
+        title: "Personio Help Center in-app guidance",
         url: "https://support.personio.de/hc/en-us",
         company: "Personio",
       },
@@ -131,12 +131,12 @@ const contentTypes: ContentTypeData[] = [
     audience: "Business Users",
     samples: [
       {
-        title: "Monthly Product Updates Newsletter",
+        title: "Monthly product updates newsletter",
         url: "#",
         company: "Personio",
       },
       {
-        title: "Feature Spotlight Newsletter",
+        title: "Feature spotlight newsletter",
         url: "#",
         company: "Personio",
       },
@@ -144,7 +144,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "journalism",
-    name: "Foundational Tech Journalism Writing",
+    name: "Foundational tech journalism writing",
     description: "Science and technology articles for leading publications",
     icon: Newspaper,
     image: "/tech-journalism-example.png",
@@ -156,7 +156,7 @@ const contentTypes: ContentTypeData[] = [
         company: "Business Insider Spain",
       },
       {
-        title: "Working at tech companies in Dublin: Free beer and laundry",
+        title: "Working at tech companies in Dublin: free beer and laundry",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405147000",
         company: "Business Insider Spain",
       },
@@ -261,10 +261,9 @@ export default function WritingSamplesSection() {
   return (
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
-          <p className="text-muted-foreground text-lg">Click on a content type to explore samples</p>
-        </div>
+  <div className="mb-12 text-center">
+  <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
+  </div>
 
         {/* 2-column grid of content types */}
         <div className="grid gap-6 md:grid-cols-2">
