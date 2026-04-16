@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { FileText, ExternalLink, BookOpen, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
+import { FileText, ExternalLink, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface WritingSample {
@@ -92,26 +92,7 @@ const contentTypes: ContentTypeData[] = [
       },
     ],
   },
-  {
-    id: "api-documentation",
-    name: "API Documentation",
-    description: "Technical reference documentation for developers and integrations",
-    icon: BookOpen,
-    image: "/vr-person-blue-tech.png",
-    audience: "Developers",
-    samples: [
-      {
-        title: "Personio API Documentation",
-        url: "https://developer.personio.de/reference/introduction",
-        company: "Personio",
-      },
-      {
-        title: "Authentication Guide",
-        url: "https://developer.personio.de/reference/authentication",
-        company: "Personio",
-      },
-    ],
-  },
+
   {
     id: "ux-writing",
     name: "UX Writing",
