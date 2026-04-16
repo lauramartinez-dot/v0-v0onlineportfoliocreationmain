@@ -766,6 +766,11 @@ export default function CareerMapSection() {
             className="flex items-center gap-6 cursor-pointer group"
             onClick={() => setIsOMPExpanded(!isOMPExpanded)}
           >
+            {/* Country Flag */}
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-3xl" title="Belgium">🇧🇪</span>
+              <span className="text-xs text-foreground/50">Belgium</span>
+            </div>
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg group-hover:ring-primary/50 transition-all">
               <Image src="/omp-logo.png" alt="OMP" fill className="object-contain p-2" />
             </div>
@@ -828,6 +833,11 @@ export default function CareerMapSection() {
             className="flex items-center gap-6 cursor-pointer group"
             onClick={() => setIsPersonioExpanded(!isPersonioExpanded)}
           >
+            {/* Country Flag */}
+            <div className="flex flex-col items-center gap-1">
+              <span className="text-3xl" title="Germany">🇩🇪</span>
+              <span className="text-xs text-foreground/50">Germany</span>
+            </div>
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg group-hover:ring-primary/50 transition-all">
               <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-2" />
             </div>
