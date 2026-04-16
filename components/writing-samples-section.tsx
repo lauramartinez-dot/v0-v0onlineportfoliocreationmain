@@ -82,7 +82,7 @@ const contentTypes: ContentTypeData[] = [
     name: "Release Notes",
     description: "Product updates and feature announcements",
     icon: Mail,
-    image: "/still-life-supply-chain.jpg",
+    image: "/release-notes-example.png",
     audience: "Business Users",
     samples: [
       {
