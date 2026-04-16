@@ -628,9 +628,9 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "subaudiences",
-    title: "Created Pages for 5+ Different Subaudiences",
+    title: "Created pages for 5+ different subaudiences",
     description:
-      "Developed tailored documentation for diverse user groups including business admins, HR managers, supervisors, employees, and more — ensuring each audience receives relevant, role-specific guidance.",
+      "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more), ensuring each audience receives relevant, role-specific guidance.",
     icon: Users,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
