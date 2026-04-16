@@ -133,6 +133,26 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
+    id: "newsletter",
+    name: "Newsletter",
+    description: "Product updates, announcements, and engagement communications",
+    icon: Mail,
+    image: "/release-notes-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Monthly Product Updates Newsletter",
+        url: "#",
+        company: "Personio",
+      },
+      {
+        title: "Feature Spotlight Newsletter",
+        url: "#",
+        company: "Personio",
+      },
+    ],
+  },
+  {
     id: "journalism",
     name: "Foundational Tech Journalism Writing",
     description: "Science and technology articles for leading publications",
