@@ -78,6 +78,36 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
+    id: "release-notes",
+    name: "Release Notes",
+    description: "Product updates and feature announcements",
+    icon: Mail,
+    image: "/release-notes-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio Product Updates",
+        url: "https://web.archive.org/web/20260308130635/https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "ux-writing",
+    name: "UX Writing",
+    description: "In-product copy, microcopy, and user interface text",
+    icon: Pen,
+    image: "/startup-workspace.jpg",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio Help Center In-App Guidance",
+        url: "https://support.personio.de/hc/en-us",
+        company: "Personio",
+      },
+    ],
+  },
+  {
     id: "journalism",
     name: "Foundational Tech Journalism Writing",
     description: "Science and technology articles for leading publications",
@@ -114,36 +144,6 @@ const contentTypes: ContentTypeData[] = [
         title: "Spanish satellite Deimos-2 is now in orbit",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
         company: "Muy Interesante",
-      },
-    ],
-  },
-  {
-    id: "release-notes",
-    name: "Release Notes",
-    description: "Product updates and feature announcements",
-    icon: Mail,
-    image: "/release-notes-example.png",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Product Updates",
-        url: "https://web.archive.org/web/20260308130635/https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
-        company: "Personio",
-      },
-    ],
-  },
-  {
-    id: "ux-writing",
-    name: "UX Writing",
-    description: "In-product copy, microcopy, and user interface text",
-    icon: Pen,
-    image: "/startup-workspace.jpg",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Help Center In-App Guidance",
-        url: "https://support.personio.de/hc/en-us",
-        company: "Personio",
       },
     ],
   },
@@ -233,13 +233,22 @@ export default function WritingSamplesSection() {
 
         {/* 2-column grid of content types */}
         <div className="grid gap-6 md:grid-cols-2">
-          {contentTypes.map((contentType) => (
+          {contentTypes.slice(0, -1).map((contentType) => (
             <ContentTypeCard
               key={contentType.id}
               contentType={contentType}
               onClick={() => setSelectedType(contentType)}
             />
           ))}
+        </div>
+        {/* Last card centered */}
+        <div className="mt-6 flex justify-center">
+          <div className="w-full md:w-1/2 md:max-w-[calc(50%-0.75rem)]">
+            <ContentTypeCard
+              contentType={contentTypes[contentTypes.length - 1]}
+              onClick={() => setSelectedType(contentTypes[contentTypes.length - 1])}
+            />
+          </div>
         </div>
       </div>
 

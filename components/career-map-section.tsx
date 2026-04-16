@@ -826,6 +826,10 @@ export default function CareerMapSection() {
                 <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
+                {/* Subtle label */}
+                <div className="absolute top-2 left-3 z-10">
+                  <span className="text-xs font-medium text-white/60 tracking-wide">I write</span>
+                </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
@@ -842,6 +846,10 @@ export default function CareerMapSection() {
                 <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
+                {/* Subtle label */}
+                <div className="absolute top-2 left-3 z-10">
+                  <span className="text-xs font-medium text-white/60 tracking-wide">I build</span>
+                </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
@@ -858,6 +866,10 @@ export default function CareerMapSection() {
                 <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
+                {/* Subtle label */}
+                <div className="absolute top-2 left-3 z-10">
+                  <span className="text-xs font-medium text-white/60 tracking-wide">I translate</span>
+                </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
@@ -899,6 +911,10 @@ export default function CareerMapSection() {
                 <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
+                {/* Subtle label */}
+                <div className="absolute top-2 left-3 z-10">
+                  <span className="text-xs font-medium text-white/60 tracking-wide">I write</span>
+                </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
@@ -919,6 +935,10 @@ export default function CareerMapSection() {
                 <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
+                {/* Subtle label */}
+                <div className="absolute top-2 left-3 z-10">
+                  <span className="text-xs font-medium text-white/60 tracking-wide">I build</span>
+                </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
@@ -939,6 +959,10 @@ export default function CareerMapSection() {
                 <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
+                {/* Subtle label */}
+                <div className="absolute top-2 left-3 z-10">
+                  <span className="text-xs font-medium text-white/60 tracking-wide">I translate</span>
+                </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
