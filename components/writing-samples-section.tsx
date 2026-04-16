@@ -54,13 +54,7 @@ const contentTypes: ContentTypeData[] = [
     icon: FileText,
     image: "/startup-workspace.jpg",
     audience: "Internal Teams",
-    samples: [
-      {
-        title: "Created and owned the Spanish user-facing documentation site from scratch",
-        url: "https://support.personio.de/hc/es",
-        company: "Personio",
-      },
-    ],
+    samples: [],
   },
   {
     id: "video-content",

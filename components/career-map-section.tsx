@@ -726,6 +726,17 @@ const operationalAchievements: Achievement[] = [
     column: 3,
     tools: ["Confluence", "Google Docs", "Phrase"],
   },
+  {
+    id: "spanish-docs-site",
+    title: "Created and owned the Spanish user-facing documentation site from scratch",
+    description:
+      "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Zendesk", "Phrase", "Smartling"],
+  },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
