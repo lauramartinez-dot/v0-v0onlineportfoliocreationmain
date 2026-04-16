@@ -608,7 +608,7 @@ const operationalAchievements: Achievement[] = [
     id: "style-guide",
     title: "Created the team's first style guides for user-facing documentation",
     description:
-      "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
+      "Created style guides for English source content, setting consistent standards across a team of 10 technical writers.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
@@ -617,9 +617,9 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "content-ownership",
-    title: "Owned 100+ Pages of Product Documentation",
+    title: "Owned 100+ pages of user-facing documentation",
     description:
-      "Managed and was responsible for over 100 pages of documentation covering multiple product features and apps, including analytics and account set up.",
+      "Managed and was responsible for over 100 pages of user-facing product documentation covering multiple product features and apps, including analytics and account set up.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
