@@ -128,12 +128,12 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
-    id: "journalism",
-    name: "Foundational Tech Journalism Writing",
-    description: "Science and technology articles for leading publications",
-    icon: Newspaper,
-    image: "/journalism-header.png",
-    audience: "General Public",
+  id: "journalism",
+  name: "Foundational Tech Journalism Writing",
+  description: "Science and technology articles for leading publications",
+  icon: Newspaper,
+  image: "/tech-journalism-example.png",
+  audience: "General Public",
     samples: [
       {
         title: "A day in the life of an online content moderator",
