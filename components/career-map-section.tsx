@@ -792,7 +792,6 @@ export default function CareerMapSection() {
                     <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
                   </div>
                 </div>
-                <p className="text-foreground/50 text-sm italic">WIP - I'm still getting onboarded :) </p>
               </div>
               {/* Column 2 - Operations */}
               <div className="flex flex-col gap-4">
@@ -804,7 +803,6 @@ export default function CareerMapSection() {
                     <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
                   </div>
                 </div>
-                <p className="text-foreground/50 text-sm italic">WIP - I'm still getting onboarded :)</p>
               </div>
               {/* Column 3 - Global */}
               <div className="flex flex-col gap-4">
@@ -816,9 +814,10 @@ export default function CareerMapSection() {
                     <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
                   </div>
                 </div>
-                <p className="text-foreground/50 text-sm italic">WIP - I'm still getting onboarded :)</p>
               </div>
             </div>
+            {/* Centered WIP message */}
+            <p className="text-foreground/50 text-sm italic text-center mt-6">WIP - still getting onboarded</p>
           </div>
         </div>
 
