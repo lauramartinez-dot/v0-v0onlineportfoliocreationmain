@@ -23,8 +23,8 @@ interface ContentTypeData {
 
 const contentTypes: ContentTypeData[] = [
   {
-    id: "help-guides",
-    name: "Help Guides",
+    id: "documentation-pages",
+    name: "Documentation Pages",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/help-guides-header.png",
