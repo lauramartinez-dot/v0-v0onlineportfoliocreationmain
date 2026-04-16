@@ -52,7 +52,7 @@ const contentTypes: ContentTypeData[] = [
     name: "Video Content",
     description: "Educational videos and tutorials in multiple languages",
     icon: Video,
-    image: "/startup-workspace.jpg",
+    image: "/video-example-personio.png",
     audience: "Business Users",
     samples: [
       {
