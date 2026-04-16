@@ -803,17 +803,17 @@ export default function CareerMapSection() {
         <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300">
           {/* Company Header */}
           <div className="flex items-center gap-6 mb-8 pb-6 border-b border-primary/10">
-            {/* Country Flag */}
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-3xl" title="Belgium">🇧🇪</span>
-              <span className="text-xs text-foreground/50">Belgium</span>
-            </div>
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg">
               <Image src="/omp-logo.png" alt="OMP" fill className="object-contain p-2" />
             </div>
             <div className="flex-1">
               <h3 className="text-3xl font-bold text-foreground">OMP</h3>
               <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2026 - Present</p>
+            </div>
+            {/* Country Flag - top right */}
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+              <span className="text-lg" title="Belgium">🇧🇪</span>
+              <span className="text-xs font-medium text-foreground/70">Belgium</span>
             </div>
           </div>
 
@@ -826,14 +826,14 @@ export default function CareerMapSection() {
                 <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label */}
-                <div className="absolute top-2 left-3 z-10">
-                  <span className="text-xs font-medium text-white/60 tracking-wide">I write</span>
+                {/* Subtle label - centered, elegant */}
+                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-14" />
+                  <div className="h-12" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
                     <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
@@ -846,14 +846,14 @@ export default function CareerMapSection() {
                 <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label */}
-                <div className="absolute top-2 left-3 z-10">
-                  <span className="text-xs font-medium text-white/60 tracking-wide">I build</span>
+                {/* Subtle label - centered, elegant */}
+                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-14" />
+                  <div className="h-12" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
                     <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
@@ -866,14 +866,14 @@ export default function CareerMapSection() {
                 <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label */}
-                <div className="absolute top-2 left-3 z-10">
-                  <span className="text-xs font-medium text-white/60 tracking-wide">I translate</span>
+                {/* Subtle label - centered, elegant */}
+                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-14" />
+                  <div className="h-12" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
                     <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
@@ -888,17 +888,17 @@ export default function CareerMapSection() {
         <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 hover:border-primary/50 transition-all duration-300">
           {/* Company Header */}
           <div className="flex items-center gap-6 mb-8 pb-6 border-b border-primary/10">
-            {/* Country Flag */}
-            <div className="flex flex-col items-center gap-1">
-              <span className="text-3xl" title="Germany">🇩🇪</span>
-              <span className="text-xs text-foreground/50">Germany</span>
-            </div>
             <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg">
               <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-2" />
             </div>
             <div className="flex-1">
               <h3 className="text-3xl font-bold text-foreground">Personio</h3>
               <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
+            </div>
+            {/* Country Flag - top right */}
+            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+              <span className="text-lg" title="Germany">🇩🇪</span>
+              <span className="text-xs font-medium text-foreground/70">Germany</span>
             </div>
           </div>
 
@@ -911,14 +911,14 @@ export default function CareerMapSection() {
                 <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label */}
-                <div className="absolute top-2 left-3 z-10">
-                  <span className="text-xs font-medium text-white/60 tracking-wide">I write</span>
+                {/* Subtle label - centered, elegant */}
+                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-14" />
+                  <div className="h-12" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4">
                     {operationalAchievements
@@ -935,14 +935,14 @@ export default function CareerMapSection() {
                 <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label */}
-                <div className="absolute top-2 left-3 z-10">
-                  <span className="text-xs font-medium text-white/60 tracking-wide">I build</span>
+                {/* Subtle label - centered, elegant */}
+                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-14" />
+                  <div className="h-12" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4">
                     {operationalAchievements
@@ -959,14 +959,14 @@ export default function CareerMapSection() {
                 <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
                 {/* Gradient overlay - stronger at top, subtle behind cards */}
                 <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label */}
-                <div className="absolute top-2 left-3 z-10">
-                  <span className="text-xs font-medium text-white/60 tracking-wide">I translate</span>
+                {/* Subtle label - centered, elegant */}
+                <div className="absolute top-3 left-0 right-0 z-10 flex justify-center">
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
                 </div>
                 {/* Content */}
                 <div className="relative z-10 flex flex-col">
                   {/* Header spacer for visible image area */}
-                  <div className="h-14" />
+                  <div className="h-12" />
                   {/* Cards area */}
                   <div className="p-4 flex flex-col gap-4">
                     {operationalAchievements
