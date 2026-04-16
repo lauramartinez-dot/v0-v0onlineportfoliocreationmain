@@ -710,6 +710,16 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
+  {
+    id: "spanish-localization-guides",
+    title: "Created the Company's First Spanish Localization Guides",
+    description:
+      "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
