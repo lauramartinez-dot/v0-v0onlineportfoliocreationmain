@@ -821,41 +821,36 @@ export default function CareerMapSection() {
           <div>
             <div className="grid gap-6 md:grid-cols-3">
               {/* Column 1 - Writing */}
-              <div className="flex flex-col gap-4">
-                <div className="relative h-20 rounded-xl overflow-hidden">
-                  <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                  <div className="absolute inset-0 flex items-end px-4 pb-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden min-h-[120px]">
+                {/* Background image */}
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-background/90 to-background" />
+                {/* Content */}
+                <div className="relative z-10 p-4 flex flex-col gap-4 items-center justify-center h-full">
+                  <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
               {/* Column 2 - Operations */}
-              <div className="flex flex-col gap-4">
-                <div className="relative h-20 rounded-xl overflow-hidden">
-                  <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                  <div className="absolute inset-0 flex items-end px-4 pb-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden min-h-[120px]">
+                {/* Background image */}
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-background/90 to-background" />
+                {/* Content */}
+                <div className="relative z-10 p-4 flex flex-col gap-4 items-center justify-center h-full">
+                  <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
               {/* Column 3 - Global */}
-              <div className="flex flex-col gap-4">
-                <div className="relative h-20 rounded-xl overflow-hidden">
-                  <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                  <div className="absolute inset-0 flex items-end px-4 pb-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden min-h-[120px]">
+                {/* Background image */}
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-background/90 to-background" />
+                {/* Content */}
+                <div className="relative z-10 p-4 flex flex-col gap-4 items-center justify-center h-full">
+                  <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
             </div>
-            {/* Centered WIP message */}
-            <p className="text-foreground/50 text-sm italic text-center mt-6">WIP - still getting onboarded</p>
           </div>
         </div>
 
@@ -881,52 +876,46 @@ export default function CareerMapSection() {
           <div>
             <div className="grid gap-6 md:grid-cols-3">
               {/* Column 1 - Writing */}
-              <div className="flex flex-col gap-4">
-                <div className="relative h-20 rounded-xl overflow-hidden">
-                  <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                  <div className="absolute inset-0 flex items-end px-4 pb-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                {/* Background image */}
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-background/90 to-background" />
+                {/* Content */}
+                <div className="relative z-10 p-4 flex flex-col gap-4">
+                  {operationalAchievements
+                    .filter((a) => a.column === 1)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
                 </div>
-                {operationalAchievements
-                  .filter((a) => a.column === 1)
-                  .map((achievement) => (
-                    <AchievementCard key={achievement.id} achievement={achievement} />
-                  ))}
               </div>
               {/* Column 2 - Operations */}
-              <div className="flex flex-col gap-4">
-                <div className="relative h-20 rounded-xl overflow-hidden">
-                  <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                  <div className="absolute inset-0 flex items-end px-4 pb-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                {/* Background image */}
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-background/90 to-background" />
+                {/* Content */}
+                <div className="relative z-10 p-4 flex flex-col gap-4">
+                  {operationalAchievements
+                    .filter((a) => a.column === 2)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
                 </div>
-                {operationalAchievements
-                  .filter((a) => a.column === 2)
-                  .map((achievement) => (
-                    <AchievementCard key={achievement.id} achievement={achievement} />
-                  ))}
               </div>
               {/* Column 3 - Global */}
-              <div className="flex flex-col gap-4">
-                <div className="relative h-20 rounded-xl overflow-hidden">
-                  <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                  <div className="absolute inset-0 flex items-end px-4 pb-3">
-                    <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
-                  </div>
+              <div className="relative rounded-2xl overflow-hidden">
+                {/* Background image */}
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-20" />
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-background/90 to-background" />
+                {/* Content */}
+                <div className="relative z-10 p-4 flex flex-col gap-4">
+                  {operationalAchievements
+                    .filter((a) => a.column === 3)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
                 </div>
-                {operationalAchievements
-                  .filter((a) => a.column === 3)
-                  .map((achievement) => (
-                    <AchievementCard key={achievement.id} achievement={achievement} />
-                  ))}
               </div>
             </div>
           </div>
