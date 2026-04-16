@@ -822,38 +822,50 @@ export default function CareerMapSection() {
             <div className="grid gap-6 md:grid-cols-3">
               {/* Column 1 - Writing */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Header image - visible */}
-                <div className="relative h-28 w-full">
-                  <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-900/60 to-background" />
-                </div>
+                {/* Full background image */}
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
+                {/* Gradient overlay - stronger at top, subtle behind cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Content */}
-                <div className="relative z-10 p-4 flex flex-col gap-4 bg-background/80 items-center justify-center min-h-[60px]">
-                  <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                <div className="relative z-10 flex flex-col">
+                  {/* Header spacer for visible image area */}
+                  <div className="h-24" />
+                  {/* Cards area */}
+                  <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
+                    <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                  </div>
                 </div>
               </div>
               {/* Column 2 - Operations */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Header image - visible */}
-                <div className="relative h-28 w-full">
-                  <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-900/60 to-background" />
-                </div>
+                {/* Full background image */}
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
+                {/* Gradient overlay - stronger at top, subtle behind cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Content */}
-                <div className="relative z-10 p-4 flex flex-col gap-4 bg-background/80 items-center justify-center min-h-[60px]">
-                  <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                <div className="relative z-10 flex flex-col">
+                  {/* Header spacer for visible image area */}
+                  <div className="h-24" />
+                  {/* Cards area */}
+                  <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
+                    <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                  </div>
                 </div>
               </div>
               {/* Column 3 - Global */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Header image - visible */}
-                <div className="relative h-28 w-full">
-                  <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-900/60 to-background" />
-                </div>
+                {/* Full background image */}
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
+                {/* Gradient overlay - stronger at top, subtle behind cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Content */}
-                <div className="relative z-10 p-4 flex flex-col gap-4 bg-background/80 items-center justify-center min-h-[60px]">
-                  <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                <div className="relative z-10 flex flex-col">
+                  {/* Header spacer for visible image area */}
+                  <div className="h-24" />
+                  {/* Cards area */}
+                  <div className="p-4 flex flex-col gap-4 items-center justify-center min-h-[60px]">
+                    <p className="text-foreground/50 text-sm italic text-center">WIP - still getting onboarded</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -883,50 +895,62 @@ export default function CareerMapSection() {
             <div className="grid gap-6 md:grid-cols-3">
               {/* Column 1 - Writing */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Header image - visible */}
-                <div className="relative h-28 w-full">
-                  <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-900/60 to-background" />
-                </div>
+                {/* Full background image */}
+                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
+                {/* Gradient overlay - stronger at top, subtle behind cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Content */}
-                <div className="relative z-10 p-4 flex flex-col gap-4 bg-background/80">
-                  {operationalAchievements
-                    .filter((a) => a.column === 1)
-                    .map((achievement) => (
-                      <AchievementCard key={achievement.id} achievement={achievement} />
-                    ))}
+                <div className="relative z-10 flex flex-col">
+                  {/* Header spacer for visible image area */}
+                  <div className="h-24" />
+                  {/* Cards area */}
+                  <div className="p-4 flex flex-col gap-4">
+                    {operationalAchievements
+                      .filter((a) => a.column === 1)
+                      .map((achievement) => (
+                        <AchievementCard key={achievement.id} achievement={achievement} />
+                      ))}
+                  </div>
                 </div>
               </div>
               {/* Column 2 - Operations */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Header image - visible */}
-                <div className="relative h-28 w-full">
-                  <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-900/60 to-background" />
-                </div>
+                {/* Full background image */}
+                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
+                {/* Gradient overlay - stronger at top, subtle behind cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Content */}
-                <div className="relative z-10 p-4 flex flex-col gap-4 bg-background/80">
-                  {operationalAchievements
-                    .filter((a) => a.column === 2)
-                    .map((achievement) => (
-                      <AchievementCard key={achievement.id} achievement={achievement} />
-                    ))}
+                <div className="relative z-10 flex flex-col">
+                  {/* Header spacer for visible image area */}
+                  <div className="h-24" />
+                  {/* Cards area */}
+                  <div className="p-4 flex flex-col gap-4">
+                    {operationalAchievements
+                      .filter((a) => a.column === 2)
+                      .map((achievement) => (
+                        <AchievementCard key={achievement.id} achievement={achievement} />
+                      ))}
+                  </div>
                 </div>
               </div>
               {/* Column 3 - Global */}
               <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Header image - visible */}
-                <div className="relative h-28 w-full">
-                  <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-                  <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-900/60 to-background" />
-                </div>
+                {/* Full background image */}
+                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
+                {/* Gradient overlay - stronger at top, subtle behind cards */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
                 {/* Content */}
-                <div className="relative z-10 p-4 flex flex-col gap-4 bg-background/80">
-                  {operationalAchievements
-                    .filter((a) => a.column === 3)
-                    .map((achievement) => (
-                      <AchievementCard key={achievement.id} achievement={achievement} />
-                    ))}
+                <div className="relative z-10 flex flex-col">
+                  {/* Header spacer for visible image area */}
+                  <div className="h-24" />
+                  {/* Cards area */}
+                  <div className="p-4 flex flex-col gap-4">
+                    {operationalAchievements
+                      .filter((a) => a.column === 3)
+                      .map((achievement) => (
+                        <AchievementCard key={achievement.id} achievement={achievement} />
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
