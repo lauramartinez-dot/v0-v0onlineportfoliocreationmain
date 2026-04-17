@@ -886,7 +886,7 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Achievements</h2>
         </div>
 
-        {/* OMP Company Card */}
+        {/* OMP Company Card - Hidden until more time in role
         <CompanyCard
           logo="/omp-logo.png"
           name="OMP"
@@ -896,13 +896,10 @@ export default function CareerMapSection() {
           countryFlag="🇧🇪"
           defaultExpanded={false}
         >
-          {/* Achievement Grid */}
           <div className="grid gap-8 md:grid-cols-3">
-            {/* Column 1 - Writing */}
             <div className="relative rounded-2xl overflow-hidden border border-primary/20">
               <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              {/* Polished label */}
               <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
                 <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
                   I write
@@ -915,11 +912,9 @@ export default function CareerMapSection() {
                 </div>
               </div>
             </div>
-            {/* Column 2 - Operations */}
             <div className="relative rounded-2xl overflow-hidden border border-primary/20">
               <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              {/* Polished label */}
               <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
                 <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
                   I build
@@ -932,11 +927,9 @@ export default function CareerMapSection() {
                 </div>
               </div>
             </div>
-            {/* Column 3 - Global */}
             <div className="relative rounded-2xl overflow-hidden border border-primary/20">
               <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              {/* Polished label */}
               <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
                 <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
                   I translate
@@ -951,6 +944,7 @@ export default function CareerMapSection() {
             </div>
           </div>
         </CompanyCard>
+        */}
 
         {/* Personio Company Card */}
         <CompanyCard
