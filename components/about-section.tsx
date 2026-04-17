@@ -5,13 +5,13 @@ import Image from "next/image"
 export function AboutSection() {
   return (
     <section className="relative py-24 px-4 overflow-hidden min-h-[400px]">
-      {/* Background - Globe image */}
-      <div className="absolute inset-0">
+      {/* Background - Globe wireframe positioned on right */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] opacity-20">
         <Image
-          src="/globe-background.png"
+          src="/globe-wireframe.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-contain"
           priority
         />
       </div>
