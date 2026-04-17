@@ -11,7 +11,7 @@ export function AboutSection() {
           src="/globe-background.png"
           alt=""
           fill
-          className="object-cover object-right scale-90"
+          className="object-cover object-center"
           priority
         />
       </div>
