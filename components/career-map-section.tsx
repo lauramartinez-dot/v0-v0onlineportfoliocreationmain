@@ -748,6 +748,16 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
+  {
+    id: "culture-champion",
+    title: "Appointed as Culture Champion, conducted 20 company-wide culture interviews per quarter",
+    description:
+      "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
+    icon: Users,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
   // Column 3: Translate/Global achievements
   {
     id: "localization-expansion",
