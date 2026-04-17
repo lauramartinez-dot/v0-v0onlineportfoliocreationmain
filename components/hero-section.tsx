@@ -49,7 +49,7 @@ export function HeroSection() {
 
             <h4 className="mb-10 text-primary">
               <span className="text-xl font-medium md:text-2xl lg:text-3xl">A highly global and multicultural {"🌍"}</span><br />
-              <span className="text-2xl font-medium md:text-3xl lg:text-4xl">Senior Technical Writer</span>
+              <span className="text-3xl font-semibold md:text-4xl lg:text-5xl tracking-tight">Senior Technical Writer</span>
             </h4>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
