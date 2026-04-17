@@ -11,10 +11,14 @@ export function AboutSection() {
           src="/globe-background.png"
           alt=""
           fill
-          className="object-cover object-right"
+          className="object-contain object-right scale-75 translate-x-[10%]"
           priority
         />
       </div>
+      {/* Top gradient fade */}
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent z-[1]" />
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent z-[1]" />
 
       <div className="mx-auto max-w-7xl relative z-10">
         <div className="max-w-xl text-left space-y-6 pl-4 md:pl-8">
