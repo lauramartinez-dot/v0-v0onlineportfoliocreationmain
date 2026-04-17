@@ -795,42 +795,15 @@ const operationalAchievements: Achievement[] = [
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
-  const Icon = achievement.icon
-  const [isExpanded, setIsExpanded] = React.useState(false)
-  const hasBulletPoints = achievement.bulletPoints && achievement.bulletPoints.length > 0
-  const hasTools = achievement.tools && achievement.tools.length > 0
-
   return (
     <div
       key={achievement.id}
-      className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
-      onClick={() => setIsExpanded(!isExpanded)}
+      className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300"
     >
       <div className="p-5 flex flex-col">
-        {/* Always visible: Title + Chevron */}
-        <div className="flex items-start gap-3">
-          <h3 className="flex-1 text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
-            {achievement.title}
-          </h3>
-          <ChevronDown className={`w-5 h-5 text-primary/60 shrink-0 transition-transform duration-300 mt-0.5 ${isExpanded ? 'rotate-180' : ''}`} />
-        </div>
-
-        {/* Expandable content: Description + Bullet points */}
-        <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[600px] opacity-100 mt-3 pt-3 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
-          <p className="text-sm text-foreground/70 leading-relaxed">{achievement.description}</p>
-
-          {/* Bullet points if available */}
-          {hasBulletPoints && (
-            <ul className="mt-3 space-y-2">
-              {achievement.bulletPoints?.map((point, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm text-foreground/80">
-                  <span className="text-primary mt-0.5">&#10003;</span>
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
+        <h3 className="text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+          {achievement.title}
+        </h3>
       </div>
     </div>
   )
