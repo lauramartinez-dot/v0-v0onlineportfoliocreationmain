@@ -8,7 +8,7 @@ export function AboutSection() {
       {/* Background - Globe wireframe positioned on right */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px] opacity-20">
         <Image
-          src="/globe-wireframe.png"
+          src="/globe-purple.png"
           alt=""
           fill
           className="object-contain"
