@@ -689,16 +689,6 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   {
-    id: "mentored-teammates",
-    title: "Mentored 10 teammates on a global, remote-first team",
-    description:
-      "Provided mentorship and guidance to teammates across multiple time zones and locations.",
-    icon: Users,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
-    column: 2,
-  },
-  {
     id: "peer-promotion",
     title: "Mentored a peer to their promotion to our 2nd Senior Technical Writer",
     description:
@@ -758,49 +748,49 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
-// Column 3: Translate/Global achievements
-{
-  id: "localization-expansion",
+  // Column 3: Translate/Global achievements
+  {
+    id: "localization-expansion",
     title: "Grew documentation from 3 to 6 languages",
-      description:
-  "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
+    description:
+      "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
     icon: Globe,
-      color: "#9931e7",
-        image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
-          column: 3,
-            tools: ["Smartling", "Phrase", "Zendesk Localization"],
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Smartling", "Phrase", "Zendesk Localization"],
   },
-{
-  id: "spanish-localization-guides",
+  {
+    id: "spanish-localization-guides",
     title: "Created Personio's first-ever Spanish localization style guides",
-      description:
-  "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
+    description:
+      "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
     icon: FileText,
-      color: "#9931e7",
-        image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
-          column: 3,
-            tools: ["Confluence", "Google Docs", "Phrase"],
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Confluence", "Google Docs", "Phrase"],
   },
-{
-  id: "spanish-docs-site",
+  {
+    id: "spanish-docs-site",
     title: "Built the Spanish user-facing documentation site from scratch",
-      description:
-  "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
+    description:
+      "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
     icon: Globe,
-      color: "#9931e7",
-        image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
-          column: 3,
-            tools: ["Zendesk", "Phrase", "Smartling"],
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Zendesk", "Phrase", "Smartling"],
   },
-{
-  id: "ai-translation-assistant",
+  {
+    id: "ai-translation-assistant",
     title: "Built an AI tool that cut Spanish translation review time by 90%",
-      description:
-  "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
+    description:
+      "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
     icon: Bot,
-      color: "#9931e7",
-        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
-          column: 3,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+    column: 3,
   },
 ]
 
@@ -874,7 +864,7 @@ function CompanyCard({
   return (
     <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
-      <div 
+      <div
         className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
         onClick={() => setIsExpanded(!isExpanded)}
       >
