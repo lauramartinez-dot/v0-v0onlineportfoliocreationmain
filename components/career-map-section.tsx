@@ -751,12 +751,12 @@ const operationalAchievements: Achievement[] = [
   {
     id: "culture-champion",
     title: "Became Culture Champion and conducted +20 company-wide culture interviews",
-    description+:
-  "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
-  icon: Users,
-  color: "#9931e7",
-  image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
-  column: 2,
+    description:
+      "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
+    icon: Users,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+    column: 2,
   },
 // Column 3: Translate/Global achievements
 {
