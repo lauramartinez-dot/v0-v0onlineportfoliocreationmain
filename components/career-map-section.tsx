@@ -769,6 +769,16 @@ const operationalAchievements: Achievement[] = [
     column: 3,
     tools: ["Zendesk", "Phrase", "Smartling"],
   },
+  {
+    id: "ai-translation-assistant",
+    title: "Created an AI assistant for Spanish translation review, reducing review time by 90%",
+    description:
+      "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
+    icon: Bot,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
