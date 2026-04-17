@@ -659,7 +659,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "subaudiences",
-    title: "Created documentation tailored to 5+ audiences / end-users",
+    title: "Created documentation tailored to 5+ audiences",
     description:
       "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more) and supported the creation of role-based navigation.",
     icon: Users,
@@ -784,7 +784,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-translation-assistant",
-    title: "Created an AI assistant for Spanish translation review, reducing review time by 90%",
+    title: "Built an AI tool that cut Spanish translation review time by 90%",
     description:
       "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
     icon: Bot,
