@@ -106,7 +106,7 @@ const contentTypes: ContentTypeData[] = [
     name: "Newsletter",
     description: "Product updates, announcements, and engagement communications",
     icon: Mail,
-    image: "/release-notes-example.png",
+    image: "/newsletter-example.png",
     audience: "Business Users",
     samples: [
       {
