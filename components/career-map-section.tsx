@@ -740,7 +740,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "release-process",
-    title: "Helped build the end-to-end company-wide release process",
+    title: "Co-built the end-to-end company-wide release process",
     description:
       "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
     icon: TrendingUp,
