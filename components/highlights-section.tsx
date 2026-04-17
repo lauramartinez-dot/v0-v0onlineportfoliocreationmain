@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { topSkills, coreSkills } from "@/data/highlights"
-import { Rocket, ArrowRight, X } from "lucide-react"
+import { ArrowRight, X } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -118,7 +118,7 @@ function SkillImageCard({
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
       <div className="absolute bottom-0 left-0 right-0 p-8">
-        <h3 className="text-2xl font-bold text-white md:text-3xl">{item.title}</h3>
+        <h3 className="text-[26.95px] font-bold text-white">{item.title}</h3>
       </div>
     </div>
   )
@@ -143,12 +143,12 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
       >
         {/* Top accent line */}
         <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-        
+
         {/* Content */}
         <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
-          <h4 className="font-semibold text-purple-100 text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
+          <h4 className="font-semibold text-purple-100 text-[21px] leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
         </div>
-        
+
         {/* Bottom subtle glow on hover */}
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
       </div>
@@ -203,7 +203,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
 
 export function HighlightsSection() {
   return (
-    <section id="highlights" className="relative px-4 overflow-hidden pt-[40px] pb-[70px]">
+    <section id="highlights" className="relative px-4 overflow-hidden pt-[40px] pb-[70px] mt-[80px]">
       {/* Purple gradient background - matching hero section style */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-purple-500/20" />
@@ -216,14 +216,12 @@ export function HighlightsSection() {
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
-          <h2 className="mb-10 text-3xl font-bold tracking-tight md:text-4xl text-center">Top Skills</h2>
-          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-xl text-foreground/80 leading-relaxed">
-              I write docs for complex software products so that <span className="text-white font-medium">all humans </span>can understand it and use it.
-              <br /><br></br>
-              <span>Not just the ones with a STEM degree.</span>
+          <h2 className="mb-10 text-[37px] font-bold tracking-tight text-center">Why Me?</h2>
+          <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
+            <p className="text-[23px] text-foreground/80 leading-relaxed">
+              As a Technical Writer, I write about complex software products <br></br>so that <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-1.5 py-0.5 rounded hover:bg-primary/25 transition-all duration-200">all humans <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span><span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg z-50">Not just the ones with an IT background.</span></span> can understand and use them.
             </p>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">As a Senior Technical Writer though, writing is just part of what I do:</p>
+            <p className="text-[23px] text-foreground/70 leading-relaxed">But unlike most Technical Writers, I don't stop there:</p>
           </div>
         </div>
 
@@ -270,26 +268,8 @@ export function HighlightsSection() {
           </div>
         </div>
 
-        {/* Mission box - moved to bottom */}
-        <div className="max-w-6xl mx-auto mt-32 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-          {/* Bridging sentence - left */}
-          <p className="text-left text-lg md:text-xl text-foreground/70 leading-relaxed md:w-1/3 flex-shrink-0">
-            Over the past 15 years I{"'"}ve changed industries, roles, and languages, but my mission has remained the same:
-          </p>
 
-          {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 shadow-2xl shadow-primary/20 backdrop-blur-md md:flex-1 ring-1 ring-white/5 px-6 pt-4 pb-4">
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05] pointer-events-none" />
-            <div className="absolute -top-4 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
-              <Rocket className="w-4 h-4 text-white" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
-            </div>
-            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[12px] mb-[9px] relative z-10 px-[7px]">
-              I help non-technical people make sense of technology because knowing your way around new tech — especially software and AI tools in today{"'"}s post-ChatGPT world — is what keeps you employed.
-            </p>
-          </div>
-        </div>
       </div>
-    </section >
+    </section>
   )
 }

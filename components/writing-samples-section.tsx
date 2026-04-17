@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
-import { FileText, ExternalLink, BookOpen, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
+import { FileText, ExternalLink, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface WritingSample {
@@ -23,11 +23,11 @@ interface ContentTypeData {
 
 const contentTypes: ContentTypeData[] = [
   {
-    id: "help-guides",
-    name: "Help Guides",
+    id: "user-facing-pages",
+    name: "User-facing documentation",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
-    image: "/help-guides-header.png",
+    image: "/user-facing-example.png",
     audience: "Business Users",
     samples: [
       {
@@ -48,11 +48,20 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
+    id: "internal-facing-pages",
+    name: "Internal-facing documentation",
+    description: "Internal documentation and knowledge base articles for teams",
+    icon: FileText,
+    image: "/internal-facing-example.png",
+    audience: "Internal Teams",
+    samples: [],
+  },
+  {
     id: "video-content",
-    name: "Video Content",
+    name: "Video content",
     description: "Educational videos and tutorials in multiple languages",
     icon: Video,
-    image: "/startup-workspace.jpg",
+    image: "/video-example-personio.png",
     audience: "Business Users",
     samples: [
       {
@@ -78,61 +87,61 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
-    id: "release-notes",
-    name: "Release Notes",
-    description: "Product updates and feature announcements",
-    icon: Mail,
-    image: "/still-life-supply-chain.jpg",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Product Updates",
-        url: "https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
-        company: "Personio",
-      },
-    ],
-  },
-  {
-    id: "api-documentation",
-    name: "API Documentation",
-    description: "Technical reference documentation for developers and integrations",
-    icon: BookOpen,
-    image: "/vr-person-blue-tech.png",
-    audience: "Developers",
-    samples: [
-      {
-        title: "Personio API Documentation",
-        url: "https://developer.personio.de/reference/introduction",
-        company: "Personio",
-      },
-      {
-        title: "Authentication Guide",
-        url: "https://developer.personio.de/reference/authentication",
-        company: "Personio",
-      },
-    ],
-  },
-  {
     id: "ux-writing",
-    name: "UX Writing",
+    name: "UX writing",
     description: "In-product copy, microcopy, and user interface text",
     icon: Pen,
     image: "/startup-workspace.jpg",
     audience: "Business Users",
     samples: [
       {
-        title: "Personio Help Center In-App Guidance",
+        title: "Personio Help Center in-app guidance",
         url: "https://support.personio.de/hc/en-us",
         company: "Personio",
       },
     ],
   },
   {
+    id: "newsletter",
+    name: "Newsletter",
+    description: "Product updates, announcements, and engagement communications",
+    icon: Mail,
+    image: "/newsletter-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Monthly product updates newsletter",
+        url: "#",
+        company: "Personio",
+      },
+      {
+        title: "Feature spotlight newsletter",
+        url: "#",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "release-notes",
+    name: "Release notes",
+    description: "Product updates and feature announcements",
+    icon: Mail,
+    image: "/release-notes-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio product updates",
+        url: "https://web.archive.org/web/20260308130635/https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
+        company: "Personio",
+      },
+    ],
+  },
+  {
     id: "journalism",
-    name: "Foundational Tech Journalism Writing",
+    name: "Foundational tech journalism writing",
     description: "Science and technology articles for leading publications",
     icon: Newspaper,
-    image: "/journalism-header.png",
+    image: "/tech-journalism-example.png",
     audience: "General Public",
     samples: [
       {
@@ -141,7 +150,7 @@ const contentTypes: ContentTypeData[] = [
         company: "Business Insider Spain",
       },
       {
-        title: "Working at tech companies in Dublin: Free beer and laundry",
+        title: "Working at tech companies in Dublin: free beer and laundry",
         url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405147000",
         company: "Business Insider Spain",
       },
@@ -192,49 +201,34 @@ const SampleCard = ({ sample }: { sample: WritingSample }) => {
 }
 
 const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeData; onClick: () => void }) => {
-  const Icon = contentType.icon
-
   return (
     <div
       onClick={onClick}
-      className="group cursor-pointer rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+      className="group cursor-pointer rounded-xl overflow-hidden aspect-square relative"
     >
-      {/* Image */}
-      <div className="relative h-56 md:h-72 overflow-hidden">
-        <Image
-          src={contentType.image}
-          alt={contentType.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-
-        {/* Sample count badge */}
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold">
-          {contentType.samples.length} samples
-        </div>
+      {/* Background image */}
+      <Image
+        src={contentType.image}
+        alt={contentType.name}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      
+      {/* Purple tint overlay */}
+      <div className="absolute inset-0 bg-purple-600/35" />
+      {/* Dark gradient overlay from bottom */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+      
+      {/* Sample count badge */}
+      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
+        {contentType.samples.length} samples
       </div>
-
-      {/* Content */}
-      <div className="p-5">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-            <Icon className="h-5 w-5 text-primary" />
-          </div>
-          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-            {contentType.name}
-          </h3>
-        </div>
-        <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
-        
-        {/* Audience */}
-        <div className="flex items-center gap-2">
-          <span className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Audience:</span>
-          <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-semibold">
-            {contentType.audience}
-          </span>
-        </div>
+      
+      {/* Title at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+        <h3 className="text-[24px] font-bold text-white leading-snug">
+          {contentType.name}
+        </h3>
       </div>
     </div>
   )
@@ -247,19 +241,28 @@ export default function WritingSamplesSection() {
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Writing Samples</h2>
-          <p className="text-muted-foreground text-lg">Click on a content type to explore samples</p>
+          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Writing Samples</h2>
         </div>
 
-        {/* 2-column grid of content types */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {contentTypes.map((contentType) => (
+        {/* First 6 items in 3-column grid */}
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
+          {contentTypes.slice(0, 6).map((contentType) => (
             <ContentTypeCard
               key={contentType.id}
               contentType={contentType}
               onClick={() => setSelectedType(contentType)}
             />
           ))}
+        </div>
+        
+        {/* Last item centered */}
+        <div className="mt-6 flex justify-center">
+          <div className="w-full md:w-1/3">
+            <ContentTypeCard
+              contentType={contentTypes[contentTypes.length - 1]}
+              onClick={() => setSelectedType(contentTypes[contentTypes.length - 1])}
+            />
+          </div>
         </div>
       </div>
 

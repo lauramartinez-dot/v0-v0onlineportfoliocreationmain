@@ -8,13 +8,13 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "Top Skills", href: "#top-differentiators" },
+    { label: "Why Me?", href: "#top-differentiators" },
     { label: "Top Achievements", href: "#top-achievements" },
     { label: "Top Writing Samples", href: "#writing-samples" },
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pb-[30px]">
       <div className="mx-auto max-w-5xl">
         <div className="flex items-center justify-between rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-8 py-5 mt-5">
           <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -36,7 +36,7 @@ export function Navigation() {
 
           <div className="hidden md:flex items-center">
             <Button size="default" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
-              <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Download CV
               </a>
             </Button>
@@ -67,7 +67,7 @@ export function Navigation() {
                 </a>
               ))}
               <Button size="sm" className="rounded-full mt-2 bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
-                <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>
               </Button>

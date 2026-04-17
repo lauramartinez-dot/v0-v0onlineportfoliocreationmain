@@ -1,4 +1,5 @@
 "use client"
+import React, { useState } from "react"
 import Image from "next/image"
 import {
   GraduationCap,
@@ -14,6 +15,7 @@ import {
   Trash,
   FileText,
   Heart,
+  ChevronDown,
 } from "lucide-react"
 
 interface Experience {
@@ -30,7 +32,7 @@ interface Experience {
   type: "work" | "education" | "freelance"
   description: string
   achievements: string[]
-  liveLinks: { label: string; url: string; role?: string; contentType?: "article" | "video" }[]
+  liveLinks?: { label: string; url: string; role?: string; contentType?: "article" | "video" }[]
   technologies: string[]
   relevantSkills: string[]
   color: string
@@ -595,34 +597,80 @@ interface Achievement {
   color: string
   image?: string
   column?: number
+  bulletPoints?: string[]
+  tools?: string[]
 }
 
 const operationalAchievements: Achievement[] = [
-  // Column 1: Writing/Journalism achievements
+  // Column 1: Writing achievements
   {
     id: "style-guide",
-    title: "Created Documentation Style Guide",
+    title: "Created Personio's first-ever documentation style guides",
     description:
-      "Developed comprehensive documentation style guides for English source content, establishing consistent standards for user-facing documentation across multiple organizations.",
+      "Created style guides for English source content, setting consistent standards across a team of 10 technical writers.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
     column: 1,
+    tools: ["Confluence", "Notion", "Google Docs"],
   },
   {
-    id: "content-ownership",
-    title: "Owned 100+ Pages of Product Documentation",
+    id: "product-areas",
+    title: "Created documentation for 3+ product areas at the same time",
     description:
-      "Managed and was responsible for over 100 pages of documentation covering multiple product features and apps, ensuring accuracy, consistency, and user-friendliness.",
+      "Managed documentation across multiple major product areas simultaneously, ensuring comprehensive coverage and consistency.",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
+    tools: ["Zendesk", "Jira", "Figma"],
   },
-  // Column 2: Systems/Operations achievements
+  {
+    id: "content-ownership",
+    title: "Owned and maintained 100+ documentation pages",
+    description:
+      "Managed and was responsible for over 100 pages of user-facing product documentation covering multiple product features and apps, including analytics and account set up.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+    tools: ["Zendesk", "Jira", "Figma"],
+  },
+  {
+    id: "support-volume",
+    title: "Reduced a product area's support volume by over 50% (Apr–Sep 2025)",
+    description:
+      "Improved documentation quality and coverage to significantly reduce support ticket volume for specific product areas.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+  },
+  {
+    id: "ai-tools",
+    title: "Used Gen AI tools to create new pages in under 4h",
+    description:
+      "Used AI-powered tools to dramatically accelerate documentation creation while maintaining quality standards.",
+    icon: Bot,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+    tools: ["ChatGPT", "Claude", "Cursor"],
+  },
+  {
+    id: "subaudiences",
+    title: "Created documentation tailored to 5+ audiences",
+    description:
+      "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more) and supported the creation of role-based navigation.",
+    icon: Users,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+  },
+  // Column 2: Build/Operations achievements
   {
     id: "scaled-teams",
-    title: "Grew a Small Documentation Team into a Global One",
+    title: "Grew a local 3-writer documentation team into a global team of 10",
     description:
       "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
@@ -631,65 +679,256 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   {
-    id: "culture-champion",
-    title: "Fostered Inclusive Culture and DEI Initiatives",
+    id: "first-senior-promotion",
+    title: "Became Personio's first Senior Technical Writer",
     description:
-      "Recognized for contributions to team culture and morale across organizations. Co-founded initiatives supporting women and underrepresented groups in tech, promoting diversity and inclusion at scale.",
+      "First Technical Writer on a 10-person team to be promoted to Senior.",
+    icon: Award,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "peer-promotion",
+    title: "Mentored a peer to their promotion to our 2nd Senior Technical Writer",
+    description:
+      "Mentored and supported a colleague through their growth journey, resulting in their promotion to Senior.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "deprioritize-tasks",
+    title: "Helped the team deprioritize 20% of low-impact release tasks",
+    description:
+      "Used data analysis to identify low-impact documentation tasks, allowing the team to focus on higher-value work.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "outdated-articles",
+    title: "Enabled removal of 100+ outdated pages, improving content relevance",
+    description:
+      "Identified and removed over 100 outdated articles from the Help Center, improving overall content quality and user experience.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "tableau-reports",
+    title: "Helped the team generate reports 30% faster by improving Tableau dashboards",
+    description:
+      "Worked with Data Analysts to enhance Tableau dashboards, streamlining the reporting process for the documentation team.",
+    icon: Bot,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "womens-committee",
+    title: "Co-founded Personio's first Women's Committee",
+    description:
+      "Co-founded Personio's first Women's Committee, hosting informal lunches on topics like salary negotiation, assertive communication, and financial investment to empower female colleagues and spark knowledge sharing.",
     icon: Heart,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
   {
-    id: "business-impact",
-    title: "Delivered Tangible Business Impact",
+    id: "release-process",
+    title: "Co-built the end-to-end company-wide release process",
     description:
-      "Owned key product documentation that significantly reduced support tickets and streamlined workflows. Designed AI-powered processes and prioritized high-impact content, improving efficiency and saving release effort.",
-    icon: BarChart,
+      "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
+    icon: TrendingUp,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
-  // Column 3: Global/Multilingual achievements
   {
-    id: "localization-standards",
-    title: "Established Localization Standards",
+    id: "culture-champion",
+    title: "Became Culture Champion and conducted +20 company-wide culture interviews",
     description:
-      "Created localization style guides for Spanish and other languages, leveraging hands-on translation and QA experience to ensure consistent quality across all markets.",
+      "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
+    icon: Users,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  // Column 3: Translate/Global achievements
+  {
+    id: "localization-expansion",
+    title: "Grew documentation from 3 to 6 languages",
+    description:
+      "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
     icon: Globe,
     color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Smartling", "Phrase", "Zendesk Localization"],
+  },
+  {
+    id: "spanish-localization-guides",
+    title: "Created Personio's first-ever Spanish localization style guides",
+    description:
+      "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Confluence", "Google Docs", "Phrase"],
+  },
+  {
+    id: "spanish-docs-site",
+    title: "Built the Spanish user-facing documentation site from scratch",
+    description:
+      "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+    tools: ["Zendesk", "Phrase", "Smartling"],
+  },
+  {
+    id: "ai-translation-assistant",
+    title: "Built an AI tool that cut Spanish translation review time by 90%",
+    description:
+      "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
+    icon: Bot,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
   {
-    id: "localization-expansion",
-    title: "Expanded Help Center from 3 to 6+ Languages",
+    id: "spanish-translations-reviewed",
+    title: "Reviewed and published 150+ English > Spanish translations annually",
     description:
-      "Led the growth of documentation from 3 to 6+ languages, building entire language libraries from scratch and managing hundreds of translations annually. Strengthened global accessibility and user adoption.",
+      "Managed and reviewed over 150 English to Spanish translations each year, ensuring high quality and consistency across all translated documentation.",
     icon: Globe,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
+  {
+    id: "spanish-localization-expert",
+    title: "Temporarily acted as a company-wide Spanish Localization Expert",
+    description:
+      "Served as the go-to expert for Spanish localization across the entire company, providing guidance on translation quality, terminology, and cultural adaptation.",
+    icon: Award,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
-  const Icon = achievement.icon
   return (
     <div
       key={achievement.id}
-      className="group relative cursor-pointer overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1"
+      className="group relative rounded-xl bg-card border border-primary/20 hover:border-primary/50 transition-all duration-300"
     >
-      <div className="p-5 flex flex-col">
-        <div className="flex items-start gap-4 mb-3">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
-            <Icon className="h-5 w-5 text-primary" />
-          </div>
-          <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-            {achievement.title}
-          </h3>
+      {/* Left accent border */}
+      <div className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
+      
+      <div className="px-5 py-4 flex items-center justify-center">
+        <h3 className="text-[15px] font-semibold text-white text-center leading-snug">
+          {achievement.title}
+        </h3>
+      </div>
+    </div>
+  )
+}
+
+function PillarColumn({
+  label,
+  image,
+  imageAlt,
+  children
+}: {
+  label: string
+  image: string
+  imageAlt: string
+  children: React.ReactNode
+}) {
+  return (
+    <div className="flex flex-col gap-4">
+      {/* Image header with title overlay */}
+      <div className="relative h-24 rounded-xl overflow-hidden">
+        <Image src={image} alt={imageAlt} fill className="object-cover" />
+        {/* Purple tint overlay */}
+        <div className="absolute inset-0 bg-purple-600/35" />
+        {/* Dark gradient overlay from bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+        {/* Title at bottom left */}
+        <div className="absolute bottom-3 left-4 z-10">
+          <h3 className="text-xl font-bold text-white">{label}</h3>
         </div>
-        <p className="text-base text-foreground/70 leading-relaxed">{achievement.description}</p>
+      </div>
+      
+      {/* Achievement cards below */}
+      <div className="flex flex-col gap-3">
+        {children}
+      </div>
+    </div>
+  )
+}
+
+function CompanyCard({
+  children,
+  logo,
+  name,
+  role,
+  years,
+  country,
+  countryFlag,
+  defaultExpanded = false
+}: {
+  children: React.ReactNode
+  logo: string
+  name: string
+  role: string
+  years: string
+  country: string
+  countryFlag: string
+  defaultExpanded?: boolean
+}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+
+  return (
+    <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
+      {/* Company Header - Clickable to expand/collapse */}
+      <div
+        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
+          <Image src={logo} alt={name} fill className="object-contain p-2" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
+              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          {/* Country Flag */}
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-lg" title={country}>{countryFlag}</span>
+            <span className="text-xs font-medium text-foreground/70">{country}</span>
+          </div>
+          {/* Expand/Collapse indicator */}
+          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </div>
+      </div>
+
+      {/* Collapsible content */}
+      <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
+          <div className="pt-6">
+            {children}
+          </div>
+        </div>
       </div>
     </div>
   )
@@ -701,75 +940,122 @@ export default function CareerMapSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Achievements</h2>
+          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Achievements</h2>
         </div>
 
-        {/* Personio Company Card */}
-        <div className="rounded-3xl border border-primary/20 bg-gradient-to-br from-purple-950/30 via-background to-pink-950/20 p-6 md:p-8 shadow-xl shadow-primary/10">
-          {/* Company Header */}
-          <div className="flex items-center gap-4 mb-8 pb-6 border-b border-primary/10">
-            <div className="relative w-16 h-16 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-md">
-              <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-1" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-bold text-foreground">Personio</h3>
-              <p className="text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
-            </div>
-          </div>
-
-          {/* Achievement Grid */}
-          <div className="grid gap-6 md:grid-cols-3">
-            {/* Column 1 - Writing */}
-            <div className="flex flex-col gap-4">
-              <div className="relative h-20 rounded-xl overflow-hidden">
-                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                <div className="absolute inset-0 flex items-end px-4 pb-3">
-                  <h3 className="text-xl font-bold text-white md:text-2xl">I write</h3>
+        {/* OMP Company Card - Hidden until more time in role
+        <CompanyCard
+          logo="/omp-logo.png"
+          name="OMP"
+          role="Senior Technical Writer"
+          years="2026 - Present"
+          country="Belgium"
+          countryFlag="🇧🇪"
+          defaultExpanded={false}
+        >
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I write
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I build
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I translate
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CompanyCard>
+        */}
+
+        {/* Personio Company Card */}
+        <CompanyCard
+          logo="/personio-icon-black.png"
+          name="Personio"
+          role="Senior Technical Writer"
+          years="2021 - 2025"
+          country="Germany"
+          countryFlag="🇩🇪"
+          defaultExpanded={false}
+        >
+          {/* Achievement Grid */}
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Column 1 - Writing */}
+            <PillarColumn
+              label="I write"
+              image="/vr-person-blue-tech.png"
+              imageAlt="Writing Skills"
+            >
               {operationalAchievements
                 .filter((a) => a.column === 1)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
-            </div>
+            </PillarColumn>
+
             {/* Column 2 - Operations */}
-            <div className="flex flex-col gap-4">
-              <div className="relative h-20 rounded-xl overflow-hidden">
-                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                <div className="absolute inset-0 flex items-end px-4 pb-3">
-                  <h3 className="text-xl font-bold text-white md:text-2xl">I build</h3>
-                </div>
-              </div>
+            <PillarColumn
+              label="I build"
+              image="/startup-workspace.jpg"
+              imageAlt="Operations Skills"
+            >
               {operationalAchievements
                 .filter((a) => a.column === 2)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
-            </div>
+            </PillarColumn>
+
             {/* Column 3 - Global */}
-            <div className="flex flex-col gap-4">
-              <div className="relative h-20 rounded-xl overflow-hidden">
-                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover opacity-70" />
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-                <div className="absolute inset-0 flex items-end px-4 pb-3">
-                  <h3 className="text-xl font-bold text-white md:text-2xl">I translate</h3>
-                </div>
-              </div>
+            <PillarColumn
+              label="I translate"
+              image="/still-life-supply-chain.jpg"
+              imageAlt="Global Skills"
+            >
               {operationalAchievements
                 .filter((a) => a.column === 3)
                 .map((achievement) => (
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
-            </div>
+            </PillarColumn>
           </div>
-        </div>
+        </CompanyCard>
       </div>
-    </section >
+    </section>
   )
 }

@@ -3,24 +3,21 @@
 import { Download, ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { useState } from "react"
 
 export function HeroSection() {
-  const [selectedAudience, setSelectedAudience] = useState<string | null>(null)
-
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[230px] pb-16 overflow-hidden">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[80px] overflow-hidden mt-[25px] mb-[25px]">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
-        <div className="absolute -top-20 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-transparent blur-3xl" />
+        <div className="absolute -top-20 -left-20 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
         {/* Pink gradient orb - bottom right */}
-        <div className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-pink-500/25 via-purple-500/15 to-transparent blur-3xl" />
+        <div className="absolute -bottom-32 -right-32 h-[800px] w-[800px] rounded-full bg-gradient-to-tl from-pink-500/35 via-purple-500/25 to-transparent blur-3xl" />
         {/* Center subtle accent */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-r from-purple-500/35 to-pink-500/35 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-5xl w-full">
-        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
+        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16 mt-[40px]">
           <div className="order-1 animate-slide-in-left">
             <div className="relative">
               {/* Large blurred circle - bottom left */}
@@ -31,7 +28,7 @@ export function HeroSection() {
               <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
 
               {/* Profile image */}
-              <div className="relative h-64 w-64 md:h-80 md:w-80 lg:h-96 lg:w-96 rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
+              <div className="relative h-72 w-72 md:h-[22rem] md:w-[22rem] lg:h-[26rem] lg:w-[26rem] rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
                 <Image
                   src="/main-headshot.jpg"
                   alt="Laura Martínez - Senior Technical Writer"
@@ -44,28 +41,22 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <h1 className="mb-2 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              Laura Martínez
+            <p className="text-lg md:text-xl text-foreground/60 mb-4">Hi there!</p>
+
+            <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl xl:text-8xl">
+              I&apos;m Laura<br />Martínez.
             </h1>
 
-            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
-              {"🌍"} Senior Technical Writer
+            <h4 className="mb-10 text-primary">
+              <span className="text-xl font-medium md:text-2xl lg:text-3xl">A highly global and multicultural {"🌍"}</span><br />
+              <span className="text-3xl font-semibold md:text-4xl lg:text-5xl tracking-tight mt-2 inline-block">Senior Technical Writer</span>
             </h4>
-
-            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-normal">
-              <p className="mb-4">I&apos;m the writer you hire when your software company:</p>
-              <ul className="list-disc list-inside space-y-1 mb-4 pl-2">
-                <li>starts growing fast</li>
-                <li>goes from ~100 to 1,000+ people</li>
-                <li>expands into new countries</li>
-              </ul>
-              <p className="md:w-[120%]"><span className="text-white font-medium">Right when documentation stops being about adding more now, and becomes about making sure you can add a lot more later.</span></p>
-            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
                 size="lg"
-                className="group rounded-full px-8 py-6 text-base font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
+                variant="outline"
+                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
                 asChild
               >
                 <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
@@ -79,7 +70,7 @@ export function HeroSection() {
                 className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
                 asChild
               >
-                <a href="https://drive.google.com/file/d/1g9MzcfAskCh9WSMVoVKDWphIJRvgZ5E3/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV
                   <Download className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
                 </a>
@@ -89,7 +80,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-0.5 mt-40">
+      <div className="flex flex-col items-center gap-0.5 mt-32">
         <span className="text-sm text-muted-foreground">Scroll to explore</span>
         <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
       </div>
