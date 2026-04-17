@@ -710,7 +710,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "deprioritize-tasks",
-    title: "Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
+    title: "Helped the team deprioritize 20% of low-impact release tasks",
     description:
       "Used data analysis to identify low-impact documentation tasks, allowing the team to focus on higher-value work.",
     icon: TrendingUp,
@@ -720,7 +720,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "outdated-articles",
-    title: "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
+    title: "Enabled removal of 100+ outdated pages, improving content relevance",
     description:
       "Identified and removed over 100 outdated articles from the Help Center, improving overall content quality and user experience.",
     icon: FileText,
@@ -730,7 +730,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "tableau-reports",
-    title: "Enabled the team to generate reports 30% faster by enhancing Tableau dashboards",
+    title: "Helped the team generate reports 30% faster by improving Tableau dashboards",
     description:
       "Worked with Data Analysts to enhance Tableau dashboards, streamlining the reporting process for the documentation team.",
     icon: Bot,
