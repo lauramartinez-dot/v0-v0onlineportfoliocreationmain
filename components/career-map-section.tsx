@@ -828,8 +828,8 @@ function PillarColumn({
       {/* Image header with title overlay */}
       <div className="relative h-24 rounded-xl overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Very faint purple tint */}
-        <div className="absolute inset-0 bg-purple-600/10" />
+        {/* Purple tint overlay */}
+        <div className="absolute inset-0 bg-purple-600/25" />
         {/* Dark gradient overlay from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
         {/* Title at bottom left */}

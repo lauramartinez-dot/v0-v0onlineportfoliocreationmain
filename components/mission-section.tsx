@@ -10,21 +10,19 @@ export function MissionSection() {
         {/* Relative container for overlapping elements */}
         <div className="relative">
           {/* Image - full width, same size as before */}
-          <div className="relative w-full min-h-[500px] lg:min-h-[580px] rounded-2xl overflow-hidden">
-            {/* Large blurred circle - bottom left */}
-            <div className="absolute -bottom-8 -left-12 h-40 w-40 md:h-52 md:w-52 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl z-10" />
-            {/* Small blurred circle - top right */}
-            <div className="absolute -top-6 -right-6 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl z-10" />
-            {/* Small accent circle - bottom right */}
-            <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl z-10" />
+          <div className="relative w-full min-h-[500px] lg:min-h-[580px]">
+            {/* Purple glow shadow behind image */}
+            <div className="absolute inset-0 rounded-2xl bg-purple-600/40 blur-2xl transform scale-105" />
             
-            <Image
-              src="/team-collaboration.jpeg"
-              alt="Laura collaborating with team members at an outdoor workspace"
-              fill
-              className="object-cover"
-              priority
-            />
+            <div className="relative w-full h-full min-h-[500px] lg:min-h-[580px] rounded-2xl overflow-hidden ring-1 ring-white/10">
+              <Image
+                src="/team-collaboration.jpeg"
+                alt="Laura collaborating with team members at an outdoor workspace"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
 
           {/* Mission box - lighter style matching page design */}
