@@ -798,10 +798,13 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300"
+      className="group relative overflow-hidden rounded-2xl bg-card/90 border border-primary/15 shadow-lg shadow-purple-900/30 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 backdrop-blur-sm"
     >
+      {/* Top accent line */}
+      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      
       <div className="p-5 flex flex-col">
-        <h3 className="text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+        <h3 className="text-[15px] font-semibold text-white group-hover:text-primary transition-colors leading-snug">
           {achievement.title}
         </h3>
       </div>
@@ -821,18 +824,27 @@ function PillarColumn({
   children: React.ReactNode
 }) {
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-      <Image src={image} alt={imageAlt} fill className="object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-      {/* Label header */}
-      <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-        <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+    <div className="relative rounded-xl overflow-hidden shadow-lg">
+      {/* Background image - matches SkillImageCard style */}
+      <Image src={image} alt={imageAlt} fill className="object-cover opacity-70" />
+      
+      {/* Purple gradient overlay from top */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
+      
+      {/* Dark gradient from bottom for content readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-90" />
+      
+      {/* Label badge at top */}
+      <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
+        <span className="px-5 py-2 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/50 text-sm font-semibold tracking-wide text-white shadow-lg">
           {label}
         </span>
       </div>
-      <div className="relative z-10 flex flex-col">
+      
+      {/* Content area */}
+      <div className="relative z-10 flex flex-col min-h-[500px]">
         <div className="h-16" />
-        <div className="p-5 flex flex-col gap-5">
+        <div className="p-5 flex flex-col gap-4 flex-1">
           {children}
         </div>
       </div>
