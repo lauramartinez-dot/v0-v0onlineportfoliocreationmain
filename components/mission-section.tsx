@@ -5,23 +5,24 @@ import { Rocket } from "lucide-react"
 
 export function MissionSection() {
   return (
-    <section className="relative py-20 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
-          {/* Image on the left */}
-          <div className="relative w-full lg:w-1/2 aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl shadow-primary/10">
-            <Image
-              src="/team-collaboration.jpeg"
-              alt="Laura collaborating with team members at an outdoor workspace"
-              fill
-              className="object-cover"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
-          </div>
+    <section className="relative py-20 overflow-hidden">
+      <div className="flex flex-col lg:flex-row items-stretch">
+        {/* Image on the left - extends to the left edge */}
+        <div className="relative w-full lg:w-1/2 min-h-[400px] lg:min-h-[500px]">
+          <Image
+            src="/team-collaboration.jpeg"
+            alt="Laura collaborating with team members at an outdoor workspace"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-background/80 lg:block hidden" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent lg:hidden" />
+        </div>
 
-          {/* Mission content on the right */}
-          <div className="lg:w-1/2 space-y-6">
+        {/* Mission content on the right */}
+        <div className="lg:w-1/2 px-6 lg:px-12 py-10 lg:py-0 flex items-center">
+          <div className="space-y-6 max-w-xl">
             {/* Bridging sentence */}
             <p className="text-[21px] text-foreground/70 leading-relaxed">
               Over the past 15 years I&apos;ve changed industries, roles, and languages, but my mission has remained the same:
