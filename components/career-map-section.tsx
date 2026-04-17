@@ -783,19 +783,16 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
       className="group relative overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 cursor-pointer"
       onClick={() => setIsExpanded(!isExpanded)}
     >
-      <div className="p-6 flex flex-col">
-        {/* Always visible: Icon + Title + Chevron */}
-        <div className="flex items-start gap-4">
-          <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20 group-hover:bg-primary/20 group-hover:ring-primary/40 transition-all mt-0.5">
-            <Icon className="h-5 w-5 text-primary" />
-          </div>
-          <h3 className="flex-1 text-base font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
+      <div className="p-5 flex flex-col">
+        {/* Always visible: Title + Chevron */}
+        <div className="flex items-start gap-3">
+          <h3 className="flex-1 text-[15px] font-semibold text-foreground group-hover:text-primary transition-colors leading-snug">
             {achievement.title}
           </h3>
-          <ChevronDown className={`w-5 h-5 text-primary/60 shrink-0 transition-transform duration-300 mt-1 ${isExpanded ? 'rotate-180' : ''}`} />
+          <ChevronDown className={`w-5 h-5 text-primary/60 shrink-0 transition-transform duration-300 mt-0.5 ${isExpanded ? 'rotate-180' : ''}`} />
         </div>
 
-        {/* Expandable content: Description + Bullet points + Tools */}
+        {/* Expandable content: Description + Bullet points */}
         <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isExpanded ? 'max-h-[600px] opacity-100 mt-3 pt-3 border-t border-primary/10' : 'max-h-0 opacity-0'}`}>
           <p className="text-sm text-foreground/70 leading-relaxed">{achievement.description}</p>
 
@@ -809,23 +806,6 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
                 </li>
               ))}
             </ul>
-          )}
-
-          {/* Tools section */}
-          {hasTools && (
-            <div className="mt-4 pt-3 border-t border-primary/10">
-              <h4 className="text-xs font-semibold text-foreground/60 mb-2">Tools Used</h4>
-              <div className="flex flex-wrap gap-1.5">
-                {achievement.tools?.map((tool, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 text-xs bg-primary/10 text-primary rounded-full border border-primary/20"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
           )}
         </div>
       </div>
