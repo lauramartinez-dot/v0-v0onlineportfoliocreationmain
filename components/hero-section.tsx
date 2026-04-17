@@ -3,13 +3,10 @@
 import { Download, ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
-import { useState } from "react"
 
 export function HeroSection() {
-  const [selectedAudience, setSelectedAudience] = useState<string | null>(null)
-
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[230px] pb-16 overflow-hidden">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[180px] pb-16 overflow-hidden">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
         <div className="absolute -top-20 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-purple-500/30 via-pink-500/20 to-transparent blur-3xl" />
@@ -44,25 +41,15 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <h1 className="mb-2 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              Laura Martínez
+            <p className="text-lg md:text-xl text-foreground/60 mb-4">Hello there!</p>
+            
+            <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl xl:text-8xl">
+              I&apos;m Laura<br />Martínez.
             </h1>
 
-            <h4 className="mb-6 text-2xl font-semibold md:text-3xl lg:text-4xl text-primary whitespace-nowrap">
+            <h4 className="mb-10 text-xl font-medium md:text-2xl lg:text-3xl text-primary">
               Global {"🌍"} Senior Technical Writer
             </h4>
-
-            <div className="mb-8 text-lg md:text-xl text-foreground/70 leading-relaxed font-normal space-y-4">
-              <p>I&apos;m the writer you hire when your software company:</p>
-              <ul className="list-disc list-inside space-y-1 pl-2">
-                <li>starts growing fast</li>
-                <li>goes from ~100 to 1,000+ people</li>
-                <li>expands into new countries</li>
-              </ul>
-              <p className="md:w-[120%]">
-                Right when documentation stops being about adding more now,<br />and becomes about <span className="relative group/tooltip cursor-pointer text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded border-b-2 border-dashed border-primary/50 hover:bg-primary/30 hover:border-primary transition-all duration-200">making sure you can add a lot more later <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span><span className="absolute left-full top-1/2 -translate-y-1/2 ml-3 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg z-50">Way more pages.<br /> With more visuals.<br /> For more audiences.<br /> In more languages.</span></span>.
-              </p>
-            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
@@ -91,7 +78,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-0.5 mt-40">
+      <div className="flex flex-col items-center gap-0.5 mt-32">
         <span className="text-sm text-muted-foreground">Scroll to explore</span>
         <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
       </div>
