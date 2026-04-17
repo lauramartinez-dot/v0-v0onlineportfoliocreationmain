@@ -16,8 +16,8 @@ export function AboutSection() {
         />
       </div>
 
-      <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[15%]">
-        <div className="max-w-md text-left space-y-6">
+      <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[12%]">
+        <div className="max-w-xl text-left space-y-6">
           <div className="text-lg md:text-xl text-foreground/80 leading-relaxed font-normal space-y-4">
             <p>I&apos;m the writer you hire when your software company:</p>
             <ul className="space-y-2 text-foreground/70">
@@ -37,7 +37,7 @@ export function AboutSection() {
           </div>
 
           <div className="pt-2">
-            <p className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-sm">
+            <p className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-lg">
               Right when documentation stops being about adding more now, and becomes about{" "}
               <span className="relative group/tooltip cursor-pointer text-foreground font-semibold bg-primary/15 px-2 py-1 rounded-md border-b-2 border-dashed border-primary/40 hover:bg-primary/25 hover:border-primary transition-all duration-200">
                 making sure you can add a lot more later
