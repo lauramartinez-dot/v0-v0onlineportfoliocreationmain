@@ -819,6 +819,48 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   )
 }
 
+function CollapsibleColumn({ 
+  label, 
+  image, 
+  imageAlt, 
+  children,
+  defaultExpanded = false 
+}: { 
+  label: string
+  image: string
+  imageAlt: string
+  children: React.ReactNode
+  defaultExpanded?: boolean
+}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+  
+  return (
+    <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+      <Image src={image} alt={imageAlt} fill className="object-cover" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+      {/* Clickable label header */}
+      <div 
+        className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent cursor-pointer group"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg flex items-center gap-2 group-hover:bg-primary/30 transition-colors">
+          {label}
+          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </span>
+      </div>
+      <div className="relative z-10 flex flex-col">
+        <div className="h-16" />
+        {/* Collapsible content */}
+        <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="p-5 flex flex-col gap-5">
+            {children}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function CompanyCard({ 
   children, 
   logo, 
@@ -826,8 +868,7 @@ function CompanyCard({
   role, 
   years, 
   country, 
-  countryFlag,
-  defaultExpanded = false 
+  countryFlag 
 }: { 
   children: React.ReactNode
   logo: string
@@ -836,22 +877,16 @@ function CompanyCard({
   years: string
   country: string
   countryFlag: string
-  defaultExpanded?: boolean
 }) {
-  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
-  
   return (
     <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
-      {/* Company Header - Clickable */}
-      <div 
-        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
-        onClick={() => setIsExpanded(!isExpanded)}
-      >
+      {/* Company Header - Non-collapsible */}
+      <div className="flex items-center gap-6 p-8 md:p-10">
         <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
           <Image src={logo} alt={name} fill className="object-contain p-2" />
         </div>
         <div className="flex-1 min-w-0">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground">{name}</h3>
           <p className="text-base md:text-lg text-foreground/60">{role} &middot; {years}</p>
         </div>
         <div className="flex items-center gap-3 shrink-0">
@@ -860,17 +895,13 @@ function CompanyCard({
             <span className="text-lg" title={country}>{countryFlag}</span>
             <span className="text-xs font-medium text-foreground/70">{country}</span>
           </div>
-          {/* Expand/Collapse indicator */}
-          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
         </div>
       </div>
 
-      {/* Collapsible Content */}
-      <div className={`transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
-          <div className="pt-6">
-            {children}
-          </div>
+      {/* Content with collapsible columns */}
+      <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
+        <div className="pt-6">
+          {children}
         </div>
       </div>
     </div>
@@ -954,73 +985,50 @@ export default function CareerMapSection() {
           years="2021 - 2025"
           country="Germany"
           countryFlag="🇩🇪"
-          defaultExpanded={true}
         >
           {/* Achievement Grid */}
           <div className="grid gap-8 md:grid-cols-3">
             {/* Column 1 - Writing */}
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              {/* Polished label */}
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I write
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5">
-                  {operationalAchievements
-                    .filter((a) => a.column === 1)
-                    .map((achievement) => (
-                      <AchievementCard key={achievement.id} achievement={achievement} />
-                    ))}
-                </div>
-              </div>
-            </div>
+            <CollapsibleColumn 
+              label="I write" 
+              image="/vr-person-blue-tech.png" 
+              imageAlt="Writing Skills"
+              defaultExpanded={true}
+            >
+              {operationalAchievements
+                .filter((a) => a.column === 1)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </CollapsibleColumn>
+            
             {/* Column 2 - Operations */}
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              {/* Polished label */}
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I build
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5">
-                  {operationalAchievements
-                    .filter((a) => a.column === 2)
-                    .map((achievement) => (
-                      <AchievementCard key={achievement.id} achievement={achievement} />
-                    ))}
-                </div>
-              </div>
-            </div>
+            <CollapsibleColumn 
+              label="I build" 
+              image="/startup-workspace.jpg" 
+              imageAlt="Operations Skills"
+              defaultExpanded={true}
+            >
+              {operationalAchievements
+                .filter((a) => a.column === 2)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </CollapsibleColumn>
+            
             {/* Column 3 - Global */}
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              {/* Polished label */}
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I translate
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5">
-                  {operationalAchievements
-                    .filter((a) => a.column === 3)
-                    .map((achievement) => (
-                      <AchievementCard key={achievement.id} achievement={achievement} />
-                    ))}
-                </div>
-              </div>
-            </div>
+            <CollapsibleColumn 
+              label="I translate" 
+              image="/still-life-supply-chain.jpg" 
+              imageAlt="Global Skills"
+              defaultExpanded={true}
+            >
+              {operationalAchievements
+                .filter((a) => a.column === 3)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </CollapsibleColumn>
           </div>
         </CompanyCard>
       </div>
