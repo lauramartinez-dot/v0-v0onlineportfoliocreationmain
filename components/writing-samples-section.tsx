@@ -205,28 +205,30 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
   return (
     <div
       onClick={onClick}
-      className="group cursor-pointer rounded-xl border border-primary/20 bg-card hover:border-primary/40 transition-all duration-300"
+      className="group cursor-pointer rounded-xl border border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 aspect-square flex flex-col"
     >
       {/* Content */}
-      <div className="p-5">
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-              <Icon className="h-5 w-5 text-primary" />
-            </div>
-            <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
-              {contentType.name}
-            </h3>
+      <div className="p-5 flex flex-col h-full">
+        {/* Icon and badge */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+            <Icon className="h-6 w-6 text-primary" />
           </div>
-          {/* Sample count badge */}
           <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
             {contentType.samples.length} samples
           </span>
         </div>
-        <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
+        
+        {/* Title */}
+        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+          {contentType.name}
+        </h3>
+        
+        {/* Description */}
+        <p className="text-sm text-foreground/60 leading-relaxed flex-1">{contentType.description}</p>
 
-        {/* Audience */}
-        <div className="flex items-center gap-2">
+        {/* Audience at bottom */}
+        <div className="flex items-center gap-2 mt-4">
           <span className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Audience:</span>
           <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-semibold">
             {contentType.audience}
@@ -247,24 +249,15 @@ export default function WritingSamplesSection() {
           <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Writing Samples</h2>
         </div>
 
-        {/* 2-column grid of content types */}
-        <div className="grid gap-6 md:grid-cols-2">
-          {contentTypes.slice(0, -1).map((contentType) => (
+        {/* 3-column grid of content types */}
+        <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
+          {contentTypes.map((contentType) => (
             <ContentTypeCard
               key={contentType.id}
               contentType={contentType}
               onClick={() => setSelectedType(contentType)}
             />
           ))}
-        </div>
-        {/* Last card centered */}
-        <div className="mt-6 flex justify-center">
-          <div className="w-full md:w-1/2 md:max-w-[calc(50%-0.75rem)]">
-            <ContentTypeCard
-              contentType={contentTypes[contentTypes.length - 1]}
-              onClick={() => setSelectedType(contentTypes[contentTypes.length - 1])}
-            />
-          </div>
         </div>
       </div>
 
