@@ -648,7 +648,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-tools",
-    title: "Used Gen AI tools to produce new pages in under 4h",
+    title: "Used Gen AI tools to create new pages in under 4h",
     description:
       "Used AI-powered tools to dramatically accelerate documentation creation while maintaining quality standards.",
     icon: Bot,
@@ -659,7 +659,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "subaudiences",
-    title: "Created documentation tailored to 5+ different audiences",
+    title: "Created documentation tailored to 5+ audiences / end-users",
     description:
       "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more) and supported the creation of role-based navigation.",
     icon: Users,
