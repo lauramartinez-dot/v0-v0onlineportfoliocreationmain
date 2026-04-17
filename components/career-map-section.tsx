@@ -709,21 +709,34 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   {
-    id: "ai-powered-processes",
-    title: "Built AI-powered, data-informed processes",
+    id: "deprioritize-tasks",
+    title: "Enabled the team to deprioritize 20% of feature release tasks with low audience impact",
     description:
-      "Built AI-powered, data-informed processes to optimize team operations.",
+      "Used data analysis to identify low-impact documentation tasks, allowing the team to focus on higher-value work.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "outdated-articles",
+    title: "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance",
+    description:
+      "Identified and removed over 100 outdated articles from the Help Center, improving overall content quality and user experience.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
+    id: "tableau-reports",
+    title: "Enabled the team to generate reports 30% faster by enhancing Tableau dashboards",
+    description:
+      "Worked with Data Analysts to enhance Tableau dashboards, streamlining the reporting process for the documentation team.",
     icon: Bot,
     color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    bulletPoints: [
-      "Created an AI assistant for Spanish translation review, reducing review time by 90%.",
-      "Enabled the team to deprioritize 20% of feature release tasks with low audience impact.",
-      "Enabled removal of 20% of outdated Help Center articles (+100), improving content relevance.",
-      "Enabled the team to generate reports 30% faster by working with Data Analysts to enhance Tableau.",
-    ],
-    tools: ["ChatGPT", "Tableau", "Google Analytics", "Looker", "Python"],
   },
   {
     id: "womens-committee",
