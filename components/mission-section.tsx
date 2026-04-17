@@ -7,10 +7,10 @@ export function MissionSection() {
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4">
-        {/* Two-column layout - both elements side by side */}
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 items-stretch">
-          {/* Image - left side, slightly wider than 1/3 */}
-          <div className="relative w-full lg:w-[48%] min-h-[350px] lg:min-h-[450px] rounded-2xl overflow-hidden flex-shrink-0">
+        {/* Relative container for overlapping elements */}
+        <div className="relative flex flex-col lg:flex-row items-center lg:items-stretch">
+          {/* Image - left side, wider */}
+          <div className="relative w-full lg:w-[55%] min-h-[400px] lg:min-h-[480px] rounded-2xl overflow-hidden flex-shrink-0 z-0">
             <Image
               src="/team-collaboration.jpeg"
               alt="Laura collaborating with team members at an outdoor workspace"
@@ -20,15 +20,15 @@ export function MissionSection() {
             />
           </div>
 
-          {/* Mission content - right side */}
-          <div className="flex flex-col justify-center space-y-6 lg:w-[52%]">
+          {/* Mission content - overlapping from right */}
+          <div className="relative lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-full lg:w-[52%] mt-6 lg:mt-0 z-10">
             {/* Bridging sentence */}
-            <p className="text-[21px] text-foreground/70 leading-relaxed">
+            <p className="text-[21px] text-foreground/70 leading-relaxed mb-6 lg:pl-4">
               Over the past 15 years I&apos;ve changed industries, roles, and languages, but my mission has remained the same:
             </p>
 
             {/* Mission box */}
-            <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/90 via-purple-900/85 to-pink-950/90 shadow-2xl shadow-primary/30 backdrop-blur-xl ring-1 ring-white/10 px-6 pt-6 pb-5">
+            <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/95 via-purple-900/90 to-pink-950/95 shadow-2xl shadow-primary/30 backdrop-blur-xl ring-1 ring-white/10 px-6 pt-6 pb-5">
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05] pointer-events-none" />
               <div className="absolute -top-4 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
                 <Rocket className="w-4 h-4 text-white" />
