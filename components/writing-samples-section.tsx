@@ -215,7 +215,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
       />
       
       {/* Purple tint overlay */}
-      <div className="absolute inset-0 bg-purple-600/25" />
+      <div className="absolute inset-0 bg-purple-600/35" />
       {/* Dark gradient overlay from bottom */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
       

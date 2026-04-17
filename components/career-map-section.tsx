@@ -792,6 +792,26 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
+  {
+    id: "spanish-translations-reviewed",
+    title: "Reviewed and published 150+ English > Spanish translations annually",
+    description:
+      "Managed and reviewed over 150 English to Spanish translations each year, ensuring high quality and consistency across all translated documentation.",
+    icon: Globe,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
+  {
+    id: "spanish-localization-expert",
+    title: "Temporarily acted as a company-wide Spanish Localization Expert",
+    description:
+      "Served as the go-to expert for Spanish localization across the entire company, providing guidance on translation quality, terminology, and cultural adaptation.",
+    icon: Award,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
+    column: 3,
+  },
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
@@ -829,7 +849,7 @@ function PillarColumn({
       <div className="relative h-24 rounded-xl overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
         {/* Purple tint overlay */}
-        <div className="absolute inset-0 bg-purple-600/25" />
+        <div className="absolute inset-0 bg-purple-600/35" />
         {/* Dark gradient overlay from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
         {/* Title at bottom left */}
