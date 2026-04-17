@@ -75,7 +75,7 @@ export function AboutSection() {
 
           <div className="pt-2">
             <p className="text-[26.25px] text-foreground/70 leading-relaxed">
-              Right when documentation stops being about adding more now, {" "} and becomes about
+              Right when documentation stops being about adding more now, <br></br>and becomes about
               <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
                 making sure you can add a lot more later
                 <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
