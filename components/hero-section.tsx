@@ -48,7 +48,9 @@ export function HeroSection() {
             </h1>
 
             <h4 className="mb-10 text-xl font-medium md:text-2xl lg:text-3xl text-primary">
-              I am a highly global and multicultural Senior Technical Writer {"🌍"}
+              I am a highly global and multicultural <br></br>
+              Senior Technical Writer {"🌍"}
+
             </h4>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
