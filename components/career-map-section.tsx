@@ -750,57 +750,57 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "culture-champion",
-    title: "Appointed as Culture Champion, conducted 20 company-wide culture interviews per quarter",
-    description:
-      "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
-    icon: Users,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
-    column: 2,
+    title: "Became Culture Champion and conducted +20 company-wide culture interviews",
+    description+:
+  "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
+  icon: Users,
+  color: "#9931e7",
+  image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
+  column: 2,
   },
-  // Column 3: Translate/Global achievements
-  {
-    id: "localization-expansion",
+// Column 3: Translate/Global achievements
+{
+  id: "localization-expansion",
     title: "Grew documentation from 3 to 6 languages",
-    description:
-      "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
+      description:
+  "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
     icon: Globe,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
-    column: 3,
-    tools: ["Smartling", "Phrase", "Zendesk Localization"],
+      color: "#9931e7",
+        image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+          column: 3,
+            tools: ["Smartling", "Phrase", "Zendesk Localization"],
   },
-  {
-    id: "spanish-localization-guides",
+{
+  id: "spanish-localization-guides",
     title: "Created Personio's first-ever Spanish localization style guides",
-    description:
-      "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
+      description:
+  "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
     icon: FileText,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
-    column: 3,
-    tools: ["Confluence", "Google Docs", "Phrase"],
+      color: "#9931e7",
+        image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
+          column: 3,
+            tools: ["Confluence", "Google Docs", "Phrase"],
   },
-  {
-    id: "spanish-docs-site",
+{
+  id: "spanish-docs-site",
     title: "Built the Spanish user-facing documentation site from scratch",
-    description:
-      "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
+      description:
+  "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
     icon: Globe,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
-    column: 3,
-    tools: ["Zendesk", "Phrase", "Smartling"],
+      color: "#9931e7",
+        image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
+          column: 3,
+            tools: ["Zendesk", "Phrase", "Smartling"],
   },
-  {
-    id: "ai-translation-assistant",
+{
+  id: "ai-translation-assistant",
     title: "Built an AI tool that cut Spanish translation review time by 90%",
-    description:
-      "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
+      description:
+  "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
     icon: Bot,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
-    column: 3,
+      color: "#9931e7",
+        image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+          column: 3,
   },
 ]
 
@@ -819,13 +819,13 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   )
 }
 
-function CollapsibleColumn({ 
-  label, 
-  image, 
-  imageAlt, 
+function CollapsibleColumn({
+  label,
+  image,
+  imageAlt,
   children,
-  defaultExpanded = false 
-}: { 
+  defaultExpanded = false
+}: {
   label: string
   image: string
   imageAlt: string
@@ -833,13 +833,13 @@ function CollapsibleColumn({
   defaultExpanded?: boolean
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
-  
+
   return (
     <div className="relative rounded-2xl overflow-hidden border border-primary/20">
       <Image src={image} alt={imageAlt} fill className="object-cover" />
       <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
       {/* Clickable label header */}
-      <div 
+      <div
         className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent cursor-pointer group"
         onClick={() => setIsExpanded(!isExpanded)}
       >
@@ -861,15 +861,15 @@ function CollapsibleColumn({
   )
 }
 
-function CompanyCard({ 
-  children, 
-  logo, 
-  name, 
-  role, 
-  years, 
-  country, 
-  countryFlag 
-}: { 
+function CompanyCard({
+  children,
+  logo,
+  name,
+  role,
+  years,
+  country,
+  countryFlag
+}: {
   children: React.ReactNode
   logo: string
   name: string
@@ -989,9 +989,9 @@ export default function CareerMapSection() {
           {/* Achievement Grid */}
           <div className="grid gap-8 md:grid-cols-3">
             {/* Column 1 - Writing */}
-            <CollapsibleColumn 
-              label="I write" 
-              image="/vr-person-blue-tech.png" 
+            <CollapsibleColumn
+              label="I write"
+              image="/vr-person-blue-tech.png"
               imageAlt="Writing Skills"
               defaultExpanded={true}
             >
@@ -1001,11 +1001,11 @@ export default function CareerMapSection() {
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </CollapsibleColumn>
-            
+
             {/* Column 2 - Operations */}
-            <CollapsibleColumn 
-              label="I build" 
-              image="/startup-workspace.jpg" 
+            <CollapsibleColumn
+              label="I build"
+              image="/startup-workspace.jpg"
               imageAlt="Operations Skills"
               defaultExpanded={true}
             >
@@ -1015,11 +1015,11 @@ export default function CareerMapSection() {
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </CollapsibleColumn>
-            
+
             {/* Column 3 - Global */}
-            <CollapsibleColumn 
-              label="I translate" 
-              image="/still-life-supply-chain.jpg" 
+            <CollapsibleColumn
+              label="I translate"
+              image="/still-life-supply-chain.jpg"
               imageAlt="Global Skills"
               defaultExpanded={true}
             >
