@@ -42,13 +42,13 @@ export function HeroSection() {
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
             <p className="text-lg md:text-xl text-foreground/60 mb-4">Hello there!</p>
-            
+
             <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl xl:text-8xl">
               I&apos;m Laura<br />Martínez.
             </h1>
 
             <h4 className="mb-10 text-xl font-medium md:text-2xl lg:text-3xl text-primary">
-              Global {"🌍"} Senior Technical Writer
+              I am a highly global and multicultural Senior Technical Writer {"🌍"}
             </h4>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">

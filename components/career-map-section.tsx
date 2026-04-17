@@ -1017,6 +1017,7 @@ export default function CareerMapSection() {
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </PillarColumn>
+            gradient
           </div>
         </CompanyCard>
       </div>
