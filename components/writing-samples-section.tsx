@@ -52,7 +52,7 @@ const contentTypes: ContentTypeData[] = [
     name: "Internal-facing documentation",
     description: "Internal documentation and knowledge base articles for teams",
     icon: FileText,
-    image: "/internal-writing-example.png",
+    image: "/internal-facing-example.png",
     audience: "Internal Teams",
     samples: [],
   },
