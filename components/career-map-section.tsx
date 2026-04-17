@@ -993,7 +993,7 @@ export default function CareerMapSection() {
               label="I write"
               image="/vr-person-blue-tech.png"
               imageAlt="Writing Skills"
-              defaultExpanded={true}
+              defaultExpanded={false}
             >
               {operationalAchievements
                 .filter((a) => a.column === 1)
@@ -1007,7 +1007,7 @@ export default function CareerMapSection() {
               label="I build"
               image="/startup-workspace.jpg"
               imageAlt="Operations Skills"
-              defaultExpanded={true}
+              defaultExpanded={false}
             >
               {operationalAchievements
                 .filter((a) => a.column === 2)
@@ -1021,7 +1021,7 @@ export default function CareerMapSection() {
               label="I translate"
               image="/still-life-supply-chain.jpg"
               imageAlt="Global Skills"
-              defaultExpanded={true}
+              defaultExpanded={false}
             >
               {operationalAchievements
                 .filter((a) => a.column === 3)
