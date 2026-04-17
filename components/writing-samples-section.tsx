@@ -102,41 +102,6 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
-    id: "ux-writing",
-    name: "UX writing",
-    description: "In-product copy, microcopy, and user interface text",
-    icon: Pen,
-    image: "/startup-workspace.jpg",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Help Center in-app guidance",
-        url: "https://support.personio.de/hc/en-us",
-        company: "Personio",
-      },
-    ],
-  },
-  {
-    id: "newsletter",
-    name: "Newsletter",
-    description: "Product updates, announcements, and engagement communications",
-    icon: Mail,
-    image: "/release-notes-example.png",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Monthly product updates newsletter",
-        url: "#",
-        company: "Personio",
-      },
-      {
-        title: "Feature spotlight newsletter",
-        url: "#",
-        company: "Personio",
-      },
-    ],
-  },
-  {
     id: "journalism",
     name: "Foundational tech journalism writing",
     description: "Science and technology articles for leading publications",
@@ -173,6 +138,41 @@ const contentTypes: ContentTypeData[] = [
         title: "Spanish satellite Deimos-2 is now in orbit",
         url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
         company: "Muy Interesante",
+      },
+    ],
+  },
+  {
+    id: "ux-writing",
+    name: "UX writing",
+    description: "In-product copy, microcopy, and user interface text",
+    icon: Pen,
+    image: "/startup-workspace.jpg",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio Help Center in-app guidance",
+        url: "https://support.personio.de/hc/en-us",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "newsletter",
+    name: "Newsletter",
+    description: "Product updates, announcements, and engagement communications",
+    icon: Mail,
+    image: "/release-notes-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Monthly product updates newsletter",
+        url: "#",
+        company: "Personio",
+      },
+      {
+        title: "Feature spotlight newsletter",
+        url: "#",
+        company: "Personio",
       },
     ],
   },
@@ -214,11 +214,8 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
       
-      {/* Purple gradient overlay from top */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/20 to-transparent" />
-      
-      {/* Dark gradient from bottom for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+      {/* Pink/purple gradient overlay - matching pillar style */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/70 via-pink-500/50 to-purple-600/60" />
       
       {/* Sample count badge */}
       <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
