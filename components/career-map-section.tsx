@@ -638,7 +638,7 @@ const operationalAchievements: Achievement[] = [
   // Column 2: Build/Operations achievements
   {
     id: "scaled-teams",
-    title: "Grew a Small Documentation Team into a Global One",
+    title: "Grew a small documentation team into a global one",
     description:
       "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
@@ -648,7 +648,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-powered-processes",
-    title: "Built AI-Powered, Data-Informed Processes",
+    title: "Built AI-powered, data-informed processes",
     description:
       "Built AI-powered, data-informed processes to optimize team operations.",
     icon: Bot,
@@ -665,7 +665,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "womens-committee",
-    title: "Co-Founded Personio's First Women's Committee",
+    title: "Co-founded Personio's first Women's Committee",
     description:
       "Co-founded Personio's first Women's Committee, hosting informal lunches on topics like salary negotiation, assertive communication, and financial investment to empower female colleagues and spark knowledge sharing.",
     icon: Heart,
@@ -675,7 +675,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "first-senior-promotion",
-    title: "First Technical Writer Promoted to Senior",
+    title: "First technical writer promoted to Senior",
     description:
       "First Technical Writer on a 10-person team to be promoted to Senior.",
     icon: Award,
@@ -685,7 +685,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "mentored-teammates",
-    title: "Mentored 10 Teammates",
+    title: "Mentored 10 teammates",
     description:
       "Mentored 10 teammates, resulting in one being promoted to our second Senior role.",
     icon: Users,
@@ -695,7 +695,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "training-sessions",
-    title: "Led Training Sessions and Workshops",
+    title: "Led training sessions and workshops",
     description:
       "Led training sessions and workshops to upskill writers on new tools and processes.",
     icon: GraduationCap,
@@ -706,7 +706,7 @@ const operationalAchievements: Achievement[] = [
   // Column 3: Translate/Global achievements
   {
     id: "localization-expansion",
-    title: "Grew Documentation from 3 to 6 Languages",
+    title: "Grew documentation from 3 to 6 languages",
     description:
       "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
     icon: Globe,
@@ -717,7 +717,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-localization-guides",
-    title: "Created the Company's First Spanish Localization Guides",
+    title: "Created the company's first Spanish localization guides",
     description:
       "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
     icon: FileText,
