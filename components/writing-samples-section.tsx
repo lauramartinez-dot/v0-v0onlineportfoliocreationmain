@@ -27,7 +27,7 @@ const contentTypes: ContentTypeData[] = [
     name: "User-facing documentation",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
-    image: "/help-guides-header.png",
+    image: "/user-facing-example.png",
     audience: "Business Users",
     samples: [
       {
