@@ -218,7 +218,7 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-[34px] font-bold tracking-tight text-center">Why Me?</h2>
           <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
-            <p className="text-[21px] text-foreground/80 leading-relaxed">
+            <p className="text-[24px] text-foreground/80 leading-relaxed">
               As a Technical Writer, I write about complex software products <br></br>so that <span className="relative group/tooltip cursor-pointer text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded border-b-2 border-dashed border-primary/50 hover:bg-primary/30 hover:border-primary transition-all duration-200">all humans <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span><span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg z-50">Not just the ones with an IT background.</span></span> can understand and use them.
             </p>
             <p className="text-[21px] text-foreground/70 leading-relaxed">But unlike most Technical Writers, I don't stop there:</p>
