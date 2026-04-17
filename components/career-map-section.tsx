@@ -605,7 +605,7 @@ const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
   {
     id: "style-guide",
-    title: "Created the team's first style guides for user-facing documentation",
+    title: "Created Personio's first style guides for user-facing documentation",
     description:
       "Created style guides for English source content, setting consistent standards across a team of 10 technical writers.",
     icon: FileText,
@@ -615,8 +615,19 @@ const operationalAchievements: Achievement[] = [
     tools: ["Confluence", "Notion", "Google Docs"],
   },
   {
+    id: "product-areas",
+    title: "Created documentation for 3+ major product areas at the same time",
+    description:
+      "Managed documentation across multiple major product areas simultaneously, ensuring comprehensive coverage and consistency.",
+    icon: FileText,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+    tools: ["Zendesk", "Jira", "Figma"],
+  },
+  {
     id: "content-ownership",
-    title: "Owned 100+ pages of user-facing documentation",
+    title: "Owned and maintained 100+ pages of user-facing documentation",
     description:
       "Managed and was responsible for over 100 pages of user-facing product documentation covering multiple product features and apps, including analytics and account set up.",
     icon: FileText,
@@ -626,10 +637,31 @@ const operationalAchievements: Achievement[] = [
     tools: ["Zendesk", "Jira", "Figma"],
   },
   {
-    id: "subaudiences",
-    title: "Created pages for 5+ different subaudiences",
+    id: "support-volume",
+    title: "Reduced some product area's support volume by over 50% (Apr–Sep 2025)",
     description:
-      "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more), ensuring each audience receives relevant, role-specific guidance.",
+      "Improved documentation quality and coverage to significantly reduce support ticket volume for specific product areas.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+  },
+  {
+    id: "ai-tools",
+    title: "Leveraged AI tools to produce new pages in under 4h",
+    description:
+      "Used AI-powered tools to dramatically accelerate documentation creation while maintaining quality standards.",
+    icon: Bot,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
+    column: 1,
+    tools: ["ChatGPT", "Claude", "Cursor"],
+  },
+  {
+    id: "subaudiences",
+    title: "Created tailored documentation for 5+ audiences",
+    description:
+      "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more) and supported the creation of role-based navigation.",
     icon: Users,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
