@@ -58,15 +58,15 @@ export function AboutSection() {
           <div className="text-[26.25px] text-foreground/90 leading-relaxed font-normal space-y-8">
             <p className="font-medium">I&apos;m the writer you hire when your software company:</p>
             <ul className="space-y-3 text-foreground/80 pl-6 md:pl-8">
-              <li className="flex items-center gap-3 text-[42px]">
+              <li className="flex items-center gap-3 text-[26.25px]">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 starts growing fast
               </li>
-              <li className="flex items-center gap-3 text-[42px]">
+              <li className="flex items-center gap-3 text-[26.25px]">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 goes from ~100 to 1,000+ people
               </li>
-              <li className="flex items-center gap-3 text-[42px]">
+              <li className="flex items-center gap-3 text-[26.25px]">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 expands into new countries
               </li>
