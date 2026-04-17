@@ -214,7 +214,9 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
       
-      {/* Dark gradient overlay from bottom - matching Why Me section */}
+      {/* Very faint purple tint */}
+      <div className="absolute inset-0 bg-purple-600/10" />
+      {/* Dark gradient overlay from bottom */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
       
       {/* Sample count badge */}

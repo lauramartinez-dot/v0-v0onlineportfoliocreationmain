@@ -828,7 +828,9 @@ function PillarColumn({
       {/* Image header with title overlay */}
       <div className="relative h-24 rounded-xl overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Dark gradient overlay from bottom - matching Why Me section */}
+        {/* Very faint purple tint */}
+        <div className="absolute inset-0 bg-purple-600/10" />
+        {/* Dark gradient overlay from bottom */}
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
         {/* Title at bottom left */}
         <div className="absolute bottom-3 left-4 z-10">
@@ -979,7 +981,7 @@ export default function CareerMapSection() {
           years="2021 - 2025"
           country="Germany"
           countryFlag="🇩🇪"
-          defaultExpanded={true}
+          defaultExpanded={false}
         >
           {/* Achievement Grid */}
           <div className="grid gap-8 md:grid-cols-3">
@@ -1021,7 +1023,6 @@ export default function CareerMapSection() {
                   <AchievementCard key={achievement.id} achievement={achievement} />
                 ))}
             </PillarColumn>
-            gradient
           </div>
         </CompanyCard>
       </div>
