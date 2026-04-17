@@ -5,8 +5,8 @@ import Image from "next/image"
 export function AboutSection() {
   return (
     <section className="relative py-24 px-4 min-h-[400px]">
-      {/* Background - Globe wireframe positioned on right, half cut off, extends into adjacent sections */}
-      <div className="absolute -right-[250px] md:-right-[300px] lg:-right-[350px] top-1/2 -translate-y-1/2 w-[700px] h-[700px] md:w-[900px] md:h-[900px] lg:w-[1100px] lg:h-[1100px] opacity-25 mt-10">
+      {/* Background - Globe wireframe positioned on right, half cut off */}
+      <div className="absolute -right-[150px] md:-right-[200px] lg:-right-[250px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] opacity-15 mt-10">
         <Image
           src="/globe-purple.png"
           alt=""
