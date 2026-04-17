@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { FileText, ExternalLink, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
@@ -206,34 +205,23 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
   return (
     <div
       onClick={onClick}
-      className="group cursor-pointer rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+      className="group cursor-pointer rounded-xl border border-primary/20 bg-card hover:border-primary/40 transition-all duration-300"
     >
-      {/* Image */}
-      <div className="relative h-56 md:h-72 overflow-hidden">
-        <Image
-          src={contentType.image}
-          alt={contentType.name}
-          fill
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
-
-        {/* Sample count badge */}
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold">
-          {contentType.samples.length} samples
-        </div>
-      </div>
-
       {/* Content */}
       <div className="p-5">
-        <div className="flex items-center gap-3 mb-2">
-          <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-            <Icon className="h-5 w-5 text-primary" />
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+              <Icon className="h-5 w-5 text-primary" />
+            </div>
+            <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">
+              {contentType.name}
+            </h3>
           </div>
-          <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
-            {contentType.name}
-          </h3>
+          {/* Sample count badge */}
+          <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
+            {contentType.samples.length} samples
+          </span>
         </div>
         <p className="text-sm text-foreground/60 leading-relaxed mb-4">{contentType.description}</p>
 
