@@ -1026,6 +1026,7 @@ export default function CareerMapSection() {
                     ))}
                 </div>
               </div>
+            </div>
           </div>
         </CompanyCard>
       </div>
