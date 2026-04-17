@@ -66,7 +66,7 @@ export function SkillsCoreSection() {
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             What I Do Best
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Skills &amp; Tools</h2>
+          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Why Me?</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
