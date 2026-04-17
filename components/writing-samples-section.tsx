@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { FileText, ExternalLink, Video, Newspaper, Mail, HelpCircle, Pen } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
@@ -200,40 +201,35 @@ const SampleCard = ({ sample }: { sample: WritingSample }) => {
 }
 
 const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeData; onClick: () => void }) => {
-  const Icon = contentType.icon
-
   return (
     <div
       onClick={onClick}
-      className="group cursor-pointer rounded-xl border border-primary/20 bg-card hover:border-primary/40 transition-all duration-300 aspect-square flex flex-col"
+      className="group cursor-pointer rounded-xl overflow-hidden aspect-square relative"
     >
-      {/* Content */}
-      <div className="p-5 flex flex-col h-full">
-        {/* Icon and badge */}
-        <div className="flex items-center justify-between mb-4">
-          <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-            <Icon className="h-6 w-6 text-primary" />
-          </div>
-          <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-semibold">
-            {contentType.samples.length} samples
-          </span>
-        </div>
-        
-        {/* Title */}
-        <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors mb-2">
+      {/* Background image */}
+      <Image
+        src={contentType.image}
+        alt={contentType.name}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      
+      {/* Purple gradient overlay from top */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/20 to-transparent" />
+      
+      {/* Dark gradient from bottom for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
+      
+      {/* Sample count badge */}
+      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
+        {contentType.samples.length} samples
+      </div>
+      
+      {/* Title at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+        <h3 className="text-xl font-bold text-white leading-snug">
           {contentType.name}
         </h3>
-        
-        {/* Description */}
-        <p className="text-sm text-foreground/60 leading-relaxed flex-1">{contentType.description}</p>
-
-        {/* Audience at bottom */}
-        <div className="flex items-center gap-2 mt-4">
-          <span className="text-xs font-medium text-foreground/50 uppercase tracking-wider">Audience:</span>
-          <span className="px-3 py-1 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 text-white text-xs font-semibold">
-            {contentType.audience}
-          </span>
-        </div>
       </div>
     </div>
   )
