@@ -836,6 +836,64 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   )
 }
 
+function CompanyCard({ 
+  children, 
+  logo, 
+  name, 
+  role, 
+  years, 
+  country, 
+  countryFlag,
+  defaultExpanded = false 
+}: { 
+  children: React.ReactNode
+  logo: string
+  name: string
+  role: string
+  years: string
+  country: string
+  countryFlag: string
+  defaultExpanded?: boolean
+}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
+  
+  return (
+    <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
+      {/* Company Header - Clickable */}
+      <div 
+        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
+          <Image src={logo} alt={name} fill className="object-contain p-2" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
+          <p className="text-base md:text-lg text-foreground/60">{role} &middot; {years}</p>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          {/* Country Flag */}
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-lg" title={country}>{countryFlag}</span>
+            <span className="text-xs font-medium text-foreground/70">{country}</span>
+          </div>
+          {/* Expand/Collapse indicator */}
+          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </div>
+      </div>
+
+      {/* Collapsible Content */}
+      <div className={`transition-all duration-500 ease-in-out ${isExpanded ? 'max-h-[3000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
+          <div className="pt-6">
+            {children}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function CareerMapSection() {
   return (
     <section id="top-achievements" className="py-24 bg-background">
@@ -846,186 +904,147 @@ export default function CareerMapSection() {
         </div>
 
         {/* OMP Company Card */}
-        <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300">
-          {/* Company Header */}
-          <div className="flex items-center gap-6 mb-8 pb-6 border-b border-primary/10">
-            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg">
-              <Image src="/omp-logo.png" alt="OMP" fill className="object-contain p-2" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-3xl font-bold text-foreground">OMP</h3>
-              <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2026 - Present</p>
-            </div>
-            {/* Country Flag - top right */}
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-lg" title="Belgium">🇧🇪</span>
-              <span className="text-xs font-medium text-foreground/70">Belgium</span>
-            </div>
-          </div>
-
+        <CompanyCard
+          logo="/omp-logo.png"
+          name="OMP"
+          role="Senior Technical Writer"
+          years="2026 - Present"
+          country="Belgium"
+          countryFlag="🇧🇪"
+          defaultExpanded={false}
+        >
           {/* Achievement Grid */}
-          <div>
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Column 1 - Writing */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Full background image */}
-                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-                {/* Gradient overlay - stronger at top, subtle behind cards */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label - centered, elegant */}
-                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
-                </div>
-                {/* Content */}
-                <div className="relative z-10 flex flex-col">
-                  {/* Header spacer for visible image area */}
-                  <div className="h-14" />
-                  {/* Cards area */}
-                  <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                    <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                  </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Column 1 - Writing */}
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              {/* Polished label */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I write
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
-              {/* Column 2 - Operations */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Full background image */}
-                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-                {/* Gradient overlay - stronger at top, subtle behind cards */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label - centered, elegant */}
-                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
-                </div>
-                {/* Content */}
-                <div className="relative z-10 flex flex-col">
-                  {/* Header spacer for visible image area */}
-                  <div className="h-14" />
-                  {/* Cards area */}
-                  <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                    <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                  </div>
+            </div>
+            {/* Column 2 - Operations */}
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              {/* Polished label */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I build
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
-              {/* Column 3 - Global */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Full background image */}
-                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-                {/* Gradient overlay - stronger at top, subtle behind cards */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label - centered, elegant */}
-                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
-                </div>
-                {/* Content */}
-                <div className="relative z-10 flex flex-col">
-                  {/* Header spacer for visible image area */}
-                  <div className="h-14" />
-                  {/* Cards area */}
-                  <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                    <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                  </div>
+            </div>
+            {/* Column 3 - Global */}
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              {/* Polished label */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I translate
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </CompanyCard>
 
         {/* Personio Company Card */}
-        <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 p-8 md:p-10 shadow-2xl shadow-primary/20 hover:border-primary/50 transition-all duration-300">
-          {/* Company Header */}
-          <div className="flex items-center gap-6 mb-8 pb-6 border-b border-primary/10">
-            <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg">
-              <Image src="/personio-icon-black.png" alt="Personio" fill className="object-contain p-2" />
-            </div>
-            <div className="flex-1">
-              <h3 className="text-3xl font-bold text-foreground">Personio</h3>
-              <p className="text-lg text-foreground/60">Senior Technical Writer &middot; 2021 - 2025</p>
-            </div>
-            {/* Country Flag - top right */}
-            <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-lg" title="Germany">🇩🇪</span>
-              <span className="text-xs font-medium text-foreground/70">Germany</span>
-            </div>
-          </div>
-
+        <CompanyCard
+          logo="/personio-icon-black.png"
+          name="Personio"
+          role="Senior Technical Writer"
+          years="2021 - 2025"
+          country="Germany"
+          countryFlag="🇩🇪"
+          defaultExpanded={true}
+        >
           {/* Achievement Grid */}
-          <div>
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Column 1 - Writing */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Full background image */}
-                <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-                {/* Gradient overlay - stronger at top, subtle behind cards */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label - centered, elegant */}
-                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I write</span>
-                </div>
-                {/* Content */}
-                <div className="relative z-10 flex flex-col">
-                  {/* Header spacer for visible image area */}
-                  <div className="h-14" />
-                  {/* Cards area */}
-                  <div className="p-5 flex flex-col gap-5">
-                    {operationalAchievements
-                      .filter((a) => a.column === 1)
-                      .map((achievement) => (
-                        <AchievementCard key={achievement.id} achievement={achievement} />
-                      ))}
-                  </div>
-                </div>
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Column 1 - Writing */}
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              {/* Polished label */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I write
+                </span>
               </div>
-              {/* Column 2 - Operations */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Full background image */}
-                <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-                {/* Gradient overlay - stronger at top, subtle behind cards */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label - centered, elegant */}
-                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I build</span>
-                </div>
-                {/* Content */}
-                <div className="relative z-10 flex flex-col">
-                  {/* Header spacer for visible image area */}
-                  <div className="h-14" />
-                  {/* Cards area */}
-                  <div className="p-5 flex flex-col gap-5">
-                    {operationalAchievements
-                      .filter((a) => a.column === 2)
-                      .map((achievement) => (
-                        <AchievementCard key={achievement.id} achievement={achievement} />
-                      ))}
-                  </div>
-                </div>
-              </div>
-              {/* Column 3 - Global */}
-              <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-                {/* Full background image */}
-                <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-                {/* Gradient overlay - stronger at top, subtle behind cards */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-background/70 to-background/85" />
-                {/* Subtle label - centered, elegant */}
-                <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-                  <span className="text-xs uppercase tracking-[0.2em] text-white/50 font-light">I translate</span>
-                </div>
-                {/* Content */}
-                <div className="relative z-10 flex flex-col">
-                  {/* Header spacer for visible image area */}
-                  <div className="h-14" />
-                  {/* Cards area */}
-                  <div className="p-5 flex flex-col gap-5">
-                    {operationalAchievements
-                      .filter((a) => a.column === 3)
-                      .map((achievement) => (
-                        <AchievementCard key={achievement.id} achievement={achievement} />
-                      ))}
-                  </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5">
+                  {operationalAchievements
+                    .filter((a) => a.column === 1)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
                 </div>
               </div>
             </div>
+            {/* Column 2 - Operations */}
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              {/* Polished label */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I build
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5">
+                  {operationalAchievements
+                    .filter((a) => a.column === 2)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
+                </div>
+              </div>
+            </div>
+            {/* Column 3 - Global */}
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              {/* Polished label */}
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I translate
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5">
+                  {operationalAchievements
+                    .filter((a) => a.column === 3)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
+                </div>
+              </div>
           </div>
-        </div>
+        </CompanyCard>
       </div>
     </section>
   )
