@@ -55,7 +55,8 @@ export function HeroSection() {
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
                 size="lg"
-                className="group rounded-full px-8 py-6 text-base font-medium bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-pink-500/30 transition-all duration-300 border-0"
+                variant="outline"
+                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
                 asChild
               >
                 <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
