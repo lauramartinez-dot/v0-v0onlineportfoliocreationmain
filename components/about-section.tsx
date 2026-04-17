@@ -18,7 +18,7 @@ export function AboutSection() {
       {/* Top gradient fade */}
       <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent z-[1]" />
 
-      <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[15%]">
+      <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[8%]">
         <div className="max-w-lg text-left space-y-6">
           <div className="text-lg md:text-xl text-foreground/80 leading-relaxed font-normal space-y-4">
             <p>I&apos;m the writer you hire when your software company:</p>
