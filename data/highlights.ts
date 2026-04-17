@@ -43,7 +43,7 @@ export const coreSkills = [
   },
   {
     icon: Newspaper,
-    title: "Ex- Business Insider Journo",
+    title: "Former Tech Journalist",
     description: "Professional experience at major tech publications including Business Insider and Xataka.",
     column: 1,
     tools: ["Editorial Tools", "CMS", "Publishing Platforms"],
