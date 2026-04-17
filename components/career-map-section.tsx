@@ -824,29 +824,21 @@ function PillarColumn({
   children: React.ReactNode
 }) {
   return (
-    <div className="relative rounded-xl overflow-hidden shadow-lg">
-      {/* Background image - matches SkillImageCard style */}
-      <Image src={image} alt={imageAlt} fill className="object-cover opacity-70" />
-      
-      {/* Purple gradient overlay from top */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
-      
-      {/* Dark gradient from bottom for content readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent opacity-90" />
-      
-      {/* Label badge at top */}
-      <div className="absolute top-4 left-0 right-0 z-10 flex justify-center">
-        <span className="px-5 py-2 rounded-full bg-primary/80 backdrop-blur-sm border border-primary/50 text-sm font-semibold tracking-wide text-white shadow-lg">
-          {label}
-        </span>
+    <div className="flex flex-col gap-4">
+      {/* Image header with title overlay */}
+      <div className="relative h-24 rounded-xl overflow-hidden">
+        <Image src={image} alt={imageAlt} fill className="object-cover" />
+        {/* Purple/pink gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-600/70 via-pink-500/50 to-purple-600/60" />
+        {/* Title at bottom left */}
+        <div className="absolute bottom-3 left-4 z-10">
+          <h3 className="text-xl font-bold text-white">{label}</h3>
+        </div>
       </div>
       
-      {/* Content area */}
-      <div className="relative z-10 flex flex-col min-h-[500px]">
-        <div className="h-16" />
-        <div className="p-5 flex flex-col gap-4 flex-1">
-          {children}
-        </div>
+      {/* Achievement cards below */}
+      <div className="flex flex-col gap-3">
+        {children}
       </div>
     </div>
   )
