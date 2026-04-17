@@ -4,9 +4,9 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden min-h-[400px]">
-      {/* Background - Globe wireframe positioned on right */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] md:w-[600px] md:h-[600px] lg:w-[700px] lg:h-[700px]">
+    <section className="relative py-24 px-4 min-h-[400px]">
+      {/* Background - Globe wireframe positioned on right, half cut off, extends into adjacent sections */}
+      <div className="absolute -right-[250px] md:-right-[300px] lg:-right-[350px] top-1/2 -translate-y-1/2 w-[700px] h-[700px] md:w-[900px] md:h-[900px] lg:w-[1100px] lg:h-[1100px] opacity-40 -mt-20">
         <Image
           src="/globe-purple.png"
           alt=""
@@ -15,8 +15,6 @@ export function AboutSection() {
           priority
         />
       </div>
-      {/* Top gradient fade */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-background to-transparent z-[1]" />
 
       <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[8%]">
         <div className="max-w-lg text-left space-y-6">
