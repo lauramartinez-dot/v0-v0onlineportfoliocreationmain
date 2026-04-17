@@ -20,24 +20,24 @@ export function MissionSection() {
             />
           </div>
 
-          {/* Mission box - smaller, more polished, overlapping in bottom right corner */}
-          <div className="relative lg:absolute lg:right-6 lg:bottom-6 w-full lg:w-[42%] mt-6 lg:mt-0 z-10">
-            <div className="relative rounded-xl border border-white/20 bg-gradient-to-br from-purple-900/95 via-purple-800/90 to-fuchsia-900/95 shadow-xl shadow-black/40 backdrop-blur-xl px-5 pt-5 pb-4">
+          {/* Mission box - medium size, polished, overlapping in bottom right corner */}
+          <div className="relative lg:absolute lg:right-8 lg:bottom-8 w-full lg:w-[45%] mt-6 lg:mt-0 z-10">
+            <div className="relative rounded-2xl border border-white/20 bg-gradient-to-br from-purple-900/95 via-purple-800/90 to-fuchsia-900/95 shadow-2xl shadow-black/40 backdrop-blur-xl px-6 pt-6 pb-5">
               {/* Subtle glass effect overlay */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-tr from-white/[0.08] via-transparent to-white/[0.04] pointer-events-none" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.08] via-transparent to-white/[0.04] pointer-events-none" />
               {/* Inner glow */}
-              <div className="absolute inset-[1px] rounded-xl bg-gradient-to-b from-white/[0.05] to-transparent pointer-events-none" />
+              <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-b from-white/[0.05] to-transparent pointer-events-none" />
               
               {/* Mission badge */}
-              <div className="absolute -top-3 left-5 flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/30 border border-white/20">
-                <Rocket className="w-3.5 h-3.5 text-white" />
-                <span className="text-xs font-semibold uppercase tracking-wider text-white">Mission</span>
+              <div className="absolute -top-3.5 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 shadow-lg shadow-purple-500/30 border border-white/20">
+                <Rocket className="w-4 h-4 text-white" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
               </div>
               
-              <p className="text-base leading-relaxed text-white/95 font-medium text-left mt-3 mb-3 relative z-10">
+              <p className="text-lg leading-relaxed text-white/95 font-medium text-left mt-4 mb-4 relative z-10">
                 I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-white font-semibold bg-white/15 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
-              <p className="text-xs text-white/50 italic text-right relative z-10">
+              <p className="text-sm text-white/50 italic text-right relative z-10">
                 — Eurostat · Regional Yearbook, European Commission, 2025
               </p>
             </div>
