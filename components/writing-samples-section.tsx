@@ -214,8 +214,11 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
       
-      {/* Pink/purple gradient overlay - matching pillar style */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/70 via-pink-500/50 to-purple-600/60" />
+      {/* Purple gradient overlay from top */}
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/20 to-transparent" />
+      
+      {/* Dark gradient from bottom for text readability */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
       
       {/* Sample count badge */}
       <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
@@ -223,7 +226,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
       </div>
       
       {/* Title at bottom */}
-      <div className="absolute bottom-4 left-4 z-10">
+      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
         <h3 className="text-xl font-bold text-white leading-snug">
           {contentType.name}
         </h3>
