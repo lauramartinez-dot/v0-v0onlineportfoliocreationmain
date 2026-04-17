@@ -256,7 +256,7 @@ export default function WritingSamplesSection() {
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-[34px] font-bold tracking-tight">Top Writing Samples</h2>
+          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Writing Samples</h2>
         </div>
 
         {/* 2-column grid of content types */}
