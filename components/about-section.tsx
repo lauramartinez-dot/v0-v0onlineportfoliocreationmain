@@ -1,22 +1,31 @@
 "use client"
 
 import Image from "next/image"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 export function AboutSection() {
+  const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-    // Small delay to ensure the initial off-screen state renders first
-    const timer = setTimeout(() => {
-      setIsVisible(true)
-    }, 100)
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true)
+        }
+      },
+      { threshold: 0.1 }
+    )
 
-    return () => clearTimeout(timer)
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => observer.disconnect()
   }, [])
 
   return (
-    <section className="relative py-24 px-4 min-h-[400px]">
+    <section ref={sectionRef} className="relative py-24 px-4 min-h-[400px]">
       {/* Background - Globe wireframe positioned on right, half cut off */}
       <div 
         className={`absolute -right-[230px] md:-right-[290px] lg:-right-[340px] top-1/2 -translate-y-1/2 w-[620px] h-[620px] md:w-[800px] md:h-[800px] lg:w-[980px] lg:h-[980px] opacity-[0.18] mt-10 transition-all duration-[2000ms] ease-out ${
