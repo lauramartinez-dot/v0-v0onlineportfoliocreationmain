@@ -32,7 +32,7 @@ interface Experience {
   type: "work" | "education" | "freelance"
   description: string
   achievements: string[]
-  liveLinks: { label: string; url: string; role?: string; contentType?: "article" | "video" }[]
+  liveLinks?: { label: string; url: string; role?: string; contentType?: "article" | "video" }[]
   technologies: string[]
   relevantSkills: string[]
   color: string
