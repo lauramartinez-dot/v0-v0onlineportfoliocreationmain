@@ -909,7 +909,7 @@ function CompanyCard({
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
-          <p className="text-base md:text-lg text-foreground/60">{role} &middot; {years}</p>
+              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
         </div>
         <div className="flex items-center gap-3 shrink-0">
           {/* Country Flag */}

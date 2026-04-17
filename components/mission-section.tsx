@@ -34,10 +34,10 @@ export function MissionSection() {
               {/* Mission badge */}
               <div className="absolute -top-4 left-7 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/30 ring-2 ring-background">
                 <Rocket className="w-4 h-4 text-white" />
-                <span className="text-xs font-bold uppercase tracking-widest text-white">15-Year-Long Mission</span>
+                <span className="text-[13px] font-bold uppercase tracking-widest text-white">15-Year-Long Mission</span>
               </div>
               
-              <p className="text-[19px] leading-relaxed text-foreground font-medium text-left mt-4 mb-4 relative z-10">
+              <p className="text-[20px] leading-relaxed text-foreground font-medium text-left mt-4 mb-4 relative z-10">
                 I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
               <p className="text-sm text-foreground/50 italic text-right relative z-10">
