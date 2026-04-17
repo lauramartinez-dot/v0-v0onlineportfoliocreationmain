@@ -17,7 +17,7 @@ export function HeroSection() {
       </div>
 
       <div className="mx-auto max-w-5xl w-full">
-        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
+        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16 mt-40">
           <div className="order-1 animate-slide-in-left">
             <div className="relative">
               {/* Large blurred circle - bottom left */}
