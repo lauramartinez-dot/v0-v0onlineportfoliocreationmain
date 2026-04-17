@@ -6,7 +6,7 @@ export function AboutSection() {
   return (
     <section className="relative py-24 px-4 min-h-[400px]">
       {/* Background - Globe wireframe positioned on right, half cut off */}
-      <div className="absolute -right-[150px] md:-right-[200px] lg:-right-[250px] top-1/2 -translate-y-1/2 w-[400px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px] opacity-15 mt-10">
+      <div className="absolute -right-[200px] md:-right-[250px] lg:-right-[300px] top-1/2 -translate-y-1/2 w-[550px] h-[550px] md:w-[700px] md:h-[700px] lg:w-[850px] lg:h-[850px] opacity-20 mt-10">
         <Image
           src="/globe-purple.png"
           alt=""
