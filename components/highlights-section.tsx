@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { topSkills, coreSkills } from "@/data/highlights"
-import { Rocket, ArrowRight, X } from "lucide-react"
+import { ArrowRight, X } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -268,28 +268,7 @@ export function HighlightsSection() {
           </div>
         </div>
 
-        {/* Mission box - moved to bottom */}
-        <div className="max-w-6xl mx-auto mt-32 flex flex-col md:flex-row items-center gap-6 md:gap-8">
-          {/* Bridging sentence - left */}
-          <p className="text-left text-lg md:text-xl text-foreground/70 leading-relaxed md:w-1/3 flex-shrink-0">
-            Over the past 15 years I{"'"}ve changed industries, roles, and languages, but my mission has remained the same:
-          </p>
 
-          {/* Mission box - right */}
-          <div className="relative rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 shadow-2xl shadow-primary/20 backdrop-blur-md md:flex-1 ring-1 ring-white/5 px-6 pt-4 pb-4">
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05] pointer-events-none" />
-            <div className="absolute -top-4 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
-              <Rocket className="w-4 h-4 text-white" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
-            </div>
-            <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[18px] mb-4 mx-1 relative z-10 px-[7px]">
-              I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
-            </p>
-            <p className="text-sm text-white/50 italic text-right relative z-10 px-[7px]">
-              — Eurostat · Regional Yearbook, European Commission, 2025
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   )
