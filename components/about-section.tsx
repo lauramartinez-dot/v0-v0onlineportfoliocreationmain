@@ -8,20 +8,33 @@ export function AboutSection() {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    // Track if user has scrolled at all
+    let hasScrolled = false
+    
+    const handleScroll = () => {
+      hasScrolled = true
+    }
+    
+    window.addEventListener('scroll', handleScroll, { once: true })
+    
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
+        // Only trigger animation if user has scrolled AND section is in view
+        if (entry.isIntersecting && hasScrolled) {
           setIsVisible(true)
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.3 }
     )
 
     if (sectionRef.current) {
       observer.observe(sectionRef.current)
     }
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
