@@ -22,7 +22,7 @@ export function MissionSection() {
 
           {/* Mission box - frosted white glass, overlapping in bottom right corner */}
           <div className="relative lg:absolute lg:right-8 lg:bottom-8 w-full lg:w-[48%] mt-6 lg:mt-0 z-10">
-            <div className="relative rounded-2xl border border-white/40 bg-white/20 shadow-2xl shadow-black/30 backdrop-blur-md px-7 pt-8 pb-6">
+            <div className="relative rounded-2xl border border-white/50 bg-white/70 shadow-2xl shadow-black/30 backdrop-blur-xl px-7 pt-8 pb-6">
               {/* Soft inner highlight */}
               <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-b from-white/20 to-transparent pointer-events-none" />
               
@@ -32,10 +32,10 @@ export function MissionSection() {
                 <span className="text-xs font-bold uppercase tracking-widest text-white">15-Year-Long Mission</span>
               </div>
               
-              <p className="text-[19px] leading-relaxed text-white font-medium text-left mt-4 mb-4 relative z-10 drop-shadow-sm">
-                I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-white font-semibold bg-white/20 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
+              <p className="text-[19px] leading-relaxed text-slate-700 font-medium text-left mt-4 mb-4 relative z-10">
+                I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-slate-800 font-semibold bg-purple-200/60 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
-              <p className="text-sm text-white/70 italic text-right relative z-10">
+              <p className="text-sm text-slate-500 italic text-right relative z-10">
                 — Eurostat · Regional Yearbook, European Commission, 2025
               </p>
             </div>
