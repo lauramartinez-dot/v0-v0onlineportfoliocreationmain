@@ -214,8 +214,8 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
       
-      {/* Pink/purple gradient overlay - matching pillar style */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-600/70 via-pink-500/50 to-purple-600/60" />
+      {/* Dark gradient overlay from bottom - matching Why Me section */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
       
       {/* Sample count badge */}
       <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
