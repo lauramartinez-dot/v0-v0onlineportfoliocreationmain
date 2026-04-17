@@ -38,10 +38,10 @@ export function AboutSection() {
   }, [])
 
   return (
-    <section ref={sectionRef} className="relative py-24 px-4 min-h-[400px]">
+    <section ref={sectionRef} className="relative py-24 px-4 min-h-[400px] mt-[60px]">
       {/* Background - Globe wireframe positioned on right, half cut off */}
       <div 
-        className={`absolute -right-[230px] md:-right-[290px] lg:-right-[340px] top-1/2 -translate-y-1/2 w-[620px] h-[620px] md:w-[800px] md:h-[800px] lg:w-[980px] lg:h-[980px] opacity-40 mt-10 transition-all duration-[2000ms] ease-out ${
+        className={`absolute -right-[230px] md:-right-[290px] lg:-right-[340px] top-1/2 -translate-y-1/2 w-[620px] h-[620px] md:w-[800px] md:h-[800px] lg:w-[980px] lg:h-[980px] opacity-40 mt-[60px] transition-all duration-[2000ms] ease-out ${
           isVisible ? "translate-x-0" : "translate-x-[200px]"
         }`}
       >

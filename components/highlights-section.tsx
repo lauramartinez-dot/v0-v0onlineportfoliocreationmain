@@ -203,7 +203,7 @@ function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
 
 export function HighlightsSection() {
   return (
-    <section id="highlights" className="relative px-4 overflow-hidden pt-[40px] pb-[70px]">
+    <section id="highlights" className="relative px-4 overflow-hidden pt-[40px] pb-[70px] mt-[80px]">
       {/* Purple gradient background - matching hero section style */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-purple-500/20" />
