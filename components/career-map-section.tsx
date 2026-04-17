@@ -834,27 +834,36 @@ function CollapsibleColumn({
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
+  const handleClick = () => {
+    setIsExpanded(prev => !prev)
+  }
+
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-      <Image src={image} alt={imageAlt} fill className="object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-      {/* Clickable label header */}
-      <div
-        className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent cursor-pointer group"
-        onClick={() => setIsExpanded(!isExpanded)}
+    <div className="flex flex-col">
+      {/* Header - always visible, clickable */}
+      <button
+        type="button"
+        onClick={handleClick}
+        className="relative h-16 rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-all duration-300 cursor-pointer group w-full text-left"
       >
-        <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg flex items-center gap-2 group-hover:bg-primary/30 transition-colors">
-          {label}
-          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
-        </span>
-      </div>
-      <div className="relative z-10 flex flex-col">
-        <div className="h-16" />
-        {/* Collapsible content */}
-        <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[2000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-          <div className="p-5 flex flex-col gap-5">
-            {children}
-          </div>
+        {/* Background image - positioned on right */}
+        <div className="absolute inset-0">
+          <Image src={image} alt={imageAlt} fill className="object-cover" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
+        </div>
+        {/* Label on left */}
+        <div className="relative z-10 h-full flex items-center px-5">
+          <span className="text-lg font-semibold text-primary group-hover:text-primary/80 transition-colors">
+            {label}
+          </span>
+          <ChevronDown className={`w-5 h-5 text-primary/60 ml-2 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </div>
+      </button>
+      
+      {/* Collapsible content */}
+      <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[2000px] opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+        <div className="flex flex-col gap-4">
+          {children}
         </div>
       </div>
     </div>
