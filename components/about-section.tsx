@@ -4,9 +4,9 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section className="relative py-24 px-4 overflow-hidden">
+    <section className="relative py-24 px-4 overflow-hidden min-h-[400px]">
       {/* Background - Globe image */}
-      <div className="absolute inset-0 -z-10">
+      <div className="absolute inset-0">
         <Image
           src="/globe-background.png"
           alt=""
