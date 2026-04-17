@@ -798,13 +798,13 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative overflow-hidden rounded-2xl bg-card/90 border border-primary/15 shadow-lg shadow-purple-900/30 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 backdrop-blur-sm"
+      className="group relative rounded-xl bg-card border border-primary/20 hover:border-primary/50 transition-all duration-300"
     >
-      {/* Top accent line */}
-      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      {/* Left accent border */}
+      <div className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
       
-      <div className="p-5 flex flex-col">
-        <h3 className="text-[15px] font-semibold text-white group-hover:text-primary transition-colors leading-snug">
+      <div className="px-5 py-4 flex items-center justify-center">
+        <h3 className="text-[15px] font-semibold text-white text-center leading-snug">
           {achievement.title}
         </h3>
       </div>
