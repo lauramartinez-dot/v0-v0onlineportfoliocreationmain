@@ -23,7 +23,7 @@ export function MissionSection() {
           {/* Mission content on the right */}
           <div className="lg:w-1/2 space-y-6">
             {/* Bridging sentence */}
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
+            <p className="text-[21px] text-foreground/70 leading-relaxed">
               Over the past 15 years I&apos;ve changed industries, roles, and languages, but my mission has remained the same:
             </p>
 
@@ -34,7 +34,7 @@ export function MissionSection() {
                 <Rocket className="w-4 h-4 text-white" />
                 <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
               </div>
-              <p className="text-lg md:text-xl leading-relaxed text-white/90 font-medium text-left mt-[18px] mb-4 mx-1 relative z-10 px-[7px]">
+              <p className="text-[21px] leading-relaxed text-white/90 font-medium text-left mt-[18px] mb-4 mx-1 relative z-10 px-[7px]">
                 I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
               <p className="text-sm text-white/50 italic text-right relative z-10 px-[7px]">
