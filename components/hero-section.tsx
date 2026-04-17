@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[80px] overflow-hidden mt-[30px] mb-[30px]">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[80px] overflow-hidden mt-[25px] mb-[30px]">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
         <div className="absolute -top-20 -left-20 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
