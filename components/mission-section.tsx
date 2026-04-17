@@ -26,7 +26,7 @@ export function MissionSection() {
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05] pointer-events-none" />
               <div className="absolute -top-4 left-6 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 shadow-lg shadow-purple-500/40 ring-4 ring-background">
                 <Rocket className="w-4 h-4 text-white" />
-                <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
+                <span className="text-sm font-semibold uppercase tracking-wider text-white">15-year-long mission/span>
               </div>
               <p className="text-[21px] leading-relaxed text-white/90 font-medium text-left mt-2 mb-4 relative z-10">
                 I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-white font-semibold bg-primary/20 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
