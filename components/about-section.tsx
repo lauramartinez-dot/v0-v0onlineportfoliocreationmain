@@ -56,9 +56,9 @@ export function AboutSection() {
 
       <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[8%]">
         <div className="max-w-3xl text-left space-y-8">
-          <div className="text-xl md:text-2xl text-foreground/90 leading-relaxed font-normal space-y-5">
+          <div className="text-xl md:text-2xl text-foreground/90 leading-relaxed font-normal space-y-8">
             <p className="font-medium">I&apos;m the writer you hire when your software company:</p>
-            <ul className="space-y-3 text-foreground/80">
+            <ul className="space-y-3 text-foreground/80 pl-6 md:pl-8">
               <li className="flex items-center gap-3">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 starts growing fast
