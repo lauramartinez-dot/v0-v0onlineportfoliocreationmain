@@ -87,6 +87,41 @@ const contentTypes: ContentTypeData[] = [
     ],
   },
   {
+    id: "ux-writing",
+    name: "UX writing",
+    description: "In-product copy, microcopy, and user interface text",
+    icon: Pen,
+    image: "/startup-workspace.jpg",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio Help Center in-app guidance",
+        url: "https://support.personio.de/hc/en-us",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "newsletter",
+    name: "Newsletter",
+    description: "Product updates, announcements, and engagement communications",
+    icon: Mail,
+    image: "/release-notes-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Monthly product updates newsletter",
+        url: "#",
+        company: "Personio",
+      },
+      {
+        title: "Feature spotlight newsletter",
+        url: "#",
+        company: "Personio",
+      },
+    ],
+  },
+  {
     id: "release-notes",
     name: "Release notes",
     description: "Product updates and feature announcements",
@@ -141,41 +176,6 @@ const contentTypes: ContentTypeData[] = [
       },
     ],
   },
-  {
-    id: "ux-writing",
-    name: "UX writing",
-    description: "In-product copy, microcopy, and user interface text",
-    icon: Pen,
-    image: "/startup-workspace.jpg",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Help Center in-app guidance",
-        url: "https://support.personio.de/hc/en-us",
-        company: "Personio",
-      },
-    ],
-  },
-  {
-    id: "newsletter",
-    name: "Newsletter",
-    description: "Product updates, announcements, and engagement communications",
-    icon: Mail,
-    image: "/release-notes-example.png",
-    audience: "Business Users",
-    samples: [
-      {
-        title: "Monthly product updates newsletter",
-        url: "#",
-        company: "Personio",
-      },
-      {
-        title: "Feature spotlight newsletter",
-        url: "#",
-        company: "Personio",
-      },
-    ],
-  },
 ]
 
 const SampleCard = ({ sample }: { sample: WritingSample }) => {
@@ -226,7 +226,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
       
       {/* Title at bottom */}
       <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-        <h3 className="text-xl font-bold text-white leading-snug">
+        <h3 className="text-[24px] font-bold text-white leading-snug">
           {contentType.name}
         </h3>
       </div>
@@ -244,15 +244,25 @@ export default function WritingSamplesSection() {
           <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Writing Samples</h2>
         </div>
 
-        {/* 3-column grid of content types */}
+        {/* First 6 items in 3-column grid */}
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
-          {contentTypes.map((contentType) => (
+          {contentTypes.slice(0, 6).map((contentType) => (
             <ContentTypeCard
               key={contentType.id}
               contentType={contentType}
               onClick={() => setSelectedType(contentType)}
             />
           ))}
+        </div>
+        
+        {/* Last item centered */}
+        <div className="mt-6 flex justify-center">
+          <div className="w-full md:w-1/3">
+            <ContentTypeCard
+              contentType={contentTypes[contentTypes.length - 1]}
+              onClick={() => setSelectedType(contentTypes[contentTypes.length - 1])}
+            />
+          </div>
         </div>
       </div>
 

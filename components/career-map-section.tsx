@@ -739,6 +739,16 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   {
+    id: "release-process",
+    title: "Helped build the end-to-end company-wide release process",
+    description:
+      "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
     id: "culture-champion",
     title: "Became Culture Champion and conducted +20 company-wide culture interviews",
     description:

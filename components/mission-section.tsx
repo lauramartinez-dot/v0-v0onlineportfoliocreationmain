@@ -11,8 +11,8 @@ export function MissionSection() {
         <div className="relative">
           {/* Image - full width, same size as before */}
           <div className="relative w-full min-h-[500px] lg:min-h-[580px]">
-            {/* Purple glow shadow behind image */}
-            <div className="absolute inset-0 rounded-2xl bg-purple-600/40 blur-2xl transform scale-105" />
+            {/* Purple glow shadow behind image - subtle like hero */}
+            <div className="absolute inset-0 rounded-2xl bg-purple-600/20 blur-xl transform scale-[1.02]" />
             
             <div className="relative w-full h-full min-h-[500px] lg:min-h-[580px] rounded-2xl overflow-hidden ring-1 ring-white/10">
               <Image
