@@ -37,7 +37,7 @@ export function AboutSection() {
           </div>
 
           <div className="pt-2">
-            <p className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-lg">
+            <p className="text-lg md:text-xl text-foreground/60 leading-relaxed max-w-2xl">
               Right when documentation stops being about adding more now, and becomes about{" "}
               <span className="relative group/tooltip cursor-pointer text-foreground font-semibold bg-primary/15 px-2 py-1 rounded-md border-b-2 border-dashed border-primary/40 hover:bg-primary/25 hover:border-primary transition-all duration-200">
                 making sure you can add a lot more later
