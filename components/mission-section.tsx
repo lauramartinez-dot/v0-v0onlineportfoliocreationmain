@@ -22,7 +22,7 @@ export function MissionSection() {
 
           {/* Mission box - polished, overlapping in bottom right corner */}
           <div className="relative lg:absolute lg:right-8 lg:bottom-8 w-full lg:w-[48%] mt-6 lg:mt-0 z-10">
-            <div className="relative rounded-2xl border border-white/20 bg-gradient-to-br from-purple-900/95 via-purple-800/90 to-fuchsia-900/95 shadow-2xl shadow-black/40 backdrop-blur-xl px-7 pt-7 pb-6">
+            <div className="relative rounded-2xl border border-white/20 bg-gradient-to-br from-purple-900/85 via-purple-800/80 to-fuchsia-900/85 shadow-2xl shadow-black/40 backdrop-blur-xl px-7 pt-7 pb-6">
               {/* Subtle glass effect overlay */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.08] via-transparent to-white/[0.04] pointer-events-none" />
               {/* Inner glow */}
