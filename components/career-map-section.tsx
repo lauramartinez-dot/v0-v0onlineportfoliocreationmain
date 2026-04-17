@@ -605,7 +605,7 @@ const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
   {
     id: "style-guide",
-    title: "Created Personio's first style guides for user-facing documentation",
+    title: "Created Personio's first-ever documentation style guides",
     description:
       "Created style guides for English source content, setting consistent standards across a team of 10 technical writers.",
     icon: FileText,
@@ -616,7 +616,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "product-areas",
-    title: "Created documentation for 3+ major product areas at the same time",
+    title: "Created documentation for 3+ product areas at the same time",
     description:
       "Managed documentation across multiple major product areas simultaneously, ensuring comprehensive coverage and consistency.",
     icon: FileText,
@@ -627,7 +627,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "content-ownership",
-    title: "Owned and maintained 100+ pages of user-facing documentation",
+    title: "Owned and maintained 100+ documentation pages",
     description:
       "Managed and was responsible for over 100 pages of user-facing product documentation covering multiple product features and apps, including analytics and account set up.",
     icon: FileText,
@@ -638,7 +638,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "support-volume",
-    title: "Reduced some product area's support volume by over 50% (Apr–Sep 2025)",
+    title: "Reduced a product area's support volume by over 50% (Apr–Sep 2025)",
     description:
       "Improved documentation quality and coverage to significantly reduce support ticket volume for specific product areas.",
     icon: TrendingUp,
@@ -648,7 +648,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-tools",
-    title: "Leveraged AI tools to produce new pages in under 4h",
+    title: "Used Gen AI tools to produce new pages in under 4h",
     description:
       "Used AI-powered tools to dramatically accelerate documentation creation while maintaining quality standards.",
     icon: Bot,
@@ -659,7 +659,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "subaudiences",
-    title: "Created tailored documentation for 5+ audiences",
+    title: "Created documentation tailored to 5+ different audiences",
     description:
       "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more) and supported the creation of role-based navigation.",
     icon: Users,
@@ -700,7 +700,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "peer-promotion",
-    title: "Guided a peer to promotion, who became our second Senior",
+    title: "Mentored a peer to their promotion to our 2nd Senior Technical Writer",
     description:
       "Mentored and supported a colleague through their growth journey, resulting in their promotion to Senior.",
     icon: TrendingUp,
@@ -749,7 +749,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-localization-guides",
-    title: "Created the company's first Spanish localization guides",
+    title: "Created Personio's first-ever Spanish localization style guides",
     description:
       "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
     icon: FileText,
@@ -760,7 +760,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-docs-site",
-    title: "Created and owned the Spanish user-facing documentation site from scratch",
+    title: "Built the Spanish user-facing documentation site from scratch",
     description:
       "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
     icon: Globe,
