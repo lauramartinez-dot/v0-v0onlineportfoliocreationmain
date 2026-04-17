@@ -10,13 +10,13 @@ export function AboutSection() {
   useEffect(() => {
     // Track if user has scrolled at all
     let hasScrolled = false
-    
+
     const handleScroll = () => {
       hasScrolled = true
     }
-    
+
     window.addEventListener('scroll', handleScroll, { once: true })
-    
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Only trigger animation if user has scrolled AND section is in view
@@ -40,10 +40,9 @@ export function AboutSection() {
   return (
     <section ref={sectionRef} className="relative py-24 px-4 min-h-[400px] mt-[60px]">
       {/* Background - Globe wireframe positioned on right, half cut off */}
-      <div 
-        className={`absolute -right-[280px] md:-right-[350px] lg:-right-[420px] top-1/2 -translate-y-1/2 w-[750px] h-[750px] md:w-[950px] md:h-[950px] lg:w-[1150px] lg:h-[1150px] opacity-15 mt-[60px] transition-all duration-[2000ms] ease-out ${
-          isVisible ? "translate-x-0" : "translate-x-[200px]"
-        }`}
+      <div
+        className={`absolute -right-[280px] md:-right-[350px] lg:-right-[420px] top-1/2 -translate-y-1/2 w-[750px] h-[750px] md:w-[950px] md:h-[950px] lg:w-[1150px] lg:h-[1150px] opacity-15 mt-[60px] transition-all duration-[2000ms] ease-out ${isVisible ? "translate-x-0" : "translate-x-[200px]"
+          }`}
       >
         <Image
           src="/globe-purple.png"
@@ -76,7 +75,7 @@ export function AboutSection() {
 
           <div className="pt-2">
             <p className="text-[26.25px] text-foreground/70 leading-relaxed">
-              Right when documentation stops being about adding more now, and becomes about{" "}
+              Right when documentation stops being about adding more now, {" "} and becomes about
               <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md border-b-2 border-dashed border-primary/40 hover:bg-primary/25 hover:border-primary transition-all duration-200">
                 making sure you can add a lot more later
                 <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
