@@ -93,13 +93,7 @@ const contentTypes: ContentTypeData[] = [
     icon: Pen,
     image: "/ux-writing-example.png",
     audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Help Center in-app guidance",
-        url: "https://support.personio.de/hc/en-us",
-        company: "Personio",
-      },
-    ],
+    samples: [],
   },
   {
     id: "newsletter",
@@ -108,18 +102,7 @@ const contentTypes: ContentTypeData[] = [
     icon: Mail,
     image: "/newsletter-example.png",
     audience: "Business Users",
-    samples: [
-      {
-        title: "Monthly product updates newsletter",
-        url: "#",
-        company: "Personio",
-      },
-      {
-        title: "Feature spotlight newsletter",
-        url: "#",
-        company: "Personio",
-      },
-    ],
+    samples: [],
   },
   {
     id: "release-notes",
@@ -219,10 +202,12 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
       {/* Dark gradient overlay from bottom */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
       
-      {/* Sample count badge */}
-      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
-        {contentType.samples.length} samples
-      </div>
+      {/* Sample count badge - only show if there are samples */}
+      {contentType.samples.length > 0 && (
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
+          {contentType.samples.length} samples
+        </div>
+      )}
       
       {/* Title at bottom */}
       <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
