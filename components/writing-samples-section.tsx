@@ -91,7 +91,7 @@ const contentTypes: ContentTypeData[] = [
     name: "UX writing",
     description: "In-product copy, microcopy, and user interface text",
     icon: Pen,
-    image: "/startup-workspace.jpg",
+    image: "/ux-writing-example.png",
     audience: "Business Users",
     samples: [
       {
