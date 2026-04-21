@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import {
   GraduationCap,
@@ -15,6 +15,7 @@ import {
   Trash,
   FileText,
   Heart,
+  ChevronDown,
 } from "lucide-react"
 
 interface Experience {
@@ -592,12 +593,10 @@ interface Achievement {
   id: string
   title: string
   description: string
-  icon: LucideIcon
+  icon: any
   color: string
-  image: string
-  column: number
-  company: string
-  companyLogo?: string
+  image?: string
+  column?: number
   bulletPoints?: string[]
   tools?: string[]
 }
@@ -613,8 +612,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1456324504439-367cee3b3c32?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["Confluence", "Notion", "Google Docs"],
   },
   {
@@ -626,8 +623,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["Zendesk", "Jira", "Figma"],
   },
   {
@@ -639,8 +634,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["Zendesk", "Jira", "Figma"],
   },
   {
@@ -652,8 +645,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "ai-tools",
@@ -664,8 +655,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["ChatGPT", "Claude", "Cursor"],
   },
   {
@@ -677,8 +666,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
     column: 1,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   // Column 2: Build/Operations achievements
   {
@@ -690,8 +677,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "/images/team-collaboration.jpeg",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "first-senior-promotion",
@@ -702,8 +687,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "peer-promotion",
@@ -714,8 +697,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "deprioritize-tasks",
@@ -726,8 +707,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "outdated-articles",
@@ -738,8 +717,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "tableau-reports",
@@ -750,8 +727,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "womens-committee",
@@ -762,8 +737,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "release-process",
@@ -774,8 +747,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "culture-champion",
@@ -786,8 +757,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=60",
     column: 2,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   // Column 3: Translate/Global achievements
   {
@@ -799,8 +768,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["Smartling", "Phrase", "Zendesk Localization"],
   },
   {
@@ -812,8 +779,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
     column: 3,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["Confluence", "Google Docs", "Phrase"],
   },
   {
@@ -825,8 +790,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
     tools: ["Zendesk", "Phrase", "Smartling"],
   },
   {
@@ -838,8 +801,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&auto=format&fit=crop&q=60",
     column: 3,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "spanish-translations-reviewed",
@@ -850,8 +811,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
   {
     id: "spanish-localization-expert",
@@ -862,8 +821,6 @@ const operationalAchievements: Achievement[] = [
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
     column: 3,
-    company: "Personio",
-    companyLogo: "/personio-icon-black.png",
   },
 ]
 
@@ -871,27 +828,16 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
+      className="group relative rounded-xl bg-card border border-primary/20 hover:border-primary/50 transition-all duration-300"
     >
-      {/* Top accent line */}
-      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+      {/* Left accent border */}
+      <div className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
       
-      {/* Content */}
-      <div className="relative px-5 py-5">
-        {/* Company badge */}
-        {achievement.companyLogo && (
-          <div className="absolute top-3 right-3 w-6 h-6 rounded-md overflow-hidden bg-white flex items-center justify-center ring-1 ring-primary/20">
-            <Image src={achievement.companyLogo} alt={achievement.company} fill className="object-contain p-0.5" />
-          </div>
-        )}
-        
-        <h3 className="text-[15px] font-semibold text-purple-100 leading-snug pr-8 group-hover:text-primary transition-colors duration-300">
+      <div className="px-5 py-4 flex items-center justify-center">
+        <h3 className="text-[15px] font-semibold text-white text-center leading-snug">
           {achievement.title}
         </h3>
       </div>
-      
-      {/* Bottom subtle glow on hover */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
     </div>
   )
 }
@@ -930,7 +876,63 @@ function PillarColumn({
   )
 }
 
+function CompanyCard({
+  children,
+  logo,
+  name,
+  role,
+  years,
+  country,
+  countryFlag,
+  defaultExpanded = false
+}: {
+  children: React.ReactNode
+  logo: string
+  name: string
+  role: string
+  years: string
+  country: string
+  countryFlag: string
+  defaultExpanded?: boolean
+}) {
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
+  return (
+    <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
+      {/* Company Header - Clickable to expand/collapse */}
+      <div
+        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
+          <Image src={logo} alt={name} fill className="object-contain p-2" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
+              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          {/* Country Flag */}
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-lg" title={country}>{countryFlag}</span>
+            <span className="text-xs font-medium text-foreground/70">{country}</span>
+          </div>
+          {/* Expand/Collapse indicator */}
+          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </div>
+      </div>
+
+      {/* Collapsible content */}
+      <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
+          <div className="pt-6">
+            {children}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function CareerMapSection() {
   return (
@@ -941,47 +943,118 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Achievements</h2>
         </div>
 
-        {/* Achievement Grid - Permanent 3-column layout */}
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* Column 1 - Writing */}
-          <PillarColumn
-            label="I write"
-            image="/vr-person-blue-tech.png"
-            imageAlt="Writing Skills"
-          >
-            {operationalAchievements
-              .filter((a) => a.column === 1)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </PillarColumn>
+        {/* OMP Company Card - Hidden until more time in role
+        <CompanyCard
+          logo="/omp-logo.png"
+          name="OMP"
+          role="Senior Technical Writer"
+          years="2026 - Present"
+          country="Belgium"
+          countryFlag="🇧🇪"
+          defaultExpanded={false}
+        >
+          <div className="grid gap-8 md:grid-cols-3">
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I write
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I build
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
+              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
+              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
+                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
+                  I translate
+                </span>
+              </div>
+              <div className="relative z-10 flex flex-col">
+                <div className="h-16" />
+                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
+                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </CompanyCard>
+        */}
 
-          {/* Column 2 - Operations */}
-          <PillarColumn
-            label="I build"
-            image="/startup-workspace.jpg"
-            imageAlt="Operations Skills"
-          >
-            {operationalAchievements
-              .filter((a) => a.column === 2)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </PillarColumn>
+        {/* Personio Company Card */}
+        <CompanyCard
+          logo="/personio-icon-black.png"
+          name="Personio"
+          role="Senior Technical Writer"
+          years="2021 - 2025"
+          country="Germany"
+          countryFlag="🇩🇪"
+          defaultExpanded={false}
+        >
+          {/* Achievement Grid */}
+          <div className="grid gap-8 md:grid-cols-3">
+            {/* Column 1 - Writing */}
+            <PillarColumn
+              label="I write"
+              image="/vr-person-blue-tech.png"
+              imageAlt="Writing Skills"
+            >
+              {operationalAchievements
+                .filter((a) => a.column === 1)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </PillarColumn>
 
-          {/* Column 3 - Global */}
-          <PillarColumn
-            label="I translate"
-            image="/still-life-supply-chain.jpg"
-            imageAlt="Global Skills"
-          >
-            {operationalAchievements
-              .filter((a) => a.column === 3)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </PillarColumn>
-        </div>
+            {/* Column 2 - Operations */}
+            <PillarColumn
+              label="I build"
+              image="/startup-workspace.jpg"
+              imageAlt="Operations Skills"
+            >
+              {operationalAchievements
+                .filter((a) => a.column === 2)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </PillarColumn>
+
+            {/* Column 3 - Global */}
+            <PillarColumn
+              label="I translate"
+              image="/still-life-supply-chain.jpg"
+              imageAlt="Global Skills"
+            >
+              {operationalAchievements
+                .filter((a) => a.column === 3)
+                .map((achievement) => (
+                  <AchievementCard key={achievement.id} achievement={achievement} />
+                ))}
+            </PillarColumn>
+          </div>
+        </CompanyCard>
       </div>
     </section>
   )
