@@ -1,5 +1,5 @@
 "use client"
-import React from "react"
+import React, { useState } from "react"
 import Image from "next/image"
 import {
   GraduationCap,
@@ -15,7 +15,49 @@ import {
   Trash,
   FileText,
   Heart,
+  ChevronDown,
+  ExternalLink,
 } from "lucide-react"
+
+// Company section data structure
+interface CompanySection {
+  id: string
+  logo: string
+  name: string
+  role: string
+  years: string
+  country: string
+  countryFlag: string
+  defaultExpanded: boolean
+  highlights: string[]
+  tools: string[]
+  writingSamples: { title: string; url: string }[]
+}
+
+const companySections: CompanySection[] = [
+  {
+    id: "personio",
+    logo: "/personio-icon-black.png",
+    name: "Personio",
+    role: "Senior Technical Writer",
+    years: "2021 - 2025",
+    country: "Germany & Spain",
+    countryFlag: "🇩🇪",
+    defaultExpanded: true,
+    highlights: [
+      "Became Personio's first Senior Technical Writer",
+      "Grew documentation team from 3 to 10 writers across 3 countries",
+      "Co-founded the company's first Women's Committee",
+      "Created the first-ever documentation and Spanish localization style guides",
+    ],
+    tools: ["Zendesk", "Confluence", "Jira", "Figma", "Phrase", "Smartling", "Tableau", "Miro", "ChatGPT", "Claude"],
+    writingSamples: [
+      { title: "Overview of permissions in Personio", url: "https://support.personio.de/hc/en-us/articles/115002750769-Overview-of-permissions-in-Personio" },
+      { title: "Grant or remove document permissions", url: "https://support.personio.de/hc/en-us/articles/12344662862365-Grant-or-remove-document-permissions" },
+      { title: "Summary of the homepage and its widgets", url: "https://support.personio.de/hc/en-us/articles/9621498217757-Summary-of-the-homepage-and-its-widgets" },
+    ],
+  },
+]
 
 interface Experience {
   id: string
@@ -893,30 +935,19 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   return (
     <div
       key={achievement.id}
-      className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
+      className="group relative rounded-xl bg-card/50 border border-primary/10 hover:border-primary/30 hover:bg-card/80 transition-all duration-300 overflow-hidden"
     >
-      {/* Content */}
-      <div className="relative px-5 py-5">
-        {/* Company badge */}
-        {achievement.companyLogo && (
-          <div className="absolute top-3 right-3 w-6 h-6 rounded-md overflow-hidden bg-white flex items-center justify-center ring-1 ring-primary/20">
-            <Image src={achievement.companyLogo} alt={achievement.company} fill className="object-contain p-0.5" />
-          </div>
-        )}
-        
+      <div className="px-4 py-4">
         {/* Large metric number */}
-        <div className="text-3xl md:text-4xl font-bold text-primary mb-1 tracking-tight">
+        <div className="text-2xl md:text-3xl font-bold text-primary mb-0.5 tracking-tight">
           {achievement.metric}
         </div>
         
         {/* Metric label */}
-        <p className="text-sm text-foreground/70 leading-snug pr-6 group-hover:text-foreground/90 transition-colors duration-300">
+        <p className="text-xs text-foreground/60 leading-snug group-hover:text-foreground/80 transition-colors duration-300">
           {achievement.metricLabel}
         </p>
       </div>
-      
-      {/* Bottom subtle glow on hover */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
     </div>
   )
 }
@@ -933,22 +964,19 @@ function PillarColumn({
   children: React.ReactNode
 }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3">
       {/* Image header with title overlay */}
-      <div className="relative h-24 rounded-xl overflow-hidden">
+      <div className="relative h-16 rounded-lg overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Purple tint overlay */}
-        <div className="absolute inset-0 bg-purple-600/35" />
-        {/* Dark gradient overlay from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-        {/* Title at bottom left */}
-        <div className="absolute bottom-3 left-4 z-10">
-          <h3 className="text-xl font-bold text-white">{label}</h3>
+        <div className="absolute inset-0 bg-purple-600/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute bottom-2 left-3 z-10">
+          <h3 className="text-base font-bold text-white">{label}</h3>
         </div>
       </div>
       
       {/* Achievement cards below */}
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2">
         {children}
       </div>
     </div>
@@ -956,6 +984,123 @@ function PillarColumn({
 }
 
 
+
+function CompanyCard({ company }: { company: CompanySection }) {
+  const [isExpanded, setIsExpanded] = useState(company.defaultExpanded)
+
+  return (
+    <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
+      {/* Company Header - Clickable to expand/collapse */}
+      <div
+        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
+        onClick={() => setIsExpanded(!isExpanded)}
+      >
+        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
+          <Image src={company.logo} alt={company.name} fill className="object-contain p-2" />
+        </div>
+        <div className="flex-1 min-w-0">
+          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{company.name}</h3>
+          <p className="text-[19px] text-foreground/60">{company.role} &middot; {company.years}</p>
+        </div>
+        <div className="flex items-center gap-3 shrink-0">
+          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+            <span className="text-lg" title={company.country}>{company.countryFlag}</span>
+            <span className="text-xs font-medium text-foreground/70">{company.country}</span>
+          </div>
+          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+        </div>
+      </div>
+
+      {/* Collapsible content */}
+      <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[8000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
+          <div className="pt-8">
+            
+            {/* Qualitative Highlights */}
+            <div className="mb-10">
+              <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Highlights</h4>
+              <ul className="space-y-2">
+                {company.highlights.map((highlight, index) => (
+                  <li key={index} className="flex items-start gap-3 text-foreground/80">
+                    <span className="text-primary mt-1.5 text-xs">&#9679;</span>
+                    <span className="text-[15px] leading-relaxed">{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Quantitative KPIs - 3 Column Layout */}
+            <div className="mb-10">
+              <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-6">Key Metrics</h4>
+              <div className="grid gap-6 md:grid-cols-3">
+                <PillarColumn label="I write" image="/vr-person-blue-tech.png" imageAlt="Writing Skills">
+                  {operationalAchievements
+                    .filter((a) => a.column === 1 && a.company === company.name)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
+                </PillarColumn>
+                <PillarColumn label="I build" image="/startup-workspace.jpg" imageAlt="Operations Skills">
+                  {operationalAchievements
+                    .filter((a) => a.column === 2 && a.company === company.name)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
+                </PillarColumn>
+                <PillarColumn label="I translate" image="/still-life-supply-chain.jpg" imageAlt="Global Skills">
+                  {operationalAchievements
+                    .filter((a) => a.column === 3 && a.company === company.name)
+                    .map((achievement) => (
+                      <AchievementCard key={achievement.id} achievement={achievement} />
+                    ))}
+                </PillarColumn>
+              </div>
+            </div>
+
+            {/* Tools & Writing Samples */}
+            <div className="grid gap-8 md:grid-cols-2">
+              {/* Tools */}
+              <div>
+                <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Tools Used</h4>
+                <div className="flex flex-wrap gap-2">
+                  {company.tools.map((tool) => (
+                    <span
+                      key={tool}
+                      className="px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-sm font-medium text-foreground/80"
+                    >
+                      {tool}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Writing Samples */}
+              <div>
+                <h4 className="text-sm font-semibold text-primary uppercase tracking-wider mb-4">Writing Samples</h4>
+                <ul className="space-y-2">
+                  {company.writingSamples.map((sample, index) => (
+                    <li key={index}>
+                      <a
+                        href={sample.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 text-sm text-foreground/70 hover:text-primary transition-colors group"
+                      >
+                        <ExternalLink className="w-3.5 h-3.5 shrink-0 group-hover:text-primary" />
+                        <span className="line-clamp-1">{sample.title}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function CareerMapSection() {
   return (
@@ -966,47 +1111,10 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Achievements</h2>
         </div>
 
-        {/* Achievement Grid - Permanent 3-column layout */}
-        <div className="grid gap-8 md:grid-cols-3">
-          {/* Column 1 - Writing */}
-          <PillarColumn
-            label="I write"
-            image="/vr-person-blue-tech.png"
-            imageAlt="Writing Skills"
-          >
-            {operationalAchievements
-              .filter((a) => a.column === 1)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </PillarColumn>
-
-          {/* Column 2 - Operations */}
-          <PillarColumn
-            label="I build"
-            image="/startup-workspace.jpg"
-            imageAlt="Operations Skills"
-          >
-            {operationalAchievements
-              .filter((a) => a.column === 2)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </PillarColumn>
-
-          {/* Column 3 - Global */}
-          <PillarColumn
-            label="I translate"
-            image="/still-life-supply-chain.jpg"
-            imageAlt="Global Skills"
-          >
-            {operationalAchievements
-              .filter((a) => a.column === 3)
-              .map((achievement) => (
-                <AchievementCard key={achievement.id} achievement={achievement} />
-              ))}
-          </PillarColumn>
-        </div>
+        {/* Company Cards */}
+        {companySections.map((company) => (
+          <CompanyCard key={company.id} company={company} />
+        ))}
       </div>
     </section>
   )
