@@ -54,40 +54,38 @@ export function AboutSection() {
       </div>
 
       <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[8%]">
-        <div className="max-w-5xl text-left space-y-8">
-          <div className="text-xl md:text-2xl lg:text-[26px] text-foreground/90 leading-relaxed tracking-tight space-y-8">
+        <div className="max-w-5xl text-left space-y-4">
+          <div className="text-lg md:text-xl text-foreground/90 leading-snug tracking-tight space-y-3">
             <p className="font-semibold">I&apos;m the writer you hire when your software company:</p>
-            <ul className="space-y-3 text-foreground/80 pl-6 md:pl-8">
-              <li className="flex items-center gap-3 text-xl md:text-2xl lg:text-[26px]">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
+            <ul className="space-y-1.5 text-foreground/80 pl-5">
+              <li className="flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
                 starts growing fast
               </li>
-              <li className="flex items-center gap-3 text-xl md:text-2xl lg:text-[26px]">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
+              <li className="flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
                 goes from ~100 to 1,000+ people
               </li>
-              <li className="flex items-center gap-3 text-xl md:text-2xl lg:text-[26px]">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
+              <li className="flex items-center gap-2.5">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
                 expands into new countries
               </li>
             </ul>
           </div>
 
-          <div className="pt-2">
-            <p className="text-xl md:text-2xl lg:text-[26px] text-foreground/70 leading-relaxed tracking-tight">
-              Right when documentation stops being about adding more now, <br></br>and becomes about
-              <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
-                making sure you can add a lot more later
-                <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
-                <span className="absolute left-0 bottom-full mb-2 px-4 py-3 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
-                  Way more pages.<br />
-                  With more visuals.<br />
-                  For more audiences.<br />
-                  In more languages.
-                </span>
-              </span>.
-            </p>
-          </div>
+          <p className="text-lg md:text-xl text-foreground/70 leading-snug tracking-tight">
+            Right when documentation stops being about adding more now, <br></br>and becomes about
+            <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-1.5 py-0.5 rounded-md hover:bg-primary/25 transition-all duration-200">
+              making sure you can add a lot more later
+              <span className="inline-flex items-center justify-center w-3.5 h-3.5 text-[9px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
+              <span className="absolute left-0 bottom-full mb-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
+                Way more pages.<br />
+                With more visuals.<br />
+                For more audiences.<br />
+                In more languages.
+              </span>
+            </span>.
+          </p>
         </div>
       </div>
     </section>
