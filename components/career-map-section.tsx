@@ -590,7 +590,8 @@ const experiences: Experience[] = [
 
 interface Achievement {
   id: string
-  title: string
+  metric: string
+  metricLabel: string
   description: string
   icon: LucideIcon
   color: string
@@ -606,7 +607,8 @@ const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
   {
     id: "style-guide",
-    title: "Created Personio's first-ever documentation style guides",
+    metric: "1st",
+    metricLabel: "Documentation style guides created at Personio",
     description:
       "Created style guides for English source content, setting consistent standards across a team of 10 technical writers.",
     icon: FileText,
@@ -619,7 +621,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "product-areas",
-    title: "Created documentation for 3+ product areas at the same time",
+    metric: "3+",
+    metricLabel: "Product areas documented simultaneously",
     description:
       "Managed documentation across multiple major product areas simultaneously, ensuring comprehensive coverage and consistency.",
     icon: FileText,
@@ -632,7 +635,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "content-ownership",
-    title: "Owned and maintained 100+ documentation pages",
+    metric: "100+",
+    metricLabel: "Documentation pages owned and maintained",
     description:
       "Managed and was responsible for over 100 pages of user-facing product documentation covering multiple product features and apps, including analytics and account set up.",
     icon: FileText,
@@ -645,7 +649,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "support-volume",
-    title: "Reduced a product area's support volume by over 50% (Apr–Sep 2025)",
+    metric: "50%",
+    metricLabel: "Support volume reduced for a product area",
     description:
       "Improved documentation quality and coverage to significantly reduce support ticket volume for specific product areas.",
     icon: TrendingUp,
@@ -657,7 +662,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-tools",
-    title: "Used Gen AI tools to create new pages in under 4h",
+    metric: "<4h",
+    metricLabel: "Time to create new pages with Gen AI",
     description:
       "Used AI-powered tools to dramatically accelerate documentation creation while maintaining quality standards.",
     icon: Bot,
@@ -670,7 +676,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "subaudiences",
-    title: "Created documentation tailored to 5+ audiences",
+    metric: "5+",
+    metricLabel: "Audiences with tailored documentation",
     description:
       "Developed tailored documentation for diverse user groups within business users (business admins, HR managers, supervisors, employees, and more) and supported the creation of role-based navigation.",
     icon: Users,
@@ -683,7 +690,8 @@ const operationalAchievements: Achievement[] = [
   // Column 2: Build/Operations achievements
   {
     id: "scaled-teams",
-    title: "Grew a local 3-writer documentation team into a global team of 10",
+    metric: "3→10",
+    metricLabel: "Team growth from local to global",
     description:
       "I joined Personio at around 300 people as one of the first Technical Writers and built the team from scratch — growing it from 3 writers into a global team of 10+ across Germany, Ireland, and Spain.",
     icon: Users,
@@ -695,7 +703,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "first-senior-promotion",
-    title: "Became Personio's first Senior Technical Writer",
+    metric: "1st",
+    metricLabel: "Senior Technical Writer at Personio",
     description:
       "First Technical Writer on a 10-person team to be promoted to Senior.",
     icon: Award,
@@ -707,7 +716,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "peer-promotion",
-    title: "Mentored a peer to their promotion to our 2nd Senior Technical Writer",
+    metric: "2nd",
+    metricLabel: "Senior TW mentored to promotion",
     description:
       "Mentored and supported a colleague through their growth journey, resulting in their promotion to Senior.",
     icon: TrendingUp,
@@ -719,7 +729,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "deprioritize-tasks",
-    title: "Helped the team deprioritize 20% of low-impact release tasks",
+    metric: "20%",
+    metricLabel: "Low-impact tasks deprioritized",
     description:
       "Used data analysis to identify low-impact documentation tasks, allowing the team to focus on higher-value work.",
     icon: TrendingUp,
@@ -731,7 +742,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "outdated-articles",
-    title: "Enabled removal of 100+ outdated pages, improving content relevance",
+    metric: "100+",
+    metricLabel: "Outdated pages removed",
     description:
       "Identified and removed over 100 outdated articles from the Help Center, improving overall content quality and user experience.",
     icon: FileText,
@@ -743,7 +755,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "tableau-reports",
-    title: "Helped the team generate reports 30% faster by improving Tableau dashboards",
+    metric: "30%",
+    metricLabel: "Faster report generation",
     description:
       "Worked with Data Analysts to enhance Tableau dashboards, streamlining the reporting process for the documentation team.",
     icon: Bot,
@@ -755,7 +768,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "womens-committee",
-    title: "Co-founded Personio's first Women's Committee",
+    metric: "1st",
+    metricLabel: "Women's Committee co-founded",
     description:
       "Co-founded Personio's first Women's Committee, hosting informal lunches on topics like salary negotiation, assertive communication, and financial investment to empower female colleagues and spark knowledge sharing.",
     icon: Heart,
@@ -767,7 +781,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "release-process",
-    title: "Co-built the end-to-end company-wide release process",
+    metric: "E2E",
+    metricLabel: "Company-wide release process co-built",
     description:
       "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
     icon: TrendingUp,
@@ -779,7 +794,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "culture-champion",
-    title: "Became Culture Champion and conducted +20 company-wide culture interviews",
+    metric: "20+",
+    metricLabel: "Culture interviews conducted",
     description:
       "Selected as a Culture Champion to help maintain and strengthen company culture through regular interviews with employees across the organization.",
     icon: Users,
@@ -792,7 +808,8 @@ const operationalAchievements: Achievement[] = [
   // Column 3: Translate/Global achievements
   {
     id: "localization-expansion",
-    title: "Grew documentation from 3 to 6 languages",
+    metric: "3→6",
+    metricLabel: "Languages supported in documentation",
     description:
       "Grew user-facing product documentation from 3 to 6 supported languages by managing external translation vendors (Smartling and Phrase) and handling the day-to-day work of getting content translated, reviewed, and published.",
     icon: Globe,
@@ -805,7 +822,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-localization-guides",
-    title: "Created Personio's first-ever Spanish localization style guides",
+    metric: "1st",
+    metricLabel: "Spanish localization guides created",
     description:
       "Developed the company's first Spanish localization guides, establishing standards and best practices for translating product content into Spanish for the growing Spanish-speaking user base.",
     icon: FileText,
@@ -818,7 +836,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-docs-site",
-    title: "Built the Spanish user-facing documentation site from scratch",
+    metric: "0→1",
+    metricLabel: "Spanish docs site built from scratch",
     description:
       "Built and maintained the complete Spanish-language documentation site, ensuring comprehensive coverage for Spanish-speaking users from initial setup through ongoing content management.",
     icon: Globe,
@@ -831,7 +850,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-translation-assistant",
-    title: "Built an AI tool that cut Spanish translation review time by 90%",
+    metric: "90%",
+    metricLabel: "Translation review time reduced",
     description:
       "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
     icon: Bot,
@@ -843,7 +863,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-translations-reviewed",
-    title: "Reviewed and published 150+ English > Spanish translations annually",
+    metric: "150+",
+    metricLabel: "Translations reviewed annually",
     description:
       "Managed and reviewed over 150 English to Spanish translations each year, ensuring high quality and consistency across all translated documentation.",
     icon: Globe,
@@ -855,7 +876,8 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "spanish-localization-expert",
-    title: "Temporarily acted as a company-wide Spanish Localization Expert",
+    metric: "Co.",
+    metricLabel: "Company-wide Spanish Localization Expert",
     description:
       "Served as the go-to expert for Spanish localization across the entire company, providing guidance on translation quality, terminology, and cultural adaptation.",
     icon: Award,
@@ -873,9 +895,6 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
       key={achievement.id}
       className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
     >
-      {/* Top accent line */}
-      <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-      
       {/* Content */}
       <div className="relative px-5 py-5">
         {/* Company badge */}
@@ -885,9 +904,15 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
           </div>
         )}
         
-        <h3 className="text-[15px] font-semibold text-purple-100 leading-snug pr-8 group-hover:text-primary transition-colors duration-300">
-          {achievement.title}
-        </h3>
+        {/* Large metric number */}
+        <div className="text-3xl md:text-4xl font-bold text-primary mb-1 tracking-tight">
+          {achievement.metric}
+        </div>
+        
+        {/* Metric label */}
+        <p className="text-sm text-foreground/70 leading-snug pr-6 group-hover:text-foreground/90 transition-colors duration-300">
+          {achievement.metricLabel}
+        </p>
       </div>
       
       {/* Bottom subtle glow on hover */}
