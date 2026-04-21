@@ -3,8 +3,31 @@
 import { Download, ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useState, useEffect } from "react"
+
+const rotatingPhrases = [
+  "who makes complex topics simple.",
+  "who bridges tech and people.",
+  "who writes for humans first.",
+  "who turns chaos into clarity.",
+]
 
 export function HeroSection() {
+  const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0)
+  const [isAnimating, setIsAnimating] = useState(false)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(true)
+      setTimeout(() => {
+        setCurrentPhraseIndex((prev) => (prev + 1) % rotatingPhrases.length)
+        setIsAnimating(false)
+      }, 500)
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[80px] overflow-hidden mt-[25px] mb-[25px]">
       <div className="absolute inset-0 -z-10">
@@ -47,10 +70,20 @@ export function HeroSection() {
               I&apos;m Laura<br />Martínez.
             </h1>
 
-            <h4 className="mb-10 text-primary">
+            <h4 className="mb-4 text-primary">
               <span className="text-xl font-medium md:text-2xl lg:text-3xl">A highly global and multicultural {"🌍"}</span><br />
               <span className="text-3xl font-semibold md:text-4xl lg:text-5xl tracking-tight mt-2 inline-block">Senior Technical Writer</span>
             </h4>
+            
+            <div className="mb-10 h-8 md:h-10 overflow-hidden">
+              <p 
+                className={`text-lg md:text-xl text-foreground/70 transition-all duration-500 ${
+                  isAnimating ? "opacity-0 -translate-y-4" : "opacity-100 translate-y-0"
+                }`}
+              >
+                {rotatingPhrases[currentPhraseIndex]}
+              </p>
+            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <Button
