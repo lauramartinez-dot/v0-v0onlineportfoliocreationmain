@@ -55,18 +55,18 @@ export function AboutSection() {
 
       <div className="mx-auto max-w-7xl relative z-10 flex justify-center md:justify-start md:pl-[8%]">
         <div className="max-w-5xl text-left space-y-8">
-          <div className="text-[26.25px] text-foreground/90 leading-relaxed font-normal space-y-8">
-            <p className="font-medium">I&apos;m the writer you hire when your software company:</p>
+          <div className="text-xl md:text-2xl lg:text-[26px] text-foreground/90 leading-relaxed tracking-tight space-y-8">
+            <p className="font-semibold">I&apos;m the writer you hire when your software company:</p>
             <ul className="space-y-3 text-foreground/80 pl-6 md:pl-8">
-              <li className="flex items-center gap-3 text-[26.25px]">
+              <li className="flex items-center gap-3 text-xl md:text-2xl lg:text-[26px]">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 starts growing fast
               </li>
-              <li className="flex items-center gap-3 text-[26.25px]">
+              <li className="flex items-center gap-3 text-xl md:text-2xl lg:text-[26px]">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 goes from ~100 to 1,000+ people
               </li>
-              <li className="flex items-center gap-3 text-[26.25px]">
+              <li className="flex items-center gap-3 text-xl md:text-2xl lg:text-[26px]">
                 <span className="w-2.5 h-2.5 rounded-full bg-primary/70" />
                 expands into new countries
               </li>
@@ -74,7 +74,7 @@ export function AboutSection() {
           </div>
 
           <div className="pt-2">
-            <p className="text-[26.25px] text-foreground/70 leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-[26px] text-foreground/70 leading-relaxed tracking-tight">
               Right when documentation stops being about adding more now, <br></br>and becomes about
               <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
                 making sure you can add a lot more later
