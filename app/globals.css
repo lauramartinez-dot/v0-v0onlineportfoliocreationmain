@@ -52,6 +52,25 @@
   opacity: 0;
 }
 
+/* Moving underline bar animation */
+@keyframes underline-slide {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-underline-slide {
+  animation: underline-slide 1.5s ease-out forwards;
+  animation-delay: 0.8s;
+  width: 0%;
+}
+
 /* Dark navy theme with pink/magenta + cyan accents from reference */
 :root {
   --background: #0d1b2a;
