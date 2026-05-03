@@ -12,18 +12,31 @@ export function OriginSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-r from-purple-500/35 to-pink-500/35 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-5xl w-full">
-        <div className="flex flex-col items-center text-center animate-slide-in-left">
-          <p className="mb-1 text-lg md:text-xl lg:text-2xl text-foreground/70">
-            I&apos;m originally from Spain.
-          </p>
-          <p className="mb-2 text-[26.25px] text-foreground/70">
-            Although I&apos;ve lived and worked in
-          </p>
+      <div className="mx-auto max-w-6xl w-full">
+        <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
+          {/* Text on the left */}
+          <div className="flex-1 text-center md:text-left order-2 md:order-1 animate-slide-in-left">
+            <p className="mb-1 text-lg md:text-xl lg:text-2xl text-foreground/70">
+              I&apos;m originally from Spain.
+            </p>
+            <p className="mb-2 text-[26.25px] text-foreground/70">
+              Although I&apos;ve lived and worked in
+            </p>
 
-          <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-            <span className="text-primary">4 countries</span> over the past <span className="text-primary">10 years</span>.
-          </h2>
+            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
+              <span className="text-primary">4 countries</span> over the past <span className="text-primary">10 years</span>.
+            </h2>
+          </div>
+
+          {/* Animation on the right */}
+          <div className="order-1 md:order-2 animate-slide-in-right shrink-0">
+            <iframe
+              src="/germany-expansion-animation.html"
+              className="border-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
+              title="Germany Global Expansion Animation"
+              scrolling="no"
+            />
+          </div>
         </div>
       </div>
     </section>

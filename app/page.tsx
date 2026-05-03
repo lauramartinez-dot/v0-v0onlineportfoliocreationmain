@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/hero-section"
 import { OriginSection } from "@/components/origin-section"
-import { AboutSection } from "@/components/about-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { MissionSection } from "@/components/mission-section"
@@ -16,7 +15,6 @@ export default function Home() {
       <Navigation />
       <HeroSection />
       <OriginSection />
-      <AboutSection />
       <TransitionSection />
       <HighlightsSection />
       <MissionSection />
