@@ -139,8 +139,8 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-lg lg:text-lg text-foreground/90 leading-relaxed">
-              Why me? Because:
+            <p className="text-[21px] text-foreground/90 leading-relaxed">
+              Why me? Because I bring three roles into one:
             </p>
           </div>
         </div>
