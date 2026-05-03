@@ -16,7 +16,7 @@ export function OriginSection() {
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
           {/* Text on the left */}
           <div className="flex-1 text-center md:text-left order-2 md:order-1 animate-slide-in-left">
-            <p className="mb-1 text-lg md:text-xl lg:text-2xl text-foreground/70">
+            <p className="mb-1 text-[21px] md:text-xl lg:text-2xl text-foreground/70">
               I&apos;m originally from Spain.
             </p>
             <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
