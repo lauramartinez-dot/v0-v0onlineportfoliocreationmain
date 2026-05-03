@@ -217,35 +217,8 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-xl text-foreground/60 mb-2">
-              I&apos;m the writer you hire when your software company:
-            </p>
-            <ul className="space-y-2 inline-block text-left">
-              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-                starts growing fast
-              </li>
-              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-                goes from ~100 to 1,000+ people
-              </li>
-              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
-                expands into new countries
-              </li>
-            </ul>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed pt-4">
-              Right when documentation stops being about adding more now, and becomes about{" "}
-              <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
-                making sure you can add a lot more later
-                <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
-                <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-4 py-3 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
-                  Way more pages.<br />
-                  With more visuals.<br />
-                  For more audiences.<br />
-                  In more languages.
-                </span>
-              </span>.
+            <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed">
+              As a Senior Technical Writer specialised in international scaling, I do three things:
             </p>
           </div>
         </div>
