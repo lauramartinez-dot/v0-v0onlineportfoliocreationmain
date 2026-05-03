@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 export function AboutSection() {
@@ -39,17 +38,15 @@ export function AboutSection() {
 
   return (
     <section ref={sectionRef} className="relative py-24 px-4 min-h-[400px] mt-[60px]">
-      {/* Background - Globe wireframe positioned on right, half cut off */}
+      {/* Background - Germany expansion animation positioned on right, half cut off */}
       <div
-        className={`absolute -right-[280px] md:-right-[350px] lg:-right-[420px] top-1/2 -translate-y-1/2 w-[750px] h-[750px] md:w-[950px] md:h-[950px] lg:w-[1150px] lg:h-[1150px] opacity-15 mt-[60px] transition-all duration-[2000ms] ease-out ${isVisible ? "translate-x-0" : "translate-x-[200px]"
+        className={`absolute -right-[280px] md:-right-[350px] lg:-right-[420px] top-1/2 -translate-y-1/2 w-[750px] h-[750px] md:w-[950px] md:h-[950px] lg:w-[1150px] lg:h-[1150px] opacity-20 mt-[60px] transition-all duration-[2000ms] ease-out ${isVisible ? "translate-x-0" : "translate-x-[200px]"
           }`}
       >
-        <Image
-          src="/globe-purple.png"
-          alt=""
-          fill
-          className="object-contain"
-          priority
+        <iframe
+          src="/germany-expansion-animation.html"
+          className="w-full h-full border-0"
+          title="Germany Global Expansion Animation"
         />
       </div>
 
