@@ -62,11 +62,44 @@ export function SkillsCoreSection() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        <div className="mb-20 text-center">
+        <div className="mb-20 text-center max-w-4xl mx-auto">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
             What I Do Best
           </div>
-          <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Top Skills</h2>
+          <h2 className="mb-6 text-3xl font-bold tracking-tight md:text-4xl">Top Skills</h2>
+          
+          <div className="text-left md:text-center space-y-4">
+            <p className="text-lg md:text-xl text-foreground/90 font-medium">
+              I&apos;m the writer you hire when your software company:
+            </p>
+            <ul className="space-y-1 text-foreground/80 inline-block text-left">
+              <li className="flex items-center gap-2 text-base md:text-lg">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
+                starts growing fast
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
+                goes from ~100 to 1,000+ people
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
+                expands into new countries
+              </li>
+            </ul>
+            <p className="text-base md:text-lg text-foreground/70 leading-relaxed pt-2">
+              Right when documentation stops being about adding more now, and becomes about{" "}
+              <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
+                making sure you can add a lot more later
+                <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
+                <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-4 py-3 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
+                  Way more pages.<br />
+                  With more visuals.<br />
+                  For more audiences.<br />
+                  In more languages.
+                </span>
+              </span>.
+            </p>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
