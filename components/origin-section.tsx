@@ -14,8 +14,11 @@ export function OriginSection() {
 
       <div className="mx-auto max-w-5xl w-full">
         <div className="flex flex-col items-center text-center animate-slide-in-left">
-          <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
-            I&apos;m originally from Spain. Although I&apos;ve lived and worked in
+          <p className="mb-1 text-lg md:text-xl lg:text-2xl text-foreground/70">
+            I&apos;m originally from Spain.
+          </p>
+          <p className="mb-2 text-[26.25px] text-foreground/70">
+            Although I&apos;ve lived and worked in
           </p>
 
           <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
