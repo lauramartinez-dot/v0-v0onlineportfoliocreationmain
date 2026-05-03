@@ -29,13 +29,14 @@ export function OriginSection() {
           </div>
 
           {/* Animation on the right */}
-          <div className="order-1 md:order-2 animate-slide-in-right shrink-0 overflow-visible">
-            <iframe
-              src="/germany-expansion-animation.html"
-              className="border-0 w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px]"
-              title="Germany Global Expansion Animation"
-              style={{ overflow: 'visible' }}
-            />
+          <div className="order-1 md:order-2 animate-slide-in-right shrink-0">
+            <div className="w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px] relative overflow-hidden">
+              <iframe
+                src="/germany-expansion-animation.html"
+                className="border-0 absolute top-1/2 left-1/2 w-[780px] h-[780px] origin-center scale-[0.45] md:scale-[0.58] lg:scale-[0.71] -translate-x-1/2 -translate-y-1/2"
+                title="Germany Global Expansion Animation"
+              />
+            </div>
           </div>
         </div>
       </div>
