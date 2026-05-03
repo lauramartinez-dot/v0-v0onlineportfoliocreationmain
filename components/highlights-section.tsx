@@ -217,11 +217,37 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-[37px] font-bold tracking-tight text-center">Top Skills</h2>
-          <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
-            <p className="text-[23px] text-foreground/80 leading-relaxed">
-              As a Technical Writer, I write about complex software products <br></br>so that <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-1.5 py-0.5 rounded hover:bg-primary/25 transition-all duration-200">all humans <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span><span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg z-50">Not just the ones with an IT background.</span></span> can understand and use them.
+          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
+            <p className="text-lg md:text-xl text-foreground/90 font-medium">
+              I&apos;m the writer you hire when your software company:
             </p>
-            <p className="text-[23px] text-foreground/70 leading-relaxed">But unlike most Technical Writers, I don't stop there:</p>
+            <ul className="space-y-1 text-foreground/80 inline-block text-left">
+              <li className="flex items-center gap-2 text-base md:text-lg">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
+                starts growing fast
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
+                goes from ~100 to 1,000+ people
+              </li>
+              <li className="flex items-center gap-2 text-base md:text-lg">
+                <span className="w-2 h-2 rounded-full bg-primary/70" />
+                expands into new countries
+              </li>
+            </ul>
+            <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
+              Right when documentation stops being about adding more now, and becomes about{" "}
+              <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
+                making sure you can add a lot more later
+                <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 ml-1 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
+                <span className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-4 py-3 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
+                  Way more pages.<br />
+                  With more visuals.<br />
+                  For more audiences.<br />
+                  In more languages.
+                </span>
+              </span>.
+            </p>
           </div>
         </div>
 
