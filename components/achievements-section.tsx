@@ -40,10 +40,7 @@ export function AchievementsSection() {
     <section id="achievements" className="relative py-24 px-4">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-16">
-          <p className="text-lg text-foreground/90 leading-relaxed mb-4">
-            Why me? Because:
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
             Top Achievements
           </h2>
         </div>
