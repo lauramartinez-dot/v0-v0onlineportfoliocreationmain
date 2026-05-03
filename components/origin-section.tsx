@@ -14,14 +14,16 @@ export function OriginSection() {
 
       <div className="mx-auto max-w-5xl w-full">
         <div className="flex flex-col items-center text-center animate-slide-in-left">
-          <h2 className="mb-4 text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
+          <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
             I&apos;m originally from Spain.
-          </h2>
-
-          <p className="text-xl md:text-2xl lg:text-3xl text-foreground/70 leading-relaxed">
-            Although I&apos;ve lived and worked in{" "}
-            <span className="text-primary font-semibold">4 countries</span> over the past <span className="text-primary font-semibold">10 years</span>.
           </p>
+
+          <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
+            Although I&apos;ve lived and worked in{" "}
+            <span className="text-primary">4 countries</span>
+            <br />
+            over the past <span className="text-primary">10 years</span>.
+          </h2>
         </div>
       </div>
     </section>
