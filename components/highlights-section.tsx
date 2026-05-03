@@ -136,16 +136,7 @@ export function HighlightsSection() {
       </div>
 
       <div className="mx-auto max-w-7xl">
-        {/* Top Differentiators Section */}
-        <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
-          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-lg lg:text-lg text-foreground/90 leading-relaxed">
-              Why me? Because:
-            </p>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative mt-[120px]">
           {/* Column 1: A Foundation in Tech Journalism */}
           <div className="relative z-10">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
