@@ -46,21 +46,7 @@ export function AboutHeroSection() {
               </li>
             </ul>
 
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-              Right when documentation stops being about adding more now, and becomes about
-            </p>
-            <p className="mt-4">
-              <span className="relative group/tooltip cursor-pointer text-primary font-bold text-2xl md:text-3xl lg:text-4xl bg-primary/15 px-3 py-2 rounded-md hover:bg-primary/25 transition-all duration-200">
-                making sure you can add a lot more later
-                <span className="inline-flex items-center justify-center w-5 h-5 text-[11px] rounded-full border border-primary/50 text-primary/70 ml-2 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span>
-                <span className="absolute left-0 md:left-1/2 md:-translate-x-1/2 bottom-full mb-2 px-4 py-3 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-xl z-50">
-                  Way more pages.<br />
-                  With more visuals.<br />
-                  For more audiences.<br />
-                  In more languages.
-                </span>
-              </span><span className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground">.</span>
-            </p>
+          
           </div>
         </div>
       </div>
