@@ -19,7 +19,7 @@ export function OriginSection() {
             <p className="mb-1 text-lg md:text-xl lg:text-2xl text-foreground/70">
               I&apos;m originally from Spain.
             </p>
-            <p className="mb-2 text-[26.25px] text-foreground/70">
+            <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
               Although I&apos;ve lived and worked in
             </p>
 

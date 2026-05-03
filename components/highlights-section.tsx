@@ -218,19 +218,19 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <h2 className="mb-10 text-[37px] font-bold tracking-tight text-center">Top Skills</h2>
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-lg md:text-xl text-foreground/90 font-medium">
+            <p className="text-[21px] md:text-xl text-foreground/90 font-medium">
               I&apos;m the writer you hire when your software company:
             </p>
             <ul className="space-y-1 text-foreground/80 inline-block text-left">
-              <li className="flex items-center gap-2 text-base md:text-lg">
+              <li className="flex items-center gap-2 text-[21px] md:text-lg">
                 <span className="w-2 h-2 rounded-full bg-primary/70" />
                 starts growing fast
               </li>
-              <li className="flex items-center gap-2 text-base md:text-lg">
+              <li className="flex items-center gap-2 text-[21px] md:text-lg">
                 <span className="w-2 h-2 rounded-full bg-primary/70" />
                 goes from ~100 to 1,000+ people
               </li>
-              <li className="flex items-center gap-2 text-base md:text-lg">
+              <li className="flex items-center gap-2 text-[21px] md:text-lg">
                 <span className="w-2 h-2 rounded-full bg-primary/70" />
                 expands into new countries
               </li>
