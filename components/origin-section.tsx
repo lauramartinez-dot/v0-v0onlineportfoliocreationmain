@@ -2,7 +2,7 @@
 
 export function OriginSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 py-24 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center px-4 py-24">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top right */}
         <div className="absolute -top-20 -right-20 h-[700px] w-[700px] rounded-full bg-gradient-to-bl from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
@@ -29,12 +29,12 @@ export function OriginSection() {
           </div>
 
           {/* Animation on the right */}
-          <div className="order-1 md:order-2 animate-slide-in-right shrink-0">
+          <div className="order-1 md:order-2 animate-slide-in-right shrink-0 overflow-visible">
             <iframe
               src="/germany-expansion-animation.html"
-              className="border-0 w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px]"
+              className="border-0 w-[350px] h-[350px] md:w-[450px] md:h-[450px] lg:w-[550px] lg:h-[550px]"
               title="Germany Global Expansion Animation"
-              scrolling="no"
+              style={{ overflow: 'visible' }}
             />
           </div>
         </div>
