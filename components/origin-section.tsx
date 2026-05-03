@@ -20,7 +20,7 @@ export function OriginSection() {
               I&apos;m originally from Spain.
             </p>
             <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
-              And yet I&apos;ve lived and worked accross
+             But I&apos;ve lived and worked accross
             </p>
 
             <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
