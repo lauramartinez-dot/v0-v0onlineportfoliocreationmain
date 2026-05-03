@@ -217,24 +217,24 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <p className="text-[21px] md:text-xl text-foreground/90 font-medium">
+            <p className="text-lg md:text-xl text-foreground/60 mb-2">
               I&apos;m the writer you hire when your software company:
             </p>
-            <ul className="space-y-1 text-foreground/80 inline-block text-left">
-              <li className="flex items-center gap-2 text-[21px] md:text-lg">
-                <span className="w-2 h-2 rounded-full bg-primary/70" />
+            <ul className="space-y-2 inline-block text-left">
+              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
+                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 starts growing fast
               </li>
-              <li className="flex items-center gap-2 text-[21px] md:text-lg">
-                <span className="w-2 h-2 rounded-full bg-primary/70" />
+              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
+                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 goes from ~100 to 1,000+ people
               </li>
-              <li className="flex items-center gap-2 text-[21px] md:text-lg">
-                <span className="w-2 h-2 rounded-full bg-primary/70" />
+              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
+                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
                 expands into new countries
               </li>
             </ul>
-            <p className="text-base md:text-lg text-foreground/70 leading-relaxed">
+            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed pt-4">
               Right when documentation stops being about adding more now, and becomes about{" "}
               <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-2 py-1 rounded-md hover:bg-primary/25 transition-all duration-200">
                 making sure you can add a lot more later
