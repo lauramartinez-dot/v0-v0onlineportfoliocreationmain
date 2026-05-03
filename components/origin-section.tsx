@@ -24,7 +24,7 @@ export function OriginSection() {
             </p>
 
             <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              <span className="text-primary">4 countries</span> over the span of <span className="text-primary">10 years</span>
+              <span className="text-primary">4 countries</span> over a decade<span className="text-primary">.</span>
             </h2>
           </div>
 
