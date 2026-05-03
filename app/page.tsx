@@ -5,6 +5,8 @@ import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { TopSkillsSection } from "@/components/top-skills-section"
 import { MissionSection } from "@/components/mission-section"
+import { AchievementsSection } from "@/components/achievements-section"
+import { ToolsSection } from "@/components/tools-section"
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
 import WritingSamplesSection from "@/components/writing-samples-section"
@@ -20,8 +22,10 @@ export default function Home() {
       <AboutHeroSection />
       <TransitionSection />
       <HighlightsSection />
-      <TopSkillsSection />
       <MissionSection />
+      <TopSkillsSection />
+      <AchievementsSection />
+      <ToolsSection />
       <ScrollTransitionSection />
       <TransitionSection />
       <CareerMapSection />
