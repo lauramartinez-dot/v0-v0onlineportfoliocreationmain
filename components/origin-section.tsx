@@ -20,11 +20,11 @@ export function OriginSection() {
               I&apos;m originally from Spain.
             </p>
             <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
-              Although I&apos;ve lived and worked in
+              Although I&apos;ve lived and worked accross
             </p>
 
             <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              <span className="text-primary">4 countries</span> over the past <span className="text-primary">10 years</span>.
+              <span className="text-primary">4 European countries</span> and Ißm specialised in<span className="text-primary">international companies</span>.
             </h2>
           </div>
 
