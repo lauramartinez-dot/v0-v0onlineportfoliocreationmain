@@ -8,7 +8,7 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "I write about software with the rigor of a tech newsroom",
+    title: "I write about software so that all humans can understand and use it",
     description:
       "I've written articles for tech media with 8 M monthy readers. I write about software with the same atrention for detail and high standarss,",
     link: "",
@@ -16,7 +16,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I build systems that help technical writers do more in less time",
+    title: "I build systems that let writers create 3x more content overtime",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
