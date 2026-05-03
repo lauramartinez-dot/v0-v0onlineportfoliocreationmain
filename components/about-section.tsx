@@ -50,15 +50,14 @@ export function AboutSection() {
             </p>
           </div>
 
-          {/* Animation on the right - globe directly without frame */}
-          <div className="order-1 md:order-2 animate-slide-in-right">
-            <div className="relative h-72 w-72 md:h-[22rem] md:w-[22rem] lg:h-[26rem] lg:w-[26rem]">
-              <iframe
-                src="/germany-expansion-animation.html"
-                className="absolute inset-0 w-full h-full border-0"
-                title="Germany Global Expansion Animation"
-              />
-            </div>
+          {/* Animation on the right - globe at natural size */}
+          <div className="order-1 md:order-2 animate-slide-in-right shrink-0">
+            <iframe
+              src="/germany-expansion-animation.html"
+              className="border-0 w-[400px] h-[400px] md:w-[500px] md:h-[500px] lg:w-[600px] lg:h-[600px]"
+              title="Germany Global Expansion Animation"
+              scrolling="no"
+            />
           </div>
         </div>
       </div>
