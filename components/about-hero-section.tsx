@@ -28,7 +28,7 @@ export function AboutHeroSection() {
           {/* Text on the right */}
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
             <p className="text-lg md:text-xl text-foreground/60 mb-4">
-              I&apos;m the writer you hire when your software company:
+              Now I&apos;m that writer you hire when your company:
             </p>
 
             <ul className="space-y-2 mb-6">
