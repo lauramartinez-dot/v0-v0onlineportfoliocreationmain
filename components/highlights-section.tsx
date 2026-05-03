@@ -218,7 +218,7 @@ export function HighlightsSection() {
         <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
             <p className="text-xl md:text-2xl lg:text-3xl text-foreground/90 leading-relaxed">
-              As a Senior Technical Writer specialised in international scaling, I do three things:
+              Beca, I do three things:
             </p>
           </div>
         </div>
