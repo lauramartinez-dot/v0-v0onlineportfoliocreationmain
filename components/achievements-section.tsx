@@ -40,9 +40,9 @@ const writingAchievements = [
 // Column 2: Building achievements (placeholder - update with your content)
 const buildingAchievements = [
   {
-    stat: "3x",
+    stat: "4x",
     label: "early hire",
-    description: "Joined three scale-ups as an early technical writing hire",
+    description: "Very specialised in scale ups",
   },
   {
     stat: "100+",
