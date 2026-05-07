@@ -105,16 +105,16 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content - horizontal stat layout */}
-                <div className="relative flex items-baseline gap-3 px-6 py-6">
-                  <span className="text-5xl md:text-6xl font-bold text-primary shrink-0">
+                {/* Content - horizontal stat layout with fixed widths */}
+                <div className="relative flex items-center gap-4 px-6 py-5">
+                  <span className="text-5xl font-bold text-primary w-[90px] text-right shrink-0">
                     {achievement.stat}
                   </span>
-                  <div className="flex flex-col">
-                    <span className="text-xl font-semibold text-foreground">
+                  <div className="flex flex-col flex-1">
+                    <span className="text-lg font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-sm text-foreground/60 mt-1">
+                    <p className="text-sm text-foreground/60 mt-0.5 leading-snug">
                       {achievement.description}
                     </p>
                   </div>
@@ -144,16 +144,16 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content - horizontal stat layout */}
-                <div className="relative flex items-baseline gap-3 px-6 py-6">
-                  <span className="text-5xl md:text-6xl font-bold text-primary shrink-0">
+                {/* Content - horizontal stat layout with fixed widths */}
+                <div className="relative flex items-center gap-4 px-6 py-5">
+                  <span className="text-5xl font-bold text-primary w-[90px] text-right shrink-0">
                     {achievement.stat}
                   </span>
-                  <div className="flex flex-col">
-                    <span className="text-xl font-semibold text-foreground">
+                  <div className="flex flex-col flex-1">
+                    <span className="text-lg font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-sm text-foreground/60 mt-1">
+                    <p className="text-sm text-foreground/60 mt-0.5 leading-snug">
                       {achievement.description}
                     </p>
                   </div>
@@ -183,16 +183,16 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content - horizontal stat layout */}
-                <div className="relative flex items-baseline gap-3 px-6 py-6">
-                  <span className="text-5xl md:text-6xl font-bold text-primary shrink-0">
+                {/* Content - horizontal stat layout with fixed widths */}
+                <div className="relative flex items-center gap-4 px-6 py-5">
+                  <span className="text-5xl font-bold text-primary w-[90px] text-right shrink-0">
                     {achievement.stat}
                   </span>
-                  <div className="flex flex-col">
-                    <span className="text-xl font-semibold text-foreground">
+                  <div className="flex flex-col flex-1">
+                    <span className="text-lg font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-sm text-foreground/60 mt-1">
+                    <p className="text-sm text-foreground/60 mt-0.5 leading-snug">
                       {achievement.description}
                     </p>
                   </div>
