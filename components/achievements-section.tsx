@@ -105,17 +105,19 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content - clean stat layout */}
-                <div className="relative flex flex-col items-center justify-center px-8 py-8 text-center">
-                  <span className="text-5xl md:text-6xl font-bold text-primary mb-2">
+                {/* Content - horizontal stat layout */}
+                <div className="relative flex items-baseline gap-3 px-6 py-6">
+                  <span className="text-5xl md:text-6xl font-bold text-primary shrink-0">
                     {achievement.stat}
                   </span>
-                  <span className="text-xl font-semibold text-foreground mb-3">
-                    {achievement.label}
-                  </span>
-                  <p className="text-base text-foreground/70">
-                    {achievement.description}
-                  </p>
+                  <div className="flex flex-col">
+                    <span className="text-xl font-semibold text-foreground">
+                      {achievement.label}
+                    </span>
+                    <p className="text-sm text-foreground/60 mt-1">
+                      {achievement.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -142,17 +144,19 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content - clean stat layout */}
-                <div className="relative flex flex-col items-center justify-center px-8 py-8 text-center">
-                  <span className="text-5xl md:text-6xl font-bold text-primary mb-2">
+                {/* Content - horizontal stat layout */}
+                <div className="relative flex items-baseline gap-3 px-6 py-6">
+                  <span className="text-5xl md:text-6xl font-bold text-primary shrink-0">
                     {achievement.stat}
                   </span>
-                  <span className="text-xl font-semibold text-foreground mb-3">
-                    {achievement.label}
-                  </span>
-                  <p className="text-base text-foreground/70">
-                    {achievement.description}
-                  </p>
+                  <div className="flex flex-col">
+                    <span className="text-xl font-semibold text-foreground">
+                      {achievement.label}
+                    </span>
+                    <p className="text-sm text-foreground/60 mt-1">
+                      {achievement.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
@@ -179,17 +183,19 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content - clean stat layout */}
-                <div className="relative flex flex-col items-center justify-center px-8 py-8 text-center">
-                  <span className="text-5xl md:text-6xl font-bold text-primary mb-2">
+                {/* Content - horizontal stat layout */}
+                <div className="relative flex items-baseline gap-3 px-6 py-6">
+                  <span className="text-5xl md:text-6xl font-bold text-primary shrink-0">
                     {achievement.stat}
                   </span>
-                  <span className="text-xl font-semibold text-foreground mb-3">
-                    {achievement.label}
-                  </span>
-                  <p className="text-base text-foreground/70">
-                    {achievement.description}
-                  </p>
+                  <div className="flex flex-col">
+                    <span className="text-xl font-semibold text-foreground">
+                      {achievement.label}
+                    </span>
+                    <p className="text-sm text-foreground/60 mt-1">
+                      {achievement.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}
