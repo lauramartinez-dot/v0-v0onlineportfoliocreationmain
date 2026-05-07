@@ -21,13 +21,14 @@ export default function Home() {
       <TransitionSection />
       {/* Why me? section with 3 images + mission */}
       <HighlightsSection />
-      {/* Top Achievements */}
+      {/* My work in numbers */}
       <AchievementsSection />
-      {/* Top Skills & Tools - merged with image headers */}
-      <TopSkillsSection />
       <ScrollTransitionSection />
       <TransitionSection />
+      {/* Top Achievements per company */}
       <CareerMapSection />
+      {/* Top Skills & Tools - last section */}
+      <TopSkillsSection />
       <Footer />
     </main>
   )
