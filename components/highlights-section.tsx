@@ -194,6 +194,17 @@ export function HighlightsSection() {
           </div>
         </div>
 
+        {/* Gradient separator below mission */}
+        <div className="relative py-3 mt-20">
+          <div
+            className="absolute inset-0 blur-[60px] opacity-100"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(153, 49, 231, 0.7) 0%, rgba(217, 70, 239, 0.7) 50%, rgba(153, 49, 231, 0.7) 100%)",
+            }}
+          />
+        </div>
+
       </div>
     </section>
   )
