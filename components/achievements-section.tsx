@@ -33,7 +33,7 @@ const writingAchievements = [
   {
     stat: "100+",
     label: "documentation pages",
-    description: "Owned simultaneously across products",
+    description: "Owned simultaneously at Personio",
   },
 ]
 
