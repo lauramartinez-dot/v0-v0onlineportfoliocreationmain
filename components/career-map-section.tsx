@@ -1181,7 +1181,7 @@ export default function CareerMapSection() {
           years="2025 - Present"
           country="Belgium"
           countryFlag="🇧🇪"
-          defaultExpanded={true}
+          defaultExpanded={false}
         >
           <div className="flex items-center justify-center py-12">
             <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
