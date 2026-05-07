@@ -64,6 +64,10 @@ export const toolColumns: SkillColumn[] = [
         label: "Data-driven decision-making",
         tools: ["Tableau"],
       },
+      {
+        label: "Low-code/AI development",
+        tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso"],
+      },
     ],
   },
   {
@@ -72,6 +76,10 @@ export const toolColumns: SkillColumn[] = [
       {
         label: "Localization management",
         tools: ["Smartling", "Phrase"],
+      },
+      {
+        label: "Cross-functional collaboration",
+        tools: ["Slack", "Zoom"],
       },
     ],
   },
