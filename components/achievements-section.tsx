@@ -33,7 +33,7 @@ const writingAchievements = [
   {
     stat: "100+",
     label: "documentation pages written",
-    description: "For software companies and ",
+    description: "For international software companies",
   },
   {
     stat: "5+",
