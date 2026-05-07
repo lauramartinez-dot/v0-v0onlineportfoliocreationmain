@@ -44,8 +44,9 @@ export function AchievementsSection() {
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1 */}
-          <div className="flex flex-col gap-2.5">
+          {/* Column 1: I write */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-[26.95px] font-bold text-white text-center mb-2">I write</h3>
             {achievements.slice(0, 2).map((achievement, index) => (
               <div
                 key={index}
@@ -73,8 +74,9 @@ export function AchievementsSection() {
             ))}
           </div>
           
-          {/* Column 2 */}
-          <div className="flex flex-col gap-2.5">
+          {/* Column 2: I build */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-[26.95px] font-bold text-white text-center mb-2">I build</h3>
             {achievements.slice(2, 4).map((achievement, index) => (
               <div
                 key={index}
@@ -102,8 +104,9 @@ export function AchievementsSection() {
             ))}
           </div>
           
-          {/* Column 3 */}
-          <div className="flex flex-col gap-2.5">
+          {/* Column 3: I translate */}
+          <div className="flex flex-col gap-4">
+            <h3 className="text-[26.95px] font-bold text-white text-center mb-2">I translate</h3>
             {achievements.slice(4, 6).map((achievement, index) => (
               <div
                 key={index}
