@@ -1114,21 +1114,32 @@ export default function CareerMapSection() {
     <>
     {/* Dialog for samples */}
     <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
-      <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-6">
+      <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
         {selectedType && (
           <>
-            <DialogHeader>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-                  <selectedType.icon className="h-6 w-6 text-primary" />
+            {/* Header image */}
+            <div className="relative h-40 w-full overflow-hidden rounded-t-lg">
+              <Image
+                src={selectedType.image}
+                alt={selectedType.name}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+            </div>
+            <div className="px-6 pb-6 -mt-8 relative z-10">
+              <DialogHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-card flex items-center justify-center ring-1 ring-primary/20 shadow-lg">
+                    <selectedType.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
+                    <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
+                  </div>
                 </div>
-                <div>
-                  <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
-                  <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
-                </div>
-              </div>
-            </DialogHeader>
-            <div className="mt-6">
+              </DialogHeader>
+              <div className="mt-6">
               {selectedType.samples.length > 0 ? (
                 <div className="space-y-3">
                   {selectedType.samples.map((sample, index) => (
@@ -1143,6 +1154,7 @@ export default function CareerMapSection() {
                   <p className="text-foreground/60">Samples available upon request</p>
                 </div>
               )}
+              </div>
             </div>
           </>
         )}
