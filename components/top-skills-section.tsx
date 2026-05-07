@@ -4,6 +4,23 @@ import { useState, useEffect } from "react"
 import { createPortal } from "react-dom"
 import { coreSkills } from "@/data/highlights"
 import { X } from "lucide-react"
+import Image from "next/image"
+
+// Column header images
+const columnHeaders = [
+  {
+    title: "I write",
+    image: "/vr-person-blue-tech.png",
+  },
+  {
+    title: "I build",
+    image: "/startup-workspace.jpg",
+  },
+  {
+    title: "I translate",
+    image: "/still-life-supply-chain.jpg",
+  },
+]
 
 function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -86,11 +103,25 @@ export function TopSkillsSection() {
   return (
     <section id="top-skills" className="relative px-4 py-20">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Top Skills</h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Top Skills & Tools</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1 */}
-          <div className="flex flex-col gap-2.5">
+          {/* Column 1: I write */}
+          <div className="flex flex-col gap-4">
+            {/* Image header card - thin subtle style */}
+            <div className="group relative h-[120px] overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src={columnHeaders[0].image}
+                alt={columnHeaders[0].title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/25 via-purple-500/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="text-lg font-medium text-white/90 tracking-wide">{columnHeaders[0].title}</h3>
+              </div>
+            </div>
             {coreSkills
               .filter((s) => s.column === 1)
               .map((skill, i) => (
@@ -98,8 +129,22 @@ export function TopSkillsSection() {
               ))}
           </div>
 
-          {/* Column 2 */}
-          <div className="flex flex-col gap-2.5">
+          {/* Column 2: I build */}
+          <div className="flex flex-col gap-4">
+            {/* Image header card - thin subtle style */}
+            <div className="group relative h-[120px] overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src={columnHeaders[1].image}
+                alt={columnHeaders[1].title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="text-lg font-medium text-white/90 tracking-wide">{columnHeaders[1].title}</h3>
+              </div>
+            </div>
             {coreSkills
               .filter((s) => s.column === 2)
               .map((skill, i) => (
@@ -107,8 +152,22 @@ export function TopSkillsSection() {
               ))}
           </div>
 
-          {/* Column 3 */}
-          <div className="flex flex-col gap-2.5">
+          {/* Column 3: I translate */}
+          <div className="flex flex-col gap-4">
+            {/* Image header card - thin subtle style */}
+            <div className="group relative h-[120px] overflow-hidden rounded-xl shadow-lg">
+              <Image
+                src={columnHeaders[2].image}
+                alt={columnHeaders[2].title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/25 via-purple-500/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <h3 className="text-lg font-medium text-white/90 tracking-wide">{columnHeaders[2].title}</h3>
+              </div>
+            </div>
             {coreSkills
               .filter((s) => s.column === 3)
               .map((skill, i) => (

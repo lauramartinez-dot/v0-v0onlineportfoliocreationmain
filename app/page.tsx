@@ -5,7 +5,7 @@ import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { AchievementsSection } from "@/components/achievements-section"
 import { TopSkillsSection } from "@/components/top-skills-section"
-import { TopToolsSection } from "@/components/top-tools-section"
+
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
 import WritingSamplesSection from "@/components/writing-samples-section"
@@ -24,10 +24,8 @@ export default function Home() {
       <HighlightsSection />
       {/* Top Achievements */}
       <AchievementsSection />
-      {/* Top Skills */}
+      {/* Top Skills & Tools - merged with image headers */}
       <TopSkillsSection />
-      {/* Top Tools */}
-      <TopToolsSection />
       <ScrollTransitionSection />
       <TransitionSection />
       <CareerMapSection />
