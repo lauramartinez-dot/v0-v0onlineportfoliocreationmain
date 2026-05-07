@@ -28,7 +28,7 @@ const writingAchievements = [
   {
     stat: "200+",
     label: "articles written",
-    description: "For major tech media including Business Insider",
+    description: "For major tech media (<i className="e"></i>, Business Insider)",
   },
   {
     stat: "100+",
@@ -38,7 +38,7 @@ const writingAchievements = [
   {
     stat: "5+",
     label: "audiences written for",
-    description: "From media readers to technical software users"
+    description: "From media readers to software users"
   },
 ]
 
@@ -52,7 +52,7 @@ const buildingAchievements = [
   {
     stat: "4x",
     label: "early hire",
-    description: "Very specialised in scale-ups and founding roles",
+    description: "Specialised in scale-ups and founding roles",
   },
 ]
 
