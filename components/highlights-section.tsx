@@ -163,7 +163,7 @@ export function HighlightsSection() {
         </div>
 
         {/* Mission section - integrated into the same visual flow */}
-        <div className="mt-12 pt-40 text-center">
+        <div className="mt-12 pt-[34px] text-center">
           <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
             And a 15-year long mission:
           </p>
