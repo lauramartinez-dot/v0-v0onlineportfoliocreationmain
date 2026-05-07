@@ -112,7 +112,7 @@ export function AchievementsSection() {
                     <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-base text-foreground/60 mt-1 leading-relaxed">
+                    <p className="text-base text-foreground/60 mt-2 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
@@ -150,7 +150,7 @@ export function AchievementsSection() {
                     <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-base text-foreground/60 mt-1 leading-relaxed">
+                    <p className="text-base text-foreground/60 mt-2 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
@@ -188,7 +188,7 @@ export function AchievementsSection() {
                     <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-base text-foreground/60 mt-1 leading-relaxed">
+                    <p className="text-base text-foreground/60 mt-2 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
