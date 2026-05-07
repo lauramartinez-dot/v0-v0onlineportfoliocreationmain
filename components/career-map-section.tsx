@@ -1117,15 +1117,15 @@ export default function CareerMapSection() {
       <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
         {selectedType && (
           <>
-            {/* Header image - fully visible */}
-            <div className="relative w-full rounded-t-lg overflow-hidden">
+            {/* Header image - consistent size with purple overlay */}
+            <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
               <Image
                 src={selectedType.image}
                 alt={selectedType.name}
-                width={800}
-                height={400}
-                className="w-full h-auto object-contain"
+                fill
+                className="object-cover"
               />
+              <div className="absolute inset-0 bg-primary/35" />
             </div>
             <div className="px-6 pb-6 pt-4">
               <DialogHeader>
