@@ -163,9 +163,9 @@ export function HighlightsSection() {
         </div>
 
         {/* Mission section - integrated into the same visual flow */}
-        <div className="mt-12 pt-[34px] text-center">
+        <div className="mt-12 pt-[54px] text-center">
           <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
-            And a 15-year long mission:
+            And a mission I've carried since the very beginning:
           </p>
         </div>
 
@@ -184,7 +184,7 @@ export function HighlightsSection() {
             
             {/* Content */}
             <div className="relative z-10">
-              <p className="text-[22px] md:text-[24px] font-bold leading-relaxed text-foreground text-left mb-5">
+              <p className="text-[22px] font-bold leading-relaxed text-foreground text-left mb-5">
                 I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary font-bold bg-primary/15 px-2 py-1 rounded-md">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
               <p className="text-sm text-foreground/60 italic text-right font-medium">
