@@ -1160,57 +1160,13 @@ export default function CareerMapSection() {
           logo="/omp-logo.png"
           name="OMP"
           role="Senior Technical Writer"
-          years="2026 - Present"
+          years="2025 - Present"
           country="Belgium"
-          countryFlag="🇧����"
-          defaultExpanded={false}
+          countryFlag="🇧🇪"
+          defaultExpanded={true}
         >
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I write
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I build
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I translate
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                </div>
-              </div>
-            </div>
+          <div className="flex items-center justify-center py-12">
+            <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
           </div>
         </CompanyCard>
 
