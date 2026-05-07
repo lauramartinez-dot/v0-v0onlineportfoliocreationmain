@@ -33,7 +33,7 @@ const writingAchievements = [
   {
     stat: "100+",
     label: "documentation pages written",
-    description: "Created, maintained and fully owned",
+    description: "For software companies and ",
   },
   {
     stat: "5+",
@@ -46,8 +46,8 @@ const writingAchievements = [
 const buildingAchievements = [
   {
     stat: "5+",
-    label: "years experience",
-    description: "As a technical writer in software companies",
+    label: "years as a technical writer",
+    description: "For international software companies",
   },
   {
     stat: "4x",
@@ -61,7 +61,7 @@ const translateAchievements = [
   {
     stat: "C2",
     label: "English proficiency",
-    description: "Near-native English through international experience",
+    description: "Near-native English writing and speaking",
   },
   {
     stat: "3",
