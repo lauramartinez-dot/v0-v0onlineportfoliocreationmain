@@ -998,8 +998,8 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-primary/35" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+      <div className="absolute inset-0 bg-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
       {contentType.samples.length > 0 && (
         <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
           {contentType.samples.length}
@@ -1124,7 +1124,7 @@ export default function CareerMapSection() {
                 fill
                 className="object-cover"
               />
-              <div className="absolute inset-0 bg-primary/35" />
+              <div className="absolute inset-0 bg-primary/50" />
             </div>
             <div className="px-6 pb-6 pt-4">
               <DialogHeader>
