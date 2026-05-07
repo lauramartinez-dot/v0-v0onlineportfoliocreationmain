@@ -57,7 +57,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Infographics",
-        tools: ["InDesign", "Photoshop"],
+        tools: ["InDesign", "Photoshop", "Canva"],
       },
     ],
   },
@@ -66,11 +66,11 @@ export const toolColumns: SkillColumn[] = [
     groups: [
       {
         label: "Process optimization",
-        tools: ["Jira", "Notion"],
+        tools: ["Jira", "Notion", "Google Docs"],
       },
       {
         label: "Data-driven decision-making",
-        tools: ["Tableau"],
+        tools: ["Tableau", "Google Sheets"],
       },
       {
         label: "AI-assisted production",
@@ -87,7 +87,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Global collaboration",
-        tools: ["Slack", "Zoom", "Miro", "Google ecosystem"],
+        tools: ["Slack", "Zoom", "Miro", "Loom"],
       },
       
     ],
