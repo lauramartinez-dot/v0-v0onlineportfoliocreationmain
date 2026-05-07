@@ -2,7 +2,7 @@
 
 export function AboutHeroSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 py-24 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center px-4 py-24 pt-[24px] overflow-hidden">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
         <div className="absolute -top-20 -left-20 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
@@ -27,7 +27,7 @@ export function AboutHeroSection() {
 
           {/* Text on the right */}
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <p className="text-[21px] text-foreground/60 mb-4">
+            <p className="text-[21px] text-foreground/60 mb-5">
               Now I'm that technical writer you bring in early, as soon as your company:
             </p>
 

@@ -2,7 +2,7 @@
 
 export function OriginSection() {
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 py-24 pt-20">
+    <section className="relative flex flex-col items-center justify-center px-4 py-24 pt-[20px]">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top right */}
         <div className="absolute -top-20 -right-20 h-[700px] w-[700px] rounded-full bg-gradient-to-bl from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
