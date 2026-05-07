@@ -103,7 +103,9 @@ export function TopSkillsSection() {
   return (
     <section id="top-skills" className="relative px-4 py-20">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Top Skills & Tools</h2>
+        <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
+          The skills and tools I use the most:
+        </p>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: I write */}

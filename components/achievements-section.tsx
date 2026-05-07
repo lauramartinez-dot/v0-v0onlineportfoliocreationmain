@@ -56,9 +56,9 @@ export function AchievementsSection() {
   return (
     <section id="top-achievements" className="relative py-20 px-4">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Top Achievements
-        </h2>
+        <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
+          Some things I&apos;m proud of:
+        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 */}
