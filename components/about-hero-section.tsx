@@ -3,14 +3,7 @@
 export function AboutHeroSection() {
   return (
     <section className="relative flex flex-col items-center justify-center px-4 py-24 pt-[24px] overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        {/* Purple/pink gradient orb - top left */}
-        <div className="absolute -top-20 -left-20 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
-        {/* Pink gradient orb - bottom right */}
-        <div className="absolute -bottom-32 -right-32 h-[800px] w-[800px] rounded-full bg-gradient-to-tl from-pink-500/35 via-purple-500/25 to-transparent blur-3xl" />
-        {/* Center subtle accent */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-r from-purple-500/35 to-pink-500/35 blur-3xl" />
-      </div>
+      {/* Gradient orbs removed for consistent background */}
 
       <div className="mx-auto max-w-6xl w-full">
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
