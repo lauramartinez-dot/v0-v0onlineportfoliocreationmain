@@ -38,7 +38,7 @@ const writingAchievements = [
   {
     stat: "5+",
     label: "audiences written for",
-    description: "From non-technical readers/users to IT teams"
+    description: "From media readers to technical software users"
   },
 ]
 
@@ -104,7 +104,7 @@ export function AchievementsSection() {
               >
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-                
+
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-center gap-6 px-8 py-8">
                   <span className="text-6xl md:text-7xl font-bold text-primary w-[120px] text-right shrink-0">
@@ -122,7 +122,7 @@ export function AchievementsSection() {
               </div>
             ))}
           </div>
-          
+
           {/* Column 2 */}
           <div className="flex flex-col gap-4">
             {/* Image header card - thin subtle style, no text */}
@@ -143,7 +143,7 @@ export function AchievementsSection() {
               >
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-                
+
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-center gap-6 px-8 py-8">
                   <span className="text-6xl md:text-7xl font-bold text-primary w-[120px] text-right shrink-0">
@@ -161,7 +161,7 @@ export function AchievementsSection() {
               </div>
             ))}
           </div>
-          
+
           {/* Column 3 */}
           <div className="flex flex-col gap-4">
             {/* Image header card - thin subtle style, no text */}
@@ -182,7 +182,7 @@ export function AchievementsSection() {
               >
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-                
+
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-center gap-6 px-8 py-8">
                   <span className="text-6xl md:text-7xl font-bold text-primary w-[120px] text-right shrink-0">
