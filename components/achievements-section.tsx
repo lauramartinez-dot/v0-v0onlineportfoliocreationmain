@@ -35,9 +35,14 @@ const writingAchievements = [
     label: "documentation pages",
     description: "Owned simultaneously at Personio",
   },
+  {
+    stat: "5+",
+    label: "audiences served",
+    description: "Created documentation tailored to different user types",
+  },
 ]
 
-// Column 2: Building achievements (placeholder - update with your content)
+// Column 2: Building achievements
 const buildingAchievements = [
   {
     stat: "4x",
@@ -45,33 +50,63 @@ const buildingAchievements = [
     description: "Very specialised in scale-ups and founding roles",
   },
   {
-    stat: "100+",
-    label: "to 1,000+ employees",
-    description: "Helped companies scale their documentation",
+    stat: "3→10",
+    label: "team growth",
+    description: "Grew a local 3-writer documentation team into a global team of 10",
   },
   {
-    stat: "15+",
-    label: "years experience",
-    description: "Making complex tech accessible",
+    stat: "20%",
+    label: "tasks deprioritised",
+    description: "Low-impact release tasks deprioritised at Personio",
+  },
+  {
+    stat: "30%",
+    label: "faster reports",
+    description: "Improved Tableau dashboards at Personio",
+  },
+  {
+    stat: "50%+",
+    label: "support volume reduced",
+    description: "Reduced a product area's support volume (Apr–Sep 2025)",
+  },
+  {
+    stat: "100+",
+    label: "pages deprecated",
+    description: "Outdated pages removed, improving content relevance",
+  },
+  {
+    stat: "1st",
+    label: "Women's Committee",
+    description: "Co-founded Personio's first Women's Committee",
   },
 ]
 
-// Column 3: Translate achievements (placeholder - update with your content)
+// Column 3: Translate achievements
 const translateAchievements = [
-  {
-    stat: "4",
-    label: "countries",
-    description: "Lived and worked across Spain, France, Ireland, and Germany",
-  },
   {
     stat: "C2",
     label: "English proficiency",
     description: "Near-native English through international experience",
   },
   {
-    stat: "8M+",
-    label: "monthly readers",
-    description: "Tech publications reaching millions worldwide",
+    stat: "3",
+    label: "languages spoken",
+    description: "English & Spanish bilingual, German B2",
+  },
+  {
+    stat: "150+",
+    label: "Spanish translations reviewed",
+    description: "Per year at Personio",
+  },
+  {
+    stat: "3→6",
+    label: "languages supported",
+    description: "Grew user-facing documentation languages at Personio",
+  },
+  {
+    stat: "1st",
+    label: "Spanish style guides",
+    description: "Created Personio's first-ever Spanish localization style guides",
   },
 ]
 
