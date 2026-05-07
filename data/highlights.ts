@@ -16,7 +16,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I build systems that help writers create 3x more docs overtime",
+    title: "I build systems that help writers do more in half the time",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
