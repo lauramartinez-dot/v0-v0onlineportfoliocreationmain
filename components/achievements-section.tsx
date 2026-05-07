@@ -1,6 +1,26 @@
 "use client"
 
 import { Award, TrendingUp, Users, FileText, Globe, Zap } from "lucide-react"
+import Image from "next/image"
+
+// Column header cards with images - matching highlights section style
+const columnHeaders = [
+  {
+    title: "I write",
+    image: "/vr-person-blue-tech.png",
+    addPurpleOverlay: false,
+  },
+  {
+    title: "I build",
+    image: "/startup-workspace.jpg",
+    addPurpleOverlay: true,
+  },
+  {
+    title: "I translate",
+    image: "/still-life-supply-chain.jpg",
+    addPurpleOverlay: false,
+  },
+]
 
 const achievements = [
   {
@@ -46,7 +66,20 @@ export function AchievementsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: I write */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-[26.95px] font-bold text-white text-center mb-2">I write</h3>
+            {/* Image header card */}
+            <div className="group relative min-h-[280px] overflow-hidden rounded-xl shadow-lg ring-2 ring-purple-400/40 shadow-purple-500/25">
+              <Image
+                src={columnHeaders[0].image}
+                alt={columnHeaders[0].title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-[26.95px] font-bold text-white">{columnHeaders[0].title}</h3>
+              </div>
+            </div>
             {achievements.slice(0, 2).map((achievement, index) => (
               <div
                 key={index}
@@ -76,7 +109,20 @@ export function AchievementsSection() {
           
           {/* Column 2: I build */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-[26.95px] font-bold text-white text-center mb-2">I build</h3>
+            {/* Image header card */}
+            <div className="group relative min-h-[280px] overflow-hidden rounded-xl shadow-lg ring-2 ring-purple-400/40 shadow-purple-500/25">
+              <Image
+                src={columnHeaders[1].image}
+                alt={columnHeaders[1].title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/50 via-purple-500/35 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-[26.95px] font-bold text-white">{columnHeaders[1].title}</h3>
+              </div>
+            </div>
             {achievements.slice(2, 4).map((achievement, index) => (
               <div
                 key={index}
@@ -106,7 +152,20 @@ export function AchievementsSection() {
           
           {/* Column 3: I translate */}
           <div className="flex flex-col gap-4">
-            <h3 className="text-[26.95px] font-bold text-white text-center mb-2">I translate</h3>
+            {/* Image header card */}
+            <div className="group relative min-h-[280px] overflow-hidden rounded-xl shadow-lg ring-2 ring-purple-400/40 shadow-purple-500/25">
+              <Image
+                src={columnHeaders[2].image}
+                alt={columnHeaders[2].title}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-purple-600/30 via-purple-500/15 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+              <div className="absolute bottom-0 left-0 right-0 p-6">
+                <h3 className="text-[26.95px] font-bold text-white">{columnHeaders[2].title}</h3>
+              </div>
+            </div>
             {achievements.slice(4, 6).map((achievement, index) => (
               <div
                 key={index}
