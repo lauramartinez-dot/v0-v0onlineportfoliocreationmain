@@ -49,7 +49,7 @@ export const toolColumns: SkillColumn[] = [
     groups: [
       {
         label: "User documentation",
-        tools: ["Zendesk", "Confluence", "HTML / CSS"],
+        tools: ["Zendesk", "Confluence", "Google Docs", "HTML / CSS"],
       },
       {
         label: "Developer documentation",
