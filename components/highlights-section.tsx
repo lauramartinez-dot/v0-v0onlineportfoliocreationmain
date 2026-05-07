@@ -165,7 +165,7 @@ export function HighlightsSection() {
         {/* Mission section - integrated into the same visual flow */}
         <div className="mt-[62px] pt-[54px] text-center">
           <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
-            And one mission I've held onto from day one:
+            And a clear mission:
           </p>
         </div>
 
