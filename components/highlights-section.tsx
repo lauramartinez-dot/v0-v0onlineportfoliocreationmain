@@ -47,7 +47,7 @@ function DiagonalRevealImage({
     <Wrapper
       {...wrapperProps}
       ref={containerRef as React.RefObject<HTMLDivElement & HTMLAnchorElement>}
-      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-purple-400/40 shadow-xl shadow-purple-500/25 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/35 hover:ring-purple-400/60 ${href ? "block" : ""}`}
+      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-primary/40 shadow-xl cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:ring-primary/60 ${href ? "block" : ""}`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -112,7 +112,7 @@ function SkillImageCard({
         className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
       />
 
-      <div className={`absolute inset-0 bg-gradient-to-b ${addPurpleOverlay ? "from-purple-600/50 via-purple-500/35" : "from-purple-600/30 via-purple-500/15"} to-transparent`} />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
@@ -126,14 +126,7 @@ function SkillImageCard({
 export function HighlightsSection() {
   return (
     <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
-      {/* Purple gradient background - matching hero section style */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-purple-500/20" />
-        {/* Large blurred orbs */}
-        <div className="absolute -top-20 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 blur-3xl" />
-        <div className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-pink-500/25 via-purple-500/15 to-transparent blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-purple-500/15 to-pink-500/15 blur-3xl" />
-      </div>
+      {/* Gradient background removed for consistent solid background */}
 
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
@@ -171,14 +164,9 @@ export function HighlightsSection() {
 
         {/* Mission box - polished design */}
         <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
-          <div className="relative rounded-3xl border border-primary/30 bg-card/95 shadow-2xl shadow-purple-900/30 backdrop-blur-xl px-8 md:px-10 pt-14 pb-8">
-            {/* Soft inner glow */}
-            <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-b from-primary/8 via-primary/3 to-transparent pointer-events-none" />
-            {/* Subtle border glow */}
-            <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-r from-purple-500/20 via-pink-500/10 to-purple-500/20 -z-10 blur-sm" />
-            
+          <div className="relative rounded-3xl border border-primary/30 bg-card px-8 md:px-10 pt-14 pb-8">
             {/* Mission badge with larger rocket icon */}
-            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 via-purple-600 to-pink-500 shadow-xl shadow-purple-500/40 ring-4 ring-background">
+            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background">
               <Rocket className="w-7 h-7 text-white drop-shadow-md" />
             </div>
             
@@ -194,16 +182,8 @@ export function HighlightsSection() {
           </div>
         </div>
 
-        {/* Gradient separator below mission */}
-        <div className="relative py-3 mt-20">
-          <div
-            className="absolute inset-0 blur-[60px] opacity-100"
-            style={{
-              background:
-                "linear-gradient(90deg, rgba(153, 49, 231, 0.7) 0%, rgba(217, 70, 239, 0.7) 50%, rgba(153, 49, 231, 0.7) 100%)",
-            }}
-          />
-        </div>
+        {/* Spacer - gradient removed for consistent background */}
+        <div className="py-3 mt-20" />
 
       </div>
     </section>
