@@ -22,7 +22,7 @@ const columnHeaders = [
 const writingAchievements = [
   {
     stat: "15",
-    label: "years writing about tech",
+    label: "yrs writing about tech",
     description: "Former Tech Journalist",
   },
   {
@@ -46,7 +46,7 @@ const writingAchievements = [
 const buildingAchievements = [
   {
     stat: "5+",
-    label: "years as Technical Writer",
+    label: "yrs as Technical Writer",
     description: "For international software companies",
   },
   {
@@ -70,7 +70,7 @@ const translateAchievements = [
   },
   {
     stat: "7+",
-    label: "years translating",
+    label: "yrs translating",
     description: "English > Spanish content",
   },
 ]
