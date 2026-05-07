@@ -9,7 +9,7 @@ export function Navigation() {
 
   const navItems = [
     { label: "My role", href: "#top-differentiators" },
-    { label: "Top achievements", href: "#top-achievements" },
+    { label: "Top achievements and writing samples", href: "#top-achievements" },
     { label: "Top skills and tools", href: "#top-skills" },
   ]
 
