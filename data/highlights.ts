@@ -86,7 +86,7 @@ export const toolColumns: SkillColumn[] = [
         tools: ["Smartling", "Phrase"],
       },
       {
-        label: "Cross-functional collaboration",
+        label: "Global collaboration",
         tools: ["Slack", "Zoom"],
       },
     ],
