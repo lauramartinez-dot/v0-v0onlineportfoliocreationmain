@@ -28,7 +28,7 @@ const writingAchievements = [
   {
     stat: "200+",
     label: "articles written",
-    description: "For major tech media (<i className="e"></i>, Business Insider)",
+    description: "For major tech media including Business Insider",
   },
   {
     stat: "100+",
