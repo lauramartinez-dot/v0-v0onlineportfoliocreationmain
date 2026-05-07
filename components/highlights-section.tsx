@@ -163,14 +163,14 @@ export function HighlightsSection() {
         </div>
 
         {/* Mission section - integrated into the same visual flow */}
-        <div className="mt-12 pt-[54px] text-center">
+        <div className="mt-[62px] pt-[54px] text-center">
           <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
-            And a mission I've carried since the very beginning:
+            And one mission I've held onto from day one:
           </p>
         </div>
 
         {/* Mission box - polished design */}
-        <div className="relative z-10 max-w-3xl mx-auto">
+        <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
           <div className="relative rounded-3xl border border-primary/30 bg-card/95 shadow-2xl shadow-purple-900/30 backdrop-blur-xl px-8 md:px-10 pt-14 pb-8">
             {/* Soft inner glow */}
             <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-b from-primary/8 via-primary/3 to-transparent pointer-events-none" />
