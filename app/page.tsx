@@ -8,6 +8,7 @@ import { TopSkillsSection } from "@/components/top-skills-section"
 
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
+import WritingSamplesSection from "@/components/writing-samples-section"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
@@ -28,6 +29,8 @@ export default function Home() {
       <ScrollTransitionSection />
       <TransitionSection />
       <CareerMapSection />
+      {/* Writing Samples */}
+      <WritingSamplesSection />
       <Footer />
     </main>
   )
