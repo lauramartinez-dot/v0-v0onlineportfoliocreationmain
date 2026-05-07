@@ -70,7 +70,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Data-driven decision-making",
-        tools: ["Tableau", "Google Sheets"],
+        tools: ["Tableau", "Amplitude", "Pendo"],
       },
       {
         label: "AI-assisted production",
