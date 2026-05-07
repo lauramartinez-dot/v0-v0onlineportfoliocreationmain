@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
-import { ArrowRight, Rocket } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -171,23 +171,20 @@ export function HighlightsSection() {
 
         {/* Mission box - styled to match the cards above */}
         <div className="relative z-10 max-w-3xl mx-auto">
-          <div className="group relative min-h-[200px] overflow-hidden rounded-xl shadow-lg ring-2 ring-purple-400/40 shadow-purple-500/25 bg-card/80 backdrop-blur-sm">
-            {/* Gradient overlay matching the cards */}
-            <div className="absolute inset-0 bg-gradient-to-b from-purple-600/20 via-purple-500/10 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+          <div className="group relative min-h-[280px] overflow-hidden rounded-xl shadow-lg">
+            {/* Dark gradient background matching the cards */}
+            <div className="absolute inset-0 bg-gradient-to-b from-purple-900/90 via-purple-950/95 to-black" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-80" />
             
-            {/* Mission badge */}
-            <div className="absolute -top-4 left-7 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/30 ring-2 ring-background z-20">
-              <Rocket className="w-4 h-4 text-white" />
-              <span className="text-[13px] font-bold uppercase tracking-widest text-white">15-Year-Long Mission</span>
-            </div>
+            {/* Subtle purple glow overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-600/20 via-transparent to-pink-500/10" />
             
-            {/* Content */}
-            <div className="relative z-10 p-8 pt-10">
-              <p className="text-[20px] leading-relaxed text-foreground font-medium text-left mb-4">
-                I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
+            {/* Content - matching card typography */}
+            <div className="relative z-10 p-8 flex flex-col justify-end h-full min-h-[280px]">
+              <p className="text-[26.95px] font-bold text-white leading-snug mb-4">
+                I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
-              <p className="text-sm text-foreground/50 italic text-right">
+              <p className="text-sm text-white/50 italic">
                 — Eurostat · Regional Yearbook, European Commission, 2025
               </p>
             </div>
