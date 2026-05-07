@@ -8,16 +8,16 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "Top Skills", href: "#top-differentiators" },
-    { label: "Top Achievements", href: "#top-achievements" },
-    { label: "Writing Samples", href: "#writing-samples" },
+    { label: "My role", href: "#top-differentiators" },
+    { label: "Top achievements", href: "#top-achievements" },
+    { label: "Top skills and tools", href: "#top-skills" },
   ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pb-[30px]">
       <div className="mx-auto max-w-5xl">
         <div className="flex items-center justify-between rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-8 py-5 mt-5">
-          <a href="#" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <a href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
             <Sparkles className="h-5 w-5 text-primary" />
             <span className="font-semibold text-primary text-base">Laura Martínez</span>
           </a>
