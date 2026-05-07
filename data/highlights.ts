@@ -56,7 +56,7 @@ export const toolColumns: SkillColumn[] = [
         tools: ["Figma", "GitHub", "Markdown"],
       },
       {
-        label: "Graphic design",
+        label: "Infographics",
         tools: ["InDesign", "Photoshop"],
       },
     ],
