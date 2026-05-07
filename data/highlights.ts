@@ -51,6 +51,10 @@ export const toolColumns: SkillColumn[] = [
         label: "User documentation",
         tools: ["Zendesk", "Confluence", "HTML / CSS"],
       },
+      {
+        label: "Developer documentation",
+        tools: ["API documentation", "Figma", "GitHub", "Markdown", "JSON"],
+      },
     ],
   },
   {
