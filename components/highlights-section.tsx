@@ -169,23 +169,25 @@ export function HighlightsSection() {
           </p>
         </div>
 
-        {/* Mission box - styled with original lighter background */}
+        {/* Mission box - polished design */}
         <div className="relative z-10 max-w-3xl mx-auto">
-          <div className="relative rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 backdrop-blur-xl px-7 pt-10 pb-6">
+          <div className="relative rounded-3xl border border-primary/30 bg-card/95 shadow-2xl shadow-purple-900/30 backdrop-blur-xl px-8 md:px-10 pt-14 pb-8">
             {/* Soft inner glow */}
-            <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
+            <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-b from-primary/8 via-primary/3 to-transparent pointer-events-none" />
+            {/* Subtle border glow */}
+            <div className="absolute -inset-[1px] rounded-3xl bg-gradient-to-r from-purple-500/20 via-pink-500/10 to-purple-500/20 -z-10 blur-sm" />
             
-            {/* Mission badge with rocket icon only */}
-            <div className="absolute -top-4 left-7 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/30 ring-2 ring-background">
-              <Rocket className="w-5 h-5 text-white" />
+            {/* Mission badge with larger rocket icon */}
+            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-purple-500 via-purple-600 to-pink-500 shadow-xl shadow-purple-500/40 ring-4 ring-background">
+              <Rocket className="w-7 h-7 text-white drop-shadow-md" />
             </div>
             
             {/* Content */}
             <div className="relative z-10">
-              <p className="text-[22px] font-bold leading-relaxed text-foreground text-left mb-4">
-                I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
+              <p className="text-[22px] md:text-[24px] font-bold leading-relaxed text-foreground text-left mb-5">
+                I help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary font-bold bg-primary/15 px-2 py-1 rounded-md">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
-              <p className="text-sm text-foreground/50 italic text-right">
+              <p className="text-sm text-foreground/60 italic text-right font-medium">
                 — Eurostat · Regional Yearbook, European Commission, 2025
               </p>
             </div>
