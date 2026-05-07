@@ -61,7 +61,7 @@ const translateAchievements = [
   {
     stat: "C2",
     label: "English proficiency",
-    description: "Near-native English writing and speaking",
+    description: "Near-native\nEnglish writing",
   },
   {
     stat: "3",
@@ -71,7 +71,7 @@ const translateAchievements = [
   {
     stat: "7+",
     label: "years translating",
-    description: "English > Spanish content",
+    description: "English > Spanish documentation",
   },
 ]
 
@@ -188,7 +188,7 @@ export function AchievementsSection() {
                     <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-base text-foreground/60 mt-2 leading-relaxed">
+                    <p className={`text-base text-foreground/60 mt-2 leading-relaxed ${index === 0 ? 'mr-2' : ''}`}>
                       {achievement.description}
                     </p>
                   </div>
