@@ -991,7 +991,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
   return (
     <div
       onClick={onClick}
-      className="group cursor-pointer rounded-lg overflow-hidden h-20 relative"
+      className="group cursor-pointer rounded-xl overflow-hidden h-28 relative"
     >
       <Image
         src={contentType.image}
@@ -999,15 +999,15 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-primary/40" />
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-primary/35" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
       {contentType.samples.length > 0 && (
-        <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-white text-[10px] font-semibold z-10">
+        <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
           {contentType.samples.length}
         </div>
       )}
-      <div className="absolute inset-0 flex items-center px-4 z-10">
-        <h3 className="text-sm font-semibold text-white leading-tight">
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+        <h3 className="text-base font-semibold text-white leading-tight">
           {contentType.name}
         </h3>
       </div>
