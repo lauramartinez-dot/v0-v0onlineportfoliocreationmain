@@ -77,7 +77,7 @@ const translateAchievements = [
 
 export function AchievementsSection() {
   return (
-    <section id="top-achievements" className="relative py-20 px-4">
+    <section id="top-achievements" className="relative py-24 px-4">
       <div className="mx-auto max-w-7xl">
         <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
           My work in numbers:</p>
@@ -106,7 +106,7 @@ export function AchievementsSection() {
 
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-start gap-6 px-8 py-8">
-                  <span className="text-6xl md:text-7xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
+                  <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
@@ -145,7 +145,7 @@ export function AchievementsSection() {
 
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-start gap-6 px-8 py-8">
-                  <span className="text-6xl md:text-7xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
+                  <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
@@ -184,7 +184,7 @@ export function AchievementsSection() {
 
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-start gap-6 px-8 py-8">
-                  <span className="text-6xl md:text-7xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
+                  <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
