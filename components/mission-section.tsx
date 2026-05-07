@@ -1,11 +1,10 @@
 "use client"
 
-import Image from "next/image"
 import { Rocket } from "lucide-react"
 
 export function MissionSection() {
   return (
-    <section className="relative py-20 overflow-hidden">
+    <section className="relative py-12 overflow-hidden">
       <div className="mx-auto max-w-7xl px-4">
         {/* Intro text - similar to top differentiators */}
         <div className="text-center mb-12">
@@ -14,23 +13,7 @@ export function MissionSection() {
           </p>
         </div>
 
-        {/* Image */}
-        <div className="relative w-full min-h-[500px] lg:min-h-[580px] mb-10">
-          {/* Purple glow shadow behind image - subtle like hero */}
-          <div className="absolute inset-0 rounded-2xl bg-purple-600/20 blur-xl transform scale-[1.02]" />
-          
-          <div className="relative w-full h-full min-h-[500px] lg:min-h-[580px] rounded-2xl overflow-hidden ring-1 ring-white/10">
-            <Image
-              src="/team-collaboration.jpeg"
-              alt="Laura collaborating with team members at an outdoor workspace"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-        </div>
-
-        {/* Mission box - below the image, centered */}
+        {/* Mission box - centered */}
         <div className="max-w-3xl mx-auto">
           <div className="relative rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 backdrop-blur-xl px-7 pt-8 pb-6">
             {/* Soft inner glow */}
