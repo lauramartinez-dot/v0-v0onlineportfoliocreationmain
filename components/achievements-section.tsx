@@ -45,7 +45,7 @@ const writingAchievements = [
 // Column 2: Building achievements
 const buildingAchievements = [
   {
-    stat: "5",
+    stat: "5+",
     label: "years as a technical writer",
     description: "For international software companies",
   },
