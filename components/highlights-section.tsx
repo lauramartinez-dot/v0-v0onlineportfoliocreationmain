@@ -175,10 +175,9 @@ export function HighlightsSection() {
             {/* Soft inner glow */}
             <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />
             
-            {/* Mission badge with rocket */}
-            <div className="absolute -top-4 left-7 flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/30 ring-2 ring-background">
-              <Rocket className="w-4 h-4 text-white" />
-              <span className="text-[13px] font-bold uppercase tracking-widest text-white">15-Year-Long Mission</span>
+            {/* Mission badge with rocket icon only */}
+            <div className="absolute -top-4 left-7 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 shadow-lg shadow-purple-500/30 ring-2 ring-background">
+              <Rocket className="w-5 h-5 text-white" />
             </div>
             
             {/* Content */}
