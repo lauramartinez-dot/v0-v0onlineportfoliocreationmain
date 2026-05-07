@@ -47,7 +47,7 @@ const buildingAchievements = [
   {
     stat: "5+",
     label: "years as a Tech Writer",
-    description: "Including 3+ years as a Senior Technical Writer",
+    description: "Including 2+ years as a Senior",
   },
   {
     stat: "4x",
