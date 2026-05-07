@@ -991,7 +991,7 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
   return (
     <div
       onClick={onClick}
-      className="group cursor-pointer rounded-xl overflow-hidden aspect-square relative"
+      className="group cursor-pointer rounded-lg overflow-hidden h-20 relative"
     >
       <Image
         src={contentType.image}
@@ -999,15 +999,15 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      <div className="absolute inset-0 bg-primary/35" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+      <div className="absolute inset-0 bg-primary/40" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
       {contentType.samples.length > 0 && (
-        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
-          {contentType.samples.length} samples
+        <div className="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-white text-[10px] font-semibold z-10">
+          {contentType.samples.length}
         </div>
       )}
-      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-        <h3 className="text-[20px] font-bold text-white leading-snug">
+      <div className="absolute inset-0 flex items-center px-4 z-10">
+        <h3 className="text-sm font-semibold text-white leading-tight">
           {contentType.name}
         </h3>
       </div>
@@ -1223,9 +1223,9 @@ export default function CareerMapSection() {
           </div>
 
           {/* Writing Samples Section */}
-          <div className="mt-12 pt-8 border-t border-primary/10">
-            <h3 className="text-xl font-bold mb-6 text-center">Writing Samples</h3>
-            <div className="grid gap-4 grid-cols-2 md:grid-cols-3">
+          <div className="mt-8 pt-6 border-t border-primary/10">
+            <h3 className="text-base font-semibold mb-4 text-center text-foreground/70">Writing Samples</h3>
+            <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
               {contentTypes.map((contentType) => (
                 <ContentTypeCard
                   key={contentType.id}
