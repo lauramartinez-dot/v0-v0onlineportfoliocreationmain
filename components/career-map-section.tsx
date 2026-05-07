@@ -1158,7 +1158,7 @@ export default function CareerMapSection() {
                   <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                     <FileText className="h-8 w-8 text-primary/50" />
                   </div>
-                  <p className="text-foreground/60">Samples available upon request</p>
+                  <p className="text-foreground/60">NDA-protected — but I promise I did!</p>
                 </div>
               )}
               </div>
