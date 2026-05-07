@@ -66,7 +66,7 @@ export const toolColumns: SkillColumn[] = [
     groups: [
       {
         label: "Process optimization",
-        tools: ["Jira", "Notion", "Google ecosystem"],
+        tools: ["Jira", "Notion"],
       },
       {
         label: "Data-driven decision-making",
@@ -87,7 +87,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Global collaboration",
-        tools: ["Slack", "Zoom", "Miro"],
+        tools: ["Slack", "Zoom", "Miro", "Google ecosystem"],
       },
       
     ],
