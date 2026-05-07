@@ -53,7 +53,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Developer documentation",
-        tools: ["Figma", "GitHub", "Markdown"],
+        tools: ["GitHub", "Markdown"],
       },
       {
         label: "Infographics",
