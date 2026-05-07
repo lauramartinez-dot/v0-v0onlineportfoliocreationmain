@@ -83,12 +83,13 @@ export const toolColumns: SkillColumn[] = [
     groups: [
       {
         label: "Localization management",
-        tools: ["Smartling", "Phrase"],
+        tools: ["Smartling", "Phrase", "LanguageTool"],
       },
       {
         label: "Global collaboration",
         tools: ["Slack", "Zoom"],
       },
+      
     ],
   },
 ]
