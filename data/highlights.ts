@@ -65,7 +65,7 @@ export const toolColumns: SkillColumn[] = [
         tools: ["Tableau"],
       },
       {
-        label: "Low-code/AI development",
+        label: "AI-assisted production",
         tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso"],
       },
     ],
