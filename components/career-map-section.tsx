@@ -1030,10 +1030,10 @@ function PillarColumn({
       {/* Image header with title overlay */}
       <div className="relative h-24 rounded-xl overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Purple tint overlay */}
-        <div className="absolute inset-0 bg-purple-600/35" />
+        {/* Purple tint overlay - unified across all headers */}
+        <div className="absolute inset-0 bg-primary/50" />
         {/* Dark gradient overlay from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
         {/* Title at bottom left */}
         <div className="absolute bottom-3 left-4 z-10">
           <h3 className="text-xl font-bold text-white">{label}</h3>
