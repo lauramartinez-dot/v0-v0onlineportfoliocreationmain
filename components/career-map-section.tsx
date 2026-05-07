@@ -622,7 +622,6 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "product-areas",
-    title: "Created documentation for 3+ product areas at the same time",
     description:
       "Managed documentation across multiple major product areas simultaneously, ensuring comprehensive coverage and consistency.",
     icon: FileText,
