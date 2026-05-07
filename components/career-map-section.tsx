@@ -1155,7 +1155,7 @@ export default function CareerMapSection() {
           <h2 className="mb-4 text-xl md:text-2xl font-medium text-foreground/80">My top achievements and writing samples per company:</h2>
         </div>
 
-        {/* OMP Company Card - Hidden until more time in role
+        {/* OMP Company Card */}
         <CompanyCard
           logo="/omp-logo.png"
           name="OMP"
@@ -1213,7 +1213,6 @@ export default function CareerMapSection() {
             </div>
           </div>
         </CompanyCard>
-        */}
 
         {/* Personio Company Card */}
         <CompanyCard
