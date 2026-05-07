@@ -1,6 +1,5 @@
 "use client"
 
-import { Award, TrendingUp, Users, FileText, Globe, Zap, PenTool, Newspaper, BookOpen } from "lucide-react"
 import Image from "next/image"
 
 // Column header images - same as skills section
@@ -22,18 +21,18 @@ const columnHeaders = [
 // Column 1: Writing achievements
 const writingAchievements = [
   {
-    icon: PenTool,
-    title: "15 Years Writing About Tech",
+    stat: "15",
+    label: "years writing about tech",
     description: "Either as tech journalist or technical writer",
   },
   {
-    icon: Newspaper,
-    title: "200+ Articles Written",
+    stat: "200+",
+    label: "articles written",
     description: "For major tech media including Business Insider",
   },
   {
-    icon: BookOpen,
-    title: "100+ Documentation Pages",
+    stat: "100+",
+    label: "documentation pages",
     description: "Owned simultaneously across products",
   },
 ]
@@ -41,38 +40,38 @@ const writingAchievements = [
 // Column 2: Building achievements (placeholder - update with your content)
 const buildingAchievements = [
   {
-    icon: Users,
-    title: "3x Early Hire",
+    stat: "3x",
+    label: "early hire",
     description: "Joined three scale-ups as an early technical writing hire",
   },
   {
-    icon: Zap,
-    title: "Scale-Up Specialist",
-    description: "Helped companies grow from 100 to 1,000+ employees",
+    stat: "100+",
+    label: "to 1,000+ employees",
+    description: "Helped companies scale their documentation",
   },
   {
-    icon: FileText,
-    title: "15+ Years Experience",
-    description: "Over a decade and a half making complex tech accessible",
+    stat: "15+",
+    label: "years experience",
+    description: "Making complex tech accessible",
   },
 ]
 
 // Column 3: Translate achievements (placeholder - update with your content)
 const translateAchievements = [
   {
-    icon: Globe,
-    title: "4 Countries",
+    stat: "4",
+    label: "countries",
     description: "Lived and worked across Spain, France, Ireland, and Germany",
   },
   {
-    icon: Award,
-    title: "C2 English Proficiency",
-    description: "Near-native English acquired through international experience",
+    stat: "C2",
+    label: "English proficiency",
+    description: "Near-native English through international experience",
   },
   {
-    icon: TrendingUp,
-    title: "8M+ Monthly Readers",
-    description: "Wrote for tech publications reaching millions of readers worldwide",
+    stat: "8M+",
+    label: "monthly readers",
+    description: "Tech publications reaching millions worldwide",
   },
 ]
 
@@ -106,21 +105,18 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content */}
-                <div className="relative flex flex-col items-center justify-center px-6 py-8 min-h-[140px] text-center">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <achievement.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-[21px] text-purple-100 leading-tight mb-2 group-hover:text-primary transition-colors duration-300">
-                    {achievement.title}
-                  </h3>
+                {/* Content - clean stat layout */}
+                <div className="relative flex flex-col items-center justify-center px-6 py-6 text-center">
+                  <span className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                    {achievement.stat}
+                  </span>
+                  <span className="text-lg font-medium text-foreground mb-2">
+                    {achievement.label}
+                  </span>
                   <p className="text-sm text-foreground/60">
                     {achievement.description}
                   </p>
                 </div>
-                
-                {/* Bottom subtle glow on hover */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
               </div>
             ))}
           </div>
@@ -146,21 +142,18 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content */}
-                <div className="relative flex flex-col items-center justify-center px-6 py-8 min-h-[140px] text-center">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <achievement.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-[21px] text-purple-100 leading-tight mb-2 group-hover:text-primary transition-colors duration-300">
-                    {achievement.title}
-                  </h3>
+                {/* Content - clean stat layout */}
+                <div className="relative flex flex-col items-center justify-center px-6 py-6 text-center">
+                  <span className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                    {achievement.stat}
+                  </span>
+                  <span className="text-lg font-medium text-foreground mb-2">
+                    {achievement.label}
+                  </span>
                   <p className="text-sm text-foreground/60">
                     {achievement.description}
                   </p>
                 </div>
-                
-                {/* Bottom subtle glow on hover */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
               </div>
             ))}
           </div>
@@ -186,21 +179,18 @@ export function AchievementsSection() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
-                {/* Content */}
-                <div className="relative flex flex-col items-center justify-center px-6 py-8 min-h-[140px] text-center">
-                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors duration-300">
-                    <achievement.icon className="w-7 h-7 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-[21px] text-purple-100 leading-tight mb-2 group-hover:text-primary transition-colors duration-300">
-                    {achievement.title}
-                  </h3>
+                {/* Content - clean stat layout */}
+                <div className="relative flex flex-col items-center justify-center px-6 py-6 text-center">
+                  <span className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                    {achievement.stat}
+                  </span>
+                  <span className="text-lg font-medium text-foreground mb-2">
+                    {achievement.label}
+                  </span>
                   <p className="text-sm text-foreground/60">
                     {achievement.description}
                   </p>
                 </div>
-                
-                {/* Bottom subtle glow on hover */}
-                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
               </div>
             ))}
           </div>
