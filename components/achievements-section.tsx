@@ -1,6 +1,6 @@
 "use client"
 
-import { Award, TrendingUp, Users, FileText, Globe, Zap } from "lucide-react"
+import { Award, TrendingUp, Users, FileText, Globe, Zap, PenTool, Newspaper, BookOpen } from "lucide-react"
 import Image from "next/image"
 
 // Column header images - same as skills section
@@ -19,26 +19,31 @@ const columnHeaders = [
   },
 ]
 
-const achievements = [
+// Column 1: Writing achievements
+const writingAchievements = [
   {
-    icon: TrendingUp,
-    title: "8M+ Monthly Readers",
-    description: "Wrote for tech publications reaching millions of readers worldwide",
+    icon: PenTool,
+    title: "15 Years Writing About Tech",
+    description: "Either as tech journalist or technical writer",
   },
+  {
+    icon: Newspaper,
+    title: "200+ Articles Written",
+    description: "For major tech media including Business Insider",
+  },
+  {
+    icon: BookOpen,
+    title: "100+ Documentation Pages",
+    description: "Owned simultaneously across products",
+  },
+]
+
+// Column 2: Building achievements (placeholder - update with your content)
+const buildingAchievements = [
   {
     icon: Users,
     title: "3x Early Hire",
     description: "Joined three scale-ups as an early technical writing hire",
-  },
-  {
-    icon: Globe,
-    title: "4 Countries",
-    description: "Lived and worked across Spain, France, Ireland, and Germany",
-  },
-  {
-    icon: FileText,
-    title: "15+ Years Experience",
-    description: "Over a decade and a half making complex tech accessible",
   },
   {
     icon: Zap,
@@ -46,9 +51,28 @@ const achievements = [
     description: "Helped companies grow from 100 to 1,000+ employees",
   },
   {
+    icon: FileText,
+    title: "15+ Years Experience",
+    description: "Over a decade and a half making complex tech accessible",
+  },
+]
+
+// Column 3: Translate achievements (placeholder - update with your content)
+const translateAchievements = [
+  {
+    icon: Globe,
+    title: "4 Countries",
+    description: "Lived and worked across Spain, France, Ireland, and Germany",
+  },
+  {
     icon: Award,
     title: "C2 English Proficiency",
     description: "Near-native English acquired through international experience",
+  },
+  {
+    icon: TrendingUp,
+    title: "8M+ Monthly Readers",
+    description: "Wrote for tech publications reaching millions of readers worldwide",
   },
 ]
 
@@ -74,7 +98,7 @@ export function AchievementsSection() {
               <div className="absolute inset-0 bg-gradient-to-b from-purple-600/25 via-purple-500/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
             </div>
-            {achievements.slice(0, 2).map((achievement, index) => (
+            {writingAchievements.map((achievement, index) => (
               <div
                 key={index}
                 className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
@@ -114,7 +138,7 @@ export function AchievementsSection() {
               <div className="absolute inset-0 bg-gradient-to-b from-purple-600/40 via-purple-500/25 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
             </div>
-            {achievements.slice(2, 4).map((achievement, index) => (
+            {buildingAchievements.map((achievement, index) => (
               <div
                 key={index}
                 className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
@@ -154,7 +178,7 @@ export function AchievementsSection() {
               <div className="absolute inset-0 bg-gradient-to-b from-purple-600/25 via-purple-500/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
             </div>
-            {achievements.slice(4, 6).map((achievement, index) => (
+            {translateAchievements.map((achievement, index) => (
               <div
                 key={index}
                 className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 overflow-hidden"
