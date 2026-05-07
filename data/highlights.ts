@@ -32,6 +32,51 @@ export const topSkills = [
   },
 ]
 
+// Tool groups for the skills section
+export interface ToolGroup {
+  label: string
+  tools: string[]
+}
+
+export interface SkillColumn {
+  column: number
+  groups: ToolGroup[]
+}
+
+export const toolColumns: SkillColumn[] = [
+  {
+    column: 1,
+    groups: [
+      {
+        label: "User documentation",
+        tools: ["Zendesk", "Confluence", "HTML / CSS"],
+      },
+    ],
+  },
+  {
+    column: 2,
+    groups: [
+      {
+        label: "Process optimization",
+        tools: ["Jira", "Notion", "Miro", "Google ecosystem"],
+      },
+      {
+        label: "Data-driven decision-making",
+        tools: ["Tableau"],
+      },
+    ],
+  },
+  {
+    column: 3,
+    groups: [
+      {
+        label: "Localization management",
+        tools: ["Smartling", "Phrase"],
+      },
+    ],
+  },
+]
+
 export const coreSkills = [
   // Column 1: A Foundation in Tech Journalism (all Newspaper icons)
   {
