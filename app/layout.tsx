@@ -10,7 +10,7 @@ const _playfair = Playfair_Display({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Laura Martínez | Senior Technical Writer",
   description:
-    "Senior Technical Writer specializing in early-stage documentation strategy for companies scaling across Europe and beyond — from zero to structured, from local to global."
+    "Senior Technical Writer specializing in early-stage documentation strategy for companies scaling across Europe and beyond — from zero to structured, from local to global.",
   generator: "v0.app",
 }
 
