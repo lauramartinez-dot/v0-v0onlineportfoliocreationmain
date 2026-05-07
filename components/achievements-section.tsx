@@ -106,15 +106,15 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
                 {/* Content - horizontal stat layout with fixed widths */}
-                <div className="relative flex items-center gap-4 px-6 py-5">
-                  <span className="text-5xl font-bold text-primary w-[90px] text-right shrink-0">
+                <div className="relative flex items-center gap-6 px-8 py-8">
+                  <span className="text-6xl md:text-7xl font-bold text-primary w-[120px] text-right shrink-0">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1">
-                    <span className="text-lg font-semibold text-foreground leading-tight">
+                    <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-sm text-foreground/60 mt-0.5 leading-snug">
+                    <p className="text-base text-foreground/60 mt-1 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
@@ -145,15 +145,15 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
                 {/* Content - horizontal stat layout with fixed widths */}
-                <div className="relative flex items-center gap-4 px-6 py-5">
-                  <span className="text-5xl font-bold text-primary w-[90px] text-right shrink-0">
+                <div className="relative flex items-center gap-6 px-8 py-8">
+                  <span className="text-6xl md:text-7xl font-bold text-primary w-[120px] text-right shrink-0">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1">
-                    <span className="text-lg font-semibold text-foreground leading-tight">
+                    <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-sm text-foreground/60 mt-0.5 leading-snug">
+                    <p className="text-base text-foreground/60 mt-1 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
@@ -184,15 +184,15 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
                 {/* Content - horizontal stat layout with fixed widths */}
-                <div className="relative flex items-center gap-4 px-6 py-5">
-                  <span className="text-5xl font-bold text-primary w-[90px] text-right shrink-0">
+                <div className="relative flex items-center gap-6 px-8 py-8">
+                  <span className="text-6xl md:text-7xl font-bold text-primary w-[120px] text-right shrink-0">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1">
-                    <span className="text-lg font-semibold text-foreground leading-tight">
+                    <span className="text-2xl font-semibold text-foreground leading-tight">
                       {achievement.label}
                     </span>
-                    <p className="text-sm text-foreground/60 mt-0.5 leading-snug">
+                    <p className="text-base text-foreground/60 mt-1 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
