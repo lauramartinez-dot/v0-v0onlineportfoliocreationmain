@@ -28,7 +28,7 @@ const writingAchievements = [
   {
     stat: "200+",
     label: "articles written",
-    description: "For major tech media including Business Insider",
+    description: "For major tech media (<i className="e"></i>, Business Insider)",
   },
   {
     stat: "100+",
@@ -80,8 +80,7 @@ export function AchievementsSection() {
     <section id="top-achievements" className="relative py-20 px-4">
       <div className="mx-auto max-w-7xl">
         <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
-          Some things I&apos;m proud of:
-        </p>
+          My work in numbers:</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 */}
