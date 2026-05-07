@@ -106,14 +106,14 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
                 {/* Content - clean stat layout */}
-                <div className="relative flex flex-col items-center justify-center px-6 py-6 text-center">
-                  <span className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                <div className="relative flex flex-col items-center justify-center px-8 py-8 text-center">
+                  <span className="text-5xl md:text-6xl font-bold text-primary mb-2">
                     {achievement.stat}
                   </span>
-                  <span className="text-lg font-medium text-foreground mb-2">
+                  <span className="text-xl font-semibold text-foreground mb-3">
                     {achievement.label}
                   </span>
-                  <p className="text-sm text-foreground/60">
+                  <p className="text-base text-foreground/70">
                     {achievement.description}
                   </p>
                 </div>
@@ -143,14 +143,14 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
                 {/* Content - clean stat layout */}
-                <div className="relative flex flex-col items-center justify-center px-6 py-6 text-center">
-                  <span className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                <div className="relative flex flex-col items-center justify-center px-8 py-8 text-center">
+                  <span className="text-5xl md:text-6xl font-bold text-primary mb-2">
                     {achievement.stat}
                   </span>
-                  <span className="text-lg font-medium text-foreground mb-2">
+                  <span className="text-xl font-semibold text-foreground mb-3">
                     {achievement.label}
                   </span>
-                  <p className="text-sm text-foreground/60">
+                  <p className="text-base text-foreground/70">
                     {achievement.description}
                   </p>
                 </div>
@@ -180,14 +180,14 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 
                 {/* Content - clean stat layout */}
-                <div className="relative flex flex-col items-center justify-center px-6 py-6 text-center">
-                  <span className="text-4xl md:text-5xl font-bold text-primary mb-1">
+                <div className="relative flex flex-col items-center justify-center px-8 py-8 text-center">
+                  <span className="text-5xl md:text-6xl font-bold text-primary mb-2">
                     {achievement.stat}
                   </span>
-                  <span className="text-lg font-medium text-foreground mb-2">
+                  <span className="text-xl font-semibold text-foreground mb-3">
                     {achievement.label}
                   </span>
-                  <p className="text-sm text-foreground/60">
+                  <p className="text-base text-foreground/70">
                     {achievement.description}
                   </p>
                 </div>
