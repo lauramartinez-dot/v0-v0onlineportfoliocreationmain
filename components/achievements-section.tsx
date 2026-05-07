@@ -71,7 +71,7 @@ const translateAchievements = [
   {
     stat: "7+",
     label: "years experience",
-    description: "Translating and reviewing English > Spanish content",
+    description: "Translating English > Spanish content",
   },
 ]
 
