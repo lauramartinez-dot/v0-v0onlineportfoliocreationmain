@@ -9,7 +9,7 @@ export function MissionSection() {
         {/* Intro text - similar to top differentiators */}
         <div className="text-center mb-12">
           <p className="text-[21px] text-foreground/90 leading-relaxed">
-            And I do all this because I have a 15-year long mission:
+            And a 15-year long mission:
           </p>
         </div>
 
