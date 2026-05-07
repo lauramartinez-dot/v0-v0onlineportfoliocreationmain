@@ -26,8 +26,8 @@ function ToolCard({ tool }: { tool: string }) {
       <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
       {/* Content */}
-      <div className="relative flex items-center justify-center px-6 py-5 min-h-[70px]">
-        <h4 className="font-semibold text-foreground text-lg leading-tight text-center group-hover:text-primary transition-colors duration-300">
+      <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
+        <h4 className="font-semibold text-foreground text-xl md:text-2xl leading-tight text-center group-hover:text-primary transition-colors duration-300">
           {tool}
         </h4>
       </div>
