@@ -32,52 +32,27 @@ const writingAchievements = [
   },
   {
     stat: "100+",
-    label: "documentation pages",
-    description: "Owned simultaneously at Personio",
+    label: "documentation pages written",
+    description: "Created, maintained and fully owned",
   },
   {
     stat: "5+",
     label: "audiences served",
-    description: "Created documentation tailored to different user types",
+    description: "From general readers, to business users to tech experts",
   },
 ]
 
 // Column 2: Building achievements
 const buildingAchievements = [
   {
+    stat: "5+",
+    label: "years experience",
+    description: "As a technical writer in software companies",
+  },
+  {
     stat: "4x",
     label: "early hire",
     description: "Very specialised in scale-ups and founding roles",
-  },
-  {
-    stat: "3→10",
-    label: "team growth",
-    description: "Grew a local 3-writer documentation team into a global team of 10",
-  },
-  {
-    stat: "20%",
-    label: "tasks deprioritised",
-    description: "Low-impact release tasks deprioritised at Personio",
-  },
-  {
-    stat: "30%",
-    label: "faster reports",
-    description: "Improved Tableau dashboards at Personio",
-  },
-  {
-    stat: "50%+",
-    label: "support volume reduced",
-    description: "Reduced a product area's support volume (Apr–Sep 2025)",
-  },
-  {
-    stat: "100+",
-    label: "pages deprecated",
-    description: "Outdated pages removed, improving content relevance",
-  },
-  {
-    stat: "1st",
-    label: "Women's Committee",
-    description: "Co-founded Personio's first Women's Committee",
   },
 ]
 
@@ -90,23 +65,13 @@ const translateAchievements = [
   },
   {
     stat: "3",
-    label: "languages spoken",
+    label: "languages spoken weekly",
     description: "English & Spanish bilingual, German B2",
   },
   {
-    stat: "150+",
-    label: "Spanish translations reviewed",
-    description: "Per year at Personio",
-  },
-  {
-    stat: "3→6",
-    label: "languages supported",
-    description: "Grew user-facing documentation languages at Personio",
-  },
-  {
-    stat: "1st",
-    label: "Spanish style guides",
-    description: "Created Personio's first-ever Spanish localization style guides",
+    stat: "7+",
+    label: "years experience",
+    description: "Translating and reviewing English > Spanish content",
   },
 ]
 
