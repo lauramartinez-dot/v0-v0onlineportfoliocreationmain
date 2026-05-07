@@ -23,7 +23,7 @@ const writingAchievements = [
   {
     stat: "15",
     label: "years writing about tech",
-    description: "First as a journalist, now as a technical writer",
+    description: "Former tech journalist",
   },
   {
     stat: "200+",
