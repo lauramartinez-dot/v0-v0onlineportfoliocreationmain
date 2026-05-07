@@ -162,8 +162,13 @@ export function HighlightsSection() {
           </p>
         </div>
 
-        {/* Mission box - polished design */}
+        {/* Mission box - polished design with purple glow */}
         <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
+          {/* Purple glow effects - matching hero image */}
+          <div className="absolute -bottom-6 -left-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
+          <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
+          <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
+          
           <div className="relative rounded-3xl border border-primary/30 bg-card px-8 md:px-10 pt-14 pb-8">
             {/* Mission badge with larger rocket icon */}
             <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background">
