@@ -1152,7 +1152,7 @@ export default function CareerMapSection() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mb-16 text-center">
-          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Achievements</h2>
+          <h2 className="mb-4 text-xl md:text-2xl font-medium text-foreground/80">My top achievements and writing samples per company:</h2>
         </div>
 
         {/* OMP Company Card - Hidden until more time in role
@@ -1162,7 +1162,7 @@ export default function CareerMapSection() {
           role="Senior Technical Writer"
           years="2026 - Present"
           country="Belgium"
-          countryFlag="🇧🇪"
+          countryFlag="🇧����"
           defaultExpanded={false}
         >
           <div className="grid gap-8 md:grid-cols-3">
