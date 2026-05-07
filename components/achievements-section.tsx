@@ -37,8 +37,8 @@ const writingAchievements = [
   },
   {
     stat: "5+",
-    label: "audiences served",
-    description: "From general media readers to technical and non-technical software users"
+    label: "audiences written for",
+    description: "From general media readers to software users"
   },
 ]
 
