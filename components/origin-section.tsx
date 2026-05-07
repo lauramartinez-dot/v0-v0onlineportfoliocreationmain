@@ -17,14 +17,14 @@ export function OriginSection() {
           {/* Text on the left */}
           <div className="flex-1 text-center md:text-left order-2 md:order-1 animate-slide-in-left">
             <p className="mb-1 text-[21px] md:text-xl lg:text-2xl text-foreground/70">
-              I&apos;m originally from Spain.
+              I&apos;was born in Spain.
             </p>
             <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
-              But I&apos;ve lived and worked across
+              But I&apos;spent almost a decade living abroad in
             </p>
 
             <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              <span className="text-primary">4 countries</span> over a decade<span className="text-primary">.</span>
+              <span className="text-primary">4 countries</span><span className="text-primary">.</span>
             </h2>
           </div>
 
