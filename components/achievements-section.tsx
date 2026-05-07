@@ -42,7 +42,7 @@ const buildingAchievements = [
   {
     stat: "4x",
     label: "early hire",
-    description: "Very specialised in scale ups",
+    description: "Very specialised in scale-ups and founding roles",
   },
   {
     stat: "100+",
