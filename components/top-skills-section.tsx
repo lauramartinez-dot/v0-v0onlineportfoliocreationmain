@@ -52,7 +52,7 @@ export function TopSkillsSection() {
     <section id="top-skills" className="relative px-4 py-24">
       <div className="mx-auto max-w-7xl">
         <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
-          The skills and tools I use the most:
+          The skills and tools I use daily:
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
