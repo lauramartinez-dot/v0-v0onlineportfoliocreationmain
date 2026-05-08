@@ -112,7 +112,7 @@ function SkillImageCard({
         className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
       />
 
-      <div className="absolute inset-0 bg-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
