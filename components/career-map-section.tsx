@@ -1216,7 +1216,7 @@ export default function CareerMapSection() {
             {/* Column 2 - Operations */}
             <PillarColumn
               label="I build"
-              image="/technology-hologram-indoors.jpg"
+              image="/3d-graph-computer-illustration.jpg"
               imageAlt="Operations Skills"
             >
               {operationalAchievements

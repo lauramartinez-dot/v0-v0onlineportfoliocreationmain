@@ -11,7 +11,7 @@ const columnHeaders = [
   },
   {
     title: "I build",
-    image: "/technology-hologram-indoors.jpg",
+    image: "/3d-graph-computer-illustration.jpg",
   },
   {
     title: "I translate",

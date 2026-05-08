@@ -146,7 +146,7 @@ export function HighlightsSection() {
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
           <div className="relative z-10">
-            <SkillImageCard item={topSkills[1]} image="/technology-hologram-indoors.jpg" addPurpleOverlay={true} />
+            <SkillImageCard item={topSkills[1]} image="/3d-graph-computer-illustration.jpg" addPurpleOverlay={true} />
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
