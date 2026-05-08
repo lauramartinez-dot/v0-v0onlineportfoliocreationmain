@@ -76,7 +76,7 @@ const translateAchievements = [
   {
     stat: "3",
     label: "languages spoken weekly",
-    description: "English & Spanish C2, German B2",
+    description: "English, Spanish, German",
   },
   {
     stat: "7+",
