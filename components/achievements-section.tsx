@@ -57,7 +57,8 @@ const buildingAchievements = [
   {
     stat: "10x",
     label: "team growth supported",
-    description: "Across several companies"
+    description: "Across several companies",
+  },
   {
     stat: "20",
     label: "direct peers supported",
