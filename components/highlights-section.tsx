@@ -178,7 +178,7 @@ export function HighlightsSection() {
             {/* Content */}
             <div className="relative z-10">
               <p className="text-[22px] font-normal leading-relaxed text-foreground text-left mb-5">
-                   By helping companies build better software documentation, I ultimately help all humans — especially non-technical people and women — become more confident and capable with rapidly evolving technology, because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
+                   By helping companies build better software documentation, I ultimately help all humans — especially non-technical people and women — become more confident and capable with rapidly evolving technology. Because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
               </p>
               <p className="text-sm text-foreground/60 italic text-right font-medium">
                 — Eurostat · Regional Yearbook, European Commission, 2025
