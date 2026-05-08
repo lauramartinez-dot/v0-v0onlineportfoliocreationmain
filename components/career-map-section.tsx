@@ -1171,8 +1171,8 @@ export default function CareerMapSection() {
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Career highlights</h2>
-          <p className="text-[21px] text-foreground/90 leading-relaxed">Some highlights and writing samples per company:</p>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Company highlights & writing samples</h2>
+        
         </div>
 
         {/* OMP Company Card */}
