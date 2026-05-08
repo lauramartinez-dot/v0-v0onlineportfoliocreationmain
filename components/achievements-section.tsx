@@ -73,6 +73,11 @@ const translateAchievements = [
     label: "years translating",
     description: "English > Spanish documentation",
   },
+    {
+    stat: "5",
+    label: "years managing translation vendors",
+    description: "and publishing in 5 languages",
+  },
 ]
 
 export function AchievementsSection() {
