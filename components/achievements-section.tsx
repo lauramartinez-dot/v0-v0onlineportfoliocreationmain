@@ -54,15 +54,15 @@ const buildingAchievements = [
     label: "early hire",
     description: "Specialised in scale-ups and founding roles",
   },
-    {
-    stat: "10+",
-    label: "new processes implemented",
-    description: "Specialised in scale-ups and founding roles",
+  {
+    stat: "3→10",
+    label: "team growth supported",
+    description: "Accross several companies",
   },
-    {
+  {
     stat: "20+",
     label: "peers mentiored",
-    description: "Accross international software companies",
+    description: "Accross several companies",
   },
 ]
 
