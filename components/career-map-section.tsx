@@ -1170,8 +1170,8 @@ export default function CareerMapSection() {
     <section id="top-achievements" className="py-24 bg-background px-4">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-xl md:text-2xl font-medium text-foreground/80">Some highlights and writing samples per company:</h2>
+        <div className="mb-12 text-center">
+          <p className="text-[21px] text-foreground/90 leading-relaxed">Some highlights and writing samples per company:</p>
         </div>
 
         {/* OMP Company Card */}
