@@ -93,7 +93,7 @@ const translateAchievements = [
 
 export function AchievementsSection() {
   return (
-    <section id="top-achievements" className="relative py-24 px-4">
+    <section id="top-achievements" className="relative py-2 px-4">
       <div className="mx-auto max-w-7xl">
         <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
           My work in numbers:</p>
