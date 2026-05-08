@@ -622,6 +622,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "product-areas",
+    title: "Documented 40+ product launches annually",
     description:
       "Documented 40+ product launches annually across multiple products",
     icon: FileText,
