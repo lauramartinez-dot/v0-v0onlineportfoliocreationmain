@@ -16,7 +16,13 @@ import {
   FileText,
   Heart,
   ChevronDown,
+  ExternalLink,
+  Video,
+  Mail,
+  HelpCircle,
+  Pen,
 } from "lucide-react"
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
 interface Experience {
   id: string
@@ -616,9 +622,9 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "product-areas",
-    title: "Created documentation for 3+ product areas at the same time",
+    title: "Documented 40+ product launches annually",
     description:
-      "Managed documentation across multiple major product areas simultaneously, ensuring comprehensive coverage and consistency.",
+      "Documented 40+ product launches annually across multiple products",
     icon: FileText,
     color: "#9931e7",
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60",
@@ -842,6 +848,173 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
   )
 }
 
+// Writing samples content types for Personio
+interface WritingSample {
+  title: string
+  url: string
+  company: string
+}
+
+interface ContentTypeData {
+  id: string
+  name: string
+  description: string
+  icon: any
+  image: string
+  audience: string
+  samples: WritingSample[]
+}
+
+const contentTypes: ContentTypeData[] = [
+  {
+    id: "user-facing-pages",
+    name: "User-facing documentation",
+    description: "Step-by-step instructions and conceptual documentation for end users",
+    icon: HelpCircle,
+    image: "/user-facing-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Overview of permissions and employee roles",
+        url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+        company: "Personio",
+      },
+      {
+        title: "Summary of the homepage cards",
+        url: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
+        company: "Personio",
+      },
+      {
+        title: "Grant permissions for everyday tasks",
+        url: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "internal-facing-pages",
+    name: "Internal-facing documentation",
+    description: "Internal documentation and knowledge base articles for teams",
+    icon: FileText,
+    image: "/internal-facing-example.png",
+    audience: "Internal Teams",
+    samples: [],
+  },
+  {
+    id: "video-content",
+    name: "Video content",
+    description: "Educational videos and tutorials in multiple languages",
+    icon: Video,
+    image: "/video-example-personio.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Overview of permissions and employee roles (English)",
+        url: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+        company: "Personio",
+      },
+      {
+        title: "Overview of permissions and employee roles (German)",
+        url: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+        company: "Personio",
+      },
+      {
+        title: "Overview of the Analytics area (English)",
+        url: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
+        company: "Personio",
+      },
+      {
+        title: "Overview of the Analytics area (German)",
+        url: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
+        company: "Personio",
+      },
+    ],
+  },
+  {
+    id: "ux-writing",
+    name: "UX writing",
+    description: "In-product copy, microcopy, and user interface text",
+    icon: Pen,
+    image: "/ux-writing-example.png",
+    audience: "Business Users",
+    samples: [],
+  },
+  {
+    id: "newsletter",
+    name: "Newsletter",
+    description: "Product updates, announcements, and engagement communications",
+    icon: Mail,
+    image: "/newsletter-example.png",
+    audience: "Business Users",
+    samples: [],
+  },
+  {
+    id: "release-notes",
+    name: "Release notes",
+    description: "Product updates and feature announcements",
+    icon: Mail,
+    image: "/release-notes-example.png",
+    audience: "Business Users",
+    samples: [
+      {
+        title: "Personio product updates",
+        url: "https://web.archive.org/web/20260308130635/https://support.personio.de/hc/en-us/articles/6018676072733-Personio-Product-Updates",
+        company: "Personio",
+      },
+    ],
+  },
+]
+
+const SampleCard = ({ sample }: { sample: WritingSample }) => {
+  return (
+    <a
+      href={sample.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-start gap-4 p-4 rounded-xl border border-primary/20 bg-card hover:border-primary/40 hover:bg-primary/5 transition-all duration-300"
+    >
+      <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 ring-1 ring-primary/20">
+        <FileText className="h-5 w-5 text-primary" />
+      </div>
+      <div className="flex-1 min-w-0">
+        <h4 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+          {sample.title}
+        </h4>
+        <p className="text-sm text-foreground/50 mt-1">{sample.company}</p>
+      </div>
+      <ExternalLink className="h-4 w-4 text-foreground/40 group-hover:text-primary transition-colors shrink-0 mt-1" />
+    </a>
+  )
+}
+
+const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeData; onClick: () => void }) => {
+  return (
+    <div
+      onClick={onClick}
+      className="group cursor-pointer rounded-xl overflow-hidden h-28 relative"
+    >
+      <Image
+        src={contentType.image}
+        alt={contentType.name}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-primary/50" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+      {contentType.samples.length > 0 && (
+        <div className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
+          {contentType.samples.length}
+        </div>
+      )}
+      <div className="absolute bottom-0 left-0 right-0 p-4 z-10">
+        <h3 className="text-base font-semibold text-white leading-tight">
+          {contentType.name}
+        </h3>
+      </div>
+    </div>
+  )
+}
+
 function PillarColumn({
   label,
   image,
@@ -858,10 +1031,10 @@ function PillarColumn({
       {/* Image header with title overlay */}
       <div className="relative h-24 rounded-xl overflow-hidden">
         <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Purple tint overlay */}
-        <div className="absolute inset-0 bg-purple-600/35" />
+        {/* Purple tint overlay - unified across all headers */}
+        <div className="absolute inset-0 bg-primary/60" />
         {/* Dark gradient overlay from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
         {/* Title at bottom left */}
         <div className="absolute bottom-3 left-4 z-10">
           <h3 className="text-xl font-bold text-white">{label}</h3>
@@ -935,73 +1108,87 @@ function CompanyCard({
 }
 
 export default function CareerMapSection() {
+  const [selectedType, setSelectedType] = useState<ContentTypeData | null>(null)
+
   return (
-    <section id="top-achievements" className="py-24 bg-background">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <>
+    {/* Dialog for samples */}
+    <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
+      <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
+        {selectedType && (
+          <>
+            {/* Header image - consistent size with purple overlay */}
+            <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
+              <Image
+                src={selectedType.image}
+                alt={selectedType.name}
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/50" />
+            </div>
+            <div className="px-6 pb-6 pt-4">
+              <DialogHeader>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+                    <selectedType.icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
+                    <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
+                  </div>
+                </div>
+                {/* Audience info */}
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="text-xs text-foreground/50">Audience:</span>
+                  <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                    {selectedType.audience}
+                  </span>
+                </div>
+              </DialogHeader>
+              <div className="mt-6">
+              {selectedType.samples.length > 0 ? (
+                <div className="space-y-3">
+                  {selectedType.samples.map((sample, index) => (
+                    <SampleCard key={index} sample={sample} />
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                    <FileText className="h-8 w-8 text-primary/50" />
+                  </div>
+                  <p className="text-foreground/60">NDA-protected — but I promise I did!</p>
+                </div>
+              )}
+              </div>
+            </div>
+          </>
+        )}
+      </DialogContent>
+    </Dialog>
+    <section id="company-highlights" className="py-24 bg-background px-4 scroll-mt-32">
+      <div className="mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-16 text-center">
-          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Achievements</h2>
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Company highlights</h2>
+        
         </div>
 
-        {/* OMP Company Card - Hidden until more time in role
+        {/* OMP Company Card */}
         <CompanyCard
           logo="/omp-logo.png"
           name="OMP"
           role="Senior Technical Writer"
           years="2026 - Present"
-          country="Belgium"
+          country="Belgium company"
           countryFlag="🇧🇪"
           defaultExpanded={false}
         >
-          <div className="grid gap-8 md:grid-cols-3">
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/vr-person-blue-tech.png" alt="Writing Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I write
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/startup-workspace.jpg" alt="Operations Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I build
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                </div>
-              </div>
-            </div>
-            <div className="relative rounded-2xl overflow-hidden border border-primary/20">
-              <Image src="/still-life-supply-chain.jpg" alt="Global Skills" fill className="object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-background/80 to-background/90" />
-              <div className="absolute top-0 left-0 right-0 z-10 flex justify-center py-3 bg-gradient-to-b from-black/40 to-transparent">
-                <span className="px-4 py-1.5 rounded-full bg-primary/20 backdrop-blur-sm border border-primary/30 text-sm font-medium tracking-wide text-white shadow-lg">
-                  I translate
-                </span>
-              </div>
-              <div className="relative z-10 flex flex-col">
-                <div className="h-16" />
-                <div className="p-5 flex flex-col gap-5 items-center justify-center min-h-[80px]">
-                  <p className="text-foreground/50 text-base italic text-center">WIP - still getting onboarded</p>
-                </div>
-              </div>
-            </div>
+          <div className="flex items-center justify-center py-12">
+            <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
           </div>
         </CompanyCard>
-        */}
 
         {/* Personio Company Card */}
         <CompanyCard
@@ -1009,7 +1196,7 @@ export default function CareerMapSection() {
           name="Personio"
           role="Senior Technical Writer"
           years="2021 - 2025"
-          country="Germany"
+          country="German company"
           countryFlag="🇩🇪"
           defaultExpanded={false}
         >
@@ -1031,7 +1218,7 @@ export default function CareerMapSection() {
             {/* Column 2 - Operations */}
             <PillarColumn
               label="I build"
-              image="/startup-workspace.jpg"
+              image="/3d-graph-computer-illustration.jpg"
               imageAlt="Operations Skills"
             >
               {operationalAchievements
@@ -1054,8 +1241,23 @@ export default function CareerMapSection() {
                 ))}
             </PillarColumn>
           </div>
+
+          {/* Writing Samples Section */}
+          <div className="mt-8 pt-6 border-t border-primary/10">
+            <h3 className="text-base font-semibold mb-4 text-center text-foreground/70">Writing Samples</h3>
+            <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+              {contentTypes.map((contentType) => (
+                <ContentTypeCard
+                  key={contentType.id}
+                  contentType={contentType}
+                  onClick={() => setSelectedType(contentType)}
+                />
+              ))}
+            </div>
+          </div>
         </CompanyCard>
       </div>
     </section>
+    </>
   )
 }

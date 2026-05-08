@@ -10,7 +10,7 @@ const _playfair = Playfair_Display({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Laura Martínez | Senior Technical Writer",
   description:
-    "Senior Technical Writer specializing in API documentation, developer guides, and documentation platforms. 15+ years of experience creating high-quality technical content.",
+    "Senior Technical Writer specializing in early-stage documentation strategy for companies scaling across Europe and beyond — from zero to structured, from local to global.",
   generator: "v0.app",
 }
 
@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth bg-background">
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />

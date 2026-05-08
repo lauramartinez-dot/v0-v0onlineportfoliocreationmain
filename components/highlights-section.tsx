@@ -1,9 +1,8 @@
 "use client"
 
-import { useState, useRef, useCallback, useEffect } from "react"
-import { createPortal } from "react-dom"
-import { topSkills, coreSkills } from "@/data/highlights"
-import { ArrowRight, X } from "lucide-react"
+import { useState, useRef, useCallback } from "react"
+import { topSkills } from "@/data/highlights"
+import { ArrowRight, Rocket } from "lucide-react"
 import Image from "next/image"
 
 function DiagonalRevealImage({
@@ -48,7 +47,7 @@ function DiagonalRevealImage({
     <Wrapper
       {...wrapperProps}
       ref={containerRef as React.RefObject<HTMLDivElement & HTMLAnchorElement>}
-      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-purple-400/40 shadow-xl shadow-purple-500/25 cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/35 hover:ring-purple-400/60 ${href ? "block" : ""}`}
+      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-primary/40 shadow-xl cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:ring-primary/60 ${href ? "block" : ""}`}
       onMouseMove={handleMouseMove}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -113,7 +112,7 @@ function SkillImageCard({
         className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
       />
 
-      <div className={`absolute inset-0 bg-gradient-to-b ${addPurpleOverlay ? "from-purple-600/50 via-purple-500/35" : "from-purple-600/30 via-purple-500/15"} to-transparent`} />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
@@ -124,150 +123,73 @@ function SkillImageCard({
   )
 }
 
-function SkillCard({ item }: { item: (typeof coreSkills)[number] }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = ""
-    }
-    return () => { document.body.style.overflow = "" }
-  }, [isOpen])
-
-  return (
-    <>
-      <div
-        className="group relative rounded-2xl bg-card border border-primary/15 shadow-lg shadow-purple-900/20 hover:border-primary/40 hover:shadow-xl hover:shadow-primary/25 transition-all duration-300 cursor-default overflow-hidden"
-      >
-        {/* Top accent line */}
-        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-
-        {/* Content */}
-        <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
-          <h4 className="font-semibold text-purple-100 text-[21px] leading-tight text-center group-hover:text-primary transition-colors duration-300">{item.title}</h4>
-        </div>
-
-        {/* Bottom subtle glow on hover */}
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-primary/0 group-hover:bg-primary/10 blur-xl transition-all duration-300 pointer-events-none" />
-      </div>
-
-      {isOpen && createPortal(
-        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" onClick={() => setIsOpen(false)}>
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
-          <div
-            className="relative w-full max-w-lg rounded-2xl bg-background border border-border shadow-2xl shadow-purple-500/20 animate-in fade-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setIsOpen(false)}
-              className="absolute top-4 right-4 flex items-center justify-center h-8 w-8 rounded-full bg-muted hover:bg-muted-foreground/20 transition-colors"
-              aria-label="Close"
-            >
-              <X className="h-4 w-4 text-muted-foreground" />
-            </button>
-
-            <div className="p-6 md:p-8">
-              <div className="mb-5">
-                <h3 className="font-bold text-foreground text-2xl md:text-3xl leading-tight">{item.title}</h3>
-              </div>
-
-              {item.description && (
-                <p className="text-lg text-foreground leading-relaxed mb-5">{item.description}</p>
-              )}
-
-              {item.tools && item.tools.length > 0 && (
-                <div>
-                  <span className="text-sm font-semibold text-primary uppercase tracking-wide mb-3 block">Tools</span>
-                  <div className="flex flex-wrap gap-2">
-                    {item.tools.map((tool, i) => (
-                      <span
-                        key={i}
-                        className="inline-block rounded-full bg-purple-500/20 border border-purple-400/40 px-3.5 py-1.5 text-sm font-semibold text-purple-300"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>,
-        document.body
-      )}
-    </>
-  )
-}
-
 export function HighlightsSection() {
   return (
-    <section id="highlights" className="relative px-4 overflow-hidden pt-[40px] pb-[70px] mt-[80px]">
-      {/* Purple gradient background - matching hero section style */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/10 to-purple-500/20" />
-        {/* Large blurred orbs */}
-        <div className="absolute -top-20 -left-20 h-[500px] w-[500px] rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/20 blur-3xl" />
-        <div className="absolute -bottom-32 -right-32 h-[600px] w-[600px] rounded-full bg-gradient-to-tl from-pink-500/25 via-purple-500/15 to-transparent blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[400px] w-[400px] rounded-full bg-gradient-to-r from-purple-500/15 to-pink-500/15 blur-3xl" />
-      </div>
+    <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
+      {/* Gradient background removed for consistent solid background */}
 
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
-        <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-20">
-          <h2 className="mb-10 text-[37px] font-bold tracking-tight text-center">Why Me?</h2>
-          <div className="max-w-4xl mx-auto text-center space-y-4 mb-8">
-            <p className="text-[23px] text-foreground/80 leading-relaxed">
-              As a Technical Writer, I write about complex software products <br></br>so that <span className="relative group/tooltip cursor-pointer text-primary font-semibold bg-primary/15 px-1.5 py-0.5 rounded hover:bg-primary/25 transition-all duration-200">all humans <span className="inline-flex items-center justify-center w-4 h-4 text-[10px] rounded-full border border-primary/50 text-primary/70 group-hover/tooltip:border-primary group-hover/tooltip:text-primary transition-all">?</span><span className="absolute left-1/2 -translate-x-1/2 top-full mt-2 px-3 py-2 bg-background border border-primary/30 rounded-lg text-sm text-foreground/90 whitespace-nowrap opacity-0 group-hover/tooltip:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg z-50">Not just the ones with an IT background.</span></span> can understand and use them.
+        <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-32">
+          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">My role</h2>
+            <p className="text-[21px] text-foreground/90 leading-relaxed">
+              Why me? Because I bring three roles into one:
             </p>
-            <p className="text-[23px] text-foreground/70 leading-relaxed">But unlike most Technical Writers, I don't stop there:</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-
-
           {/* Column 1: A Foundation in Tech Journalism */}
-          <div className="relative z-10 flex flex-col">
+          <div className="relative z-10">
             <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
-            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
-              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1 text-center">Top Skills</p>
-              {coreSkills
-                .filter((s) => s.column === 1)
-                .map((skill, i) => (
-                  <SkillCard key={i} item={skill} />
-                ))}
-            </div>
           </div>
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
-          <div className="relative z-10 flex flex-col">
-            <SkillImageCard item={topSkills[1]} image="/startup-workspace.jpg" addPurpleOverlay={true} />
-            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
-              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1 text-center">Top Skills</p>
-              {coreSkills
-                .filter((s) => s.column === 2)
-                .map((skill, i) => (
-                  <SkillCard key={i} item={skill} />
-                ))}
-            </div>
+          <div className="relative z-10">
+            <SkillImageCard item={topSkills[1]} image="/3d-graph-computer-illustration.jpg" addPurpleOverlay={true} />
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
-          <div className="relative z-10 flex flex-col">
+          <div className="relative z-10">
             <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-            <div className="flex flex-col gap-2.5 mt-8 pt-6 border-t border-primary/10">
-              <p className="text-xs font-semibold text-primary/50 uppercase tracking-widest mb-1 text-center">Top Skills</p>
-              {coreSkills
-                .filter((s) => s.column === 3)
-                .map((skill, i) => (
-                  <SkillCard key={i} item={skill} />
-                ))}
+          </div>
+        </div>
+
+        {/* Mission section - integrated into the same visual flow */}
+        <div className="mt-[62px] pt-[54px] text-center">
+          <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
+            And a clear mission:
+          </p>
+        </div>
+
+        {/* Mission box - polished design with purple glow */}
+        <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
+          {/* Purple glow effects - matching hero image */}
+          <div className="absolute -bottom-6 -left-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
+          <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
+          <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
+          
+          <div className="relative rounded-3xl border border-primary/40 bg-card/80 backdrop-blur-sm px-8 md:px-10 pt-14 pb-8 shadow-lg shadow-primary/5">
+            {/* Subtle inner glow */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
+            
+            {/* Mission badge with larger rocket icon */}
+            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background shadow-lg shadow-primary/30">
+              <Rocket className="w-7 h-7 text-white drop-shadow-md" />
+            </div>
+            
+            {/* Content */}
+            <div className="relative z-10">
+              <p className="text-[22.5px] font-semibold leading-[1.7] text-foreground/95 text-left mb-5">
+                   By helping companies improve and internationalise their documentation, I ultimately help more people actually use and master new software. Because we live in a time where knowing your way around the right tool — whether that&apos;s an HR, marketing or AI tool — <span className="text-primary font-bold">can make the difference between getting a job or not</span>.
+              </p>
             </div>
           </div>
         </div>
 
+        {/* Spacer - gradient removed for consistent background */}
+        <div className="py-3 mt-20" />
 
       </div>
     </section>

@@ -93,13 +93,7 @@ const contentTypes: ContentTypeData[] = [
     icon: Pen,
     image: "/ux-writing-example.png",
     audience: "Business Users",
-    samples: [
-      {
-        title: "Personio Help Center in-app guidance",
-        url: "https://support.personio.de/hc/en-us",
-        company: "Personio",
-      },
-    ],
+    samples: [],
   },
   {
     id: "newsletter",
@@ -108,18 +102,7 @@ const contentTypes: ContentTypeData[] = [
     icon: Mail,
     image: "/newsletter-example.png",
     audience: "Business Users",
-    samples: [
-      {
-        title: "Monthly product updates newsletter",
-        url: "#",
-        company: "Personio",
-      },
-      {
-        title: "Feature spotlight newsletter",
-        url: "#",
-        company: "Personio",
-      },
-    ],
+    samples: [],
   },
   {
     id: "release-notes",
@@ -213,17 +196,19 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
         fill
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
-      
+
       {/* Purple tint overlay */}
       <div className="absolute inset-0 bg-purple-600/35" />
       {/* Dark gradient overlay from bottom */}
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-      
-      {/* Sample count badge */}
-      <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
-        {contentType.samples.length} samples
-      </div>
-      
+
+      {/* Sample count badge - only show if there are samples */}
+      {contentType.samples.length > 0 && (
+        <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-primary/80 backdrop-blur-sm text-white text-xs font-semibold z-10">
+          {contentType.samples.length} samples
+        </div>
+      )}
+
       {/* Title at bottom */}
       <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
         <h3 className="text-[24px] font-bold text-white leading-snug">
@@ -241,7 +226,7 @@ export default function WritingSamplesSection() {
     <section id="writing-samples" className="scroll-mt-20 py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Top Writing Samples</h2>
+          <h2 className="mb-4 text-[37px] font-bold tracking-tight">Writing Samples</h2>
         </div>
 
         {/* First 6 items in 3-column grid */}
@@ -254,7 +239,7 @@ export default function WritingSamplesSection() {
             />
           ))}
         </div>
-        
+
         {/* Last item centered */}
         <div className="mt-6 flex justify-center">
           <div className="w-full md:w-1/3">

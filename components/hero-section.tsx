@@ -6,7 +6,7 @@ import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[80px] overflow-hidden mt-[25px] mb-[25px]">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[20px] overflow-hidden mt-[25px] mb-[25px]">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
         <div className="absolute -top-20 -left-20 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
@@ -48,8 +48,8 @@ export function HeroSection() {
             </h1>
 
             <h4 className="mb-10 text-primary">
-              <span className="text-xl font-medium md:text-2xl lg:text-3xl">A highly global and multicultural {"🌍"}</span><br />
-              <span className="text-3xl font-semibold md:text-4xl lg:text-5xl tracking-tight mt-2 inline-block">Senior Technical Writer</span>
+              <span className="text-xl font-medium md:text-2xl lg:text-3xl">A global and multicultural {"🌍"}</span><br />
+              <span className="text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 inline-block">Senior Technical Writer</span>
             </h4>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
@@ -80,9 +80,9 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-0.5 mt-32">
-        <span className="text-sm text-muted-foreground">Scroll to explore</span>
-        <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
+      <div className="flex flex-col items-center gap-0.5 mt-32 opacity-70">
+        <span className="text-sm text-muted-foreground opacity-70">Scroll to explore</span>
+        <ChevronDown className="h-5 w-5 text-muted-foreground opacity-70 animate-bounce" />
       </div>
     </section >
   )

@@ -8,7 +8,7 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "I write about software with the rigor of a tech newsroom",
+    title: "I document software so that all humans can understand and use it",
     description:
       "I've written articles for tech media with 8 M monthy readers. I write about software with the same atrention for detail and high standarss,",
     link: "",
@@ -16,7 +16,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I build systems that help technical writers do more in less time",
+    title: "I build systems that let writers do 3x more with the same team",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
@@ -29,6 +29,68 @@ export const topSkills = [
       "I speak 3 languages and have wide experience managing localization.",
     link: "",
     skills: ["English Writing", "Global Audiences", "Localization-Ready Content", "Multilingual"],
+  },
+]
+
+// Tool groups for the skills section
+export interface ToolGroup {
+  label: string
+  tools: string[]
+}
+
+export interface SkillColumn {
+  column: number
+  groups: ToolGroup[]
+}
+
+export const toolColumns: SkillColumn[] = [
+  {
+    column: 1,
+    groups: [
+      {
+        label: "User documentation",
+        tools: ["Zendesk", "Confluence", "Google Docs", "HTML / CSS"],
+      },
+      {
+        label: "Developer documentation",
+        tools: ["GitHub", "Markdown"],
+      },
+      {
+        label: "Infographics",
+        tools: ["InDesign", "Photoshop", "Canva"],
+      },
+    ],
+  },
+  {
+    column: 2,
+    groups: [
+      {
+        label: "Process optimization",
+        tools: ["Jira", "Notion", "Monday.com"],
+      },
+      {
+        label: "Data-driven decision-making",
+        tools: ["Tableau", "Amplitude", "Pendo"],
+      },
+      {
+        label: "AI-assisted production",
+        tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso"],
+      },
+    ],
+  },
+  {
+    column: 3,
+    groups: [
+      {
+        label: "Localization management",
+        tools: ["Smartling", "Phrase", "MemoQ"],
+      },
+      {
+        label: "Global collaboration",
+        tools: ["Slack", "Zoom", "Miro", "Loom"],
+      },
+      
+    ],
   },
 ]
 

@@ -1,11 +1,13 @@
 import { HeroSection } from "@/components/hero-section"
-import { AboutSection } from "@/components/about-section"
+import { OriginSection } from "@/components/origin-section"
+import { AboutHeroSection } from "@/components/about-hero-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
-import { MissionSection } from "@/components/mission-section"
+import { AchievementsSection } from "@/components/achievements-section"
+import { TopSkillsSection } from "@/components/top-skills-section"
+
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
-import WritingSamplesSection from "@/components/writing-samples-section"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
@@ -14,14 +16,19 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <AboutSection />
+      <OriginSection />
+      <AboutHeroSection />
       <TransitionSection />
+      {/* Why me? section with 3 images + mission */}
       <HighlightsSection />
-      <MissionSection />
+      {/* My work in numbers */}
+      <AchievementsSection />
       <ScrollTransitionSection />
       <TransitionSection />
+      {/* Top Achievements per company */}
       <CareerMapSection />
-      <WritingSamplesSection />
+      {/* Top Skills & Tools - last section */}
+      <TopSkillsSection />
       <Footer />
     </main>
   )
