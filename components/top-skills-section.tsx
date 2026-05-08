@@ -53,9 +53,6 @@ export function TopSkillsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Skills and tools</h2>
-          <p className="text-[21px] text-foreground/90 leading-relaxed">
-            The skills and tools I use daily:
-          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
