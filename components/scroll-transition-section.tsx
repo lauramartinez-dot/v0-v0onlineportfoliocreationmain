@@ -8,7 +8,6 @@ export function ScrollTransitionSection() {
       {/* Gradient orbs removed for consistent background */}
 
       <div className="flex flex-col items-center gap-0.5">
-        <span className="text-sm text-muted-foreground">Scroll to explore</span>
         <ChevronDown className="h-5 w-5 text-muted-foreground animate-bounce" />
       </div>
     </section>
