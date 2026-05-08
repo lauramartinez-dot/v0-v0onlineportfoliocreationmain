@@ -55,14 +55,14 @@ const buildingAchievements = [
     description: "Specialised in scale-ups and founding roles",
   },
   {
-    stat: "3→10",
+    stat: "10x",
     label: "team growth supported",
-    description: "Accross several companies",
+    description: "At both Personio and Mogi",
   },
   {
-    stat: "20+",
-    label: "peers mentiored",
-    description: "Accross several companies",
+    stat: "10",
+    label: "direct peers supported",
+    description: "At both Personio and Mogi",
   },
 ]
 
