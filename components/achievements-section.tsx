@@ -93,10 +93,14 @@ const translateAchievements = [
 
 export function AchievementsSection() {
   return (
-    <section id="top-achievements" className="relative py-2 px-4">
+    <section id="top-achievements" className="relative py-2 px-4 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
-        <p className="text-[21px] text-foreground/90 leading-relaxed mb-12 text-center">
-          My work in way more detail:</p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Career highlights</h2>
+          <p className="text-[21px] text-foreground/90 leading-relaxed">
+            My work in way more detail:
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 - Writing */}
