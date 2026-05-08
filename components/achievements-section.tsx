@@ -201,10 +201,10 @@ export function AchievementsSection() {
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
-                    <span className="text-2xl font-semibold text-foreground leading-tight">
+                    <span className="text-2xl font-semibold text-foreground leading-tight mt-2">
                       {achievement.label}
                     </span>
-                    <p className={`text-base text-foreground/60 mt-2 leading-relaxed ${index === 0 ? 'mr-2' : ''}`}>
+                    <p className="text-base text-foreground/60 mt-6 leading-relaxed">
                       {achievement.description}
                     </p>
                   </div>
