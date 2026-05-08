@@ -169,16 +169,19 @@ export function HighlightsSection() {
           <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
           <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
           
-          <div className="relative rounded-3xl border border-primary/30 bg-card px-8 md:px-10 pt-14 pb-8">
+          <div className="relative rounded-3xl border border-primary/40 bg-card/80 backdrop-blur-sm px-8 md:px-10 pt-14 pb-8 shadow-lg shadow-primary/5">
+            {/* Subtle inner glow */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
+            
             {/* Mission badge with larger rocket icon */}
-            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background">
+            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background shadow-lg shadow-primary/30">
               <Rocket className="w-7 h-7 text-white drop-shadow-md" />
             </div>
             
             {/* Content */}
             <div className="relative z-10">
-              <p className="text-[22px] font-normal leading-relaxed text-foreground text-left mb-5">
-                   By helping companies improve and internationalise their documentation, I ultimately help more people actually use and master new technology. Because we live in a time where knowing your way around the right software — whether that&apos;s an HR, marketing or AI tool — <span className="text-primary">can make the difference between getting a job or not</span>.
+              <p className="text-[21px] font-normal leading-[1.7] text-foreground/95 text-left mb-5">
+                   By helping companies improve and internationalise their documentation, I ultimately help more people actually use and master new technology. Because we live in a time where knowing your way around the right software — whether that&apos;s an HR, marketing or AI tool — <span className="text-primary font-medium">can make the difference between getting a job or not</span>.
               </p>
             </div>
           </div>
