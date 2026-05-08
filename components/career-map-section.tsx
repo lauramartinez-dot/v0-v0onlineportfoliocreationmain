@@ -1179,7 +1179,7 @@ export default function CareerMapSection() {
           name="OMP"
           role="Senior Technical Writer"
           years="2026 - Present"
-          country="Belgium"
+          country="Belgium company"
           countryFlag="🇧🇪"
           defaultExpanded={false}
         >
@@ -1194,7 +1194,7 @@ export default function CareerMapSection() {
           name="Personio"
           role="Senior Technical Writer"
           years="2021 - 2025"
-          country="Germany"
+          country="German company"
           countryFlag="🇩🇪"
           defaultExpanded={false}
         >
