@@ -75,8 +75,8 @@ const translateAchievements = [
   },
     {
     stat: "5",
-    label: "years as a Localization Manager",
-    description: "Managing end-to-end localization",
+    label: "years managing vendors",
+    description: "Adn publishing in 6 languages",
   },
 ]
 
