@@ -86,7 +86,7 @@ const translateAchievements = [
     {
     stat: "5",
     label: "languages managed daily",
-    description: "Spanish, German, Italian, French, Dutch",
+    description: "Via vendors: ES, DE, IT, FR, NL",
   },
 
 ]
