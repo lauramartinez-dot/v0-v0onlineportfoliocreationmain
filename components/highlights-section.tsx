@@ -178,7 +178,7 @@ export function HighlightsSection() {
             {/* Content */}
             <div className="relative z-10">
               <p className="text-[22px] font-normal leading-relaxed text-foreground text-left mb-5">
-                   By helping companies improve and internationalise their software documentation, I ultimately help people become more confident and capable with rapidly evolving technology. Because we live in a time where knowing your way around the right software  — HR, marketing or AI —  can make the difference between getting a job or not.
+                   By helping companies improve and internationalise their documentation, I ultimately help more people actually use and master new technology. Because we live in a time where knowing your way around the right software  — HR, marketing or AI —  can make the difference between getting a job or not.
               </p>
             </div>
           </div>
