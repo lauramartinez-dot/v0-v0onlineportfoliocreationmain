@@ -1178,7 +1178,7 @@ export default function CareerMapSection() {
           logo="/omp-logo.png"
           name="OMP"
           role="Senior Technical Writer"
-          years="2025 - Present"
+          years="2026 - Present"
           country="Belgium"
           countryFlag="🇧🇪"
           defaultExpanded={false}
