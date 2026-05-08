@@ -178,10 +178,7 @@ export function HighlightsSection() {
             {/* Content */}
             <div className="relative z-10">
               <p className="text-[22px] font-normal leading-relaxed text-foreground text-left mb-5">
-                   By helping companies improve and internationalise their software documentation, I ultimately help people become more confident and capable with rapidly evolving technology. Because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
-              </p>
-              <p className="text-sm text-foreground/60 italic text-right font-medium">
-                — Eurostat · Regional Yearbook, European Commission, 2025
+                   By helping companies improve and internationalise their software documentation, I ultimately help people become more confident and capable with rapidly evolving technology. Because we live in a time where knowing your way around the right tool (HR, marketing or AI software) can make the difference between getting a job or not.
               </p>
             </div>
           </div>
