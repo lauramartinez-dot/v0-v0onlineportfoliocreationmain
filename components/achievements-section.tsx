@@ -62,7 +62,7 @@ const buildingAchievements = [
     {
     stat: "20+",
     label: "peers mentiored",
-    description: "Specialised in scale-ups and founding roles",
+    description: "Accross international software companies",
   },
 ]
 
