@@ -26,7 +26,7 @@ export function MissionSection() {
             </div>
             
             <p className="text-[20px] leading-relaxed text-foreground font-medium text-left mt-4 mb-4 relative z-10">
-              To help all humans — with an extra focus on non-technical people and women — get more comfortable using new technology and software because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
+              By helping companies build better software documentation, I ultimately want to help all humans — especially non-technical people and women — become more confident and capable with rapidly evolving technology, because <span className="text-primary font-semibold bg-primary/10 px-1.5 py-0.5 rounded">over 90% of European jobs now require digital skills</span>, yet nearly 1 in 3 Europeans still doesn&apos;t have them.
             </p>
             <p className="text-sm text-foreground/50 italic text-right relative z-10">
               — Eurostat · Regional Yearbook, European Commission, 2025
