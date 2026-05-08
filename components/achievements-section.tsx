@@ -84,9 +84,9 @@ const translateAchievements = [
     description: "English > Spanish documentation",
   },
     {
-    stat: "4",
-    label: "extra languages managed",
-    description: "Via vendors: German, Italian, French, Dutch",
+    stat: "6",
+    label: "languages managed",
+    description: "English, Spanish, German, Italian, French, Dutch",
   },
 
 ]
