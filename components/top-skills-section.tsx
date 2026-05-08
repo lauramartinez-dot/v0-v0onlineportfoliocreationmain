@@ -64,7 +64,7 @@ export function TopSkillsSection() {
                 src={columnHeaders[0].image}
                 alt={columnHeaders[0].title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
@@ -91,7 +91,7 @@ export function TopSkillsSection() {
                 src={columnHeaders[1].image}
                 alt={columnHeaders[1].title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/25 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
@@ -118,7 +118,7 @@ export function TopSkillsSection() {
                 src={columnHeaders[2].image}
                 alt={columnHeaders[2].title}
                 fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
+                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
