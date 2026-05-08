@@ -10,7 +10,7 @@ const columnHeaders = [
   },
   {
     title: "I build",
-    image: "/startup-workspace.jpg",
+    image: "/technology-hologram-indoors.jpg",
   },
   {
     title: "I translate",
