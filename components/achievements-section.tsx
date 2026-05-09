@@ -22,7 +22,7 @@ const columnHeaders = [
 const writingAchievements = [
   {
     stat: "15",
-    label: "years writing about tech",
+    label: "years writing about technology",
     description: "Former Tech Journalist",
   },
   {
@@ -46,7 +46,7 @@ const writingAchievements = [
 const buildingAchievements = [
   {
     stat: "5+",
-    label: "years as a Tech Writer",
+    label: "years as a Technical Writer",
     description: "Including 2+ years as a Senior",
   },
   {
@@ -60,9 +60,9 @@ const buildingAchievements = [
     description: "Across several companies",
   },
   {
-    stat: "20",
-    label: "direct peers supported",
-    description: "Across several companies",
+    stat: "10",
+    label: "years in the tech industry",
+    description: "Across Ireland, Germany and Spain",
   },
 ]
 
@@ -76,7 +76,7 @@ const translateAchievements = [
   {
     stat: "3",
     label: "languages spoken weekly",
-    description: "English, Spanish, German",
+    description: "English, Spanish, and German",
   },
   {
     stat: "7+",
