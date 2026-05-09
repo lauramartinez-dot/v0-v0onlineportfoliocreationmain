@@ -45,6 +45,11 @@ const writingAchievements = [
 // Column 2: Building achievements
 const buildingAchievements = [
   {
+    stat: "10",
+    label: "years in the tech industry",
+    description: "Across Ireland, Germany and Spain",
+  },
+  {
     stat: "5+",
     label: "years as a Technical Writer",
     description: "Including 2+ years as a Senior",
@@ -58,11 +63,6 @@ const buildingAchievements = [
     stat: "10x",
     label: "team growth supported",
     description: "Across several companies",
-  },
-  {
-    stat: "10",
-    label: "years in the tech industry",
-    description: "Across Ireland, Germany and Spain",
   },
 ]
 

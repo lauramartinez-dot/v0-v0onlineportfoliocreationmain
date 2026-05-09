@@ -1209,10 +1209,6 @@ export default function CareerMapSection() {
   country="German company"
   countryFlag="🇩🇪"
   defaultExpanded={false}
-  roleProgression={[
-    { title: "Senior Technical Writer", period: "2023 - 2025" },
-    { title: "Technical Writer", period: "2021 - 2023" }
-  ]}
   >
           {/* Achievement Grid */}
           <div className="grid gap-8 md:grid-cols-3">
