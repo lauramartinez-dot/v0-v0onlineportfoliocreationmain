@@ -1057,7 +1057,8 @@ function CompanyCard({
   years,
   country,
   countryFlag,
-  defaultExpanded = false
+  defaultExpanded = false,
+  roleProgression
 }: {
   children: React.ReactNode
   logo: string
@@ -1067,6 +1068,7 @@ function CompanyCard({
   country: string
   countryFlag: string
   defaultExpanded?: boolean
+  roleProgression?: { title: string; period: string }[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
@@ -1082,7 +1084,15 @@ function CompanyCard({
         </div>
         <div className="flex-1 min-w-0">
           <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
-              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
+          {roleProgression ? (
+            <div className="flex flex-col gap-0.5 mt-1">
+              {roleProgression.map((r, idx) => (
+                <p key={idx} className="text-[19px] text-foreground/60">{r.title} &middot; {r.period}</p>
+              ))}
+            </div>
+          ) : (
+            <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
+          )}
         </div>
         <div className="flex items-center gap-3 shrink-0">
           {/* Country Flag */}
@@ -1190,16 +1200,20 @@ export default function CareerMapSection() {
           </div>
         </CompanyCard>
 
-        {/* Personio Company Card */}
-        <CompanyCard
-          logo="/personio-icon-black.png"
-          name="Personio"
-          role="Senior Technical Writer"
-          years="2021 - 2025"
-          country="German company"
-          countryFlag="🇩🇪"
-          defaultExpanded={false}
-        >
+{/* Personio Company Card */}
+  <CompanyCard
+  logo="/personio-icon-black.png"
+  name="Personio"
+  role="Senior Technical Writer"
+  years="2021 - 2025"
+  country="German company"
+  countryFlag="🇩🇪"
+  defaultExpanded={false}
+  roleProgression={[
+    { title: "Senior Technical Writer", period: "2023 - 2025" },
+    { title: "Technical Writer", period: "2021 - 2023" }
+  ]}
+  >
           {/* Achievement Grid */}
           <div className="grid gap-8 md:grid-cols-3">
             {/* Column 1 - Writing */}
