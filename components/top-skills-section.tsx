@@ -24,40 +24,22 @@ function ToolCard({ tool }: { tool: string }) {
   if (tool.includes(" / ")) {
     const [left, right] = tool.split(" / ")
     return (
-      <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden min-h-[80px]">
+      <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden">
         {/* Top accent line */}
-        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10" />
-        
-        {/* Diagonal split container */}
-        <div className="relative w-full h-full min-h-[80px]">
-          {/* Left side (top-left triangle) */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div 
-              className="absolute inset-0 flex items-center justify-start pl-5 pr-12"
-              style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
-            >
-              <span className="font-semibold text-foreground text-lg leading-tight group-hover:text-primary transition-colors duration-300">
-                {left}
-              </span>
-            </div>
+        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+
+        {/* Content with middle diagonal divider */}
+        <div className="relative flex items-center justify-center px-4 py-6 min-h-[80px]">
+          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 pr-3">
+            {left}
+          </span>
+          {/* Diagonal slash divider in the middle */}
+          <div className="relative h-10 w-[2px] mx-1">
+            <div className="absolute inset-0 bg-primary/40 transform -skew-x-12 rounded-full" />
           </div>
-          
-          {/* Right side (bottom-right triangle) */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div 
-              className="absolute inset-0 bg-primary/5 flex items-center justify-end pr-5 pl-12"
-              style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
-            >
-              <span className="font-semibold text-foreground text-lg leading-tight group-hover:text-primary transition-colors duration-300">
-                {right}
-              </span>
-            </div>
-          </div>
-          
-          {/* Diagonal line */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none">
-            <line x1="100%" y1="0" x2="0" y2="100%" className="stroke-primary/30" strokeWidth="1" />
-          </svg>
+          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 pl-3">
+            {right}
+          </span>
         </div>
       </div>
     )
