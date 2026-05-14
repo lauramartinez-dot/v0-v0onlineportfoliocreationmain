@@ -47,6 +47,55 @@ function GroupLabel({ label }: { label: string }) {
   )
 }
 
+function DiagonalSplitColumn({ 
+  topGroups, 
+  bottomGroups 
+}: { 
+  topGroups: { label: string; tools: string[] }[]
+  bottomGroups: { label: string; tools: string[] }[]
+}) {
+  return (
+    <div className="relative">
+      {/* Top half */}
+      <div className="relative rounded-t-2xl border border-b-0 border-primary/20 bg-card/50 p-4 pb-8">
+        {topGroups.map((group, gi) => (
+          <div key={gi}>
+            <GroupLabel label={group.label} />
+            <div className="flex flex-col gap-3">
+              {group.tools.map((tool, ti) => (
+                <ToolCard key={ti} tool={tool} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      {/* Diagonal divider */}
+      <div className="relative h-12 overflow-hidden">
+        <svg className="absolute inset-0 w-full h-full" preserveAspectRatio="none" viewBox="0 0 100 100">
+          <polygon points="0,0 100,0 100,100 0,0" className="fill-card/50" />
+          <polygon points="0,0 100,100 0,100" className="fill-primary/5" />
+          <line x1="0" y1="0" x2="100" y2="100" className="stroke-primary/30" strokeWidth="0.5" vectorEffect="non-scaling-stroke" />
+        </svg>
+      </div>
+      
+      {/* Bottom half */}
+      <div className="relative rounded-b-2xl border border-t-0 border-primary/20 bg-primary/5 p-4 pt-4">
+        {bottomGroups.map((group, gi) => (
+          <div key={gi}>
+            <GroupLabel label={group.label} />
+            <div className="flex flex-col gap-3">
+              {group.tools.map((tool, ti) => (
+                <ToolCard key={ti} tool={tool} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
 export function TopSkillsSection() {
   return (
     <section id="top-skills" className="relative px-4 py-24 scroll-mt-32">
@@ -56,7 +105,7 @@ export function TopSkillsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Column 1: I write */}
+          {/* Column 1: I write - with diagonal split */}
           <div className="flex flex-col">
             {/* Image header card */}
             <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg mb-4">
@@ -69,18 +118,10 @@ export function TopSkillsSection() {
               <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
             </div>
-            {toolColumns
-              .find((c) => c.column === 1)
-              ?.groups.map((group, gi) => (
-                <div key={gi}>
-                  <GroupLabel label={group.label} />
-                  <div className="flex flex-col gap-3">
-                    {group.tools.map((tool, ti) => (
-                      <ToolCard key={ti} tool={tool} />
-                    ))}
-                  </div>
-                </div>
-              ))}
+            <DiagonalSplitColumn
+              topGroups={toolColumns.find((c) => c.column === 1)?.groups.slice(0, 2) || []}
+              bottomGroups={toolColumns.find((c) => c.column === 1)?.groups.slice(2) || []}
+            />
           </div>
 
           {/* Column 2: I build */}
