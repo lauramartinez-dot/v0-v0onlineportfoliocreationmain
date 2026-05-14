@@ -609,6 +609,15 @@ interface Achievement {
 
 const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
+   {
+    id: "languages-managed",
+    title: "I managed 5 languages daily via vendors: ES, DE, NL, IT and FR",
+    description:
+      "Via vendors: ES, DE, IT, FR, NL",
+    icon: Globe,
+    color: "#9931e7",
+    column: 3,
+  },
   {
     id: "style-guide",
     title: "Created Personio's first-ever documentation style guides",
@@ -828,15 +837,7 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
-  {
-    id: "languages-managed",
-    title: "5 languages managed daily",
-    description:
-      "Via vendors: ES, DE, IT, FR, NL",
-    icon: Globe,
-    color: "#9931e7",
-    column: 3,
-  },
+ 
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
