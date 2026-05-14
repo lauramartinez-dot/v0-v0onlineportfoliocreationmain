@@ -22,35 +22,26 @@ const columnHeaders = [
 function ToolCard({ tool }: { tool: string }) {
   // Check if this is a split tool (contains " / ")
   if (tool.includes(" / ")) {
-    const [left, right] = tool.split(" / ")
+    const [first, second] = tool.split(" / ")
     return (
-      <div className="group flex gap-1 min-h-[80px]">
-        {/* Left cell */}
-        <div 
-          className="relative flex-1 bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden flex items-center justify-center"
-          style={{ 
-            clipPath: "polygon(0 0, 100% 0, calc(100% - 16px) 100%, 0 100%)",
-            borderRadius: "16px 0 0 16px"
-          }}
-        >
+      <div className="flex flex-col gap-3">
+        {/* First card */}
+        <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden">
           <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 px-4 py-6">
-            {left}
-          </span>
+          <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
+            <h4 className="font-semibold text-foreground text-xl md:text-2xl leading-tight text-center group-hover:text-primary transition-colors duration-300">
+              {first}
+            </h4>
+          </div>
         </div>
-        
-        {/* Right cell */}
-        <div 
-          className="relative flex-1 bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden flex items-center justify-center"
-          style={{ 
-            clipPath: "polygon(16px 0, 100% 0, 100% 100%, 0 100%)",
-            borderRadius: "0 16px 16px 0"
-          }}
-        >
+        {/* Second card */}
+        <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden">
           <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 px-4 py-6">
-            {right}
-          </span>
+          <div className="relative flex items-center justify-center px-6 py-6 min-h-[80px]">
+            <h4 className="font-semibold text-foreground text-xl md:text-2xl leading-tight text-center group-hover:text-primary transition-colors duration-300">
+              {second}
+            </h4>
+          </div>
         </div>
       </div>
     )
