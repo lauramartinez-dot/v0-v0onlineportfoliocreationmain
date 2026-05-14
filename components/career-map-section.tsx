@@ -706,6 +706,16 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   {
+    id: "release-process",
+    title: "Co-built the end-to-end company-wide release process",
+    description:
+      "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
     id: "deprioritize-tasks",
     title: "Helped the team deprioritize 20% of low-impact release tasks",
     description:
@@ -745,16 +755,7 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
-  {
-    id: "release-process",
-    title: "Co-built the end-to-end company-wide release process",
-    description:
-      "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
-    icon: TrendingUp,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-    column: 2,
-  },
+  
   {
     id: "culture-champion",
     title: "Became Culture Champion and conducted +20 company-wide culture interviews",
