@@ -79,7 +79,7 @@ const translateAchievements = [
     description: "English, Spanish, and German",
   },
   {
-    stat: "7+",
+    stat: "8+",
     label: "years translating",
     description: "English > Spanish documentation",
   },
