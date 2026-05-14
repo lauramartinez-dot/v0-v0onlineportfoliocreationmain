@@ -48,16 +48,24 @@ export const toolColumns: SkillColumn[] = [
     column: 1,
     groups: [
       {
-        label: "User documentation",
-        tools: ["Zendesk", "Confluence", "Google Docs", "HTML / CSS"],
+        label: "Internal documentation",
+        tools: ["Confluence / Sharepoint"],
       },
       {
-        label: "Developer documentation",
-        tools: ["GitHub", "Markdown"],
+        label: "External documentation",
+        tools: ["Zendesk / MadCap Flare"],
       },
       {
-        label: "Infographics",
-        tools: ["InDesign", "Photoshop", "Canva"],
+        label: "Version control",
+        tools: ["Git", "Github / Azure DevOps", "Visual Studio Code"],
+      },
+      {
+        label: "Languages",
+        tools: ["HTML", "XML", "Markdown"],
+      },
+      {
+        label: "Visuals",
+        tools: ["InDesign", "Photoshop / Gimp", "Canva"],
       },
     ],
   },
