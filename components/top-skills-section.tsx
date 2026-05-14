@@ -24,23 +24,34 @@ function ToolCard({ tool }: { tool: string }) {
   if (tool.includes(" / ")) {
     const [left, right] = tool.split(" / ")
     return (
-      <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden">
+      <div className="group relative rounded-2xl border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden min-h-[80px]">
         {/* Top accent line */}
-        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-
-        {/* Content with middle diagonal divider */}
-        <div className="relative flex items-center justify-center px-4 py-6 min-h-[80px]">
-          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 pr-3">
+        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10" />
+        
+        {/* Left cell */}
+        <div 
+          className="absolute inset-0 bg-card flex items-center justify-center"
+          style={{ clipPath: "polygon(0 0, calc(50% + 12px) 0, calc(50% - 12px) 100%, 0 100%)" }}
+        >
+          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 pr-6">
             {left}
           </span>
-          {/* Diagonal slash divider in the middle */}
-          <div className="relative h-10 w-[2px] mx-1">
-            <div className="absolute inset-0 bg-primary/40 transform -skew-x-12 rounded-full" />
-          </div>
-          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 pl-3">
+        </div>
+        
+        {/* Right cell */}
+        <div 
+          className="absolute inset-0 bg-primary/5 flex items-center justify-center"
+          style={{ clipPath: "polygon(calc(50% + 12px) 0, 100% 0, 100% 100%, calc(50% - 12px) 100%)" }}
+        >
+          <span className="font-semibold text-foreground text-lg md:text-xl leading-tight text-center group-hover:text-primary transition-colors duration-300 pl-6">
             {right}
           </span>
         </div>
+        
+        {/* Diagonal divider line in the middle */}
+        <svg className="absolute inset-0 w-full h-full pointer-events-none z-10" preserveAspectRatio="none">
+          <line x1="calc(50% + 12px)" y1="0" x2="calc(50% - 12px)" y2="100%" className="stroke-primary/30" strokeWidth="1" />
+        </svg>
       </div>
     )
   }
