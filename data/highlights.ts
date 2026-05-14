@@ -90,6 +90,10 @@ export const toolColumns: SkillColumn[] = [
     column: 3,
     groups: [
       {
+        label: "Localization management",
+        tools: ["Smartling", "Phrase", "MemoQ"],
+      },
+      {
         label: "Global collaboration",
         tools: ["Microsoft ecosystem", "Google ecosystem", "Slack", "Zoom", "Miro", "Loom"],
       },
