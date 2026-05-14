@@ -1037,17 +1037,11 @@ function PillarColumn({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      {/* Image header with title overlay */}
-      <div className="relative h-24 rounded-xl overflow-hidden">
-        <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Purple tint overlay - unified across all headers */}
-        <div className="absolute inset-0 bg-primary/60" />
-        {/* Dark gradient overlay from bottom */}
+      {/* Image header card - matching top-skills-section style */}
+      <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg">
+        <Image src={image} alt={imageAlt} fill className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-        {/* Title at bottom left */}
-        <div className="absolute bottom-3 left-4 z-10">
-          <h3 className="text-xl font-bold text-white">{label}</h3>
-        </div>
       </div>
       
       {/* Achievement cards below */}
