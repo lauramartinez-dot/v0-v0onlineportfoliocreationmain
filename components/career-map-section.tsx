@@ -766,15 +766,7 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   // Column 3: Translate/Global achievements
-  {
-    id: "languages-managed",
-    title: "I managed 5 languages daily via vendors: ES, DE, NL, IT and FR",
-    description:
-      "Via vendors: ES, DE, IT, FR, NL",
-    icon: Globe,
-    color: "#9931e7",
-    column: 3,
-  },
+ 
   {
     id: "localization-expansion",
     title: "Grew documentation from 3 to 6 languages",
@@ -785,6 +777,15 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
     tools: ["Smartling", "Phrase", "Zendesk Localization"],
+  },
+   {
+    id: "languages-managed",
+    title: "Managed 5 languages daily via vendors: ES, DE, NL, IT and FR",
+    description:
+      "Via vendors: ES, DE, IT, FR, NL",
+    icon: Globe,
+    color: "#9931e7",
+    column: 3,
   },
   {
     id: "spanish-localization-guides",
