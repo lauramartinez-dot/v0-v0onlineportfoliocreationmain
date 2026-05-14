@@ -48,12 +48,12 @@ export const toolColumns: SkillColumn[] = [
     column: 1,
     groups: [
       {
-        label: "Internal documentation",
-        tools: ["Confluence / Sharepoint"],
+        label: "Content editing",
+        tools: ["Confluence", "Zendesk"],
       },
       {
-        label: "External documentation",
-        tools: ["Zendesk / MadCap Flare"],
+        label: "Content authoring",
+        tools: ["MadCap Flare"],
       },
       {
         label: "Version control",
