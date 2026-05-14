@@ -609,15 +609,7 @@ interface Achievement {
 
 const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
-   {
-    id: "languages-managed",
-    title: "I managed 5 languages daily via vendors: ES, DE, NL, IT and FR",
-    description:
-      "Via vendors: ES, DE, IT, FR, NL",
-    icon: Globe,
-    color: "#9931e7",
-    column: 3,
-  },
+
   {
     id: "style-guide",
     title: "Created Personio's first-ever documentation style guides",
@@ -775,6 +767,15 @@ const operationalAchievements: Achievement[] = [
   },
   // Column 3: Translate/Global achievements
   {
+    id: "languages-managed",
+    title: "I managed 5 languages daily via vendors: ES, DE, NL, IT and FR",
+    description:
+      "Via vendors: ES, DE, IT, FR, NL",
+    icon: Globe,
+    color: "#9931e7",
+    column: 3,
+  },
+  {
     id: "localization-expansion",
     title: "Grew documentation from 3 to 6 languages",
     description:
@@ -837,7 +838,7 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
- 
+
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
@@ -848,7 +849,7 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
     >
       {/* Left accent border */}
       <div className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
-      
+
       <div className="px-5 py-4 flex items-center justify-center">
         <h3 className="text-[15px] font-semibold text-white text-center leading-snug">
           {achievement.title}
@@ -1044,7 +1045,7 @@ function PillarColumn({
         <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
       </div>
-      
+
       {/* Achievement cards below */}
       <div className="flex flex-col gap-3">
         {children}
@@ -1126,152 +1127,152 @@ export default function CareerMapSection() {
 
   return (
     <>
-    {/* Dialog for samples */}
-    <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
-      <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
-        {selectedType && (
-          <>
-            {/* Header image - consistent size with purple overlay */}
-            <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
-              <Image
-                src={selectedType.image}
-                alt={selectedType.name}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-primary/50" />
+      {/* Dialog for samples */}
+      <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
+        <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
+          {selectedType && (
+            <>
+              {/* Header image - consistent size with purple overlay */}
+              <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
+                <Image
+                  src={selectedType.image}
+                  alt={selectedType.name}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/50" />
+              </div>
+              <div className="px-6 pb-6 pt-4">
+                <DialogHeader>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+                      <selectedType.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
+                      <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
+                    </div>
+                  </div>
+                  {/* Audience info */}
+                  <div className="mt-4 flex items-center gap-2">
+                    <span className="text-xs text-foreground/50">Audience:</span>
+                    <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                      {selectedType.audience}
+                    </span>
+                  </div>
+                </DialogHeader>
+                <div className="mt-6">
+                  {selectedType.samples.length > 0 ? (
+                    <div className="space-y-3">
+                      {selectedType.samples.map((sample, index) => (
+                        <SampleCard key={index} sample={sample} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-12">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                        <FileText className="h-8 w-8 text-primary/50" />
+                      </div>
+                      <p className="text-foreground/60">NDA-protected — but I promise I did!</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+      <section id="company-highlights" className="py-24 bg-background px-4 scroll-mt-32">
+        <div className="mx-auto max-w-7xl">
+          {/* Section Header */}
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Company highlights</h2>
+
+          </div>
+
+          {/* OMP Company Card */}
+          <CompanyCard
+            logo="/omp-logo.png"
+            name="OMP"
+            role="Senior Technical Writer"
+            years="2026 - Present"
+            country="Belgium company"
+            countryFlag="🇧🇪"
+            defaultExpanded={false}
+          >
+            <div className="flex items-center justify-center py-12">
+              <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
             </div>
-            <div className="px-6 pb-6 pt-4">
-              <DialogHeader>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-                    <selectedType.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
-                    <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
-                  </div>
-                </div>
-                {/* Audience info */}
-                <div className="mt-4 flex items-center gap-2">
-                  <span className="text-xs text-foreground/50">Audience:</span>
-                  <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
-                    {selectedType.audience}
-                  </span>
-                </div>
-              </DialogHeader>
-              <div className="mt-6">
-              {selectedType.samples.length > 0 ? (
-                <div className="space-y-3">
-                  {selectedType.samples.map((sample, index) => (
-                    <SampleCard key={index} sample={sample} />
+          </CompanyCard>
+
+          {/* Personio Company Card */}
+          <CompanyCard
+            logo="/personio-icon-black.png"
+            name="Personio"
+            role="Senior Technical Writer"
+            years="2021 - 2025"
+            country="German company"
+            countryFlag="🇩🇪"
+            defaultExpanded={false}
+          >
+            {/* Achievement Grid */}
+            <div className="grid gap-8 md:grid-cols-3">
+              {/* Column 1 - Writing */}
+              <PillarColumn
+                label="I write"
+                image="/vr-person-blue-tech.png"
+                imageAlt="Writing Skills"
+              >
+                {operationalAchievements
+                  .filter((a) => a.column === 1)
+                  .map((achievement) => (
+                    <AchievementCard key={achievement.id} achievement={achievement} />
                   ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <FileText className="h-8 w-8 text-primary/50" />
-                  </div>
-                  <p className="text-foreground/60">NDA-protected — but I promise I did!</p>
-                </div>
-              )}
+              </PillarColumn>
+
+              {/* Column 2 - Operations */}
+              <PillarColumn
+                label="I build"
+                image="/3d-graph-computer-illustration.jpg"
+                imageAlt="Operations Skills"
+              >
+                {operationalAchievements
+                  .filter((a) => a.column === 2)
+                  .map((achievement) => (
+                    <AchievementCard key={achievement.id} achievement={achievement} />
+                  ))}
+              </PillarColumn>
+
+              {/* Column 3 - Global */}
+              <PillarColumn
+                label="I translate"
+                image="/still-life-supply-chain.jpg"
+                imageAlt="Global Skills"
+              >
+                {operationalAchievements
+                  .filter((a) => a.column === 3)
+                  .map((achievement) => (
+                    <AchievementCard key={achievement.id} achievement={achievement} />
+                  ))}
+              </PillarColumn>
+            </div>
+
+            {/* Writing Samples Section */}
+            <div className="mt-8 pt-6 border-t border-primary/10">
+              <h3 className="text-base font-semibold mb-4 text-center text-foreground/70">Writing Samples</h3>
+              <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+                {contentTypes.map((contentType) => (
+                  <ContentTypeCard
+                    key={contentType.id}
+                    contentType={contentType}
+                    onClick={() => setSelectedType(contentType)}
+                  />
+                ))}
               </div>
             </div>
-          </>
-        )}
-      </DialogContent>
-    </Dialog>
-    <section id="company-highlights" className="py-24 bg-background px-4 scroll-mt-32">
-      <div className="mx-auto max-w-7xl">
-        {/* Section Header */}
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Company highlights</h2>
-        
+          </CompanyCard>
         </div>
-
-        {/* OMP Company Card */}
-        <CompanyCard
-          logo="/omp-logo.png"
-          name="OMP"
-          role="Senior Technical Writer"
-          years="2026 - Present"
-          country="Belgium company"
-          countryFlag="🇧🇪"
-          defaultExpanded={false}
-        >
-          <div className="flex items-center justify-center py-12">
-            <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
-          </div>
-        </CompanyCard>
-
-{/* Personio Company Card */}
-  <CompanyCard
-  logo="/personio-icon-black.png"
-  name="Personio"
-  role="Senior Technical Writer"
-  years="2021 - 2025"
-  country="German company"
-  countryFlag="🇩🇪"
-  defaultExpanded={false}
-  >
-          {/* Achievement Grid */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {/* Column 1 - Writing */}
-            <PillarColumn
-              label="I write"
-              image="/vr-person-blue-tech.png"
-              imageAlt="Writing Skills"
-            >
-              {operationalAchievements
-                .filter((a) => a.column === 1)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </PillarColumn>
-
-            {/* Column 2 - Operations */}
-            <PillarColumn
-              label="I build"
-              image="/3d-graph-computer-illustration.jpg"
-              imageAlt="Operations Skills"
-            >
-              {operationalAchievements
-                .filter((a) => a.column === 2)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </PillarColumn>
-
-            {/* Column 3 - Global */}
-            <PillarColumn
-              label="I translate"
-              image="/still-life-supply-chain.jpg"
-              imageAlt="Global Skills"
-            >
-              {operationalAchievements
-                .filter((a) => a.column === 3)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </PillarColumn>
-          </div>
-
-          {/* Writing Samples Section */}
-          <div className="mt-8 pt-6 border-t border-primary/10">
-            <h3 className="text-base font-semibold mb-4 text-center text-foreground/70">Writing Samples</h3>
-            <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-              {contentTypes.map((contentType) => (
-                <ContentTypeCard
-                  key={contentType.id}
-                  contentType={contentType}
-                  onClick={() => setSelectedType(contentType)}
-                />
-              ))}
-            </div>
-          </div>
-        </CompanyCard>
-      </div>
-    </section>
+      </section>
     </>
   )
 }
