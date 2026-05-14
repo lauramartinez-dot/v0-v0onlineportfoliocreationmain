@@ -92,7 +92,7 @@ const translateAchievements = [
 
 export function AchievementsSection() {
   return (
-    <section id="top-achievements" className="relative pt-2 pb-24 px-4 scroll-mt-32">
+    <section id="top-achievements" className="relative pt-24 pb-2 px-4 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Career stats</h2>
