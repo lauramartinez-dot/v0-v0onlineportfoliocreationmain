@@ -83,6 +83,11 @@ const translateAchievements = [
     label: "years translating",
     description: "English > Spanish documentation",
   },
+  {
+    stat: "8",
+    label: "years working in remote",
+    description: "Globally distributed teams",
+  },
 ]
 
 export function AchievementsSection() {
