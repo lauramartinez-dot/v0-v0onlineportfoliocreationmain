@@ -84,8 +84,8 @@ const translateAchievements = [
     description: "English > Spanish documentation",
   },
   {
-    stat: "8",
-    label: "years working in remote",
+    stat: "8+",
+    label: "years in remote-first teams",
     description: "Globally distributed teams",
   },
 ]
