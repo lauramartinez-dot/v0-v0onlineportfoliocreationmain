@@ -60,7 +60,7 @@ export const toolColumns: SkillColumn[] = [
         tools: ["Git", "Github / Azure DevOps", "Visual Studio Code"],
       },
       {
-        label: "Languages",
+        label: "Markup languages",
         tools: ["HTML", "XML", "Markdown"],
       },
       {
