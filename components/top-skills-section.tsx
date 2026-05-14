@@ -20,6 +20,49 @@ const columnHeaders = [
 ]
 
 function ToolCard({ tool }: { tool: string }) {
+  // Check if this is a split tool (contains " / ")
+  if (tool.includes(" / ")) {
+    const [left, right] = tool.split(" / ")
+    return (
+      <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden min-h-[80px]">
+        {/* Top accent line */}
+        <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent z-10" />
+        
+        {/* Diagonal split container */}
+        <div className="relative w-full h-full min-h-[80px]">
+          {/* Left side (top-left triangle) */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div 
+              className="absolute inset-0 flex items-center justify-start pl-5 pr-12"
+              style={{ clipPath: "polygon(0 0, 100% 0, 0 100%)" }}
+            >
+              <span className="font-semibold text-foreground text-lg leading-tight group-hover:text-primary transition-colors duration-300">
+                {left}
+              </span>
+            </div>
+          </div>
+          
+          {/* Right side (bottom-right triangle) */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div 
+              className="absolute inset-0 bg-primary/5 flex items-center justify-end pr-5 pl-12"
+              style={{ clipPath: "polygon(100% 0, 100% 100%, 0 100%)" }}
+            >
+              <span className="font-semibold text-foreground text-lg leading-tight group-hover:text-primary transition-colors duration-300">
+                {right}
+              </span>
+            </div>
+          </div>
+          
+          {/* Diagonal line */}
+          <svg className="absolute inset-0 w-full h-full pointer-events-none" preserveAspectRatio="none">
+            <line x1="100%" y1="0" x2="0" y2="100%" className="stroke-primary/30" strokeWidth="1" />
+          </svg>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden">
       {/* Top accent line */}
