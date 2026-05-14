@@ -76,7 +76,7 @@ function GroupLabel({ label }: { label: string }) {
 
 export function TopSkillsSection() {
   return (
-    <section id="top-skills" className="relative px-4 py-24 scroll-mt-32">
+    <section id="top-skills" className="relative px-4 pt-32 pb-24 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Skills and tools</h2>
