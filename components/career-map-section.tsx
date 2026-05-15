@@ -1188,7 +1188,7 @@ export default function CareerMapSection() {
         <div className="mx-auto max-w-7xl">
           {/* Section Header */}
           <div className="mb-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Company highlights</h2>
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Where I've Worked</h2>
 
           </div>
 
