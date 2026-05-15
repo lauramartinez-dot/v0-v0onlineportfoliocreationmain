@@ -24,7 +24,7 @@ interface ContentTypeData {
 const contentTypes: ContentTypeData[] = [
   {
     id: "user-facing-pages",
-    name: "User-facing documentation",
+    name: "End-user documentation",
     description: "Step-by-step instructions and conceptual documentation for end users",
     icon: HelpCircle,
     image: "/user-facing-example.png",
@@ -49,7 +49,7 @@ const contentTypes: ContentTypeData[] = [
   },
   {
     id: "internal-facing-pages",
-    name: "Internal-facing documentation",
+    name: "Internal documentation",
     description: "Internal documentation and knowledge base articles for teams",
     icon: FileText,
     image: "/internal-facing-example.png",
