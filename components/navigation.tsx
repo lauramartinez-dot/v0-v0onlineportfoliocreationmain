@@ -9,8 +9,8 @@ export function Navigation() {
 
   const navItems = [
     { label: "What I do", href: "#top-differentiators" },
-    { label: "Proud of", href: "#top-achievements" },
-    { label: "By company", href: "#company-highlights" },
+    { label: "Highlights", href: "#top-achievements" },
+    { label: "Experience", href: "#company-highlights" },
     { label: "Skills", href: "#top-skills" },
   ]
 
