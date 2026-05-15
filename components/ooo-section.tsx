@@ -16,7 +16,7 @@ const oooActivities = [
   {
     title: "Advocating for women",
     description:
-      "I co-founded Personio's Women Committee and hosted several events to foster knowledge sharing.",
+      "I co-founded Personio's Women Committee and hosted several events to foster knowledge sharing. Now I am active in the MOXIE comunity.",
     image: "/ooo-women.jpg",
   },
 ]
