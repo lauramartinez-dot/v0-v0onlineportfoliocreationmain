@@ -54,7 +54,7 @@ export function OOOSection() {
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-semibold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
+              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors duration-300">
                 {activity.title}
               </h3>
 
