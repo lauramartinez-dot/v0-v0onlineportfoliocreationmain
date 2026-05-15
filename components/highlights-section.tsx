@@ -117,7 +117,7 @@ function SkillImageCard({
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
       <div className="absolute bottom-0 left-0 right-0 p-8">
-        <h3 className="text-[26.95px] font-bold text-white">{item.title}</h3>
+        <h3 className="text-[26.95px] font-bold text-white pr-1">{item.title}</h3>
       </div>
     </div>
   )
@@ -182,7 +182,7 @@ export function HighlightsSection() {
             {/* Content */}
             <div className="relative z-10">
               <p className="text-[22.5px] font-semibold leading-[1.7] text-foreground/95 text-left mb-5">
-                   I ultimately empower more people to use and master new, daunting software — because these days, knowing your way around the right tool, whether that's an HR, marketing, or AI tool, <span className="text-primary font-bold">can mean the difference between landing a job or not.</span>.
+                   I ultimately empower more people to use and master new, daunting software — because these days, knowing your way around the right tool, whether that's an HR, marketing, or AI tool, <span className="text-primary font-bold">can mean the difference between landing a job or not</span>.
               </p>
             </div>
           </div>
