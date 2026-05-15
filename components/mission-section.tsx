@@ -8,7 +8,7 @@ export function MissionSection() {
       <div className="mx-auto max-w-7xl px-4">
         {/* Intro text - similar to top differentiators */}
         <div className="text-center mb-12">
-          <p className="text-[21px] text-foreground/90 leading-relaxed">
+          <p className="text-[21px] text-foreground/60 leading-relaxed">
             And a 15-year long mission:
           </p>
         </div>
