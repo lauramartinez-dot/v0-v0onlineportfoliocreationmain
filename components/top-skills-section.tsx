@@ -79,7 +79,7 @@ export function TopSkillsSection() {
     <section id="top-skills" className="relative px-4 pt-32 pb-24 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Skills and tools</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">What I use</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
