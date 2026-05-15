@@ -28,7 +28,7 @@ export function OOOSection() {
         {/* Section header - matching other sections */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
-            Me while OOO
+            My OOO
           </h2>
         </div>
 
