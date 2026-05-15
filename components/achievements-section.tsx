@@ -158,15 +158,15 @@ export function AchievementsSection() {
                 <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
                 {/* Content - horizontal stat layout with fixed widths */}
-                <div className="relative flex items-start gap-6 px-8 py-8">
+                <div className={`relative flex items-start gap-6 px-8 py-8 ${index === 2 ? 'pb-[38px]' : ''}`}>
                   <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
-                    <span className="text-2xl font-semibold text-foreground leading-tight">
+                    <span className={`text-2xl font-semibold text-foreground leading-tight ${index === 2 ? 'mt-2' : ''}`}>
                       {achievement.label}
                     </span>
-                    <p className="text-base text-foreground/60 mt-2 leading-relaxed">
+                    <p className={`text-base text-foreground/60 leading-relaxed ${index === 2 ? 'mt-[17px]' : 'mt-2'}`}>
                       {achievement.description}
                     </p>
                   </div>
