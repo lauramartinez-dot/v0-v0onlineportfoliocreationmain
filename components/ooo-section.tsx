@@ -10,13 +10,13 @@ const oooActivities = [
   {
     title: "Playing around with AI",
     description:
-      "I like playing around with new technology out of pure curiosity. I'm part of SheAI in Barcelona and vibe-coded this entire portfolio.",
+      "I like playing around with new technology out of curiosity. I'm part of SheAI in Barcelona and vibe-coded this entire portfolio.",
     image: "/ooo-ai-events.jpg",
   },
   {
     title: "Advocating for women",
     description:
-      "I am very active in Women in Tech communities (lately, MOXIE). I co-founded Personio's Women Committee and hosted several events to foster knowledge sharing.",
+      "I am active in Women in Tech communities (lately, MOXIE). I also co-founded Personio's Women ERG and organised many events.",
     image: "/ooo-women.jpg",
   },
 ]
