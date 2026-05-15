@@ -8,9 +8,9 @@ const oooActivities = [
     image: "/ooo-hiking.jpg",
   },
   {
-    title: "Attending AI events",
+    title: "Playing around with AI",
     description:
-      "I love going to AI events and meetups in Barcelona, especially when they mix AI and philosophy.",
+      "I like playing around with new technology out of pure curiosity. I'm part of SheAI in Barcelona and vibe-coded this entire portfolio",
     image: "/ooo-ai-events.jpg",
   },
   {
