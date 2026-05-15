@@ -5,7 +5,7 @@ import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { AchievementsSection } from "@/components/achievements-section"
 import { TopSkillsSection } from "@/components/top-skills-section"
-
+import { OOOSection } from "@/components/ooo-section"
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
 import { Navigation } from "@/components/navigation"
@@ -27,8 +27,10 @@ export default function Home() {
       <TransitionSection />
       {/* Top Achievements per company */}
       <CareerMapSection />
-      {/* Top Skills & Tools - last section */}
+      {/* Top Skills & Tools */}
       <TopSkillsSection />
+      {/* Me while OOO - personal section */}
+      <OOOSection />
       <Footer />
     </main>
   )
