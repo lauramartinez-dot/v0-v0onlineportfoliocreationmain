@@ -59,7 +59,7 @@ export function OOOSection() {
               </h3>
 
               {/* Description */}
-              <p className="text-foreground/60 leading-relaxed max-w-sm">
+              <p className="text-[19px] text-foreground/60 leading-relaxed max-w-sm">
                 {activity.description}
               </p>
             </div>
