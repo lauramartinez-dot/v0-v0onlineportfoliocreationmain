@@ -10,7 +10,7 @@ const oooActivities = [
   {
     title: "Playing around with AI",
     description:
-      "I like playing around with new technology out of pure curiosity. I'm part of SheAI in Barcelona and vibe-coded this entire portfolio",
+      "I like playing around with new technology out of pure curiosity. I'm part of SheAI in Barcelona and vibe-coded this entire portfolio.",
     image: "/ooo-ai-events.jpg",
   },
   {
