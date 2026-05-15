@@ -8,10 +8,11 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "My role", href: "#top-differentiators" },
-    { label: "Highlights", href: "#top-achievements" },
-    { label: "Experience", href: "#company-highlights" },
-    { label: "Skills", href: "#top-skills" },
+    { label: "What I do", href: "#top-differentiators" },
+    { label: "What I'm proud of", href: "#top-achievements" },
+    { label: "Where I've worked", href: "#company-highlights" },
+    { label: "What I use", href: "#top-skills" },
+    { label: "My OOO", href: "#top-outside-work" },
   ]
 
   return (
