@@ -95,7 +95,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Global collaboration",
-        tools: ["Microsoft ecosystem", "Google ecosystem", "Slack", "Zoom", "Miro", "Loom"],
+        tools: ["Microsoft ecosystem", "Google ecosystem", "Slack", "Discord", "Zoom", "Miro", "Loom", "Figma"],
       },
     ],
   },
