@@ -11,7 +11,7 @@ export function Navigation() {
     { label: "What I do", href: "#top-differentiators" },
     { label: "What I'm proud of", href: "#top-achievements" },
     { label: "Where I've worked", href: "#company-highlights" },
-    { label: "What I use", href: "#top-skills" },
+    { label: "What I've used", href: "#top-skills" },
     { label: "My OOO", href: "#top-outside-work" },
   ]
 
