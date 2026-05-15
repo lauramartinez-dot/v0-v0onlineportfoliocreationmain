@@ -134,7 +134,7 @@ export function HighlightsSection() {
           <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">What I do</h2>
             <p className="text-[21px] text-foreground/90 leading-relaxed">
-              Why me? Because I bring three roles into one:
+              I bring three roles into one:
             </p>
           </div>
         </div>
