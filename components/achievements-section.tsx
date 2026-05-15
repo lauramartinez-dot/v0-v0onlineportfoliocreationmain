@@ -95,7 +95,7 @@ export function AchievementsSection() {
     <section id="top-achievements" className="relative pt-24 pb-2 px-4 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Career stats</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">What I'm proud of</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
