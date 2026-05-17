@@ -182,7 +182,7 @@ export function HighlightsSection() {
             {/* Content */}
             <div className="relative z-10">
               <p className="text-[22.5px] font-semibold leading-[1.7] text-foreground/95 text-left mb-5">
-                   I ultimately empower people <span className="text-primary font-bold">worldwide </span>to use and master new, daunting software — because these days, knowing your way around the right tool, whether that's an HR, marketing, or AI tool, <span className="text-primary font-bold">can mean the difference between landing a job or not</span>.
+                   I ultimately empower people <span className="text-primary font-bold">worldwide </span>to use and master new, daunting software — because these days, knowing your way around the right tool, whether that's an HR, marketing, or AI tool, can mean the difference<span className="text-primary font-bold">between landing a job or not</span>.
               </p>
             </div>
           </div>
