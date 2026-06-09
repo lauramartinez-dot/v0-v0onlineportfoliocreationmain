@@ -82,7 +82,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "AI-assisted production",
-        tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso"],
+        tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso", "GitHub Copilot"],
       },
     ],
   },
