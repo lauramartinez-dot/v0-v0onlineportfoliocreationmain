@@ -24,13 +24,9 @@ const writingAchievements = [
     stat: "15",
     label: "years writing about tech non-stop",
   },
-  {
-    stat: "200+",
-    label: "articles authored as a former Tech Journalist",
-  },
    {
     stat: "200+",
-    label: "articles authored as a former Tech Journalist",
+    label: "articles authored as an ex-Tech Journalist",
   },
   {
     stat: "100+",
