@@ -26,7 +26,7 @@ const writingAchievements = [
   },
    {
     stat: "200+",
-    label: "articles authored as a former Tech Journalist",
+    label: "articles authored as an ex-Tech Journalist",
   },
   {
     stat: "100+",
