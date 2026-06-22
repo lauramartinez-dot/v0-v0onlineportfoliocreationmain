@@ -34,7 +34,7 @@ const writingAchievements = [
   },
   {
     stat: "5+",
-    label: "audiences written for (Admins, devs, end-users, etc)",
+    label: "audiences written for",
   },
 ]
 
