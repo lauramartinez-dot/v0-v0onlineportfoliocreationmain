@@ -30,7 +30,7 @@ const writingAchievements = [
   },
   {
     stat: "100+",
-    label: "documentation pages written as a Technical Writer",
+    label: "pages authored as a Technical Writer",
   },
   {
     stat: "5+",
