@@ -22,7 +22,7 @@ const columnHeaders = [
 const writingAchievements = [
   {
     stat: "15",
-    label: "years writing about technology",
+    label: "years writing about technology non-stop",
     description: "Former Tech Journalist",
   },
   {
