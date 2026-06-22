@@ -23,17 +23,14 @@ const writingAchievements = [
   {
     stat: "15",
     label: "years writing about technology non-stop",
-    description: "Former Tech Journalist",
   },
   {
     stat: "200+",
-    label: "articles written",
-    description: "For major tech media including Business Insider",
+    label: "articles written as a former Tech Journalist",
   },
   {
     stat: "100+",
     label: "documentation pages written",
-    description: "For international software companies",
   },
   {
     stat: "5+",
