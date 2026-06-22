@@ -126,13 +126,13 @@ export function AchievementsSection() {
                   <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                     {achievement.stat}
                   </span>
-                  <div className="flex flex-col flex-1 pt-2">
-                    <span className="text-2xl font-semibold text-foreground leading-tight">
+                  <div className="flex flex-col flex-1 justify-center">
+                    <span className="text-xl md:text-2xl font-semibold text-foreground leading-snug">
                       {achievement.label}
+                      {achievement.description
+                        ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
+                        : ""}
                     </span>
-                    <p className="text-base text-foreground/60 mt-2 leading-relaxed">
-                      {achievement.description}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -166,13 +166,13 @@ export function AchievementsSection() {
                   <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                     {achievement.stat}
                   </span>
-                  <div className="flex flex-col flex-1 pt-2">
-                    <span className={`text-2xl font-semibold text-foreground leading-tight ${index === 2 ? 'mt-2' : ''}`}>
+                  <div className="flex flex-col flex-1 justify-center">
+                    <span className="text-xl md:text-2xl font-semibold text-foreground leading-snug">
                       {achievement.label}
+                      {achievement.description
+                        ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
+                        : ""}
                     </span>
-                    <p className={`text-base text-foreground/60 leading-relaxed ${index === 2 ? 'mt-[17px]' : 'mt-2'}`}>
-                      {achievement.description}
-                    </p>
                   </div>
                 </div>
               </div>
@@ -206,13 +206,13 @@ export function AchievementsSection() {
                   <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                     {achievement.stat}
                   </span>
-                  <div className="flex flex-col flex-1 pt-2">
-                    <span className="text-2xl font-semibold text-foreground leading-tight">
+                  <div className="flex flex-col flex-1 justify-center">
+                    <span className="text-xl md:text-2xl font-semibold text-foreground leading-snug">
                       {achievement.label}
+                      {achievement.description
+                        ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
+                        : ""}
                     </span>
-                    <p className={`text-base text-foreground/60 mt-2 leading-relaxed ${index === 0 ? 'mr-2' : ''}`}>
-                      {achievement.description}
-                    </p>
                   </div>
                 </div>
               </div>
