@@ -114,14 +114,16 @@ export function AchievementsSection() {
             {writingAchievements.map((achievement, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/30 hover:border-primary/60 hover:shadow-[0_8px_40px_-8px_rgba(200,80,192,0.45)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 {/* Top accent line */}
-                <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
+                {/* Glow accent */}
+                <div className="pointer-events-none absolute -left-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-start gap-6 px-8 py-8">
-                  <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
+                  <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
@@ -152,14 +154,16 @@ export function AchievementsSection() {
             {buildingAchievements.map((achievement, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/30 hover:border-primary/60 hover:shadow-[0_8px_40px_-8px_rgba(200,80,192,0.45)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 {/* Top accent line */}
-                <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
+                {/* Glow accent */}
+                <div className="pointer-events-none absolute -left-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className={`relative flex items-start gap-6 px-8 py-8 ${index === 2 ? 'pb-[38px]' : ''}`}>
-                  <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
+                  <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
@@ -190,14 +194,16 @@ export function AchievementsSection() {
             {translateAchievements.map((achievement, index) => (
               <div
                 key={index}
-                className="group relative rounded-2xl bg-card border border-primary/15 hover:border-primary/40 transition-all duration-300 overflow-hidden"
+                className="group relative rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/30 hover:border-primary/60 hover:shadow-[0_8px_40px_-8px_rgba(200,80,192,0.45)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
               >
                 {/* Top accent line */}
-                <div className="absolute top-0 left-4 right-4 h-[2px] bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
+                <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
+                {/* Glow accent */}
+                <div className="pointer-events-none absolute -left-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                 {/* Content - horizontal stat layout with fixed widths */}
                 <div className="relative flex items-start gap-6 px-8 py-8">
-                  <span className="text-5xl md:text-6xl font-bold text-primary min-w-[140px] text-right shrink-0 leading-none">
+                  <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                     {achievement.stat}
                   </span>
                   <div className="flex flex-col flex-1 pt-2">
