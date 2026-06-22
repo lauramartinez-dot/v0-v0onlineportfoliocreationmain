@@ -22,15 +22,19 @@ const columnHeaders = [
 const writingAchievements = [
   {
     stat: "15",
-    label: "years writing about technology non-stop",
+    label: "years writing about tech non-stop",
   },
   {
     stat: "200+",
-    label: "articles written as a former Tech Journalist",
+    label: "articles authored as a former Tech Journalist",
+  },
+   {
+    stat: "200+",
+    label: "articles authored as a former Tech Journalist",
   },
   {
     stat: "100+",
-    label: "documentation pages written",
+    label: "documentation pages written as a Technical Writer",
   },
   {
     stat: "5+",
