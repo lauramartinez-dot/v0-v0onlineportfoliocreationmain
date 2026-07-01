@@ -17,7 +17,7 @@ export function OriginSection() {
               <span className="block text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
                 abroad in
               </span>
-              <span className="block text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
+              <span className="block whitespace-nowrap text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
                 3 countries<span className="text-primary">.</span>
               </span>
             </h2>
