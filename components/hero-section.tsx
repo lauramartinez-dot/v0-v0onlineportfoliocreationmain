@@ -43,7 +43,7 @@ export function HeroSection() {
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
             {/* Eyebrow label */}
             <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
-              Hi there! {"·"} I&apos;m Laura Martínez {"🌍"}
+              Hi there! {"·"} I&apos;m Laura Martínez.
             </p>
 
             {/* Accent bar */}
@@ -52,7 +52,7 @@ export function HeroSection() {
             {/* Two-tier headline */}
             <h1 className="mb-10 text-foreground">
               <span className="block text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
-                A global and multicultural
+                A global {"🌍"}
               </span>
               <span className="block text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
                 Senior Technical Writer<span className="text-primary">.</span>
