@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Menu, X, Sparkles } from "lucide-react"
+import { Menu, X, Sparkles, Linkedin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Navigation() {
@@ -36,7 +36,13 @@ export function Navigation() {
             ))}
           </div>
 
-          <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center gap-3">
+            <Button size="default" variant="ghost" className="rounded-full text-primary hover:bg-primary/10" asChild>
+              <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="mr-2 h-4 w-4" />
+                Connect on LinkedIn
+              </a>
+            </Button>
             <Button size="default" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
               <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 Download CV
@@ -68,7 +74,13 @@ export function Navigation() {
                   {item.label}
                 </a>
               ))}
-              <Button size="sm" className="rounded-full mt-2 bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
+              <Button size="sm" variant="ghost" className="rounded-full mt-2 text-primary hover:bg-primary/10" asChild>
+                <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="mr-2 h-4 w-4" />
+                  Connect on LinkedIn
+                </a>
+              </Button>
+              <Button size="sm" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
                 <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>

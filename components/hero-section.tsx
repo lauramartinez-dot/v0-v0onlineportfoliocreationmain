@@ -1,7 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ChevronDown, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -60,28 +59,10 @@ export function HeroSection() {
             </h1>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <Button
-                size="lg"
-                variant="outline"
-                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
-                  Connect on LinkedIn
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Download CV
-                  <Download className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
-                </a>
-              </Button>
+              <div className="inline-flex items-center rounded-full px-8 py-4 text-base font-medium border-2 border-purple-500/50 bg-transparent text-foreground/80">
+                <MapPin className="mr-2 h-4 w-4 text-primary" />
+                Based in Barcelona
+              </div>
             </div>
           </div>
         </div>
