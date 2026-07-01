@@ -41,15 +41,26 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <p className="text-lg md:text-xl text-foreground/60 mb-4">Hi there!</p>
+            {/* Eyebrow label */}
+            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
+              Hi there! {"·"} Global & Multicultural {"🌍"}
+            </p>
 
-            <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl xl:text-8xl">
-              I&apos;m Laura<br />Martínez.
+            {/* Accent bar */}
+            <div className="mx-auto md:mx-0 mb-5 h-1.5 w-12 rounded-full bg-primary" />
+
+            {/* Two-tier headline */}
+            <h1 className="mb-6 text-foreground">
+              <span className="block text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+                I&apos;m Laura
+              </span>
+              <span className="block text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
+                Martínez<span className="text-primary">.</span>
+              </span>
             </h1>
 
-            <h4 className="mb-10 text-primary">
-              <span className="text-xl font-medium md:text-2xl lg:text-3xl">A global and multicultural {"🌍"}</span><br />
-              <span className="text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 inline-block">Senior Technical Writer</span>
+            <h4 className="mb-10 text-2xl font-bold tracking-tight text-primary md:text-3xl lg:text-4xl">
+              Senior Technical Writer
             </h4>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
