@@ -20,21 +20,24 @@ export function AboutHeroSection() {
 
           {/* Text on the right */}
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <p className="text-[21px] text-foreground/60 mb-5">
-              Now I'm that technical writer you bring in early, as soon as your company:
+            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
+              Now I&apos;m that technical writer you bring in early, as soon as your company:
             </p>
 
-            <ul className="space-y-2 mb-6">
-              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+            {/* Accent bar */}
+            <div className="mx-auto md:mx-0 mb-5 h-1.5 w-12 rounded-full bg-primary" />
+
+            <ul className="space-y-3 mb-6">
+              <li className="flex items-center justify-center gap-3 text-4xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:justify-start md:text-5xl lg:text-6xl">
+                <span className="w-2.5 h-2.5 shrink-0 rounded-full bg-primary" />
                 starts growing fast
               </li>
-              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+              <li className="flex items-center justify-center gap-3 text-4xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:justify-start md:text-5xl lg:text-6xl">
+                <span className="w-2.5 h-2.5 shrink-0 rounded-full bg-primary" />
                 goes from ~100 to 1,000+ people
               </li>
-              <li className="flex items-center gap-3 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
-                <span className="w-2.5 h-2.5 rounded-full bg-primary" />
+              <li className="flex items-center justify-center gap-3 text-4xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:justify-start md:text-5xl lg:text-6xl">
+                <span className="w-2.5 h-2.5 shrink-0 rounded-full bg-primary" />
                 expands into new countries
               </li>
             </ul>
