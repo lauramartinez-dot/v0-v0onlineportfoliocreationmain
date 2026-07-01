@@ -55,7 +55,7 @@ export function HeroSection() {
                 A global and multicultural
               </span>
               <span className="block text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
-                Senior Technical Writer {"🌍"}
+                Senior Technical Writer<span className="align-baseline text-2xl md:text-3xl lg:text-4xl">{" 🌍"}</span>
               </span>
             </h1>
 
