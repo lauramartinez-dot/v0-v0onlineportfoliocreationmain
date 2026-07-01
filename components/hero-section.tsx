@@ -59,7 +59,7 @@ export function HeroSection() {
               </span>
             </h1>
 
-            <h4 className="mb-10 text-2xl font-bold tracking-tight text-primary md:text-3xl lg:text-4xl">
+            <h4 className="mb-10 text-3xl font-semibold tracking-tight text-primary md:text-4xl lg:text-5xl">
               Senior Technical Writer
             </h4>
 

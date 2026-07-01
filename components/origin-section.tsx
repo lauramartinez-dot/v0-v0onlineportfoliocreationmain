@@ -16,8 +16,13 @@ export function OriginSection() {
               But I spent almost a decade living
             </p>
 
-            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              <span className="text-white">abroad in<br></br></span><span className="text-primary">3 countries.</span>
+            <h2 className="text-foreground">
+              <span className="block text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+                abroad in
+              </span>
+              <span className="block text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
+                3 countries<span className="text-primary">.</span>
+              </span>
             </h2>
           </div>
 
