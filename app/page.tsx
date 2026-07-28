@@ -25,7 +25,7 @@ export default function Home() {
       <CareerMapSection />
       {/* Top Skills & Tools */}
       <TopSkillsSection />
-      {/* Me while OOO - personal section */}
+      {/* My personal projects */}
       <OOOSection />
       <Footer />
     </main>

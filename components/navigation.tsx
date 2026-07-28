@@ -12,7 +12,7 @@ export function Navigation() {
     { label: "What I'm proud of", href: "#top-achievements" },
     { label: "Where I've worked", href: "#company-highlights" },
     { label: "What I've used", href: "#top-skills" },
-    { label: "My OOO", href: "#top-outside-work" },
+    { label: "My personal projects", href: "#personal-projects" },
   ]
 
   return (
