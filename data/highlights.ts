@@ -24,7 +24,7 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "I write deliberately plain English that's easy to translate",
+    title: "I write plain English that's easy to translate",
     description:
       "I've lived in 4 countries and worked in 3 languages, so I know where translations break before they happen.",
     link: "",
