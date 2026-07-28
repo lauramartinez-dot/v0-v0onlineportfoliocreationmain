@@ -1,7 +1,6 @@
 import { HeroSection } from "@/components/hero-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
-import { AchievementsSection } from "@/components/achievements-section"
 import { TopSkillsSection } from "@/components/top-skills-section"
 import { OOOSection } from "@/components/ooo-section"
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
@@ -14,10 +13,8 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      {/* What I do - 3 images + mission */}
+      {/* What I do + How I do it, with the proud-of numbers under each column */}
       <HighlightsSection />
-      {/* My work in numbers */}
-      <AchievementsSection />
       <TransitionSection />
       <ScrollTransitionSection />
       <TransitionSection />

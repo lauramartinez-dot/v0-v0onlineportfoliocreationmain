@@ -125,24 +125,31 @@ function SkillImageCard({
       </div>
 
       {/* Achievements - always visible below the image */}
-      <div className="mt-4 rounded-xl border border-primary/30 bg-card p-6">
-        <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">What I&apos;m proud of</p>
-        <ul className="flex flex-col gap-3">
-          {achievements.map((achievement, index) => (
-            <li
-              key={index}
-              className="flex items-center gap-4 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card px-4 py-3"
-            >
-              <span className="min-w-[72px] shrink-0 text-right text-3xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
+      <div className="mt-4 flex flex-col gap-4">
+        {achievements.map((achievement, index) => (
+          <div
+            key={index}
+            className="group relative rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/30 hover:border-primary/60 hover:shadow-[0_8px_40px_-8px_rgba(200,80,192,0.45)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+          >
+            {/* Top accent line */}
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
+            {/* Glow accent */}
+            <div className="pointer-events-none absolute -left-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+            {/* Content - horizontal stat layout with fixed widths */}
+            <div className="relative flex items-start gap-6 px-8 py-8">
+              <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                 {achievement.stat}
               </span>
-              <span className="flex-1 text-sm font-semibold leading-snug text-foreground">
-                {achievement.label}
-                {achievement.description ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}` : ""}
-              </span>
-            </li>
-          ))}
-        </ul>
+              <div className="flex flex-col flex-1 justify-center">
+                <span className="text-xl md:text-2xl font-semibold text-foreground leading-snug">
+                  {achievement.label}
+                  {achievement.description ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}` : ""}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   )
@@ -196,7 +203,7 @@ export function HighlightsSection() {
         </div>
 
         {/* How I do it */}
-        <div className="text-center mt-40 mb-12">
+        <div id="how-i-do-it" className="text-center mt-40 mb-12 scroll-mt-32">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             How I do it<span className="text-primary">.</span>
           </h2>
