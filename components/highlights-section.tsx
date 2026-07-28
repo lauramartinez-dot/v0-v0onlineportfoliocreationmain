@@ -137,11 +137,12 @@ function SkillImageCard({
 
           <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
           <div className="absolute bottom-0 left-0 right-0 p-8">
             <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
-            <span className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-primary">
+            <p className="mt-4 text-lg leading-relaxed text-white/80 text-pretty">{item.description}</p>
+            <span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-primary">
               See the numbers
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </span>
