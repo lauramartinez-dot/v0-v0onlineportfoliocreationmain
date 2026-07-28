@@ -224,7 +224,7 @@ export function HighlightsSection() {
               What I do<span className="text-primary">.</span>
             </h2>
 
-            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+            <p className="mt-8 text-2xl md:text-3xl font-normal tracking-tight leading-relaxed text-foreground/80 text-balance">
               I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to. And then I
               write about it.
             </p>
@@ -259,7 +259,7 @@ export function HighlightsSection() {
 
             {/* Content */}
             <div className="relative z-10">
-              <p className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight leading-snug text-foreground text-center text-balance">
+              <p className="text-2xl md:text-3xl font-normal tracking-tight leading-relaxed text-foreground/80 text-center text-balance">
                 Why? Because I believe in <span className="text-primary">democratising STEM</span>. Tech is everywhere
                 now, and understanding it shouldn&apos;t be reserved for people with IT degrees and PhDs. The more
                 accessible technical knowledge gets, the more people can contribute to it.
