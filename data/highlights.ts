@@ -24,9 +24,9 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "I get documentation translated for key European markets",
+    title: "I write localization-ready English",
     description:
-      "I speak 3 languages and have wide experience managing localization.",
+      "I've lived in 4 countries and worked in 3 languages, so I know where translations break before they happen.",
     link: "",
     skills: ["English Writing", "Global Audiences", "Localization-Ready Content", "Multilingual"],
   },

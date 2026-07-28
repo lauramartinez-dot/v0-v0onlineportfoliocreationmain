@@ -216,17 +216,17 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-14 mt-[120px] scroll-mt-32">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
-              What I do
-            </p>
-
             {/* Accent bar */}
-            <div className="mx-auto mt-6 mb-6 h-1.5 w-12 rounded-full bg-primary" />
+            <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
 
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+            <h2 className="text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:text-7xl lg:text-8xl">
+              What I do<span className="text-primary">.</span>
+            </h2>
+
+            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
               I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to. And then I
               write about it.
-            </h2>
+            </p>
           </div>
         </div>
 
@@ -257,11 +257,14 @@ export function HighlightsSection() {
           </div>
         </div>
 
-        {/* How do I do it */}
-        <div className="text-center mt-24 mb-10">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
-            How do I do it
-          </p>
+        {/* How I do it */}
+        <div className="text-center mt-28 mb-12">
+          {/* Accent bar */}
+          <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
+
+          <h2 className="text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:text-7xl lg:text-8xl">
+            How I do it<span className="text-primary">.</span>
+          </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
