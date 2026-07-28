@@ -59,8 +59,8 @@ export function HeroSection() {
             </h1>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <div className="inline-flex items-center rounded-full px-8 py-4 text-2xl md:text-3xl font-medium border-2 border-purple-500/50 bg-transparent text-foreground/80">
-                <MapPin className="mr-3 h-7 w-7 md:h-8 md:w-8 shrink-0 text-primary" />
+              <div className="inline-flex items-center rounded-full px-6 py-3 text-lg md:text-xl font-medium border-2 border-purple-500/50 bg-transparent text-foreground/80">
+                <MapPin className="mr-2 h-5 w-5 shrink-0 text-primary" />
                 Based in Barcelona. Working globally.
               </div>
             </div>
