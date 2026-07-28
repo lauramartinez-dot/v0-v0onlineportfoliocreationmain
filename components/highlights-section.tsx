@@ -146,7 +146,7 @@ export function HighlightsSection() {
             </p>
             {/* Lead-in to the three cards, which act as the list itself */}
             <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-              And once I understood it, I<span className="text-primary">:</span>
+              And then I<span className="text-primary">:</span>
             </p>
           </div>
         </div>
