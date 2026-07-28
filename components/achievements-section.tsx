@@ -65,6 +65,11 @@ export const translateAchievements = [
     description: "Near-native\nEnglish writing",
   },
   {
+    stat: "4",
+    label: "countries called home",
+    description: "Spain, France, Ireland, Germany",
+  },
+  {
     stat: "3",
     label: "languages spoken weekly",
     description: "English, Spanish, and German",
