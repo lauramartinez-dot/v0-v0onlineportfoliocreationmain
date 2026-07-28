@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
-import { ArrowRight, Rocket } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import {
   Dialog,
@@ -224,7 +224,7 @@ export function HighlightsSection() {
               What I do<span className="text-primary">.</span>
             </h2>
 
-            <p className="mt-8 text-2xl md:text-3xl font-normal tracking-tight leading-relaxed text-foreground/80 text-balance">
+            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
               I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to. And then I
               write about it.
             </p>
@@ -241,31 +241,13 @@ export function HighlightsSection() {
           </h2>
         </div>
 
-        {/* Mission box - polished design with purple glow */}
-        <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
-          {/* Purple glow effects - matching hero image */}
-          <div className="absolute -bottom-6 -left-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
-          <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
-          <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
-
-          <div className="relative rounded-3xl border border-primary/40 bg-card/80 backdrop-blur-sm px-8 md:px-12 pt-16 pb-10 shadow-lg shadow-primary/5">
-            {/* Subtle inner glow */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
-
-            {/* Mission badge with larger rocket icon */}
-            <div className="absolute -top-7 left-1/2 -translate-x-1/2 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background shadow-lg shadow-primary/30">
-              <Rocket className="w-7 h-7 text-white drop-shadow-md" />
-            </div>
-
-            {/* Content */}
-            <div className="relative z-10">
-              <p className="text-2xl md:text-3xl font-normal tracking-tight leading-relaxed text-foreground/80 text-center text-balance">
-                Why? Because I believe in <span className="text-primary">democratising STEM</span>. Tech is everywhere
-                now, and understanding it shouldn&apos;t be reserved for people with IT degrees and PhDs. The more
-                accessible technical knowledge gets, the more people can contribute to it.
-              </p>
-            </div>
-          </div>
+        {/* Mission statement */}
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+            Why? Because I believe in <span className="text-primary">democratising STEM</span>. Tech is everywhere now,
+            and understanding it shouldn&apos;t be reserved for people with IT degrees and PhDs. The more accessible
+            technical knowledge gets, the more people can contribute to it.
+          </p>
         </div>
 
         {/* How I do it */}
