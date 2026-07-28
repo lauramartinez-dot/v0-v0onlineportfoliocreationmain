@@ -225,8 +225,10 @@ export function HighlightsSection() {
             </h2>
 
             <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-              I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to. And then I
-              write about it.
+              I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to.
+            </p>
+            <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
+              And then I write about it.
             </p>
           </div>
         </div>
@@ -244,10 +246,10 @@ export function HighlightsSection() {
         {/* Mission statement */}
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-            Because <span className="text-primary">complex tech is literally everywhere</span>, from the software you use
-            daily to the AI tool that&apos;s suddenly deciding whether you get the next job.
+            Because complex tech is literally everywhere, from the software you use daily to the new AI tool
+            that&apos;s suddenly deciding whether you get the next job.
           </p>
-          <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+          <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
             And you shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>
