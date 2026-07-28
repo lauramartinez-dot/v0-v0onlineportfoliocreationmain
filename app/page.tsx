@@ -1,6 +1,4 @@
 import { HeroSection } from "@/components/hero-section"
-import { OriginSection } from "@/components/origin-section"
-import { AboutHeroSection } from "@/components/about-hero-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { AchievementsSection } from "@/components/achievements-section"
@@ -21,8 +19,6 @@ export default function Home() {
       {/* My work in numbers */}
       <AchievementsSection />
       <TransitionSection />
-      <OriginSection />
-      <AboutHeroSection />
       <ScrollTransitionSection />
       <TransitionSection />
       {/* Top Achievements per company */}

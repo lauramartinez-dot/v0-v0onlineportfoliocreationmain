@@ -4,6 +4,19 @@ import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
 import { ArrowRight, Rocket } from "lucide-react"
 import Image from "next/image"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import {
+  writingAchievements,
+  buildingAchievements,
+  translateAchievements,
+} from "@/components/achievements-section"
 
 function DiagonalRevealImage({
   beforeSrc,
@@ -94,32 +107,81 @@ function DiagonalRevealImage({
   )
 }
 
+type Achievement = { stat: string; label: string; description?: string }
+
 function SkillImageCard({
   item,
   image,
-  addPurpleOverlay = false,
+  achievements,
 }: {
   item: (typeof topSkills)[number]
   image: string
-  addPurpleOverlay?: boolean
+  achievements: Achievement[]
 }) {
+  const [open, setOpen] = useState(false)
+
   return (
-    <div className="group relative min-h-[600px] overflow-hidden rounded-xl shadow-lg">
-      <Image
-        src={image || "/placeholder.svg"}
-        alt={item.title}
-        fill
-        className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
-      />
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger asChild>
+        <button
+          type="button"
+          aria-label={`Read more about: ${item.title}`}
+          className="group relative block w-full min-h-[720px] overflow-hidden rounded-xl text-left shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:ring-primary/60 hover:shadow-[0_12px_48px_-12px_rgba(200,80,192,0.5)] hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary"
+        >
+          <Image
+            src={image || "/placeholder.svg"}
+            alt={item.title}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
+          />
 
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
 
-      <div className="absolute bottom-0 left-0 right-0 p-6">
-        <h3 className="text-[26.95px] font-bold text-white">{item.title}</h3>
-      </div>
-    </div>
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
+            <span className="mt-4 inline-flex items-center gap-2 text-base font-semibold text-primary">
+              See the numbers
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </div>
+        </button>
+      </DialogTrigger>
+
+      <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto border-primary/30 bg-card">
+        <DialogHeader>
+          <DialogTitle className="text-2xl md:text-3xl font-bold tracking-tight text-balance">
+            {item.title}
+          </DialogTitle>
+          <DialogDescription className="text-base leading-relaxed text-foreground/70">
+            {item.description}
+          </DialogDescription>
+        </DialogHeader>
+
+        <div className="mt-2">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">What I&apos;m proud of</p>
+          <ul className="flex flex-col gap-3">
+            {achievements.map((achievement, index) => (
+              <li
+                key={index}
+                className="flex items-center gap-5 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card px-5 py-4"
+              >
+                <span className="min-w-[100px] shrink-0 text-right text-4xl md:text-5xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
+                  {achievement.stat}
+                </span>
+                <span className="flex-1 text-base md:text-lg font-semibold leading-snug text-foreground">
+                  {achievement.label}
+                  {achievement.description
+                    ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
+                    : ""}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </DialogContent>
+    </Dialog>
   )
 }
 
@@ -142,17 +204,29 @@ export function HighlightsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
           {/* Column 1: A Foundation in Tech Journalism */}
           <div className="relative z-10">
-            <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
+            <SkillImageCard
+              item={topSkills[0]}
+              image="/vr-person-blue-tech.png"
+              achievements={writingAchievements}
+            />
           </div>
 
           {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
           <div className="relative z-10">
-            <SkillImageCard item={topSkills[1]} image="/3d-graph-computer-illustration.jpg" addPurpleOverlay={true} />
+            <SkillImageCard
+              item={topSkills[1]}
+              image="/3d-graph-computer-illustration.jpg"
+              achievements={buildingAchievements}
+            />
           </div>
 
           {/* Column 3: An International Career Across 4 Countries */}
           <div className="relative z-10">
-            <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
+            <SkillImageCard
+              item={topSkills[2]}
+              image="/still-life-supply-chain.jpg"
+              achievements={translateAchievements}
+            />
           </div>
         </div>
 

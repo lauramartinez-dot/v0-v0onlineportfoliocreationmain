@@ -19,7 +19,7 @@ const columnHeaders = [
 ]
 
 // Column 1: Writing achievements
-const writingAchievements = [
+export const writingAchievements = [
   {
     stat: "15",
     label: "years writing about tech non-stop",
@@ -39,7 +39,7 @@ const writingAchievements = [
 ]
 
 // Column 2: Building achievements
-const buildingAchievements = [
+export const buildingAchievements = [
   {
     stat: "10",
     label: "years in the tech industry",
@@ -58,7 +58,7 @@ const buildingAchievements = [
 ]
 
 // Column 3: Translate achievements
-const translateAchievements = [
+export const translateAchievements = [
   {
     stat: "C2",
     label: "English proficiency",
