@@ -40,9 +40,9 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            {/* Eyebrow label */}
-            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
-              Hi there! {"·"} I&apos;m Laura Martínez.
+            {/* Intro line */}
+            <p className="mb-6 text-2xl md:text-3xl font-bold tracking-tight leading-snug text-foreground text-balance">
+              Hi there! I&apos;m Laura Martínez.
             </p>
 
             {/* Accent bar */}
