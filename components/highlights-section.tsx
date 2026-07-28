@@ -244,9 +244,11 @@ export function HighlightsSection() {
         {/* Mission statement */}
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-            Because <span className="text-primary">complex tech is literally everywhere</span> &mdash; from the software
-            you use daily to the AI that&apos;s suddenly deciding whether you get the next job &mdash; and you
-            shouldn&apos;t need an IT degree or a PhD to understand it.
+            Because <span className="text-primary">complex tech is literally everywhere</span>, from the software you use
+            daily to the AI tool that&apos;s suddenly deciding whether you get the next job.
+          </p>
+          <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+            And you shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>
 
