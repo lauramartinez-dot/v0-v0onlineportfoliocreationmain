@@ -94,7 +94,15 @@ function DiagonalRevealImage({
   )
 }
 
-function SkillImageCard({ item, image }: { item: (typeof topSkills)[number]; image: string }) {
+function SkillImageCard({
+  item,
+  image,
+  index,
+}: {
+  item: (typeof topSkills)[number]
+  image: string
+  index: number
+}) {
   return (
     <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
       <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover opacity-70" />
@@ -104,6 +112,10 @@ function SkillImageCard({ item, image }: { item: (typeof topSkills)[number]; ima
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
       <div className="absolute bottom-0 left-0 right-0 p-8">
+        {/* List marker - ties the card back to the "I:" lead-in */}
+        <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary bg-primary/15 text-xl font-extrabold text-primary backdrop-blur-sm">
+          {index + 1}
+        </span>
         <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight text-balance">
           {item.title}
         </h3>
@@ -132,56 +144,43 @@ export function HighlightsSection() {
               I wreck my head for hours understanding complex, daunting technology{" "}
               <span className="text-primary">so you don&apos;t have to.</span>
             </p>
+            {/* Lead-in to the three cards, which act as the list itself */}
             <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-              And then I write about it.
+              And once I understood it, I<span className="text-primary">:</span>
             </p>
-
-            {/* Mission - boxed, but kept inside "What I do" instead of its own section */}
-            <div className="relative mt-16 rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 px-6 pb-8 pt-10 shadow-2xl shadow-primary/20 ring-1 ring-white/5 backdrop-blur-md md:px-10 md:pb-10 md:pt-12">
-              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05]" />
-
-              {/* Floating label */}
-              <div className="absolute -top-4 left-6 flex items-center gap-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 px-4 py-2 shadow-lg shadow-purple-500/40 ring-4 ring-background">
-                <Rocket className="h-4 w-4 text-white" />
-                <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
-              </div>
-
-              <p className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-white text-balance">
-                Because complex tech is literally everywhere, from the software you use daily to the new AI tool
-                that&apos;s suddenly deciding whether you get the next job.
-              </p>
-              <p className="relative z-10 mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
-                And you shouldn&apos;t need an IT degree or a PhD to understand it.
-              </p>
-            </div>
           </div>
         </div>
 
-        {/* How I do it */}
-        <div id="how-i-do-it" className="text-center mt-40 mb-12 scroll-mt-32">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            How I do it<span className="text-primary">.</span>
-          </h2>
+        {/* The three things I do - the list, rendered as image cards */}
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
+          {[
+            { item: topSkills[0], image: "/vr-person-blue-tech.png" },
+            { item: topSkills[1], image: "/3d-graph-computer-illustration.jpg" },
+            { item: topSkills[2], image: "/still-life-supply-chain.jpg" },
+          ].map(({ item, image }, index) => (
+            <li key={item.title} className="relative z-10">
+              <SkillImageCard item={item} image={image} index={index} />
+            </li>
+          ))}
+        </ul>
 
-          {/* Accent bar - separates the title from the cards */}
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-        </div>
+        {/* Mission - boxed, closing out the same section */}
+        <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 px-6 pb-8 pt-10 text-center shadow-2xl shadow-primary/20 ring-1 ring-white/5 backdrop-blur-md md:px-10 md:pb-10 md:pt-12">
+          <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05]" />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
-          {/* Column 1: I write */}
-          <div className="relative z-10">
-            <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
+          {/* Floating label */}
+          <div className="absolute -top-4 left-6 flex items-center gap-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 px-4 py-2 shadow-lg shadow-purple-500/40 ring-4 ring-background">
+            <Rocket className="h-4 w-4 text-white" />
+            <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
           </div>
 
-          {/* Column 2: I build */}
-          <div className="relative z-10">
-            <SkillImageCard item={topSkills[1]} image="/3d-graph-computer-illustration.jpg" />
-          </div>
-
-          {/* Column 3: I translate */}
-          <div className="relative z-10">
-            <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-          </div>
+          <p className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-white text-balance">
+            Because complex tech is literally everywhere, from the software you use daily to the new AI tool
+            that&apos;s suddenly deciding whether you get the next job.
+          </p>
+          <p className="relative z-10 mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
+            And you shouldn&apos;t need an IT degree or a PhD to understand it.
+          </p>
         </div>
 
         {/* Spacer - gradient removed for consistent background */}
