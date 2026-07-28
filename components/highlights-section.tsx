@@ -173,35 +173,23 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-2xl md:text-[28px] font-medium leading-relaxed text-foreground/75 text-balance">
+            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
               I wreck my head for hours understanding complex, daunting technology{" "}
               <span className="text-primary">so you don&apos;t have to.</span>
             </p>
-            <p className="mt-5 text-2xl md:text-[28px] font-semibold leading-relaxed text-foreground text-balance">
+            <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
               And then I write about it.
             </p>
+
+            {/* Mission - folded into the same statement, no separate heading */}
+            <p className="mt-10 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+              Because complex tech is literally everywhere, from the software you use daily to the new AI tool
+              that&apos;s suddenly deciding whether you get the next job.
+            </p>
+            <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
+              And you shouldn&apos;t need an IT degree or a PhD to understand it.
+            </p>
           </div>
-        </div>
-
-        {/* Why I do it */}
-        <div className="text-center mt-32 mb-12">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Why I do it<span className="text-primary">.</span>
-          </h2>
-
-          {/* Accent bar - separates the title from the statement */}
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-        </div>
-
-        {/* Mission statement */}
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-2xl md:text-[28px] font-medium leading-relaxed text-foreground/75 text-balance">
-            Because complex tech is literally everywhere, from the software you use daily to the new AI tool
-            that&apos;s suddenly deciding whether you get the next job.
-          </p>
-          <p className="mt-5 text-2xl md:text-[28px] font-semibold leading-relaxed text-primary text-balance">
-            And you shouldn&apos;t need an IT degree or a PhD to understand it.
-          </p>
         </div>
 
         {/* How I do it */}
