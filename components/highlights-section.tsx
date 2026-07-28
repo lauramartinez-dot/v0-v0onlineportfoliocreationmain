@@ -225,9 +225,10 @@ export function HighlightsSection() {
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
             <p className="mt-8 text-2xl md:text-[28px] font-medium leading-relaxed text-foreground/75 text-balance">
-              I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to.
+              I wreck my head for hours understanding complex, daunting technology{" "}
+              <span className="text-primary">so you don&apos;t have to.</span>
             </p>
-            <p className="mt-5 text-2xl md:text-[28px] font-semibold leading-relaxed text-primary text-balance">
+            <p className="mt-5 text-2xl md:text-[28px] font-semibold leading-relaxed text-foreground text-balance">
               And then I write about it.
             </p>
           </div>
