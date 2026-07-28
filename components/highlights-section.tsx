@@ -3,6 +3,7 @@
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
 import Image from "next/image"
+import { Rocket } from "lucide-react"
 import {
   writingAchievements,
   buildingAchievements,
@@ -181,14 +182,24 @@ export function HighlightsSection() {
               And then I write about it.
             </p>
 
-            {/* Mission - folded into the same statement, no separate heading */}
-            <p className="mt-10 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-              Because complex tech is literally everywhere, from the software you use daily to the new AI tool
-              that&apos;s suddenly deciding whether you get the next job.
-            </p>
-            <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
-              And you shouldn&apos;t need an IT degree or a PhD to understand it.
-            </p>
+            {/* Mission - boxed, but kept inside "What I do" instead of its own section */}
+            <div className="relative mt-16 rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 px-6 pb-8 pt-10 shadow-2xl shadow-primary/20 ring-1 ring-white/5 backdrop-blur-md md:px-10 md:pb-10 md:pt-12">
+              <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05]" />
+
+              {/* Floating label */}
+              <div className="absolute -top-4 left-6 flex items-center gap-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 px-4 py-2 shadow-lg shadow-purple-500/40 ring-4 ring-background">
+                <Rocket className="h-4 w-4 text-white" />
+                <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
+              </div>
+
+              <p className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-white text-balance">
+                Because complex tech is literally everywhere, from the software you use daily to the new AI tool
+                that&apos;s suddenly deciding whether you get the next job.
+              </p>
+              <p className="relative z-10 mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
+                And you shouldn&apos;t need an IT degree or a PhD to understand it.
+              </p>
+            </div>
           </div>
         </div>
 
