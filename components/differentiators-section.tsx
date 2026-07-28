@@ -1,6 +1,11 @@
-import { Rocket, Globe } from "lucide-react"
+import { Newspaper, Rocket, Globe } from "lucide-react"
 
 const differentiators = [
+  {
+    icon: Newspaper,
+    title: "Former Tech Journalist",
+    body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
+  },
   {
     icon: Rocket,
     title: "Permanent early hire",
@@ -8,7 +13,7 @@ const differentiators = [
   },
   {
     icon: Globe,
-    title: "Multicultural",
+    title: "Extremely multicultural",
     body: "Lived in 4 countries. Speak 3 languages weekly (English, Spanish and German). I write for readers who don't share my first language.",
   },
 ]
@@ -16,7 +21,7 @@ const differentiators = [
 export function DifferentiatorsSection() {
   return (
     <section id="differentiators" className="relative px-4 pt-24 pb-20 scroll-mt-32">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             What differentiates me<span className="text-primary">.</span>
@@ -26,7 +31,7 @@ export function DifferentiatorsSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-start">
           {differentiators.map(({ icon: Icon, title, body }) => (
             <div
               key={title}
