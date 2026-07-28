@@ -120,7 +120,9 @@ function SkillImageCard({
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
         <div className="absolute bottom-0 left-0 right-0 p-8">
-          <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
+          <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight text-balance">
+            {item.title}
+          </h3>
         </div>
       </div>
 
