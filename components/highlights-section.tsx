@@ -214,13 +214,54 @@ export function HighlightsSection() {
 
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
-        <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-32">
-          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">What I do</h2>
-            <p className="text-[21px] text-foreground/90 leading-relaxed">
-              I bring three roles into one:
+        <div id="top-differentiators" className="mb-14 mt-[120px] scroll-mt-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
+              What I do
             </p>
+
+            {/* Accent bar */}
+            <div className="mx-auto mt-6 mb-6 h-1.5 w-12 rounded-full bg-primary" />
+
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
+              I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to. And then I
+              write about it.
+            </h2>
           </div>
+        </div>
+
+        {/* Mission box - polished design with purple glow */}
+        <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
+          {/* Purple glow effects - matching hero image */}
+          <div className="absolute -bottom-6 -left-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
+          <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
+          <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
+
+          <div className="relative rounded-3xl border border-primary/40 bg-card/80 backdrop-blur-sm px-8 md:px-10 pt-14 pb-8 shadow-lg shadow-primary/5">
+            {/* Subtle inner glow */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
+
+            {/* Mission badge with larger rocket icon */}
+            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background shadow-lg shadow-primary/30">
+              <Rocket className="w-7 h-7 text-white drop-shadow-md" />
+            </div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <p className="text-[22.5px] font-semibold leading-[1.7] text-foreground/95 text-left">
+                Why? Because I believe in <span className="text-primary font-bold">democratising STEM</span>. Tech is
+                everywhere now, and understanding it shouldn&apos;t be reserved for people with IT degrees and PhDs. The
+                more accessible technical knowledge gets, the more people can contribute to it.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* How do I do it */}
+        <div className="text-center mt-24 mb-10">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
+            How do I do it
+          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
@@ -249,38 +290,6 @@ export function HighlightsSection() {
               image="/still-life-supply-chain.jpg"
               achievements={translateAchievements}
             />
-          </div>
-        </div>
-
-        {/* Mission section - integrated into the same visual flow */}
-        <div className="mt-[62px] pt-[54px] text-center">
-          <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
-            And a clear mission:
-          </p>
-        </div>
-
-        {/* Mission box - polished design with purple glow */}
-        <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
-          {/* Purple glow effects - matching hero image */}
-          <div className="absolute -bottom-6 -left-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
-          <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
-          <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
-          
-          <div className="relative rounded-3xl border border-primary/40 bg-card/80 backdrop-blur-sm px-8 md:px-10 pt-14 pb-8 shadow-lg shadow-primary/5">
-            {/* Subtle inner glow */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
-            
-            {/* Mission badge with larger rocket icon */}
-            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background shadow-lg shadow-primary/30">
-              <Rocket className="w-7 h-7 text-white drop-shadow-md" />
-            </div>
-            
-            {/* Content */}
-            <div className="relative z-10">
-              <p className="text-[22.5px] font-semibold leading-[1.7] text-foreground/95 text-left mb-5">
-                   I ultimately empower people worldwide to use and master new, daunting software — because these days, knowing your way around the right tool, whether that's an HR, marketing, or AI tool, can mean the difference <span className="text-primary font-bold">between landing a job or not</span>.
-              </p>
-            </div>
           </div>
         </div>
 
