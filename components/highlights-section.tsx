@@ -112,7 +112,7 @@ function SkillImageCard({
   return (
     <div className="w-full text-left">
       {/* Image card - title only */}
-      <div className="relative min-h-[520px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
+      <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
         <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover opacity-70" />
 
         <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
