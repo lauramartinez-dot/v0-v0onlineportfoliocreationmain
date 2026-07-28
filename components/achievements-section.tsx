@@ -55,11 +55,6 @@ const buildingAchievements = [
     label: "early hire",
     description: "Specialised in scale-ups and founding roles",
   },
-  {
-    stat: "10x",
-    label: "team growth supported",
-    description: "Across several companies",
-  },
 ]
 
 // Column 3: Translate achievements
