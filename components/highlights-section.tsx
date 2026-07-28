@@ -231,6 +231,16 @@ export function HighlightsSection() {
           </div>
         </div>
 
+        {/* Why I do it */}
+        <div className="text-center mt-32 mb-12">
+          {/* Accent bar */}
+          <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
+
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            Why I do it<span className="text-primary">.</span>
+          </h2>
+        </div>
+
         {/* Mission box - polished design with purple glow */}
         <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
           {/* Purple glow effects - matching hero image */}
@@ -259,7 +269,7 @@ export function HighlightsSection() {
         </div>
 
         {/* How I do it */}
-        <div className="text-center mt-28 mb-12">
+        <div className="text-center mt-40 mb-12">
           {/* Accent bar */}
           <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
 
