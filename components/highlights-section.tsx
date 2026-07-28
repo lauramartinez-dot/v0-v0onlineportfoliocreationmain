@@ -149,36 +149,58 @@ function SkillImageCard({
         </button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-2xl max-h-[85vh] overflow-y-auto border-primary/30 bg-card">
-        <DialogHeader>
-          <DialogTitle className="text-2xl md:text-3xl font-bold tracking-tight text-balance">
-            {item.title}
-          </DialogTitle>
-          <DialogDescription className="text-base leading-relaxed text-foreground/70">
-            {item.description}
-          </DialogDescription>
-        </DialogHeader>
+      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-5xl max-h-[90vh] overflow-y-auto gap-0 border-primary/30 bg-card p-0">
+        {/* Full-bleed image banner */}
+        <div className="relative h-56 w-full shrink-0 overflow-hidden md:h-72">
+          <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover opacity-70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
+        </div>
 
-        <div className="mt-2">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">What I&apos;m proud of</p>
-          <ul className="flex flex-col gap-3">
-            {achievements.map((achievement, index) => (
-              <li
-                key={index}
-                className="flex items-center gap-5 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card px-5 py-4"
+        <div className="flex flex-col gap-8 px-6 pb-8 md:px-10 md:pb-10">
+          <DialogHeader className="-mt-12 relative">
+            <DialogTitle className="text-3xl font-bold tracking-tight text-balance md:text-4xl lg:text-5xl">
+              {item.title}
+            </DialogTitle>
+            <DialogDescription className="mt-3 text-lg leading-relaxed text-foreground/70 md:text-xl">
+              {item.description}
+            </DialogDescription>
+          </DialogHeader>
+
+          {/* Skill tags */}
+          <div className="flex flex-wrap gap-2">
+            {item.skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
               >
-                <span className="min-w-[100px] shrink-0 text-right text-4xl md:text-5xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
-                  {achievement.stat}
-                </span>
-                <span className="flex-1 text-base md:text-lg font-semibold leading-snug text-foreground">
-                  {achievement.label}
-                  {achievement.description
-                    ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
-                    : ""}
-                </span>
-              </li>
+                {skill}
+              </span>
             ))}
-          </ul>
+          </div>
+
+          <div>
+            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+              What I&apos;m proud of
+            </p>
+            <ul className="grid gap-4 sm:grid-cols-2">
+              {achievements.map((achievement, index) => (
+                <li
+                  key={index}
+                  className="flex items-center gap-5 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card px-6 py-5"
+                >
+                  <span className="min-w-[110px] shrink-0 text-right text-5xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)] md:text-6xl">
+                    {achievement.stat}
+                  </span>
+                  <span className="flex-1 text-lg font-semibold leading-snug text-foreground">
+                    {achievement.label}
+                    {achievement.description
+                      ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
+                      : ""}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </DialogContent>
     </Dialog>
