@@ -2,16 +2,7 @@
 
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
-import { ArrowRight } from "lucide-react"
 import Image from "next/image"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
 import {
   writingAchievements,
   buildingAchievements,
@@ -118,93 +109,81 @@ function SkillImageCard({
   image: string
   achievements: Achievement[]
 }) {
-  const [open, setOpen] = useState(false)
+  const [expanded, setExpanded] = useState(false)
 
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger asChild>
-        <button
-          type="button"
-          aria-label={`Read more about: ${item.title}`}
-          className="group relative block w-full min-h-[720px] overflow-hidden rounded-xl text-left shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:ring-primary/60 hover:shadow-[0_12px_48px_-12px_rgba(200,80,192,0.5)] hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-primary"
+    <div
+      tabIndex={0}
+      role="group"
+      aria-label={item.title}
+      onMouseEnter={() => setExpanded(true)}
+      onMouseLeave={() => setExpanded(false)}
+      onFocus={() => setExpanded(true)}
+      onBlur={() => setExpanded(false)}
+      className={`relative block w-full min-h-[720px] overflow-hidden rounded-xl text-left shadow-lg ring-2 transition-all duration-300 focus:outline-none ${
+        expanded
+          ? "ring-primary/60 shadow-[0_12px_48px_-12px_rgba(200,80,192,0.5)] -translate-y-1"
+          : "ring-primary/20"
+      }`}
+    >
+      <Image
+        src={image || "/placeholder.svg"}
+        alt={item.title}
+        fill
+        className={`object-cover opacity-70 transition-transform duration-500 ${expanded ? "scale-105" : ""}`}
+      />
+
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
+
+      {/* Scrim darkens further while expanded so the stats stay legible */}
+      <div
+        className={`absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent transition-opacity duration-500 ${
+          expanded ? "opacity-100" : "opacity-90"
+        }`}
+      />
+
+      <div className="absolute bottom-0 left-0 right-0 p-8">
+        <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
+        <p className="mt-4 text-lg leading-relaxed text-white/80 text-pretty">{item.description}</p>
+
+        {/* Hint - fades out as the panel expands */}
+        <p
+          className={`mt-5 text-base font-semibold text-primary transition-opacity duration-300 ${
+            expanded ? "opacity-0" : "opacity-100"
+          }`}
         >
-          <Image
-            src={image || "/placeholder.svg"}
-            alt={item.title}
-            fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
-          />
+          Hover for the numbers
+        </p>
 
-          <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
-
-          <div className="absolute bottom-0 left-0 right-0 p-8">
-            <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
-            <p className="mt-4 text-lg leading-relaxed text-white/80 text-pretty">{item.description}</p>
-            <span className="mt-5 inline-flex items-center gap-2 text-base font-semibold text-primary">
-              See the numbers
-              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-            </span>
-          </div>
-        </button>
-      </DialogTrigger>
-
-      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-5xl max-h-[90vh] overflow-y-auto gap-0 border-primary/30 bg-card p-0">
-        {/* Full-bleed image banner */}
-        <div className="relative h-56 w-full shrink-0 overflow-hidden md:h-72">
-          <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover opacity-70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-card via-card/60 to-transparent" />
-        </div>
-
-        <div className="flex flex-col gap-8 px-6 pb-8 md:px-10 md:pb-10">
-          <DialogHeader className="-mt-12 relative">
-            <DialogTitle className="text-3xl font-bold tracking-tight text-balance md:text-4xl lg:text-5xl">
-              {item.title}
-            </DialogTitle>
-            <DialogDescription className="mt-3 text-lg leading-relaxed text-foreground/70 md:text-xl">
-              {item.description}
-            </DialogDescription>
-          </DialogHeader>
-
-          {/* Skill tags */}
-          <div className="flex flex-wrap gap-2">
-            {item.skills.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary"
+        {/* Achievements - expand on hover / keyboard focus */}
+        <div
+          className="overflow-hidden transition-all duration-500 ease-out"
+          style={{ maxHeight: expanded ? 460 : 0, opacity: expanded ? 1 : 0 }}
+        >
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
+            What I&apos;m proud of
+          </p>
+          <ul className="flex flex-col gap-3">
+            {achievements.map((achievement, index) => (
+              <li
+                key={index}
+                className="flex items-center gap-4 rounded-2xl border border-primary/30 bg-black/50 px-4 py-3 backdrop-blur-sm"
               >
-                {skill}
-              </span>
+                <span className="min-w-[72px] shrink-0 text-right text-3xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
+                  {achievement.stat}
+                </span>
+                <span className="flex-1 text-sm font-semibold leading-snug text-white">
+                  {achievement.label}
+                  {achievement.description
+                    ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
+                    : ""}
+                </span>
+              </li>
             ))}
-          </div>
-
-          <div>
-            <p className="mb-5 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
-              What I&apos;m proud of
-            </p>
-            <ul className="grid gap-4 sm:grid-cols-2">
-              {achievements.map((achievement, index) => (
-                <li
-                  key={index}
-                  className="flex items-center gap-5 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card px-6 py-5"
-                >
-                  <span className="min-w-[110px] shrink-0 text-right text-5xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)] md:text-6xl">
-                    {achievement.stat}
-                  </span>
-                  <span className="flex-1 text-lg font-semibold leading-snug text-foreground">
-                    {achievement.label}
-                    {achievement.description
-                      ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
-                      : ""}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </ul>
         </div>
-      </DialogContent>
-    </Dialog>
+      </div>
+    </div>
   )
 }
 
