@@ -219,7 +219,7 @@ export function HighlightsSection() {
             {/* Accent bar */}
             <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
 
-            <h2 className="text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:text-7xl lg:text-8xl">
+            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
               What I do<span className="text-primary">.</span>
             </h2>
 
@@ -262,7 +262,7 @@ export function HighlightsSection() {
           {/* Accent bar */}
           <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
 
-          <h2 className="text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] text-foreground md:text-7xl lg:text-8xl">
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             How I do it<span className="text-primary">.</span>
           </h2>
         </div>
