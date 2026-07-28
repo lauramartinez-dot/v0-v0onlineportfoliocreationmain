@@ -16,13 +16,13 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      <OriginSection />
-      <AboutHeroSection />
-      <TransitionSection />
-      {/* Why me? section with 3 images + mission */}
+      {/* What I do - 3 images + mission */}
       <HighlightsSection />
       {/* My work in numbers */}
       <AchievementsSection />
+      <TransitionSection />
+      <OriginSection />
+      <AboutHeroSection />
       <ScrollTransitionSection />
       <TransitionSection />
       {/* Top Achievements per company */}
