@@ -217,12 +217,12 @@ export function HighlightsSection() {
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-14 mt-[120px] scroll-mt-32">
           <div className="max-w-4xl mx-auto text-center">
-            {/* Accent bar */}
-            <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
-
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
               What I do<span className="text-primary">.</span>
             </h2>
+
+            {/* Accent bar - separates the title from the statement */}
+            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
             <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
               I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to.
@@ -235,12 +235,12 @@ export function HighlightsSection() {
 
         {/* Why I do it */}
         <div className="text-center mt-32 mb-12">
-          {/* Accent bar */}
-          <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
-
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Why I do it<span className="text-primary">.</span>
           </h2>
+
+          {/* Accent bar - separates the title from the statement */}
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
         {/* Mission statement */}
@@ -256,12 +256,12 @@ export function HighlightsSection() {
 
         {/* How I do it */}
         <div className="text-center mt-40 mb-12">
-          {/* Accent bar */}
-          <div className="mx-auto mb-5 h-1.5 w-12 rounded-full bg-primary" />
-
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             How I do it<span className="text-primary">.</span>
           </h2>
+
+          {/* Accent bar - separates the title from the cards */}
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
