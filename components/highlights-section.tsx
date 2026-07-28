@@ -120,46 +120,50 @@ function SkillImageCard({
       onMouseLeave={() => setExpanded(false)}
       onFocus={() => setExpanded(true)}
       onBlur={() => setExpanded(false)}
-      className={`relative block w-full min-h-[720px] overflow-hidden rounded-xl text-left shadow-lg ring-2 transition-all duration-300 focus:outline-none ${
-        expanded
-          ? "ring-primary/60 shadow-[0_12px_48px_-12px_rgba(200,80,192,0.5)] -translate-y-1"
-          : "ring-primary/20"
+      className={`block w-full text-left transition-transform duration-300 focus:outline-none ${
+        expanded ? "-translate-y-1" : ""
       }`}
     >
-      <Image
-        src={image || "/placeholder.svg"}
-        alt={item.title}
-        fill
-        className={`object-cover opacity-70 transition-transform duration-500 ${expanded ? "scale-105" : ""}`}
-      />
-
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-
-      {/* Scrim darkens further while expanded so the stats stay legible */}
+      {/* Image card */}
       <div
-        className={`absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent transition-opacity duration-500 ${
-          expanded ? "opacity-100" : "opacity-90"
+        className={`relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 transition-all duration-300 ${
+          expanded
+            ? "ring-primary/60 shadow-[0_12px_48px_-12px_rgba(200,80,192,0.5)]"
+            : "ring-primary/20"
         }`}
-      />
+      >
+        <Image
+          src={image || "/placeholder.svg"}
+          alt={item.title}
+          fill
+          className={`object-cover opacity-70 transition-transform duration-500 ${expanded ? "scale-105" : ""}`}
+        />
 
-      <div className="absolute bottom-0 left-0 right-0 p-8">
-        <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
-        <p className="mt-4 text-lg leading-relaxed text-white/80 text-pretty">{item.description}</p>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
-        {/* Hint - fades out as the panel expands */}
-        <p
-          className={`mt-5 text-base font-semibold text-primary transition-opacity duration-300 ${
-            expanded ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          Hover for the numbers
-        </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
-        {/* Achievements - expand on hover / keyboard focus */}
-        <div
-          className="overflow-hidden transition-all duration-500 ease-out"
-          style={{ maxHeight: expanded ? 460 : 0, opacity: expanded ? 1 : 0 }}
-        >
+        <div className="absolute bottom-0 left-0 right-0 p-8">
+          <h3 className="text-3xl font-bold text-white leading-tight text-balance">{item.title}</h3>
+          <p className="mt-4 text-lg leading-relaxed text-white/80 text-pretty">{item.description}</p>
+
+          {/* Hint - fades out once the panel below opens */}
+          <p
+            className={`mt-5 text-base font-semibold text-primary transition-opacity duration-300 ${
+              expanded ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            Hover for the numbers
+          </p>
+        </div>
+      </div>
+
+      {/* Achievements - expand below the image on hover / keyboard focus */}
+      <div
+        className="overflow-hidden transition-all duration-500 ease-out"
+        style={{ maxHeight: expanded ? 520 : 0, opacity: expanded ? 1 : 0 }}
+      >
+        <div className="mt-4 rounded-xl border border-primary/30 bg-card p-6">
           <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-primary">
             What I&apos;m proud of
           </p>
@@ -167,12 +171,12 @@ function SkillImageCard({
             {achievements.map((achievement, index) => (
               <li
                 key={index}
-                className="flex items-center gap-4 rounded-2xl border border-primary/30 bg-black/50 px-4 py-3 backdrop-blur-sm"
+                className="flex items-center gap-4 rounded-2xl border border-primary/30 bg-gradient-to-br from-primary/10 via-card to-card px-4 py-3"
               >
                 <span className="min-w-[72px] shrink-0 text-right text-3xl font-extrabold leading-none text-primary drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
                   {achievement.stat}
                 </span>
-                <span className="flex-1 text-sm font-semibold leading-snug text-white">
+                <span className="flex-1 text-sm font-semibold leading-snug text-foreground">
                   {achievement.label}
                   {achievement.description
                     ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}`
@@ -244,7 +248,7 @@ export function HighlightsSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
           {/* Column 1: A Foundation in Tech Journalism */}
           <div className="relative z-10">
             <SkillImageCard
