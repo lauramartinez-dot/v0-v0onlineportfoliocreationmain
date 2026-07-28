@@ -9,7 +9,7 @@ export function Navigation() {
 
   const navItems = [
     { label: "What I do", href: "#top-differentiators" },
-    { label: "What I'm proud of", href: "#how-i-do-it" },
+    { label: "What differentiates me", href: "#differentiators" },
     { label: "Where I've worked", href: "#company-highlights" },
     { label: "What I've used", href: "#top-skills" },
     { label: "My personal projects", href: "#personal-projects" },

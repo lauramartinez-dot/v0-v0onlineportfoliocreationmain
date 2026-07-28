@@ -1,6 +1,7 @@
 import { HeroSection } from "@/components/hero-section"
 import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
+import { DifferentiatorsSection } from "@/components/differentiators-section"
 import { TopSkillsSection } from "@/components/top-skills-section"
 import { OOOSection } from "@/components/ooo-section"
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
@@ -13,8 +14,10 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      {/* What I do + How I do it, with the proud-of numbers under each column */}
+      {/* What I do + How I do it */}
       <HighlightsSection />
+      {/* What differentiates me */}
+      <DifferentiatorsSection />
       <TransitionSection />
       <ScrollTransitionSection />
       <TransitionSection />

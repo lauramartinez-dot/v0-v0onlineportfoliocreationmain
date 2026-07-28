@@ -4,11 +4,6 @@ import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
 import Image from "next/image"
 import { Rocket } from "lucide-react"
-import {
-  writingAchievements,
-  buildingAchievements,
-  translateAchievements,
-} from "@/components/achievements-section"
 
 function DiagonalRevealImage({
   beforeSrc,
@@ -99,60 +94,19 @@ function DiagonalRevealImage({
   )
 }
 
-type Achievement = { stat: string; label: string; description?: string }
-
-function SkillImageCard({
-  item,
-  image,
-  achievements,
-}: {
-  item: (typeof topSkills)[number]
-  image: string
-  achievements: Achievement[]
-}) {
+function SkillImageCard({ item, image }: { item: (typeof topSkills)[number]; image: string }) {
   return (
-    <div className="w-full text-left">
-      {/* Image card - title only */}
-      <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
-        <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover opacity-70" />
+    <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
+      <Image src={image || "/placeholder.svg"} alt={item.title} fill className="object-cover opacity-70" />
 
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
-        <div className="absolute bottom-0 left-0 right-0 p-8">
-          <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight text-balance">
-            {item.title}
-          </h3>
-        </div>
-      </div>
-
-      {/* Achievements - always visible below the image */}
-      <div className="mt-4 flex flex-col gap-4">
-        {achievements.map((achievement, index) => (
-          <div
-            key={index}
-            className="group relative rounded-2xl bg-gradient-to-br from-primary/10 via-card to-card border border-primary/30 hover:border-primary/60 hover:shadow-[0_8px_40px_-8px_rgba(200,80,192,0.45)] hover:-translate-y-1 transition-all duration-300 overflow-hidden"
-          >
-            {/* Top accent line */}
-            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 group-hover:opacity-100 transition-opacity" />
-            {/* Glow accent */}
-            <div className="pointer-events-none absolute -left-8 -top-8 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-            {/* Content - horizontal stat layout with fixed widths */}
-            <div className="relative flex items-start gap-6 px-8 py-8">
-              <span className="text-6xl md:text-7xl font-extrabold text-primary min-w-[150px] text-right shrink-0 leading-none drop-shadow-[0_0_25px_rgba(200,80,192,0.55)]">
-                {achievement.stat}
-              </span>
-              <div className="flex flex-col flex-1 justify-center">
-                <span className="text-xl md:text-2xl font-semibold text-foreground leading-snug">
-                  {achievement.label}
-                  {achievement.description ? `, ${achievement.description.replace(/\n/g, " ").toLowerCase()}` : ""}
-                </span>
-              </div>
-            </div>
-          </div>
-        ))}
+      <div className="absolute bottom-0 left-0 right-0 p-8">
+        <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-white leading-tight text-balance">
+          {item.title}
+        </h3>
       </div>
     </div>
   )
@@ -214,31 +168,19 @@ export function HighlightsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative items-start">
-          {/* Column 1: A Foundation in Tech Journalism */}
+          {/* Column 1: I write */}
           <div className="relative z-10">
-            <SkillImageCard
-              item={topSkills[0]}
-              image="/vr-person-blue-tech.png"
-              achievements={writingAchievements}
-            />
+            <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
           </div>
 
-          {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
+          {/* Column 2: I build */}
           <div className="relative z-10">
-            <SkillImageCard
-              item={topSkills[1]}
-              image="/3d-graph-computer-illustration.jpg"
-              achievements={buildingAchievements}
-            />
+            <SkillImageCard item={topSkills[1]} image="/3d-graph-computer-illustration.jpg" />
           </div>
 
-          {/* Column 3: An International Career Across 4 Countries */}
+          {/* Column 3: I translate */}
           <div className="relative z-10">
-            <SkillImageCard
-              item={topSkills[2]}
-              image="/still-life-supply-chain.jpg"
-              achievements={translateAchievements}
-            />
+            <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
           </div>
         </div>
 
