@@ -244,9 +244,9 @@ export function HighlightsSection() {
         {/* Mission statement */}
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
-            Why? Because I believe in <span className="text-primary">democratising STEM</span>. Tech is everywhere now,
-            and understanding it shouldn&apos;t be reserved for people with IT degrees and PhDs. The more accessible
-            technical knowledge gets, the more people can contribute to it.
+            Because <span className="text-primary">complex tech is literally everywhere</span> &mdash; from the software
+            you use daily to the AI that&apos;s suddenly deciding whether you get the next job &mdash; and you
+            shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>
 
