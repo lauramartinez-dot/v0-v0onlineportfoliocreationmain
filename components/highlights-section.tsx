@@ -224,7 +224,7 @@ export function HighlightsSection() {
               What I do<span className="text-primary">.</span>
             </h2>
 
-            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight leading-snug text-foreground/90 text-balance">
+            <p className="mt-8 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
               I wreck my head for hours understanding complex, daunting technology so you don&apos;t have to.
             </p>
             <p className="mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
@@ -245,7 +245,7 @@ export function HighlightsSection() {
 
         {/* Mission statement */}
         <div className="max-w-4xl mx-auto text-center">
-          <p className="text-2xl md:text-3xl lg:text-4xl font-normal tracking-tight leading-snug text-foreground/90 text-balance">
+          <p className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-foreground text-balance">
             Because complex tech is literally everywhere, from the software you use daily to the new AI tool
             that&apos;s suddenly deciding whether you get the next job.
           </p>
