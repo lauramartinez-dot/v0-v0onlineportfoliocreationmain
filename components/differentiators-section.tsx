@@ -20,7 +20,7 @@ const differentiators = [
     icon: Globe,
     kicker: "4 countries",
     title: "Extremely multicultural",
-    body: "Lived in 4 countries. Speak 3 languages weekly (English, Spanish and German). I write for readers who don't share my first language.",
+    body: "I lived in 4 countries and speak 3 languages weekly (English, Spanish and German). I write for readers who don't share my first language.",
     image: "/differentiator-multicultural.png",
   },
 ]
