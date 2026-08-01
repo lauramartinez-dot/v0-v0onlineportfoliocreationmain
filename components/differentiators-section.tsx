@@ -28,7 +28,7 @@ const differentiators = [
   },
   {
     title: "Women in Tech advocate",
-    body: "I speak, mentor and write to make technical careers more reachable for the women coming up behind me.",
+    body: "I co‑founded Personio’s  first Women's Commitee and I am part of many female-only Barcelona communities",
     image: "/differentiator-women-in-tech.png",
   },
 ]
