@@ -24,7 +24,7 @@ const differentiators = [
   {
     title: "Worked at an European unicorn",
     body: "I've documented products at hypergrowth scale, while the roadmap, the team and the tooling all changed underneath me.",
-    image: "/differentiator-unicorn.png",
+    image: "/differentiator-unicorn-office.png",
   },
   {
     title: "Women in Tech advocate",
