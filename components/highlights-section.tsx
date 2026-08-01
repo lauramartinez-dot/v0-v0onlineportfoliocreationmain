@@ -140,15 +140,15 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-2xl md:text-3xl font-medium tracking-tight leading-snug text-white/82 text-balance">
+            <p className="mt-8 text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/82 text-balance">
               I wreck my head for hours understanding complex, daunting technology{" "}
-              <span className="text-primary">so you don&apos;t have to.</span>
+              <span className="text-primary font-bold">so you don&apos;t have to.</span>
             </p>
-            <p className="mt-5 text-2xl md:text-3xl font-medium tracking-tight leading-snug text-white/79 text-balance">
+            <p className="mt-5 text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
               Lately, that means APIs and integrations.
             </p>
             {/* Lead-in to the three cards, which act as the list itself */}
-            <p className="mt-6 text-2xl md:text-3xl font-medium tracking-tight leading-snug text-white/80 text-balance">
+            <p className="mt-6 text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/80 text-balance">
               And then I<span className="text-primary">:</span>
             </p>
           </div>
@@ -175,11 +175,11 @@ export function HighlightsSection() {
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">Mission</span>
           </div>
 
-          <p className="text-3xl md:text-4xl font-medium tracking-tight leading-snug text-white/79 text-balance">
+          <p className="text-2xl md:text-3xl font-medium tracking-tight leading-snug text-white/79 text-balance">
             Because complex tech is literally everywhere, from the software you use daily to the new AI tool
             that&apos;s suddenly deciding whether you get the next job.
           </p>
-          <p className="mt-5 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-foreground text-balance">
+          <p className="mt-5 text-2xl md:text-3xl font-bold tracking-tight leading-snug text-primary text-balance">
             And you shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>

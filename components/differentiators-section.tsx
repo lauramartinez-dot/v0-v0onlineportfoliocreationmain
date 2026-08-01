@@ -17,7 +17,7 @@ const differentiators = [
     image: "/differentiator-languages-books.jpg",
   },
   {
-    title: "Early hire, every time",
+    title: "Hired early by startups",
     body: "Always hired as the first writer, or one of the first. Need no playbook.",
     image: "/differentiator-early-hire-welcome.jpg",
   },
