@@ -94,10 +94,20 @@ function DiagonalRevealImage({
   )
 }
 
-function SkillCard({ item, index }: { item: (typeof topSkills)[number]; index: number }) {
+function SkillCard({
+  item,
+  index,
+  image,
+}: {
+  item: (typeof topSkills)[number]
+  index: number
+  image?: string
+}) {
   return (
     <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
-      {/* Same layered wash the image cards used, now with no image behind it */}
+      {/* Optional background image, sitting under the same layered wash */}
+      {image && <Image src={image || "/placeholder.svg"} alt="" fill aria-hidden="true" className="object-cover opacity-70" />}
+
       <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
@@ -145,7 +155,11 @@ export function HighlightsSection() {
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
           {topSkills.slice(0, 3).map((item, index) => (
             <li key={item.title}>
-              <SkillCard item={item} index={index} />
+              <SkillCard
+                item={item}
+                index={index}
+                image={index === 0 ? "/what-i-do-documentation.jpg" : undefined}
+              />
             </li>
           ))}
         </ul>
