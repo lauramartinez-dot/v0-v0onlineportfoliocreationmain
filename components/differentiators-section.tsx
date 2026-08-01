@@ -22,7 +22,7 @@ const differentiators = [
     image: "/differentiator-early-hire.png",
   },
   {
-    title: "Worked at one of Europe's unicorn startups",
+    title: "Worked at an European unicorn",
     body: "I've documented products at hypergrowth scale, while the roadmap, the team and the tooling all changed underneath me.",
     image: "/differentiator-unicorn.png",
   },
@@ -30,11 +30,6 @@ const differentiators = [
     title: "Women in Tech advocate",
     body: "Co-founded Personio's first Women's Committee.",
     image: "/differentiator-women-in-tech.png",
-  },
-  {
-    title: "Work globally from Barcelona",
-    body: "Based in Barcelona, working across time zones with distributed teams.",
-    image: "/differentiator-barcelona-skyline.png",
   },
 ]
 
@@ -52,14 +47,10 @@ export function DifferentiatorsSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {differentiators.map(({ title, body, image }, index) => (
+          {differentiators.map(({ title, body, image }) => (
             <article
               key={title}
-              className={`group relative overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
-                index === differentiators.length - 1
-                  ? "min-h-[520px] md:col-span-2 lg:col-span-3"
-                  : "min-h-[720px]"
-              }`}
+              className="group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
             >
               {/* Full-bleed image */}
               <Image
@@ -75,11 +66,7 @@ export function DifferentiatorsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
               {/* Copy anchored to the bottom, over the image */}
-              <div
-                className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8 ${
-                  index === differentiators.length - 1 ? "max-w-2xl" : ""
-                }`}
-              >
+              <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8">
                 <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
                   {title}
                 </h3>
