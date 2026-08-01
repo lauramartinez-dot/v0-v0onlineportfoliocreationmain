@@ -4,7 +4,7 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
-    image: "/differentiator-journalist-article.png",
+    image: "/differentiator-journalist-bi-crop.png",
   },
   {
     title: "Lived and worked in 4 countries",
@@ -14,7 +14,7 @@ const differentiators = [
   {
     title: "Speak 3 languages weekly",
     body: "English, Spanish and German. Switching between them daily keeps me sharp on what actually survives translation.",
-    image: "/differentiator-languages.png",
+    image: "/differentiator-languages-books.jpg",
   },
   {
     title: "Serial early hire",
