@@ -17,7 +17,7 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pb-[30px]">
       <div className="mx-auto max-w-7xl">
-        <div className="flex items-center justify-between gap-8 rounded-full border-2 border-primary/60 bg-background/80 backdrop-blur-md px-8 py-3.5 mt-5">
+        <div className="flex items-center justify-between gap-8 rounded-full border-2 border-primary/60 bg-background/80 backdrop-blur-md px-10 py-7 mt-5">
           <a href="#home" className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity">
             <Sparkles className="h-5 w-5 shrink-0 text-primary" />
             <span className="whitespace-nowrap text-base font-semibold text-primary">Laura Martínez</span>
