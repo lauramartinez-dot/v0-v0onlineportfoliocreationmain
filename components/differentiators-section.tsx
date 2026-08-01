@@ -4,7 +4,7 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
-    image: "/differentiator-journalist.png",
+    image: "/differentiator-journalist-bi.png",
   },
   {
     title: "Lived and worked in 4 countries",
@@ -50,7 +50,7 @@ export function DifferentiatorsSection() {
           {differentiators.map(({ title, body, image }) => (
             <article
               key={title}
-              className="group relative min-h-[620px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
+              className="group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
             >
               {/* Full-bleed image */}
               <Image
@@ -63,14 +63,14 @@ export function DifferentiatorsSection() {
 
               {/* Colour wash + scrim so the copy stays legible */}
               <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
               {/* Copy anchored to the bottom, over the image */}
               <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8">
-                <h3 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight text-white text-balance">
+                <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
                   {title}
                 </h3>
-                <p className="text-lg leading-relaxed text-white/80 text-pretty">{body}</p>
+                <p className="text-xl leading-relaxed text-white/85 text-pretty">{body}</p>
               </div>
             </article>
           ))}
