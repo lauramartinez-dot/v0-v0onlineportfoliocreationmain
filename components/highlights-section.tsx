@@ -97,29 +97,19 @@ function DiagonalRevealImage({
 function SkillCard({
   item,
   index,
-  image,
 }: {
   item: (typeof topSkills)[number]
   index: number
-  image?: string
 }) {
   return (
-    <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
-      {/* Optional background image, sitting under the same layered wash */}
-      {image && <Image src={image || "/placeholder.svg"} alt="" fill aria-hidden="true" className="object-cover opacity-70" />}
-
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
-
-      <div className="absolute bottom-0 left-0 right-0 p-8">
-        {/* List marker - ties the card back to the "And then I:" lead-in */}
-        <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-xl font-extrabold text-primary">
-          {index + 1}
-        </span>
-        <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
-          {item.title}
-        </h3>
-      </div>
+    <div className="flex h-full flex-col gap-5 rounded-xl border border-primary/20 bg-card/50 p-8">
+      {/* List marker - ties the card back to the "And then I:" lead-in */}
+      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary text-lg font-extrabold text-primary">
+        {index + 1}
+      </span>
+      <h3 className="text-2xl md:text-[1.75rem] font-bold leading-snug text-foreground text-balance">
+        {item.title}
+      </h3>
     </div>
   )
 }
@@ -155,14 +145,10 @@ export function HighlightsSection() {
         </div>
 
         {/* The three things I do - simple boxes acting as the list */}
-        <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {topSkills.slice(0, 3).map((item, index) => (
-            <li key={item.title}>
-              <SkillCard
-                item={item}
-                index={index}
-                image={index === 0 ? "/api-docs-bg.png" : undefined}
-              />
+            <li key={item.title} className="h-full">
+              <SkillCard item={item} index={index} />
             </li>
           ))}
         </ul>
