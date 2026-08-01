@@ -7,8 +7,8 @@ const differentiators = [
     image: "/differentiator-journalist.png",
   },
   {
-    title: "Extremely multicultural",
-    body: "I lived in 4 countries, so I write for readers who don't share my first language or my context.",
+    title: "Lived and worked in 4 countries",
+    body: "Spain, France, Ireland and Germany. I write for readers who don't share my first language or my context.",
     image: "/differentiator-multicultural.png",
   },
   {
