@@ -96,21 +96,20 @@ function DiagonalRevealImage({
 
 function SkillCard({ item, index }: { item: (typeof topSkills)[number]; index: number }) {
   return (
-    <div className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-primary/10 via-card to-card p-8 shadow-xl shadow-primary/10 transition-all duration-300 hover:-translate-y-2 hover:border-primary/70 hover:shadow-[0_20px_60px_-14px_rgba(200,80,192,0.5)]">
-      {/* Top accent line */}
-      <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+    <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
+      {/* Same layered wash the image cards used, now with no image behind it */}
+      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
-      {/* Corner glow */}
-      <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-      {/* List marker - ties the card back to the "And then I:" lead-in */}
-      <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary text-2xl font-extrabold text-primary-foreground shadow-lg shadow-primary/40">
-        {index + 1}
-      </span>
-
-      <h3 className="relative z-10 text-2xl lg:text-[1.75rem] font-bold leading-snug tracking-tight text-foreground text-balance">
-        {item.title}
-      </h3>
+      <div className="absolute bottom-0 left-0 right-0 p-8">
+        {/* List marker - ties the card back to the "And then I:" lead-in */}
+        <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-xl font-extrabold text-primary">
+          {index + 1}
+        </span>
+        <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
+          {item.title}
+        </h3>
+      </div>
     </div>
   )
 }
@@ -143,7 +142,7 @@ export function HighlightsSection() {
         </div>
 
         {/* The three things I do - simple boxes acting as the list */}
-        <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
           {topSkills.slice(0, 3).map((item, index) => (
             <li key={item.title}>
               <SkillCard item={item} index={index} />

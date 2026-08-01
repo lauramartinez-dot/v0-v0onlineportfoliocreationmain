@@ -1,24 +1,17 @@
-import { Newspaper, Rocket, Globe } from "lucide-react"
 import Image from "next/image"
 
 const differentiators = [
   {
-    icon: Newspaper,
-    kicker: "15 years in",
     title: "Former Tech Journalist",
     body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
     image: "/differentiator-journalist.png",
   },
   {
-    icon: Rocket,
-    kicker: "Employee #1",
     title: "Permanent early hire",
     body: "Constantly one-of-the-first or first-of. I join before the playbook exists and write the first version of it.",
     image: "/differentiator-early-hire.png",
   },
   {
-    icon: Globe,
-    kicker: "4 countries",
     title: "Extremely multicultural",
     body: "I lived in 4 countries and speak 3 languages weekly (English, Spanish and German). I write for readers who don't share my first language.",
     image: "/differentiator-multicultural.png",
@@ -39,7 +32,7 @@ export function DifferentiatorsSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {differentiators.map(({ icon: Icon, kicker, title, body, image }) => (
+          {differentiators.map(({ title, body, image }) => (
             <article
               key={title}
               className="group relative min-h-[620px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
@@ -57,16 +50,8 @@ export function DifferentiatorsSection() {
               <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90" />
 
-              {/* Kicker badge */}
-              <span className="absolute left-6 top-6 z-10 rounded-full bg-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-lg shadow-primary/40">
-                {kicker}
-              </span>
-
               {/* Copy anchored to the bottom, over the image */}
               <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl border-2 border-primary/60 bg-black/40 backdrop-blur-sm">
-                  <Icon className="h-7 w-7 text-primary" aria-hidden="true" />
-                </span>
                 <h3 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight text-white text-balance">
                   {title}
                 </h3>
