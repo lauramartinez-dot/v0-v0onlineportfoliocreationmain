@@ -8,7 +8,7 @@ const differentiators = [
   },
   {
     title: "Lived and worked in 4 countries",
-    body: "Spain, France, Ireland and Germany. I write for readers who don't share my first language or my context.",
+    body: "By my 30s, I had lived in 4 countries: Spain, France, ireland and Germany. Now I am back to Spain (Barcelona).",
     image: "/differentiator-multicultural.png",
   },
   {
