@@ -13,8 +13,23 @@ const differentiators = [
   },
   {
     title: "Extremely multicultural",
-    body: "I lived in 4 countries and speak 3 languages weekly (English, Spanish and German). I write for readers who don't share my first language.",
+    body: "I lived in 4 countries, so I write for readers who don't share my first language or my context.",
     image: "/differentiator-multicultural.png",
+  },
+  {
+    title: "Speak 3 languages weekly",
+    body: "English, Spanish and German. Switching between them daily keeps me sharp on what actually survives translation.",
+    image: "/differentiator-languages.png",
+  },
+  {
+    title: "Hypergrowth startup experience",
+    body: "I've documented products while the roadmap, the team and the tooling all changed underneath me.",
+    image: "/differentiator-hypergrowth.png",
+  },
+  {
+    title: "Women in Tech advocate",
+    body: "I speak, mentor and write to make technical careers more reachable for the women coming up behind me.",
+    image: "/differentiator-women-in-tech.png",
   },
 ]
 
