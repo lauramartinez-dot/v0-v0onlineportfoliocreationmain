@@ -42,39 +42,35 @@ export function DifferentiatorsSection() {
           {differentiators.map(({ icon: Icon, kicker, title, body, image }) => (
             <article
               key={title}
-              className="group relative flex flex-col overflow-hidden rounded-3xl border-2 border-primary/40 bg-gradient-to-b from-purple-950/60 via-card to-card shadow-2xl shadow-primary/20 ring-1 ring-white/5 transition-all duration-300 hover:-translate-y-2 hover:border-primary/80 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.6)]"
+              className="group relative min-h-[620px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
             >
-              {/* Top accent line */}
-              <div className="absolute left-0 right-0 top-0 z-20 h-1 bg-gradient-to-r from-transparent via-primary to-transparent" />
+              {/* Full-bleed image */}
+              <Image
+                src={image || "/placeholder.svg"}
+                alt=""
+                fill
+                aria-hidden="true"
+                className="object-cover opacity-70 transition-transform duration-500 group-hover:scale-105"
+              />
 
-              {/* Image header */}
-              <div className="relative h-56 w-full shrink-0 overflow-hidden">
-                <Image
-                  src={image || "/placeholder.svg"}
-                  alt=""
-                  fill
-                  aria-hidden="true"
-                  className="object-cover opacity-80 transition-transform duration-500 group-hover:scale-105"
-                />
-                {/* Tint + fade so the image blends into the card body */}
-                <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-transparent to-card" />
+              {/* Colour wash + scrim so the copy stays legible */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent opacity-90" />
 
-                {/* Kicker badge */}
-                <span className="absolute left-6 top-6 rounded-full bg-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-lg shadow-primary/40">
-                  {kicker}
-                </span>
-              </div>
-
-              {/* Icon straddling the image and the body */}
-              <span className="relative z-10 -mt-8 ml-8 flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl border-2 border-primary/50 bg-card shadow-xl shadow-primary/30">
-                <Icon className="h-9 w-9 text-primary" aria-hidden="true" />
+              {/* Kicker badge */}
+              <span className="absolute left-6 top-6 z-10 rounded-full bg-primary px-4 py-1.5 text-sm font-bold uppercase tracking-wider text-primary-foreground shadow-lg shadow-primary/40">
+                {kicker}
               </span>
 
-              <div className="flex flex-1 flex-col gap-4 px-8 pb-10 pt-6">
-                <h3 className="text-3xl font-bold tracking-tight leading-tight text-foreground text-balance">
+              {/* Copy anchored to the bottom, over the image */}
+              <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8">
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl border-2 border-primary/60 bg-black/40 backdrop-blur-sm">
+                  <Icon className="h-7 w-7 text-primary" aria-hidden="true" />
+                </span>
+                <h3 className="text-3xl md:text-4xl font-bold tracking-tight leading-tight text-white text-balance">
                   {title}
                 </h3>
-                <p className="text-lg leading-relaxed text-foreground/75 text-pretty">{body}</p>
+                <p className="text-lg leading-relaxed text-white/80 text-pretty">{body}</p>
               </div>
             </article>
           ))}
