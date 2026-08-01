@@ -16,7 +16,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "Build systems that make it easier to find and navigate",
+    title: "Build the systems that keep it updated and easy to find",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
@@ -24,7 +24,7 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "Make sure the English is easy for AI to translate",
+    title: "Make it easy for AI to translate, and for AI chatbots to deliver",
     description:
       "I've lived in 4 countries and worked in 3 languages, so I know where translations break before they happen.",
     link: "",
