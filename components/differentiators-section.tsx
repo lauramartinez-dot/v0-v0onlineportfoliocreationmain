@@ -18,7 +18,7 @@ const differentiators = [
   },
   {
     title: "Permanent early hire",
-    body: "Constantly one-of-the-first or first-of. I do not know what is like to work with a playbook",
+    body: "Constantly one of the first, or the first. No playbook needed.",
     image: "/differentiator-early-hire.png",
   },
   {
