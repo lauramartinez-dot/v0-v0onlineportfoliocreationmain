@@ -96,12 +96,21 @@ function DiagonalRevealImage({
 
 function SkillCard({ item, index }: { item: (typeof topSkills)[number]; index: number }) {
   return (
-    <div className="flex h-full flex-col gap-5 rounded-xl border border-primary/25 bg-card p-8 transition-colors duration-300 hover:border-primary/50">
+    <div className="group relative flex h-full flex-col gap-6 overflow-hidden rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-primary/10 via-card to-card p-8 shadow-xl shadow-primary/10 transition-all duration-300 hover:-translate-y-2 hover:border-primary/70 hover:shadow-[0_20px_60px_-14px_rgba(200,80,192,0.5)]">
+      {/* Top accent line */}
+      <div className="absolute left-0 right-0 top-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-70 transition-opacity duration-300 group-hover:opacity-100" />
+
+      {/* Corner glow */}
+      <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-primary/20 blur-3xl opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+
       {/* List marker - ties the card back to the "And then I:" lead-in */}
-      <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary text-lg font-extrabold text-primary">
+      <span className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary text-2xl font-extrabold text-primary-foreground shadow-lg shadow-primary/40">
         {index + 1}
       </span>
-      <h3 className="text-2xl font-bold leading-snug text-foreground text-balance">{item.title}</h3>
+
+      <h3 className="relative z-10 text-2xl lg:text-[1.75rem] font-bold leading-snug tracking-tight text-foreground text-balance">
+        {item.title}
+      </h3>
     </div>
   )
 }
@@ -143,20 +152,18 @@ export function HighlightsSection() {
         </ul>
 
         {/* Mission - boxed, closing out the same section */}
-        <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/60 via-purple-900/40 to-pink-950/50 px-6 pb-8 pt-10 text-center shadow-2xl shadow-primary/20 ring-1 ring-white/5 backdrop-blur-md md:px-10 md:pb-10 md:pt-12">
-          <div className="pointer-events-none absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/[0.02] via-transparent to-white/[0.05]" />
-
-          {/* Floating label */}
-          <div className="absolute -top-4 left-6 flex items-center gap-2 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 px-4 py-2 shadow-lg shadow-purple-500/40 ring-4 ring-background">
-            <Rocket className="h-4 w-4 text-white" />
-            <span className="text-sm font-semibold uppercase tracking-wider text-white">Mission</span>
+        <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border border-primary/20 bg-card/50 px-6 pb-8 pt-10 text-center md:px-10 md:pb-10 md:pt-12">
+          {/* Floating label - outlined instead of a solid gradient pill */}
+          <div className="absolute -top-4 left-6 flex items-center gap-2 rounded-full border border-primary/30 bg-background px-4 py-1.5">
+            <Rocket className="h-3.5 w-3.5 text-primary" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-primary">Mission</span>
           </div>
 
-          <p className="relative z-10 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-white text-balance">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed text-foreground/75 text-balance">
             Because complex tech is literally everywhere, from the software you use daily to the new AI tool
             that&apos;s suddenly deciding whether you get the next job.
           </p>
-          <p className="relative z-10 mt-6 text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight leading-snug text-primary text-balance">
+          <p className="mt-5 text-xl md:text-2xl font-semibold leading-relaxed text-foreground text-balance">
             And you shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>
