@@ -4,7 +4,7 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
-    image: "/differentiator-journalist-bi.png",
+    image: "/differentiator-journalist-article.png",
   },
   {
     title: "Lived and worked in 4 countries",
@@ -24,7 +24,7 @@ const differentiators = [
   {
     title: "Hypergrowth startup experience",
     body: "I've documented products while the roadmap, the team and the tooling all changed underneath me.",
-    image: "/differentiator-hypergrowth.png",
+    image: "/differentiator-hypergrowth-team.png",
   },
   {
     title: "Women in Tech advocate",
