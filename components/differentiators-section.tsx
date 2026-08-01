@@ -17,19 +17,24 @@ const differentiators = [
     image: "/differentiator-languages.png",
   },
   {
-    title: "Permanent early hire",
-    body: "Constantly one of the first, or the first. No playbook needed.",
+    title: "Serial early hire",
+    body: "Always the first, or among the first. No playbook needed - I write the playbook.",
     image: "/differentiator-early-hire.png",
   },
   {
-    title: "Hypergrowth startup experience",
-    body: "I've documented products while the roadmap, the team and the tooling all changed underneath me.",
-    image: "/differentiator-hypergrowth-team.png",
+    title: "Worked at one of Europe's unicorn startups",
+    body: "I've documented products at hypergrowth scale, while the roadmap, the team and the tooling all changed underneath me.",
+    image: "/differentiator-unicorn.png",
   },
   {
     title: "Women in Tech advocate",
-    body: "Co-founded Personio's first Women's Committee",
+    body: "Co-founded Personio's first Women's Committee.",
     image: "/differentiator-women-in-tech.png",
+  },
+  {
+    title: "Work globally from Barcelona",
+    body: "Based in Barcelona, working across time zones with distributed teams.",
+    image: "/differentiator-barcelona-skyline.png",
   },
 ]
 
@@ -47,10 +52,14 @@ export function DifferentiatorsSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {differentiators.map(({ title, body, image }) => (
+          {differentiators.map(({ title, body, image }, index) => (
             <article
               key={title}
-              className="group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
+              className={`group relative overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
+                index === differentiators.length - 1
+                  ? "min-h-[520px] md:col-span-2 lg:col-span-3"
+                  : "min-h-[720px]"
+              }`}
             >
               {/* Full-bleed image */}
               <Image
@@ -66,7 +75,11 @@ export function DifferentiatorsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
               {/* Copy anchored to the bottom, over the image */}
-              <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8">
+              <div
+                className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8 ${
+                  index === differentiators.length - 1 ? "max-w-2xl" : ""
+                }`}
+              >
                 <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
                   {title}
                 </h3>
