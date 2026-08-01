@@ -7,11 +7,6 @@ const differentiators = [
     image: "/differentiator-journalist.png",
   },
   {
-    title: "Permanent early hire",
-    body: "Constantly one-of-the-first or first-of. I join before the playbook exists and write the first version of it.",
-    image: "/differentiator-early-hire.png",
-  },
-  {
     title: "Extremely multicultural",
     body: "I lived in 4 countries, so I write for readers who don't share my first language or my context.",
     image: "/differentiator-multicultural.png",
@@ -20,6 +15,11 @@ const differentiators = [
     title: "Speak 3 languages weekly",
     body: "English, Spanish and German. Switching between them daily keeps me sharp on what actually survives translation.",
     image: "/differentiator-languages.png",
+  },
+  {
+    title: "Permanent early hire",
+    body: "Constantly one-of-the-first or first-of. I join before the playbook exists and write the first version of it.",
+    image: "/differentiator-early-hire.png",
   },
   {
     title: "Hypergrowth startup experience",
