@@ -3,32 +3,32 @@ import Image from "next/image"
 const differentiators = [
   {
     title: "Former Tech Journalist",
-    body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
+    body: "Worked as a journalist for 6 years, then moved into the tech industry.",
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
-    title: "Lived and worked in 4 countries",
-    body: "By my 30s, I had lived in 4 countries: Spain, France, Ireland and Germany. Now I am back to Spain (Barcelona).",
+    title: "Lived in 4 countries",
+    body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
     image: "/differentiator-four-countries.png",
   },
   {
-    title: "Speak 3 languages weekly",
-    body: "English, Spanish and German. Switching between them daily keeps me sharp on what actually survives translation.",
+    title: "Speak 3 languages",
+    body: "Switching between English, Spanish and German almost daily.",
     image: "/differentiator-languages-books.jpg",
   },
   {
-    title: "Serial early hire",
-    body: "Always the first, or among the first. No playbook needed - I write the playbook.",
+    title: "Early hire, every time",
+    body: "Always hired as the first writer, or one of the first. Need no playbook.",
     image: "/differentiator-early-hire-welcome.jpg",
   },
   {
-    title: "Worked at an European unicorn",
-    body: "I've documented products at hypergrowth scale, while the roadmap, the team and the tooling all changed underneath me.",
+    title: "Worked at an unicorn startup",
+    body: "Worked at Personio, Europe's HR unicorn ($8.5B valuation).",
     image: "/differentiator-unicorn-personio.jpg",
   },
   {
     title: "Women in Tech advocate",
-    body: "Co-founded Personio's first Women's Committee.",
+    body: "Co-founded Personio's first Women's Committee. ",
     image: "/ooo-women.jpg",
   },
 ]

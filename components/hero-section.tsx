@@ -41,7 +41,7 @@ export function HeroSection() {
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
             {/* Intro line */}
-            <p className="mb-6 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-primary text-balance">
+            <p className="mb-6 text-2xl md:text-3xl font-medium tracking-tight leading-snug text-primary text-balance">
               Hi there! I&apos;m Laura Martínez.
             </p>
 
@@ -50,7 +50,7 @@ export function HeroSection() {
 
             {/* Two-tier headline */}
             <h1 className="mb-10 text-foreground">
-              <span className="block text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+              <span className="block text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
                 A global
               </span>
               <span className="block text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
@@ -59,7 +59,7 @@ export function HeroSection() {
             </h1>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <div className="inline-flex items-center rounded-full px-6 py-3 text-lg md:text-xl font-medium border-2 border-purple-500/50 bg-transparent text-foreground/80">
+              <div className="inline-flex items-center rounded-full px-6 py-3 text-xl md:text-2xl font-medium border-2 border-purple-500/50 bg-transparent text-foreground/80">
                 <MapPin className="mr-2 h-5 w-5 shrink-0 text-primary" />
                 Based in Barcelona. Working globally.
               </div>

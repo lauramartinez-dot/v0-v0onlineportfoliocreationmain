@@ -1030,25 +1030,14 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
 
 function PillarColumn({
   label,
-  image,
-  imageAlt,
   children
 }: {
   label: string
-  image: string
-  imageAlt: string
   children: React.ReactNode
 }) {
   return (
     <div className="flex flex-col gap-4">
-      {/* Image header card - matching top-skills-section style */}
-      <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg">
-        <Image src={image} alt={imageAlt} fill className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60" />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-      </div>
-
-      {/* Achievement cards below */}
+      {/* Achievement cards */}
       <div className="flex flex-col gap-3">
         {children}
       </div>
@@ -1224,11 +1213,7 @@ export default function CareerMapSection() {
             {/* Achievement Grid */}
             <div className="grid gap-8 md:grid-cols-3">
               {/* Column 1 - Writing */}
-              <PillarColumn
-                label="I write"
-                image="/vr-person-blue-tech.png"
-                imageAlt="Writing Skills"
-              >
+              <PillarColumn label="I write">
                 {operationalAchievements
                   .filter((a) => a.column === 1)
                   .map((achievement) => (
@@ -1237,11 +1222,7 @@ export default function CareerMapSection() {
               </PillarColumn>
 
               {/* Column 2 - Operations */}
-              <PillarColumn
-                label="I build"
-                image="/3d-graph-computer-illustration.jpg"
-                imageAlt="Operations Skills"
-              >
+              <PillarColumn label="I build">
                 {operationalAchievements
                   .filter((a) => a.column === 2)
                   .map((achievement) => (
@@ -1250,11 +1231,7 @@ export default function CareerMapSection() {
               </PillarColumn>
 
               {/* Column 3 - Global */}
-              <PillarColumn
-                label="I translate"
-                image="/still-life-supply-chain.jpg"
-                imageAlt="Global Skills"
-              >
+              <PillarColumn label="I translate">
                 {operationalAchievements
                   .filter((a) => a.column === 3)
                   .map((achievement) => (

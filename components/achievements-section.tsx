@@ -1,23 +1,5 @@
 "use client"
 
-import Image from "next/image"
-
-// Column header images - same as skills section
-const columnHeaders = [
-  {
-    title: "I write",
-    image: "/vr-person-blue-tech.png",
-  },
-  {
-    title: "I build",
-    image: "/3d-graph-computer-illustration.jpg",
-  },
-  {
-    title: "I translate",
-    image: "/still-life-supply-chain.jpg",
-  },
-]
-
 // Column 1: Writing achievements
 export const writingAchievements = [
   {
@@ -97,16 +79,6 @@ export function AchievementsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1 - Writing */}
           <div className="flex flex-col gap-4">
-            {/* Image header card - thin subtle style, no text */}
-            <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg">
-              <Image
-                src={columnHeaders[0].image}
-                alt={columnHeaders[0].title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            </div>
             {writingAchievements.map((achievement, index) => (
               <div
                 key={index}
@@ -137,16 +109,6 @@ export function AchievementsSection() {
 
           {/* Column 2 - Building */}
           <div className="flex flex-col gap-4">
-            {/* Image header card - thin subtle style, no text */}
-            <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg">
-              <Image
-                src={columnHeaders[1].image}
-                alt={columnHeaders[1].title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            </div>
             {buildingAchievements.map((achievement, index) => (
               <div
                 key={index}
@@ -177,16 +139,6 @@ export function AchievementsSection() {
 
           {/* Column 3 - Translate */}
           <div className="flex flex-col gap-4">
-            {/* Image header card - thin subtle style, no text */}
-            <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg">
-              <Image
-                src={columnHeaders[2].image}
-                alt={columnHeaders[2].title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            </div>
             {translateAchievements.map((achievement, index) => (
               <div
                 key={index}

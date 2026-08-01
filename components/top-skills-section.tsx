@@ -1,23 +1,6 @@
 "use client"
 
-import Image from "next/image"
 import { toolColumns } from "@/data/highlights"
-
-// Column header images
-const columnHeaders = [
-  {
-    title: "I write",
-    image: "/vr-person-blue-tech.png",
-  },
-  {
-    title: "I build",
-    image: "/3d-graph-computer-illustration.jpg",
-  },
-  {
-    title: "I translate",
-    image: "/still-life-supply-chain.jpg",
-  },
-]
 
 function ToolCard({ tool }: { tool: string }) {
   // Check if this is a split tool (contains " / ")
@@ -90,17 +73,6 @@ export function TopSkillsSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Column 1: I write */}
           <div className="flex flex-col">
-            {/* Image header card */}
-            <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg mb-4">
-              <Image
-                src={columnHeaders[0].image}
-                alt={columnHeaders[0].title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            </div>
             {toolColumns
               .find((c) => c.column === 1)
               ?.groups.map((group, gi) => (
@@ -117,17 +89,6 @@ export function TopSkillsSection() {
 
           {/* Column 2: I build */}
           <div className="flex flex-col">
-            {/* Image header card */}
-            <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg mb-4">
-              <Image
-                src={columnHeaders[1].image}
-                alt={columnHeaders[1].title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/40 via-primary/25 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            </div>
             {toolColumns
               .find((c) => c.column === 2)
               ?.groups.map((group, gi) => (
@@ -144,17 +105,6 @@ export function TopSkillsSection() {
 
           {/* Column 3: I translate */}
           <div className="flex flex-col">
-            {/* Image header card */}
-            <div className="group relative h-[100px] overflow-hidden rounded-xl shadow-lg mb-4">
-              <Image
-                src={columnHeaders[2].image}
-                alt={columnHeaders[2].title}
-                fill
-                className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-60"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/25 via-primary/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-            </div>
             {toolColumns
               .find((c) => c.column === 3)
               ?.groups.map((group, gi) => (
