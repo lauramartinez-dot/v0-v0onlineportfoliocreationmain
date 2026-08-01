@@ -17,34 +17,39 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pb-[30px]">
       <div className="mx-auto max-w-7xl">
-        <div className="flex items-center justify-between rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-14 py-5 mt-5">
-          <a href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Sparkles className="h-5 w-5 text-primary" />
-            <span className="font-semibold text-primary text-base">Laura Martínez</span>
+        <div className="flex items-center justify-between gap-6 rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-8 py-4 mt-5">
+          <a href="#home" className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity">
+            <Sparkles className="h-5 w-5 shrink-0 text-primary" />
+            <span className="whitespace-nowrap font-semibold text-primary text-base">Laura Martínez</span>
           </a>
 
-          <div className="hidden items-center gap-12 md:flex">
+          <div className="hidden items-center gap-7 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-base text-foreground/70 transition-colors hover:text-foreground"
+                className="whitespace-nowrap text-sm text-foreground/70 transition-colors hover:text-foreground"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
-            <Button size="default" variant="ghost" className="rounded-full text-primary hover:bg-primary/10" asChild>
+          <div className="hidden shrink-0 md:flex items-center gap-3">
+            <Button
+              size="default"
+              variant="outline"
+              className="rounded-full border-2 border-purple-500/50 bg-transparent text-foreground/80 hover:bg-primary/10 hover:text-foreground"
+              asChild
+            >
               <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="mr-2 h-4 w-4" />
-                Connect on LinkedIn
+                <Linkedin className="mr-2 h-4 w-4 text-primary" />
+                LinkedIn
               </a>
             </Button>
             <Button size="default" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
               <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Download CV
+                <span className="whitespace-nowrap">Download CV</span>
               </a>
             </Button>
           </div>
@@ -73,10 +78,15 @@ export function Navigation() {
                   {item.label}
                 </a>
               ))}
-              <Button size="sm" variant="ghost" className="rounded-full mt-2 text-primary hover:bg-primary/10" asChild>
+              <Button
+                size="sm"
+                variant="outline"
+                className="mt-2 rounded-full border-2 border-purple-500/50 bg-transparent text-foreground/80 hover:bg-primary/10 hover:text-foreground"
+                asChild
+              >
                 <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="mr-2 h-4 w-4" />
-                  Connect on LinkedIn
+                  <Linkedin className="mr-2 h-4 w-4 text-primary" />
+                  LinkedIn
                 </a>
               </Button>
               <Button size="sm" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
