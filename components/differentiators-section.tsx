@@ -4,7 +4,7 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
-    image: "/differentiator-journalist-bi-office.png",
+    image: "/differentiator-journalist-bi-wall.png",
   },
   {
     title: "Lived and worked in 4 countries",
@@ -19,12 +19,12 @@ const differentiators = [
   {
     title: "Serial early hire",
     body: "Always the first, or among the first. No playbook needed - I write the playbook.",
-    image: "/differentiator-early-hire.png",
+    image: "/differentiator-early-hire-welcome.jpg",
   },
   {
     title: "Worked at an European unicorn",
     body: "I've documented products at hypergrowth scale, while the roadmap, the team and the tooling all changed underneath me.",
-    image: "/differentiator-unicorn-office.png",
+    image: "/differentiator-unicorn-personio.jpg",
   },
   {
     title: "Women in Tech advocate",
