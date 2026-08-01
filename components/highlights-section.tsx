@@ -158,7 +158,7 @@ export function HighlightsSection() {
               <SkillCard
                 item={item}
                 index={index}
-                image={index === 0 ? "/what-i-do-documentation.jpg" : undefined}
+                image={index === 0 ? "/api-docs-bg.png" : undefined}
               />
             </li>
           ))}
