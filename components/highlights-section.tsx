@@ -140,15 +140,15 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-2xl md:text-3xl font-semibold tracking-tight leading-snug text-foreground text-balance">
+            <p className="mt-8 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-foreground/70 text-balance">
               I wreck my head for hours understanding complex, daunting technology{" "}
               <span className="text-primary">so you don&apos;t have to.</span>
             </p>
-            <p className="mt-5 text-2xl md:text-3xl font-semibold tracking-tight leading-snug text-foreground/75 text-balance">
+            <p className="mt-5 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-foreground/70 text-balance">
               Lately, that means APIs and integrations.
             </p>
             {/* Lead-in to the three cards, which act as the list itself */}
-            <p className="mt-6 text-2xl md:text-3xl font-semibold tracking-tight leading-snug text-foreground text-balance">
+            <p className="mt-6 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-foreground/70 text-balance">
               And then I<span className="text-primary">:</span>
             </p>
           </div>
