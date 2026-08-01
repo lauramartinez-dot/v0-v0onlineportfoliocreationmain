@@ -29,7 +29,7 @@ const differentiators = [
   {
     title: "Women in Tech advocate",
     body: "Co-founded Personio's first Women's Committee.",
-    image: "/differentiator-women-in-tech.png",
+    image: "/ooo-women.jpg",
   },
 ]
 
