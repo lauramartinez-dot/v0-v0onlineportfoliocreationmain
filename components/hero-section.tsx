@@ -41,7 +41,7 @@ export function HeroSection() {
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
             {/* Intro line */}
-            <p className="mb-6 text-lg md:text-xl font-medium text-primary text-balance">
+            <p className="mb-6 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-primary text-balance">
               Hi there! I&apos;m Laura Martínez.
             </p>
 

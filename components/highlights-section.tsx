@@ -175,11 +175,11 @@ export function HighlightsSection() {
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">Mission</span>
           </div>
 
-          <p className="text-xl md:text-2xl font-medium leading-relaxed text-white/79 text-balance">
+          <p className="text-3xl md:text-4xl font-medium tracking-tight leading-snug text-white/79 text-balance">
             Because complex tech is literally everywhere, from the software you use daily to the new AI tool
             that&apos;s suddenly deciding whether you get the next job.
           </p>
-          <p className="mt-5 text-xl md:text-2xl font-semibold leading-relaxed text-foreground text-balance">
+          <p className="mt-5 text-3xl md:text-4xl font-medium tracking-tight leading-snug text-foreground text-balance">
             And you shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>

@@ -3,7 +3,7 @@ import { TransitionSection } from "@/components/transition-section"
 import { HighlightsSection } from "@/components/highlights-section"
 import { DifferentiatorsSection } from "@/components/differentiators-section"
 import { TopSkillsSection } from "@/components/top-skills-section"
-import { OOOSection } from "@/components/ooo-section"
+// import { OOOSection } from "@/components/ooo-section" - temporarily hidden
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
 import { Navigation } from "@/components/navigation"
@@ -25,8 +25,8 @@ export default function Home() {
       <CareerMapSection />
       {/* Top Skills & Tools */}
       <TopSkillsSection />
-      {/* My personal projects */}
-      <OOOSection />
+      {/* My personal projects - temporarily hidden */}
+      {/* <OOOSection /> */}
       <Footer />
     </main>
   )
