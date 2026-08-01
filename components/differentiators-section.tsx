@@ -4,7 +4,7 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "I've been writing about tech for 15 years straight - first as a Tech Journalist, now as a Technical Writer.",
-    image: "/differentiator-journalist-bi-crop.png",
+    image: "/differentiator-journalist-bi-office.png",
   },
   {
     title: "Lived and worked in 4 countries",
