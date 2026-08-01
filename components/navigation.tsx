@@ -20,15 +20,15 @@ export function Navigation() {
         <div className="flex items-center justify-between gap-8 rounded-full border-2 border-primary/60 bg-background/80 backdrop-blur-md px-10 py-7 mt-5">
           <a href="#home" className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity">
             <Sparkles className="h-5 w-5 shrink-0 text-primary" />
-            <span className="whitespace-nowrap text-base font-semibold text-primary">Laura Martínez</span>
+            <span className="whitespace-nowrap text-lg font-semibold text-primary">Laura Martínez</span>
           </a>
 
-          <div className="hidden items-center gap-9 md:flex">
+          <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="whitespace-nowrap text-base font-semibold text-foreground/90 transition-colors hover:text-primary"
+                className="whitespace-nowrap text-lg font-semibold text-foreground/90 transition-colors hover:text-primary"
               >
                 {item.label}
               </a>
@@ -37,7 +37,7 @@ export function Navigation() {
 
           <div className="hidden shrink-0 md:flex items-center gap-2.5">
             <Button
-              className="rounded-full bg-primary/20 px-5 text-base font-medium text-primary hover:bg-primary/30"
+              className="rounded-full bg-primary/20 px-5 text-lg font-medium text-primary hover:bg-primary/30"
               asChild
             >
               <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
@@ -45,7 +45,7 @@ export function Navigation() {
               </a>
             </Button>
             <Button
-              className="rounded-full bg-primary/20 px-5 text-base font-medium text-primary hover:bg-primary/30"
+              className="rounded-full bg-primary/20 px-5 text-lg font-medium text-primary hover:bg-primary/30"
               asChild
             >
               <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
