@@ -169,17 +169,22 @@ export function HighlightsSection() {
 
         {/* Mission - boxed, closing out the same section */}
         <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border border-primary/20 bg-card/50 px-6 pb-8 pt-10 text-center md:px-10 md:pb-10 md:pt-12">
-          {/* Floating label - outlined instead of a solid gradient pill */}
-          <div className="absolute -top-4 left-6 flex items-center gap-2 rounded-full border border-primary/30 bg-background px-4 py-1.5">
+          {/* Floating label - straddles the top border so it reads as part of the box */}
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full border border-primary/30 bg-background px-4 py-1.5">
             <Rocket className="h-3.5 w-3.5 text-primary" />
             <span className="text-xs font-semibold uppercase tracking-wider text-primary">Mission</span>
           </div>
 
-          <p className="text-2xl md:text-3xl font-medium tracking-tight leading-snug text-white/79 text-balance">
+          {/* WHY - names the mission so the box reads as the reason behind the work */}
+          <h3 className="mb-6 text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl">
+            Why<span className="text-primary">?</span>
+          </h3>
+
+          <p className="text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
             Because complex tech is literally everywhere, from the software you use daily to the new AI tool
             that&apos;s suddenly deciding whether you get the next job.
           </p>
-          <p className="mt-5 text-2xl md:text-3xl font-bold tracking-tight leading-snug text-primary text-balance">
+          <p className="mt-5 text-xl md:text-2xl font-bold tracking-tight leading-snug text-primary text-balance">
             And you shouldn&apos;t need an IT degree or a PhD to understand it.
           </p>
         </div>
