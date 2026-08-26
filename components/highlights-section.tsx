@@ -181,11 +181,10 @@ export function HighlightsSection() {
           </h3>
 
           <p className="text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
-            Because complex tech is literally everywhere, from the software you use daily to the new AI tool
-            that&apos;s suddenly deciding whether you get the next job.
+            Because complex tech is literally everywhere, from the vehicles you use to the software that's suddenly deciding whether you get your next job. 
           </p>
           <p className="mt-5 text-xl md:text-2xl font-bold tracking-tight leading-snug text-primary text-balance">
-            And you shouldn&apos;t need an IT degree or a PhD to understand it.
+            And you shouldn&apos;t need an IT degree or a PhD to understand any of it.
           </p>
         </div>
 
