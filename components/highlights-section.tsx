@@ -103,22 +103,23 @@ function SkillCard({
   item: (typeof topSkills)[number]
   index: number
   image?: string
-  /** "contain" letterboxes the artwork so nothing gets cropped, leaving breathing room top and bottom */
-  imageFit?: "cover" | "contain"
+  /**
+   * "contain" letterboxes the artwork so nothing gets cropped, leaving breathing room top and bottom.
+   * "contain-lg" does the same but scales the artwork up so fine detail stays legible.
+   */
+  imageFit?: "cover" | "contain" | "contain-lg"
 }) {
+  const imageFitClass = {
+    cover: "object-cover opacity-70",
+    contain: "object-contain object-top py-10 opacity-70",
+    "contain-lg": "object-contain object-top scale-[1.35] origin-top py-4 opacity-70",
+  }[imageFit]
+
   return (
     <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
       {/* Optional background image, sitting under the same layered wash */}
       {image && (
-        <Image
-          src={image || "/placeholder.svg"}
-          alt=""
-          fill
-          aria-hidden="true"
-          className={
-            imageFit === "contain" ? "object-contain object-top py-10 opacity-70" : "object-cover opacity-70"
-          }
-        />
+        <Image src={image || "/placeholder.svg"} alt="" fill aria-hidden="true" className={imageFitClass} />
       )}
 
       <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
@@ -181,7 +182,7 @@ export function HighlightsSection() {
                       ? "/highlight-git-workflow-diagram.png"
                       : "/highlight-ai-chatbot.png"
                 }
-                imageFit={index === 0 ? "cover" : "contain"}
+                imageFit={index === 0 ? "cover" : index === 1 ? "contain" : "contain-lg"}
               />
             </li>
           ))}
