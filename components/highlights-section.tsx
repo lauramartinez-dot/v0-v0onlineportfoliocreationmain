@@ -154,15 +154,15 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/82 text-balance">
+            <p className="mt-8 text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/82 text-balance">
               I wreck my head for hours understanding complex, daunting technology{" "}
-              <span className="text-primary font-bold">so you don&apos;t have to.</span>
+              <span className="font-bold" style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
             </p>
-            <p className="mt-5 text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
+            <p className="mt-5 text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
               Lately, that means APIs and integrations.
             </p>
             {/* Lead-in to the three cards, which act as the list itself */}
-            <p className="mt-6 text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/80 text-balance">
+            <p className="mt-6 text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/80 text-balance">
               And then I<span className="text-primary">:</span>
             </p>
           </div>
@@ -189,7 +189,7 @@ export function HighlightsSection() {
         </ul>
 
         {/* Mission - boxed, closing out the same section */}
-        <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border border-primary/20 bg-card/50 px-6 pb-8 pt-10 text-center md:px-10 md:pb-10 md:pt-12">
+        <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border border-[#472444] bg-card/50 px-6 pb-8 pt-10 text-center md:px-10 md:pb-10 md:pt-12">
           {/* Floating label - straddles the top border so it reads as part of the box */}
           <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full border border-primary/30 bg-background px-4 py-1.5">
             <Rocket className="h-3.5 w-3.5 text-primary" />
@@ -197,16 +197,12 @@ export function HighlightsSection() {
           </div>
 
           {/* WHY - names the mission so the box reads as the reason behind the work */}
-          <h3 className="mb-6 text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl">
-            Why<span className="text-primary">?</span>
+          <h3 className="mb-6 text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl" style={{ backgroundColor: "rgba(194, 65, 200, 0)" }}>
+            <span style={{ color: "#d92acd" }}>wHY?</span>
           </h3>
 
-          <p className="text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
-            Because complex tech is literally everywhere, from the vehicles you use to the software that&apos;s
-            suddenly deciding whether you get your next job.
-          </p>
-          <p className="mt-5 text-xl md:text-2xl font-bold tracking-tight leading-snug text-primary text-balance">
-            And you shouldn&apos;t need an IT degree or a PhD to understand any of it.
+          <p className="text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
+            Because you should need an IT background or a PhD to understand the very technology that surrounds you. Especially that new AI software that is suddenly deciding whether you get your next job.
           </p>
         </div>
 
