@@ -98,15 +98,28 @@ function SkillCard({
   item,
   index,
   image,
+  imageFit = "cover",
 }: {
   item: (typeof topSkills)[number]
   index: number
   image?: string
+  /** "contain" letterboxes the artwork so nothing gets cropped, leaving breathing room top and bottom */
+  imageFit?: "cover" | "contain"
 }) {
   return (
     <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
       {/* Optional background image, sitting under the same layered wash */}
-      {image && <Image src={image || "/placeholder.svg"} alt="" fill aria-hidden="true" className="object-cover opacity-70" />}
+      {image && (
+        <Image
+          src={image || "/placeholder.svg"}
+          alt=""
+          fill
+          aria-hidden="true"
+          className={
+            imageFit === "contain" ? "object-contain object-top py-10 opacity-70" : "object-cover opacity-70"
+          }
+        />
+      )}
 
       <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
@@ -168,6 +181,7 @@ export function HighlightsSection() {
                       ? "/highlight-git-workflow-diagram.png"
                       : undefined
                 }
+                imageFit={index === 1 ? "contain" : "cover"}
               />
             </li>
           ))}
