@@ -161,7 +161,13 @@ export function HighlightsSection() {
               <SkillCard
                 item={item}
                 index={index}
-                image={index === 0 ? "/api-docs-bg.png" : undefined}
+                image={
+                  index === 0
+                    ? "/api-docs-bg.png"
+                    : index === 1
+                      ? "/highlight-git-workflow-diagram.png"
+                      : undefined
+                }
               />
             </li>
           ))}
@@ -181,7 +187,7 @@ export function HighlightsSection() {
           </h3>
 
           <p className="text-xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
-            Because complex tech is literally everywhere, from the vehicles you use to the software that's suddenly deciding whether you get your next job. 
+            Because complex tech is literally everywhere, from the ve (what dhicles you use to the software that's suddenly deciding whether you get your next job. 
           </p>
           <p className="mt-5 text-xl md:text-2xl font-bold tracking-tight leading-snug text-primary text-balance">
             And you shouldn&apos;t need an IT degree or a PhD to understand any of it.
