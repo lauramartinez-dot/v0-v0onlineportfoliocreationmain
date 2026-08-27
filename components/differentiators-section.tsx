@@ -7,6 +7,11 @@ const differentiators = [
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
+    title: "Specialising in integrations",
+    body: "On a quest to make API & integrations documentation accessible to less-technical users.",
+    image: "/differentiator-integrations.png",
+  },
+  {
     title: "Lived in 4 countries",
     body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
     image: "/differentiator-four-countries.png",
