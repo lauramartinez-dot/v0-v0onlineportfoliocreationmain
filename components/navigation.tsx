@@ -17,18 +17,18 @@ export function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pb-[30px]">
       <div className="mx-auto max-w-7xl">
-        <div className="flex items-center justify-between gap-6 rounded-full border-2 border-primary/60 bg-background/80 backdrop-blur-md px-8 py-7 mt-5">
+        <div className="flex items-center justify-between gap-8 rounded-full border-2 border-primary/60 bg-background/80 backdrop-blur-md px-10 py-7 mt-5">
           <a href="#home" className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity">
-            <Sparkles className="h-6 w-6 shrink-0 text-primary" />
-            <span className="whitespace-nowrap text-xl md:text-2xl font-semibold text-primary">Laura Martínez</span>
+            <Sparkles className="h-5 w-5 shrink-0 text-primary" />
+            <span className="whitespace-nowrap text-lg font-semibold text-primary">Laura Martínez</span>
           </a>
 
-          <div className="hidden items-center gap-6 md:flex">
+          <div className="hidden items-center gap-8 md:flex">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="whitespace-nowrap text-xl md:text-2xl font-semibold text-foreground/90 transition-colors hover:text-primary"
+                className="whitespace-nowrap text-lg font-semibold text-foreground/90 transition-colors hover:text-primary"
               >
                 {item.label}
               </a>
@@ -37,7 +37,7 @@ export function Navigation() {
 
           <div className="hidden shrink-0 md:flex items-center gap-2.5">
             <Button
-              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-xl md:text-2xl font-medium text-primary hover:bg-primary/30"
+              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-lg font-medium text-primary hover:bg-primary/30"
               asChild
             >
               <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
@@ -45,7 +45,7 @@ export function Navigation() {
               </a>
             </Button>
             <Button
-              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-xl md:text-2xl font-medium text-primary hover:bg-primary/30"
+              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-lg font-medium text-primary hover:bg-primary/30"
               asChild
             >
               <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
@@ -73,7 +73,7 @@ export function Navigation() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="rounded-lg px-4 py-2 text-xl font-semibold text-foreground/70 transition-colors hover:bg-primary/10 hover:text-foreground"
+                  className="rounded-lg px-4 py-2 text-lg font-semibold text-foreground/70 transition-colors hover:bg-primary/10 hover:text-foreground"
                 >
                   {item.label}
                 </a>

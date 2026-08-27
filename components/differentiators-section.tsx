@@ -70,7 +70,7 @@ export function DifferentiatorsSection() {
                 <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
                   {title}
                 </h3>
-                <p className="text-xl leading-relaxed text-white/85 text-pretty">{body}</p>
+                <p className="text-xl md:text-2xl font-medium leading-snug text-white/85 text-pretty">{body}</p>
               </div>
             </article>
           ))}
