@@ -3,7 +3,7 @@ import Image from "next/image"
 const differentiators = [
   {
     title: "Former Tech Journalist",
-    body: "Worked as a journalist for 6 years, then moved into the tech industry.",
+    body: "Worked as a tech journalist for 6 years, then moved into the tech industry.",
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
