@@ -154,16 +154,13 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/82 text-balance">
-              I wreck my head for hours understanding complex, daunting technology{" "}
-              <span className="font-bold" style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
-            </p>
-            <p className="mt-5 text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance">
-              Lately, that means APIs and integrations.
+            <p className="mt-8 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/82 text-balance">
+              I spend hours untangling complex, mind-bending tech{" "}
+              <span className="text-[25px] font-bold" style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
             </p>
             {/* Lead-in to the three cards, which act as the list itself */}
-            <p className="mt-6 text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/80 text-balance">
-              And then I<span className="text-primary">:</span>
+            <p className="mt-6 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
+              And once I&apos;ve finally cracked it, I:
             </p>
           </div>
         </div>
@@ -201,8 +198,8 @@ export function HighlightsSection() {
             <span style={{ color: "#d92acd" }}>wHY?</span>
           </h3>
 
-          <p className="text-2xl md:text-2xl font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
-            Because you should need an IT background or a PhD to understand the very technology that surrounds you. Especially that new AI software that is suddenly deciding whether you get your next job.
+          <p className="text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
+            Because you should need an IT background or a PhD to understand the very technology that surrounds you. Especially that yesterday-launched new software that is suddenlty decideing whether you get your next job.
           </p>
         </div>
 

@@ -24,7 +24,7 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "Make sure AI can translate it and AI chatbots can use it",
+    title: "Get AI to translate it and deliver it to your phone",
     description:
       "I've lived in 4 countries and worked in 3 languages, so I know where translations break before they happen.",
     link: "",
