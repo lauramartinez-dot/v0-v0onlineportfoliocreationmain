@@ -179,9 +179,9 @@ export function HighlightsSection() {
                     ? "/api-docs-bg.png"
                     : index === 1
                       ? "/highlight-git-workflow-diagram.png"
-                      : undefined
+                      : "/highlight-ai-chatbot.png"
                 }
-                imageFit={index === 1 ? "contain" : "cover"}
+                imageFit={index === 0 ? "cover" : "contain"}
               />
             </li>
           ))}
