@@ -199,8 +199,16 @@ export function HighlightsSection() {
           </h3>
 
           <p className="text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
-            Because you should need an IT background or a PhD to understand the very technology that surrounds you. Especially that yesterday-launched new software that is suddenlty decideing whether you get your next job.
+            Because you shouldn&apos;t need an IT background or a PhD to understand the tech that&apos;s everywhere in your life.
           </p>
+          <div className="mt-6 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance">
+            <p>
+              Especially in 2026, when AI means you&apos;re expected to build software, not just use it.
+            </p>
+            <p className="mt-5">
+              Real beginner documentation on the basics (coding, integrations) has never mattered more.
+            </p>
+          </div>
         </div>
 
         {/* Spacer - gradient removed for consistent background */}
