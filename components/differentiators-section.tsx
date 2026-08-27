@@ -8,7 +8,7 @@ const differentiators = [
   },
   {
     title: "Specialising in integrations",
-    body: "On a mission to make API and integration docs make sense to people who aren't developers.",
+    body: "On a mission to make API and integration docs make sense to people who aren't devs.",
     image: "/differentiator-integrations.png",
   },
   {
