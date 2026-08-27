@@ -7,6 +7,11 @@ const differentiators = [
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
+    title: "Skilled in jargon translation",
+    body: "Explained science and tech (astronomy, aeronautics) to readers with no background in any of it.",
+    image: "/differentiator-jargon-translation.png",
+  },
+  {
     title: "Specialising in integrations",
     body: "On a mission to make API and integration docs make sense to people who aren't devs.",
     image: "/differentiator-integrations.png",
