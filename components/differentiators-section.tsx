@@ -6,7 +6,7 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "Worked as a tech journalist for 6 years (ex-Business Insider), then moved into the tech industry.",
-    image: "/differentiator-journalist-bi-wall.png",
+    image: "/differentiator-business-insider.png",
     wide: true,
   },
   {
@@ -75,12 +75,12 @@ export function DifferentiatorsSection() {
                 alt=""
                 fill
                 aria-hidden="true"
-                className="object-cover opacity-70 transition-transform duration-500 group-hover:scale-105"
+                className="object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
               />
 
-              {/* Colour wash + scrim so the copy stays legible */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
+              {/* Colour wash + scrim so the copy stays legible without burying the photo */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
 
               {/* Copy anchored to the bottom, over the image */}
               <div
