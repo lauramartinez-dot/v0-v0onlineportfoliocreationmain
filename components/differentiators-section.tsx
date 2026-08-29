@@ -44,7 +44,9 @@ const differentiators = [
   {
     title: "Women in Tech Advocate",
     body: "Co-founded Personio's first Women's Committee. ",
-    image: "/ooo-women.jpg",
+    image: "/women-in-tech-collaboration.png",
+    // Keep the group of women centred in the wide banner crop
+    imagePosition: "object-center",
     full: true,
   },
 ]
