@@ -31,9 +31,9 @@ const differentiators = [
   {
     title: "Lived in 4 Countries",
     body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
-    image: "/four-countries-bamberg.png",
-    // Anchor to the top so the Bamberg town hall and sky stay in frame
-    imagePosition: "object-top",
+    image: "/european-journey-map.png",
+    // Keep the labelled countries centred in the wide crop
+    imagePosition: "object-center",
     wide: true,
   },
   {
