@@ -6,9 +6,8 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "Worked as a tech journalist for 6 years (ex-Business Insider), then moved into the tech industry.",
-    image: "/business-insider-byline-article.png",
-    // Anchor to the top so the masthead, headline and byline stay in frame
-    imagePosition: "object-top",
+    // No photo yet - the card falls back to a tinted panel until one is added
+    image: null,
     wide: true,
   },
   {
@@ -32,7 +31,9 @@ const differentiators = [
   {
     title: "Lived in 4 Countries",
     body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
-    image: "/differentiator-four-countries.png",
+    image: "/four-countries-bamberg.png",
+    // Anchor to the top so the Bamberg town hall and sky stay in frame
+    imagePosition: "object-top",
     wide: true,
   },
   {
@@ -73,20 +74,25 @@ export function DifferentiatorsSection() {
                     : "min-h-[520px] lg:min-h-[620px]"
               }`}
             >
-              {/* Full-bleed image */}
-              <Image
-                src={image || "/placeholder.svg"}
-                alt=""
-                fill
-                aria-hidden="true"
-                className={`object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 ${
-                  imagePosition ?? ""
-                }`}
-              />
-
-              {/* Colour wash + scrim so the copy stays legible without burying the photo */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+              {/* Full-bleed image, or a tinted panel when the card has no photo yet */}
+              {image ? (
+                <>
+                  <Image
+                    src={image}
+                    alt=""
+                    fill
+                    aria-hidden="true"
+                    className={`object-cover opacity-90 transition-transform duration-500 group-hover:scale-105 ${
+                      imagePosition ?? ""
+                    }`}
+                  />
+                  {/* Colour wash + scrim so the copy stays legible without burying the photo */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
+                </>
+              ) : (
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-card to-card" />
+              )}
 
               {/* Copy anchored to the bottom, over the image */}
               <div
