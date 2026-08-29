@@ -203,11 +203,6 @@ export function HighlightsSection() {
             </span>{" "}
             to understand the tech that&apos;s everywhere in your life.
           </p>
-          <div className="mt-6 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance">
-            <p>
-              Especially in 2026, when AI means you&apos;re expected to build software, not just use it.
-            </p>
-          </div>
         </div>
 
         {/* Spacer - gradient removed for consistent background */}
