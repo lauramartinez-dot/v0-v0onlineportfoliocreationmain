@@ -173,7 +173,7 @@ export function HighlightsSection() {
                 index={index}
                 image={
                   index === 0
-                    ? "/api-docs-bg.png"
+                    ? "/writing-notes-desk.jpg"
                     : index === 1
                       ? "/highlight-git-workflow-diagram.png"
                       : "/highlight-ai-chatbot.png"

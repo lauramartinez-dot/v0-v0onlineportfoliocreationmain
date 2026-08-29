@@ -14,7 +14,9 @@ const differentiators = [
   {
     title: "Work on API & Integrations",
     body: "On a mission to make API and integration docs make sense to people who aren't devs.",
-    image: "/differentiator-integrations.png",
+    image: "/api-beginner-docs-laptop.jpg",
+    // Anchor to the top so the laptop screen explaining APIs stays in frame
+    imagePosition: "object-top",
   },
   {
     title: "Hired Early by Startups",
