@@ -7,11 +7,6 @@ const differentiators = [
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
-    title: "Jargon Translator",
-    body: "Explained engineering principles to readers with no background in any of it.",
-    image: "/differentiator-jargon-translation.png",
-  },
-  {
     title: "Specialising in integrations",
     body: "On a mission to make API and integration docs make sense to people who aren't devs.",
     image: "/differentiator-integrations.png",
@@ -57,10 +52,12 @@ export function DifferentiatorsSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {differentiators.map(({ title, body, image }) => (
+          {differentiators.map(({ title, body, image }, index) => (
             <article
               key={title}
-              className="group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)]"
+              className={`group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
+                index === differentiators.length - 1 ? "lg:col-start-2" : ""
+              }`}
             >
               {/* Full-bleed image */}
               <Image
