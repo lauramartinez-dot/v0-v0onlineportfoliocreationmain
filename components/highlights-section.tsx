@@ -3,7 +3,6 @@
 import { useState, useRef, useCallback } from "react"
 import { topSkills } from "@/data/highlights"
 import Image from "next/image"
-import { Rocket } from "lucide-react"
 
 function DiagonalRevealImage({
   beforeSrc,
@@ -186,17 +185,16 @@ export function HighlightsSection() {
         </ul>
 
         {/* Mission - boxed, closing out the same section */}
-        <div className="relative mx-auto mt-24 max-w-4xl rounded-2xl border border-[#472444] bg-card/50 px-6 pb-8 pt-10 text-center md:px-10 md:pb-10 md:pt-12">
-          {/* Floating label - straddles the top border so it reads as part of the box */}
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 flex items-center gap-2 rounded-full border border-primary/30 bg-background px-4 py-1.5">
-            <Rocket className="h-3.5 w-3.5 text-primary" />
-            <span className="text-xs font-semibold uppercase tracking-wider text-primary">Mission</span>
+        <div className="relative mx-auto mt-28 max-w-4xl rounded-2xl border border-[#472444] bg-card/50 px-6 pb-10 pt-16 text-center shadow-[0_20px_70px_-30px_rgba(217,42,205,0.35)] md:px-12 md:pb-12 md:pt-20">
+          {/* WHY - the box's title, straddling the top border so it reads as the section's headline */}
+          <div className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full border border-primary/40 bg-background px-9 py-3 shadow-[0_0_40px_-12px_rgba(217,42,205,0.5)] md:-top-9 md:px-12 md:py-4">
+            <span
+              className="text-3xl font-bold uppercase tracking-tight md:text-4xl"
+              style={{ color: "#d92acd" }}
+            >
+              Why?
+            </span>
           </div>
-
-          {/* WHY - names the mission so the box reads as the reason behind the work */}
-          <h3 className="mb-6 text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl" style={{ backgroundColor: "rgba(194, 65, 200, 0)" }}>
-            <span style={{ color: "#d92acd" }}>wHY?</span>
-          </h3>
 
           <p className="text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
             Because{" "}
