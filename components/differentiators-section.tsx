@@ -7,32 +7,32 @@ const differentiators = [
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
-    title: "Work on API & integrations",
+    title: "Work on API & Integrations",
     body: "On a mission to make API and integration docs make sense to people who aren't devs.",
     image: "/differentiator-integrations.png",
   },
   {
-    title: "Lived in 4 countries",
+    title: "Lived in 4 Countries",
     body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
     image: "/differentiator-four-countries.png",
   },
   {
-    title: "Speak 3 languages",
+    title: "Speak 3 Languages",
     body: "Switching between English, Spanish and German almost daily.",
     image: "/differentiator-languages-books.jpg",
   },
   {
-    title: "Hired early by startups",
+    title: "Hired Early by Startups",
     body: "Always hired as the first writer, or one of the first. Need no playbook.",
     image: "/differentiator-early-hire-welcome.jpg",
   },
   {
-    title: "Worked at an unicorn startup",
+    title: "Worked at an Unicorn Startup",
     body: "Worked at Personio, Europe's HR unicorn ($8.5B valuation).",
     image: "/differentiator-unicorn-personio.jpg",
   },
   {
-    title: "Women in Tech advocate",
+    title: "Women in Tech Advocate",
     body: "Co-founded Personio's first Women's Committee. ",
     image: "/ooo-women.jpg",
   },
