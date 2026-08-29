@@ -96,35 +96,17 @@ function DiagonalRevealImage({
 function SkillCard({
   item,
   index,
-  image,
-  imageFit = "cover",
 }: {
   item: (typeof topSkills)[number]
   index: number
-  image?: string
-  /**
-   * "contain" letterboxes the artwork so nothing gets cropped, leaving breathing room top and bottom.
-   * "contain-lg" does the same but scales the artwork up so fine detail stays legible.
-   */
-  imageFit?: "cover" | "contain" | "contain-lg"
 }) {
-  const imageFitClass = {
-    cover: "object-cover opacity-70",
-    contain: "object-contain object-top py-10 opacity-70",
-    "contain-lg": "object-contain object-top scale-[1.35] origin-top py-4 opacity-70",
-  }[imageFit]
-
   return (
-    <div className="relative min-h-[720px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
-      {/* Optional background image, sitting under the same layered wash */}
-      {image && (
-        <Image src={image || "/placeholder.svg"} alt="" fill aria-hidden="true" className={imageFitClass} />
-      )}
-
+    <div className="relative flex min-h-[340px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
+      {/* Layered wash gives the card its depth now that there is no photo behind it */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
-      <div className="absolute bottom-0 left-0 right-0 p-8">
+      <div className="relative mt-auto w-full p-8">
         {/* List marker - ties the card back to the "And then I:" lead-in */}
         <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-xl font-extrabold text-primary">
           {index + 1}
@@ -168,18 +150,7 @@ export function HighlightsSection() {
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
           {topSkills.slice(0, 3).map((item, index) => (
             <li key={item.title}>
-              <SkillCard
-                item={item}
-                index={index}
-                image={
-                  index === 0
-                    ? "/writing-notes-desk.jpg"
-                    : index === 1
-                      ? "/highlight-git-workflow-diagram.png"
-                      : "/highlight-ai-chatbot.png"
-                }
-                imageFit={index === 0 ? "cover" : index === 1 ? "contain" : "contain-lg"}
-              />
+              <SkillCard item={item} index={index} />
             </li>
           ))}
         </ul>
