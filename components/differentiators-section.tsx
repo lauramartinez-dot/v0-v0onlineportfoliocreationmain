@@ -21,7 +21,7 @@ const differentiators = [
   },
   {
     title: "Worked at an Unicorn Startup",
-    body: "Worked at Personio, Europe's HR unicorn ($8.5B valuation).",
+    body: "Worked at Personio, the German company that became one of Europe's HR unicorns ($8.5B valuation).",
     image: "/differentiator-unicorn-personio.jpg",
     wide: true,
   },
