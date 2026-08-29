@@ -49,7 +49,7 @@ export function HeroSection() {
             <div className="mx-auto md:mx-0 mb-5 h-1.5 w-12 rounded-full bg-primary" />
 
             {/* Two-tier headline */}
-            <h1 className="mb-10 text-foreground">
+            <h1 className="mb-6 text-foreground">
               <span className="block text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
                 A global
               </span>
@@ -59,9 +59,10 @@ export function HeroSection() {
             </h1>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <div className="inline-flex items-center rounded-full px-6 py-3 text-xl md:text-2xl font-medium border-2 border-purple-500/50 bg-transparent text-foreground/80">
-                <MapPin className="mr-2 h-5 w-5 shrink-0 text-primary" />
-                Based in Barcelona. Working globally.
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/40 bg-primary/5 px-5 py-2.5 text-lg md:text-xl font-medium tracking-tight backdrop-blur-sm">
+                <MapPin className="h-5 w-5 shrink-0 text-primary" />
+                <span className="text-foreground">Based in Barcelona.</span>
+                <span className="text-muted-foreground">Working globally.</span>
               </div>
             </div>
           </div>
