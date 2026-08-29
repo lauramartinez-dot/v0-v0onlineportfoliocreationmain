@@ -7,7 +7,7 @@ const differentiators = [
     image: "/differentiator-journalist-bi-wall.png",
   },
   {
-    title: "Specialising in integrations",
+    title: "API & integrations writer",
     body: "On a mission to make API and integration docs make sense to people who aren't devs.",
     image: "/differentiator-integrations.png",
   },
