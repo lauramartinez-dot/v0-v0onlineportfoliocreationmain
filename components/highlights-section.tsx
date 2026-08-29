@@ -199,7 +199,11 @@ export function HighlightsSection() {
           </h3>
 
           <p className="text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
-            Because you shouldn&apos;t need an IT background or a PhD to understand the tech that&apos;s everywhere in your life.
+            Because{" "}
+            <span className="font-bold" style={{ color: "#cf52c7" }}>
+              you shouldn&apos;t need an IT background or a PhD
+            </span>{" "}
+            to understand the tech that&apos;s everywhere in your life.
           </p>
           <div className="mt-6 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance">
             <p>
