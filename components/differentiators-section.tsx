@@ -83,17 +83,25 @@ export function DifferentiatorsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
               {/* Copy anchored to the bottom, over the image */}
-              {/* Type stays the same size on every card - wide cards use the extra
-                  room for longer copy instead of bigger text */}
               <div
                 className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8 ${
-                  wide || full ? "lg:max-w-[85%]" : ""
+                  wide || full ? "lg:max-w-[70%] lg:p-10" : ""
                 }`}
               >
-                <h3 className="text-3xl md:text-4xl lg:text-[2.5rem] font-bold leading-tight text-white text-balance">
+                <h3
+                  className={`font-bold leading-tight text-white text-balance ${
+                    wide || full ? "text-4xl md:text-5xl lg:text-[3.25rem]" : "text-3xl md:text-4xl lg:text-[2.5rem]"
+                  }`}
+                >
                   {title}
                 </h3>
-                <p className="text-lg md:text-xl font-medium leading-snug text-white/85 text-pretty">{body}</p>
+                <p
+                  className={`font-medium leading-snug text-white/85 text-pretty ${
+                    wide || full ? "text-xl md:text-2xl lg:text-[1.75rem]" : "text-lg md:text-xl"
+                  }`}
+                >
+                  {body}
+                </p>
               </div>
             </article>
           ))}
