@@ -39,7 +39,9 @@ const differentiators = [
   {
     title: "Speak 3 Languages",
     body: "Switching between English, Spanish and German almost daily.",
-    image: "/differentiator-languages-books.jpg",
+    image: "/three-languages-illustration.png",
+    // Anchor to the top so the three flag speech bubbles stay in frame above the copy
+    imagePosition: "object-top",
   },
   {
     title: "Women in Tech Advocate",
