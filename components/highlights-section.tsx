@@ -146,7 +146,7 @@ export function HighlightsSection() {
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-14 mt-[120px] scroll-mt-32">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
               What I do<span className="text-primary">.</span>
             </h2>
@@ -154,7 +154,7 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/82 text-balance">
+            <p className="mt-8 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/82 text-pretty lg:whitespace-nowrap">
               I spend hours untangling complex, mind-bending tech{" "}
               <span className="text-[25px] font-bold" style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
             </p>
