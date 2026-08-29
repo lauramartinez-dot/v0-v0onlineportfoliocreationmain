@@ -44,7 +44,7 @@ export function DifferentiatorsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            What differentiates me<span className="text-primary">.</span>
+            What sets me apart<span className="text-primary">.</span>
           </h2>
 
           {/* Accent bar - separates the title from the cards */}
