@@ -12,7 +12,7 @@ const differentiators = [
   },
   {
     title: "Work on API & Integrations",
-    body: "Now I make API and integration docs make sense to people who aren't devs.",
+    body: "Now I write about APIs in a way that makes sense to people who aren't devs.",
     image: "/api-beginner-docs-laptop.jpg",
     // Anchor to the top so the laptop screen explaining APIs stays in frame
     imagePosition: "object-top",
