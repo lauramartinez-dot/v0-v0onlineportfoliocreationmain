@@ -207,9 +207,6 @@ export function HighlightsSection() {
             <p>
               Especially in 2026, when AI means you&apos;re expected to build software, not just use it.
             </p>
-            <p className="mt-5">
-              Real beginner documentation has never mattered more.
-            </p>
           </div>
         </div>
 
