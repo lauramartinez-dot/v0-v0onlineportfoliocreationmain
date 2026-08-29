@@ -1,25 +1,18 @@
 import Image from "next/image"
 
+// `wide` cards take two of the three columns, so each row reads as a 2 + 1 pair
+// with the emphasis alternating side to side.
 const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "Worked as a tech journalist for 6 years, then moved into the tech industry.",
     image: "/differentiator-journalist-bi-wall.png",
+    wide: true,
   },
   {
     title: "Work on API & Integrations",
     body: "On a mission to make API and integration docs make sense to people who aren't devs.",
     image: "/differentiator-integrations.png",
-  },
-  {
-    title: "Lived in 4 Countries",
-    body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
-    image: "/differentiator-four-countries.png",
-  },
-  {
-    title: "Speak 3 Languages",
-    body: "Switching between English, Spanish and German almost daily.",
-    image: "/differentiator-languages-books.jpg",
   },
   {
     title: "Hired Early by Startups",
@@ -30,11 +23,24 @@ const differentiators = [
     title: "Worked at an Unicorn Startup",
     body: "Worked at Personio, Europe's HR unicorn ($8.5B valuation).",
     image: "/differentiator-unicorn-personio.jpg",
+    wide: true,
+  },
+  {
+    title: "Lived in 4 Countries",
+    body: "Born in Spain. Spent 9 years across France, Ireland, and Germany.",
+    image: "/differentiator-four-countries.png",
+    wide: true,
+  },
+  {
+    title: "Speak 3 Languages",
+    body: "Switching between English, Spanish and German almost daily.",
+    image: "/differentiator-languages-books.jpg",
   },
   {
     title: "Women in Tech Advocate",
     body: "Co-founded Personio's first Women's Committee. ",
     image: "/ooo-women.jpg",
+    full: true,
   },
 ]
 
@@ -51,14 +57,16 @@ export function DifferentiatorsSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3 items-stretch">
-          {differentiators.map(({ title, body, image }, index) => (
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {differentiators.map(({ title, body, image, wide, full }) => (
             <article
               key={title}
-              className={`group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
-                index === differentiators.length - 1 && differentiators.length % 3 === 1
-                  ? "lg:col-start-2"
-                  : ""
+              className={`group relative overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
+                full
+                  ? "min-h-[520px] md:col-span-2 lg:col-span-3 lg:min-h-[560px]"
+                  : wide
+                    ? "min-h-[520px] md:col-span-2 lg:min-h-[620px]"
+                    : "min-h-[520px] lg:min-h-[620px]"
               }`}
             >
               {/* Full-bleed image */}
@@ -75,11 +83,25 @@ export function DifferentiatorsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
               {/* Copy anchored to the bottom, over the image */}
-              <div className="absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8">
-                <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
+              <div
+                className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8 ${
+                  wide || full ? "lg:max-w-[70%] lg:p-10" : ""
+                }`}
+              >
+                <h3
+                  className={`font-bold leading-tight text-white text-balance ${
+                    wide || full ? "text-4xl md:text-5xl lg:text-[3.25rem]" : "text-3xl md:text-4xl lg:text-[2.5rem]"
+                  }`}
+                >
                   {title}
                 </h3>
-                <p className="text-xl md:text-2xl font-medium leading-snug text-white/85 text-pretty">{body}</p>
+                <p
+                  className={`font-medium leading-snug text-white/85 text-pretty ${
+                    wide || full ? "text-xl md:text-2xl lg:text-[1.75rem]" : "text-lg md:text-xl"
+                  }`}
+                >
+                  {body}
+                </p>
               </div>
             </article>
           ))}
