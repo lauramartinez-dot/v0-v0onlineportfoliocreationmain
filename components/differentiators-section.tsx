@@ -1,4 +1,3 @@
-import { Fragment } from "react"
 import Image from "next/image"
 
 const differentiators = [
@@ -6,11 +5,6 @@ const differentiators = [
     title: "Former Tech Journalist",
     body: "Worked as a tech journalist for 6 years, then moved into the tech industry.",
     image: "/differentiator-journalist-bi-wall.png",
-  },
-  {
-    title: "Jargon Translator",
-    body: "Explained engineering principles to readers with no background in any of it.",
-    image: "/differentiator-jargon-translation.png",
   },
   {
     title: "Specialising in integrations",
@@ -59,8 +53,8 @@ export function DifferentiatorsSection() {
 
         <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {differentiators.map(({ title, body, image }, index) => (
-            <Fragment key={title}>
             <article
+              key={title}
               className={`group relative min-h-[720px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
                 index === differentiators.length - 1 && differentiators.length % 3 === 1
                   ? "lg:col-start-2"
@@ -88,16 +82,6 @@ export function DifferentiatorsSection() {
                 <p className="text-xl md:text-2xl font-medium leading-snug text-white/85 text-pretty">{body}</p>
               </div>
             </article>
-
-            {/* Hairline rule after each set of three, so every row reads as its own beat */}
-            {index % 3 === 2 && index !== differentiators.length - 1 && (
-              <div aria-hidden="true" className="hidden lg:col-span-3 lg:flex items-center gap-4 py-2">
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/30 to-primary/30" />
-                <div className="h-1.5 w-1.5 rounded-full bg-primary/70" />
-                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-primary/30 to-primary/30" />
-              </div>
-            )}
-            </Fragment>
           ))}
         </div>
       </div>
