@@ -127,22 +127,36 @@ export function HighlightsSection() {
       <div className="mx-auto max-w-7xl">
         {/* Top Differentiators Section */}
         <div id="top-differentiators" className="mb-14 mt-[120px] scroll-mt-32">
-          <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              What I do<span className="text-primary">.</span>
-            </h2>
+          {/* Statement on the left, supporting image on the right */}
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+            <div className="text-center lg:text-left">
+              <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                What I do<span className="text-primary">.</span>
+              </h2>
 
-            {/* Accent bar - separates the title from the statement */}
-            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+              {/* Accent bar - separates the title from the statement */}
+              <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary lg:mx-0" />
 
-            <p className="mt-8 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/82 text-pretty lg:whitespace-nowrap">
-              I spend hours untangling complex, mind-bending tech{" "}
-              <span className="text-[25px] font-bold" style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
-            </p>
-            {/* Lead-in to the three cards, which act as the list itself */}
-            <p className="mt-6 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
-              And once I&apos;ve finally cracked it, I:
-            </p>
+              {/* Scaled to the hero headline: uppercase, extrabold, tight tracking */}
+              <p className="mt-8 text-3xl font-extrabold uppercase tracking-tighter leading-[0.98] text-foreground text-balance md:text-4xl lg:text-5xl xl:text-6xl">
+                I spend hours untangling complex, mind-bending tech{" "}
+                <span style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
+              </p>
+
+              {/* Lead-in to the three cards, which act as the list itself */}
+              <p className="mt-8 text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
+                And once I&apos;ve finally cracked it, I:
+              </p>
+            </div>
+
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#472444] shadow-[0_20px_70px_-30px_rgba(217,42,205,0.45)]">
+              <Image
+                src="/untangling-complex-tech.png"
+                alt="Tangled wires resolving into clean parallel lines"
+                fill
+                className="object-cover"
+              />
+            </div>
           </div>
         </div>
 
