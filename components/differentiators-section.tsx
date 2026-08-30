@@ -103,7 +103,7 @@ export function DifferentiatorsSection() {
               {/* Copy anchored to the bottom, over the image */}
               <div
                 className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-3 p-6 ${
-                  wide || full ? "lg:max-w-[70%] lg:p-8" : ""
+                  wide || full ? "lg:max-w-[88%] lg:p-8" : ""
                 }`}
               >
                 <h3
