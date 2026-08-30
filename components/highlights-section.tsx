@@ -121,6 +121,7 @@ function SkillCard({
 
 export function HighlightsSection() {
   return (
+    <>
     <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
       {/* Gradient background removed for consistent solid background */}
 
@@ -171,31 +172,27 @@ export function HighlightsSection() {
         </ul>
       </div>
 
-      {/* Divider - marks the break between the list and the mission */}
-      <div className="mx-auto max-w-7xl border-t border-[#472444]" />
+    </section>
 
-      {/* 3. The mission - closes the section out on its own */}
-      <div className="mx-auto max-w-7xl pt-28 pb-16">
-        <div className="relative mx-auto max-w-4xl rounded-2xl border border-[#472444] bg-card/50 px-6 pb-10 pt-16 text-center shadow-[0_20px_70px_-30px_rgba(217,42,205,0.35)] md:px-12 md:pb-12 md:pt-20">
-          {/* WHY - the box's title, straddling the top border so it reads as the block's headline */}
-          <div className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full border border-primary/40 bg-background px-9 py-3 shadow-[0_0_40px_-12px_rgba(217,42,205,0.5)] md:-top-9 md:px-12 md:py-4">
-            <span
-              className="text-3xl font-bold uppercase tracking-tight md:text-4xl"
-              style={{ color: "#d92acd" }}
-            >
-              Why?
-            </span>
-          </div>
+    {/* The mission - a section in its own right, not a callout inside "What I do" */}
+    <section id="why" className="relative px-4 pt-20 pb-24 scroll-mt-32">
+      <div className="mx-auto max-w-7xl text-center">
+        {/* Same heading treatment as the other sections */}
+        <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          Why<span className="text-primary">?</span>
+        </h2>
 
-          <p className="text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/79 text-balance border-[#472444]">
-            Because{" "}
-            <span className="font-bold" style={{ color: "#cf52c7" }}>
-              you shouldn&apos;t need an IT background or a PhD
-            </span>{" "}
-            to understand the tech that&apos;s everywhere in your life.
-          </p>
-        </div>
+        <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+
+        <p className="mx-auto mt-10 max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white/80 text-balance md:text-3xl">
+          Because{" "}
+          <span className="font-bold" style={{ color: "#cf52c7" }}>
+            you shouldn&apos;t need an IT background or a PhD
+          </span>{" "}
+          to understand the tech that&apos;s everywhere in your life.
+        </p>
       </div>
     </section>
+    </>
   )
 }
