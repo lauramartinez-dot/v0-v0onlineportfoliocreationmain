@@ -124,43 +124,44 @@ export function HighlightsSection() {
     <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
       {/* Gradient background removed for consistent solid background */}
 
-      <div className="mx-auto max-w-7xl">
-        {/* Top Differentiators Section */}
-        <div id="top-differentiators" className="mb-14 mt-[120px] scroll-mt-32">
-          {/* Statement on the left, supporting image on the right */}
-          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
-            <div className="text-center lg:text-left">
-              <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-                What I do<span className="text-primary">.</span>
-              </h2>
+      {/* 1. The statement - the section's thesis, paired with its image */}
+      <div id="top-differentiators" className="mx-auto max-w-7xl pt-[120px] pb-24 scroll-mt-32">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+          <div className="text-center lg:text-left">
+            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              What I do<span className="text-primary">.</span>
+            </h2>
 
-              {/* Accent bar - separates the title from the statement */}
-              <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary lg:mx-0" />
+            {/* Accent bar - separates the title from the statement */}
+            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary lg:mx-0" />
 
-              {/* Scaled to the hero headline: uppercase, extrabold, tight tracking */}
-              <p className="mt-8 text-3xl font-extrabold uppercase tracking-tighter leading-[0.98] text-foreground text-balance md:text-4xl lg:text-5xl xl:text-6xl">
-                I spend hours untangling complex, mind-bending tech{" "}
-                <span style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
-              </p>
+            {/* Scaled to the hero headline: uppercase, extrabold, tight tracking */}
+            <p className="mt-8 text-3xl font-extrabold uppercase tracking-tighter leading-[0.98] text-foreground text-balance md:text-4xl lg:text-5xl xl:text-6xl">
+              I spend hours untangling complex, mind-bending tech{" "}
+              <span style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
+            </p>
+          </div>
 
-              {/* Lead-in to the three cards, which act as the list itself */}
-              <p className="mt-8 text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
-                And once I&apos;ve finally cracked it, I:
-              </p>
-            </div>
-
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#472444] shadow-[0_20px_70px_-30px_rgba(217,42,205,0.45)]">
-              <Image
-                src="/untangling-complex-tech.png"
-                alt="Tangled wires resolving into clean parallel lines"
-                fill
-                className="object-cover"
-              />
-            </div>
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#472444] shadow-[0_20px_70px_-30px_rgba(217,42,205,0.45)]">
+            <Image
+              src="/untangling-complex-tech.png"
+              alt="Tangled wires resolving into clean parallel lines"
+              fill
+              className="object-cover"
+            />
           </div>
         </div>
+      </div>
 
-        {/* The three things I do - simple boxes acting as the list */}
+      {/* Divider - marks the break between the statement and the list */}
+      <div className="mx-auto max-w-7xl border-t border-[#472444]" />
+
+      {/* 2. The three things I do - its own block with its own lead-in */}
+      <div className="mx-auto max-w-7xl pt-20 pb-24">
+        <p className="mb-10 text-center text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
+          And once I&apos;ve finally cracked it, I:
+        </p>
+
         <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
           {topSkills.slice(0, 3).map((item, index) => (
             <li key={item.title}>
@@ -168,10 +169,15 @@ export function HighlightsSection() {
             </li>
           ))}
         </ul>
+      </div>
 
-        {/* Mission - boxed, closing out the same section */}
-        <div className="relative mx-auto mt-28 max-w-4xl rounded-2xl border border-[#472444] bg-card/50 px-6 pb-10 pt-16 text-center shadow-[0_20px_70px_-30px_rgba(217,42,205,0.35)] md:px-12 md:pb-12 md:pt-20">
-          {/* WHY - the box's title, straddling the top border so it reads as the section's headline */}
+      {/* Divider - marks the break between the list and the mission */}
+      <div className="mx-auto max-w-7xl border-t border-[#472444]" />
+
+      {/* 3. The mission - closes the section out on its own */}
+      <div className="mx-auto max-w-7xl pt-28 pb-16">
+        <div className="relative mx-auto max-w-4xl rounded-2xl border border-[#472444] bg-card/50 px-6 pb-10 pt-16 text-center shadow-[0_20px_70px_-30px_rgba(217,42,205,0.35)] md:px-12 md:pb-12 md:pt-20">
+          {/* WHY - the box's title, straddling the top border so it reads as the block's headline */}
           <div className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full border border-primary/40 bg-background px-9 py-3 shadow-[0_0_40px_-12px_rgba(217,42,205,0.5)] md:-top-9 md:px-12 md:py-4">
             <span
               className="text-3xl font-bold uppercase tracking-tight md:text-4xl"
@@ -189,10 +195,6 @@ export function HighlightsSection() {
             to understand the tech that&apos;s everywhere in your life.
           </p>
         </div>
-
-        {/* Spacer - gradient removed for consistent background */}
-        <div className="py-3 mt-20" />
-
       </div>
     </section>
   )
