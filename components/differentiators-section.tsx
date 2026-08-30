@@ -59,12 +59,12 @@ export function DifferentiatorsSection() {
     <section id="differentiators" className="relative px-4 pt-20 pb-16 scroll-mt-32">
       <div className="mx-auto max-w-6xl">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold uppercase tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             What sets me apart<span className="text-primary">.</span>
           </h2>
 
           {/* Accent bar - separates the title from the cards */}
-          <div className="mx-auto mt-6 h-1.5 w-12 rounded-full bg-primary" />
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">

@@ -127,19 +127,24 @@ export function HighlightsSection() {
 
       {/* 1. The statement - the section's thesis, paired with its image */}
       <div id="top-differentiators" className="mx-auto max-w-7xl pt-[120px] pb-24 scroll-mt-32">
+        {/* Section title stays centered above the split, like every other section */}
+        <div className="mb-14 text-center">
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            What I do<span className="text-primary">.</span>
+          </h2>
+
+          {/* Accent bar - separates the title from the statement */}
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+        </div>
+
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
           <div className="text-center lg:text-left">
-            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              What I do<span className="text-primary">.</span>
-            </h2>
-
-            {/* Accent bar - separates the title from the statement */}
-            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary lg:mx-0" />
-
-            {/* Scaled to the hero headline: uppercase, extrabold, tight tracking */}
-            <p className="mt-8 text-3xl font-extrabold uppercase tracking-tighter leading-[0.98] text-foreground text-balance md:text-4xl lg:text-5xl xl:text-6xl">
+            {/* Same family and casing as the body copy, just larger and heavier so it still leads */}
+            <p className="text-3xl font-semibold tracking-tight leading-[1.2] text-white text-balance md:text-4xl lg:text-[2.75rem]">
               I spend hours untangling complex, mind-bending tech{" "}
-              <span style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
+              <span className="font-bold" style={{ color: "#cf52c7" }}>
+                so you don&apos;t have to.
+              </span>
             </p>
           </div>
 
@@ -179,7 +184,7 @@ export function HighlightsSection() {
       <div className="mx-auto max-w-7xl text-center">
         {/* Same heading treatment as the other sections */}
         <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          Why<span className="text-primary">?</span>
+          Why I do it<span className="text-primary">.</span>
         </h2>
 
         <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
