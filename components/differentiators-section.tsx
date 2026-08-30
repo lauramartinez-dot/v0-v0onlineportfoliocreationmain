@@ -6,8 +6,9 @@ const differentiators = [
   {
     title: "Former Tech Journalist",
     body: "Worked as a tech journalist for 6 years (ex-Business Insider), then moved into the tech industry.",
-    // No photo yet - the card falls back to a tinted panel until one is added
-    image: null,
+    image: "/business-insider-desk-flatlay.png",
+    // Keep the phone with the Business Insider logo centred in the wide crop
+    imagePosition: "object-center",
     wide: true,
   },
   {
