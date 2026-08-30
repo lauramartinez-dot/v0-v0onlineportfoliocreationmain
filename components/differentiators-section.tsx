@@ -31,7 +31,7 @@ const differentiators = [
   },
   {
     title: "Lived in 4 Countries",
-    body: "Born in Spain. Spent 9 years across France, Ireland, and Germany before returning to Spain.",
+    body: "I was born in Madrid, Spain, but spent nine years living in France, Ireland, and Germany before returning to Spain.",
     image: "/four-countries-europe-map.png",
     // Keep the highlighted countries and flight paths centred in the wide crop
     imagePosition: "object-center",
