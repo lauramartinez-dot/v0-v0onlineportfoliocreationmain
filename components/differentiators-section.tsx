@@ -31,7 +31,7 @@ const differentiators = [
   },
   {
     title: "Lived in 4 Countries",
-    body: "I was born in Madrid, Spain, but spent nine years living in France, Ireland, and Germany before returning to Spain.",
+    body: "I was born in Madrid, Spain, but spent 9 years living in France, Ireland, and Germany before returning to Spain.",
     image: "/four-countries-europe-map.png",
     // Keep the highlighted countries and flight paths centred in the wide crop
     imagePosition: "object-center",
@@ -40,7 +40,7 @@ const differentiators = [
   {
     title: "Speak 3 Languages",
     body: "Switching between English, Spanish and German almost daily.",
-    image: "/three-languages-illustration-cream.png",
+    image: "/three-languages-illustration-tall.png",
     // Anchor to the top so the three flag speech bubbles stay in frame above the copy
     imagePosition: "object-top",
   },
