@@ -14,7 +14,7 @@ const differentiators = [
   {
     title: "Work on API & Integrations",
     body: "Now I write about APIs in a way that makes sense to people who aren't devs.",
-    image: "/api-integrations-isometric-tall.png",
+    image: "/api-integrations-isometric-top.png",
     // Anchor to the top so the cloud, server, and API chip stay above the copy
     imagePosition: "object-top",
   },
@@ -32,7 +32,7 @@ const differentiators = [
   {
     title: "Lived in 4 Countries",
     body: "Born in Spain. Spent 9 years across France, Ireland, and Germany before returning to Spain.",
-    image: "/european-journey-map-wide.png",
+    image: "/four-countries-europe-map.png",
     // Keep the highlighted countries and flight paths centred in the wide crop
     imagePosition: "object-center",
     wide: true,
