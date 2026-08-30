@@ -56,27 +56,27 @@ const differentiators = [
 
 export function DifferentiatorsSection() {
   return (
-    <section id="differentiators" className="relative px-4 pt-24 pb-20 scroll-mt-32">
-      <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+    <section id="differentiators" className="relative px-4 pt-20 pb-16 scroll-mt-32">
+      <div className="mx-auto max-w-6xl">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold uppercase tracking-tight text-foreground md:text-4xl lg:text-5xl">
             What sets me apart<span className="text-primary">.</span>
           </h2>
 
           {/* Accent bar - separates the title from the cards */}
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <div className="mx-auto mt-6 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {differentiators.map(({ title, body, image, imagePosition, wide, full }) => (
             <article
               key={title}
               className={`group relative overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-2 hover:ring-primary/60 hover:shadow-[0_24px_70px_-16px_rgba(200,80,192,0.55)] ${
                 full
-                  ? "min-h-[520px] md:col-span-2 lg:col-span-3 lg:min-h-[560px]"
+                  ? "min-h-[400px] md:col-span-2 lg:col-span-3 lg:min-h-[430px]"
                   : wide
-                    ? "min-h-[520px] md:col-span-2 lg:min-h-[620px]"
-                    : "min-h-[520px] lg:min-h-[620px]"
+                    ? "min-h-[400px] md:col-span-2 lg:min-h-[480px]"
+                    : "min-h-[400px] lg:min-h-[480px]"
               }`}
             >
               {/* Full-bleed image, or a tinted panel when the card has no photo yet */}
@@ -102,20 +102,20 @@ export function DifferentiatorsSection() {
 
               {/* Copy anchored to the bottom, over the image */}
               <div
-                className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-4 p-8 ${
-                  wide || full ? "lg:max-w-[70%] lg:p-10" : ""
+                className={`absolute bottom-0 left-0 right-0 z-10 flex flex-col gap-3 p-6 ${
+                  wide || full ? "lg:max-w-[70%] lg:p-8" : ""
                 }`}
               >
                 <h3
                   className={`font-bold leading-tight text-white text-balance ${
-                    wide || full ? "text-4xl md:text-5xl lg:text-[3.25rem]" : "text-3xl md:text-4xl lg:text-[2.5rem]"
+                    wide || full ? "text-3xl md:text-4xl lg:text-[2.5rem]" : "text-2xl md:text-3xl lg:text-[1.9rem]"
                   }`}
                 >
                   {title}
                 </h3>
                 <p
                   className={`font-medium leading-snug text-white/85 text-pretty ${
-                    wide || full ? "text-xl md:text-2xl lg:text-[1.75rem]" : "text-lg md:text-xl"
+                    wide || full ? "text-lg md:text-xl lg:text-[1.35rem]" : "text-base md:text-lg"
                   }`}
                 >
                   {body}
