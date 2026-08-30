@@ -101,17 +101,19 @@ function SkillCard({
   index: number
 }) {
   return (
-    <div className="relative flex min-h-[340px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
+    <div className="group relative flex h-full min-h-[240px] w-full flex-col overflow-hidden rounded-2xl border border-[#472444] shadow-[0_24px_60px_-32px_rgba(217,42,205,0.45)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_28px_70px_-28px_rgba(217,42,205,0.6)]">
       {/* Layered wash gives the card its depth now that there is no photo behind it */}
       <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
+      {/* Top hairline picks up the accent on hover so the card feels responsive, not static */}
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-100" />
 
-      <div className="relative mt-auto w-full p-8">
-        {/* List marker - ties the card back to the "And then I:" lead-in */}
-        <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-xl font-extrabold text-primary">
+      <div className="relative flex h-full flex-col p-8 md:p-10">
+        {/* List marker - ties the card back to the "And once I've cracked it, I:" lead-in */}
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border-2 border-primary/70 text-lg font-extrabold text-primary transition-colors duration-300 group-hover:border-primary group-hover:bg-primary/10">
           {index + 1}
         </span>
-        <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
+        <h3 className="mt-auto pt-10 text-2xl md:text-[1.75rem] lg:text-3xl font-bold leading-[1.2] text-white text-balance">
           {item.title}
         </h3>
       </div>
@@ -135,21 +137,24 @@ export function HighlightsSection() {
             {/* Accent bar - separates the title from the statement */}
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-            <p className="mt-8 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/82 text-pretty lg:whitespace-nowrap">
+            {/* The statement is the loudest thing in this block - it should outrank the card headings */}
+            <p className="mx-auto mt-8 max-w-4xl text-[28px] md:text-[36px] lg:text-[42px] font-semibold tracking-tight leading-[1.15] text-white text-balance">
               I spend hours untangling complex, mind-bending tech{" "}
-              <span className="text-[25px] font-bold" style={{ color: "#cf52c7" }}>so you don&apos;t have to.</span>
+              <span className="font-bold" style={{ color: "#cf52c7" }}>
+                so you don&apos;t have to.
+              </span>
             </p>
-            {/* Lead-in to the three cards, which act as the list itself */}
-            <p className="mt-6 text-[25px] md:text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
+            {/* Quiet lead-in - a connector, not a headline */}
+            <p className="mt-7 text-base md:text-lg font-medium uppercase tracking-[0.18em] text-white/55">
               And once I&apos;ve finally cracked it, I:
             </p>
           </div>
         </div>
 
         {/* The three things I do - simple boxes acting as the list */}
-        <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8 items-stretch">
           {topSkills.slice(0, 3).map((item, index) => (
-            <li key={item.title}>
+            <li key={item.title} className="h-full">
               <SkillCard item={item} index={index} />
             </li>
           ))}
