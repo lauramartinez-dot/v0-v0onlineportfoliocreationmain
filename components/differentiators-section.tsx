@@ -94,7 +94,7 @@ export function DifferentiatorsSection() {
                   {/* Colour wash + scrim: solid black only at the very bottom, so the copy stays readable
                       while the upper two thirds of the photo keep their original brightness */}
                   <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/55 via-45% to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/65 via-45% to-transparent" />
                 </>
               ) : (
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-card to-card" />
