@@ -87,14 +87,13 @@ export function DifferentiatorsSection() {
                     alt=""
                     fill
                     aria-hidden="true"
-                    className={`object-cover opacity-75 transition-transform duration-500 group-hover:scale-105 ${
+                    className={`object-cover opacity-85 transition-transform duration-500 group-hover:scale-105 ${
                       imagePosition ?? ""
                     }`}
                   />
-                  {/* Flat black base knocks the whole photo back, then a heavy bottom scrim carries the copy */}
-                  <div className="absolute inset-0 bg-black/45" />
+                  {/* Colour wash + scrim so the copy stays legible without burying the photo */}
                   <div className="absolute inset-0 bg-gradient-to-b from-primary/15 via-primary/5 to-transparent" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-black/25" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />
                 </>
               ) : (
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-card to-card" />
