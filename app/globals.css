@@ -175,4 +175,11 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Renders the whole page as if the browser were at 90% zoom.
+     Kept to tablet and up so phones are not shrunk below a readable size. */
+  @media (min-width: 768px) {
+    body {
+      zoom: 0.9;
+    }
+  }
 }
