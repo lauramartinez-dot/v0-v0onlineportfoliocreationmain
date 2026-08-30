@@ -1178,7 +1178,7 @@ export default function CareerMapSection() {
           {/* Section Header */}
           <div className="mb-12 text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Where I&apos;ve worked<span className="text-primary">.</span>
+              Work experience<span className="text-primary">.</span>
             </h2>
 
             {/* Accent bar - matches the other main section titles */}
