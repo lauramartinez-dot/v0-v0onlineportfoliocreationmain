@@ -13,7 +13,7 @@ const differentiators = [
   },
   {
     title: "Work on API & Integrations",
-    body: "Now I write about APIs in a way that makes sense to people who aren't devs.",
+    body: "Specializing in writing about APIs for people who aren't devs.",
     image: "/api-integrations-isometric-top.png",
     // Anchor to the top so the cloud, server, and API chip stay above the copy
     imagePosition: "object-top",
@@ -25,13 +25,13 @@ const differentiators = [
   },
   {
     title: "Worked at an Unicorn Startup",
-    body: "I worked at Personio, the German company that became Europe's HR unicorn ($8.5B valuation).",
+    body: "Worked at Personio, the German company that became Europe's HR unicorn ($8.5B valuation).",
     image: "/differentiator-unicorn-personio.jpg",
     wide: true,
   },
   {
     title: "Lived in 4 Countries",
-    body: "I was born in Madrid, Spain, but spent 9 years living in France, Ireland, and Germany before returning to Spain.",
+    body: "Born in Madrid, Spain, but spent 9 years living in France, Ireland, and Germany before returning to Spain.",
     image: "/four-countries-europe-map.png",
     // Keep the highlighted countries and flight paths centred in the wide crop
     imagePosition: "object-center",
