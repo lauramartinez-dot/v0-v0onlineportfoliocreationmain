@@ -125,37 +125,43 @@ export function HighlightsSection() {
     <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
       {/* Gradient background removed for consistent solid background */}
 
-      {/* 1. The statement - the section's thesis, paired with its image */}
-      <div id="top-differentiators" className="mx-auto max-w-7xl pt-[120px] pb-24 scroll-mt-32">
-        {/* Section title stays centered above the split, like every other section */}
-        <div className="mb-14 text-center">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            What I do<span className="text-primary">.</span>
-          </h2>
-
-          {/* Accent bar - separates the title from the statement */}
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+      {/* 1. The statement - sits on a full-bleed photographic band */}
+      <div id="top-differentiators" className="relative mt-[120px] scroll-mt-32">
+        {/* Breaks out of the centered container so the image spans the full viewport width */}
+        <div className="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2">
+          <Image
+            src="/what-i-do-background.jpg"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-right"
+          />
+          {/* Left-to-right scrim keeps the copy legible while the code screen stays visible */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/92 to-background/55" />
+          {/* Vertical fade blends the band into the page above and below */}
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
-          <div className="text-center lg:text-left">
-            {/* Same family and casing as the body copy, just larger and heavier so it still leads */}
-            <p className="text-3xl font-semibold tracking-tight leading-[1.2] text-white text-balance md:text-4xl lg:text-[2.75rem]">
-              I spend hours untangling complex, mind-bending tech{" "}
-              <span className="font-bold" style={{ color: "#cf52c7" }}>
-                so you don&apos;t have to.
-              </span>
-            </p>
+        <div className="relative mx-auto max-w-7xl px-4 py-28 md:py-36">
+          {/* Section title stays centered, like every other section */}
+          <div className="mb-14 text-center">
+            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              What I do<span className="text-primary">.</span>
+            </h2>
+
+            {/* Accent bar - separates the title from the statement */}
+            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
           </div>
 
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl border border-[#472444] shadow-[0_20px_70px_-30px_rgba(217,42,205,0.45)]">
-            <Image
-              src="/untangling-complex-tech.png"
-              alt="Tangled wires resolving into clean parallel lines"
-              fill
-              className="object-cover"
-            />
-          </div>
+          {/* Same family and casing as the body copy, just larger and heavier so it still leads */}
+          <p className="max-w-4xl text-3xl font-semibold tracking-tight leading-[1.2] text-white text-balance md:text-4xl lg:text-[2.75rem]">
+            I spend hours untangling complex, mind-bending tech{" "}
+            <span className="font-bold" style={{ color: "#cf52c7" }}>
+              so you don&apos;t have to.
+            </span>
+          </p>
         </div>
       </div>
 
