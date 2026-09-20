@@ -139,9 +139,8 @@ export function HighlightsSection() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          {/* Heavy wash so the photo reads as a subtle texture, not a focal image */}
-          <div className="absolute inset-0 bg-background/80" />
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/75" />
+          {/* Left/center stay heavily washed (copy sits here); right clears so the code screen shows */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background from-30% via-background/80 via-65% to-transparent" />
           {/* Vertical fade blends the band into the page above and below */}
           <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
