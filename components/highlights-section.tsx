@@ -127,8 +127,9 @@ export function HighlightsSection() {
 
       {/* 1. The statement - sits on a full-bleed photographic band */}
       <div id="top-differentiators" className="relative mt-[120px] scroll-mt-32">
-        {/* Breaks out of the centered container so the image spans the full viewport width */}
-        <div className="absolute left-1/2 top-0 h-full w-screen -translate-x-1/2">
+        {/* Breaks out of the padded/zoomed layout - oversized so it truly reaches both page edges;
+            the section's overflow-hidden trims the surplus so there is no horizontal scroll */}
+        <div className="absolute left-1/2 top-0 h-full w-[115vw] -translate-x-1/2">
           <Image
             src="/what-i-do-background.jpg"
             alt=""
@@ -144,7 +145,7 @@ export function HighlightsSection() {
           <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
         </div>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-28 md:py-36">
+        <div className="relative mx-auto max-w-7xl px-4 py-36 md:py-48">
           {/* Section title stays centered, like every other section */}
           <div className="mb-14 text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
