@@ -196,12 +196,12 @@ export function HighlightsSection() {
 
         <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-        <p className="mx-auto mt-10 max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white/80 text-balance md:text-3xl">
-          Because{" "}
+        <p className="mx-auto mt-10 max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white/80 text-pretty md:text-3xl">
+          Too much knowledge sits behind a PhD or a degree. Some of that is real complexity.{" "}
           <span className="font-bold" style={{ color: "#cf52c7" }}>
-            you shouldn&apos;t need an IT background or a PhD
+            Some of it is just gatekeeping.
           </span>{" "}
-          to understand the tech that&apos;s everywhere in your life.
+          The more people who can understand technology, use it, and contribute to it, the further we can push the frontiers of knowledge outward.
         </p>
       </div>
     </section>
