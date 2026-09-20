@@ -136,12 +136,12 @@ export function HighlightsSection() {
             fill
             priority
             sizes="100vw"
-            className="object-cover object-right"
+            className="object-cover object-center"
           />
-          {/* Left-to-right scrim keeps the copy legible while the code screen stays visible */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/92 to-background/55" />
+          {/* Light left-to-right scrim - just enough to hold the copy, photo stays dominant */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/35 to-transparent" />
           {/* Vertical fade blends the band into the page above and below */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 py-28 md:py-36">
