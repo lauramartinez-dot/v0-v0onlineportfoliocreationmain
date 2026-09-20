@@ -139,10 +139,11 @@ export function HighlightsSection() {
             sizes="100vw"
             className="object-cover object-center"
           />
-          {/* Light left-to-right scrim - just enough to hold the copy, photo stays dominant */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/35 to-transparent" />
+          {/* Heavy wash so the photo reads as a subtle texture, not a focal image */}
+          <div className="absolute inset-0 bg-background/80" />
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/75" />
           {/* Vertical fade blends the band into the page above and below */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-transparent to-background/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
         </div>
 
         <div className="relative mx-auto max-w-7xl px-4 py-36 md:py-48">
