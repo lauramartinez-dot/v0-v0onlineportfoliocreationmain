@@ -12,22 +12,22 @@ export function HighlightsSection() {
         className="relative flex min-h-screen items-center overflow-hidden px-4 scroll-mt-32"
       >
         <div
-          className="absolute inset-0 bg-cover md:bg-fixed bg-[position:20%_center] md:bg-[position:25%_center]"
+          className="absolute inset-0 bg-cover md:bg-fixed bg-[position:75%_center]"
           style={{ backgroundImage: "url('/what-i-do-background.jpg')" }}
           aria-hidden="true"
         />
-        {/* Darken for legibility, with the right kept heavier so the copy stays crisp
-            and the woman on the left stays visible */}
+        {/* Darken for legibility, with the left kept heavier so the copy stays crisp
+            and the woman stays visible on the open right side */}
         <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
         <div
-          className="absolute inset-0 bg-gradient-to-l from-background from-10% via-background/70 via-55% to-transparent"
+          className="absolute inset-0 bg-gradient-to-r from-background from-10% via-background/70 via-55% to-transparent"
           aria-hidden="true"
         />
         {/* Top/bottom fades blend the section into the neighbours for a seamless scroll */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-        <div className="relative mx-auto flex w-full max-w-7xl justify-end px-4 py-32 md:py-40">
+        <div className="relative mx-auto flex w-full max-w-7xl px-4 py-32 md:py-40">
           <div className="w-full max-w-2xl">
           <div className="mb-14">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
