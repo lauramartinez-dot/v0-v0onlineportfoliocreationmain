@@ -1,210 +1,198 @@
-"use client"
-
-import { useState, useRef, useCallback } from "react"
-import { topSkills } from "@/data/highlights"
 import Image from "next/image"
+import { Plane, Code2, Languages, Rocket } from "lucide-react"
 
-function DiagonalRevealImage({
-  beforeSrc,
-  afterSrc,
-  beforeAlt,
-  afterAlt,
-  beforeLabel,
-  href,
-}: {
-  beforeSrc: string
-  afterSrc: string
-  beforeAlt: string
-  afterAlt: string
-  beforeLabel?: string
-  href?: string
-}) {
-  const [revealPercent, setRevealPercent] = useState(0)
-  const [isHovering, setIsHovering] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
-
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return
-    const rect = containerRef.current.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    setRevealPercent(Math.max(0, Math.min(100, x)))
-  }, [])
-
-  const handleMouseEnter = useCallback(() => setIsHovering(true), [])
-  const handleMouseLeave = useCallback(() => {
-    setIsHovering(false)
-    setRevealPercent(0)
-  }, [])
-
-  const skew = 12
-  const p = revealPercent
-
-  const Wrapper = href ? "a" : "div"
-  const wrapperProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {}
-
-  return (
-    <Wrapper
-      {...wrapperProps}
-      ref={containerRef as React.RefObject<HTMLDivElement & HTMLAnchorElement>}
-      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-primary/40 shadow-xl cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:ring-primary/60 ${href ? "block" : ""}`}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Before image (base layer) */}
-      <Image
-        src={beforeSrc}
-        alt={beforeAlt}
-        width={800}
-        height={1067}
-        className="w-full h-full object-cover"
-        unoptimized
-      />
-      {/* After image (revealed via diagonal clip-path) */}
-      <div
-        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
-        style={{
-          clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
-        }}
-      >
-        <Image
-          src={afterSrc}
-          alt={afterAlt}
-          width={800}
-          height={1067}
-          className="w-full h-full object-cover"
-          unoptimized
-        />
-      </div>
-
-      {/* Diagonal line indicator */}
-      {isHovering && (
-        <div
-          className="absolute top-0 bottom-0 w-0.5 bg-primary/40 pointer-events-none transition-none"
-          style={{
-            left: `${p}%`,
-            transform: `skewX(-${skew}deg)`,
-            transformOrigin: 'center',
-          }}
-        />
-      )}
-
-    </Wrapper>
-  )
-}
-
-function SkillCard({
-  item,
-  index,
-}: {
-  item: (typeof topSkills)[number]
-  index: number
-}) {
-  return (
-    <div className="relative flex min-h-[340px] w-full overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20">
-      {/* Layered wash gives the card its depth now that there is no photo behind it */}
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
-
-      <div className="relative mt-auto w-full p-8">
-        {/* List marker - ties the card back to the "And then I:" lead-in */}
-        <span className="mb-5 flex h-12 w-12 items-center justify-center rounded-full border-2 border-primary text-xl font-extrabold text-primary">
-          {index + 1}
-        </span>
-        <h3 className="text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white text-balance">
-          {item.title}
-        </h3>
-      </div>
-    </div>
-  )
-}
+const journey = ["Spain", "France · Erasmus", "Spain", "Ireland", "Germany", "Spain"]
 
 export function HighlightsSection() {
   return (
     <>
-    <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
-      {/* Gradient background removed for consistent solid background */}
+      {/* 1. What I do - intro, sitting on a full-bleed photographic band */}
+      <section id="top-differentiators" className="relative px-4 overflow-hidden scroll-mt-32 pt-0 mt-[10px]">
+        <div className="relative mt-[120px]">
+          {/* Breaks out of the padded/zoomed layout - oversized so it reaches both page edges;
+              overflow-hidden on the section trims the surplus so there is no horizontal scroll */}
+          <div className="absolute left-1/2 top-0 h-full w-[115vw] -translate-x-1/2">
+            <Image
+              src="/what-i-do-background.jpg"
+              alt=""
+              aria-hidden="true"
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+            {/* Left/center stay washed (copy sits here); right clears so the code screen shows */}
+            <div className="absolute inset-0 bg-gradient-to-r from-background from-30% via-background/80 via-65% to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+          </div>
 
-      {/* 1. The statement - sits on a full-bleed photographic band */}
-      <div id="top-differentiators" className="relative mt-[120px] scroll-mt-32">
-        {/* Breaks out of the padded/zoomed layout - oversized so it truly reaches both page edges;
-            the section's overflow-hidden trims the surplus so there is no horizontal scroll */}
-        <div className="absolute left-1/2 top-0 h-full w-[115vw] -translate-x-1/2">
-          <Image
-            src="/what-i-do-background.jpg"
-            alt=""
-            aria-hidden="true"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center"
-          />
-          {/* Left/center stay heavily washed (copy sits here); right clears so the code screen shows */}
-          <div className="absolute inset-0 bg-gradient-to-r from-background from-30% via-background/80 via-65% to-transparent" />
-          {/* Vertical fade blends the band into the page above and below */}
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background" />
+          <div className="relative mx-auto max-w-7xl px-4 py-36 md:py-48">
+            <div className="mb-14 text-center">
+              <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+                What I do<span className="text-primary">.</span>
+              </h2>
+              <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+            </div>
+
+            {/* Lead line - hero-adjacent scale so it leads the block */}
+            <p className="max-w-4xl text-3xl font-semibold tracking-tight leading-[1.15] text-white text-balance md:text-4xl lg:text-[2.75rem]">
+              I&apos;m a tech journalist turned technical writer — and honestly,{" "}
+              <span className="font-bold" style={{ color: "#cf52c7" }}>
+                the job hasn&apos;t changed that much.
+              </span>
+            </p>
+
+            <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
+              I still write about technology. Engineering. Software. In plain words, while keeping it accurate — and
+              clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <div className="relative mx-auto max-w-7xl px-4 py-36 md:py-48">
-          {/* Section title stays centered, like every other section */}
+      {/* 2. Then & now - the two eras as a contrast pair */}
+      <section className="relative px-4 py-24">
+        <div className="mx-auto max-w-7xl">
           <div className="mb-14 text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              What I do<span className="text-primary">.</span>
+              Then &amp; now<span className="text-primary">.</span>
             </h2>
+            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+            <p className="mx-auto mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/70 text-pretty md:text-xl">
+              Same instinct, different questions. The topic moved from the physical world to the digital one.
+            </p>
+          </div>
 
-            {/* Accent bar - separates the title from the statement */}
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
+            {/* Then */}
+            <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10">
+              <div className="flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
+                  <Plane className="h-6 w-6" />
+                </span>
+                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
+                  Then · Tech journalist
+                </span>
+              </div>
+              <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
+                &ldquo;How do planes stay in the air?&rdquo;
+              </p>
+            </div>
+
+            {/* Now */}
+            <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06] p-10">
+              <div className="flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+                  <Code2 className="h-6 w-6" />
+                </span>
+                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
+                  Now · Technical writer
+                </span>
+              </div>
+              <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
+                &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. The mission */}
+      <section id="why" className="relative px-4 py-24 scroll-mt-32">
+        <div className="mx-auto max-w-7xl text-center">
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            The mission<span className="text-primary">.</span>
+          </h2>
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <p className="mx-auto mt-10 max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white/80 text-pretty md:text-3xl">
+            Same as always:{" "}
+            <span className="font-bold" style={{ color: "#cf52c7" }}>
+              democratising access to technical knowledge.
+            </span>{" "}
+            The more people understand tech, use it, and help build it, the further we can push the frontiers of
+            knowledge outward.
+          </p>
+        </div>
+      </section>
+
+      {/* 4. Around the world - globetrotter, languages, the path */}
+      <section className="relative px-4 py-24">
+        <div className="mx-auto max-w-7xl">
+          <div className="mb-14 text-center">
+            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              Around the world<span className="text-primary">.</span>
+            </h2>
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
           </div>
 
-          {/* Same family and casing as the body copy, just larger and heavier so it still leads */}
-          <p className="max-w-4xl text-3xl font-semibold tracking-tight leading-[1.2] text-white text-balance md:text-4xl lg:text-[2.75rem]">
-            I spend hours untangling complex, mind-bending tech{" "}
+          <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+            <div>
+              <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
+                I&apos;m also a globetrotter. By my 30s, I&apos;d lived in four countries and become fluent in three
+                languages.
+              </p>
+
+              {/* Stats */}
+              <div className="mt-10 flex flex-wrap gap-4">
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-6">
+                  <div className="text-4xl font-extrabold text-primary md:text-5xl">4</div>
+                  <div className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-white/55">Countries</div>
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-6">
+                  <div className="flex items-center gap-3 text-4xl font-extrabold text-primary md:text-5xl">
+                    <Languages className="h-8 w-8" />3
+                  </div>
+                  <div className="mt-1 text-sm font-semibold uppercase tracking-[0.18em] text-white/55">Languages</div>
+                </div>
+              </div>
+
+              {/* The path */}
+              <div className="mt-10">
+                <div className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-white/45">The path</div>
+                <div className="flex flex-wrap items-center gap-x-2 gap-y-3">
+                  {journey.map((stop, index) => (
+                    <div key={`${stop}-${index}`} className="flex items-center gap-2">
+                      <span className="rounded-full border border-[#472444] bg-card/40 px-4 py-2 text-sm font-medium text-white/85">
+                        {stop}
+                      </span>
+                      {index < journey.length - 1 && <span className="text-primary" aria-hidden="true">→</span>}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            <div className="relative mx-auto aspect-[71/100] w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-white">
+              <Image
+                src="/three-languages-illustration-centered.png"
+                alt="Illustration of a person who speaks German, Spanish, and English"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Startup DNA */}
+      <section className="relative px-4 py-24">
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+            <Rocket className="h-7 w-7" />
+          </span>
+          <h2 className="mt-8 text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            Startup DNA<span className="text-primary">.</span>
+          </h2>
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <p className="mx-auto mt-10 text-2xl font-medium tracking-tight leading-snug text-white/80 text-pretty md:text-3xl">
+            Most of my career has been at startups — including{" "}
             <span className="font-bold" style={{ color: "#cf52c7" }}>
-              so you don&apos;t have to.
-            </span>
+              Personio, one of Europe&apos;s unicorns.
+            </span>{" "}
+            So I&apos;m drawn to experimenting, trying new tools, and learning by doing.
           </p>
         </div>
-      </div>
-
-      {/* Divider - marks the break between the statement and the list */}
-      <div className="mx-auto max-w-7xl border-t border-[#472444]" />
-
-      {/* 2. The three things I do - its own block with its own lead-in */}
-      <div className="mx-auto max-w-7xl pt-20 pb-24">
-        <p className="mb-10 text-center text-[25px] font-medium tracking-tight leading-snug text-white/80 text-balance">
-          And once I&apos;ve finally cracked it, I:
-        </p>
-
-        <ul className="grid grid-cols-1 gap-8 md:grid-cols-3 items-start">
-          {topSkills.slice(0, 3).map((item, index) => (
-            <li key={item.title}>
-              <SkillCard item={item} index={index} />
-            </li>
-          ))}
-        </ul>
-      </div>
-
-    </section>
-
-    {/* The mission - a section in its own right, not a callout inside "What I do" */}
-    <section id="why" className="relative px-4 pt-20 pb-24 scroll-mt-32">
-      <div className="mx-auto max-w-7xl text-center">
-        {/* Same heading treatment as the other sections */}
-        <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-          Why I do it<span className="text-primary">.</span>
-        </h2>
-
-        <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-
-        <p className="mx-auto mt-10 max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white/80 text-pretty md:text-3xl">
-          Too much knowledge sits behind a PhD or a degree. Some of that is real complexity.{" "}
-          <span className="font-bold" style={{ color: "#cf52c7" }}>
-            Some of it is just gatekeeping.
-          </span>{" "}
-          The more people who can understand technology, use it, and contribute to it, the further we can push the frontiers of knowledge outward.
-        </p>
-      </div>
-    </section>
+      </section>
     </>
   )
 }
