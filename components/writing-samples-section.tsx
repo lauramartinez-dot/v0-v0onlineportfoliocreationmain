@@ -1,6 +1,6 @@
 "use client"
 
-import { Code2, Users, Briefcase, Maximize2 } from "lucide-react"
+import { Maximize2 } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -14,10 +14,8 @@ import {
 // full preview of the actual piece. Swap the image/title/href for real work.
 const audiences = [
   {
-    icon: Code2,
-    label: "Highly technical",
-    reader: "For developers",
-    description: "Reference docs, SDK guides, and API specs written for people who ship code.",
+    level: "High",
+    readers: "devs, architects",
     sample: {
       title: "API developer portal",
       caption:
@@ -27,10 +25,8 @@ const audiences = [
     },
   },
   {
-    icon: Users,
-    label: "Mildly technical",
-    reader: "For consultants",
-    description: "Explainers and integration guides for technical-adjacent teams.",
+    level: "Medium",
+    readers: "consultants, technical PMs",
     sample: {
       title: "What is an API, and how do you work with it?",
       caption:
@@ -40,10 +36,8 @@ const audiences = [
     },
   },
   {
-    icon: Briefcase,
-    label: "Non-technical",
-    reader: "For business users",
-    description: "Help articles and release notes written without the jargon.",
+    level: "Low",
+    readers: "business users",
     sample: {
       title: "Product help center",
       caption:
@@ -74,52 +68,35 @@ export function WritingSamplesSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
-          {audiences.map(({ icon: Icon, label, reader, description, sample }) => (
-            <Dialog key={label}>
+          {audiences.map(({ level, readers, sample }) => (
+            <Dialog key={level}>
               <DialogTrigger asChild>
                 <button
                   type="button"
-                  className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#472444] bg-card/50 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)]"
+                  className="group relative flex aspect-[3/4] w-full overflow-hidden rounded-2xl border border-[#472444] text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/50 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)]"
                 >
-                  {/* Cover image - a real preview of the sample */}
-                  <div className="relative aspect-[16/10] w-full overflow-hidden">
-                    <img
-                      src={sample.image || "/placeholder.svg"}
-                      alt={`Preview of ${sample.title}`}
-                      className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                    />
-                    {/* Wash so the image sits in the card's palette */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent" />
+                  {/* Image fills the entire card */}
+                  <img
+                    src={sample.image || "/placeholder.svg"}
+                    alt={`Preview of ${sample.title}`}
+                    className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  />
 
-                    {/* Expand affordance */}
-                    <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-background/70 text-white backdrop-blur-sm transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                      <Maximize2 className="h-4 w-4" />
-                    </span>
-                  </div>
+                  {/* Bottom wash so the label stays legible over the image */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
-                  <div className="flex flex-1 flex-col p-8 md:p-10">
-                    {/* Group header - the audience this column speaks to */}
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary/40 text-primary">
-                      <Icon className="h-6 w-6" />
-                    </div>
+                  {/* Expand affordance */}
+                  <span className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-background/70 text-white backdrop-blur-sm transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Maximize2 className="h-4 w-4" />
+                  </span>
 
-                    <span className="mt-6 inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                      {label}
-                    </span>
-
-                    <h3 className="mt-3 text-2xl font-bold leading-tight text-white text-balance">{reader}</h3>
-
-                    <p className="mt-3 text-base font-medium leading-relaxed text-white/65 text-pretty">
-                      {description}
+                  {/* Minimal label - the only text on the card */}
+                  <div className="relative mt-auto p-6">
+                    <p className="text-sm font-medium text-white/80">
+                      Technical audience:{" "}
+                      <span className="font-bold text-primary">{level}</span>
                     </p>
-
-                    {/* Featured sample title */}
-                    <div className="mt-8 border-t border-[#472444] pt-6">
-                      <span className="text-xs font-semibold uppercase tracking-wider text-white/40">Sample</span>
-                      <p className="mt-2 text-lg font-semibold leading-snug text-white/90 text-pretty transition-colors group-hover:text-primary">
-                        {sample.title}
-                      </p>
-                    </div>
+                    <p className="mt-1 text-xs font-medium uppercase tracking-wider text-white/50">({readers})</p>
                   </div>
                 </button>
               </DialogTrigger>
@@ -137,7 +114,7 @@ export function WritingSamplesSection() {
 
                   <DialogHeader className="space-y-3 p-6 text-left md:p-8">
                     <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                      {label} &middot; {reader}
+                      Technical audience: {level} &middot; {readers}
                     </span>
                     <DialogTitle className="text-2xl font-bold text-white text-balance">{sample.title}</DialogTitle>
                     <DialogDescription className="text-base leading-relaxed text-white/65 text-pretty">
