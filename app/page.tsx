@@ -5,7 +5,6 @@ import { WritingPrinciplesSection } from "@/components/writing-principles-sectio
 import { WritingSamplesSection } from "@/components/writing-samples-section"
 import { ScrollTransitionSection } from "@/components/scroll-transition-section"
 import CareerMapSection from "@/components/career-map-section"
-import { OOOSection } from "@/components/ooo-section"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
@@ -14,7 +13,7 @@ export default function Home() {
     <main className="min-h-screen bg-background">
       <Navigation />
       <HeroSection />
-      {/* What I do + why */}
+      {/* About me */}
       <HighlightsSection />
       {/* Writing principles */}
       <WritingPrinciplesSection />
@@ -25,8 +24,8 @@ export default function Home() {
       <CareerMapSection />
       {/* Writing samples */}
       <WritingSamplesSection />
-      {/* Side projects */}
-      <OOOSection />
+      {/* Side projects - temporarily hidden */}
+      {/* <OOOSection /> */}
       <Footer />
     </main>
   )
