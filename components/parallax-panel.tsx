@@ -21,7 +21,7 @@ export function ParallaxPanel({ image }: { image: string }) {
       const vh = window.innerHeight
       // 0 when the panel is centered in the viewport, negative/positive as it scrolls past
       const progress = (rect.top + rect.height / 2 - vh / 2) / vh
-      setOffset(progress * -80) // px of travel
+      setOffset(progress * -160) // px of travel
     }
     const onScroll = () => {
       cancelAnimationFrame(raf)
@@ -44,18 +44,22 @@ export function ParallaxPanel({ image }: { image: string }) {
       className="absolute inset-y-0 right-0 w-full overflow-hidden md:w-3/5 lg:w-1/2"
       aria-hidden="true"
     >
-      {/* Oversized so the parallax translate never exposes an empty edge */}
+      {/* Oversized vertically so the parallax translate never exposes an empty edge.
+          Zoomed out a touch and panned low-left so the woman AND the code screen both show. */}
       <div
-        className="absolute inset-x-0 -top-24 -bottom-24 bg-cover bg-center will-change-transform"
+        className="absolute inset-x-0 -top-32 -bottom-32 will-change-transform"
         style={{
           backgroundImage: `url('${image}')`,
+          backgroundSize: "120% auto",
+          backgroundPosition: "left 75%",
+          backgroundRepeat: "no-repeat",
           transform: `translate3d(0, ${offset}px, 0)`,
         }}
       />
       {/* Soft overlay for legibility */}
       <div className="absolute inset-0 bg-background/40" />
       {/* Left-edge fade blends the image into the page background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent to-45%" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/35 to-transparent to-50%" />
     </div>
   )
 }
