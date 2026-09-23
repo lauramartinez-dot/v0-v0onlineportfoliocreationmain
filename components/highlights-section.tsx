@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { Plane, Code2, Languages, Rocket } from "lucide-react"
+import { ParallaxPanel } from "@/components/parallax-panel"
 
 const journey = ["Spain", "France · Erasmus", "Spain", "Ireland", "Germany", "Spain"]
 
@@ -11,20 +12,8 @@ export function HighlightsSection() {
         id="top-differentiators"
         className="relative flex min-h-screen items-center overflow-hidden px-4 scroll-mt-32"
       >
-        {/* Full-width parallax layer (bg-fixed only works when sized to the viewport),
-            anchored right so the image reads as a right-side panel */}
-        <div
-          className="absolute inset-0 bg-cover bg-right md:bg-fixed"
-          style={{ backgroundImage: "url('/what-i-do-background.jpg')" }}
-          aria-hidden="true"
-        />
-        {/* Soft overlay for legibility */}
-        <div className="absolute inset-0 bg-background/45" aria-hidden="true" />
-        {/* Left gradient keeps the copy area dark and confines the image visually to the right */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-background from-40% via-background/70 via-60% to-transparent"
-          aria-hidden="true"
-        />
+        {/* Right-side image with genuine scroll parallax (stays confined so the woman is visible) */}
+        <ParallaxPanel image="/what-i-do-background.jpg" />
         {/* Top/bottom fades blend the section into the neighbours for a seamless scroll */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
