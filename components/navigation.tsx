@@ -9,9 +9,10 @@ export function Navigation() {
 
   const navItems = [
     { label: "What I do", href: "#top-differentiators" },
-    { label: "What sets me apart", href: "#differentiators" },
+    { label: "Writing principles", href: "#writing-principles" },
     { label: "Work experience", href: "#company-highlights" },
-    // { label: "My personal projects", href: "#personal-projects" } - temporarily hidden
+    { label: "Writing samples", href: "#writing-samples" },
+    { label: "Side projects", href: "#personal-projects" },
   ]
 
   return (

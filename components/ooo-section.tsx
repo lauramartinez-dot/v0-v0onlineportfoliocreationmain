@@ -26,10 +26,13 @@ export function OOOSection() {
     <section id="personal-projects" className="relative px-4 pt-24 pb-32 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
         {/* Section header - matching other sections */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
-            My personal projects
+        <div className="text-center mb-14">
+          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+            Side projects<span className="text-primary">.</span>
           </h2>
+
+          {/* Accent bar - matches the other main section titles */}
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
         {/* Three bubbles - bigger size */}
