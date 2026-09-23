@@ -158,27 +158,17 @@ export function HighlightsSection() {
         </div>
       </section>
 
-      {/* 4. Around the world - globetrotter over a travel backdrop, content in a glass panel */}
-      <section className="relative overflow-hidden px-4 py-32">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/european-cities-travel-expat.jpg')" }}
-          aria-hidden="true"
-        />
-        <div className="absolute inset-0 bg-background/85" aria-hidden="true" />
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
-
+      {/* 4. Global - globetrotter, on the plain section background */}
+      <section className="relative px-4 py-32">
         <div className="relative mx-auto max-w-7xl">
           <div className="mb-14 text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Around the world<span className="text-primary">.</span>
+              Global<span className="text-primary">.</span>
             </h2>
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
           </div>
 
-          {/* Glass panel keeps the copy crisp over the photo */}
-          <div className="rounded-3xl border border-white/10 bg-background/60 p-8 backdrop-blur-md md:p-12">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
               <div>
                 <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
@@ -224,12 +214,13 @@ export function HighlightsSection() {
                 </div>
               </div>
 
-              <div className="relative mx-auto aspect-[71/100] w-full max-w-sm overflow-hidden rounded-3xl border border-white/10 bg-white">
+              <div className="relative mx-auto aspect-[71/100] w-full max-w-sm overflow-hidden rounded-3xl border border-white/10">
                 <Image
-                  src="/three-languages-illustration-centered.png"
-                  alt="Illustration of a person who speaks German, Spanish, and English"
+                  src="/differentiator-four-countries.png"
+                  alt="Standing on a bridge in Bamberg, Germany, one of the four countries I've lived in"
                   fill
-                  className="object-contain"
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
                 />
               </div>
             </div>
