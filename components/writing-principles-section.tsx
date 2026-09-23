@@ -1,29 +1,35 @@
-import { Lightbulb, Users, Compass, FlaskConical } from "lucide-react"
+import { Minus, Sparkles, Eye, LineChart, Flag } from "lucide-react"
 
 const principles = [
   {
-    icon: Lightbulb,
-    title: "Clarity over cleverness",
+    icon: Minus,
+    title: "Less is more",
     description:
-      "Every sentence earns its place. If a simpler word does the job, it wins — jargon only when it genuinely carries meaning.",
+      "I see my job as subtracting information more than adding it. Cognitive overload is very real, especially in 2026.",
   },
   {
-    icon: Users,
-    title: "Start from the reader",
+    icon: Sparkles,
+    title: "AI, but not always",
     description:
-      "I write for the person on the other side, not the one who already knows the answer. Their context sets the shape of the page.",
+      "I spend my worktime talking to AI, especially Copilot and Claude. More importantly, I know when NOT to trust it and when NOT to use it. You won't see AI-slop or \u201CI work at the intersection of\u2026\u201D written by me.",
   },
   {
-    icon: Compass,
-    title: "Show the why, not just the how",
+    icon: Eye,
+    title: "Transparency",
     description:
-      "Steps are easy to copy; understanding is what makes them stick. I give readers the mental model behind the instructions.",
+      "I'm big on transparency. I note what I'm doing as I do it, so anyone can follow my reasoning and take over if they need to.",
   },
   {
-    icon: FlaskConical,
-    title: "Test everything I document",
+    icon: LineChart,
+    title: "I need end-user feedback",
     description:
-      "If I haven't run it, I haven't written it. Every snippet, command, and flow gets verified before it ships.",
+      "I base my content decisions on data rather than assumption. I need to know whether the content is actually useful.",
+  },
+  {
+    icon: Flag,
+    title: "High-ownership",
+    description:
+      "I operate with high ownership and see projects through with no handholding.",
   },
 ]
 
@@ -41,10 +47,12 @@ export function WritingPrinciplesSection() {
         </div>
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
-          {principles.map(({ icon: Icon, title, description }) => (
+          {principles.map(({ icon: Icon, title, description }, index) => (
             <li
               key={title}
-              className="group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#472444] bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)] md:p-10"
+              className={`group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#472444] bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)] md:p-10 ${
+                index === principles.length - 1 ? "md:col-span-2" : ""
+              }`}
             >
               {/* Top hairline picks up the accent on hover */}
               <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-100" />
