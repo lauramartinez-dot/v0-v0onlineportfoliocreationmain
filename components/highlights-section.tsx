@@ -27,15 +27,16 @@ export function HighlightsSection() {
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-        <div className="relative mx-auto flex w-full max-w-7xl px-4 py-32 md:py-40">
-          <div className="w-full max-w-2xl">
-          <div className="mb-14">
+        <div className="relative mx-auto w-full max-w-7xl px-4 py-32 md:py-40">
+          {/* Title stays centered across the full section, like the other section headers */}
+          <div className="mb-14 text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
               What I do<span className="text-primary">.</span>
             </h2>
-            <div className="mt-8 h-1.5 w-12 rounded-full bg-primary" />
+            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
           </div>
 
+          <div className="w-full max-w-2xl">
           {/* Lead line - hero-adjacent scale so it leads the block */}
           <p className="text-3xl font-semibold tracking-tight leading-[1.15] text-white text-balance md:text-4xl lg:text-[2.75rem]">
             I&apos;m a tech journalist turned technical writer — and honestly,{" "}
