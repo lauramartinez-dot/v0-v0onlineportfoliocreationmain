@@ -5,31 +5,31 @@ const principles = [
     icon: Minus,
     title: "Less is more",
     description:
-      "I see my job as subtracting information more than adding it. Cognitive overload is very real, especially in 2026.",
+      "My job is often to take information away, not add it. Cognitive overload is real \u2014 and in 2026, it's everywhere.",
   },
   {
     icon: Sparkles,
     title: "AI, but not always",
     description:
-      "I spend my worktime talking to AI, especially Copilot and Claude. More importantly, I know when NOT to trust it and when NOT to use it. You won't see AI-slop or \u201CI work at the intersection of\u2026\u201D written by me.",
+      "I spend much of my day working with AI \u2014 Copilot and Claude especially. But just as importantly, I know when NOT to trust it, and when NOT to use it at all. You won't catch me shipping AI slop or \u201CI work at the intersection of\u2026\u201D",
   },
   {
     icon: Eye,
     title: "Transparency",
     description:
-      "I'm big on transparency. I note what I'm doing as I do it, so anyone can follow my reasoning and take over if they need to.",
+      "I document what I'm doing as I do it, so anyone can follow my reasoning \u2014 and pick up where I left off if they need to.",
   },
   {
     icon: LineChart,
-    title: "I need end-user feedback",
+    title: "I listen to end users",
     description:
-      "I base my content decisions on data rather than assumption. I need to know whether the content is actually useful.",
+      "I base content decisions on data, not assumptions. I want to know whether what I write is genuinely useful.",
   },
   {
     icon: Flag,
-    title: "High-ownership",
+    title: "High ownership",
     description:
-      "I operate with high ownership and see projects through with no handholding.",
+      "I take full ownership and see projects through to the end \u2014 no handholding required.",
   },
 ]
 

@@ -62,8 +62,8 @@ export function WritingSamplesSection() {
 
           {/* Lead-in explaining the split */}
           <p className="mx-auto mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/70 text-pretty">
-            The same product, written three ways &mdash; matched to how technical the reader is. Click any sample to
-            open it.
+            The same topic, written three ways &mdash; matched to how technical the reader is. Click any sample to open
+            it.
           </p>
         </div>
 
@@ -73,30 +73,27 @@ export function WritingSamplesSection() {
               <DialogTrigger asChild>
                 <button
                   type="button"
-                  className="group relative flex aspect-[3/4.4] w-full overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-[0_20px_60px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/5 transition-all duration-500 hover:-translate-y-2 hover:border-primary/60 hover:shadow-[0_44px_100px_-40px_rgba(217,42,205,0.65)]"
+                  className="group relative flex aspect-[3/4.4] w-full flex-col overflow-hidden rounded-[2rem] bg-[#f6f4f0] p-3 text-left shadow-[0_24px_60px_-24px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-all duration-500 hover:-translate-y-2 hover:ring-primary/40 hover:shadow-[0_44px_100px_-40px_rgba(217,42,205,0.5)]"
                 >
-                  {/* Image fills the entire card */}
-                  <img
-                    src={sample.image || "/placeholder.svg"}
-                    alt={`Preview of ${sample.title}`}
-                    className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                  />
+                  {/* Image fills most of the card, framed by the light card */}
+                  <div className="relative flex-1 overflow-hidden rounded-[1.4rem]">
+                    <img
+                      src={sample.image || "/placeholder.svg"}
+                      alt={`Preview of ${sample.title}`}
+                      className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                    />
 
-                  {/* Bottom wash so the label stays legible over the image */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/45 to-transparent" />
-                  {/* Subtle primary glaze that warms up on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/25 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    {/* Expand affordance */}
+                    <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-background/70 text-white backdrop-blur-md ring-1 ring-white/15 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                      <Maximize2 className="h-5 w-5" />
+                    </span>
+                  </div>
 
-                  {/* Expand affordance */}
-                  <span className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-background/70 text-white backdrop-blur-md ring-1 ring-white/15 transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
-                    <Maximize2 className="h-5 w-5" />
-                  </span>
-
-                  {/* Minimal label - technicality is the main text, nothing else */}
-                  <div className="relative mt-auto w-full p-8 md:p-9">
-                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/60">Technical audience</p>
-                    <p className="mt-2 text-3xl font-bold leading-none text-primary md:text-4xl">{level}</p>
-                    <p className="mt-3 text-sm font-medium uppercase tracking-[0.16em] text-white/55">({readers})</p>
+                  {/* Minimal label on the cream footer - technicality is the main text */}
+                  <div className="w-full px-5 pb-4 pt-5">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#8a8391]">Technical audience</p>
+                    <p className="mt-1.5 text-3xl font-bold leading-none text-primary md:text-4xl">{level}</p>
+                    <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-[#6b6472]">({readers})</p>
                   </div>
                 </button>
               </DialogTrigger>

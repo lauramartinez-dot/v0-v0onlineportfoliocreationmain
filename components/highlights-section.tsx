@@ -58,9 +58,6 @@ export function HighlightsSection() {
               Then &amp; now<span className="text-primary">.</span>
             </h2>
             <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-            <p className="mx-auto mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/70 text-pretty md:text-xl">
-              Same instinct, different questions. The topic moved from the physical world to the digital one.
-            </p>
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
@@ -123,8 +120,8 @@ export function HighlightsSection() {
             <span className="font-bold" style={{ color: "#cf52c7" }}>
               democratising access to technical knowledge.
             </span>{" "}
-            The more people understand tech, use it, and help build it, the further we can push the frontiers of
-            knowledge outward.
+            The more people understand technology, use it, and help build it, the further we can push the frontiers of
+            knowledge.
           </p>
         </div>
       </section>
