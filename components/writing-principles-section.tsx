@@ -46,28 +46,29 @@ export function WritingPrinciplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {principles.map(({ icon: Icon, title, description }, index) => (
             <li
               key={title}
-              className={`group relative flex flex-col gap-4 overflow-hidden rounded-2xl border border-[#472444] bg-card/50 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)] md:p-10 ${
-                index === principles.length - 1 ? "md:col-span-2" : ""
-              }`}
+              className="group relative flex min-h-[340px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-1 hover:ring-primary/50 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)]"
             >
-              {/* Top hairline picks up the accent on hover */}
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-100" />
+              {/* Layered wash gives the card its depth, matching the What I do boxes */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
 
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary/60 text-primary transition-colors duration-300 group-hover:border-primary group-hover:bg-primary/10">
-                <Icon className="h-6 w-6" />
-              </span>
+              <div className="relative mt-auto flex w-full flex-col gap-4 p-8">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary text-primary transition-colors duration-300 group-hover:bg-primary/10">
+                  <Icon className="h-6 w-6" />
+                </span>
 
-              <h3 className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">
-                {title}
-              </h3>
+                <h3 className="text-3xl md:text-4xl font-bold leading-tight text-white text-balance">
+                  {title}
+                </h3>
 
-              <p className="text-lg font-medium leading-relaxed text-white/70 text-pretty">
-                {description}
-              </p>
+                <p className="text-base font-medium leading-relaxed text-white/75 text-pretty">
+                  {description}
+                </p>
+              </div>
             </li>
           ))}
         </ul>
