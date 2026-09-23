@@ -61,33 +61,57 @@ export function HighlightsSection() {
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then */}
-            <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10">
-              <div className="flex items-center gap-3">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
-                  <Plane className="h-6 w-6" />
-                </span>
-                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
-                  Then · Tech journalist
-                </span>
+            <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+              <div className="relative h-44 w-full overflow-hidden md:h-52">
+                <Image
+                  src="/then-tech-journalist.png"
+                  alt="A printed technology magazine article spread"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/30 to-transparent" />
               </div>
-              <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
-                &ldquo;How do planes stay in the air?&rdquo;
-              </p>
+              <div className="flex flex-col gap-6 p-10">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
+                    <Plane className="h-6 w-6" />
+                  </span>
+                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
+                    Then · Tech journalist
+                  </span>
+                </div>
+                <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
+                  &ldquo;How do planes stay in the air?&rdquo;
+                </p>
+              </div>
             </div>
 
             {/* Now */}
-            <div className="relative flex h-full flex-col gap-6 overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06] p-10">
-              <div className="flex items-center gap-3">
-                <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-                  <Code2 className="h-6 w-6" />
-                </span>
-                <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
-                  Now · Technical writer
-                </span>
+            <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
+              <div className="relative h-44 w-full overflow-hidden md:h-52">
+                <Image
+                  src="/now-tech-docs.png"
+                  alt="A modern software API documentation page on a dark themed screen"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
               </div>
-              <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
-                &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
-              </p>
+              <div className="flex flex-col gap-6 p-10">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
+                    <Code2 className="h-6 w-6" />
+                  </span>
+                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
+                    Now · Technical writer
+                  </span>
+                </div>
+                <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
+                  &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
+                </p>
+              </div>
             </div>
           </div>
         </div>
