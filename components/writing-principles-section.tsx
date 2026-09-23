@@ -46,29 +46,27 @@ export function WritingPrinciplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {principles.map(({ icon: Icon, title, description }, index) => (
+        <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {principles.map(({ icon: Icon, title, description }) => (
             <li
               key={title}
-              className="group relative flex min-h-[340px] overflow-hidden rounded-xl shadow-lg ring-2 ring-primary/20 transition-all duration-300 hover:-translate-y-1 hover:ring-primary/50 hover:shadow-[0_28px_70px_-32px_rgba(217,42,205,0.5)]"
+              className="group relative flex h-full flex-col gap-5 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1420] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50"
             >
-              {/* Layered wash gives the card its depth, matching the What I do boxes */}
-              <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-transparent opacity-90" />
+              {/* Thin top accent - quiet by default, lights up on hover so the row stays calm and scannable */}
+              <div className="absolute inset-x-0 top-0 h-1 bg-primary/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
 
-              <div className="relative mt-auto flex w-full flex-col gap-4 p-8">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 border-primary text-primary transition-colors duration-300 group-hover:bg-primary/10">
-                  <Icon className="h-6 w-6" />
-                </span>
+              {/* Icon badge - a soft tinted square reads cleaner than an outlined circle */}
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
+                <Icon className="h-6 w-6" />
+              </span>
 
-                <h3 className="text-3xl md:text-4xl font-bold leading-tight text-white text-balance">
-                  {title}
-                </h3>
+              <h3 className="text-2xl font-bold leading-tight text-white text-balance">
+                {title}
+              </h3>
 
-                <p className="text-base font-medium leading-relaxed text-white/75 text-pretty">
-                  {description}
-                </p>
-              </div>
+              <p className="text-[15px] leading-relaxed text-white/65 text-pretty">
+                {description}
+              </p>
             </li>
           ))}
         </ul>
