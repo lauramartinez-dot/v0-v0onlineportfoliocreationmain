@@ -42,13 +42,15 @@ export function HighlightsSection() {
               </span>
             </p>
 
-            <p className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
-              I still write about technology.{" "}
-              <span className="font-semibold text-white">Engineering. Software.</span>
-              <br />
-              In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS degree
-              to follow along.
-            </p>
+            <div className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
+              <p>I still write about technology.</p>
+              <p className="mt-2 font-semibold text-white">Engineering.</p>
+              <p className="mt-2 font-semibold text-white">Software.</p>
+              <p className="mt-4">
+                In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS
+                degree to follow along.
+              </p>
+            </div>
           </div>
         </div>
       </section>
