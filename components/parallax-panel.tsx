@@ -41,25 +41,26 @@ export function ParallaxPanel({ image }: { image: string }) {
   return (
     <div
       ref={ref}
-      className="absolute inset-y-0 right-0 w-full overflow-hidden md:w-3/5 lg:w-1/2"
+      className="absolute inset-y-0 right-0 w-full overflow-hidden md:w-1/2 lg:w-[46%]"
       aria-hidden="true"
     >
-      {/* Generous vertical overscan so the parallax translate never exposes an empty edge.
-          `cover` guarantees the image always fills; position shows the woman AND the code screen. */}
+      {/* Fit the FULL image width into the panel (not `cover`) so the whole scene -
+          the woman AND the code screen - shows at a smaller scale, as a band that
+          blends into the dark section background above and below. Parallax moves it on scroll. */}
       <div
-        className="absolute inset-x-0 -top-[35%] -bottom-[35%] will-change-transform"
+        className="absolute inset-0 will-change-transform"
         style={{
           backgroundImage: `url('${image}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "30% 50%",
+          backgroundSize: "112% auto",
+          backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           transform: `translate3d(0, ${offset}px, 0)`,
         }}
       />
       {/* Soft overlay for legibility */}
-      <div className="absolute inset-0 bg-background/40" />
+      <div className="absolute inset-0 bg-background/30" />
       {/* Left-edge fade blends the image into the page background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/35 to-transparent to-50%" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent to-30%" />
     </div>
   )
 }
