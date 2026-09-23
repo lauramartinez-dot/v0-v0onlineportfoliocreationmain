@@ -11,18 +11,18 @@ export function HighlightsSection() {
         id="top-differentiators"
         className="relative flex min-h-screen items-center overflow-hidden px-4 scroll-mt-32"
       >
-        <div
-          className="absolute inset-0 bg-cover md:bg-fixed bg-[position:75%_center]"
-          style={{ backgroundImage: "url('/what-i-do-background.jpg')" }}
-          aria-hidden="true"
-        />
-        {/* Darken for legibility, with the left kept heavier so the copy stays crisp
-            and the woman stays visible on the open right side */}
-        <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-background from-10% via-background/70 via-55% to-transparent"
-          aria-hidden="true"
-        />
+        {/* Image is confined to the right half of the screen, starting near the centre */}
+        <div className="absolute inset-y-0 right-0 w-full md:w-2/3 lg:w-3/5">
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: "url('/what-i-do-background.jpg')" }}
+            aria-hidden="true"
+          />
+          {/* Soft overlay for legibility */}
+          <div className="absolute inset-0 bg-background/45" aria-hidden="true" />
+          {/* Left-edge fade blends the image into the page background so it doesn't look like a hard panel */}
+          <div className="absolute inset-0 bg-gradient-to-r from-background via-background/50 to-transparent to-40%" aria-hidden="true" />
+        </div>
         {/* Top/bottom fades blend the section into the neighbours for a seamless scroll */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
