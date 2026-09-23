@@ -46,25 +46,22 @@ export function WritingPrinciplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+        <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch">
           {principles.map(({ icon: Icon, title, description }) => (
             <li
               key={title}
-              className="group relative flex h-full flex-col gap-5 overflow-hidden rounded-2xl border border-white/10 bg-[#1a1420] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/50"
+              className="group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl bg-[#f6f4f0] p-10 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_36px_80px_-28px_rgba(217,42,205,0.4)]"
             >
-              {/* Thin top accent - quiet by default, lights up on hover so the row stays calm and scannable */}
-              <div className="absolute inset-x-0 top-0 h-1 bg-primary/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-              {/* Icon badge - a soft tinted square reads cleaner than an outlined circle */}
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/15 text-primary">
-                <Icon className="h-6 w-6" />
+              {/* Icon badge - solid primary chip so it pops on the light surface */}
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm">
+                <Icon className="h-7 w-7" />
               </span>
 
-              <h3 className="text-2xl font-bold leading-tight text-white text-balance">
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight text-[#1a1420] text-balance">
                 {title}
               </h3>
 
-              <p className="text-[15px] leading-relaxed text-white/65 text-pretty">
+              <p className="text-base md:text-[17px] leading-relaxed text-[#4a4450] text-pretty">
                 {description}
               </p>
             </li>
