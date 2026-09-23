@@ -92,27 +92,11 @@ export function WritingSamplesSection() {
                     <Maximize2 className="h-5 w-5" />
                   </span>
 
-                  {/* Label block - larger and more deliberate */}
+                  {/* Minimal label - technicality is the main text, nothing else */}
                   <div className="relative mt-auto w-full p-8 md:p-9">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/85 backdrop-blur-sm">
-                      Technical audience
-                      <span className="font-bold text-primary">{level}</span>
-                    </span>
-
-                    <p className="mt-4 text-sm font-medium uppercase tracking-[0.18em] text-white/55">({readers})</p>
-
-                    <div className="mt-6 h-px w-full bg-white/15" />
-
-                    <p className="mt-5 text-xl font-bold leading-snug text-white text-balance md:text-2xl">
-                      {sample.title}
-                    </p>
-
-                    <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
-                      View sample
-                      <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1">
-                        →
-                      </span>
-                    </span>
+                    <p className="text-sm font-medium uppercase tracking-[0.2em] text-white/60">Technical audience</p>
+                    <p className="mt-2 text-3xl font-bold leading-none text-primary md:text-4xl">{level}</p>
+                    <p className="mt-3 text-sm font-medium uppercase tracking-[0.16em] text-white/55">({readers})</p>
                   </div>
                 </button>
               </DialogTrigger>
