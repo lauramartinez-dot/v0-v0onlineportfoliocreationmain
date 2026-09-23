@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Plane, Code2, Languages, Rocket } from "lucide-react"
+import { Plane, Code2, Languages, Rocket, ArrowUpRight } from "lucide-react"
 import { ParallaxPanel } from "@/components/parallax-panel"
 
 const journey = ["Spain", "France · Erasmus", "Spain", "Ireland", "Germany", "Spain"]
@@ -60,17 +60,22 @@ export function HighlightsSection() {
           </div>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
-            {/* Then */}
-            <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-              <div className="relative h-44 w-full overflow-hidden md:h-52">
+            {/* Then - links to the live published article */}
+            <a
+              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+            >
+              <div className="relative aspect-square w-full overflow-hidden">
                 <Image
-                  src="/then-tech-journalist.png"
-                  alt="A printed technology magazine article spread"
+                  src="/then-airplane-article.png"
+                  alt="A passenger airplane flying low over a city skyline and river"
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
               </div>
               <div className="flex flex-col gap-6 p-10">
                 <div className="flex items-center gap-3">
@@ -84,12 +89,16 @@ export function HighlightsSection() {
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
                   &ldquo;How do planes stay in the air?&rdquo;
                 </p>
+                <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-colors group-hover:text-white">
+                  Read the live article
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                </span>
               </div>
-            </div>
+            </a>
 
             {/* Now */}
             <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
-              <div className="relative h-44 w-full overflow-hidden md:h-52">
+              <div className="relative aspect-square w-full overflow-hidden">
                 <Image
                   src="/now-tech-docs.png"
                   alt="A modern software API documentation page on a dark themed screen"
