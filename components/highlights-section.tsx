@@ -11,10 +11,10 @@ export function HighlightsSection() {
         id="top-differentiators"
         className="relative flex min-h-screen items-center overflow-hidden px-4 scroll-mt-32"
       >
-        {/* Image is confined to the right half of the screen, starting near the centre */}
-        <div className="absolute inset-y-0 right-0 w-full md:w-2/3 lg:w-3/5">
+        {/* Image is confined to the right side of the screen, starting near the centre */}
+        <div className="absolute inset-y-0 right-0 w-full md:w-3/5 lg:w-1/2">
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-center md:bg-fixed"
             style={{ backgroundImage: "url('/what-i-do-background.jpg')" }}
             aria-hidden="true"
           />
