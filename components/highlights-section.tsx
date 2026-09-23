@@ -12,21 +12,23 @@ export function HighlightsSection() {
         className="relative flex min-h-screen items-center overflow-hidden px-4 scroll-mt-32"
       >
         <div
-          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+          className="absolute inset-0 bg-cover md:bg-fixed bg-[position:20%_center] md:bg-[position:25%_center]"
           style={{ backgroundImage: "url('/what-i-do-background.jpg')" }}
           aria-hidden="true"
         />
-        {/* Darken for legibility, with the left kept heavier so the copy stays crisp */}
-        <div className="absolute inset-0 bg-background/80" aria-hidden="true" />
+        {/* Darken for legibility, with the right kept heavier so the copy stays crisp
+            and the woman on the left stays visible */}
+        <div className="absolute inset-0 bg-background/70" aria-hidden="true" />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-background from-10% via-background/70 via-55% to-transparent"
+          className="absolute inset-0 bg-gradient-to-l from-background from-10% via-background/70 via-55% to-transparent"
           aria-hidden="true"
         />
         {/* Top/bottom fades blend the section into the neighbours for a seamless scroll */}
         <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-        <div className="relative mx-auto w-full max-w-7xl px-4 py-32 md:py-40">
+        <div className="relative mx-auto flex w-full max-w-7xl justify-end px-4 py-32 md:py-40">
+          <div className="w-full max-w-2xl">
           <div className="mb-14">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
               What I do<span className="text-primary">.</span>
@@ -35,14 +37,14 @@ export function HighlightsSection() {
           </div>
 
           {/* Lead line - hero-adjacent scale so it leads the block */}
-          <p className="max-w-4xl text-3xl font-semibold tracking-tight leading-[1.15] text-white text-balance md:text-4xl lg:text-[2.75rem]">
+          <p className="text-3xl font-semibold tracking-tight leading-[1.15] text-white text-balance md:text-4xl lg:text-[2.75rem]">
             I&apos;m a tech journalist turned technical writer — and honestly,{" "}
             <span className="font-bold" style={{ color: "#cf52c7" }}>
               the job hasn&apos;t changed that much.
             </span>
           </p>
 
-          <div className="mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
+          <div className="mt-8 text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
             <p>I still write about technology.</p>
             <p className="mt-2 font-semibold text-white">Engineering.</p>
             <p className="mt-2 font-semibold text-white">Software.</p>
@@ -50,6 +52,7 @@ export function HighlightsSection() {
               In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS degree
               to follow along.
             </p>
+          </div>
           </div>
         </div>
       </section>
