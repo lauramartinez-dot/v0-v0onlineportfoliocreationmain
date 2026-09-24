@@ -1316,27 +1316,27 @@ export default function CareerMapSection() {
             <div>
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
-                {["Tableau", "Jira", "Zendesk", "ChatGPT", "Claude", "Cursor"].map((tool) => (
+                {[
+                  "Confluence",
+                  "Notion",
+                  "Google Docs",
+                  "Zendesk",
+                  "Zendesk Localization",
+                  "Jira",
+                  "Figma",
+                  "Tableau",
+                  "Smartling",
+                  "Phrase",
+                  "ChatGPT",
+                  "Claude",
+                  "Cursor",
+                ].map((tool) => (
                   <span
                     key={tool}
                     className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
                   >
                     {tool}
                   </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Writing Samples Section */}
-            <div className="mt-8 pt-6 border-t border-primary/10">
-              <h3 className="text-base font-semibold mb-4 text-center text-foreground/70">Writing Samples</h3>
-              <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-                {contentTypes.map((contentType) => (
-                  <ContentTypeCard
-                    key={contentType.id}
-                    contentType={contentType}
-                    onClick={() => setSelectedType(contentType)}
-                  />
                 ))}
               </div>
             </div>
