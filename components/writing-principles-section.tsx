@@ -11,7 +11,7 @@ const principles = [
     icon: Sparkles,
     title: "AI, but not always",
     description:
-      "I spend much of my day working with AI \u2014 Copilot and Claude especially. But just as importantly, I know when NOT to trust it, and when NOT to use it at all. You won't catch me shipping AI slop or \u201CI work at the intersection of\u2026\u201D",
+      "I spend most of my working day talking to AI chatbots. I know how to use AI \u2014 but just as importantly, I know when not to trust it, and when not to use it.",
   },
   {
     icon: Eye,
@@ -39,7 +39,7 @@ export function WritingPrinciplesSection() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-14">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Writing principles<span className="text-primary">.</span>
+            Core principles<span className="text-primary">.</span>
           </h2>
 
           {/* Accent bar - matches the other main section titles */}

@@ -9,7 +9,7 @@ export function Navigation() {
 
   const navItems = [
     { label: "About me", href: "#top-differentiators" },
-    { label: "Writing principles", href: "#writing-principles" },
+    { label: "Core principles", href: "#writing-principles" },
     { label: "Work experience", href: "#company-highlights" },
     { label: "Writing samples", href: "#writing-samples" },
   ]
