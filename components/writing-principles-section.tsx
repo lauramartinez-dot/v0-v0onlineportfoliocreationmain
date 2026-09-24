@@ -11,7 +11,7 @@ const principles = [
     icon: Users,
     title: "Map the audience",
     description:
-      "Before I write a word, I ask who this is really for. Audience research is how I match the level of technical depth to the actual end user \u2014 never more, never less than they need.",
+      "I don't start writing until I've researched and understood who I'm really writing for. Do they have a high technical skillset? Medium? Low? That answer shapes every word.",
   },
   {
     icon: Sparkles,
