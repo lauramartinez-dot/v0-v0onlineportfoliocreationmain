@@ -9,7 +9,7 @@ const principles = [
   },
   {
     icon: Users,
-    title: "Always question the audience",
+    title: "Map the audience",
     description:
       "Before I write a word, I ask who this is really for. Audience research is how I match the level of technical depth to the actual end user \u2014 never more, never less than they need.",
   },
