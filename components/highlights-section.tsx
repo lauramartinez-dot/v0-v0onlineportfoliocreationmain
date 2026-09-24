@@ -10,9 +10,9 @@ const countries = [
 ]
 
 const languages = [
-  { name: "Spanish", code: "es", level: "Native" },
-  { name: "English", code: "gb", level: "Fluent" },
-  { name: "German", code: "de", level: "Fluent" },
+    { name: "Spanish", code: "es", level: "Native" },
+    { name: "English", code: "gb", level: "Bilingual" },
+    { name: "German", code: "de", level: "B2" },
 ]
 
 export function HighlightsSection() {
@@ -179,12 +179,12 @@ export function HighlightsSection() {
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</span>
                     <ul className="mt-2 flex flex-1 flex-col justify-center divide-y divide-white/10">
                       {languages.map((language) => (
-                        <li
-                          key={language.name}
-                          className="flex items-center gap-3 py-4 text-lg font-medium text-white/90 md:text-xl"
-                        >
+                        <li key={language.name} className="flex items-center gap-3 py-4">
                           <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                          {language.name}
+                          <span className="text-lg font-medium text-white/90 md:text-xl">{language.name}</span>
+                          <span className="ml-auto text-xs font-semibold uppercase tracking-[0.15em] text-white/45">
+                            {language.level}
+                          </span>
                         </li>
                       ))}
                     </ul>
