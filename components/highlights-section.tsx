@@ -154,36 +154,40 @@ export function HighlightsSection() {
 
                 {/* Countries & languages */}
                 <div className="mt-10 grid flex-1 grid-cols-1 gap-5 sm:grid-cols-2">
-                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur-sm">
+                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur-sm">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                       Countries lived in
                     </span>
-                    <div className="mt-8 flex flex-1 flex-wrap content-center items-center gap-4">
+                    <div className="mt-6 grid flex-1 grid-cols-2 content-center gap-4">
                       {countries.map((country) => (
                         <img
                           key={country.name}
-                          src={`https://flagcdn.com/w160/${country.code}.png`}
-                          srcSet={`https://flagcdn.com/w320/${country.code}.png 2x`}
-                          width={64}
-                          height={48}
+                          src={`https://flagcdn.com/w320/${country.code}.png`}
+                          srcSet={`https://flagcdn.com/w640/${country.code}.png 2x`}
+                          width={320}
+                          height={240}
                           loading="lazy"
                           alt={`${country.name} flag`}
                           title={country.name}
-                          className="h-12 w-16 rounded-[5px] object-cover ring-1 ring-white/15"
+                          className="aspect-[4/3] w-full rounded-lg object-cover shadow-lg ring-1 ring-white/15 transition-transform duration-300 hover:scale-[1.03]"
                         />
                       ))}
                     </div>
                   </div>
 
-                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur-sm">
+                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur-sm">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</span>
-                    <div className="mt-8 flex flex-1 flex-col justify-center gap-4">
+                    <ul className="mt-2 flex flex-1 flex-col justify-center divide-y divide-white/10">
                       {languages.map((language) => (
-                        <span key={language.name} className="text-lg font-medium text-white/90 md:text-xl">
+                        <li
+                          key={language.name}
+                          className="flex items-center gap-3 py-4 text-lg font-medium text-white/90 md:text-xl"
+                        >
+                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                           {language.name}
-                        </span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
               </div>
