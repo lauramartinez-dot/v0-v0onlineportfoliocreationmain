@@ -15,7 +15,7 @@ import {
 const audiences = [
   {
     level: "High",
-    readers: "devs, architects",
+    readers: "for developers",
     sample: {
       title: "API developer portal",
       caption:
@@ -26,7 +26,7 @@ const audiences = [
   },
   {
     level: "Medium",
-    readers: "consultants, technical PMs",
+    readers: "for technical PMs",
     sample: {
       title: "What is an API, and how do you work with it?",
       caption:
@@ -37,7 +37,7 @@ const audiences = [
   },
   {
     level: "Low",
-    readers: "business users",
+    readers: "for everyday users",
     sample: {
       title: "Product help center",
       caption:
@@ -62,8 +62,8 @@ export function WritingSamplesSection() {
 
           {/* Lead-in explaining the split */}
           <p className="mx-auto mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/70 text-pretty">
-            The same topic, written three ways &mdash; matched to how technical the reader is. Click any sample to open
-            it.
+            The same topic, written three ways &mdash; matched to how much the reader already knows. Click any sample to
+            open it.
           </p>
         </div>
 
@@ -103,12 +103,12 @@ export function WritingSamplesSection() {
                     <span className="mb-1.5 h-14 w-1 shrink-0 rounded-full bg-gradient-to-b from-primary to-primary/30" />
                     <div>
                       <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/50">
-                        Technical audience
+                        Tech knowledge
                       </p>
                       <p className="mt-1 bg-gradient-to-r from-white via-white to-primary/80 bg-clip-text text-4xl font-bold leading-none text-transparent md:text-5xl">
                         {level}
                       </p>
-                      <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-white/45">({readers})</p>
+                      <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-white/45">{readers}</p>
                     </div>
                   </div>
                 </button>
@@ -127,7 +127,7 @@ export function WritingSamplesSection() {
 
                   <DialogHeader className="space-y-3 p-6 text-left md:p-8">
                     <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                      Technical audience: {level} &middot; {readers}
+                      Tech knowledge: {level} &middot; {readers}
                     </span>
                     <DialogTitle className="text-2xl font-bold text-white text-balance">{sample.title}</DialogTitle>
                     <DialogDescription className="text-base leading-relaxed text-white/65 text-pretty">
