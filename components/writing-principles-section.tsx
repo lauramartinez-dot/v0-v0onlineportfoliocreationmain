@@ -23,19 +23,19 @@ const principles = [
     icon: LineChart,
     title: "Data-minded",
     description:
-      "I make sure I have a direct feedback line with the end user. I want to make content decisions on data, not assumptions \u2014 to know whether what I write is genuinely useful.",
+      "I don't assume my docs are helpful. I want to hear it from the people using them and see it in the data, and let that shape what I write next.",
   },
   {
     icon: Eye,
     title: "Transparency",
     description:
-      "I document what I'm doing as I do it, so anyone can follow my reasoning \u2014 and pick up where I left off if they need to.",
+      "I leave notes in my tickets as I work: what I did, what I found, what's still open. Anyone can see where things stand and pick up where I left off without having to ask me.",
   },
   {
     icon: Flag,
     title: "High ownership",
     description:
-      "I take full ownership and see projects through to the end \u2014 no handholding required.",
+      "Once I pick something up, I don't drop it. If I'm stuck, I figure out who to ask or dig in myself. It doesn't just sit on my list.",
   },
 ]
 
