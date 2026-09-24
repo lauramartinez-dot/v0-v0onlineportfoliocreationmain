@@ -1,52 +1,15 @@
 import Image from "next/image"
 import { Plane, Code2, Languages, Rocket, ArrowUpRight } from "lucide-react"
-import { ParallaxPanel } from "@/components/parallax-panel"
+import { AboutMeReveal } from "@/components/about-me-reveal"
 
 const journey = ["Spain", "France · Erasmus", "Spain", "Ireland", "Germany", "Spain"]
 
 export function HighlightsSection() {
   return (
     <>
-      {/* 1. What I do - immersive, full-height photographic background with parallax */}
-      <section
-        id="top-differentiators"
-        className="relative flex min-h-screen items-center overflow-hidden px-4 scroll-mt-32"
-      >
-        {/* Right-side image with genuine scroll parallax (stays confined so the woman is visible) */}
-        <ParallaxPanel image="/what-i-do-background.jpg" />
-        {/* Top/bottom fades blend the section into the neighbours for a seamless scroll */}
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
-
-        <div className="relative mx-auto w-full max-w-7xl px-4 py-32 md:py-40">
-          {/* Title stays centered across the full section, like the other section headers */}
-          <div className="mb-14 text-center">
-            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              About me<span className="text-primary">.</span>
-            </h2>
-            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-          </div>
-
-          <div className="w-full max-w-2xl">
-          {/* Lead line - hero-adjacent scale so it leads the block */}
-          <p className="text-3xl font-semibold tracking-tight leading-[1.15] text-white text-balance md:text-4xl lg:text-[2.75rem]">
-            I&apos;m a tech journalist turned technical writer — and honestly,{" "}
-            <span className="font-bold" style={{ color: "#cf52c7" }}>
-              the job hasn&apos;t changed that much.
-            </span>
-          </p>
-
-          <div className="mt-8 text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
-            <p>I still write about technology.</p>
-            <p className="mt-2 font-semibold text-white">Engineering.</p>
-            <p className="mt-2 font-semibold text-white">Software.</p>
-            <p className="mt-4">
-              In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS degree
-              to follow along.
-            </p>
-          </div>
-          </div>
-        </div>
+      {/* 1. About me - pinned scroll-reveal, plain background (no image) */}
+      <section id="top-differentiators" className="relative scroll-mt-32">
+        <AboutMeReveal />
       </section>
 
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
