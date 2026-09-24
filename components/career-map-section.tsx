@@ -1269,30 +1269,17 @@ export default function CareerMapSection() {
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "GitHub",
-                  "Git",
+                  "Docs-as-code",
                   "Markdown",
                   "XML",
-                  "Visual Studio Code",
+                  "AI agents",
+                  "Agentic coding",
                   "Azure DevOps",
-                  "REST APIs",
-                  "SAP Integration",
+                  "Git",
+                  "GitHub Copilot",
+                  "Visual Studio Code",
+                  "Microsoft ecosystem",
                 ].map((tool) => (
-                  <span
-                    key={tool}
-                    className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* AI agents */}
-            <div>
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">AI agents</h4>
-              <div className="flex flex-wrap gap-2">
-                {["v0 by Vercel", "Claude", "Cursor", "GitHub Copilot", "Langdock", "Clueso"].map((tool) => (
                   <span
                     key={tool}
                     className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
@@ -1353,15 +1340,7 @@ export default function CareerMapSection() {
             <div>
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
-                {[
-                  "Zendesk Localization",
-                  "Jira",
-                  "Figma",
-                  "Tableau",
-                  "ChatGPT",
-                  "Claude",
-                  "Cursor",
-                ].map((tool) => (
+                {["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"].map((tool) => (
                   <span
                     key={tool}
                     className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
@@ -1414,7 +1393,7 @@ export default function CareerMapSection() {
             <div>
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
-                {["Confluence", "Notion", "Google Docs", "Zendesk", "Smartling", "Phrase"].map((tool) => (
+                {["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"].map((tool) => (
                   <span
                     key={tool}
                     className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
