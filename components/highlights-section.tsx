@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Plane, Code2, Languages, Rocket, ArrowUpRight } from "lucide-react"
+import { Plane, Code2, Languages, ArrowUpRight } from "lucide-react"
 import { AboutMeReveal } from "@/components/about-me-reveal"
 
 const journey = ["Spain", "France · Erasmus", "Spain", "Ireland", "Germany", "Spain"]
@@ -29,13 +29,6 @@ export function HighlightsSection() {
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
       <section className="relative px-4 py-24">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Then &amp; now<span className="text-primary">.</span>
-            </h2>
-            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-          </div>
-
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
             <a
@@ -53,6 +46,9 @@ export function HighlightsSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
+                <span className="absolute left-5 top-5 rounded-full bg-black/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white ring-1 ring-white/20 backdrop-blur-md">
+                  6 years ago
+                </span>
               </div>
               <div className="flex flex-col gap-6 p-10">
                 <div className="flex items-center gap-3">
@@ -84,6 +80,9 @@ export function HighlightsSection() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
+                <span className="absolute left-5 top-5 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground backdrop-blur-md">
+                  Now
+                </span>
               </div>
               <div className="flex flex-col gap-6 p-10">
                 <div className="flex items-center gap-3">
@@ -120,11 +119,7 @@ export function HighlightsSection() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
         <div className="relative mx-auto max-w-4xl py-32 text-center">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            The mission<span className="text-primary">.</span>
-          </h2>
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-          <p className="mx-auto mt-10 max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
+          <p className="mx-auto max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
             Same as always:{" "}
             <span className="font-bold" style={{ color: "#cf52c7" }}>
               democratising access to technical knowledge.
@@ -138,13 +133,6 @@ export function HighlightsSection() {
       {/* 4. Global - globetrotter, on the plain section background */}
       <section className="relative px-4 py-32">
         <div className="relative mx-auto max-w-7xl">
-          <div className="mb-14 text-center">
-            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-              Global<span className="text-primary">.</span>
-            </h2>
-            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-          </div>
-
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
             <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
               <div>
@@ -217,14 +205,7 @@ export function HighlightsSection() {
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
         <div className="relative mx-auto max-w-4xl py-32 text-center">
-          <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-            <Rocket className="h-7 w-7" />
-          </span>
-          <h2 className="mt-8 text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Startup DNA<span className="text-primary">.</span>
-          </h2>
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-          <p className="mx-auto mt-10 text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
+          <p className="mx-auto text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
             Most of my career has been at startups — including{" "}
             <span className="font-bold" style={{ color: "#cf52c7" }}>
               Personio, one of Europe&apos;s unicorns.
