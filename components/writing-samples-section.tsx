@@ -200,11 +200,14 @@ export function WritingSamplesSection() {
 
                     <DialogHeader className="absolute inset-x-0 bottom-0 space-y-0 px-8 pb-6 text-left md:px-12">
                       <span className="inline-flex w-fit items-center rounded-full bg-primary/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/30 backdrop-blur-sm">
-                        {level} &middot; {readers}
+                        {readers}
                       </span>
                       <DialogTitle className="mt-3 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
-                        {sample.title}
+                        {level} technical knowledge
                       </DialogTitle>
+                      <p className="mt-1.5 text-base font-medium text-white/60 text-pretty md:text-lg">
+                        {sample.title}
+                      </p>
                       <DialogDescription className="sr-only">{sample.caption}</DialogDescription>
                     </DialogHeader>
                   </div>
