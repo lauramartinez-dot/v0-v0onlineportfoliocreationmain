@@ -9,7 +9,7 @@ const principles = [
   },
   {
     icon: Users,
-    title: "Map the audience",
+    title: "Audience research",
     description:
       "I don't write a single word until I know who I'm writing for. Are they highly technical? Somewhere in the middle? Complete beginners? Everything I write depends on that answer.",
   },
