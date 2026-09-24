@@ -9,9 +9,9 @@ const principles = [
   },
   {
     icon: Users,
-    title: "Who is the end-user?",
+    title: "Who is reading?",
     description:
-      "I don't write a single word until I know who I'm writing for. What's their actual role in their company? How technical are they? Everything I write depends on those answers.",
+      "I don't write a single word until I know who I'm writing for. What's their job? Are they setting things up or just using them? How technical are they? Everything I write depends on those answers.",
   },
   {
     icon: Sparkles,
