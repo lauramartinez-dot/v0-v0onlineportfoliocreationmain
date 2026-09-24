@@ -34,7 +34,7 @@ export function HighlightsSection() {
               rel="noopener noreferrer"
               className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
-              <div className="relative aspect-[16/9] w-full overflow-hidden">
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
                   src="/then-airplane-article.png"
                   alt="A passenger airplane flying low over a city skyline and river"
@@ -68,7 +68,7 @@ export function HighlightsSection() {
 
             {/* Now */}
             <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
-              <div className="relative aspect-[16/9] w-full overflow-hidden">
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
                   src="/now-tech-docs.png"
                   alt="A modern software API documentation page on a dark themed screen"
