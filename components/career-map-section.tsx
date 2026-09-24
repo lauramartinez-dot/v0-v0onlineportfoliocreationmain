@@ -16,11 +16,13 @@ import {
   FileText,
   Heart,
   ChevronDown,
+  ChevronUp,
   ExternalLink,
   Video,
   Mail,
   HelpCircle,
   Pen,
+  Sparkles,
 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
@@ -1132,15 +1134,26 @@ function CompanyCard({
                   </p>
                 )}
                 {skills && skills.length > 0 && (
-                  <div className="shrink-0 rounded-2xl border border-primary/25 bg-primary/[0.06] p-5 md:min-w-[260px]">
-                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
-                      Skills unlocked
-                    </p>
-                    <ul className="flex flex-col gap-2.5">
+                  <div className="shrink-0 overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)] md:min-w-[300px]">
+                    <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
+                      <Sparkles className="h-3.5 w-3.5 text-primary" />
+                      <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">Skills unlocked</p>
+                    </div>
+                    <ul className="flex flex-col divide-y divide-primary/10 px-5 py-1">
                       {skills.map((skill) => (
-                        <li key={skill} className="flex items-start gap-2.5">
-                          <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                          <span className="text-[15px] font-medium leading-snug text-foreground/85">{skill}</span>
+                        <li key={skill} className="flex items-center justify-between gap-4 py-2.5">
+                          <span className="text-[15px] font-semibold leading-snug text-foreground/90">{skill}</span>
+                          <span className="flex shrink-0 items-center">
+                            {[0, 1, 2].map((i) => (
+                              <ChevronUp
+                                key={i}
+                                className="-ml-1.5 h-[18px] w-[18px] animate-skill-arrow text-primary drop-shadow-[0_0_4px_rgba(153,49,231,0.7)] first:ml-0"
+                                style={{ animationDelay: `${i * 160}ms` }}
+                                aria-hidden="true"
+                              />
+                            ))}
+                            <span className="sr-only">leveled up</span>
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -1279,34 +1292,39 @@ export default function CareerMapSection() {
               "UI-focused docs",
             ]}
           >
-            {/* Achievement Grid */}
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Column 1 - Writing */}
-              <PillarColumn label="I write">
-                {operationalAchievements
-                  .filter((a) => a.column === 1)
-                  .map((achievement) => (
-                    <AchievementCard key={achievement.id} achievement={achievement} />
-                  ))}
-              </PillarColumn>
+            {/* Top achievements */}
+            <div>
+              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
+                Top achievements
+              </h4>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Helped the team deprioritize 20% of low-impact release tasks",
+                  "Enabled removal of 100+ outdated pages, improving content relevance",
+                  "Helped the team generate reports 30% faster by improving Tableau dashboards",
+                  "Built an AI tool that cut Spanish translation review time by 90%",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span className="text-[15px] leading-relaxed text-foreground/85">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-              {/* Column 2 - Operations */}
-              <PillarColumn label="I build">
-                {operationalAchievements
-                  .filter((a) => a.column === 2)
-                  .map((achievement) => (
-                    <AchievementCard key={achievement.id} achievement={achievement} />
-                  ))}
-              </PillarColumn>
-
-              {/* Column 3 - Global */}
-              <PillarColumn label="I translate">
-                {operationalAchievements
-                  .filter((a) => a.column === 3)
-                  .map((achievement) => (
-                    <AchievementCard key={achievement.id} achievement={achievement} />
-                  ))}
-              </PillarColumn>
+            {/* Tools */}
+            <div>
+              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
+              <div className="flex flex-wrap gap-2">
+                {["Tableau", "Jira", "Zendesk", "ChatGPT", "Claude", "Cursor"].map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
             </div>
 
             {/* Writing Samples Section */}
@@ -1341,8 +1359,39 @@ export default function CareerMapSection() {
               </>
             }
           >
-            <div className="flex items-center justify-center py-12">
-              <p className="text-foreground/50 text-lg italic">More coming soon</p>
+            {/* Top achievements */}
+            <div>
+              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
+                Top achievements
+              </h4>
+              <ul className="flex flex-col gap-2.5">
+                {[
+                  "Grew a local 3-writer documentation team into a global team of 10",
+                  "Grew documentation from 3 to 6 languages",
+                  "Created Personio's first-ever documentation style guides",
+                  "Co-founded Personio's first Women's Committee",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span className="text-[15px] leading-relaxed text-foreground/85">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Tools */}
+            <div>
+              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
+              <div className="flex flex-wrap gap-2">
+                {["Confluence", "Notion", "Google Docs", "Zendesk", "Smartling", "Phrase"].map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
             </div>
           </CompanyCard>
         </div>
