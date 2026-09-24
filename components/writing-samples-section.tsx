@@ -125,12 +125,6 @@ export function WritingSamplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-
-          {/* Lead-in explaining the split */}
-          <p className="mx-auto mt-8 max-w-2xl text-lg font-medium leading-relaxed text-white/70 text-pretty">
-            The same topic, written three ways &mdash; matched to how much the reader already knows. Click any sample to
-            open it.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-stretch">

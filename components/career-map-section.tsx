@@ -852,10 +852,22 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
       {/* Left accent border */}
       <div className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
 
-      <div className="px-5 py-4 flex items-center justify-center">
+      <div className="px-5 py-4 flex flex-col items-center justify-center gap-2.5">
         <h3 className="text-[15px] font-semibold text-white text-center leading-snug">
           {achievement.title}
         </h3>
+        {achievement.tools && achievement.tools.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {achievement.tools.map((tool) => (
+              <span
+                key={tool}
+                className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[11px] font-medium text-primary/90"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -1055,7 +1067,8 @@ function CompanyCard({
   countryFlag,
   defaultExpanded = false,
   roleProgression,
-  description
+  description,
+  skills
 }: {
   children: React.ReactNode
   logo: string
@@ -1067,6 +1080,7 @@ function CompanyCard({
   defaultExpanded?: boolean
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
+  skills?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
@@ -1103,17 +1117,37 @@ function CompanyCard({
             <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
           </div>
         </div>
-        {description && (
-          <p className="mt-6 max-w-4xl text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
-            {description}
-          </p>
-        )}
       </div>
 
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
-          <div className="pt-6">
+          <div className="pt-6 flex flex-col gap-8">
+            {/* Description + Skills unlocked */}
+            {(description || (skills && skills.length > 0)) && (
+              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+                {description && (
+                  <p className="max-w-2xl text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
+                    {description}
+                  </p>
+                )}
+                {skills && skills.length > 0 && (
+                  <div className="shrink-0 rounded-2xl border border-primary/25 bg-primary/[0.06] p-5 md:min-w-[260px]">
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
+                      Skills unlocked
+                    </p>
+                    <ul className="flex flex-col gap-2.5">
+                      {skills.map((skill) => (
+                        <li key={skill} className="flex items-start gap-2.5">
+                          <TrendingUp className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                          <span className="text-[15px] font-medium leading-snug text-foreground/85">{skill}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
             {children}
           </div>
         </div>
@@ -1210,6 +1244,12 @@ export default function CareerMapSection() {
                 docs-as-code and building AI agents into how we work.
               </>
             }
+            skills={[
+              "Docs-as-code pipeline",
+              "Developer documentation",
+              "Integrations & API specialization",
+              "Deep technical expertise",
+            ]}
           >
             <div className="flex items-center justify-center py-12">
               <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
@@ -1232,6 +1272,12 @@ export default function CareerMapSection() {
                 off the ground, and speaking up for the docs team in leadership meetings.
               </>
             }
+            skills={[
+              "Business acumen",
+              "Cross-team collaboration",
+              "Startup velocity",
+              "UI-focused docs",
+            ]}
           >
             {/* Achievement Grid */}
             <div className="grid gap-8 md:grid-cols-3">
