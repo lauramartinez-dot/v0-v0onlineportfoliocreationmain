@@ -1054,8 +1054,7 @@ function CompanyCard({
   country,
   countryFlag,
   defaultExpanded = false,
-  roleProgression,
-  descriptor
+  roleProgression
 }: {
   children: React.ReactNode
   logo: string
@@ -1066,7 +1065,6 @@ function CompanyCard({
   countryFlag: string
   defaultExpanded?: boolean
   roleProgression?: { title: string; period: string }[]
-  descriptor?: string
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
@@ -1090,9 +1088,6 @@ function CompanyCard({
             </div>
           ) : (
             <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
-          )}
-          {descriptor && (
-            <p className="mt-2 text-sm leading-relaxed text-foreground/50 text-pretty">{descriptor}</p>
           )}
         </div>
         <div className="flex items-center gap-3 shrink-0">
