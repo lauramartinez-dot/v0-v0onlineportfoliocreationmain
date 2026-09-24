@@ -1272,6 +1272,7 @@ export default function CareerMapSection() {
                   "GitHub",
                   "Git",
                   "Markdown",
+                  "XML",
                   "Visual Studio Code",
                   "Azure DevOps",
                   "REST APIs",
@@ -1291,7 +1292,7 @@ export default function CareerMapSection() {
             <div>
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">AI agents</h4>
               <div className="flex flex-wrap gap-2">
-                {["v0 by Vercel", "Claude", "Cursor", "Langdock", "Clueso"].map((tool) => (
+                {["v0 by Vercel", "Claude", "Cursor", "GitHub Copilot", "Langdock", "Clueso"].map((tool) => (
                   <span
                     key={tool}
                     className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
