@@ -18,23 +18,9 @@ const languages = [
 export function HighlightsSection() {
   return (
     <>
-      {/* 1. About me - plain static intro */}
+      {/* 1. About me - intro + supporting statement */}
       <section id="top-differentiators" className="relative scroll-mt-32">
         <AboutMeReveal />
-      </section>
-
-      {/* 1b. Still writing - the big statement comes second */}
-      <section className="relative px-4 pb-32">
-        <div className="mx-auto max-w-2xl text-center">
-          <p className="text-lg font-medium leading-relaxed text-white/70 text-pretty md:text-xl">
-            I still write about technology.{" "}
-            <span className="font-semibold text-white">Engineering. Software.</span>
-          </p>
-          <p className="mt-6 text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
-            In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS degree to
-            follow along.
-          </p>
-        </div>
       </section>
 
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
