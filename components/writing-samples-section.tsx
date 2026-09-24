@@ -10,13 +10,23 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-// Help center examples surfaced at the top of the "Low" dialog.
+// Help center examples surfaced at the top of the "Low" dialog — specific
+// Personio articles written for everyday employees.
 const helpCenters = [
   {
-    name: "Personio Help Center",
-    blurb:
-      "Category landing pages, getting-started guides, and troubleshooting articles written for everyday HR and business users.",
-    href: "https://support.personio.de/hc/es",
+    name: "Overview of permissions and employee roles",
+    blurb: "Explains, in plain language, what employees can see and do in Personio based on their role.",
+    href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    name: "Summary of the homepage cards",
+    blurb: "A friendly walkthrough of the employee homepage so new users know where everything lives.",
+    href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
+  },
+  {
+    name: "Grant permissions for everyday tasks",
+    blurb: "Step-by-step guidance for handling the day-to-day permissions employees run into.",
+    href: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
   },
 ]
 
@@ -41,15 +51,11 @@ const mediaArticles = [
   },
   {
     label: "Hallan la primera evidencia de la inflación cósmica",
-    url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
-  },
-  {
-    label: "¿Qué nos pasaría si viajáramos a la velocidad de la luz?",
-    url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
+    url: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
   },
   {
     label: "El satélite español Deimos-2 está ya en órbita",
-    url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
+    url: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
   },
   {
     label: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
