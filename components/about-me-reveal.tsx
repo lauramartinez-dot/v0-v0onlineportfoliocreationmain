@@ -23,14 +23,16 @@ export function AboutMeReveal() {
           observer.disconnect()
         }
       },
-      { threshold: 0.4 },
+      // Only fire once the block has scrolled well up into the viewport,
+      // so the fade-in is clearly perceived instead of firing on entry.
+      { threshold: 0, rootMargin: "0px 0px -45% 0px" },
     )
     observer.observe(el)
     return () => observer.disconnect()
   }, [])
 
   return (
-    <div className="flex min-h-screen items-center px-4 py-32">
+    <div className="flex min-h-screen flex-col justify-center px-4 py-32">
       <div className="mx-auto w-full max-w-7xl px-4">
         <div className="mb-14 text-center">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -47,14 +49,14 @@ export function AboutMeReveal() {
             </span>
           </p>
 
-          {/* Second block reveals as it scrolls into view */}
+          {/* Second block reveals as it scrolls into view, set lower so it appears later */}
           <div
             ref={ref}
-            className={`transition-all duration-700 ease-out ${
+            className={`mt-[45vh] transition-all duration-700 ease-out ${
               revealed ? "translate-y-0 opacity-100 blur-0" : "translate-y-6 opacity-0 blur-sm"
             }`}
           >
-            <p className="mt-10 text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
+            <p className="text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
               I still write about technology.{" "}
               <span className="font-bold text-white">Engineering. Software.</span>
             </p>
