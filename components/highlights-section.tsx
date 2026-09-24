@@ -145,41 +145,41 @@ export function HighlightsSection() {
       <section className="relative px-4 py-32">
         <div className="relative mx-auto max-w-7xl">
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
-            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
-              <div>
+            <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+              <div className="flex flex-col">
                 <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
                   I&apos;m also a globetrotter. By my 30s, I&apos;d lived in four countries and become fluent in three
                   languages.
                 </p>
 
                 {/* Countries & languages */}
-                <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
+                <div className="mt-10 grid flex-1 grid-cols-1 gap-5 sm:grid-cols-2">
+                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur-sm">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                       Countries lived in
                     </span>
-                    <div className="mt-5 flex flex-wrap items-center gap-3">
+                    <div className="mt-8 flex flex-1 flex-wrap content-center items-center gap-4">
                       {countries.map((country) => (
                         <img
                           key={country.name}
-                          src={`https://flagcdn.com/w80/${country.code}.png`}
-                          srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
-                          width={40}
-                          height={30}
+                          src={`https://flagcdn.com/w160/${country.code}.png`}
+                          srcSet={`https://flagcdn.com/w320/${country.code}.png 2x`}
+                          width={64}
+                          height={48}
                           loading="lazy"
                           alt={`${country.name} flag`}
                           title={country.name}
-                          className="h-[30px] w-10 rounded-[4px] object-cover ring-1 ring-white/15"
+                          className="h-12 w-16 rounded-[5px] object-cover ring-1 ring-white/15"
                         />
                       ))}
                     </div>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
+                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-8 backdrop-blur-sm">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</span>
-                    <div className="mt-5 flex flex-col gap-2">
+                    <div className="mt-8 flex flex-1 flex-col justify-center gap-4">
                       {languages.map((language) => (
-                        <span key={language.name} className="text-[0.95rem] font-medium text-white/90">
+                        <span key={language.name} className="text-lg font-medium text-white/90 md:text-xl">
                           {language.name}
                         </span>
                       ))}
