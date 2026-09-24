@@ -120,7 +120,7 @@ export function HighlightsSection() {
 
         <div className="relative mx-auto max-w-4xl py-32 text-center">
           <p className="mx-auto max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
-            Same as always:{" "}
+            The mission stays the same:{" "}
             <span className="font-bold" style={{ color: "#cf52c7" }}>
               democratising access to technical knowledge.
             </span>{" "}
