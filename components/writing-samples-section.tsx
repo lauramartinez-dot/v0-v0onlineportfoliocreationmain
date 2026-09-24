@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2, ExternalLink } from "lucide-react"
+import { Maximize2, ExternalLink, Lock } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -70,7 +70,7 @@ const audiences = [
       caption:
         "A full API reference portal — authentication, endpoints, parameters, and copy-paste request examples documented end to end.",
       image: "/sample-api-portal.png",
-      href: "#",
+      href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
     },
   },
   {
@@ -81,7 +81,7 @@ const audiences = [
       caption:
         "A plain-language explainer that gets a non-engineer from zero to understanding how two apps talk to each other — no CS degree required.",
       image: "/sample-api-explainer.png",
-      href: "#",
+      href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
     },
   },
   {
@@ -106,10 +106,10 @@ function LinkBox({ label, href }: { label: string; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-full items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+      className="group flex h-full items-start justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-6 py-6 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
     >
-      <span className="text-[0.95rem] font-semibold leading-snug text-white text-pretty">{label}</span>
-      <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
+      <span className="text-lg font-semibold leading-relaxed tracking-[-0.01em] text-white text-pretty">{label}</span>
+      <ExternalLink className="mt-1 h-[1.1rem] w-[1.1rem] shrink-0 text-white/30 transition-colors group-hover:text-primary" />
     </a>
   )
 }
@@ -212,9 +212,30 @@ export function WritingSamplesSection() {
                     </DialogHeader>
                   </div>
 
+                  {/* Body — gated portal link (High & Medium) */}
+                  {!isCollection && (
+                    <div className="px-8 pt-8 pb-12 md:px-12">
+                      <a
+                        href={sample.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+                      >
+                        <span className="flex items-center gap-3">
+                          <Lock className="h-5 w-5 shrink-0 text-primary" />
+                          <span>
+                            <span className="block text-[0.95rem] font-semibold text-white">Read on the OMP customer portal</span>
+                            <span className="block text-sm text-white/50">Gated content — login required</span>
+                          </span>
+                        </span>
+                        <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
+                      </a>
+                    </div>
+                  )}
+
                   {/* Body — the link collection (Low only) */}
                   {isCollection && (
-                    <div className="flex min-h-0 flex-1 flex-col gap-9 overflow-y-auto px-8 py-8 md:px-12">
+                    <div className="flex min-h-0 flex-1 flex-col gap-9 overflow-y-auto px-8 pt-8 pb-16 md:px-12">
                       <section>
                         <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
                           Help center
