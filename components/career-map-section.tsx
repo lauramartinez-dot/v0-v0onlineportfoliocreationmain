@@ -1317,16 +1317,10 @@ export default function CareerMapSection() {
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {[
-                  "Confluence",
-                  "Notion",
-                  "Google Docs",
-                  "Zendesk",
                   "Zendesk Localization",
                   "Jira",
                   "Figma",
                   "Tableau",
-                  "Smartling",
-                  "Phrase",
                   "ChatGPT",
                   "Claude",
                   "Cursor",
