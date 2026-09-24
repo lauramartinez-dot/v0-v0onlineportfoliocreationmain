@@ -1,4 +1,4 @@
-import { Minus, Sparkles, Eye, LineChart, Flag } from "lucide-react"
+import { Minus, Users, Sparkles, Eye, LineChart, Flag } from "lucide-react"
 
 const principles = [
   {
@@ -6,6 +6,12 @@ const principles = [
     title: "Less is more",
     description:
       "I see my job as a technical writer as subtracting, not adding \u2014 taking information away until only what matters is left. I write as if every extra sentence cost me 50 euros.",
+  },
+  {
+    icon: Users,
+    title: "Always question the audience",
+    description:
+      "Before I write a word, I ask who this is really for. Audience research is how I match the level of technical depth to the actual end user \u2014 never more, never less than they need.",
   },
   {
     icon: Sparkles,
