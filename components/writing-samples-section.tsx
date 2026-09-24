@@ -182,30 +182,21 @@ export function WritingSamplesSection() {
                   </button>
                 </DialogTrigger>
 
-                <DialogContent
-                  className={
-                    "grid w-[94vw] gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-3xl md:grid-cols-2 " +
-                    (isCollection ? "h-[86vh] max-w-6xl" : "h-[68vh] max-w-5xl")
-                  }
-                >
-                  {/* Sample image — right side on desktop, top on mobile */}
-                  <div className="relative order-1 h-48 overflow-hidden bg-[#0f0b13] md:order-2 md:h-full">
+                <DialogContent className="flex max-h-[88vh] w-[94vw] max-w-3xl flex-col gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-3xl">
+                  {/* Sample image — banner across the top */}
+                  <div className="relative h-52 shrink-0 overflow-hidden bg-[#0f0b13] md:h-64">
                     <img
                       src={sample.image || "/placeholder.svg"}
                       alt={`Preview of ${sample.title}`}
                       className="h-full w-full object-cover object-top"
                     />
-                    {/* Subtle edge fade that blends the image into the panel */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card/50 to-transparent md:bg-gradient-to-l md:from-transparent md:to-card/40" />
+                    {/* Fade the image bottom into the panel for a seamless blend */}
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-card via-card/70 to-transparent" />
                   </div>
 
-                  {/* Content — left side */}
-                  <div
-                    className={
-                      "order-2 flex min-h-0 flex-col md:order-1 " + (isCollection ? "" : "justify-center")
-                    }
-                  >
-                    <DialogHeader className="shrink-0 px-8 pt-8 pb-5 text-left md:px-10">
+                  {/* Content */}
+                  <div className="flex min-h-0 flex-1 flex-col">
+                    <DialogHeader className="-mt-6 shrink-0 px-8 pb-5 text-left md:px-10">
                       <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
                         {level} &middot; {readers}
                       </span>
