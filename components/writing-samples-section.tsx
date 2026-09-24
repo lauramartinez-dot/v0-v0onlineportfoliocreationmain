@@ -75,7 +75,7 @@ const audiences = [
   },
   {
     level: "Medium",
-    readers: "for technical PMs",
+    readers: "for consultants",
     sample: {
       title: "User manuals",
       caption:
