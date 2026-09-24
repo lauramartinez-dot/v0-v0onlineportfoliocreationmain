@@ -1205,7 +1205,7 @@ export default function CareerMapSection() {
             logo="/personio-icon-black.png"
             name="Personio"
             role="Senior Technical Writer"
-            years="2021 - 2025"
+            years="2023 - 2025"
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
@@ -1252,6 +1252,21 @@ export default function CareerMapSection() {
                   />
                 ))}
               </div>
+            </div>
+          </CompanyCard>
+
+          {/* Personio - Technical Writer (pre-senior) Company Card */}
+          <CompanyCard
+            logo="/personio-icon-black.png"
+            name="Personio"
+            role="Technical Writer"
+            years="2021 - 2023"
+            country="German company"
+            countryFlag="🇩🇪"
+            defaultExpanded={false}
+          >
+            <div className="flex items-center justify-center py-12">
+              <p className="text-foreground/50 text-lg italic">More coming soon</p>
             </div>
           </CompanyCard>
         </div>
