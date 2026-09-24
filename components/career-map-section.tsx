@@ -1054,7 +1054,8 @@ function CompanyCard({
   country,
   countryFlag,
   defaultExpanded = false,
-  roleProgression
+  roleProgression,
+  description
 }: {
   children: React.ReactNode
   logo: string
@@ -1065,6 +1066,7 @@ function CompanyCard({
   countryFlag: string
   defaultExpanded?: boolean
   roleProgression?: { title: string; period: string }[]
+  description?: React.ReactNode
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
@@ -1072,33 +1074,40 @@ function CompanyCard({
     <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
-        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
+        className="p-8 md:p-10 cursor-pointer group"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
-          <Image src={logo} alt={name} fill className="object-contain p-2" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
-          {roleProgression ? (
-            <div className="flex flex-col gap-0.5 mt-1">
-              {roleProgression.map((r, idx) => (
-                <p key={idx} className="text-[19px] text-foreground/60">{r.title} &middot; {r.period}</p>
-              ))}
-            </div>
-          ) : (
-            <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
-          )}
-        </div>
-        <div className="flex items-center gap-3 shrink-0">
-          {/* Country Flag */}
-          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
-            <span className="text-lg" title={country}>{countryFlag}</span>
-            <span className="text-xs font-medium text-foreground/70">{country}</span>
+        <div className="flex items-center gap-6">
+          <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
+            <Image src={logo} alt={name} fill className="object-contain p-2" />
           </div>
-          {/* Expand/Collapse indicator */}
-          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+          <div className="flex-1 min-w-0">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
+            {roleProgression ? (
+              <div className="flex flex-col gap-0.5 mt-1">
+                {roleProgression.map((r, idx) => (
+                  <p key={idx} className="text-[19px] text-foreground/60">{r.title} &middot; {r.period}</p>
+                ))}
+              </div>
+            ) : (
+              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
+            )}
+          </div>
+          <div className="flex items-center gap-3 shrink-0">
+            {/* Country Flag */}
+            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
+              <span className="text-lg" title={country}>{countryFlag}</span>
+              <span className="text-xs font-medium text-foreground/70">{country}</span>
+            </div>
+            {/* Expand/Collapse indicator */}
+            <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+          </div>
         </div>
+        {description && (
+          <p className="mt-6 max-w-4xl text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
+            {description}
+          </p>
+        )}
       </div>
 
       {/* Collapsible content */}
@@ -1194,6 +1203,13 @@ export default function CareerMapSection() {
             country="Belgium company"
             countryFlag="🇧🇪"
             defaultExpanded={false}
+            description={
+              <>
+                I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
+                API docs work for less technical users too, and I&apos;m one of the first writers here moving to
+                docs-as-code and building AI agents into how we work.
+              </>
+            }
           >
             <div className="flex items-center justify-center py-12">
               <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
@@ -1209,6 +1225,13 @@ export default function CareerMapSection() {
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
+            description={
+              <>
+                I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
+                I stayed the only Senior for 2+ years. That meant shaping how we worked, getting our first AI automations
+                off the ground, and speaking up for the docs team in leadership meetings.
+              </>
+            }
           >
             {/* Achievement Grid */}
             <div className="grid gap-8 md:grid-cols-3">
@@ -1264,6 +1287,13 @@ export default function CareerMapSection() {
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
+            description={
+              <>
+                I joined as one of the <strong>founding Technical Writers</strong> and watched the company grow like
+                crazy, from 300 to nearly 2,000 employees in 3 years, becoming one of Germany&apos;s most valuable SaaS
+                unicorns ($8.5B).
+              </>
+            }
           >
             <div className="flex items-center justify-center py-12">
               <p className="text-foreground/50 text-lg italic">More coming soon</p>
