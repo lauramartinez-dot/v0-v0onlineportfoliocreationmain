@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2 } from "lucide-react"
+import { Maximize2, ExternalLink } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -39,11 +39,11 @@ const audiences = [
     level: "Low",
     readers: "for everyday users",
     sample: {
-      title: "Product help center",
+      title: "Personio Help Center",
       caption:
-        "A searchable help center — category landing pages, getting-started guides, and troubleshooting articles written for everyday users.",
+        "A searchable help center — category landing pages, getting-started guides, and troubleshooting articles written for everyday users. This is the live Personio Help Center I contributed to.",
       image: "/sample-help-center.png",
-      href: "#",
+      href: "https://support.personio.de/hc/es",
     },
   },
 ]
@@ -133,6 +133,17 @@ export function WritingSamplesSection() {
                     <DialogDescription className="text-base leading-relaxed text-white/65 text-pretty">
                       {sample.caption}
                     </DialogDescription>
+                    {sample.href && sample.href !== "#" && (
+                      <a
+                        href={sample.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+                      >
+                        View live example
+                        <ExternalLink className="h-4 w-4" />
+                      </a>
+                    )}
                   </DialogHeader>
                 </div>
               </DialogContent>
