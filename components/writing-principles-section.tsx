@@ -11,7 +11,7 @@ const principles = [
     icon: Users,
     title: "Who is reading?",
     description:
-      "I don't write a single word until I know who I'm writing for. What's their job? Are they setting things up or just using them? How technical are they? Everything I write depends on those answers.",
+      "I don't write a single word until I know who I'm writing for. What's their job? Are they setting things up or just using them? How technical are they?",
   },
   {
     icon: Sparkles,
@@ -29,7 +29,7 @@ const principles = [
     icon: Eye,
     title: "Transparency",
     description:
-      "I leave notes in my tickets as I work: what I did, what I found, what's still open. Anyone can see where things stand and pick up where I left off without having to ask me.",
+      "I leave notes in my tickets as I work: what I did, what I found, what's still open. Anyone can see where things stand and pick up where I left off.",
   },
   {
     icon: Flag,

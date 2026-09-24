@@ -106,9 +106,9 @@ function LinkBox({ label, href }: { label: string; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex h-full items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-4 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+      className="group flex h-full items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
     >
-      <span className="text-sm font-medium leading-snug text-white/80 text-pretty group-hover:text-white">{label}</span>
+      <span className="text-[0.95rem] font-semibold leading-snug text-white text-pretty">{label}</span>
       <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
     </a>
   )
