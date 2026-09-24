@@ -34,7 +34,7 @@ export function HighlightsSection() {
               rel="noopener noreferrer"
               className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
-              <div className="relative aspect-square w-full overflow-hidden">
+              <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <Image
                   src="/then-airplane-article.png"
                   alt="A passenger airplane flying low over a city skyline and river"
@@ -43,17 +43,17 @@ export function HighlightsSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
-                <span className="absolute left-5 top-5 rounded-full bg-black/50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-white ring-1 ring-white/20 backdrop-blur-md">
-                  6 years ago
-                </span>
               </div>
-              <div className="flex flex-col gap-6 p-10">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-col gap-6 p-8">
+                <div className="flex flex-wrap items-center gap-3">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
                     <Plane className="h-6 w-6" />
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
                     Tech journalist
+                  </span>
+                  <span className="rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/60 ring-1 ring-white/15">
+                    6 years ago
                   </span>
                 </div>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
@@ -68,7 +68,7 @@ export function HighlightsSection() {
 
             {/* Now */}
             <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
-              <div className="relative aspect-square w-full overflow-hidden">
+              <div className="relative aspect-[16/9] w-full overflow-hidden">
                 <Image
                   src="/now-tech-docs.png"
                   alt="A modern software API documentation page on a dark themed screen"
@@ -77,17 +77,17 @@ export function HighlightsSection() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
-                <span className="absolute left-5 top-5 rounded-full bg-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground backdrop-blur-md">
-                  Now
-                </span>
               </div>
-              <div className="flex flex-col gap-6 p-10">
-                <div className="flex items-center gap-3">
+              <div className="flex flex-col gap-6 p-8">
+                <div className="flex flex-wrap items-center gap-3">
                   <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
                     <Code2 className="h-6 w-6" />
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
                     Technical writer
+                  </span>
+                  <span className="rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary-foreground">
+                    Now
                   </span>
                 </div>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">

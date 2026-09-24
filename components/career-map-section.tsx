@@ -1087,7 +1087,7 @@ function CompanyCard({
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
-    <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
+    <div className="rounded-3xl border border-white/10 bg-white/[0.03] mb-8 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
         className="p-8 md:p-10 cursor-pointer group"
@@ -1143,12 +1143,13 @@ function CompanyCard({
                       {skills.map((skill) => (
                         <li key={skill} className="flex items-center justify-between gap-4 py-2.5">
                           <span className="text-[15px] font-semibold leading-snug text-foreground/90">{skill}</span>
-                          <span className="flex shrink-0 items-center">
+                          <span className="flex shrink-0 flex-col items-center">
                             {[0, 1, 2].map((i) => (
                               <ChevronUp
                                 key={i}
-                                className="-ml-1.5 h-[18px] w-[18px] animate-skill-arrow text-primary drop-shadow-[0_0_4px_rgba(153,49,231,0.7)] first:ml-0"
-                                style={{ animationDelay: `${i * 160}ms` }}
+                                className="-mb-[7px] h-4 w-5 animate-skill-arrow text-primary drop-shadow-[0_0_5px_rgba(153,49,231,0.85)] last:mb-0"
+                                strokeWidth={3}
+                                style={{ animationDelay: `${(2 - i) * 180}ms` }}
                                 aria-hidden="true"
                               />
                             ))}
@@ -1290,7 +1291,6 @@ export default function CareerMapSection() {
               </div>
             </div>
 
-            <p className="text-sm italic text-foreground/50">WIP &mdash; still getting onboarded</p>
           </CompanyCard>
 
           {/* Personio Company Card */}
@@ -1309,12 +1309,7 @@ export default function CareerMapSection() {
                 off the ground, and speaking up for the docs team in leadership meetings.
               </>
             }
-            skills={[
-              "Business acumen",
-              "Cross-team collaboration",
-              "Startup velocity",
-              "UI-focused docs",
-            ]}
+            skills={["Business acumen"]}
           >
             {/* Top achievements */}
             <div>
@@ -1368,6 +1363,7 @@ export default function CareerMapSection() {
                 unicorns ($8.5B).
               </>
             }
+            skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
           >
             {/* Top achievements */}
             <div>
