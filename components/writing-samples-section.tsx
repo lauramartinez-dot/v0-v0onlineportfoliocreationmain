@@ -106,7 +106,7 @@ function LinkBox({ label, href }: { label: string; href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-4 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+      className="group flex h-full items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-4 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
     >
       <span className="text-sm font-medium leading-snug text-white/80 text-pretty group-hover:text-white">{label}</span>
       <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
@@ -182,56 +182,59 @@ export function WritingSamplesSection() {
                   </button>
                 </DialogTrigger>
 
-                <DialogContent className="flex max-h-[88vh] w-[94vw] max-w-3xl flex-col gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-3xl">
-                  {/* Sample image — banner across the top */}
-                  <div className="relative h-52 shrink-0 overflow-hidden bg-[#0f0b13] md:h-64">
+                <DialogContent
+                  className={
+                    "flex max-h-[90vh] w-[95vw] flex-col gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-[1.75rem] " +
+                    (isCollection ? "max-w-5xl" : "max-w-4xl")
+                  }
+                >
+                  {/* Sample image — banner with the title overlaid at the bottom */}
+                  <div className="relative h-56 shrink-0 overflow-hidden bg-[#0f0b13] md:h-72">
                     <img
                       src={sample.image || "/placeholder.svg"}
                       alt={`Preview of ${sample.title}`}
                       className="h-full w-full object-cover object-top"
                     />
-                    {/* Fade the image bottom into the panel for a seamless blend */}
-                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-card via-card/70 to-transparent" />
-                  </div>
+                    {/* Strong bottom scrim so the overlaid title stays legible */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/85 to-transparent" />
 
-                  {/* Content */}
-                  <div className="flex min-h-0 flex-1 flex-col">
-                    <DialogHeader className="-mt-6 shrink-0 px-8 pb-5 text-left md:px-10">
-                      <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                    <DialogHeader className="absolute inset-x-0 bottom-0 space-y-0 px-8 pb-6 text-left md:px-12">
+                      <span className="inline-flex w-fit items-center rounded-full bg-primary/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/30 backdrop-blur-sm">
                         {level} &middot; {readers}
                       </span>
-                      <DialogTitle className="mt-3 text-3xl font-bold text-white text-balance md:text-4xl">
+                      <DialogTitle className="mt-3 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
                         {sample.title}
                       </DialogTitle>
                       <DialogDescription className="sr-only">{sample.caption}</DialogDescription>
                     </DialogHeader>
-
-                    {isCollection && (
-                      <div className="flex min-h-0 flex-1 flex-col gap-8 overflow-y-auto px-8 pb-8 md:px-10">
-                        <section>
-                          <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
-                            Help center
-                          </h3>
-                          <div className="mt-3 flex flex-col gap-2.5">
-                            {helpCenters.map((hc) => (
-                              <LinkBox key={hc.href} label={hc.label} href={hc.href} />
-                            ))}
-                          </div>
-                        </section>
-
-                        <section>
-                          <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
-                            Technology stories
-                          </h3>
-                          <div className="mt-3 flex flex-col gap-2.5">
-                            {mediaArticles.map((article) => (
-                              <LinkBox key={article.href} label={article.label} href={article.href} />
-                            ))}
-                          </div>
-                        </section>
-                      </div>
-                    )}
                   </div>
+
+                  {/* Body — the link collection (Low only) */}
+                  {isCollection && (
+                    <div className="flex min-h-0 flex-1 flex-col gap-9 overflow-y-auto px-8 py-8 md:px-12">
+                      <section>
+                        <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
+                          Help center
+                        </h3>
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                          {helpCenters.map((hc) => (
+                            <LinkBox key={hc.href} label={hc.label} href={hc.href} />
+                          ))}
+                        </div>
+                      </section>
+
+                      <section>
+                        <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
+                          Technology stories
+                        </h3>
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                          {mediaArticles.map((article) => (
+                            <LinkBox key={article.href} label={article.label} href={article.href} />
+                          ))}
+                        </div>
+                      </section>
+                    </div>
+                  )}
                 </DialogContent>
               </Dialog>
             )
