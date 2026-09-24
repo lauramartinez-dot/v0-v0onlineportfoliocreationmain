@@ -77,7 +77,7 @@ const audiences = [
     level: "Medium",
     readers: "for technical PMs",
     sample: {
-      title: "What is an API, and how do you work with it?",
+      title: "User manuals",
       caption:
         "A plain-language explainer that gets a non-engineer from zero to understanding how two apps talk to each other — no CS degree required.",
       image: "/sample-api-explainer.png",
@@ -185,7 +185,7 @@ export function WritingSamplesSection() {
                 <DialogContent
                   className={
                     "flex max-h-[90vh] w-[95vw] flex-col gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-[1.75rem] " +
-                    (isCollection ? "max-w-5xl" : "max-w-4xl")
+                    (isCollection ? "max-w-6xl sm:max-w-6xl" : "max-w-4xl sm:max-w-4xl")
                   }
                 >
                   {/* Sample image — banner with the title overlaid at the bottom */}
@@ -216,7 +216,7 @@ export function WritingSamplesSection() {
                         <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
                           Help center
                         </h3>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                           {helpCenters.map((hc) => (
                             <LinkBox key={hc.href} label={hc.label} href={hc.href} />
                           ))}
@@ -227,7 +227,7 @@ export function WritingSamplesSection() {
                         <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
                           Technology stories
                         </h3>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                           {mediaArticles.map((article) => (
                             <LinkBox key={article.href} label={article.label} href={article.href} />
                           ))}

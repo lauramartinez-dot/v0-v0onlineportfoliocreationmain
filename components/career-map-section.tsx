@@ -1208,7 +1208,6 @@ export default function CareerMapSection() {
             years="2023 - 2025"
             country="German company"
             countryFlag="🇩🇪"
-            descriptor="Personio is one of Europe's most valuable HR software companies — a unicorn valued at $8.5 billion."
             defaultExpanded={false}
           >
             {/* Achievement Grid */}
