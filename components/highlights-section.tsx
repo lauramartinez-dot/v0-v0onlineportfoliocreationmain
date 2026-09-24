@@ -56,7 +56,7 @@ export function HighlightsSection() {
                     <Plane className="h-6 w-6" />
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
-                    Then · Tech journalist
+                    Tech journalist
                   </span>
                 </div>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
@@ -90,7 +90,7 @@ export function HighlightsSection() {
                     <Code2 className="h-6 w-6" />
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
-                    Now · Technical writer
+                    Technical writer
                   </span>
                 </div>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
