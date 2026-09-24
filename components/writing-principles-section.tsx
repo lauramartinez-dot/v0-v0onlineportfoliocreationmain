@@ -11,7 +11,7 @@ const principles = [
     icon: Users,
     title: "Map the audience",
     description:
-      "I don't start writing until I've researched and understood who I'm really writing for. Do they have a high technical skillset? Medium? Low? That answer shapes every word.",
+      "I don't write a single word until I know who I'm writing for. Are they highly technical? Somewhere in the middle? Complete beginners? Everything I write depends on that answer.",
   },
   {
     icon: Sparkles,
