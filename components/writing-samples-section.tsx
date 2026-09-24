@@ -20,63 +20,40 @@ const helpCenters = [
   },
 ]
 
-// Technology stories written for a general audience, grouped by outlet.
+// Technology stories written for a general audience. One card per article,
+// no outlet labels — the writing speaks for itself.
 const mediaArticles = [
   {
-    outlet: "Business Insider",
-    reach: "Front-page reach on BI USA",
-    articles: [
-      {
-        label: "A day in the life of an online content moderator",
-        url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
-      },
-      {
-        label: "Así es el día a día de quienes revisan los vídeos que reportas en redes sociales",
-        url: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
-      },
-      {
-        label: "Cerveza gratis, lavandería y billar: así se trabaja en las tecnológicas de moda en Dublín",
-        url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
-      },
-    ],
+    label: "A day in the life of an online content moderator",
+    url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
   },
   {
-    outlet: "Xataka",
-    reach: "Spain's leading tech media, +12M monthly users",
-    articles: [
-      {
-        label: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
-        url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
-      },
-    ],
+    label: "Así es el día a día de quienes revisan los vídeos que reportas en redes sociales",
+    url: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
   },
   {
-    outlet: "Muy Interesante",
-    reach: "2nd most-read monthly magazine in Spain",
-    articles: [
-      {
-        label: "Hallan la primera evidencia de la inflación cósmica",
-        url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
-      },
-      {
-        label: "¿Qué nos pasaría si viajáramos a la velocidad de la luz?",
-        url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
-      },
-      {
-        label: "El satélite español Deimos-2 está ya en órbita",
-        url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
-      },
-    ],
+    label: "Cerveza gratis, lavandería y billar: así se trabaja en las tecnológicas de moda en Dublín",
+    url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
   },
   {
-    outlet: "Portaltic — Europa Press",
-    reach: "Spain's leading private news agency",
-    articles: [
-      {
-        label: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
-        url: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
-      },
-    ],
+    label: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
+    url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
+  },
+  {
+    label: "Hallan la primera evidencia de la inflación cósmica",
+    url: "https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
+  },
+  {
+    label: "¿Qué nos pasaría si viajáramos a la velocidad de la luz?",
+    url: "https://www.muyinteresante.es/ciencia/articulo/que-nos-pasaria-si-viajaramos-a-la-velocidad-de-la-luz-131395147000",
+  },
+  {
+    label: "El satélite español Deimos-2 está ya en órbita",
+    url: "https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
+  },
+  {
+    label: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
+    url: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
   },
 ]
 
@@ -188,90 +165,88 @@ export function WritingSamplesSection() {
                   </button>
                 </DialogTrigger>
 
-                <DialogContent className="max-w-5xl overflow-hidden border-[#472444] bg-card p-0">
-                  <div className="max-h-[88vh] overflow-y-auto">
-                    {isCollection ? (
-                      <div className="p-6 md:p-8">
-                        <DialogHeader className="space-y-3 text-left">
-                          <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                            Tech knowledge: {level} &middot; {readers}
-                          </span>
-                          <DialogTitle className="text-2xl font-bold text-white text-balance">
-                            {sample.title}
-                          </DialogTitle>
-                          <DialogDescription className="text-base leading-relaxed text-white/65 text-pretty">
-                            {sample.caption}
-                          </DialogDescription>
-                        </DialogHeader>
+                <DialogContent
+                  className={
+                    isCollection
+                      ? "flex h-[95vh] w-[96vw] max-w-[96rem] flex-col overflow-hidden border-[#472444] bg-card p-0 sm:max-w-[96rem] sm:rounded-3xl"
+                      : "max-w-5xl overflow-hidden border-[#472444] bg-card p-0"
+                  }
+                >
+                  {isCollection ? (
+                    <>
+                      {/* Fixed header */}
+                      <DialogHeader className="shrink-0 space-y-3 border-b border-[#472444] px-8 pb-7 pt-8 text-left md:px-12">
+                        <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                          Tech knowledge: {level} &middot; {readers}
+                        </span>
+                        <DialogTitle className="text-3xl font-bold text-white text-balance md:text-4xl">
+                          {sample.title}
+                        </DialogTitle>
+                        <DialogDescription className="max-w-3xl text-base leading-relaxed text-white/65 text-pretty">
+                          {sample.caption}
+                        </DialogDescription>
+                      </DialogHeader>
 
+                      {/* Scrollable body */}
+                      <div className="flex-1 overflow-y-auto px-8 py-8 md:px-12 md:py-10">
                         {/* Help centers */}
-                        <div className="mt-8">
+                        <div>
                           <div className="flex items-center gap-2.5">
                             <LifeBuoy className="h-5 w-5 text-primary" />
                             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
                               Help center
                             </h3>
                           </div>
-                          <div className="mt-4 grid gap-3">
+                          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                             {helpCenters.map((hc) => (
                               <a
                                 key={hc.name}
                                 href={hc.href}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group flex items-start justify-between gap-4 rounded-2xl border border-[#472444] bg-background/60 p-5 transition-colors hover:border-primary/60 hover:bg-primary/5"
+                                className="group flex flex-col rounded-2xl border border-[#472444] bg-background/60 p-6 transition-all hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/5"
                               >
-                                <div>
-                                  <p className="font-semibold text-white">{hc.name}</p>
-                                  <p className="mt-1 text-sm leading-relaxed text-white/60 text-pretty">{hc.blurb}</p>
+                                <div className="flex items-start justify-between gap-3">
+                                  <p className="text-lg font-semibold text-white">{hc.name}</p>
+                                  <ExternalLink className="mt-1 h-4 w-4 shrink-0 text-white/40 transition-colors group-hover:text-primary" />
                                 </div>
-                                <ExternalLink className="mt-1 h-4 w-4 shrink-0 text-white/40 transition-colors group-hover:text-primary" />
+                                <p className="mt-2 text-sm leading-relaxed text-white/60 text-pretty">{hc.blurb}</p>
                               </a>
                             ))}
                           </div>
                         </div>
 
-                        {/* Media stories */}
-                        <div className="mt-10">
+                        {/* Media stories - one card per article */}
+                        <div className="mt-12">
                           <div className="flex items-center gap-2.5">
                             <Newspaper className="h-5 w-5 text-primary" />
                             <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
-                              Technology stories in media
+                              Technology stories
                             </h3>
                           </div>
-                          <div className="mt-4 grid gap-5">
-                            {mediaArticles.map((outlet) => (
-                              <div
-                                key={outlet.outlet}
-                                className="rounded-2xl border border-[#472444] bg-background/60 p-5"
+                          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                            {mediaArticles.map((article) => (
+                              <a
+                                key={article.url}
+                                href={article.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group flex flex-col justify-between rounded-2xl border border-[#472444] bg-background/60 p-6 transition-all hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/5"
                               >
-                                <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
-                                  <p className="font-semibold text-white">{outlet.outlet}</p>
-                                  <p className="text-xs font-medium uppercase tracking-wider text-white/40">
-                                    {outlet.reach}
-                                  </p>
-                                </div>
-                                <ul className="mt-3 grid gap-2">
-                                  {outlet.articles.map((article) => (
-                                    <li key={article.label}>
-                                      <a
-                                        href={article.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="group flex items-start gap-2 text-sm leading-relaxed text-white/70 transition-colors hover:text-primary"
-                                      >
-                                        <ExternalLink className="mt-0.5 h-3.5 w-3.5 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
-                                        <span className="text-pretty">{article.label}</span>
-                                      </a>
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
+                                <p className="text-base font-medium leading-relaxed text-white/85 text-pretty group-hover:text-white">
+                                  {article.label}
+                                </p>
+                                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
+                                  Read article
+                                  <ExternalLink className="h-4 w-4" />
+                                </span>
+                              </a>
                             ))}
                           </div>
                         </div>
                       </div>
-                    ) : (
+                    </>
+                  ) : (
                       <>
                         {/* The actual sample */}
                         <div className="border-b border-[#472444] bg-background">
@@ -306,7 +281,6 @@ export function WritingSamplesSection() {
                         </DialogHeader>
                       </>
                     )}
-                  </div>
                 </DialogContent>
               </Dialog>
             )
