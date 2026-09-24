@@ -153,33 +153,33 @@ export function HighlightsSection() {
                 </p>
 
                 {/* Countries & languages */}
-                <div className="mt-10 flex flex-col gap-8">
-                  <div>
+                <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                       Countries lived in
                     </span>
-                    <div className="mt-4 flex flex-wrap items-center gap-3">
+                    <div className="mt-5 flex flex-wrap items-center gap-3">
                       {countries.map((country) => (
                         <img
                           key={country.name}
                           src={`https://flagcdn.com/w80/${country.code}.png`}
                           srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
-                          width={44}
-                          height={33}
+                          width={40}
+                          height={30}
                           loading="lazy"
                           alt={`${country.name} flag`}
                           title={country.name}
-                          className="h-[33px] w-11 rounded-[4px] object-cover ring-1 ring-white/15"
+                          className="h-[30px] w-10 rounded-[4px] object-cover ring-1 ring-white/15"
                         />
                       ))}
                     </div>
                   </div>
 
-                  <div>
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</span>
-                    <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
+                    <div className="mt-5 flex flex-col gap-2">
                       {languages.map((language) => (
-                        <span key={language.name} className="text-base font-medium text-white/90">
+                        <span key={language.name} className="text-[0.95rem] font-medium text-white/90">
                           {language.name}
                         </span>
                       ))}

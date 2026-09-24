@@ -20,16 +20,16 @@ const principles = [
       "I spend most of my working day talking to AI chatbots. I know how to use AI. But just as importantly, I know WHEN NOT TO USE IT. You won't catch any AI slop or \u201CI work at the intersection of\u2026\u201D here.",
   },
   {
+    icon: LineChart,
+    title: "Data-minded",
+    description:
+      "I make sure I have a direct feedback line with the end user. I want to make content decisions on data, not assumptions \u2014 to know whether what I write is genuinely useful.",
+  },
+  {
     icon: Eye,
     title: "Transparency",
     description:
       "I document what I'm doing as I do it, so anyone can follow my reasoning \u2014 and pick up where I left off if they need to.",
-  },
-  {
-    icon: LineChart,
-    title: "I listen to end users",
-    description:
-      "I base content decisions on data, not assumptions. I want to know whether what I write is genuinely useful.",
   },
   {
     icon: Flag,
