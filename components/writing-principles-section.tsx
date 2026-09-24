@@ -9,7 +9,7 @@ const principles = [
   },
   {
     icon: Users,
-    title: "Audience research",
+    title: "Who is the end-user?",
     description:
       "I don't write a single word until I know who I'm writing for. Are they highly technical? Somewhere in the middle? Complete beginners? Everything I write depends on that answer.",
   },
@@ -17,11 +17,11 @@ const principles = [
     icon: Sparkles,
     title: "AI, but not always",
     description:
-      "I spend most of my working day talking to AI chatbots. I know how to use AI. But just as importantly, I know WHEN NOT TO USE IT. You won't catch any AI slop or \u201CI work at the intersection of\u2026\u201D here.",
+      "I use AI every day, and I'm good at it. But knowing when not to use it matters just as much. You won't find AI slop or \u201CI work at the intersection of\u2026\u201D here.",
   },
   {
     icon: LineChart,
-    title: "Data-minded",
+    title: "Data over gut feeling",
     description:
       "I don't assume my docs are helpful. I want to hear it from the people using them and see it in the data, and let that shape what I write next.",
   },
