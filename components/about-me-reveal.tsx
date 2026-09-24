@@ -1,4 +1,34 @@
+"use client"
+
+import { useEffect, useRef, useState } from "react"
+
 export function AboutMeReveal() {
+  const [revealed, setRevealed] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const el = ref.current
+    if (!el) return
+
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+    if (prefersReduced) {
+      setRevealed(true)
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setRevealed(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.4 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="flex min-h-screen items-center px-4 py-32">
       <div className="mx-auto w-full max-w-7xl px-4">
@@ -17,15 +47,28 @@ export function AboutMeReveal() {
             </span>
           </p>
 
-          <p className="mt-10 text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
-            I still write about technology.{" "}
-            <span className="font-bold text-white">Engineering. Software.</span>
-          </p>
+          {/* Second block reveals as it scrolls into view */}
+          <div
+            ref={ref}
+            className={`transition-all duration-700 ease-out ${
+              revealed ? "translate-y-0 opacity-100 blur-0" : "translate-y-6 opacity-0 blur-sm"
+            }`}
+          >
+            <p className="mt-10 text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
+              I still write about technology.{" "}
+              <span className="font-bold text-white">Engineering. Software.</span>
+            </p>
 
-          <p className="mt-6 text-lg font-medium leading-relaxed text-white/75 text-pretty md:text-xl">
-            In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS degree to
-            follow along.
-          </p>
+            <p
+              className={`mt-6 text-lg font-medium leading-relaxed text-white/75 text-pretty transition-all duration-700 ease-out md:text-xl ${
+                revealed ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+              }`}
+              style={{ transitionDelay: revealed ? "150ms" : "0ms" }}
+            >
+              In plain words, while keeping it accurate — and clear enough that you don&apos;t need a PhD or a CS degree
+              to follow along.
+            </p>
+          </div>
         </div>
       </div>
     </div>
