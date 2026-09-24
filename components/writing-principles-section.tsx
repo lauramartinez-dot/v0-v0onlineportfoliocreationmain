@@ -5,7 +5,7 @@ const principles = [
     icon: Minus,
     title: "Less is more",
     description:
-      "My job is often to take information away, not add it. Cognitive overload is real \u2014 and in 2026, it's everywhere.",
+      "I see my job as a technical writer as subtracting, not adding \u2014 taking information away until only what matters is left. I write as if every extra sentence cost me 50 euros.",
   },
   {
     icon: Sparkles,
