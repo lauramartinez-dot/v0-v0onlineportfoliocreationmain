@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2, ExternalLink, LifeBuoy, Newspaper } from "lucide-react"
+import { Maximize2, ExternalLink } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -14,52 +14,48 @@ import {
 // Personio articles written for everyday employees.
 const helpCenters = [
   {
-    name: "Overview of permissions and employee roles",
-    blurb: "Explains, in plain language, what employees can see and do in Personio based on their role.",
+    label: "Overview of permissions and employee roles",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
   {
-    name: "Summary of the homepage cards",
-    blurb: "A friendly walkthrough of the employee homepage so new users know where everything lives.",
+    label: "Summary of the homepage cards",
     href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
   },
   {
-    name: "Grant permissions for everyday tasks",
-    blurb: "Step-by-step guidance for handling the day-to-day permissions employees run into.",
+    label: "Grant permissions for everyday tasks",
     href: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
   },
 ]
 
-// Technology stories written for a general audience. One card per article,
-// no outlet labels — the writing speaks for itself.
+// Technology stories written for a general audience.
 const mediaArticles = [
   {
     label: "A day in the life of an online content moderator",
-    url: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
+    href: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
   },
   {
     label: "Así es el día a día de quienes revisan los vídeos que reportas en redes sociales",
-    url: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
+    href: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
   },
   {
     label: "Cerveza gratis, lavandería y billar: así se trabaja en las tecnológicas de moda en Dublín",
-    url: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
+    href: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
   },
   {
     label: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
-    url: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
+    href: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
   },
   {
     label: "Hallan la primera evidencia de la inflación cósmica",
-    url: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
+    href: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
   },
   {
     label: "El satélite español Deimos-2 está ya en órbita",
-    url: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
+    href: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
   },
   {
     label: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
-    url: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
+    href: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
   },
 ]
 
@@ -91,7 +87,7 @@ const audiences = [
   {
     level: "Low",
     readers: "for everyday users",
-    // The Low dialog is expanded: help center examples first, media stories below.
+    // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
     sample: {
       title: "Help center & technology stories",
@@ -102,6 +98,21 @@ const audiences = [
     },
   },
 ]
+
+// A minimal, text-only row that links out to a real published piece.
+function LinkBox({ label, href }: { label: string; href: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-4 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+    >
+      <span className="text-sm font-medium leading-snug text-white/80 text-pretty group-hover:text-white">{label}</span>
+      <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
+    </a>
+  )
+}
 
 export function WritingSamplesSection() {
   return (
@@ -173,120 +184,63 @@ export function WritingSamplesSection() {
 
                 <DialogContent
                   className={
-                    isCollection
-                      ? "flex h-[95vh] w-[96vw] max-w-[96rem] flex-col overflow-hidden border-[#472444] bg-card p-0 sm:max-w-[96rem] sm:rounded-3xl"
-                      : "max-w-5xl overflow-hidden border-[#472444] bg-card p-0"
+                    "grid w-[94vw] gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-3xl md:grid-cols-2 " +
+                    (isCollection ? "h-[86vh] max-w-6xl" : "h-[68vh] max-w-5xl")
                   }
                 >
-                  {isCollection ? (
-                    <>
-                      {/* Fixed header */}
-                      <DialogHeader className="shrink-0 space-y-3 border-b border-[#472444] px-8 pb-7 pt-8 text-left md:px-12">
-                        <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                          Tech knowledge: {level} &middot; {readers}
-                        </span>
-                        <DialogTitle className="text-3xl font-bold text-white text-balance md:text-4xl">
-                          {sample.title}
-                        </DialogTitle>
-                        <DialogDescription className="max-w-3xl text-base leading-relaxed text-white/65 text-pretty">
-                          {sample.caption}
-                        </DialogDescription>
-                      </DialogHeader>
+                  {/* Sample image — right side on desktop, top on mobile */}
+                  <div className="relative order-1 h-48 overflow-hidden bg-[#0f0b13] md:order-2 md:h-full">
+                    <img
+                      src={sample.image || "/placeholder.svg"}
+                      alt={`Preview of ${sample.title}`}
+                      className="h-full w-full object-cover object-top"
+                    />
+                    {/* Subtle edge fade that blends the image into the panel */}
+                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card/50 to-transparent md:bg-gradient-to-l md:from-transparent md:to-card/40" />
+                  </div>
 
-                      {/* Scrollable body */}
-                      <div className="flex-1 overflow-y-auto px-8 py-8 md:px-12 md:py-10">
-                        {/* Help centers */}
-                        <div>
-                          <div className="flex items-center gap-2.5">
-                            <LifeBuoy className="h-5 w-5 text-primary" />
-                            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
-                              Help center
-                            </h3>
-                          </div>
-                          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {/* Content — left side */}
+                  <div
+                    className={
+                      "order-2 flex min-h-0 flex-col md:order-1 " + (isCollection ? "" : "justify-center")
+                    }
+                  >
+                    <DialogHeader className="shrink-0 px-8 pt-8 pb-5 text-left md:px-10">
+                      <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
+                        {level} &middot; {readers}
+                      </span>
+                      <DialogTitle className="mt-3 text-3xl font-bold text-white text-balance md:text-4xl">
+                        {sample.title}
+                      </DialogTitle>
+                      <DialogDescription className="sr-only">{sample.caption}</DialogDescription>
+                    </DialogHeader>
+
+                    {isCollection && (
+                      <div className="flex min-h-0 flex-1 flex-col gap-8 overflow-y-auto px-8 pb-8 md:px-10">
+                        <section>
+                          <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+                            Help center
+                          </h3>
+                          <div className="mt-3 flex flex-col gap-2.5">
                             {helpCenters.map((hc) => (
-                              <a
-                                key={hc.name}
-                                href={hc.href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex flex-col rounded-2xl border border-[#472444] bg-background/60 p-6 transition-all hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/5"
-                              >
-                                <div className="flex items-start justify-between gap-3">
-                                  <p className="text-lg font-semibold text-white">{hc.name}</p>
-                                  <ExternalLink className="mt-1 h-4 w-4 shrink-0 text-white/40 transition-colors group-hover:text-primary" />
-                                </div>
-                                <p className="mt-2 text-sm leading-relaxed text-white/60 text-pretty">{hc.blurb}</p>
-                              </a>
+                              <LinkBox key={hc.href} label={hc.label} href={hc.href} />
                             ))}
                           </div>
-                        </div>
+                        </section>
 
-                        {/* Media stories - one card per article */}
-                        <div className="mt-12">
-                          <div className="flex items-center gap-2.5">
-                            <Newspaper className="h-5 w-5 text-primary" />
-                            <h3 className="text-sm font-semibold uppercase tracking-[0.16em] text-white/80">
-                              Technology stories
-                            </h3>
-                          </div>
-                          <div className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                        <section>
+                          <h3 className="text-xs font-semibold uppercase tracking-[0.18em] text-white/45">
+                            Technology stories
+                          </h3>
+                          <div className="mt-3 flex flex-col gap-2.5">
                             {mediaArticles.map((article) => (
-                              <a
-                                key={article.url}
-                                href={article.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="group flex flex-col justify-between rounded-2xl border border-[#472444] bg-background/60 p-6 transition-all hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/5"
-                              >
-                                <p className="text-base font-medium leading-relaxed text-white/85 text-pretty group-hover:text-white">
-                                  {article.label}
-                                </p>
-                                <span className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">
-                                  Read article
-                                  <ExternalLink className="h-4 w-4" />
-                                </span>
-                              </a>
+                              <LinkBox key={article.href} label={article.label} href={article.href} />
                             ))}
                           </div>
-                        </div>
+                        </section>
                       </div>
-                    </>
-                  ) : (
-                      <>
-                        {/* The actual sample */}
-                        <div className="border-b border-[#472444] bg-background">
-                          <img
-                            src={sample.image || "/placeholder.svg"}
-                            alt={`Full preview of ${sample.title}`}
-                            className="w-full"
-                          />
-                        </div>
-
-                        <DialogHeader className="space-y-3 p-6 text-left md:p-8">
-                          <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-primary">
-                            Tech knowledge: {level} &middot; {readers}
-                          </span>
-                          <DialogTitle className="text-2xl font-bold text-white text-balance">
-                            {sample.title}
-                          </DialogTitle>
-                          <DialogDescription className="text-base leading-relaxed text-white/65 text-pretty">
-                            {sample.caption}
-                          </DialogDescription>
-                          {sample.href && sample.href !== "#" && (
-                            <a
-                              href={sample.href}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="mt-2 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
-                            >
-                              View live example
-                              <ExternalLink className="h-4 w-4" />
-                            </a>
-                          )}
-                        </DialogHeader>
-                      </>
                     )}
+                  </div>
                 </DialogContent>
               </Dialog>
             )
