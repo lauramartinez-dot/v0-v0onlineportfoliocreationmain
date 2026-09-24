@@ -2,6 +2,18 @@ import Image from "next/image"
 import { Plane, Code2, Languages, ArrowUpRight } from "lucide-react"
 import { AboutMeReveal } from "@/components/about-me-reveal"
 
+const countries = [
+  { name: "Spain", code: "es" },
+  { name: "France", code: "fr" },
+  { name: "Ireland", code: "ie" },
+  { name: "Germany", code: "de" },
+]
+
+const languages = [
+  { name: "Spanish", code: "es", level: "Native" },
+  { name: "English", code: "gb", level: "Fluent" },
+  { name: "German", code: "de", level: "Fluent" },
+]
 
 export function HighlightsSection() {
   return (
@@ -143,42 +155,64 @@ export function HighlightsSection() {
                 {/* Countries & languages */}
                 <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
                   <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                    <div className="flex items-baseline gap-3">
-                      <span className="text-4xl font-extrabold text-primary md:text-5xl">4</span>
-                      <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
-                        Countries
+                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+                        Countries lived in
                       </span>
+                      <span className="text-2xl font-extrabold leading-none text-primary">4</span>
                     </div>
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {["Spain", "France", "Ireland", "Germany"].map((country) => (
-                        <span
-                          key={country}
-                          className="rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-sm font-medium text-white/85"
+                    <ul className="mt-4 flex flex-col gap-1">
+                      {countries.map((country) => (
+                        <li
+                          key={country.name}
+                          className="flex items-center gap-3 rounded-lg px-1 py-2 transition-colors hover:bg-white/[0.04]"
                         >
-                          {country}
-                        </span>
+                          <img
+                            src={`https://flagcdn.com/w40/${country.code}.png`}
+                            srcSet={`https://flagcdn.com/w80/${country.code}.png 2x`}
+                            width={26}
+                            height={20}
+                            loading="lazy"
+                            alt={`${country.name} flag`}
+                            className="h-5 w-[26px] shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
+                          />
+                          <span className="text-[0.95rem] font-medium text-white/90">{country.name}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
 
                   <div className="rounded-2xl border border-white/10 bg-white/[0.04] p-6">
-                    <div className="flex items-baseline gap-3">
-                      <Languages className="h-7 w-7 shrink-0 self-center text-primary" />
-                      <span className="text-4xl font-extrabold text-primary md:text-5xl">3</span>
-                      <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+                        <Languages className="h-4 w-4 text-primary" />
                         Languages
                       </span>
+                      <span className="text-2xl font-extrabold leading-none text-primary">3</span>
                     </div>
-                    <div className="mt-5 flex flex-wrap gap-2">
-                      {["Spanish", "English", "German"].map((language) => (
-                        <span
-                          key={language}
-                          className="rounded-full border border-white/10 bg-white/[0.04] px-3.5 py-1.5 text-sm font-medium text-white/85"
+                    <ul className="mt-4 flex flex-col gap-1">
+                      {languages.map((language) => (
+                        <li
+                          key={language.name}
+                          className="flex items-center gap-3 rounded-lg px-1 py-2 transition-colors hover:bg-white/[0.04]"
                         >
-                          {language}
-                        </span>
+                          <img
+                            src={`https://flagcdn.com/w40/${language.code}.png`}
+                            srcSet={`https://flagcdn.com/w80/${language.code}.png 2x`}
+                            width={26}
+                            height={20}
+                            loading="lazy"
+                            alt=""
+                            aria-hidden="true"
+                            className="h-5 w-[26px] shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
+                          />
+                          <span className="flex-1 text-[0.95rem] font-medium text-white/90">{language.name}</span>
+                          <span className="text-xs font-medium uppercase tracking-wider text-white/40">
+                            {language.level}
+                          </span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
               </div>
