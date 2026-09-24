@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Plane, Code2, Languages, ArrowUpRight } from "lucide-react"
+import { Plane, Code2, ArrowUpRight } from "lucide-react"
 import { AboutMeReveal } from "@/components/about-me-reveal"
 
 const countries = [
@@ -153,66 +153,37 @@ export function HighlightsSection() {
                 </p>
 
                 {/* Countries & languages */}
-                <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
-                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
-                        Countries lived in
-                      </span>
-                      <span className="text-2xl font-extrabold leading-none text-primary">4</span>
-                    </div>
-                    <ul className="mt-2 flex flex-col">
+                <div className="mt-10 flex flex-col gap-8">
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
+                      Countries lived in
+                    </span>
+                    <div className="mt-4 flex flex-wrap items-center gap-3">
                       {countries.map((country) => (
-                        <li
+                        <img
                           key={country.name}
-                          className="flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-white/[0.05]"
-                        >
-                          <img
-                            src={`https://flagcdn.com/w40/${country.code}.png`}
-                            srcSet={`https://flagcdn.com/w80/${country.code}.png 2x`}
-                            width={28}
-                            height={21}
-                            loading="lazy"
-                            alt={`${country.name} flag`}
-                            className="h-[21px] w-7 shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
-                          />
-                          <span className="text-[0.95rem] font-medium text-white/90">{country.name}</span>
-                        </li>
+                          src={`https://flagcdn.com/w80/${country.code}.png`}
+                          srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
+                          width={44}
+                          height={33}
+                          loading="lazy"
+                          alt={`${country.name} flag`}
+                          title={country.name}
+                          className="h-[33px] w-11 rounded-[4px] object-cover ring-1 ring-white/15"
+                        />
                       ))}
-                    </ul>
+                    </div>
                   </div>
 
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
-                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
-                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
-                        <Languages className="h-4 w-4 text-primary" />
-                        Languages
-                      </span>
-                      <span className="text-2xl font-extrabold leading-none text-primary">3</span>
-                    </div>
-                    <ul className="mt-2 flex flex-col">
+                  <div>
+                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</span>
+                    <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2">
                       {languages.map((language) => (
-                        <li
-                          key={language.name}
-                          className="flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-white/[0.05]"
-                        >
-                          <img
-                            src={`https://flagcdn.com/w40/${language.code}.png`}
-                            srcSet={`https://flagcdn.com/w80/${language.code}.png 2x`}
-                            width={28}
-                            height={21}
-                            loading="lazy"
-                            alt=""
-                            aria-hidden="true"
-                            className="h-[21px] w-7 shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
-                          />
-                          <span className="flex-1 text-[0.95rem] font-medium text-white/90">{language.name}</span>
-                          <span className="rounded-full bg-primary/15 px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-primary">
-                            {language.level}
-                          </span>
-                        </li>
+                        <span key={language.name} className="text-base font-medium text-white/90">
+                          {language.name}
+                        </span>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 </div>
               </div>
