@@ -154,9 +154,9 @@ export function HighlightsSection() {
 
                 {/* Countries & languages */}
                 <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl bg-white p-6 shadow-xl shadow-black/25 ring-1 ring-black/5">
-                    <div className="flex items-center justify-between border-b border-black/10 pb-4">
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                         Countries lived in
                       </span>
                       <span className="text-2xl font-extrabold leading-none text-primary">4</span>
@@ -165,7 +165,7 @@ export function HighlightsSection() {
                       {countries.map((country) => (
                         <li
                           key={country.name}
-                          className="flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-black/[0.04]"
+                          className="flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-white/[0.05]"
                         >
                           <img
                             src={`https://flagcdn.com/w40/${country.code}.png`}
@@ -174,17 +174,17 @@ export function HighlightsSection() {
                             height={21}
                             loading="lazy"
                             alt={`${country.name} flag`}
-                            className="h-[21px] w-7 shrink-0 rounded-[3px] object-cover shadow-sm ring-1 ring-black/10"
+                            className="h-[21px] w-7 shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
                           />
-                          <span className="text-[0.95rem] font-semibold text-zinc-800">{country.name}</span>
+                          <span className="text-[0.95rem] font-medium text-white/90">{country.name}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="rounded-2xl bg-white p-6 shadow-xl shadow-black/25 ring-1 ring-black/5">
-                    <div className="flex items-center justify-between border-b border-black/10 pb-4">
-                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                  <div className="rounded-2xl border border-white/10 bg-white/[0.05] p-6 backdrop-blur-sm">
+                    <div className="flex items-center justify-between border-b border-white/10 pb-4">
+                      <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                         <Languages className="h-4 w-4 text-primary" />
                         Languages
                       </span>
@@ -194,7 +194,7 @@ export function HighlightsSection() {
                       {languages.map((language) => (
                         <li
                           key={language.name}
-                          className="flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-black/[0.04]"
+                          className="flex items-center gap-3 rounded-lg px-2 py-2.5 transition-colors hover:bg-white/[0.05]"
                         >
                           <img
                             src={`https://flagcdn.com/w40/${language.code}.png`}
@@ -204,10 +204,10 @@ export function HighlightsSection() {
                             loading="lazy"
                             alt=""
                             aria-hidden="true"
-                            className="h-[21px] w-7 shrink-0 rounded-[3px] object-cover shadow-sm ring-1 ring-black/10"
+                            className="h-[21px] w-7 shrink-0 rounded-[3px] object-cover ring-1 ring-white/15"
                           />
-                          <span className="flex-1 text-[0.95rem] font-semibold text-zinc-800">{language.name}</span>
-                          <span className="rounded-full bg-primary/10 px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-primary">
+                          <span className="flex-1 text-[0.95rem] font-medium text-white/90">{language.name}</span>
+                          <span className="rounded-full bg-primary/15 px-2.5 py-1 text-[0.7rem] font-semibold uppercase tracking-wider text-primary">
                             {language.level}
                           </span>
                         </li>
