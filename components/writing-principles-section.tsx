@@ -11,7 +11,7 @@ const principles = [
     icon: Sparkles,
     title: "AI, but not always",
     description:
-      "I spend most of my working day talking to AI chatbots. I know how to use AI \u2014 but just as importantly, I know when not to trust it, and when not to use it.",
+      "I spend most of my working day talking to AI chatbots. I know how to use AI. But just as importantly, I know when NOT TO TRUST IT and NOT TO USE IT. You won't catch any AI slop or \u201CI work at the intersection of\u2026\u201D here.",
   },
   {
     icon: Eye,
