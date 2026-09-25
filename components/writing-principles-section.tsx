@@ -56,18 +56,18 @@ export function WritingPrinciplesSection() {
           {principles.map(({ icon: Icon, title, description }) => (
             <li
               key={title}
-              className="group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl bg-[#f6f4f0] p-10 shadow-[0_24px_60px_-24px_rgba(0,0,0,0.55)] ring-1 ring-black/5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_36px_80px_-28px_rgba(217,42,205,0.4)]"
+              className="group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
-              {/* Icon badge - solid primary chip so it pops on the light surface */}
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary text-primary-foreground shadow-sm">
+              {/* Icon badge - subtle primary-tinted chip, consistent across every card */}
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
                 <Icon className="h-7 w-7" />
               </span>
 
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight text-[#1a1420] text-balance">
+              <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
                 {title}
               </h3>
 
-              <p className="text-base md:text-[17px] leading-relaxed text-[#4a4450] text-pretty">
+              <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
                 {description}
               </p>
             </li>

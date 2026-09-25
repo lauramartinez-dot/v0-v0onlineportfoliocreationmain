@@ -135,10 +135,8 @@ export function WritingSamplesSection() {
                 <DialogTrigger asChild>
                   <button
                     type="button"
-                    className="group relative flex aspect-[3/4.4] w-full flex-col overflow-hidden rounded-[1.75rem] text-left shadow-[0_24px_70px_-28px_rgba(0,0,0,0.7)] ring-1 ring-white/10 transition-all duration-500 hover:-translate-y-2 hover:ring-primary/50 hover:shadow-[0_50px_110px_-40px_rgba(217,42,205,0.6)]"
+                    className="group relative flex aspect-[3/4.4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
                   >
-                    {/* Gradient frame backdrop - gives the whole card depth */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#2a1a2e] via-[#1c1420] to-[#0f0b13]" />
 
                     {/* Image fills most of the card */}
                     <div className="relative flex-1 overflow-hidden">
@@ -149,7 +147,7 @@ export function WritingSamplesSection() {
                       />
 
                       {/* Scrim that fades the image bottom into the footer for a seamless blend */}
-                      <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#160f1a] via-[#160f1a]/70 to-transparent" />
+                      <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-background via-background/70 to-transparent" />
                       {/* Primary glaze that warms up on hover */}
                       <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
