@@ -135,7 +135,7 @@ export function WritingSamplesSection() {
                 <DialogTrigger asChild>
                   <button
                     type="button"
-                    className="group relative flex aspect-[3/4.4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+                    className="surface-card group relative flex aspect-[3/4.4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
                   >
 
                     {/* Image fills most of the card */}

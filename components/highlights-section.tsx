@@ -32,7 +32,7 @@ export function HighlightsSection() {
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+              className="surface-card group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
@@ -67,7 +67,7 @@ export function HighlightsSection() {
             </a>
 
             {/* Now */}
-            <div className="relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
+            <div className="surface-card relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
                   src="/now-tech-docs.png"
@@ -130,7 +130,7 @@ export function HighlightsSection() {
       {/* 4. Global - globetrotter, on the plain section background */}
       <section className="relative px-4 py-32">
         <div className="relative mx-auto max-w-7xl">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
+          <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
             <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
               <div className="flex flex-col">
                 <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">

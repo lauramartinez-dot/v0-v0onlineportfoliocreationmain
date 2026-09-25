@@ -207,3 +207,16 @@
     opacity: 1;
   }
 }
+
+/* Unified elevation for top-level content cards across every section */
+.surface-card {
+  box-shadow:
+    0 24px 50px -28px rgba(0, 0, 0, 0.9),
+    0 8px 20px -12px rgba(0, 0, 0, 0.55);
+}
+
+.surface-card:hover {
+  box-shadow:
+    0 34px 64px -28px rgba(0, 0, 0, 0.95),
+    0 12px 26px -12px rgba(0, 0, 0, 0.6);
+}

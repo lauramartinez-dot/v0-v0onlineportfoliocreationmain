@@ -1087,7 +1087,7 @@ function CompanyCard({
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
-    <div className="rounded-3xl border border-white/10 bg-white/[0.03] mb-8 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
+    <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] mb-8 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
         className="p-8 md:p-10 cursor-pointer group"
