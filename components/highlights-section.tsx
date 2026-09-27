@@ -154,20 +154,18 @@ export function HighlightsSection() {
                       {countries.map((country) => (
                         <li
                           key={country.name}
-                          className="surface-card flex flex-col items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
+                          className="surface-card flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
                         >
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
-                            <img
-                              src={`https://flagcdn.com/w80/${country.code}.png`}
-                              srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
-                              width={20}
-                              height={20}
-                              loading="lazy"
-                              alt=""
-                              className="h-5 w-5 rounded-full object-cover opacity-85"
-                            />
-                          </span>
-                          <span className="text-base font-semibold text-white">{country.name}</span>
+                          <img
+                            src={`https://flagcdn.com/w80/${country.code}.png`}
+                            srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
+                            width={36}
+                            height={36}
+                            loading="lazy"
+                            alt={country.name}
+                            title={country.name}
+                            className="h-9 w-9 rounded-full object-cover opacity-90 ring-1 ring-white/15"
+                          />
                         </li>
                       ))}
                     </ul>
@@ -179,11 +177,8 @@ export function HighlightsSection() {
                       {languages.map((language) => (
                         <li
                           key={language.name}
-                          className="surface-card flex flex-col items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
+                          className="surface-card flex flex-col items-start rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
                         >
-                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-xs font-bold uppercase tracking-wider text-primary ring-1 ring-primary/20">
-                            {language.code === "gb" ? "EN" : language.code}
-                          </span>
                           <div className="flex flex-col gap-1">
                             <span className="text-base font-semibold text-white">{language.name}</span>
                             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-white/45">
