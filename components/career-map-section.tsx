@@ -1272,8 +1272,8 @@ export default function CareerMapSection() {
             ]}
           >
             {/* Tools */}
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
+            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {[
                   "Docs-as-code",
@@ -1289,7 +1289,7 @@ export default function CareerMapSection() {
                 ].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
+                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
                   >
                     {tool}
                   </span>
@@ -1319,8 +1319,8 @@ export default function CareerMapSection() {
             skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
           >
             {/* Top achievements */}
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
+            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
               <ul className="flex flex-col gap-2.5">
@@ -1332,20 +1332,20 @@ export default function CareerMapSection() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span className="text-[15px] leading-relaxed text-foreground/85">{item}</span>
+                    <span className="text-[15px] font-medium leading-relaxed text-background">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Tools */}
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
+            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
+                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
                   >
                     {tool}
                   </span>
@@ -1374,8 +1374,8 @@ export default function CareerMapSection() {
             skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
           >
             {/* Top achievements */}
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
+            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
               <ul className="flex flex-col gap-2.5">
@@ -1387,20 +1387,20 @@ export default function CareerMapSection() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span className="text-[15px] leading-relaxed text-foreground/85">{item}</span>
+                    <span className="text-[15px] font-medium leading-relaxed text-background">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Tools */}
-            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
-              <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
+            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/20 bg-primary/10 px-3 py-1 text-[13px] font-medium text-primary/90"
+                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
                   >
                     {tool}
                   </span>
