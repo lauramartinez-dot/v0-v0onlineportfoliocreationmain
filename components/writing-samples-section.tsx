@@ -128,8 +128,9 @@ export function WritingSamplesSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-stretch">
-          {audiences.map(({ level, readers, sample, ...rest }) => {
+          {audiences.map(({ level, readers, sample, ...rest }, index) => {
             const isCollection = "variant" in rest && rest.variant === "collection"
+            const filledBars = audiences.length - index
             return (
               <Dialog key={level}>
                 <DialogTrigger asChild>
@@ -143,34 +144,49 @@ export function WritingSamplesSection() {
                       <img
                         src={sample.image || "/placeholder.svg"}
                         alt={`Preview of ${sample.title}`}
-                        className="absolute inset-0 h-full w-full object-cover object-top opacity-45 grayscale transition-all duration-700 ease-out group-hover:scale-[1.06] group-hover:opacity-60"
+                        className="absolute inset-0 h-full w-full object-cover object-top opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:opacity-100"
                       />
 
-                      {/* Purple tint pushes the preview into the background */}
-                      <div className="absolute inset-0 bg-primary/35 mix-blend-multiply" />
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-background/40 to-background/80" />
+                      {/* Light purple wash keeps the preview readable but on-brand */}
+                      <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
 
-                      {/* Scrim that fades the image bottom into the footer for a seamless blend */}
-                      <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-background via-background/80 to-transparent" />
+                      {/* Short scrim so the image meets the footer panel smoothly */}
+                      <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background to-transparent" />
 
                       {/* Expand affordance */}
-                      <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary">
+                      <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-background/60 text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary">
                         <Maximize2 className="h-5 w-5" />
                       </span>
                     </div>
 
-                    {/* Footer label sitting on the gradient - technicality is the hero */}
-                    <div className="absolute inset-x-0 bottom-0 flex items-end gap-5 px-7 pb-8">
-                      {/* Accent bar keys the label to the brand color */}
-                      <span className="mb-2 h-24 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-primary to-primary/30 md:h-28" />
-                      <div>
-                        <p className="text-sm font-bold uppercase tracking-[0.24em] text-primary">
+                    {/* Solid footer panel - tech knowledge level is the hero */}
+                    <div className="flex flex-col gap-4 border-t border-white/10 bg-background px-7 pt-6 pb-7">
+                      <div className="flex items-center justify-between gap-4">
+                        <p className="text-base font-bold uppercase tracking-[0.2em] text-white/85">
                           Tech knowledge
                         </p>
-                        <p className="mt-2 text-6xl font-extrabold uppercase leading-none tracking-tight text-white md:text-7xl">
-                          {level}
-                        </p>
-                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/60">{readers}</p>
+                        {/* Meter makes the High / Medium / Low scale instantly legible */}
+                        <div className="flex items-end gap-1.5" aria-hidden="true">
+                          {[1, 2, 3].map((bar) => (
+                            <span
+                              key={bar}
+                              className={
+                                "w-2.5 rounded-sm " +
+                                (bar === 1 ? "h-3 " : bar === 2 ? "h-5 " : "h-7 ") +
+                                (bar <= filledBars ? "bg-primary" : "bg-white/15")
+                              }
+                            />
+                          ))}
+                        </div>
+                      </div>
+
+                      <p className="text-6xl font-extrabold uppercase leading-none tracking-tight text-primary md:text-7xl">
+                        {level}
+                      </p>
+
+                      <div className="flex flex-col gap-1">
+                        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">{readers}</p>
+                        <p className="text-base font-medium text-white/50">{sample.title}</p>
                       </div>
                     </div>
                   </button>
