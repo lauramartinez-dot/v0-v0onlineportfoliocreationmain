@@ -1272,7 +1272,7 @@ export default function CareerMapSection() {
             ]}
           >
             {/* Tools */}
-            <div>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -1319,7 +1319,7 @@ export default function CareerMapSection() {
             skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
           >
             {/* Top achievements */}
-            <div>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
                 Top achievements
               </h4>
@@ -1339,7 +1339,7 @@ export default function CareerMapSection() {
             </div>
 
             {/* Tools */}
-            <div>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"].map((tool) => (
@@ -1374,7 +1374,7 @@ export default function CareerMapSection() {
             skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
           >
             {/* Top achievements */}
-            <div>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">
                 Top achievements
               </h4>
@@ -1394,7 +1394,7 @@ export default function CareerMapSection() {
             </div>
 
             {/* Tools */}
-            <div>
+            <div className="rounded-2xl border border-foreground/10 bg-foreground/[0.06] p-5 sm:p-6">
               <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.16em] text-primary/80">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"].map((tool) => (
