@@ -14,7 +14,7 @@ export function HeroSection() {
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(60%_50%_at_30%_40%,color-mix(in_oklch,var(--primary)_14%,transparent),transparent_70%)]"
       />
 
-      <div className="mx-auto w-full max-w-5xl">
+      <div className="mx-auto w-full max-w-6xl">
         <div className="flex flex-col items-center gap-10 md:flex-row md:gap-16">
           <div className="animate-slide-in-left shrink-0">
             <div className="relative h-60 w-60 overflow-hidden rounded-full p-1.5 surface-card md:h-72 md:w-72 lg:h-80 lg:w-80">
@@ -37,11 +37,15 @@ export function HeroSection() {
             </p>
 
             <h1 className="mb-8 text-foreground">
-              <span className="mb-2 block text-sm font-semibold uppercase tracking-[0.25em] text-muted-foreground md:text-base">
+              <span className="mb-3 block text-2xl font-bold uppercase tracking-tight text-muted-foreground md:text-3xl">
                 A global
               </span>
-              <span className="block text-balance text-5xl font-extrabold uppercase leading-[0.95] tracking-tight md:text-6xl lg:text-7xl">
-                Senior Technical Writer
+              <span className="block text-6xl font-extrabold uppercase leading-[0.9] tracking-tighter md:text-7xl lg:text-8xl">
+                Senior
+                <br />
+                Technical
+                <br />
+                Writer
               </span>
             </h1>
 
