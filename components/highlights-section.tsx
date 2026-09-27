@@ -157,14 +157,14 @@ export function HighlightsSection() {
                           className="surface-card flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
                         >
                           <img
-                            src={`https://flagcdn.com/w80/${country.code}.png`}
-                            srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
-                            width={36}
-                            height={36}
+                            src={`https://flagcdn.com/w160/${country.code}.png`}
+                            srcSet={`https://flagcdn.com/w320/${country.code}.png 2x`}
+                            width={48}
+                            height={32}
                             loading="lazy"
                             alt={country.name}
                             title={country.name}
-                            className="h-9 w-9 rounded-full object-cover opacity-90 ring-1 ring-white/15"
+                            className="h-8 w-12 rounded-md object-cover shadow-sm ring-1 ring-white/20"
                           />
                         </li>
                       ))}
