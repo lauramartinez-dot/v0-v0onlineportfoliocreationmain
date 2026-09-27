@@ -1272,7 +1272,7 @@ export default function CareerMapSection() {
             ]}
           >
             {/* Tools */}
-            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+            <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {[
@@ -1289,7 +1289,7 @@ export default function CareerMapSection() {
                 ].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
+                    className="rounded-full border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
                   >
                     {tool}
                   </span>
@@ -1319,7 +1319,7 @@ export default function CareerMapSection() {
             skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
           >
             {/* Top achievements */}
-            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+            <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
@@ -1330,22 +1330,25 @@ export default function CareerMapSection() {
                   "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
                   "Built an AI agent that cut Spanish translation review time by 90%",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                  <li
+                    key={item}
+                    className="flex w-fit max-w-full items-start gap-3 rounded-2xl border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-4 py-2"
+                  >
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span className="text-[15px] font-medium leading-relaxed text-background">{item}</span>
+                    <span className="text-[15px] font-semibold leading-relaxed text-background">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Tools */}
-            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+            <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
+                    className="rounded-full border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
                   >
                     {tool}
                   </span>
@@ -1374,7 +1377,7 @@ export default function CareerMapSection() {
             skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
           >
             {/* Top achievements */}
-            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+            <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
@@ -1385,22 +1388,25 @@ export default function CareerMapSection() {
                   "Created Personio's first-ever documentation style guides",
                   "Co-founded Personio's first Women's Committee",
                 ].map((item) => (
-                  <li key={item} className="flex items-start gap-3">
+                  <li
+                    key={item}
+                    className="flex w-fit max-w-full items-start gap-3 rounded-2xl border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-4 py-2"
+                  >
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span className="text-[15px] font-medium leading-relaxed text-background">{item}</span>
+                    <span className="text-[15px] font-semibold leading-relaxed text-background">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
             {/* Tools */}
-            <div className="rounded-2xl border border-foreground/20 bg-foreground p-5 text-background shadow-lg sm:p-6">
+            <div>
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
               <div className="flex flex-wrap gap-2">
                 {["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
+                    className="rounded-full border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
                   >
                     {tool}
                   </span>
