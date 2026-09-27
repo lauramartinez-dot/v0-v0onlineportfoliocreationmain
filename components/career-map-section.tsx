@@ -1070,13 +1070,15 @@ function CompanyCard({
   defaultExpanded = false,
   roleProgression,
   description,
-  skills
+  skills,
+  duration
 }: {
   children: React.ReactNode
   logo: string
   name: string
   role: string
   years: string
+  duration?: string
   country: string
   countryFlag: string
   defaultExpanded?: boolean
@@ -1106,7 +1108,10 @@ function CompanyCard({
                 ))}
               </div>
             ) : (
-              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
+              <p className="text-[19px] text-foreground/60">
+                {role} &middot; {years}
+                {duration && <span className="text-foreground/40"> ({duration})</span>}
+              </p>
             )}
           </div>
           <div className="flex items-center gap-3 shrink-0">
@@ -1248,6 +1253,7 @@ export default function CareerMapSection() {
             name="OMP"
             role="Senior Technical Writer"
             years="2026 - Present"
+          duration="5 months"
             country="Belgium company"
             countryFlag="🇧🇪"
             defaultExpanded={false}
@@ -1299,6 +1305,7 @@ export default function CareerMapSection() {
             name="Personio"
             role="Senior Technical Writer"
             years="2023 - 2025"
+          duration="2.5 years"
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
@@ -1353,6 +1360,7 @@ export default function CareerMapSection() {
             name="Personio"
             role="Technical Writer"
             years="2021 - 2023"
+          duration="2.5 years"
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
