@@ -143,13 +143,15 @@ export function WritingSamplesSection() {
                       <img
                         src={sample.image || "/placeholder.svg"}
                         alt={`Preview of ${sample.title}`}
-                        className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.06]"
+                        className="absolute inset-0 h-full w-full object-cover object-top opacity-45 grayscale transition-all duration-700 ease-out group-hover:scale-[1.06] group-hover:opacity-60"
                       />
 
+                      {/* Purple tint pushes the preview into the background */}
+                      <div className="absolute inset-0 bg-primary/35 mix-blend-multiply" />
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-background/40 to-background/80" />
+
                       {/* Scrim that fades the image bottom into the footer for a seamless blend */}
-                      <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-background via-background/70 to-transparent" />
-                      {/* Primary glaze that warms up on hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                      <div className="absolute inset-x-0 bottom-0 h-3/5 bg-gradient-to-t from-background via-background/80 to-transparent" />
 
                       {/* Expand affordance */}
                       <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary">
@@ -158,17 +160,17 @@ export function WritingSamplesSection() {
                     </div>
 
                     {/* Footer label sitting on the gradient - technicality is the hero */}
-                    <div className="relative flex items-end gap-4 px-6 pb-6 pt-2">
+                    <div className="absolute inset-x-0 bottom-0 flex items-end gap-5 px-7 pb-8">
                       {/* Accent bar keys the label to the brand color */}
-                      <span className="mb-1.5 h-14 w-1 shrink-0 rounded-full bg-gradient-to-b from-primary to-primary/30" />
+                      <span className="mb-2 h-24 w-1.5 shrink-0 rounded-full bg-gradient-to-b from-primary to-primary/30 md:h-28" />
                       <div>
-                        <p className="text-[0.7rem] font-semibold uppercase tracking-[0.22em] text-white/50">
+                        <p className="text-sm font-bold uppercase tracking-[0.24em] text-primary">
                           Tech knowledge
                         </p>
-                        <p className="mt-1 bg-gradient-to-r from-white via-white to-primary/80 bg-clip-text text-4xl font-bold leading-none text-transparent md:text-5xl">
+                        <p className="mt-2 text-6xl font-extrabold uppercase leading-none tracking-tight text-white md:text-7xl">
                           {level}
                         </p>
-                        <p className="mt-2 text-sm font-medium uppercase tracking-[0.16em] text-white/45">{readers}</p>
+                        <p className="mt-3 text-sm font-semibold uppercase tracking-[0.18em] text-white/60">{readers}</p>
                       </div>
                     </div>
                   </button>
