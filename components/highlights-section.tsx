@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Plane, Code2, ArrowUpRight } from "lucide-react"
+import { Plane, Code2 } from "lucide-react"
 import { AboutMeReveal } from "@/components/about-me-reveal"
 
 const countries = [
@@ -59,10 +59,7 @@ export function HighlightsSection() {
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
                   &ldquo;How do planes stay in the air?&rdquo;
                 </p>
-                <span className="inline-flex items-center gap-2 text-sm font-semibold text-white/70 transition-colors group-hover:text-white">
-                  Read the live article
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </span>
+
               </div>
             </a>
 
@@ -145,8 +142,7 @@ export function HighlightsSection() {
                       <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
                         Countries lived in
                       </h3>
-                      <span className="text-xs font-semibold tabular-nums text-primary">04</span>
-                    </div>
+                                        </div>
                     <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                       {countries.map((country) => (
                         <li
@@ -171,8 +167,7 @@ export function HighlightsSection() {
                   <div className="flex flex-col gap-5">
                     <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
                       <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">Languages</h3>
-                      <span className="text-xs font-semibold tabular-nums text-primary">03</span>
-                    </div>
+                                        </div>
                     <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                       {languages.map((language) => (
                         <li
