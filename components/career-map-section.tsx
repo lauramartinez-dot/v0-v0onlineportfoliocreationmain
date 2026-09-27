@@ -1259,10 +1259,10 @@ export default function CareerMapSection() {
               </>
             }
             skills={[
-              "Docs-as-code pipeline",
-              "Developer documentation",
-              "Integrations & API specialization",
-              "Deep technical expertise",
+  "Developer documentation",
+  "API specialization",
+  "Docs as code",
+  "Agentic documentation",
             ]}
           >
             {/* Tools */}
