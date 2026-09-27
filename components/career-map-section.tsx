@@ -1289,7 +1289,7 @@ export default function CareerMapSection() {
                 ].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
+                    className="rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-[13px] font-semibold text-foreground"
                   >
                     {tool}
                   </span>
@@ -1323,7 +1323,7 @@ export default function CareerMapSection() {
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
-              <ul className="flex flex-col gap-2.5">
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {[
                   "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
                   "Designed a content audit that let the team deprecate 100+ outdated pages",
@@ -1332,10 +1332,12 @@ export default function CareerMapSection() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex w-fit max-w-full items-start gap-3 rounded-2xl border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-4 py-2"
+                    className="flex items-start gap-3 rounded-2xl border border-primary/25 bg-primary/10 p-4 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span className="text-[15px] font-semibold leading-relaxed text-background">{item}</span>
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    </span>
+                    <span className="text-[15px] font-semibold leading-relaxed text-foreground text-pretty">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1348,7 +1350,7 @@ export default function CareerMapSection() {
                 {["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
+                    className="rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-[13px] font-semibold text-foreground"
                   >
                     {tool}
                   </span>
@@ -1381,7 +1383,7 @@ export default function CareerMapSection() {
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
-              <ul className="flex flex-col gap-2.5">
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {[
                   "Grew a local 3-writer documentation team into a global team of 10",
                   "Grew documentation from 3 to 6 languages",
@@ -1390,10 +1392,12 @@ export default function CareerMapSection() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex w-fit max-w-full items-start gap-3 rounded-2xl border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-4 py-2"
+                    className="flex items-start gap-3 rounded-2xl border border-primary/25 bg-primary/10 p-4 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
                   >
-                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span className="text-[15px] font-semibold leading-relaxed text-background">{item}</span>
+                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
+                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                    </span>
+                    <span className="text-[15px] font-semibold leading-relaxed text-foreground text-pretty">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -1406,7 +1410,7 @@ export default function CareerMapSection() {
                 {["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"].map((tool) => (
                   <span
                     key={tool}
-                    className="rounded-full border border-primary/30 bg-foreground bg-linear-to-r from-primary/10 to-primary/10 px-3 py-1 text-[13px] font-semibold text-primary"
+                    className="rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-[13px] font-semibold text-foreground"
                   >
                     {tool}
                   </span>
