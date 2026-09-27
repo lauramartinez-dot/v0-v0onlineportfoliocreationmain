@@ -1323,7 +1323,7 @@ export default function CareerMapSection() {
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
-              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <ul className="flex flex-col gap-2.5">
                 {[
                   "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
                   "Designed a content audit that let the team deprecate 100+ outdated pages",
@@ -1332,9 +1332,9 @@ export default function CareerMapSection() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-primary/25 bg-primary/10 p-4 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
+                    className="flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/10 px-4 py-3 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
                   >
-                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
                       <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                     </span>
                     <span className="text-[15px] font-semibold leading-relaxed text-foreground text-pretty">{item}</span>
@@ -1383,7 +1383,7 @@ export default function CareerMapSection() {
               <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
                 Top achievements
               </h4>
-              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <ul className="flex flex-col gap-2.5">
                 {[
                   "Grew a local 3-writer documentation team into a global team of 10",
                   "Grew documentation from 3 to 6 languages",
@@ -1392,9 +1392,9 @@ export default function CareerMapSection() {
                 ].map((item) => (
                   <li
                     key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-primary/25 bg-primary/10 p-4 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
+                    className="flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/10 px-4 py-3 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
                   >
-                    <span className="mt-1 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
                       <span className="h-1.5 w-1.5 rounded-full bg-primary" />
                     </span>
                     <span className="text-[15px] font-semibold leading-relaxed text-foreground text-pretty">{item}</span>
