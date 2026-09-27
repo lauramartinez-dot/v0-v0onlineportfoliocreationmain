@@ -1108,10 +1108,17 @@ function CompanyCard({
                 ))}
               </div>
             ) : (
-              <p className="text-[19px] text-foreground/60">
-                {role} &middot; {years}
-                {duration && <span className="text-foreground/40"> ({duration})</span>}
-              </p>
+  <div className="flex flex-col gap-1.5">
+  <p className="text-[19px] text-foreground/70">{role}</p>
+  <p className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+  <span>{years}</span>
+  {duration && (
+  <span className="rounded-full border border-primary/25 bg-primary/10 px-2 py-0.5 text-[11px] tracking-[0.1em] text-primary/90">
+  {duration}
+  </span>
+  )}
+  </p>
+  </div>
             )}
           </div>
           <div className="flex items-center gap-3 shrink-0">
