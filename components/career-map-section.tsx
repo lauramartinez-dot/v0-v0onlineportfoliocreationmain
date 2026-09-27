@@ -1309,7 +1309,7 @@ export default function CareerMapSection() {
                 off the ground, and speaking up for the docs team in leadership meetings.
               </>
             }
-            skills={["Business acumen"]}
+            skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
           >
             {/* Top achievements */}
             <div>
