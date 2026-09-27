@@ -25,8 +25,8 @@ export function HighlightsSection() {
 
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
       <section className="relative px-4 py-24">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
             <a
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
