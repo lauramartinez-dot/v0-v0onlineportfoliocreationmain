@@ -719,7 +719,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "deprioritize-tasks",
-    title: "Helped the team deprioritize 20% of low-impact release tasks",
+    title: "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
     description:
       "Used data analysis to identify low-impact documentation tasks, allowing the team to focus on higher-value work.",
     icon: TrendingUp,
@@ -729,7 +729,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "outdated-articles",
-    title: "Enabled removal of 100+ outdated pages, improving content relevance",
+    title: "Designed a content audit that let the team deprecate 100+ outdated pages",
     description:
       "Identified and removed over 100 outdated articles from the Help Center, improving overall content quality and user experience.",
     icon: FileText,
@@ -739,7 +739,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "tableau-reports",
-    title: "Helped the team generate reports 30% faster by improving Tableau dashboards",
+    title: "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
     description:
       "Worked with Data Analysts to enhance Tableau dashboards, streamlining the reporting process for the documentation team.",
     icon: Bot,
@@ -814,7 +814,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-translation-assistant",
-    title: "Built an AI tool that cut Spanish translation review time by 90%",
+    title: "Built an AI agent that cut Spanish translation review time by 90%",
     description:
       "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
     icon: Bot,
@@ -1318,10 +1318,10 @@ export default function CareerMapSection() {
               </h4>
               <ul className="flex flex-col gap-2.5">
                 {[
-                  "Helped the team deprioritize 20% of low-impact release tasks",
-                  "Enabled removal of 100+ outdated pages, improving content relevance",
-                  "Helped the team generate reports 30% faster by improving Tableau dashboards",
-                  "Built an AI tool that cut Spanish translation review time by 90%",
+                  "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
+                  "Designed a content audit that let the team deprecate 100+ outdated pages",
+                  "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
+                  "Built an AI agent that cut Spanish translation review time by 90%",
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
