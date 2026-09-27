@@ -144,21 +144,22 @@ export function HighlightsSection() {
                     <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                       Countries lived in
                     </span>
-                    <div className="mt-6 grid flex-1 grid-cols-2 content-center gap-4">
+                    <ul className="mt-2 flex flex-1 flex-col justify-center divide-y divide-white/10">
                       {countries.map((country) => (
-                        <img
-                          key={country.name}
-                          src={`https://flagcdn.com/w320/${country.code}.png`}
-                          srcSet={`https://flagcdn.com/w640/${country.code}.png 2x`}
-                          width={320}
-                          height={240}
-                          loading="lazy"
-                          alt={`${country.name} flag`}
-                          title={country.name}
-                          className="aspect-[4/3] w-full rounded-lg object-cover shadow-lg ring-1 ring-white/15 transition-transform duration-300 hover:scale-[1.03]"
-                        />
+                        <li key={country.name} className="flex items-center gap-3 py-3">
+                          <img
+                            src={`https://flagcdn.com/w80/${country.code}.png`}
+                            srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
+                            width={20}
+                            height={20}
+                            loading="lazy"
+                            alt=""
+                            className="h-5 w-5 shrink-0 rounded-full object-cover opacity-80 ring-1 ring-white/15"
+                          />
+                          <span className="text-lg font-medium text-white/90 md:text-xl">{country.name}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
 
                   <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur-sm">
