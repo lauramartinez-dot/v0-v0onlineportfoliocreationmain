@@ -26,6 +26,12 @@ export function HighlightsSection() {
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
       <section className="relative px-4 py-24">
         <div className="mx-auto max-w-5xl">
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold uppercase tracking-tight text-foreground md:text-3xl">
+              Then &amp; now<span className="text-primary">.</span>
+            </h2>
+            <div className="mx-auto mt-5 h-1 w-10 rounded-full bg-primary" />
+          </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
             <a
@@ -139,39 +145,51 @@ export function HighlightsSection() {
                 </p>
 
                 {/* Countries & languages */}
-                <div className="mt-10 grid flex-1 grid-cols-1 gap-5 sm:grid-cols-2">
-                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur-sm">
-                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
+                <div className="mt-10 flex flex-1 flex-col justify-center gap-8">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
                       Countries lived in
-                    </span>
-                    <ul className="mt-2 flex flex-1 flex-col justify-center divide-y divide-white/10">
+                    </h3>
+                    <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                       {countries.map((country) => (
-                        <li key={country.name} className="flex items-center gap-3 py-3">
-                          <img
-                            src={`https://flagcdn.com/w80/${country.code}.png`}
-                            srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
-                            width={20}
-                            height={20}
-                            loading="lazy"
-                            alt=""
-                            className="h-5 w-5 shrink-0 rounded-full object-cover opacity-80 ring-1 ring-white/15"
-                          />
-                          <span className="text-lg font-medium text-white/90 md:text-xl">{country.name}</span>
+                        <li
+                          key={country.name}
+                          className="surface-card flex flex-col items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
+                        >
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/20">
+                            <img
+                              src={`https://flagcdn.com/w80/${country.code}.png`}
+                              srcSet={`https://flagcdn.com/w160/${country.code}.png 2x`}
+                              width={20}
+                              height={20}
+                              loading="lazy"
+                              alt=""
+                              className="h-5 w-5 rounded-full object-cover opacity-85"
+                            />
+                          </span>
+                          <span className="text-base font-semibold text-white">{country.name}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex flex-col rounded-2xl border border-white/10 bg-white/[0.05] p-7 backdrop-blur-sm">
-                    <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</span>
-                    <ul className="mt-2 flex flex-1 flex-col justify-center divide-y divide-white/10">
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</h3>
+                    <ul className="grid grid-cols-1 gap-3 sm:grid-cols-3">
                       {languages.map((language) => (
-                        <li key={language.name} className="flex items-center gap-3 py-4">
-                          <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                          <span className="text-lg font-medium text-white/90 md:text-xl">{language.name}</span>
-                          <span className="ml-auto text-xs font-semibold uppercase tracking-[0.15em] text-white/45">
-                            {language.level}
+                        <li
+                          key={language.name}
+                          className="surface-card flex flex-col items-start gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
+                        >
+                          <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-xs font-bold uppercase tracking-wider text-primary ring-1 ring-primary/20">
+                            {language.code === "gb" ? "EN" : language.code}
                           </span>
+                          <div className="flex flex-col gap-1">
+                            <span className="text-base font-semibold text-white">{language.name}</span>
+                            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-white/45">
+                              {language.level}
+                            </span>
+                          </div>
                         </li>
                       ))}
                     </ul>
