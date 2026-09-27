@@ -145,46 +145,50 @@ export function HighlightsSection() {
                 </p>
 
                 {/* Countries & languages */}
-                <div className="mt-10 flex flex-1 flex-col justify-center gap-8">
-                  <div className="flex flex-col gap-4">
-                    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
-                      Countries lived in
-                    </h3>
-                    <ul className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <div className="mt-12 flex flex-1 flex-col justify-center gap-10">
+                  <div className="flex flex-col gap-5">
+                    <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+                        Countries lived in
+                      </h3>
+                      <span className="text-xs font-semibold tabular-nums text-primary">04</span>
+                    </div>
+                    <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
                       {countries.map((country) => (
                         <li
                           key={country.name}
-                          className="surface-card flex items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
+                          className="surface-card group flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
                         >
                           <img
-                            src={`https://flagcdn.com/w160/${country.code}.png`}
-                            srcSet={`https://flagcdn.com/w320/${country.code}.png 2x`}
-                            width={48}
-                            height={32}
+                            src={`https://flagcdn.com/w320/${country.code}.png`}
+                            srcSet={`https://flagcdn.com/w640/${country.code}.png 2x`}
+                            width={96}
+                            height={64}
                             loading="lazy"
                             alt={country.name}
                             title={country.name}
-                            className="h-8 w-12 rounded-md object-cover shadow-sm ring-1 ring-white/20"
+                            className="aspect-[3/2] w-full max-w-24 rounded-lg object-cover shadow-lg shadow-black/40 ring-1 ring-white/15 transition-transform duration-300 group-hover:scale-105"
                           />
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="flex flex-col gap-4">
-                    <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">Languages</h3>
-                    <ul className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+                  <div className="flex flex-col gap-5">
+                    <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">Languages</h3>
+                      <span className="text-xs font-semibold tabular-nums text-primary">03</span>
+                    </div>
+                    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                       {languages.map((language) => (
                         <li
                           key={language.name}
-                          className="surface-card flex flex-col items-start rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition-all duration-300 hover:-translate-y-0.5 hover:border-white/25 hover:bg-white/[0.06]"
+                          className="surface-card flex min-h-32 flex-col justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
                         >
-                          <div className="flex flex-col gap-1">
-                            <span className="text-base font-semibold text-white">{language.name}</span>
-                            <span className="text-xs font-semibold uppercase tracking-[0.15em] text-white/45">
-                              {language.level}
-                            </span>
-                          </div>
+                          <span className="text-xl font-semibold tracking-tight text-white">{language.name}</span>
+                          <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
+                            {language.level}
+                          </span>
                         </li>
                       ))}
                     </ul>
