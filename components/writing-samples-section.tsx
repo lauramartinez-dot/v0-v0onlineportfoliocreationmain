@@ -144,11 +144,12 @@ export function WritingSamplesSection() {
                       <img
                         src={sample.image || "/placeholder.svg"}
                         alt={`Preview of ${sample.title}`}
-                        className="absolute inset-0 h-full w-full object-cover object-top opacity-90 transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:opacity-100"
+                        className="absolute inset-0 h-full w-full object-cover object-top opacity-55 saturate-[0.7] transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:opacity-75"
                       />
 
-                      {/* Light purple wash keeps the preview readable but on-brand */}
-                      <div className="absolute inset-0 bg-primary/15 mix-blend-multiply" />
+                      {/* Purple wash pushes the preview into the background */}
+                      <div className="absolute inset-0 bg-primary/25 mix-blend-multiply" />
+                      <div className="absolute inset-0 bg-background/20" />
 
                       {/* Short scrim so the image meets the footer panel smoothly */}
                       <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background to-transparent" />
@@ -184,10 +185,7 @@ export function WritingSamplesSection() {
                         {level}
                       </p>
 
-                      <div className="flex flex-col gap-1">
-                        <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">{readers}</p>
-                        <p className="text-base font-medium text-white/50">{sample.title}</p>
-                      </div>
+                      <p className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">{readers}</p>
                     </div>
                   </button>
                 </DialogTrigger>
