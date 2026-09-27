@@ -26,12 +26,6 @@ export function HighlightsSection() {
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
       <section className="relative px-4 py-24">
         <div className="mx-auto max-w-5xl">
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold uppercase tracking-tight text-foreground md:text-3xl">
-              Then &amp; now<span className="text-primary">.</span>
-            </h2>
-            <div className="mx-auto mt-5 h-1 w-10 rounded-full bg-primary" />
-          </div>
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
             <a
@@ -49,6 +43,9 @@ export function HighlightsSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
+                <span className="absolute left-5 top-5 rounded-full bg-background/40 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-sm">
+                  6 years ago
+                </span>
               </div>
               <div className="flex flex-col gap-6 p-8">
                 <div className="flex flex-wrap items-center gap-3">
@@ -57,9 +54,6 @@ export function HighlightsSection() {
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
                     Tech journalist
-                  </span>
-                  <span className="rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/60 ring-1 ring-white/15">
-                    6 years ago
                   </span>
                 </div>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
@@ -83,6 +77,9 @@ export function HighlightsSection() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
+                <span className="absolute left-5 top-5 rounded-full bg-background/40 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-sm">
+                  Now
+                </span>
               </div>
               <div className="flex flex-col gap-6 p-8">
                 <div className="flex flex-wrap items-center gap-3">
@@ -91,9 +88,6 @@ export function HighlightsSection() {
                   </span>
                   <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
                     Technical writer
-                  </span>
-                  <span className="rounded-full bg-primary px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-primary-foreground">
-                    Now
                   </span>
                 </div>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
