@@ -8,13 +8,13 @@ export function MissionSection() {
       <div className="mx-auto max-w-7xl px-4">
         {/* Intro text - similar to top differentiators */}
         <div className="text-center mb-12">
-          <p className="text-[21px] text-foreground/90 leading-relaxed">
+          <p className="text-[21px] text-foreground/60 leading-relaxed">
             And a 15-year long mission:
           </p>
         </div>
 
         {/* Mission box - centered */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="relative rounded-2xl border border-primary/20 bg-card shadow-lg shadow-purple-900/20 backdrop-blur-xl px-7 pt-8 pb-6">
             {/* Soft inner glow */}
             <div className="absolute inset-[1px] rounded-2xl bg-gradient-to-b from-primary/5 to-transparent pointer-events-none" />

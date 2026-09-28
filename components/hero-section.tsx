@@ -1,7 +1,6 @@
 "use client"
 
-import { Download, ArrowRight, ChevronDown } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { ChevronDown, MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -41,40 +40,30 @@ export function HeroSection() {
           </div>
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
-            <p className="text-lg md:text-xl text-foreground/60 mb-4">Hi there!</p>
+            {/* Intro line */}
+            <p className="mb-6 text-xl md:text-2xl font-medium tracking-tight leading-snug text-primary text-balance">
+              Hi there! I&apos;m Laura Martínez.
+            </p>
 
-            <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground md:text-6xl lg:text-7xl xl:text-8xl">
-              I&apos;m Laura<br />Martínez.
+            {/* Accent bar */}
+            <div className="mx-auto md:mx-0 mb-5 h-1.5 w-12 rounded-full bg-primary" />
+
+            {/* Two-tier headline */}
+            <h1 className="mb-6 text-foreground">
+              <span className="block text-2xl font-bold uppercase tracking-tight md:text-3xl lg:text-4xl">
+                A global
+              </span>
+              <span className="block text-5xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-6xl lg:text-7xl xl:text-8xl">
+                Senior Technical Writer<span className="ml-2 inline-block animate-bounce align-baseline text-2xl md:text-3xl lg:text-4xl">{"🌍"}</span>
+              </span>
             </h1>
 
-            <h4 className="mb-10 text-primary">
-              <span className="text-xl font-medium md:text-2xl lg:text-3xl">A global and multicultural {"🌍"}</span><br />
-              <span className="text-3xl font-bold md:text-4xl lg:text-5xl tracking-tight mt-2 inline-block">Senior Technical Writer</span>
-            </h4>
-
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <Button
-                size="lg"
-                variant="outline"
-                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
-                  Connect on LinkedIn
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="group rounded-full px-8 py-6 text-base font-medium border-2 border-purple-500/50 hover:border-pink-500/50 hover:bg-gradient-to-r hover:from-purple-500/10 hover:to-pink-500/10 transition-all duration-300 bg-transparent"
-                asChild
-              >
-                <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Download CV
-                  <Download className="ml-2 h-4 w-4 group-hover:translate-y-0.5 transition-transform" />
-                </a>
-              </Button>
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/40 bg-primary/5 px-5 py-2.5 text-lg md:text-xl font-medium tracking-tight backdrop-blur-sm">
+                <MapPin className="h-5 w-5 shrink-0 text-primary" />
+                <span className="text-foreground">Based in Barcelona.</span>
+                <span className="text-muted-foreground">Working globally.</span>
+              </div>
             </div>
           </div>
         </div>

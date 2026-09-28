@@ -8,7 +8,7 @@ import {
 export const topSkills = [
   {
     icon: Clock,
-    title: "I document software so that all humans can understand and use it",
+    title: "Write true-beginner documentation about it",
     description:
       "I've written articles for tech media with 8 M monthy readers. I write about software with the same atrention for detail and high standarss,",
     link: "",
@@ -16,7 +16,7 @@ export const topSkills = [
   },
   {
     icon: Newspaper,
-    title: "I build systems that let writers do 3x more with the same team",
+    title: "Build the systems that keep it updated and findable",
     description:
       "I've been an early hire in the past 3 companies and do not need to be taken by the hand.",
     link: "",
@@ -24,9 +24,9 @@ export const topSkills = [
   },
   {
     icon: Globe,
-    title: "I get documentation translated for key European markets",
+    title: "Make it easy for AI to translate and answer from",
     description:
-      "I speak 3 languages and have wide experience managing localization.",
+      "I've lived in 4 countries and worked in 3 languages, so I know where translations break before they happen.",
     link: "",
     skills: ["English Writing", "Global Audiences", "Localization-Ready Content", "Multilingual"],
   },
@@ -48,15 +48,23 @@ export const toolColumns: SkillColumn[] = [
     column: 1,
     groups: [
       {
-        label: "User documentation",
-        tools: ["Zendesk", "Confluence", "Google Docs", "HTML / CSS"],
+        label: "Content editing",
+        tools: ["Confluence", "Zendesk"],
       },
       {
-        label: "Developer documentation",
-        tools: ["GitHub", "Markdown"],
+        label: "Content authoring",
+        tools: ["MadCap Flare"],
       },
       {
-        label: "Infographics",
+        label: "Version control",
+        tools: ["Git/GitHub", "Azure DevOps", "Visual Studio Code"],
+      },
+      {
+        label: "Markup languages",
+        tools: ["HTML", "XML", "Markdown"],
+      },
+      {
+        label: "Visuals",
         tools: ["InDesign", "Photoshop", "Canva"],
       },
     ],
@@ -65,8 +73,8 @@ export const toolColumns: SkillColumn[] = [
     column: 2,
     groups: [
       {
-        label: "Process optimization",
-        tools: ["Jira", "Notion", "Monday.com"],
+        label: "Project management",
+        tools: ["Jira", "Trello", "Notion", "Monday.com"],
       },
       {
         label: "Data-driven decision-making",
@@ -74,7 +82,7 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "AI-assisted production",
-        tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso"],
+        tools: ["Claude", "v0 by Vercel", "Langdock", "Clueso", "GitHub Copilot"],
       },
     ],
   },
@@ -87,9 +95,8 @@ export const toolColumns: SkillColumn[] = [
       },
       {
         label: "Global collaboration",
-        tools: ["Slack", "Zoom", "Miro", "Loom"],
+        tools: ["Microsoft ecosystem", "Google ecosystem", "Slack", "Discord", "Zoom", "Miro", "Loom", "Figma"],
       },
-      
     ],
   },
 ]

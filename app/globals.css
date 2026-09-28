@@ -125,8 +125,9 @@
 }
 
 @theme inline {
-  --font-sans: "Inter", "Inter Fallback";
-  --font-serif: "Playfair Display", "Playfair Display Fallback";
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-inter), ui-monospace, "SFMono-Regular", Menlo, monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -175,4 +176,52 @@
   body {
     @apply bg-background text-foreground;
   }
+  /* Renders the whole page as if the browser were at 90% zoom.
+     Kept to tablet and up so phones are not shrunk below a readable size. */
+  @media (min-width: 768px) {
+    body {
+      zoom: 0.9;
+    }
+  }
+}
+
+@keyframes skill-arrow {
+  0%,
+  100% {
+    transform: translateY(2px);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+.animate-skill-arrow {
+  animation: skill-arrow 1.1s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-skill-arrow {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Unified elevation for top-level content cards across every section */
+.surface-card {
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.08),
+    0 1px 0 0 rgba(255, 255, 255, 0.04),
+    0 18px 40px -20px rgba(0, 0, 0, 0.8),
+    0 2px 8px -4px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.surface-card:hover {
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.12),
+    0 1px 0 0 rgba(255, 255, 255, 0.06),
+    0 28px 60px -24px rgba(0, 0, 0, 0.9),
+    0 4px 14px -6px rgba(0, 0, 0, 0.65);
 }

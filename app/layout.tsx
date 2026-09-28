@@ -4,8 +4,16 @@ import { Inter, Playfair_Display } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _inter = Inter({ subsets: ["latin"] })
-const _playfair = Playfair_Display({ subsets: ["latin"] })
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+})
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: "Laura Martínez | Senior Technical Writer",
@@ -20,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="scroll-smooth bg-background">
+    <html lang="en" className={`scroll-smooth bg-background ${inter.variable} ${playfair.variable}`}>
       <body className={`font-sans antialiased`}>
         {children}
         <Analytics />

@@ -1,197 +1,208 @@
-"use client"
-
-import { useState, useRef, useCallback } from "react"
-import { topSkills } from "@/data/highlights"
-import { ArrowRight, Rocket } from "lucide-react"
 import Image from "next/image"
+import { AboutMeReveal } from "@/components/about-me-reveal"
 
-function DiagonalRevealImage({
-  beforeSrc,
-  afterSrc,
-  beforeAlt,
-  afterAlt,
-  beforeLabel,
-  href,
-}: {
-  beforeSrc: string
-  afterSrc: string
-  beforeAlt: string
-  afterAlt: string
-  beforeLabel?: string
-  href?: string
-}) {
-  const [revealPercent, setRevealPercent] = useState(0)
-  const [isHovering, setIsHovering] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+const countries = [
+  { name: "Spain", code: "es" },
+  { name: "France", code: "fr" },
+  { name: "Ireland", code: "ie" },
+  { name: "Germany", code: "de" },
+]
 
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (!containerRef.current) return
-    const rect = containerRef.current.getBoundingClientRect()
-    const x = ((e.clientX - rect.left) / rect.width) * 100
-    setRevealPercent(Math.max(0, Math.min(100, x)))
-  }, [])
-
-  const handleMouseEnter = useCallback(() => setIsHovering(true), [])
-  const handleMouseLeave = useCallback(() => {
-    setIsHovering(false)
-    setRevealPercent(0)
-  }, [])
-
-  const skew = 12
-  const p = revealPercent
-
-  const Wrapper = href ? "a" : "div"
-  const wrapperProps = href ? { href, target: "_blank", rel: "noopener noreferrer" } : {}
-
-  return (
-    <Wrapper
-      {...wrapperProps}
-      ref={containerRef as React.RefObject<HTMLDivElement & HTMLAnchorElement>}
-      className={`relative w-full h-full overflow-hidden rounded-xl ring-2 ring-primary/40 shadow-xl cursor-ew-resize bg-background transition-all duration-300 hover:shadow-2xl hover:ring-primary/60 ${href ? "block" : ""}`}
-      onMouseMove={handleMouseMove}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
-      {/* Before image (base layer) */}
-      <Image
-        src={beforeSrc}
-        alt={beforeAlt}
-        width={800}
-        height={1067}
-        className="w-full h-full object-cover"
-        unoptimized
-      />
-      {/* After image (revealed via diagonal clip-path) */}
-      <div
-        className="absolute inset-0 transition-[clip-path] duration-100 ease-out"
-        style={{
-          clipPath: `polygon(${Math.max(0, p - skew)}% 0%, 100% 0%, 100% 100%, ${Math.max(0, p + skew)}% 100%)`,
-        }}
-      >
-        <Image
-          src={afterSrc}
-          alt={afterAlt}
-          width={800}
-          height={1067}
-          className="w-full h-full object-cover"
-          unoptimized
-        />
-      </div>
-
-      {/* Diagonal line indicator */}
-      {isHovering && (
-        <div
-          className="absolute top-0 bottom-0 w-0.5 bg-primary/40 pointer-events-none transition-none"
-          style={{
-            left: `${p}%`,
-            transform: `skewX(-${skew}deg)`,
-            transformOrigin: 'center',
-          }}
-        />
-      )}
-
-    </Wrapper>
-  )
-}
-
-function SkillImageCard({
-  item,
-  image,
-  addPurpleOverlay = false,
-}: {
-  item: (typeof topSkills)[number]
-  image: string
-  addPurpleOverlay?: boolean
-}) {
-  return (
-    <div className="group relative min-h-[600px] overflow-hidden rounded-xl shadow-lg">
-      <Image
-        src={image || "/placeholder.svg"}
-        alt={item.title}
-        fill
-        className="object-cover transition-transform duration-300 group-hover:scale-105 opacity-70"
-      />
-
-      <div className="absolute inset-0 bg-gradient-to-b from-primary/20 via-primary/10 to-transparent" />
-
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-80" />
-
-      <div className="absolute bottom-0 left-0 right-0 p-8">
-        <h3 className="text-[26.95px] font-bold text-white">{item.title}</h3>
-      </div>
-    </div>
-  )
-}
+const languages = [
+    { name: "Spanish", code: "es", level: "Native" },
+    { name: "English", code: "gb", level: "Bilingual" },
+    { name: "German", code: "de", level: "B2" },
+]
 
 export function HighlightsSection() {
   return (
-    <section id="highlights" className="relative px-4 overflow-hidden pt-0 pb-[70px] mt-[10px]">
-      {/* Gradient background removed for consistent solid background */}
+    <>
+      {/* 1. About me - intro + supporting statement */}
+      <section id="top-differentiators" className="relative scroll-mt-32">
+        <AboutMeReveal />
+      </section>
 
-      <div className="mx-auto max-w-7xl">
-        {/* Top Differentiators Section */}
-        <div id="top-differentiators" className="mb-16 mt-[120px] scroll-mt-32">
-          <div className="max-w-4xl mx-auto text-center space-y-6 mb-8">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">My role</h2>
-            <p className="text-[21px] text-foreground/90 leading-relaxed">
-              Why me? Because I bring three roles into one:
-            </p>
+      {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
+      <section className="relative px-4 pb-24 pt-4">
+        <div className="mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
+            {/* Then - links to the live published article */}
+            <a
+              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="surface-card group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+            >
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <Image
+                  src="/then-airplane-article.png"
+                  alt="A passenger airplane flying low over a city skyline and river"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
+              </div>
+              <div className="flex flex-col gap-3 p-8">
+                <p className="text-lg text-white/60">
+                  <span className="font-semibold text-white/85">6 years ago</span> · Tech journalist
+                </p>
+                <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
+                  &ldquo;How do planes stay in the air?&rdquo;
+                </p>
+              </div>
+            </a>
+
+            {/* Now */}
+            <div className="surface-card relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <Image
+                  src="/now-tech-docs.png"
+                  alt="A modern software API documentation page on a dark themed screen"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
+              </div>
+              <div className="flex flex-col gap-3 p-8">
+                <p className="text-lg text-white/60">
+                  <span className="font-semibold text-primary">Now</span> · Technical writer
+                </p>
+                <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
+                  &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          {/* Column 1: A Foundation in Tech Journalism */}
-          <div className="relative z-10">
-            <SkillImageCard item={topSkills[0]} image="/vr-person-blue-tech.png" />
-          </div>
+      {/* 3. The mission - immersive, full-height cosmic background with parallax */}
+      <section
+        id="why"
+        className="relative flex min-h-screen items-center justify-center overflow-hidden px-4 scroll-mt-32"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+          style={{ backgroundImage: "url('/cosmic-inflation-universe-expansion.jpg')" }}
+          aria-hidden="true"
+        />
+        {/* Darken for legibility */}
+        <div className="absolute inset-0 bg-background/80" aria-hidden="true" />
+        {/* Top/bottom fades blend the section into the neighbours for a seamless scroll */}
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-          {/* Column 2: 3x Early Hire in Tech Scale-Ups */}
-          <div className="relative z-10">
-            <SkillImageCard item={topSkills[1]} image="/3d-graph-computer-illustration.jpg" addPurpleOverlay={true} />
-          </div>
-
-          {/* Column 3: An International Career Across 4 Countries */}
-          <div className="relative z-10">
-            <SkillImageCard item={topSkills[2]} image="/still-life-supply-chain.jpg" />
-          </div>
-        </div>
-
-        {/* Mission section - integrated into the same visual flow */}
-        <div className="mt-[62px] pt-[54px] text-center">
-          <p className="text-[21px] text-foreground/90 leading-relaxed mb-8">
-            And a clear mission:
+        <div className="relative mx-auto max-w-4xl py-32 text-center">
+          <p className="mx-auto max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
+            The mission hasn&apos;t changed:{" "}
+            <span className="font-bold text-primary">
+              democratising access to technical knowledge.
+            </span>{" "}
+            The more people understand technology, use it, and help build it, the further we can push the frontiers of
+            knowledge.
           </p>
         </div>
+      </section>
 
-        {/* Mission box - polished design with purple glow */}
-        <div className="relative z-10 max-w-3xl mx-auto pt-[15px]">
-          {/* Purple glow effects - matching hero image */}
-          <div className="absolute -bottom-6 -left-8 h-32 w-32 md:h-40 md:w-40 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
-          <div className="absolute -top-4 -right-4 h-20 w-20 md:h-28 md:w-28 rounded-full bg-gradient-to-bl from-pink-500/25 to-purple-500/25 blur-2xl" />
-          <div className="absolute bottom-2 -right-2 h-12 w-12 md:h-16 md:w-16 rounded-full bg-pink-500/20 blur-xl" />
-          
-          <div className="relative rounded-3xl border border-primary/40 bg-card/80 backdrop-blur-sm px-8 md:px-10 pt-14 pb-8 shadow-lg shadow-primary/5">
-            {/* Subtle inner glow */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/5 via-transparent to-primary/5" />
-            
-            {/* Mission badge with larger rocket icon */}
-            <div className="absolute -top-6 left-8 flex items-center justify-center w-14 h-14 rounded-full bg-primary ring-4 ring-background shadow-lg shadow-primary/30">
-              <Rocket className="w-7 h-7 text-white drop-shadow-md" />
-            </div>
-            
-            {/* Content */}
-            <div className="relative z-10">
-              <p className="text-[22.5px] font-semibold leading-[1.7] text-foreground/95 text-left mb-5">
-                   By helping companies improve and internationalise their documentation, I ultimately help more people actually use and master new software. Because we live in a time where knowing your way around the right tool — whether that&apos;s an HR, marketing or AI tool — <span className="text-primary font-bold">can make the difference between getting a job or not</span>.
-              </p>
+      {/* 4. Global - globetrotter, on the plain section background */}
+      <section className="relative px-4 py-32">
+        <div className="relative mx-auto max-w-7xl">
+          <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
+            <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
+              <div className="flex flex-col">
+                <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
+                  I&apos;m also a globetrotter. By my 30s, I&apos;d lived in four countries and become fluent in three
+                  languages.
+                </p>
+
+                {/* Countries & languages */}
+                <div className="mt-12 flex flex-1 flex-col justify-center gap-10">
+                  <div className="flex flex-col gap-5">
+                    <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+                        Countries lived in
+                      </h3>
+                                        </div>
+                    <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+                      {countries.map((country) => (
+                        <li
+                          key={country.name}
+                          className="surface-card group flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+                        >
+                          <img
+                            src={`https://flagcdn.com/w320/${country.code}.png`}
+                            srcSet={`https://flagcdn.com/w640/${country.code}.png 2x`}
+                            width={96}
+                            height={64}
+                            loading="lazy"
+                            alt={country.name}
+                            title={country.name}
+                            className="aspect-[3/2] w-full max-w-24 rounded-lg object-cover shadow-lg shadow-black/40 ring-1 ring-white/15 transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex flex-col gap-5">
+                    <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">Languages</h3>
+                                        </div>
+                    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+                      {languages.map((language) => (
+                        <li
+                          key={language.name}
+                          className="surface-card flex min-h-32 flex-col justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+                        >
+                          <span className="text-xl font-semibold tracking-tight text-white">{language.name}</span>
+                          <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
+                            {language.level}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="relative mx-auto aspect-[71/100] w-full max-w-sm overflow-hidden rounded-3xl border border-white/10">
+                <Image
+                  src="/differentiator-four-countries.png"
+                  alt="Standing on a bridge in Bamberg, Germany, one of the four countries I've lived in"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Spacer - gradient removed for consistent background */}
-        <div className="py-3 mt-20" />
+      {/* 5. Startup DNA - immersive, full-height office background with parallax */}
+      <section className="relative flex min-h-screen items-center justify-center overflow-hidden px-4">
+        <div
+          className="absolute inset-0 bg-cover bg-center md:bg-fixed"
+          style={{ backgroundImage: "url('/modern-tech-office-workspace-with-beer-tap-dublin.jpg')" }}
+          aria-hidden="true"
+        />
+        <div className="absolute inset-0 bg-background/82" aria-hidden="true" />
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
 
-      </div>
-    </section>
+        <div className="relative mx-auto max-w-4xl py-32 text-center">
+          <p className="mx-auto text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
+            Most of my career has been at startups — including{" "}
+            <span className="font-bold text-primary">
+              Personio, one of Europe&apos;s unicorns.
+            </span>{" "}
+            So I&apos;m drawn to experimenting, trying new tools, and learning by doing.
+          </p>
+        </div>
+      </section>
+
+    </>
   )
 }

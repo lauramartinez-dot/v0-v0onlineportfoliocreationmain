@@ -8,19 +8,19 @@ export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
-    { label: "My role", href: "#top-differentiators" },
-    { label: "Career stats", href: "#top-achievements" },
-    { label: "Company highlights", href: "#company-highlights" },
-    { label: "Skills and tools", href: "#top-skills" },
+    { label: "About me", href: "#top-differentiators" },
+    { label: "Core principles", href: "#writing-principles" },
+    { label: "Experience as a TW", href: "#company-highlights" },
+    { label: "Writing samples", href: "#writing-samples" },
   ]
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 px-4 py-4 pb-[30px]">
-      <div className="mx-auto max-w-5xl">
-        <div className="flex items-center justify-between rounded-full border-[3px] border-primary/60 bg-background/80 backdrop-blur-md px-8 py-5 mt-5">
-          <a href="#home" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <Sparkles className="h-5 w-5 text-primary" />
-            <span className="font-semibold text-primary text-base">Laura Martínez</span>
+      <div className="mx-auto max-w-7xl">
+        <div className="flex items-center justify-between gap-8 rounded-full border-2 border-primary/60 bg-background/80 backdrop-blur-md px-10 py-7 mt-5">
+          <a href="#home" className="flex shrink-0 items-center gap-2 hover:opacity-80 transition-opacity">
+            <Sparkles className="h-5 w-5 shrink-0 text-primary" />
+            <span className="whitespace-nowrap text-lg font-semibold text-primary">Laura Martínez</span>
           </a>
 
           <div className="hidden items-center gap-8 md:flex">
@@ -28,17 +28,28 @@ export function Navigation() {
               <a
                 key={item.label}
                 href={item.href}
-                className="text-base text-foreground/70 transition-colors hover:text-foreground"
+                className="whitespace-nowrap text-lg font-semibold text-foreground/90 transition-colors hover:text-primary"
               >
                 {item.label}
               </a>
             ))}
           </div>
 
-          <div className="hidden md:flex items-center">
-            <Button size="default" className="rounded-full bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
+          <div className="hidden shrink-0 md:flex items-center gap-2.5">
+            <Button
+              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-lg font-medium text-primary hover:bg-primary/30"
+              asChild
+            >
+              <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
+                <span className="whitespace-nowrap">LinkedIn</span>
+              </a>
+            </Button>
+            <Button
+              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-lg font-medium text-primary hover:bg-primary/30"
+              asChild
+            >
               <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                Download CV
+                <span className="whitespace-nowrap">Download CV</span>
               </a>
             </Button>
           </div>
@@ -62,12 +73,21 @@ export function Navigation() {
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="rounded-lg px-4 py-2 text-sm text-foreground/70 transition-colors hover:bg-primary/10 hover:text-foreground"
+                  className="rounded-lg px-4 py-2 text-lg font-semibold text-foreground/70 transition-colors hover:bg-primary/10 hover:text-foreground"
                 >
                   {item.label}
                 </a>
               ))}
-              <Button size="sm" className="rounded-full mt-2 bg-primary/20 text-primary hover:bg-primary/30 border border-primary/30" asChild>
+              <Button
+                size="sm"
+                className="mt-2 rounded-full bg-primary/20 font-medium text-primary hover:bg-primary/30"
+                asChild
+              >
+                <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
+                  LinkedIn
+                </a>
+              </Button>
+              <Button size="sm" className="rounded-full bg-primary/20 font-medium text-primary hover:bg-primary/30" asChild>
                 <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   Download CV
                 </a>

@@ -16,11 +16,13 @@ import {
   FileText,
   Heart,
   ChevronDown,
+  ChevronUp,
   ExternalLink,
   Video,
   Mail,
   HelpCircle,
   Pen,
+  Sparkles,
 } from "lucide-react"
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 
@@ -388,7 +390,7 @@ const experiences: Experience[] = [
     year: "2023-2025",
     location: "Barcelona",
     country: "Spain",
-    countryFlag: "🇪🇸",
+    countryFlag: "🇪��",
     type: "work",
     description:
       "Implemented data-driven analysis to identify and deprioritize 20% of feature release documentation tasks that had minimal audience impact. This optimization allowed the team to focus resources on high-value content, improving overall documentation quality and team efficiency while maintaining comprehensive coverage of critical features.",
@@ -609,6 +611,7 @@ interface Achievement {
 
 const operationalAchievements: Achievement[] = [
   // Column 1: Writing achievements
+
   {
     id: "style-guide",
     title: "Created Personio's first-ever documentation style guides",
@@ -705,8 +708,18 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   {
+    id: "release-process",
+    title: "Co-built the end-to-end company-wide release process",
+    description:
+      "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
+    icon: TrendingUp,
+    color: "#9931e7",
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
+    column: 2,
+  },
+  {
     id: "deprioritize-tasks",
-    title: "Helped the team deprioritize 20% of low-impact release tasks",
+    title: "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
     description:
       "Used data analysis to identify low-impact documentation tasks, allowing the team to focus on higher-value work.",
     icon: TrendingUp,
@@ -716,7 +729,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "outdated-articles",
-    title: "Enabled removal of 100+ outdated pages, improving content relevance",
+    title: "Designed a content audit that let the team deprecate 100+ outdated pages",
     description:
       "Identified and removed over 100 outdated articles from the Help Center, improving overall content quality and user experience.",
     icon: FileText,
@@ -726,7 +739,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "tableau-reports",
-    title: "Helped the team generate reports 30% faster by improving Tableau dashboards",
+    title: "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
     description:
       "Worked with Data Analysts to enhance Tableau dashboards, streamlining the reporting process for the documentation team.",
     icon: Bot,
@@ -744,16 +757,7 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&auto=format&fit=crop&q=60",
     column: 2,
   },
-  {
-    id: "release-process",
-    title: "Co-built the end-to-end company-wide release process",
-    description:
-      "Contributed to designing and implementing the company-wide release process, ensuring smooth coordination between teams for product launches.",
-    icon: TrendingUp,
-    color: "#9931e7",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60",
-    column: 2,
-  },
+  
   {
     id: "culture-champion",
     title: "Became Culture Champion and conducted +20 company-wide culture interviews",
@@ -765,6 +769,7 @@ const operationalAchievements: Achievement[] = [
     column: 2,
   },
   // Column 3: Translate/Global achievements
+ 
   {
     id: "localization-expansion",
     title: "Grew documentation from 3 to 6 languages",
@@ -775,6 +780,15 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800&auto=format&fit=crop&q=60",
     column: 3,
     tools: ["Smartling", "Phrase", "Zendesk Localization"],
+  },
+   {
+    id: "languages-managed",
+    title: "Managed 5 languages daily via vendors: ES, DE, NL, IT and FR",
+    description:
+      "Via vendors: ES, DE, IT, FR, NL",
+    icon: Globe,
+    color: "#9931e7",
+    column: 3,
   },
   {
     id: "spanish-localization-guides",
@@ -800,7 +814,7 @@ const operationalAchievements: Achievement[] = [
   },
   {
     id: "ai-translation-assistant",
-    title: "Built an AI tool that cut Spanish translation review time by 90%",
+    title: "Built an AI agent that cut Spanish translation review time by 90%",
     description:
       "Built a custom AI-powered assistant to streamline the Spanish translation review process, dramatically reducing the time needed to review and approve translated content.",
     icon: Bot,
@@ -828,6 +842,7 @@ const operationalAchievements: Achievement[] = [
     image: "https://images.unsplash.com/photo-1551279076-6887dee32c7e?w=800&auto=format&fit=crop&q=60",
     column: 3,
   },
+
 ]
 
 const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
@@ -838,11 +853,23 @@ const AchievementCard = ({ achievement }: { achievement: Achievement }) => {
     >
       {/* Left accent border */}
       <div className="absolute left-0 top-2 bottom-2 w-[3px] rounded-full bg-primary/60 group-hover:bg-primary transition-colors" />
-      
-      <div className="px-5 py-4 flex items-center justify-center">
+
+      <div className="px-5 py-4 flex flex-col items-center justify-center gap-2.5">
         <h3 className="text-[15px] font-semibold text-white text-center leading-snug">
           {achievement.title}
         </h3>
+        {achievement.tools && achievement.tools.length > 0 && (
+          <div className="flex flex-wrap justify-center gap-1.5">
+            {achievement.tools.map((tool) => (
+              <span
+                key={tool}
+                className="rounded-full border border-primary/20 bg-primary/10 px-2.5 py-0.5 text-[11px] font-medium text-primary/90"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   )
@@ -1017,31 +1044,14 @@ const ContentTypeCard = ({ contentType, onClick }: { contentType: ContentTypeDat
 
 function PillarColumn({
   label,
-  image,
-  imageAlt,
   children
 }: {
   label: string
-  image: string
-  imageAlt: string
   children: React.ReactNode
 }) {
   return (
     <div className="flex flex-col gap-4">
-      {/* Image header with title overlay */}
-      <div className="relative h-24 rounded-xl overflow-hidden">
-        <Image src={image} alt={imageAlt} fill className="object-cover" />
-        {/* Purple tint overlay - unified across all headers */}
-        <div className="absolute inset-0 bg-primary/60" />
-        {/* Dark gradient overlay from bottom */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent" />
-        {/* Title at bottom left */}
-        <div className="absolute bottom-3 left-4 z-10">
-          <h3 className="text-xl font-bold text-white">{label}</h3>
-        </div>
-      </div>
-      
-      {/* Achievement cards below */}
+      {/* Achievement cards */}
       <div className="flex flex-col gap-3">
         {children}
       </div>
@@ -1057,207 +1067,355 @@ function CompanyCard({
   years,
   country,
   countryFlag,
-  defaultExpanded = false
+  defaultExpanded = false,
+  roleProgression,
+  description,
+  skills,
+  tools,
+  duration,
+  logoClassName = "px-5 py-3 md:px-6 md:py-4",
 }: {
-  children: React.ReactNode
+  children?: React.ReactNode
   logo: string
+  logoClassName?: string
   name: string
   role: string
   years: string
+  duration?: string
   country: string
   countryFlag: string
   defaultExpanded?: boolean
+  roleProgression?: { title: string; period: string }[]
+  description?: React.ReactNode
+  skills?: string[]
+  tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
-    <div className="rounded-3xl border-2 border-primary/30 bg-gradient-to-br from-purple-950/40 via-background to-pink-950/30 shadow-2xl shadow-primary/20 mb-8 hover:border-primary/50 transition-all duration-300 overflow-hidden">
+    <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] mb-8 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
-        className="flex items-center gap-6 p-8 md:p-10 cursor-pointer group"
+        className="p-6 md:p-8 cursor-pointer group"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
-          <Image src={logo} alt={name} fill className="object-contain p-2" />
-        </div>
-        <div className="flex-1 min-w-0">
-          <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
-              <p className="text-[19px] text-foreground/60">{role} &middot; {years}</p>
-        </div>
-        <div className="flex items-center gap-3 shrink-0">
-          {/* Country Flag */}
-          <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
-            <span className="text-lg" title={country}>{countryFlag}</span>
-            <span className="text-xs font-medium text-foreground/70">{country}</span>
+        <div className="flex items-center gap-5 md:gap-6">
+          <div className="relative w-28 h-14 md:w-36 md:h-[72px] rounded-xl overflow-hidden bg-white/95 ring-1 ring-white/10 transition-shadow duration-300 group-hover:ring-primary/40 shrink-0">
+            <Image src={logo} alt={`${name} logo`} fill sizes="144px" className={`object-contain ${logoClassName}`} />
           </div>
-          {/* Expand/Collapse indicator */}
-          <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+          <div className="flex-1 min-w-0">
+            <h3 className="sr-only">{name}</h3>
+            {roleProgression ? (
+              <div className="flex flex-col gap-1">
+                {roleProgression.map((r, idx) => (
+                  <p key={idx} className="text-2xl md:text-3xl font-bold leading-tight text-foreground">
+                    {r.title} <span className="font-normal text-foreground/45">&middot; {r.period}</span>
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col gap-1">
+                <p className="text-2xl md:text-3xl font-bold leading-tight text-foreground text-balance transition-colors group-hover:text-primary">
+                  {role}
+                </p>
+                <p className="text-base md:text-[17px] leading-relaxed text-foreground/60">
+                  {years}
+                  {duration && <span> &middot; {duration}</span>}
+                </p>
+              </div>
+            )}
+          </div>
+          <div className="flex items-center gap-4 shrink-0">
+            {/* Country */}
+            <div className="hidden sm:flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5">
+              <span className="text-base leading-none" aria-hidden="true">📍</span>
+              <span className="text-sm font-medium text-foreground/70">{country.replace(/\s*company$/i, '')}</span>
+            </div>
+            {/* Expand/Collapse indicator */}
+            <ChevronDown className={`w-6 h-6 text-foreground/40 group-hover:text-primary transition-all duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+          </div>
         </div>
       </div>
 
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
-          <div className="pt-6">
-            {children}
+          <div className="pt-6 flex flex-col gap-8">
+            <div
+              className={
+                skills && skills.length > 0
+                  ? "grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-10"
+                  : "flex flex-col gap-8"
+              }
+            >
+              {description && (
+                <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty lg:col-start-1 lg:row-start-1 [&_strong]:font-semibold [&_strong]:text-foreground">
+                  {description}
+                </p>
+              )}
+              {children && <div className="lg:col-start-1 lg:row-start-2">{children}</div>}
+              {skills && skills.length > 0 && (
+                <div className={`lg:col-start-2 ${children ? "lg:row-start-2" : "lg:row-start-1"}`}>
+                  <SkillsPanel skills={skills} />
+                </div>
+              )}
+            </div>
+            {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  </div>
+  </div>
   )
-}
+  }
 
 export default function CareerMapSection() {
   const [selectedType, setSelectedType] = useState<ContentTypeData | null>(null)
 
   return (
     <>
-    {/* Dialog for samples */}
-    <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
-      <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
-        {selectedType && (
-          <>
-            {/* Header image - consistent size with purple overlay */}
-            <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
-              <Image
-                src={selectedType.image}
-                alt={selectedType.name}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-primary/50" />
-            </div>
-            <div className="px-6 pb-6 pt-4">
-              <DialogHeader>
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
-                    <selectedType.icon className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
-                    <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
-                  </div>
-                </div>
-                {/* Audience info */}
-                <div className="mt-4 flex items-center gap-2">
-                  <span className="text-xs text-foreground/50">Audience:</span>
-                  <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
-                    {selectedType.audience}
-                  </span>
-                </div>
-              </DialogHeader>
-              <div className="mt-6">
-              {selectedType.samples.length > 0 ? (
-                <div className="space-y-3">
-                  {selectedType.samples.map((sample, index) => (
-                    <SampleCard key={index} sample={sample} />
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center py-12">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
-                    <FileText className="h-8 w-8 text-primary/50" />
-                  </div>
-                  <p className="text-foreground/60">NDA-protected — but I promise I did!</p>
-                </div>
-              )}
+      {/* Dialog for samples */}
+      <Dialog open={!!selectedType} onOpenChange={(open) => !open && setSelectedType(null)}>
+        <DialogContent className="!w-[90vw] !max-w-3xl max-h-[85vh] overflow-y-auto p-0">
+          {selectedType && (
+            <>
+              {/* Header image - consistent size with purple overlay */}
+              <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
+                <Image
+                  src={selectedType.image}
+                  alt={selectedType.name}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-primary/50" />
               </div>
-            </div>
-          </>
-        )}
-      </DialogContent>
-    </Dialog>
-    <section id="company-highlights" className="py-24 bg-background px-4 scroll-mt-32">
-      <div className="mx-auto max-w-7xl">
-        {/* Section Header */}
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">Company highlights</h2>
-        
+              <div className="px-6 pb-6 pt-4">
+                <DialogHeader>
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
+                      <selectedType.icon className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <DialogTitle className="text-2xl font-bold">{selectedType.name}</DialogTitle>
+                      <p className="text-foreground/60 text-sm mt-1">{selectedType.description}</p>
+                    </div>
+                  </div>
+                  {/* Audience info */}
+                  <div className="mt-4 flex items-center gap-2">
+                    <span className="text-xs text-foreground/50">Audience:</span>
+                    <span className="px-2 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium">
+                      {selectedType.audience}
+                    </span>
+                  </div>
+                </DialogHeader>
+                <div className="mt-6">
+                  {selectedType.samples.length > 0 ? (
+                    <div className="space-y-3">
+                      {selectedType.samples.map((sample, index) => (
+                        <SampleCard key={index} sample={sample} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="text-center py-12">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
+                        <FileText className="h-8 w-8 text-primary/50" />
+                      </div>
+                      <p className="text-foreground/60">NDA-protected — but I promise I did!</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
+      <section id="company-highlights" className="py-24 md:py-32 bg-background px-4 scroll-mt-32">
+        <div className="mx-auto max-w-7xl">
+          {/* Section Header */}
+          <div className="mb-16 text-center">
+            <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+              Experience as a TW<span className="text-primary">.</span>
+            </h2>
+
+            {/* Accent bar - matches the other main section titles */}
+            <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          </div>
+
+          {/* OMP Company Card */}
+          <CompanyCard
+            logo="/omp-wordmark.png"
+            name="OMP"
+            role="Senior Technical Writer"
+            years="2026 - Present"
+          duration="5 months"
+            country="Barcelona, Spain"
+            countryFlag="🇪🇸"
+            defaultExpanded={false}
+            skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation"]}
+            description={
+              <>
+                I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
+                API docs work for less technical users too, and I&apos;m one of the first writers here moving to
+                docs-as-code and building AI agents into how we work.
+              </>
+            }
+            tools={[
+              "Docs-as-code",
+              "Markdown",
+              "XML",
+              "AI agents",
+              "Agentic coding",
+              "Azure DevOps",
+              "Git",
+              "GitHub Copilot",
+              "Visual Studio Code",
+              "Microsoft ecosystem",
+            ]}
+          />
+
+          {/* Personio Company Card */}
+          <CompanyCard
+            logo="/personio-wordmark.png"
+          logoClassName="px-3 py-2 md:px-4 md:py-3"
+            name="Personio"
+            role="Senior Technical Writer"
+            years="2023 - 2025"
+          duration="2.5 years"
+            country="Barcelona, Spain"
+            countryFlag="🇪🇸"
+            defaultExpanded={false}
+            skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
+            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
+            description={
+              <>
+                I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
+                I stayed the only Senior for 2+ years. That meant shaping how we worked, getting our first AI automations
+                off the ground, and speaking up for the docs team in leadership meetings.
+              </>
+            }
+          >
+            {/* Top achievements */}
+            <AchievementsPanel
+              items={[
+                "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
+                "Designed a content audit that let the team deprecate 100+ outdated pages",
+                "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
+                "Built an AI agent that cut Spanish translation review time by 90%",
+              ]}
+            />
+          </CompanyCard>
+
+          {/* Personio - Technical Writer (pre-senior) Company Card */}
+          <CompanyCard
+            logo="/personio-wordmark.png"
+          logoClassName="px-3 py-2 md:px-4 md:py-3"
+            name="Personio"
+            role="Technical Writer"
+            years="2021 - 2023"
+          duration="2.5 years"
+            country="Remote, Germany"
+            countryFlag="🇩🇪"
+            defaultExpanded={false}
+            skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
+            tools={["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]}
+            description={
+              <>
+                I joined as one of the <strong>founding Technical Writers</strong> and watched the company grow like
+                crazy, from 300 to nearly 2,000 employees in 3 years, becoming one of Germany&apos;s most valuable SaaS
+                unicorns ($8.5B).
+              </>
+            }
+          >
+            {/* Top achievements */}
+            <AchievementsPanel
+              items={[
+                "Grew a local 3-writer documentation team into a global team of 10",
+                "Grew documentation from 3 to 6 languages",
+                "Created Personio's first-ever documentation style guides",
+                "Co-founded Personio's first Women's Committee",
+              ]}
+            />
+          </CompanyCard>
         </div>
+      </section>
+    </>
+  )
+}
 
-        {/* OMP Company Card */}
-        <CompanyCard
-          logo="/omp-logo.png"
-          name="OMP"
-          role="Senior Technical Writer"
-          years="2026 - Present"
-          country="Belgium company"
-          countryFlag="🇧🇪"
-          defaultExpanded={false}
-        >
-          <div className="flex items-center justify-center py-12">
-            <p className="text-foreground/50 text-lg italic">WIP - still getting onboarded</p>
-          </div>
-        </CompanyCard>
+function PanelLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-5 flex items-center gap-4">
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
+      <h4 className="text-base font-bold uppercase tracking-[0.2em] text-primary">{children}</h4>
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
+    </div>
+  )
+}
 
-        {/* Personio Company Card */}
-        <CompanyCard
-          logo="/personio-icon-black.png"
-          name="Personio"
-          role="Senior Technical Writer"
-          years="2021 - 2025"
-          country="German company"
-          countryFlag="🇩🇪"
-          defaultExpanded={false}
-        >
-          {/* Achievement Grid */}
-          <div className="grid gap-8 md:grid-cols-3">
-            {/* Column 1 - Writing */}
-            <PillarColumn
-              label="I write"
-              image="/vr-person-blue-tech.png"
-              imageAlt="Writing Skills"
-            >
-              {operationalAchievements
-                .filter((a) => a.column === 1)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </PillarColumn>
+const tileClass =
+  "rounded-xl border border-primary/30 bg-foreground/[0.05] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
 
-            {/* Column 2 - Operations */}
-            <PillarColumn
-              label="I build"
-              image="/3d-graph-computer-illustration.jpg"
-              imageAlt="Operations Skills"
-            >
-              {operationalAchievements
-                .filter((a) => a.column === 2)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </PillarColumn>
+function ToolsPanel({ tools }: { tools: string[] }) {
+  return (
+    <div>
+      <PanelLabel>Tools</PanelLabel>
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+        {tools.map((tool) => (
+          <li
+            key={tool}
+            className={`${tileClass} flex min-h-16 items-center justify-center px-4 py-4 text-center text-xl font-semibold text-foreground`}
+          >
+            {tool}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
 
-            {/* Column 3 - Global */}
-            <PillarColumn
-              label="I translate"
-              image="/still-life-supply-chain.jpg"
-              imageAlt="Global Skills"
-            >
-              {operationalAchievements
-                .filter((a) => a.column === 3)
-                .map((achievement) => (
-                  <AchievementCard key={achievement.id} achievement={achievement} />
-                ))}
-            </PillarColumn>
-          </div>
-
-          {/* Writing Samples Section */}
-          <div className="mt-8 pt-6 border-t border-primary/10">
-            <h3 className="text-base font-semibold mb-4 text-center text-foreground/70">Writing Samples</h3>
-            <div className="grid gap-2 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
-              {contentTypes.map((contentType) => (
-                <ContentTypeCard
-                  key={contentType.id}
-                  contentType={contentType}
-                  onClick={() => setSelectedType(contentType)}
+function SkillsPanel({ skills }: { skills: string[] }) {
+  return (
+    <div className="overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)]">
+      <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
+        <Sparkles className="h-4 w-4 text-primary" />
+        <p className="text-base font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</p>
+      </div>
+      <ul className="flex flex-col divide-y divide-primary/10 px-5 py-1">
+        {skills.map((skill) => (
+          <li key={skill} className="flex items-center justify-between gap-4 py-3">
+            <span className="text-xl font-semibold leading-snug text-foreground">{skill}</span>
+            <span className="flex shrink-0 flex-col items-center">
+              {[0, 1, 2].map((i) => (
+                <ChevronUp
+                  key={i}
+                  className="-mb-[7px] h-4 w-5 animate-skill-arrow text-primary drop-shadow-[0_0_5px_rgba(153,49,231,0.85)] last:mb-0"
+                  strokeWidth={3}
+                  style={{ animationDelay: `${(2 - i) * 180}ms` }}
+                  aria-hidden="true"
                 />
               ))}
-            </div>
-          </div>
-        </CompanyCard>
-      </div>
-    </section>
-    </>
+              <span className="sr-only">leveled up</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function AchievementsPanel({ items }: { items: string[] }) {
+  return (
+    <div>
+      <PanelLabel>Top achievements</PanelLabel>
+      <ul className="flex flex-col gap-3">
+        {items.map((item) => (
+          <li
+            key={item}
+            className={`${tileClass} px-6 py-4 text-center text-lg font-medium leading-relaxed text-foreground text-pretty`}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }

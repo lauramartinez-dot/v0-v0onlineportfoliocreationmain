@@ -9,15 +9,17 @@ export function OriginSection() {
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16">
           {/* Text on the left */}
           <div className="flex-1 text-center md:text-left order-2 md:order-1 animate-slide-in-left">
-            <p className="mb-1 text-[21px] md:text-xl lg:text-2xl text-foreground/70">
-              I was born in Spain.
-            </p>
-            <p className="mb-2 text-lg md:text-xl lg:text-2xl text-foreground/70">
-              But I spent almost a decade living
+            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">
+              I was born in Spain. {"·"} But I spent almost a decade
             </p>
 
-            <h2 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl lg:text-6xl xl:text-7xl">
-              <span className="text-white">abroad in<br></br></span><span className="text-primary">4 countries.</span>
+            <h2 className="text-foreground">
+              <span className="block text-4xl font-bold uppercase tracking-tight md:text-5xl lg:text-6xl">
+                living abroad in
+              </span>
+              <span className="block whitespace-nowrap text-6xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-9xl">
+                3 countries<span className="text-primary">.</span>
+              </span>
             </h2>
           </div>
 
