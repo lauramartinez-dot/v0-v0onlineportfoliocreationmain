@@ -1095,26 +1095,30 @@ function CompanyCard({
         className="p-8 md:p-10 cursor-pointer group"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="flex items-center gap-6">
-          <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-2 ring-primary/30 shadow-lg shrink-0">
-            <Image src={logo} alt={name} fill className="object-contain p-2" />
+        <div className="flex items-center gap-6 md:gap-8">
+          <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
+            <Image src={logo} alt={`${name} logo`} fill className="object-contain p-3 md:p-4" />
           </div>
           <div className="flex-1 min-w-0">
-            <h3 className="text-2xl md:text-3xl font-bold text-foreground group-hover:text-primary transition-colors">{name}</h3>
+            <h3 className="sr-only">{name}</h3>
             {roleProgression ? (
-              <div className="flex flex-col gap-0.5 mt-1">
+              <div className="flex flex-col gap-1">
                 {roleProgression.map((r, idx) => (
-                  <p key={idx} className="text-[19px] text-foreground/60">{r.title} &middot; {r.period}</p>
+                  <p key={idx} className="text-xl md:text-2xl font-semibold text-foreground">
+                    {r.title} <span className="font-normal text-foreground/45">&middot; {r.period}</span>
+                  </p>
                 ))}
               </div>
             ) : (
-  <div className="mt-1 flex flex-col gap-1">
-  <p className="text-lg text-foreground/75">{role}</p>
-  <p className="text-base text-foreground/45">
-  {years}
-  {duration && <span> &middot; {duration}</span>}
-  </p>
-  </div>
+              <div className="flex flex-col gap-2">
+                <p className="text-xl md:text-2xl font-semibold text-foreground text-balance transition-colors group-hover:text-primary">
+                  {role}
+                </p>
+                <p className="text-base text-foreground/50">
+                  {years}
+                  {duration && <span> &middot; {duration}</span>}
+                </p>
+              </div>
             )}
           </div>
           <div className="flex items-center gap-4 shrink-0">
