@@ -28,10 +28,15 @@ export function HighlightsSection() {
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
-            <div className="flex flex-col gap-3">
-            <span className="pl-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
-              6 years ago
-            </span>
+            <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3 pl-1">
+              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-white/50 ring-4 ring-white/10" aria-hidden="true" />
+              <span className="text-lg font-bold tracking-tight text-white/80">2020</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
+                6 years ago
+              </span>
+              <span className="h-px flex-1 bg-gradient-to-r from-white/25 to-primary/50 md:-mr-6" aria-hidden="true" />
+            </div>
             <a
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
               target="_blank"
@@ -66,10 +71,15 @@ export function HighlightsSection() {
             </div>
 
             {/* Now */}
-            <div className="flex flex-col gap-3">
-            <span className="pl-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Now
-            </span>
+            <div className="flex flex-col gap-5">
+            <div className="flex items-center gap-3 pl-1">
+              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-primary ring-4 ring-primary/20 shadow-[0_0_12px_var(--primary)]" aria-hidden="true" />
+              <span className="text-lg font-bold tracking-tight text-white">2026</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                Now
+              </span>
+              <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" aria-hidden="true" />
+            </div>
             <div className="surface-card relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
