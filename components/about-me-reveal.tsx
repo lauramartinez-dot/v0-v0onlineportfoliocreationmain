@@ -24,12 +24,12 @@ export function AboutMeReveal() {
 
         <div className="mt-10 flex flex-col gap-10 md:mt-12 md:gap-14">
           <ScrollReveal>
-            <p className="text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
+            <p className="text-2xl font-medium leading-snug tracking-tight text-white text-balance md:text-3xl lg:text-4xl">
               I still write about technology — engineering and software.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
-            <p className="text-3xl font-semibold leading-[1.15] tracking-tight text-white/50 text-balance md:text-4xl lg:text-[2.75rem]">
+            <p className="text-2xl font-medium leading-snug tracking-tight text-white/50 text-balance md:text-3xl lg:text-4xl">
               In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to{" "}
               <span className="text-white">follow along.</span>
             </p>
