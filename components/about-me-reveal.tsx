@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function AboutMeReveal() {
   return (
-    <div className="px-4 pb-10 pt-28 md:pb-12 md:pt-32">
+    <div className="px-4 pb-6 pt-28 md:pb-8 md:pt-32">
       <div className="mx-auto w-full max-w-4xl">
         <div>
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -22,22 +22,15 @@ export function AboutMeReveal() {
           <div aria-hidden="true" className="h-20 w-px bg-gradient-to-b from-transparent to-primary md:h-28" />
         </ScrollReveal>
 
-        <div className="mt-10 flex flex-col gap-10 md:mt-12 md:gap-14">
-          <ScrollReveal>
-            <p className="text-2xl font-medium leading-snug tracking-tight text-white text-balance md:text-3xl lg:text-4xl">
+        <ScrollReveal className="mt-8 md:mt-10">
+          <div className="flex max-w-2xl flex-col gap-2">
+            <p className="text-base leading-relaxed text-white/70 md:text-lg">
               I still write about technology. Engineering. Software.
             </p>
-          </ScrollReveal>
-          <ScrollReveal delay={150}>
-            <p className="text-2xl font-medium leading-snug tracking-tight text-white/50 text-balance md:text-3xl lg:text-4xl">
-              In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to{" "}
-              <span className="text-white">follow along.</span>
+            <p className="text-base leading-relaxed text-white/45 text-pretty md:text-lg">
+              In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along.
             </p>
-          </ScrollReveal>
-        </div>
-
-        <ScrollReveal delay={300} className="mt-16 md:mt-20">
-          <div aria-hidden="true" className="h-20 w-px bg-gradient-to-b from-primary to-transparent md:h-28" />
+          </div>
         </ScrollReveal>
       </div>
     </div>
