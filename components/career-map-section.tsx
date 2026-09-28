@@ -1071,10 +1071,12 @@ function CompanyCard({
   roleProgression,
   description,
   skills,
-  duration
+  duration,
+  logoClassName = "px-5 py-4 md:px-7 md:py-6",
 }: {
   children: React.ReactNode
   logo: string
+  logoClassName?: string
   name: string
   role: string
   years: string
@@ -1097,7 +1099,7 @@ function CompanyCard({
       >
         <div className="flex items-center gap-6 md:gap-8">
   <div className="relative w-40 h-20 md:w-56 md:h-28 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
-  <Image src={logo} alt={`${name} logo`} fill sizes="224px" className="object-contain px-5 py-4 md:px-7 md:py-6" />
+  <Image src={logo} alt={`${name} logo`} fill sizes="224px" className={`object-contain ${logoClassName}`} />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="sr-only">{name}</h3>
@@ -1298,6 +1300,7 @@ export default function CareerMapSection() {
           {/* Personio Company Card */}
           <CompanyCard
             logo="/personio-wordmark.png"
+          logoClassName="scale-[1.3] px-5 py-3"
             name="Personio"
             role="Senior Technical Writer"
             years="2023 - 2025"
@@ -1331,6 +1334,7 @@ export default function CareerMapSection() {
           {/* Personio - Technical Writer (pre-senior) Company Card */}
           <CompanyCard
             logo="/personio-wordmark.png"
+          logoClassName="scale-[1.3] px-5 py-3"
             name="Personio"
             role="Technical Writer"
             years="2021 - 2023"
