@@ -29,7 +29,7 @@ export function HighlightsSection() {
             {/* Then - links to the live published article */}
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center gap-3 text-center">
-                <span className="text-2xl font-semibold leading-none tracking-tight text-white md:text-3xl">
+                <span className="text-3xl font-semibold leading-[1.15] tracking-tight text-white md:text-4xl lg:text-[2.75rem]">
                   6 years ago
                 </span>
                 <span className="rounded-full border border-white/20 bg-white/[0.06] px-4 py-1.5 text-base font-medium leading-relaxed text-white/85 md:text-[17px]">
@@ -63,7 +63,7 @@ export function HighlightsSection() {
             {/* Now */}
             <div className="flex flex-col gap-6">
               <div className="flex flex-col items-center gap-3 text-center">
-                <span className="text-2xl font-semibold leading-none tracking-tight text-primary md:text-3xl">
+                <span className="text-3xl font-semibold leading-[1.15] tracking-tight text-primary md:text-4xl lg:text-[2.75rem]">
                   Now
                 </span>
                 <span className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-base font-medium leading-relaxed text-primary md:text-[17px]">
