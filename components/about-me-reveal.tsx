@@ -2,7 +2,7 @@ import { ScrollReveal } from "@/components/scroll-reveal"
 
 export function AboutMeReveal() {
   return (
-    <div className="px-4 pb-6 pt-28 md:pb-8 md:pt-32">
+    <div className="px-4 pb-16 pt-28 md:pb-24 md:pt-32">
       <div className="mx-auto w-full max-w-4xl">
         <div className="text-center">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
@@ -23,14 +23,12 @@ export function AboutMeReveal() {
   </ScrollReveal>
   
   <ScrollReveal className="mt-10 md:mt-12">
-          <div className="flex max-w-2xl flex-col gap-2">
-            <p className="text-base leading-relaxed text-white/70 md:text-lg">
-              I still write about technology. Engineering. Software.
-            </p>
-            <p className="text-base leading-relaxed text-white/45 text-pretty md:text-lg">
+          <p className="text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
+            I still write about technology. Engineering. Software.{" "}
+            <span className="text-white/50">
               In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along.
-            </p>
-          </div>
+            </span>
+          </p>
         </ScrollReveal>
       </div>
     </div>
