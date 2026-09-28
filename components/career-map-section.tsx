@@ -1108,27 +1108,22 @@ function CompanyCard({
                 ))}
               </div>
             ) : (
-  <div className="flex flex-col gap-1.5">
-  <p className="text-[19px] text-foreground/70">{role}</p>
-  <p className="flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-[0.15em] text-primary">
-  <span>{years}</span>
-  {duration && (
-  <span className="rounded-full border border-primary/25 bg-primary/10 px-2 py-0.5 text-[11px] tracking-[0.1em] text-primary/90">
-  {duration}
-  </span>
-  )}
+  <div className="mt-1 flex flex-col gap-1">
+  <p className="text-lg text-foreground/75">{role}</p>
+  <p className="text-base text-foreground/45">
+  {years}
+  {duration && <span> &middot; {duration}</span>}
   </p>
   </div>
             )}
           </div>
-          <div className="flex items-center gap-3 shrink-0">
-            {/* Country Flag */}
-            <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20">
-              <span className="text-lg" title={country}>{countryFlag}</span>
-              <span className="text-xs font-medium text-foreground/70">{country}</span>
-            </div>
+          <div className="flex items-center gap-4 shrink-0">
+            {/* Country */}
+            <span className="hidden sm:inline text-base text-foreground/45" title={countryFlag}>
+              {country.replace(/\s*company$/i, '')}
+            </span>
             {/* Expand/Collapse indicator */}
-            <ChevronDown className={`w-6 h-6 text-primary/60 transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`w-6 h-6 text-foreground/40 group-hover:text-primary transition-all duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
           </div>
         </div>
       </div>
