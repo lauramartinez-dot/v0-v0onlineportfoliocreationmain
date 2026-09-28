@@ -161,28 +161,26 @@ export function WritingSamplesSection() {
                     </div>
 
                     {/* Solid footer panel - tech knowledge level is the hero */}
-                    <div className="flex flex-col gap-3 border-t border-white/10 bg-background px-7 pt-7 pb-8">
-                      <div className="flex items-end justify-between gap-4">
-                        <p className="text-3xl font-bold leading-tight tracking-tight text-white md:text-[2rem]">
-                          <span className="block text-primary">{level}</span>
-                          <span className="block">technical knowledge</span>
-                        </p>
-                        {/* Meter makes the High / Medium / Low scale instantly legible */}
-                        <div className="mb-2 flex shrink-0 items-end gap-1" aria-hidden="true">
-                          {[1, 2, 3].map((bar) => (
-                            <span
-                              key={bar}
-                              className={
-                                "w-1.5 rounded-full " +
-                                (bar === 1 ? "h-2.5 " : bar === 2 ? "h-4 " : "h-5.5 ") +
-                                (bar <= filledBars ? "bg-primary" : "bg-white/15")
-                              }
-                            />
-                          ))}
-                        </div>
+                    <div className="flex flex-col gap-5 border-t border-white/10 bg-background px-7 pt-6 pb-7">
+                      <p className="text-2xl font-bold leading-snug tracking-tight text-white">
+                        <span className="block text-primary">{level}</span>
+                        <span className="block">technical knowledge</span>
+                      </p>
+
+                      {/* Segmented scale makes High / Medium / Low comparable across cards */}
+                      <div className="grid grid-cols-3 gap-1.5" aria-hidden="true">
+                        {[1, 2, 3].map((segment) => (
+                          <span
+                            key={segment}
+                            className={
+                              "h-1.5 rounded-full transition-colors " +
+                              (segment <= filledBars ? "bg-primary" : "bg-white/10")
+                            }
+                          />
+                        ))}
                       </div>
 
-                      <p className="text-lg text-white/60 first-letter:uppercase">{readers}</p>
+                      <p className="text-base leading-relaxed text-white/60 first-letter:uppercase">{readers}</p>
                     </div>
                   </button>
                 </DialogTrigger>

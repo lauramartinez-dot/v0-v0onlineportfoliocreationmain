@@ -390,7 +390,7 @@ const experiences: Experience[] = [
     year: "2023-2025",
     location: "Barcelona",
     country: "Spain",
-    countryFlag: "🇪🇸",
+    countryFlag: "🇪��",
     type: "work",
     description:
       "Implemented data-driven analysis to identify and deprioritize 20% of feature release documentation tasks that had minimal audience impact. This optimization allowed the team to focus resources on high-value content, improving overall documentation quality and team efficiency while maintaining comprehensive coverage of critical features.",
@@ -1274,30 +1274,20 @@ export default function CareerMapSection() {
             ]}
           >
             {/* Tools */}
-            <div>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
-              <div className="flex flex-wrap gap-2">
-                {[
-                  "Docs-as-code",
-                  "Markdown",
-                  "XML",
-                  "AI agents",
-                  "Agentic coding",
-                  "Azure DevOps",
-                  "Git",
-                  "GitHub Copilot",
-                  "Visual Studio Code",
-                  "Microsoft ecosystem",
-                ].map((tool) => (
-                  <span
-                    key={tool}
-                    className="rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-[13px] font-semibold text-foreground"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <ToolsPanel
+              tools={[
+                "Docs-as-code",
+                "Markdown",
+                "XML",
+                "AI agents",
+                "Agentic coding",
+                "Azure DevOps",
+                "Git",
+                "GitHub Copilot",
+                "Visual Studio Code",
+                "Microsoft ecosystem",
+              ]}
+            />
 
           </CompanyCard>
 
@@ -1321,44 +1311,17 @@ export default function CareerMapSection() {
             skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
           >
             {/* Top achievements */}
-            <div>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
-                Top achievements
-              </h4>
-              <ul className="flex flex-col gap-2.5">
-                {[
-                  "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
-                  "Designed a content audit that let the team deprecate 100+ outdated pages",
-                  "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
-                  "Built an AI agent that cut Spanish translation review time by 90%",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/10 px-4 py-3 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
-                  >
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                    </span>
-                    <span className="text-[15px] font-semibold leading-relaxed text-foreground text-pretty">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <AchievementsPanel
+              items={[
+                "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
+                "Designed a content audit that let the team deprecate 100+ outdated pages",
+                "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
+                "Built an AI agent that cut Spanish translation review time by 90%",
+              ]}
+            />
 
             {/* Tools */}
-            <div>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
-              <div className="flex flex-wrap gap-2">
-                {["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"].map((tool) => (
-                  <span
-                    key={tool}
-                    className="rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-[13px] font-semibold text-foreground"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <ToolsPanel tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]} />
           </CompanyCard>
 
           {/* Personio - Technical Writer (pre-senior) Company Card */}
@@ -1381,47 +1344,69 @@ export default function CareerMapSection() {
             skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
           >
             {/* Top achievements */}
-            <div>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">
-                Top achievements
-              </h4>
-              <ul className="flex flex-col gap-2.5">
-                {[
-                  "Grew a local 3-writer documentation team into a global team of 10",
-                  "Grew documentation from 3 to 6 languages",
-                  "Created Personio's first-ever documentation style guides",
-                  "Co-founded Personio's first Women's Committee",
-                ].map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center gap-3 rounded-2xl border border-primary/25 bg-primary/10 px-4 py-3 shadow-lg shadow-primary/5 transition-colors hover:border-primary/50"
-                  >
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                    </span>
-                    <span className="text-[15px] font-semibold leading-relaxed text-foreground text-pretty">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <AchievementsPanel
+              items={[
+                "Grew a local 3-writer documentation team into a global team of 10",
+                "Grew documentation from 3 to 6 languages",
+                "Created Personio's first-ever documentation style guides",
+                "Co-founded Personio's first Women's Committee",
+              ]}
+            />
 
             {/* Tools */}
-            <div>
-              <h4 className="mb-4 text-xs font-bold uppercase tracking-[0.16em] text-primary">Tools</h4>
-              <div className="flex flex-wrap gap-2">
-                {["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"].map((tool) => (
-                  <span
-                    key={tool}
-                    className="rounded-full border border-primary/30 bg-primary/15 px-3.5 py-1.5 text-[13px] font-semibold text-foreground"
-                  >
-                    {tool}
-                  </span>
-                ))}
-              </div>
-            </div>
+            <ToolsPanel tools={["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]} />
           </CompanyCard>
         </div>
       </section>
     </>
+  )
+}
+
+function PanelLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="mb-4 flex items-center gap-4">
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/40" />
+      <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">{children}</h4>
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/40" />
+    </div>
+  )
+}
+
+const tileClass =
+  "rounded-xl border border-primary/20 bg-foreground/[0.03] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
+
+function ToolsPanel({ tools }: { tools: string[] }) {
+  return (
+    <div>
+      <PanelLabel>Tools</PanelLabel>
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        {tools.map((tool) => (
+          <li
+            key={tool}
+            className={`${tileClass} flex min-h-14 items-center justify-center px-3 py-3 text-center text-[15px] font-semibold text-foreground`}
+          >
+            {tool}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function AchievementsPanel({ items }: { items: string[] }) {
+  return (
+    <div>
+      <PanelLabel>Top achievements</PanelLabel>
+      <ul className="flex flex-col gap-3">
+        {items.map((item) => (
+          <li
+            key={item}
+            className={`${tileClass} px-5 py-4 text-center text-base font-semibold leading-relaxed text-foreground text-pretty`}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
