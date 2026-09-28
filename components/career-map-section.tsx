@@ -1280,8 +1280,8 @@ export default function CareerMapSection() {
             role="Senior Technical Writer"
             years="2023 - 2025"
           duration="2.5 years"
-            country="German company"
-            countryFlag="🇩🇪"
+            country="Barcelona, Spain"
+            countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
             tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
@@ -1312,7 +1312,7 @@ export default function CareerMapSection() {
             role="Technical Writer"
             years="2021 - 2023"
           duration="2.5 years"
-            country="German company"
+            country="Remote, Germany"
             countryFlag="🇩🇪"
             defaultExpanded={false}
             skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
