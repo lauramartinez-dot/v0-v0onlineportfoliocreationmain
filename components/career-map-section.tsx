@@ -1138,17 +1138,18 @@ function CompanyCard({
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
-          <div className="pt-6 flex flex-col gap-8">
-            {/* Description + Skills unlocked */}
-            {(description || (skills && skills.length > 0)) && (
-              <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-                {description && (
-                  <p className="max-w-2xl text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
-                    {description}
-                  </p>
-                )}
-                {skills && skills.length > 0 && (
-                  <div className="shrink-0 overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)] md:min-w-[360px]">
+          <div className="pt-6 flex flex-col gap-8 md:flex-row md:items-start md:gap-10">
+            <div className="flex min-w-0 flex-1 flex-col gap-8">
+              {description && (
+                <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
+                  {description}
+                </p>
+              )}
+              {children}
+            </div>
+            {skills && skills.length > 0 && (
+              <div className="order-first md:order-none md:sticky md:top-28 md:w-[340px] md:shrink-0">
+                  <div className="overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)]">
                     <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
                       <Sparkles className="h-4 w-4 text-primary" />
                       <p className="text-base font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</p>
@@ -1173,10 +1174,8 @@ function CompanyCard({
                       ))}
                     </ul>
                   </div>
-                )}
               </div>
             )}
-            {children}
           </div>
         </div>
       </div>
@@ -1388,7 +1387,7 @@ function ToolsPanel({ tools }: { tools: string[] }) {
   return (
     <div>
       <PanelLabel>Tools</PanelLabel>
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
         {tools.map((tool) => (
           <li
             key={tool}
