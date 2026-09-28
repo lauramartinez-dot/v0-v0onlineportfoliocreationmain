@@ -1096,8 +1096,8 @@ function CompanyCard({
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex items-center gap-6 md:gap-8">
-          <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
-            <Image src={logo} alt={`${name} logo`} fill className="object-contain p-3 md:p-4" />
+  <div className="relative w-32 h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
+  <Image src={logo} alt={`${name} logo`} fill sizes="176px" className="object-contain px-4 py-3 md:px-5 md:py-4" />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="sr-only">{name}</h3>
@@ -1255,7 +1255,7 @@ export default function CareerMapSection() {
 
           {/* OMP Company Card */}
           <CompanyCard
-            logo="/omp-logo.png"
+            logo="/omp-wordmark.png"
             name="OMP"
             role="Senior Technical Writer"
             years="2026 - Present"
@@ -1297,7 +1297,7 @@ export default function CareerMapSection() {
 
           {/* Personio Company Card */}
           <CompanyCard
-            logo="/personio-icon-black.png"
+            logo="/personio-wordmark.png"
             name="Personio"
             role="Senior Technical Writer"
             years="2023 - 2025"
@@ -1330,7 +1330,7 @@ export default function CareerMapSection() {
 
           {/* Personio - Technical Writer (pre-senior) Company Card */}
           <CompanyCard
-            logo="/personio-icon-black.png"
+            logo="/personio-wordmark.png"
             name="Personio"
             role="Technical Writer"
             years="2021 - 2023"
