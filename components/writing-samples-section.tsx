@@ -144,43 +144,42 @@ export function WritingSamplesSection() {
                       <img
                         src={sample.image || "/placeholder.svg"}
                         alt={`Preview of ${sample.title}`}
-                        className="absolute inset-0 h-full w-full object-cover object-top opacity-55 saturate-[0.7] transition-all duration-700 ease-out group-hover:scale-[1.04] group-hover:opacity-75"
+                        className="absolute inset-0 h-full w-full object-cover object-top opacity-25 grayscale transition-all duration-700 ease-out group-hover:scale-[1.03] group-hover:opacity-45 group-hover:grayscale-0"
                       />
 
-                      {/* Purple wash pushes the preview into the background */}
-                      <div className="absolute inset-0 bg-primary/25 mix-blend-multiply" />
-                      <div className="absolute inset-0 bg-background/20" />
+                      {/* Long scrim so the preview fades into the card */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
 
-                      {/* Short scrim so the image meets the footer panel smoothly */}
-                      <div className="absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background to-transparent" />
-
-                      {/* Expand affordance */}
-                      <span className="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-background/60 text-white backdrop-blur-md ring-1 ring-white/20 transition-all duration-300 group-hover:bg-primary group-hover:text-primary-foreground group-hover:ring-primary">
-                        <Maximize2 className="h-5 w-5" />
+                      {/* Expand affordance - only surfaces on hover */}
+                      <span className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-background/70 text-white opacity-0 ring-1 ring-white/15 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:ring-primary/60 group-focus-visible:opacity-100">
+                        <Maximize2 className="h-4 w-4" />
                       </span>
                     </div>
 
-                    {/* Solid footer panel - tech knowledge level is the hero */}
-                    <div className="flex flex-col gap-5 border-t border-white/10 bg-background px-7 pt-6 pb-7">
-                      <p className="text-2xl font-bold leading-snug tracking-tight text-white">
-                        <span className="block text-primary">{level}</span>
-                        <span className="block">technical knowledge</span>
+                    {/* Footer - one quiet row: audience + tech knowledge level */}
+                    <div className="flex items-end justify-between gap-4 bg-background px-7 pt-5 pb-7">
+                      <p className="text-xl font-semibold tracking-tight text-white first-letter:uppercase">
+                        {readers.replace(/^for /, "")}
                       </p>
 
-                      {/* Segmented scale makes High / Medium / Low comparable across cards */}
-                      <div className="grid grid-cols-3 gap-1.5" aria-hidden="true">
-                        {[1, 2, 3].map((segment) => (
-                          <span
-                            key={segment}
-                            className={
-                              "h-1.5 rounded-full transition-colors " +
-                              (segment <= filledBars ? "bg-primary" : "bg-white/10")
-                            }
-                          />
-                        ))}
+                      <div className="flex items-end gap-2.5">
+                        <span className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
+                          {level}
+                          <span className="sr-only"> technical knowledge</span>
+                        </span>
+                        <span className="flex items-end gap-1 pb-0.5" aria-hidden="true">
+                          {[1, 2, 3].map((segment) => (
+                            <span
+                              key={segment}
+                              className={
+                                "w-1 rounded-full " +
+                                (segment === 1 ? "h-2 " : segment === 2 ? "h-3 " : "h-4 ") +
+                                (segment <= filledBars ? "bg-primary" : "bg-white/15")
+                              }
+                            />
+                          ))}
+                        </span>
                       </div>
-
-                      <p className="text-base leading-relaxed text-white/60 first-letter:uppercase">{readers}</p>
                     </div>
                   </button>
                 </DialogTrigger>
