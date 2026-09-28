@@ -32,7 +32,7 @@ export function HighlightsSection() {
                 <span className="text-2xl font-semibold leading-none tracking-tight text-white md:text-3xl">
                   6 years ago
                 </span>
-                <span className="rounded-full border border-white/20 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/85">
+                <span className="rounded-full border border-white/20 bg-white/[0.06] px-4 py-1.5 text-base font-medium leading-relaxed text-white/85 md:text-[17px]">
                   Tech journalist
                 </span>
               </div>
@@ -66,7 +66,7 @@ export function HighlightsSection() {
                 <span className="text-2xl font-semibold leading-none tracking-tight text-primary md:text-3xl">
                   Now
                 </span>
-                <span className="rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                <span className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-base font-medium leading-relaxed text-primary md:text-[17px]">
                   Technical writer
                 </span>
               </div>
