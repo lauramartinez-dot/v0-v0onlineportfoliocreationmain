@@ -1072,7 +1072,7 @@ function CompanyCard({
   description,
   skills,
   duration,
-  logoClassName = "px-5 py-4 md:px-7 md:py-6",
+  logoClassName = "px-5 py-3 md:px-6 md:py-4",
 }: {
   children: React.ReactNode
   logo: string
@@ -1094,29 +1094,29 @@ function CompanyCard({
     <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] mb-8 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
-        className="p-8 md:p-10 cursor-pointer group"
+        className="p-6 md:p-8 cursor-pointer group"
         onClick={() => setIsExpanded(!isExpanded)}
       >
-        <div className="flex items-center gap-6 md:gap-8">
-  <div className="relative w-40 h-20 md:w-56 md:h-28 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
-  <Image src={logo} alt={`${name} logo`} fill sizes="224px" className={`object-contain ${logoClassName}`} />
+        <div className="flex items-center gap-5 md:gap-6">
+          <div className="relative w-28 h-14 md:w-36 md:h-[72px] rounded-xl overflow-hidden bg-white/95 ring-1 ring-white/10 transition-shadow duration-300 group-hover:ring-primary/40 shrink-0">
+            <Image src={logo} alt={`${name} logo`} fill sizes="144px" className={`object-contain ${logoClassName}`} />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="sr-only">{name}</h3>
             {roleProgression ? (
               <div className="flex flex-col gap-1">
                 {roleProgression.map((r, idx) => (
-                  <p key={idx} className="text-2xl md:text-4xl font-semibold tracking-tight text-foreground">
+                  <p key={idx} className="text-lg md:text-2xl font-semibold tracking-tight text-foreground">
                     {r.title} <span className="font-normal text-foreground/45">&middot; {r.period}</span>
                   </p>
                 ))}
               </div>
             ) : (
-              <div className="flex flex-col gap-2">
-                <p className="text-2xl md:text-4xl font-semibold tracking-tight text-foreground text-balance transition-colors group-hover:text-primary">
+              <div className="flex flex-col gap-1">
+                <p className="text-lg md:text-2xl font-semibold tracking-tight text-foreground text-balance transition-colors group-hover:text-primary">
                   {role}
                 </p>
-                <p className="text-base md:text-lg text-foreground/50">
+                <p className="text-sm md:text-base text-foreground/50">
                   {years}
                   {duration && <span> &middot; {duration}</span>}
                 </p>
@@ -1300,7 +1300,7 @@ export default function CareerMapSection() {
           {/* Personio Company Card */}
           <CompanyCard
             logo="/personio-wordmark.png"
-          logoClassName="scale-[1.3] px-5 py-3"
+          logoClassName="px-3 py-2 md:px-4 md:py-3"
             name="Personio"
             role="Senior Technical Writer"
             years="2023 - 2025"
@@ -1334,7 +1334,7 @@ export default function CareerMapSection() {
           {/* Personio - Technical Writer (pre-senior) Company Card */}
           <CompanyCard
             logo="/personio-wordmark.png"
-          logoClassName="scale-[1.3] px-5 py-3"
+          logoClassName="px-3 py-2 md:px-4 md:py-3"
             name="Personio"
             role="Technical Writer"
             years="2021 - 2023"
