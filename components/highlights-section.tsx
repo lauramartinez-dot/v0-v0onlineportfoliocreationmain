@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { Plane, Code2 } from "lucide-react"
 import { AboutMeReveal } from "@/components/about-me-reveal"
 
 const countries = [
@@ -28,15 +27,6 @@ export function HighlightsSection() {
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
-            <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-3 pl-1">
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-white/50 ring-4 ring-white/10" aria-hidden="true" />
-              <span className="text-lg font-bold tracking-tight text-white/80">2020</span>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
-                6 years ago
-              </span>
-              <span className="h-px flex-1 bg-gradient-to-r from-white/25 to-primary/50 md:-mr-6" aria-hidden="true" />
-            </div>
             <a
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
               target="_blank"
@@ -53,33 +43,17 @@ export function HighlightsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
               </div>
-              <div className="flex flex-col gap-6 p-8">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/10 text-white">
-                    <Plane className="h-6 w-6" />
-                  </span>
-                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/55">
-                    Tech journalist
-                  </span>
-                </div>
+              <div className="flex flex-col gap-3 p-8">
+                <p className="text-lg text-white/60">
+                  <span className="font-semibold text-white/85">6 years ago</span> · Tech journalist
+                </p>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
                   &ldquo;How do planes stay in the air?&rdquo;
                 </p>
-
               </div>
             </a>
-            </div>
 
             {/* Now */}
-            <div className="flex flex-col gap-5">
-            <div className="flex items-center gap-3 pl-1">
-              <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-primary ring-4 ring-primary/20 shadow-[0_0_12px_var(--primary)]" aria-hidden="true" />
-              <span className="text-lg font-bold tracking-tight text-white">2026</span>
-              <span className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-                Now
-              </span>
-              <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent" aria-hidden="true" />
-            </div>
             <div className="surface-card relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
@@ -91,20 +65,14 @@ export function HighlightsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
               </div>
-              <div className="flex flex-col gap-6 p-8">
-                <div className="flex flex-wrap items-center gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary text-primary-foreground">
-                    <Code2 className="h-6 w-6" />
-                  </span>
-                  <span className="text-sm font-semibold uppercase tracking-[0.18em] text-primary/80">
-                    Technical writer
-                  </span>
-                </div>
+              <div className="flex flex-col gap-3 p-8">
+                <p className="text-lg text-white/60">
+                  <span className="font-semibold text-primary">Now</span> · Technical writer
+                </p>
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
                   &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
                 </p>
               </div>
-            </div>
             </div>
           </div>
         </div>
