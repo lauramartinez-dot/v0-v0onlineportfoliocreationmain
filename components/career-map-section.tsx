@@ -1401,7 +1401,7 @@ function AchievementsPanel({ items }: { items: string[] }) {
         {items.map((item) => (
           <li
             key={item}
-            className={`${tileClass} px-6 py-5 text-center text-xl font-semibold leading-relaxed text-foreground text-pretty md:text-2xl`}
+            className={`${tileClass} px-6 py-4 text-center text-lg font-medium leading-relaxed text-foreground text-pretty`}
           >
             {item}
           </li>
