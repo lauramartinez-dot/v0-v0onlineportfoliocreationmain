@@ -1141,15 +1141,15 @@ function CompanyCard({
                   </p>
                 )}
                 {skills && skills.length > 0 && (
-                  <div className="shrink-0 overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)] md:min-w-[300px]">
+                  <div className="shrink-0 overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)] md:min-w-[360px]">
                     <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
-                      <Sparkles className="h-3.5 w-3.5 text-primary" />
-                      <p className="text-[11px] font-bold uppercase tracking-[0.22em] text-primary">Skills unlocked</p>
+                      <Sparkles className="h-4 w-4 text-primary" />
+                      <p className="text-base font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</p>
                     </div>
                     <ul className="flex flex-col divide-y divide-primary/10 px-5 py-1">
                       {skills.map((skill) => (
-                        <li key={skill} className="flex items-center justify-between gap-4 py-2.5">
-                          <span className="text-[15px] font-semibold leading-snug text-foreground/90">{skill}</span>
+                        <li key={skill} className="flex items-center justify-between gap-4 py-3">
+                          <span className="text-xl font-semibold leading-snug text-foreground">{skill}</span>
                           <span className="flex shrink-0 flex-col items-center">
                             {[0, 1, 2].map((i) => (
                               <ChevronUp
@@ -1364,16 +1364,16 @@ export default function CareerMapSection() {
 
 function PanelLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-4 flex items-center gap-4">
-      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/40" />
-      <h4 className="text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">{children}</h4>
-      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/40" />
+    <div className="mb-5 flex items-center gap-4">
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
+      <h4 className="text-base font-bold uppercase tracking-[0.2em] text-primary">{children}</h4>
+      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
     </div>
   )
 }
 
 const tileClass =
-  "rounded-xl border border-primary/20 bg-foreground/[0.03] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
+  "rounded-xl border border-primary/30 bg-foreground/[0.05] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
 
 function ToolsPanel({ tools }: { tools: string[] }) {
   return (
@@ -1383,7 +1383,7 @@ function ToolsPanel({ tools }: { tools: string[] }) {
         {tools.map((tool) => (
           <li
             key={tool}
-            className={`${tileClass} flex min-h-14 items-center justify-center px-3 py-3 text-center text-[15px] font-semibold text-foreground`}
+            className={`${tileClass} flex min-h-16 items-center justify-center px-4 py-4 text-center text-xl font-semibold text-foreground`}
           >
             {tool}
           </li>
@@ -1401,7 +1401,7 @@ function AchievementsPanel({ items }: { items: string[] }) {
         {items.map((item) => (
           <li
             key={item}
-            className={`${tileClass} px-5 py-4 text-center text-base font-semibold leading-relaxed text-foreground text-pretty`}
+            className={`${tileClass} px-6 py-5 text-center text-xl font-semibold leading-relaxed text-foreground text-pretty md:text-2xl`}
           >
             {item}
           </li>
