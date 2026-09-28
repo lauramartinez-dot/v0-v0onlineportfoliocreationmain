@@ -1108,17 +1108,17 @@ function CompanyCard({
             {roleProgression ? (
               <div className="flex flex-col gap-1">
                 {roleProgression.map((r, idx) => (
-                  <p key={idx} className="text-lg md:text-2xl font-semibold tracking-tight text-foreground">
+                  <p key={idx} className="text-2xl md:text-3xl font-bold leading-tight text-foreground">
                     {r.title} <span className="font-normal text-foreground/45">&middot; {r.period}</span>
                   </p>
                 ))}
               </div>
             ) : (
               <div className="flex flex-col gap-1">
-                <p className="text-lg md:text-2xl font-semibold tracking-tight text-foreground text-balance transition-colors group-hover:text-primary">
+                <p className="text-2xl md:text-3xl font-bold leading-tight text-foreground text-balance transition-colors group-hover:text-primary">
                   {role}
                 </p>
-                <p className="text-sm md:text-base text-foreground/50">
+                <p className="text-base md:text-[17px] leading-relaxed text-foreground/60">
                   {years}
                   {duration && <span> &middot; {duration}</span>}
                 </p>
