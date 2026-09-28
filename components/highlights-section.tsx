@@ -29,8 +29,8 @@ export function HighlightsSection() {
             {/* Then - links to the live published article */}
             <div className="flex flex-col gap-6">
   <div className="flex flex-col items-center gap-3 text-center">
-  <span className="text-4xl font-extrabold leading-none tracking-tight text-white md:text-5xl lg:text-6xl">6 years ago</span>
-  <span className="rounded-full border border-white/20 bg-white/[0.06] px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.2em] text-white/85 md:text-base">Tech journalist</span>
+  <span className="text-2xl font-semibold leading-none tracking-tight text-white md:text-3xl">6 years ago</span>
+  <span className="rounded-full border border-white/20 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/85 md:text-sm">Tech journalist</span>
             </div>
             <a
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
@@ -59,8 +59,8 @@ export function HighlightsSection() {
             {/* Now */}
             <div className="flex flex-col gap-6">
   <div className="flex flex-col items-center gap-3 text-center">
-  <span className="text-4xl font-extrabold leading-none tracking-tight text-primary md:text-5xl lg:text-6xl">Now</span>
-  <span className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.2em] text-primary md:text-base">Technical writer</span>
+  <span className="text-2xl font-semibold leading-none tracking-tight text-primary md:text-3xl">Now</span>
+  <span className="rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary md:text-sm">Technical writer</span>
             </div>
             <div className="surface-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
