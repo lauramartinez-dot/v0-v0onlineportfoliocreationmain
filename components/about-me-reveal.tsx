@@ -25,7 +25,7 @@ export function AboutMeReveal() {
         <div className="mt-10 flex flex-col gap-10 md:mt-12 md:gap-14">
           <ScrollReveal>
             <p className="text-2xl font-medium leading-snug tracking-tight text-white text-balance md:text-3xl lg:text-4xl">
-              I still write about technology — engineering and software.
+              I still write about technology. Engineering. Software.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={150}>
