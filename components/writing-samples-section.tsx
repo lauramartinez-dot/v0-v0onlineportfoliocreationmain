@@ -159,7 +159,7 @@ export function WritingSamplesSection() {
                     {/* Footer - technical expertise level + audience */}
                     <div className="flex flex-col border-t border-white/10 bg-background px-7 pt-6 pb-7">
                       <div className="flex items-center justify-between gap-4">
-                        <span className="text-sm font-bold uppercase tracking-[0.18em] text-white/70">
+                        <span className="text-base font-bold uppercase tracking-[0.2em] text-white/70">
                           Technical expertise
                         </span>
                         <span className="flex items-end gap-1" aria-hidden="true">
@@ -179,7 +179,7 @@ export function WritingSamplesSection() {
                       <p className="mt-2 text-5xl font-extrabold uppercase leading-none tracking-tight text-primary lg:text-6xl">
                         {level}
                       </p>
-                      <p className="mt-3 text-sm font-bold uppercase tracking-[0.18em] text-white/70">
+                      <p className="mt-3 text-base md:text-[17px] leading-relaxed text-white/60">
                         {readers}
                       </p>
                     </div>
