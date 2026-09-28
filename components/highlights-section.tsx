@@ -44,10 +44,10 @@ export function HighlightsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
               </div>
               <div className="flex flex-col gap-2 p-8">
-                <p className="text-lg text-white/60">
+                <p className="text-base md:text-[17px] leading-relaxed text-white/60">
                   <span className="font-semibold text-white/85">6 years ago</span> · Tech journalist
                 </p>
-                <p className="text-lg font-semibold leading-relaxed text-white text-pretty">
+                <p className="text-base md:text-[17px] font-semibold leading-relaxed text-white text-pretty">
                   &ldquo;How do planes stay in the air?&rdquo;
                 </p>
               </div>
@@ -66,10 +66,10 @@ export function HighlightsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
               </div>
               <div className="flex flex-col gap-2 p-8">
-                <p className="text-lg text-white/60">
+                <p className="text-base md:text-[17px] leading-relaxed text-white/60">
                   <span className="font-semibold text-primary">Now</span> · Technical writer
                 </p>
-                <p className="text-lg font-semibold leading-relaxed text-white text-pretty">
+                <p className="text-base md:text-[17px] font-semibold leading-relaxed text-white text-pretty">
                   &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
                 </p>
               </div>
