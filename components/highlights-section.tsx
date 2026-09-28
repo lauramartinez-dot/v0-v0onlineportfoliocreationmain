@@ -27,11 +27,16 @@ export function HighlightsSection() {
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
+            <div className="flex flex-col gap-6">
+            <div className="flex flex-col items-center gap-2 text-center">
+              <span className="text-3xl font-bold tracking-tight text-white md:text-4xl">6 years ago</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">Tech journalist</span>
+            </div>
             <a
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
               target="_blank"
               rel="noopener noreferrer"
-              className="surface-card group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+              className="surface-card group relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
@@ -43,18 +48,21 @@ export function HighlightsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
               </div>
-              <div className="flex flex-col gap-3 p-8">
-                <p className="text-lg text-white/60">
-                  <span className="font-semibold text-white/85">6 years ago</span> · Tech journalist
-                </p>
+              <div className="flex flex-col p-8">
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
                   &ldquo;How do planes stay in the air?&rdquo;
                 </p>
               </div>
             </a>
+            </div>
 
             {/* Now */}
-            <div className="surface-card relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
+            <div className="flex flex-col gap-6">
+            <div className="flex flex-col items-center gap-2 text-center">
+              <span className="text-3xl font-bold tracking-tight text-primary md:text-4xl">Now</span>
+              <span className="text-xs font-semibold uppercase tracking-[0.25em] text-white/55">Technical writer</span>
+            </div>
+            <div className="surface-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
                   src="/now-tech-docs.png"
@@ -65,14 +73,12 @@ export function HighlightsSection() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
               </div>
-              <div className="flex flex-col gap-3 p-8">
-                <p className="text-lg text-white/60">
-                  <span className="font-semibold text-primary">Now</span> · Technical writer
-                </p>
+              <div className="flex flex-col p-8">
                 <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
                   &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
                 </p>
               </div>
+            </div>
             </div>
           </div>
         </div>
