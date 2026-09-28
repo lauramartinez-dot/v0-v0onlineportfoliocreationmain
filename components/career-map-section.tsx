@@ -1144,19 +1144,21 @@ function CompanyCard({
             <div
               className={
                 skills && skills.length > 0
-                  ? "grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10"
+                  ? "grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-10"
                   : "flex flex-col gap-8"
               }
             >
-              <div className="flex flex-col gap-8">
-                {description && (
-                  <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
-                    {description}
-                  </p>
-                )}
-                {children}
-              </div>
-              {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+              {description && (
+                <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty lg:col-start-1 lg:row-start-1 [&_strong]:font-semibold [&_strong]:text-foreground">
+                  {description}
+                </p>
+              )}
+              {children && <div className="lg:col-start-1 lg:row-start-2">{children}</div>}
+              {skills && skills.length > 0 && (
+                <div className={`lg:col-start-2 ${children ? "lg:row-start-2" : "lg:row-start-1"}`}>
+                  <SkillsPanel skills={skills} />
+                </div>
+              )}
             </div>
             {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
