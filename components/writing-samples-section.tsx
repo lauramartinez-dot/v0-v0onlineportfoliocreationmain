@@ -156,29 +156,31 @@ export function WritingSamplesSection() {
                       </span>
                     </div>
 
-                    {/* Footer - one quiet row: audience + tech knowledge level */}
-                    <div className="flex items-end justify-between gap-4 bg-background px-7 pt-5 pb-7">
-                      <p className="text-xl font-semibold tracking-tight text-white first-letter:uppercase">
-                        {readers.replace(/^for /, "")}
-                      </p>
-
-                      <div className="flex items-end gap-2.5">
-                        <span className="text-sm font-semibold uppercase tracking-[0.16em] text-primary">
-                          {level}
-                          <span className="sr-only"> technical knowledge</span>
+                    {/* Footer - technical expertise level + audience */}
+                    <div className="flex flex-col gap-2 border-t border-white/10 bg-background px-7 pt-5 pb-7">
+                      <div className="flex items-center justify-between gap-4">
+                        <span className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70">
+                          Technical expertise
                         </span>
-                        <span className="flex items-end gap-1 pb-0.5" aria-hidden="true">
+                        <span className="flex items-end gap-1" aria-hidden="true">
                           {[1, 2, 3].map((segment) => (
                             <span
                               key={segment}
                               className={
-                                "w-1 rounded-full " +
-                                (segment === 1 ? "h-2 " : segment === 2 ? "h-3 " : "h-4 ") +
+                                "w-1.5 rounded-full " +
+                                (segment === 1 ? "h-2.5 " : segment === 2 ? "h-3.5 " : "h-5 ") +
                                 (segment <= filledBars ? "bg-primary" : "bg-white/15")
                               }
                             />
                           ))}
                         </span>
+                      </div>
+
+                      <div className="flex items-baseline justify-between gap-4">
+                        <p className="text-3xl font-bold tracking-tight text-primary">{level}</p>
+                        <p className="text-base font-medium text-white/85 first-letter:uppercase">
+                          {readers}
+                        </p>
                       </div>
                     </div>
                   </button>
