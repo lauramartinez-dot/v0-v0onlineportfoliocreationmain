@@ -24,9 +24,9 @@ export function AboutMeReveal() {
         </ScrollReveal>
 
         <ScrollReveal className="mt-10 md:mt-12">
-          <p className={`max-w-4xl ${statementClass}`}>
-            I still write about technology. Engineering. Software.{" "}
-            <span className="text-white/50">
+  <p className="max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-white text-pretty md:text-3xl">
+  I still write about technology. Engineering. Software.
+  <span className="mt-3 block text-lg font-normal leading-relaxed tracking-normal text-white/55 md:text-xl">
               In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along.
             </span>
           </p>
