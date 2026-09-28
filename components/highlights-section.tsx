@@ -23,62 +23,70 @@ export function HighlightsSection() {
       </section>
 
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
-      <section className="relative px-4 pb-24 pt-4">
+      <section className="relative px-4 pb-32 pt-4">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
+          <div className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2">
             {/* Then - links to the live published article */}
             <div className="flex flex-col gap-6">
-  <div className="flex flex-col items-center gap-3 text-center">
-  <span className="text-2xl font-semibold leading-none tracking-tight text-white md:text-3xl">6 years ago</span>
-  <span className="rounded-full border border-white/20 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/85 md:text-sm">Tech journalist</span>
-            </div>
-            <a
-              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="surface-card group relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
-            >
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
-                <Image
-                  src="/then-airplane-article.png"
-                  alt="A passenger airplane flying low over a city skyline and river"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
+              <div className="flex flex-col items-center gap-3 text-center">
+                <span className="text-2xl font-semibold leading-none tracking-tight text-white md:text-3xl">
+                  6 years ago
+                </span>
+                <span className="rounded-full border border-white/20 bg-white/[0.06] px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/85">
+                  Tech journalist
+                </span>
               </div>
-              <div className="flex flex-col p-8">
-                <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
-                  &ldquo;How do planes stay in the air?&rdquo;
-                </p>
-              </div>
-            </a>
+              <a
+                href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="surface-card group relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+              >
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <Image
+                    src="/then-airplane-article.png"
+                    alt="A passenger airplane flying low over a city skyline and river"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
+                </div>
+                <div className="flex flex-1 flex-col p-8 md:p-10">
+                  <p className="text-2xl font-semibold leading-snug tracking-tight text-white text-balance md:text-3xl">
+                    &ldquo;How do planes stay in the air?&rdquo;
+                  </p>
+                </div>
+              </a>
             </div>
 
             {/* Now */}
             <div className="flex flex-col gap-6">
-  <div className="flex flex-col items-center gap-3 text-center">
-  <span className="text-2xl font-semibold leading-none tracking-tight text-primary md:text-3xl">Now</span>
-  <span className="rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary md:text-sm">Technical writer</span>
-            </div>
-            <div className="surface-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
-              <div className="relative aspect-[4/5] w-full overflow-hidden">
-                <Image
-                  src="/now-tech-docs.png"
-                  alt="A modern software API documentation page on a dark themed screen"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
+              <div className="flex flex-col items-center gap-3 text-center">
+                <span className="text-2xl font-semibold leading-none tracking-tight text-primary md:text-3xl">
+                  Now
+                </span>
+                <span className="rounded-full border border-primary/40 bg-primary/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+                  Technical writer
+                </span>
               </div>
-              <div className="flex flex-col p-8">
-                <p className="text-2xl font-bold leading-snug text-white text-balance md:text-3xl">
-                  &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
-                </p>
+              <div className="surface-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
+                <div className="relative aspect-[4/5] w-full overflow-hidden">
+                  <Image
+                    src="/now-tech-docs.png"
+                    alt="A modern software API documentation page on a dark themed screen"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
+                </div>
+                <div className="flex flex-1 flex-col p-8 md:p-10">
+                  <p className="text-2xl font-semibold leading-snug tracking-tight text-white text-balance md:text-3xl">
+                    &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
+                  </p>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
