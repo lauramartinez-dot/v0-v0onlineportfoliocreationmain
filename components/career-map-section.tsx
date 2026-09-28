@@ -1071,10 +1071,11 @@ function CompanyCard({
   roleProgression,
   description,
   skills,
+  tools,
   duration,
   logoClassName = "px-5 py-3 md:px-6 md:py-4",
 }: {
-  children: React.ReactNode
+  children?: React.ReactNode
   logo: string
   logoClassName?: string
   name: string
@@ -1087,6 +1088,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
+  tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
@@ -1139,22 +1141,25 @@ function CompanyCard({
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
           <div className="pt-6 flex flex-col gap-8">
-            {description && (
-              <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
-                {description}
-              </p>
-  )}
-  {skills && skills.length > 0 ? (
-  <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10">
-  <div className="order-2 flex flex-col gap-8 lg:order-1">{children}</div>
-  <div className="order-1 lg:order-2 lg:sticky lg:top-28">
-  <SkillsPanel skills={skills} />
-  </div>
-  </div>
-  ) : (
-  children
-  )}
-  </div>
+            <div
+              className={
+                skills && skills.length > 0
+                  ? "grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10"
+                  : "flex flex-col gap-8"
+              }
+            >
+              <div className="flex flex-col gap-8">
+                {description && (
+                  <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
+                    {description}
+                  </p>
+                )}
+                {children}
+              </div>
+              {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+            </div>
+            {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
+          </div>
   </div>
   </div>
   </div>
@@ -1251,24 +1256,19 @@ export default function CareerMapSection() {
                 docs-as-code and building AI agents into how we work.
               </>
             }
-          >
-            {/* Tools */}
-            <ToolsPanel
-              tools={[
-                "Docs-as-code",
-                "Markdown",
-                "XML",
-                "AI agents",
-                "Agentic coding",
-                "Azure DevOps",
-                "Git",
-                "GitHub Copilot",
-                "Visual Studio Code",
-                "Microsoft ecosystem",
-              ]}
-            />
-
-          </CompanyCard>
+            tools={[
+              "Docs-as-code",
+              "Markdown",
+              "XML",
+              "AI agents",
+              "Agentic coding",
+              "Azure DevOps",
+              "Git",
+              "GitHub Copilot",
+              "Visual Studio Code",
+              "Microsoft ecosystem",
+            ]}
+          />
 
           {/* Personio Company Card */}
           <CompanyCard
@@ -1282,6 +1282,7 @@ export default function CareerMapSection() {
             countryFlag="🇩🇪"
             defaultExpanded={false}
             skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
+            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
             description={
               <>
                 I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
@@ -1299,9 +1300,6 @@ export default function CareerMapSection() {
                 "Built an AI agent that cut Spanish translation review time by 90%",
               ]}
             />
-
-            {/* Tools */}
-            <ToolsPanel tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]} />
           </CompanyCard>
 
           {/* Personio - Technical Writer (pre-senior) Company Card */}
@@ -1316,6 +1314,7 @@ export default function CareerMapSection() {
             countryFlag="🇩🇪"
             defaultExpanded={false}
             skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
+            tools={["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]}
             description={
               <>
                 I joined as one of the <strong>founding Technical Writers</strong> and watched the company grow like
@@ -1333,9 +1332,6 @@ export default function CareerMapSection() {
                 "Co-founded Personio's first Women's Committee",
               ]}
             />
-
-            {/* Tools */}
-            <ToolsPanel tools={["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]} />
           </CompanyCard>
         </div>
       </section>
