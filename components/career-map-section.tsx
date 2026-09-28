@@ -1138,50 +1138,28 @@ function CompanyCard({
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
-          <div className="pt-6 flex flex-col gap-8 md:flex-row md:items-start md:gap-10">
-            <div className="flex min-w-0 flex-1 flex-col gap-8">
-              {description && (
-                <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
-                  {description}
-                </p>
-              )}
-              {children}
-            </div>
-            {skills && skills.length > 0 && (
-              <div className="order-first md:order-none md:sticky md:top-28 md:w-[340px] md:shrink-0">
-                  <div className="overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)]">
-                    <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
-                      <Sparkles className="h-4 w-4 text-primary" />
-                      <p className="text-base font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</p>
-                    </div>
-                    <ul className="flex flex-col divide-y divide-primary/10 px-5 py-1">
-                      {skills.map((skill) => (
-                        <li key={skill} className="flex items-center justify-between gap-4 py-3">
-                          <span className="text-xl font-semibold leading-snug text-foreground">{skill}</span>
-                          <span className="flex shrink-0 flex-col items-center">
-                            {[0, 1, 2].map((i) => (
-                              <ChevronUp
-                                key={i}
-                                className="-mb-[7px] h-4 w-5 animate-skill-arrow text-primary drop-shadow-[0_0_5px_rgba(153,49,231,0.85)] last:mb-0"
-                                strokeWidth={3}
-                                style={{ animationDelay: `${(2 - i) * 180}ms` }}
-                                aria-hidden="true"
-                              />
-                            ))}
-                            <span className="sr-only">leveled up</span>
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </div>
+          <div className="pt-6 flex flex-col gap-8">
+            {description && (
+              <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty [&_strong]:font-semibold [&_strong]:text-foreground">
+                {description}
+              </p>
+  )}
+  {skills && skills.length > 0 ? (
+  <div className="grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-10">
+  <div className="order-2 flex flex-col gap-8 lg:order-1">{children}</div>
+  <div className="order-1 lg:order-2 lg:sticky lg:top-28">
+  <SkillsPanel skills={skills} />
+  </div>
+  </div>
+  ) : (
+  children
+  )}
+  </div>
+  </div>
+  </div>
+  </div>
   )
-}
+  }
 
 export default function CareerMapSection() {
   const [selectedType, setSelectedType] = useState<ContentTypeData | null>(null)
@@ -1265,6 +1243,7 @@ export default function CareerMapSection() {
             country="Belgium company"
             countryFlag="🇧🇪"
             defaultExpanded={false}
+            skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation"]}
             description={
               <>
                 I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
@@ -1272,12 +1251,6 @@ export default function CareerMapSection() {
                 docs-as-code and building AI agents into how we work.
               </>
             }
-            skills={[
-  "Developer documentation",
-  "API specialization",
-  "Docs as code",
-  "Agentic documentation",
-            ]}
           >
             {/* Tools */}
             <ToolsPanel
@@ -1308,6 +1281,7 @@ export default function CareerMapSection() {
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
+            skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
             description={
               <>
                 I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
@@ -1315,7 +1289,6 @@ export default function CareerMapSection() {
                 off the ground, and speaking up for the docs team in leadership meetings.
               </>
             }
-            skills={["Business acumen", "Content strategy", "Data-driven decision-making"]}
           >
             {/* Top achievements */}
             <AchievementsPanel
@@ -1342,6 +1315,7 @@ export default function CareerMapSection() {
             country="German company"
             countryFlag="🇩🇪"
             defaultExpanded={false}
+            skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
             description={
               <>
                 I joined as one of the <strong>founding Technical Writers</strong> and watched the company grow like
@@ -1349,7 +1323,6 @@ export default function CareerMapSection() {
                 unicorns ($8.5B).
               </>
             }
-            skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
           >
             {/* Top achievements */}
             <AchievementsPanel
@@ -1394,6 +1367,36 @@ function ToolsPanel({ tools }: { tools: string[] }) {
             className={`${tileClass} flex min-h-16 items-center justify-center px-4 py-4 text-center text-xl font-semibold text-foreground`}
           >
             {tool}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+function SkillsPanel({ skills }: { skills: string[] }) {
+  return (
+    <div className="overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)]">
+      <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
+        <Sparkles className="h-4 w-4 text-primary" />
+        <p className="text-base font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</p>
+      </div>
+      <ul className="flex flex-col divide-y divide-primary/10 px-5 py-1">
+        {skills.map((skill) => (
+          <li key={skill} className="flex items-center justify-between gap-4 py-3">
+            <span className="text-xl font-semibold leading-snug text-foreground">{skill}</span>
+            <span className="flex shrink-0 flex-col items-center">
+              {[0, 1, 2].map((i) => (
+                <ChevronUp
+                  key={i}
+                  className="-mb-[7px] h-4 w-5 animate-skill-arrow text-primary drop-shadow-[0_0_5px_rgba(153,49,231,0.85)] last:mb-0"
+                  strokeWidth={3}
+                  style={{ animationDelay: `${(2 - i) * 180}ms` }}
+                  aria-hidden="true"
+                />
+              ))}
+              <span className="sr-only">leveled up</span>
+            </span>
           </li>
         ))}
       </ul>
