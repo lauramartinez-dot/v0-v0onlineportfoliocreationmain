@@ -116,9 +116,9 @@ function LinkBox({ label, href }: { label: string; href: string }) {
 
 export function WritingSamplesSection() {
   return (
-    <section id="writing-samples" className="relative px-4 pt-32 pb-32 scroll-mt-32">
-      <div className="mx-auto max-w-[88rem]">
-        <div className="text-center mb-14">
+    <section id="writing-samples" className="relative px-4 py-24 md:py-32 scroll-mt-32">
+      <div className="mx-auto max-w-7xl">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Writing samples<span className="text-primary">.</span>
           </h2>

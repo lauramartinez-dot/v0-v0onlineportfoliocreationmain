@@ -1228,10 +1228,10 @@ export default function CareerMapSection() {
           )}
         </DialogContent>
       </Dialog>
-      <section id="company-highlights" className="py-24 bg-background px-4 scroll-mt-32">
+      <section id="company-highlights" className="py-24 md:py-32 bg-background px-4 scroll-mt-32">
         <div className="mx-auto max-w-7xl">
           {/* Section Header */}
-          <div className="mb-12 text-center">
+          <div className="mb-16 text-center">
             <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
               Experience as a TW<span className="text-primary">.</span>
             </h2>

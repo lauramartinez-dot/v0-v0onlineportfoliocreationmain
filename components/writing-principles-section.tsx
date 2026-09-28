@@ -41,9 +41,9 @@ const principles = [
 
 export function WritingPrinciplesSection() {
   return (
-    <section id="writing-principles" className="relative px-4 pt-24 pb-24 scroll-mt-32">
+    <section id="writing-principles" className="relative px-4 py-24 md:py-32 scroll-mt-32">
       <div className="mx-auto max-w-7xl">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             Core principles<span className="text-primary">.</span>
           </h2>

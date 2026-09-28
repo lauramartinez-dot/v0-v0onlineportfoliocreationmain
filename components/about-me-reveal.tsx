@@ -4,16 +4,16 @@ export function AboutMeReveal() {
   return (
     <div className="px-4 pb-6 pt-28 md:pb-8 md:pt-32">
       <div className="mx-auto w-full max-w-4xl">
-        <div>
+        <div className="text-center">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
             About me<span className="text-primary">.</span>
           </h2>
-          <div className="mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
         <p className="mt-16 text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]">
           I&apos;m a tech journalist turned technical writer — and honestly,{" "}
-          <span className="font-bold" style={{ color: "#cf52c7" }}>
+          <span className="font-bold text-primary">
             the job hasn&apos;t changed that much.
           </span>
         </p>

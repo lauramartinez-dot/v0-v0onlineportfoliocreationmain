@@ -97,7 +97,7 @@ export function HighlightsSection() {
         <div className="relative mx-auto max-w-4xl py-32 text-center">
           <p className="mx-auto max-w-4xl text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
             The mission hasn&apos;t changed:{" "}
-            <span className="font-bold" style={{ color: "#cf52c7" }}>
+            <span className="font-bold text-primary">
               democratising access to technical knowledge.
             </span>{" "}
             The more people understand technology, use it, and help build it, the further we can push the frontiers of
@@ -195,7 +195,7 @@ export function HighlightsSection() {
         <div className="relative mx-auto max-w-4xl py-32 text-center">
           <p className="mx-auto text-2xl font-medium tracking-tight leading-snug text-white text-pretty md:text-3xl lg:text-4xl">
             Most of my career has been at startups — including{" "}
-            <span className="font-bold" style={{ color: "#cf52c7" }}>
+            <span className="font-bold text-primary">
               Personio, one of Europe&apos;s unicorns.
             </span>{" "}
             So I&apos;m drawn to experimenting, trying new tools, and learning by doing.
