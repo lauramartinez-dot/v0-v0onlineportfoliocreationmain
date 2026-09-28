@@ -24,10 +24,14 @@ export function HighlightsSection() {
       </section>
 
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
-      <section className="relative px-4 py-24">
+      <section className="relative px-4 pb-24 pt-4">
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 items-stretch">
             {/* Then - links to the live published article */}
+            <div className="flex flex-col gap-3">
+            <span className="pl-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/50">
+              6 years ago
+            </span>
             <a
               href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
               target="_blank"
@@ -43,9 +47,6 @@ export function HighlightsSection() {
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/20 to-transparent" />
-                <span className="absolute left-5 top-5 rounded-full bg-background/40 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-sm">
-                  6 years ago
-                </span>
               </div>
               <div className="flex flex-col gap-6 p-8">
                 <div className="flex flex-wrap items-center gap-3">
@@ -62,8 +63,13 @@ export function HighlightsSection() {
 
               </div>
             </a>
+            </div>
 
             {/* Now */}
+            <div className="flex flex-col gap-3">
+            <span className="pl-1 text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+              Now
+            </span>
             <div className="surface-card relative flex h-full flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
@@ -74,9 +80,6 @@ export function HighlightsSection() {
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a0f1c] via-[#1a0f1c]/30 to-transparent" />
-                <span className="absolute left-5 top-5 rounded-full bg-background/40 px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.2em] text-white/70 backdrop-blur-sm">
-                  Now
-                </span>
               </div>
               <div className="flex flex-col gap-6 p-8">
                 <div className="flex flex-wrap items-center gap-3">
@@ -91,6 +94,7 @@ export function HighlightsSection() {
                   &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
                 </p>
               </div>
+            </div>
             </div>
           </div>
         </div>

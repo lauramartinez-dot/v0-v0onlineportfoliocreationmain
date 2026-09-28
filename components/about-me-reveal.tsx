@@ -1,6 +1,6 @@
 export function AboutMeReveal() {
   return (
-    <div className="px-4 py-28 md:py-32">
+    <div className="px-4 pb-10 pt-28 md:pb-12 md:pt-32">
       <div className="mx-auto w-full max-w-4xl">
         <div>
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
