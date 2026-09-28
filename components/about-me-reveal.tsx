@@ -16,11 +16,11 @@ export function AboutMeReveal() {
           </span>
         </p>
 
-        <div className="mt-20 flex flex-col gap-4">
-          <p className="text-xl font-medium leading-relaxed text-white/80 md:text-2xl">
+        <div className="mt-20 flex max-w-3xl flex-col gap-3">
+          <p className="text-xl font-medium leading-relaxed text-white/70 text-pretty md:text-2xl">
             I still write about technology — engineering and software.
           </p>
-          <p className="text-xl font-medium leading-relaxed text-white/55 text-pretty md:text-2xl">
+          <p className="text-xl font-medium leading-relaxed text-white/70 text-pretty md:text-2xl">
             In plain words, while keeping it accurate and clear enough that you don&apos;t need a PhD or a CS degree to
             follow along.
           </p>
