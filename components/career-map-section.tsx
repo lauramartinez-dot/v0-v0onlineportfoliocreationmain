@@ -1096,25 +1096,25 @@ function CompanyCard({
         onClick={() => setIsExpanded(!isExpanded)}
       >
         <div className="flex items-center gap-6 md:gap-8">
-  <div className="relative w-32 h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
-  <Image src={logo} alt={`${name} logo`} fill sizes="176px" className="object-contain px-4 py-3 md:px-5 md:py-4" />
+  <div className="relative w-40 h-20 md:w-56 md:h-28 rounded-2xl overflow-hidden bg-white flex items-center justify-center ring-1 ring-white/15 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.6)] transition-shadow duration-300 group-hover:ring-primary/50 shrink-0">
+  <Image src={logo} alt={`${name} logo`} fill sizes="224px" className="object-contain px-5 py-4 md:px-7 md:py-6" />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="sr-only">{name}</h3>
             {roleProgression ? (
               <div className="flex flex-col gap-1">
                 {roleProgression.map((r, idx) => (
-                  <p key={idx} className="text-xl md:text-2xl font-semibold text-foreground">
+                  <p key={idx} className="text-2xl md:text-4xl font-semibold tracking-tight text-foreground">
                     {r.title} <span className="font-normal text-foreground/45">&middot; {r.period}</span>
                   </p>
                 ))}
               </div>
             ) : (
               <div className="flex flex-col gap-2">
-                <p className="text-xl md:text-2xl font-semibold text-foreground text-balance transition-colors group-hover:text-primary">
+                <p className="text-2xl md:text-4xl font-semibold tracking-tight text-foreground text-balance transition-colors group-hover:text-primary">
                   {role}
                 </p>
-                <p className="text-base text-foreground/50">
+                <p className="text-base md:text-lg text-foreground/50">
                   {years}
                   {duration && <span> &middot; {duration}</span>}
                 </p>
