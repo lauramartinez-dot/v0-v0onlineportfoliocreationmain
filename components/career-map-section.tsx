@@ -1128,7 +1128,7 @@ function CompanyCard({
           <div className="flex items-center gap-4 shrink-0">
             {/* Country */}
             <div className="hidden sm:flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5">
-              <span className="text-lg leading-none" aria-hidden="true">{countryFlag}</span>
+              <span className="text-base leading-none" aria-hidden="true">📍</span>
               <span className="text-sm font-medium text-foreground/70">{country.replace(/\s*company$/i, '')}</span>
             </div>
             {/* Expand/Collapse indicator */}
@@ -1247,8 +1247,8 @@ export default function CareerMapSection() {
             role="Senior Technical Writer"
             years="2026 - Present"
           duration="5 months"
-            country="Belgium company"
-            countryFlag="🇧🇪"
+            country="Barcelona, Spain"
+            countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation"]}
             description={
