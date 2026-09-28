@@ -18,11 +18,11 @@ export function AboutMeReveal() {
           </span>
         </p>
 
-        <ScrollReveal className="mt-16 md:mt-20">
-          <div aria-hidden="true" className="h-20 w-px bg-gradient-to-b from-transparent to-primary md:h-28" />
-        </ScrollReveal>
-
-        <ScrollReveal className="mt-8 md:mt-10">
+  <ScrollReveal className="mt-28 md:mt-36">
+  <div aria-hidden="true" className="h-24 w-px bg-gradient-to-b from-transparent to-primary md:h-32" />
+  </ScrollReveal>
+  
+  <ScrollReveal className="mt-10 md:mt-12">
           <div className="flex max-w-2xl flex-col gap-2">
             <p className="text-base leading-relaxed text-white/70 md:text-lg">
               I still write about technology. Engineering. Software.
