@@ -59,49 +59,90 @@ const mediaArticles = [
   },
 ]
 
-// Each audience column showcases one real sample. Clicking the card opens a
-// full preview of the actual piece.
-const audiences = [
+const OMP_PORTAL =
+  "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk."
+
+type ContentType = {
+  title: string
+  caption?: string
+  image: string
+  alt: string
+  gatedHref?: string
+  links?: { label: string; href: string }[]
+}
+
+type Audience = {
+  level: string
+  audience: string[]
+  assumes: string
+  contentTypes: ContentType[]
+}
+
+// Each audience opens a dialog with one two-column row per content type.
+const audiences: Audience[] = [
   {
     level: "High",
-    readers: "for developers",
     audience: ["Developers", "IT staff"],
     assumes: "Readers who build software for a living. They want exact, complete technical detail.",
-    sample: {
-      title: "API developer portal",
-      caption:
-        "Reference documentation for developers — precise, complete, and structured so readers can find exactly what they need and put it to work.",
-      image: "/sample-api-portal.png",
-      href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
-    },
+    contentTypes: [
+      {
+        title: "API developer portal",
+        caption:
+          "Reference documentation for developers. Precise, complete, and structured so readers can find what they need and put it to work.",
+        image: "/sample-api-portal.png",
+        alt: "Preview of an API developer portal",
+        gatedHref: OMP_PORTAL,
+      },
+    ],
   },
   {
     level: "Medium",
-    readers: "for consultants",
     audience: ["Consultants", "PMs", "Analysts"],
     assumes: "Readers who set up and adapt software for their work, sometimes with code, but don't come from IT.",
-    sample: {
-      title: "User manuals",
-      caption:
-        "Setup and configuration guides that explain the why behind each step — technical concepts made clear without assuming an engineering background.",
-      image: "/sample-api-explainer.png",
-      href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
-    },
+    contentTypes: [
+      {
+        title: "User manuals",
+        caption:
+          "Setup and configuration guides that explain the why behind each step, without assuming an engineering background.",
+        image: "/sample-api-explainer.png",
+        alt: "Preview of a software user manual",
+        gatedHref: OMP_PORTAL,
+      },
+      {
+        title: "Release notes",
+        caption:
+          "Short, scannable updates that explain what changed, why it matters, and what readers need to do next.",
+        image: "/sample-release-notes.png",
+        alt: "Preview of software release notes",
+        gatedHref: OMP_PORTAL,
+      },
+    ],
   },
   {
     level: "Low",
-    readers: "for everyday users",
-  audience: ["Everyday users", "Media readers"],
-  assumes: "Readers who use apps every day and want simple, plain words. No jargon, just clear steps.",
-    // The Low dialog lists help center articles and technology stories.
-    variant: "collection" as const,
-    sample: {
-      title: "Help center & technology stories",
-      caption:
-        "Help centers and technology stories in major media, written for everyday users in clear, everyday language.",
-      image: "/sample-help-center.png",
-      href: "",
-    },
+    audience: ["Everyday users", "Media readers"],
+    assumes:
+      "Readers who use apps every day or read about technology in the news. Plain words, no jargon, just clear steps.",
+    contentTypes: [
+      {
+        title: "Help center",
+        image: "/sample-help-center.png",
+        alt: "Preview of a Personio help center article",
+        links: helpCenters,
+      },
+      {
+        title: "Technology stories",
+        image: "/sample-tech-stories.png",
+        alt: "Preview of a technology story published in the media",
+        links: mediaArticles,
+      },
+      {
+        title: "Videos",
+        caption: "Short how-to videos that show each step on screen, narrated in plain words.",
+        image: "/sample-videos.png",
+        alt: "Preview of a how-to video guide",
+      },
+    ],
   },
 ]
 
@@ -143,8 +184,7 @@ export function WritingSamplesSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
-          {audiences.map(({ level, readers, audience, assumes, sample, ...rest }, index) => {
-            const isCollection = "variant" in rest && rest.variant === "collection"
+          {audiences.map(({ level, audience, assumes, contentTypes }, index) => {
             const filledBars = audiences.length - index
             return (
               <Dialog key={level}>
@@ -233,62 +273,55 @@ export function WritingSamplesSection() {
                     </ul>
                   </DialogHeader>
 
-                  {/* Body — gated portal sample (High & Medium) */}
-                  {!isCollection && (
-                    <div className="grid items-center gap-8 px-8 py-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12 md:px-12 md:pb-12">
-                      <SectionImage src={sample.image || "/placeholder.svg"} alt={`Preview of ${sample.title}`} />
-                      <div className="flex flex-col gap-6">
-                        <div className="flex flex-col gap-2">
-                          <h3 className="text-xl font-semibold text-white text-balance">{sample.title}</h3>
-                          <p className="text-base leading-relaxed text-white/55 text-pretty">{sample.caption}</p>
-                        </div>
-                      <a
-                        href={sample.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+                  <div className="flex flex-col px-8 md:px-12">
+                    {contentTypes.map((type, typeIndex) => (
+                      <section
+                        key={type.title}
+                        className={
+                          "grid items-center gap-8 py-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12 md:py-12" +
+                          (typeIndex > 0 ? " border-t border-white/10" : "")
+                        }
                       >
-                        <span className="flex items-center gap-3">
-                          <Lock className="h-5 w-5 shrink-0 text-primary" />
-                          <span>
-                            <span className="block text-[0.95rem] font-semibold text-white">Read on the OMP customer portal</span>
-                            <span className="block text-sm text-white/50">Gated content — login required</span>
-                          </span>
-                        </span>
-                        <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
-                      </a>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Body — the link collection (Low only) */}
-                  {isCollection && (
-                    <div className="flex flex-col gap-12 px-8 py-10 md:px-12 md:pb-14">
-                      <section className="grid items-center gap-8 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12">
-                        <SectionImage src="/sample-help-center.png" alt="Preview of a Personio help center article" />
-                        <div className="flex flex-col gap-4">
-                          <h3 className="text-xl font-semibold text-white">Help center</h3>
-                          <div className="grid gap-3">
-                            {helpCenters.map((hc) => (
-                              <LinkBox key={hc.href} label={hc.label} href={hc.href} />
-                            ))}
+                        <SectionImage src={type.image} alt={type.alt} />
+                        <div className="flex flex-col gap-5">
+                          <div className="flex flex-col gap-2">
+                            <h3 className="text-xl font-semibold text-white text-balance">{type.title}</h3>
+                            {type.caption && (
+                              <p className="text-base leading-relaxed text-white/55 text-pretty">{type.caption}</p>
+                            )}
                           </div>
+
+                          {type.links && (
+                            <div className="grid gap-3">
+                              {type.links.map((link) => (
+                                <LinkBox key={link.href} label={link.label} href={link.href} />
+                              ))}
+                            </div>
+                          )}
+
+                          {type.gatedHref && (
+                            <a
+                              href={type.gatedHref}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+                            >
+                              <span className="flex items-center gap-3">
+                                <Lock className="h-5 w-5 shrink-0 text-primary" />
+                                <span>
+                                  <span className="block text-[0.95rem] font-semibold text-white">
+                                    Read on the OMP customer portal
+                                  </span>
+                                  <span className="block text-sm text-white/50">Gated content — login required</span>
+                                </span>
+                              </span>
+                              <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
+                            </a>
+                          )}
                         </div>
                       </section>
-
-                      <section className="grid items-center gap-8 border-t border-white/10 pt-12 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12">
-                        <SectionImage src="/sample-tech-stories.png" alt="Preview of a technology story published in the media" />
-                        <div className="flex flex-col gap-4">
-                          <h3 className="text-xl font-semibold text-white">Technology stories</h3>
-                          <div className="grid gap-3">
-                            {mediaArticles.map((article) => (
-                              <LinkBox key={article.href} label={article.label} href={article.href} />
-                            ))}
-                          </div>
-                        </div>
-                      </section>
-                    </div>
-                  )}
+                    ))}
+                  </div>
                 </DialogContent>
               </Dialog>
             )
