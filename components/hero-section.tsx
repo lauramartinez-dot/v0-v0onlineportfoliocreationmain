@@ -1,11 +1,11 @@
 "use client"
 
-import { ChevronDown, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
   return (
-    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-[20px] overflow-hidden mt-[25px] mb-[25px]">
+    <section id="home" className="relative flex flex-col items-center justify-center px-4 pt-[220px] pb-24 md:pb-32 min-h-[90vh] overflow-hidden mt-[25px] mb-[25px]">
       <div className="absolute inset-0 -z-10">
         {/* Purple/pink gradient orb - top left */}
         <div className="absolute -top-20 -left-20 h-[700px] w-[700px] rounded-full bg-gradient-to-br from-purple-500/35 via-pink-500/25 to-transparent blur-3xl" />
@@ -15,7 +15,7 @@ export function HeroSection() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[600px] rounded-full bg-gradient-to-r from-purple-500/35 to-pink-500/35 blur-3xl" />
       </div>
 
-      <div className="mx-auto max-w-5xl w-full">
+      <div className="mx-auto max-w-6xl w-full">
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16 mt-[40px]">
           <div className="order-1 animate-slide-in-left">
             <div className="relative">
@@ -27,7 +27,7 @@ export function HeroSection() {
               <div className="absolute bottom-4 -right-4 h-16 w-16 md:h-20 md:w-20 rounded-full bg-pink-500/20 blur-xl" />
 
               {/* Profile image */}
-              <div className="relative h-72 w-72 md:h-[22rem] md:w-[22rem] lg:h-[26rem] lg:w-[26rem] rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
+              <div className="relative h-80 w-80 md:h-[24rem] md:w-[24rem] lg:h-[29rem] lg:w-[29rem] rounded-full overflow-hidden ring-2 ring-border shadow-xl hover:shadow-2xl hover:ring-primary/30 transition-all duration-300 z-10">
                 <Image
                   src="/main-headshot.jpg"
                   alt="Laura Martínez - Senior Technical Writer"
@@ -41,7 +41,7 @@ export function HeroSection() {
 
           <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
             {/* Intro line */}
-            <p className="mb-6 text-xl md:text-2xl font-medium tracking-tight leading-snug text-primary text-balance">
+            <p className="mb-6 text-2xl md:text-3xl font-medium tracking-tight leading-snug text-primary text-balance">
               Hi there! I&apos;m Laura Martínez.
             </p>
 
@@ -50,29 +50,23 @@ export function HeroSection() {
 
             {/* Two-tier headline */}
             <h1 className="mb-6 text-foreground">
-              <span className="block text-2xl font-bold uppercase tracking-tight md:text-3xl lg:text-4xl">
+              <span className="block text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
                 A global
               </span>
-              <span className="block text-5xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-6xl lg:text-7xl xl:text-8xl">
+              <span className="block text-5xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-[6.75rem]">
                 Senior Technical Writer<span className="ml-2 inline-block animate-bounce align-baseline text-2xl md:text-3xl lg:text-4xl">{"🌍"}</span>
               </span>
             </h1>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/40 bg-primary/5 px-5 py-2.5 text-lg md:text-xl font-medium tracking-tight backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/40 bg-primary/5 px-6 py-3 text-xl md:text-2xl font-medium tracking-tight backdrop-blur-sm">
                 <MapPin className="h-5 w-5 shrink-0 text-primary" />
-                <span className="text-foreground">Based in Barcelona.</span>
-                <span className="text-muted-foreground">Working globally.</span>
+  <span className="text-foreground">Based in Barcelona.</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col items-center gap-0.5 mt-32 opacity-70">
-        <span className="text-sm text-muted-foreground opacity-70">Scroll to explore</span>
-        <ChevronDown className="h-5 w-5 text-muted-foreground opacity-70 animate-bounce" />
-      </div>
-    </section >
+    </section>
   )
 }

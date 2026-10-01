@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2, ExternalLink, Lock } from "lucide-react"
+import { Maximize2, ExternalLink, FileText } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -27,6 +27,26 @@ const helpCenters = [
   },
 ]
 
+// Personio how-to videos, published in English and German.
+const videos = [
+  {
+    label: "Overview of permissions and employee roles (English)",
+    href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    label: "Overview of permissions and employee roles (German)",
+    href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    label: "Overview of the Analytics area (English)",
+    href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
+  },
+  {
+    label: "Overview of the Analytics area (German)",
+    href: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
+  },
+]
+
 // Technology stories written for a general audience.
 const mediaArticles = [
   {
@@ -34,68 +54,97 @@ const mediaArticles = [
     href: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
   },
   {
-    label: "Así es el día a día de quienes revisan los vídeos que reportas en redes sociales",
-    href: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
+  label: "Free beer, laundry and pool: what it's like to work at Dublin's trendiest tech companies (Spanish)",
+  href: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
   },
   {
-    label: "Cerveza gratis, lavandería y billar: así se trabaja en las tecnológicas de moda en Dublín",
-    href: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
+  label: "It's 2020 and we still don't fully understand why planes stay in the air (Spanish)",
+  href: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
   },
   {
-    label: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
-    href: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
+  label: "First evidence of cosmic inflation found (Spanish)",
+  href: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
   },
   {
-    label: "Hallan la primera evidencia de la inflación cósmica",
-    href: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
+  label: "Spanish satellite Deimos-2 is now in orbit (Spanish)",
+  href: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
   },
-  {
-    label: "El satélite español Deimos-2 está ya en órbita",
-    href: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
-  },
-  {
-    label: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
-    href: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
-  },
-]
+  ]
 
-// Each audience column showcases one real sample. Clicking the card opens a
-// full preview of the actual piece.
-const audiences = [
+type ContentType = {
+  title: string
+  image: string
+  alt: string
+  customSample?: boolean
+  links?: { label: string; href: string }[]
+}
+
+type Audience = {
+  level: string
+  audience: string[]
+  assumes: string
+  contentTypes: ContentType[]
+}
+
+// Each audience opens a dialog with one two-column row per content type.
+const audiences: Audience[] = [
   {
     level: "High",
-    readers: "for developers",
-    sample: {
-      title: "API developer portal",
-      caption:
-        "A full API reference portal — authentication, endpoints, parameters, and copy-paste request examples documented end to end.",
-      image: "/sample-api-portal.png",
-      href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
-    },
+    audience: ["Developers", "IT staff"],
+    assumes: "Readers who build software for a living. They want exact, complete technical detail.",
+    contentTypes: [
+      {
+        title: "API developer portal",
+        image: "/sample-api-portal.png",
+        alt: "Preview of an API developer portal",
+        customSample: true,
+      },
+    ],
   },
   {
     level: "Medium",
-    readers: "for consultants",
-    sample: {
-      title: "User manuals",
-      caption:
-        "A plain-language explainer that gets a non-engineer from zero to understanding how two apps talk to each other — no CS degree required.",
-      image: "/sample-api-explainer.png",
-      href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
-    },
+    audience: ["Consultants", "PMs", "Analysts"],
+    assumes: "Readers who configure software as part of their daily work and have grown into semi-technical experts.",
+    contentTypes: [
+      {
+        title: "Consultant manuals",
+        image: "/sample-api-explainer.png",
+        alt: "Preview of a software user manual",
+        customSample: true,
+      },
+      {
+        title: "Release notes",
+        image: "/sample-release-notes.png",
+        alt: "Preview of software release notes",
+        customSample: true,
+      },
+    ],
   },
   {
     level: "Low",
-    readers: "for everyday users",
-    // The Low dialog lists help center articles and technology stories.
-    variant: "collection" as const,
-    sample: {
-      title: "Help center & technology stories",
-      caption:
-        "Writing for people with no technical background — searchable help centers and technology stories in major media, all in plain language.",
-      image: "/sample-help-center.png",
-      href: "",
-    },
+    audience: ["Everyday users", "Media readers"],
+    assumes:
+      "Readers who use apps every day or read about technology in the news. Plain words, no jargon.",
+    contentTypes: [
+      {
+        title: "Help center",
+        image: "/sample-help-center.png",
+        alt: "Preview of a Personio help center article",
+        links: helpCenters,
+      },
+      {
+        title: "Videos",
+        image: "/sample-videos.png",
+        alt: "Preview of a how-to video guide",
+        links: videos,
+      },
+      {
+        title: "Technology stories",
+        image: "/sample-tech-stories.png",
+        alt: "Preview of a technology story published in the media",
+        links: mediaArticles,
+      },
+    ],
   },
 ]
 
@@ -114,6 +163,29 @@ function LinkBox({ label, href }: { label: string; href: string }) {
   )
 }
 
+function CustomSampleNote() {
+  return (
+    <div className="flex items-start gap-4 rounded-xl border border-[#472444] bg-background/40 px-6 py-5">
+      <FileText className="mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+      <div className="flex flex-col gap-1">
+        <span className="text-lg font-semibold tracking-[-0.01em] text-white">Customised sample</span>
+        <span className="text-base leading-relaxed text-white/60 text-pretty">
+          Client work is under NDA, so this sample is recreated in the same style.
+        </span>
+      </div>
+    </div>
+  )
+}
+
+function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-background ring-1 ring-white/10">
+      <img src={src} alt={alt} className="h-full w-full object-cover object-top" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card/70 to-transparent" />
+    </div>
+  )
+}
+
 export function WritingSamplesSection() {
   return (
     <section id="writing-samples" className="relative px-4 py-24 md:py-32 scroll-mt-32">
@@ -127,142 +199,122 @@ export function WritingSamplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-3 items-stretch">
-          {audiences.map(({ level, readers, sample, ...rest }, index) => {
-            const isCollection = "variant" in rest && rest.variant === "collection"
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
+          {audiences.map(({ level, audience, assumes, contentTypes }, index) => {
             const filledBars = audiences.length - index
             return (
               <Dialog key={level}>
                 <DialogTrigger asChild>
                   <button
                     type="button"
-                    className="surface-card group relative flex aspect-[3/4.4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+                    className="surface-card group relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
+                    <span
+                      className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-primary transition-transform duration-500 group-hover:scale-x-100"
+                      aria-hidden="true"
+                    />
 
-                    {/* Image fills most of the card */}
-                    <div className="relative flex-1 overflow-hidden">
-                      <img
-                        src={sample.image || "/placeholder.svg"}
-                        alt={`Preview of ${sample.title}`}
-                        className="absolute inset-0 h-full w-full object-cover object-top opacity-25 grayscale transition-all duration-700 ease-out group-hover:scale-[1.03] group-hover:opacity-45 group-hover:grayscale-0"
-                      />
-
-                      {/* Long scrim so the preview fades into the card */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-
-                      {/* Expand affordance - only surfaces on hover */}
-                      <span className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-background/70 text-white opacity-0 ring-1 ring-white/15 backdrop-blur-md transition-all duration-300 group-hover:opacity-100 group-hover:ring-primary/60 group-focus-visible:opacity-100">
-                        <Maximize2 className="h-4 w-4" />
-                      </span>
-                    </div>
-
-                    {/* Footer - technical expertise level + audience */}
-                    <div className="flex flex-col border-t border-white/10 bg-background px-7 pt-6 pb-7">
-                      <div className="flex items-center justify-between gap-4">
-                        <span className="text-base font-bold uppercase tracking-[0.2em] text-white/70">
-                          Technical expertise
-                        </span>
-                        <span className="flex items-end gap-1" aria-hidden="true">
+                    <div className="flex flex-1 flex-col gap-6 p-8 md:p-10">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1.5" aria-label={`${level} technical knowledge`}>
                           {[1, 2, 3].map((segment) => (
                             <span
                               key={segment}
                               className={
-                                "w-1.5 rounded-full " +
-                                (segment === 1 ? "h-2.5 " : segment === 2 ? "h-3.5 " : "h-5 ") +
-                                (segment <= filledBars ? "bg-primary" : "bg-white/15")
+                                "h-1.5 w-8 rounded-full transition-colors " +
+                                (segment <= filledBars ? "bg-primary" : "bg-white/10")
                               }
                             />
                           ))}
-                        </span>
+                        </div>
+                        <Maximize2
+                          className="h-5 w-5 text-white/30 transition-colors group-hover:text-primary"
+                          aria-hidden="true"
+                        />
                       </div>
 
-                      <p className="mt-2 text-5xl font-extrabold uppercase leading-none tracking-tight text-primary lg:text-6xl">
-                        {level}
-                      </p>
-                      <p className="mt-3 text-base md:text-[17px] leading-relaxed text-white/60">
-                        {readers}
-                      </p>
+                      <div className="flex flex-col gap-3">
+                        <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
+                          {level} technical knowledge
+                        </h3>
+                        <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
+                          {assumes}
+                        </p>
+                      </div>
+
+                      <ul className="mt-auto flex flex-wrap gap-2" aria-label="For example">
+                        {audience.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                          >
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </button>
                 </DialogTrigger>
 
-                <DialogContent
-                  className={
-                    "flex max-h-[90vh] w-[95vw] flex-col gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-[1.75rem] " +
-                    (isCollection ? "max-w-6xl sm:max-w-6xl" : "max-w-4xl sm:max-w-4xl")
-                  }
-                >
-                  {/* Sample image — banner with the title overlaid at the bottom */}
-                  <div className="relative h-56 shrink-0 overflow-hidden bg-[#0f0b13] md:h-72">
-                    <img
-                      src={sample.image || "/placeholder.svg"}
-                      alt={`Preview of ${sample.title}`}
-                      className="h-full w-full object-cover object-top"
-                    />
-                    {/* Strong bottom scrim so the overlaid title stays legible */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/85 to-transparent" />
-
-                    <DialogHeader className="absolute inset-x-0 bottom-0 space-y-0 px-8 pb-6 text-left md:px-12">
-                      <span className="inline-flex w-fit items-center rounded-full bg-primary/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/30 backdrop-blur-sm">
-                        {readers}
-                      </span>
-                      <DialogTitle className="mt-3 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
+                <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
+                  {/* Header mirrors the clickable card */}
+                  <DialogHeader className="flex flex-col gap-5 space-y-0 border-b border-white/10 px-8 pt-12 pb-10 text-left md:px-12">
+                    <div className="flex items-center gap-1.5" aria-hidden="true">
+                      {[1, 2, 3].map((segment) => (
+                        <span
+                          key={segment}
+                          className={
+                            "h-1.5 w-8 rounded-full " + (segment <= filledBars ? "bg-primary" : "bg-white/10")
+                          }
+                        />
+                      ))}
+                    </div>
+                    <div className="flex flex-col gap-3">
+                      <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
                         {level} technical knowledge
                       </DialogTitle>
-                      <p className="mt-1.5 text-base font-medium text-white/60 text-pretty md:text-lg">
-                        {sample.title}
-                      </p>
-                      <DialogDescription className="sr-only">{sample.caption}</DialogDescription>
-                    </DialogHeader>
-                  </div>
+                      <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
+                        {assumes}
+                      </DialogDescription>
+                    </div>
+                    <ul className="flex flex-wrap gap-2" aria-label="For example">
+                      {audience.map((tag) => (
+                        <li
+                          key={tag}
+                          className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                        >
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
+                  </DialogHeader>
 
-                  {/* Body — gated portal link (High & Medium) */}
-                  {!isCollection && (
-                    <div className="px-8 pt-8 pb-12 md:px-12">
-                      <a
-                        href={sample.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
+                  <div className="flex flex-col px-8 md:px-12">
+                    {contentTypes.map((type, typeIndex) => (
+                      <section
+                        key={type.title}
+                        className={
+                          "grid items-center gap-8 py-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12 md:py-12" +
+                          (typeIndex > 0 ? " border-t border-white/10" : "")
+                        }
                       >
-                        <span className="flex items-center gap-3">
-                          <Lock className="h-5 w-5 shrink-0 text-primary" />
-                          <span>
-                            <span className="block text-[0.95rem] font-semibold text-white">Read on the OMP customer portal</span>
-                            <span className="block text-sm text-white/50">Gated content — login required</span>
-                          </span>
-                        </span>
-                        <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
-                      </a>
-                    </div>
-                  )}
+                        <SectionImage src={type.image} alt={type.alt} />
+                        <div className="flex flex-col gap-5">
+                          <h3 className="text-xl font-semibold text-white text-balance">{type.title}</h3>
 
-                  {/* Body — the link collection (Low only) */}
-                  {isCollection && (
-                    <div className="flex min-h-0 flex-1 flex-col gap-9 overflow-y-auto px-8 pt-8 pb-16 md:px-12">
-                      <section>
-                        <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
-                          Help center
-                        </h3>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                          {helpCenters.map((hc) => (
-                            <LinkBox key={hc.href} label={hc.label} href={hc.href} />
-                          ))}
+                          {type.links && (
+                            <div className="grid gap-3">
+                              {type.links.map((link) => (
+                                <LinkBox key={link.href} label={link.label} href={link.href} />
+                              ))}
+                            </div>
+                          )}
+
+                          {type.customSample && <CustomSampleNote />}
                         </div>
                       </section>
-
-                      <section>
-                        <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
-                          Technology stories
-                        </h3>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                          {mediaArticles.map((article) => (
-                            <LinkBox key={article.href} label={article.label} href={article.href} />
-                          ))}
-                        </div>
-                      </section>
-                    </div>
-                  )}
+                    ))}
+                  </div>
                 </DialogContent>
               </Dialog>
             )

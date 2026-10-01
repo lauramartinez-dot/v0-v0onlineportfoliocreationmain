@@ -1,38 +1,62 @@
-import { ScrollReveal } from "@/components/scroll-reveal"
+import type { ReactNode } from "react"
+import { StaggerReveal } from "@/components/stagger-reveal"
 
-const statementClass =
-  "text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]"
-
-export function AboutMeReveal() {
+export function AboutMeHeading() {
   return (
-    <div className="px-4 pb-20 pt-28 md:pb-28 md:pt-32">
-      <div className="mx-auto w-full max-w-5xl">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            About me<span className="text-primary">.</span>
-          </h2>
-          <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-        </div>
-
-        <p className={`mt-20 max-w-4xl ${statementClass}`}>
-          I&apos;m a tech journalist turned technical writer — and honestly,{" "}
-          <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
-        </p>
-
-        <ScrollReveal className="mt-20 md:mt-28">
-          <div aria-hidden="true" className="h-24 w-px bg-gradient-to-b from-transparent to-primary md:h-32" />
-        </ScrollReveal>
-
-        <ScrollReveal className="mt-10 md:mt-12">
-  <p className="max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-white text-pretty md:text-3xl">
-  I still write about technology. Engineering. Software.
-  <span className="mt-2 block text-2xl font-semibold leading-snug tracking-tight text-white/55 md:text-3xl">
-              In plain words, accurate and clear enough that you{' '}
-  <span className="md:block md:whitespace-nowrap">don&apos;t need a PhD or a CS degree to follow along.</span>
-            </span>
-          </p>
-        </ScrollReveal>
+    <div className="px-4 pb-16 pt-28 md:pt-32">
+      <div className="mx-auto w-full max-w-5xl text-center">
+        <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+          About me<span className="text-primary">.</span>
+        </h2>
+        <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
       </div>
+    </div>
+  )
+}
+
+const statementClass = "text-xl font-semibold leading-snug tracking-tight text-pretty md:text-2xl"
+
+function FadeLine({ index, className, children }: { index: number; className?: string; children: ReactNode }) {
+  return (
+    <p
+      className={`animate-in fade-in slide-in-from-bottom-3 fill-mode-both duration-700 ease-out motion-reduce:animate-none ${statementClass} ${className ?? ""}`}
+      style={{ animationDelay: `${150 + index * 220}ms` }}
+    >
+      {children}
+    </p>
+  )
+}
+
+const introClass = "mx-auto max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-pretty md:text-3xl"
+
+export function AboutMeIntro() {
+  return (
+    <StaggerReveal className="flex flex-col gap-8 px-4 pb-12 text-center" step={350}>
+      <p className={`${introClass} text-white`}>
+        I&apos;m a tech journalist turned technical writer — and honestly,{" "}
+        <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
+      </p>
+      <p className={`${introClass} text-white/55`}>I still write about technology. Engineering. Software.</p>
+      <p className={`${introClass} text-white/55`}>
+        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+      </p>
+    </StaggerReveal>
+  )
+}
+
+export function AboutMeStatements() {
+  return (
+    <div className="flex flex-col gap-5">
+      <FadeLine index={0} className="text-white">
+        I&apos;m a tech journalist turned technical writer — and honestly,{" "}
+        <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
+      </FadeLine>
+      <FadeLine index={1} className="text-white/55">
+        I still write about technology. Engineering. Software.
+      </FadeLine>
+      <FadeLine index={2} className="text-white/55">
+        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+      </FadeLine>
     </div>
   )
 }
