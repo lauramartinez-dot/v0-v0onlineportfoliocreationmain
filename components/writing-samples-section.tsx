@@ -122,7 +122,7 @@ function LinkBox({ label, href }: { label: string; href: string }) {
 
 function SectionImage({ src, alt }: { src: string; alt: string }) {
   return (
-    <div className="relative h-56 overflow-hidden rounded-2xl bg-background ring-1 ring-white/10 sm:h-72">
+    <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-background ring-1 ring-white/10">
       <img src={src} alt={alt} className="h-full w-full object-cover object-top" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card/70 to-transparent" />
     </div>
@@ -201,42 +201,47 @@ export function WritingSamplesSection() {
                 </DialogTrigger>
 
                 <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
-                  {/* Large framed preview of the real sample */}
-                  {!isCollection && (
-                  <div className="shrink-0 p-4 md:p-6">
-                    <div className="relative h-64 overflow-hidden rounded-2xl bg-background ring-1 ring-white/10 sm:h-80 md:h-[26rem]">
-                      <img
-                        src={sample.image || "/placeholder.svg"}
-                        alt={`Preview of ${sample.title}`}
-                        className="h-full w-full object-cover object-top"
-                      />
-                      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card/80 to-transparent" />
+                  {/* Header mirrors the clickable card */}
+                  <DialogHeader className="flex flex-col gap-5 space-y-0 border-b border-white/10 px-8 pt-12 pb-10 text-left md:px-12">
+                    <div className="flex items-center gap-1.5" aria-hidden="true">
+                      {[1, 2, 3].map((segment) => (
+                        <span
+                          key={segment}
+                          className={
+                            "h-1.5 w-8 rounded-full " + (segment <= filledBars ? "bg-primary" : "bg-white/10")
+                          }
+                        />
+                      ))}
                     </div>
-                  </div>
-                  )}
-
-                  <DialogHeader
-                    className={
-                      "space-y-0 px-8 text-left md:px-12 " + (isCollection ? "pt-12" : "pt-4")
-                    }
-                  >
-                    <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/25">
-                      Written {readers}
-                    </span>
-                    <DialogTitle className="mt-4 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
-                      {level} technical knowledge
-                    </DialogTitle>
-                    <p className="mt-2 text-base font-medium text-white/80 text-pretty md:text-lg">
-                      {sample.title}
-                    </p>
-                    <DialogDescription className="mt-3 max-w-3xl text-base leading-relaxed text-white/55 text-pretty">
-                      {sample.caption}
-                    </DialogDescription>
+                    <div className="flex flex-col gap-3">
+                      <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
+                        {level} technical knowledge
+                      </DialogTitle>
+                      <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
+                        {assumes}
+                      </DialogDescription>
+                    </div>
+                    <ul className="flex flex-wrap gap-2" aria-label="For example">
+                      {audience.map((tag) => (
+                        <li
+                          key={tag}
+                          className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                        >
+                          {tag}
+                        </li>
+                      ))}
+                    </ul>
                   </DialogHeader>
 
-                  {/* Body — gated portal link (High & Medium) */}
+                  {/* Body — gated portal sample (High & Medium) */}
                   {!isCollection && (
-                    <div className="px-8 pt-8 pb-12 md:px-12">
+                    <div className="grid items-center gap-8 px-8 py-10 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12 md:px-12 md:pb-12">
+                      <SectionImage src={sample.image || "/placeholder.svg"} alt={`Preview of ${sample.title}`} />
+                      <div className="flex flex-col gap-6">
+                        <div className="flex flex-col gap-2">
+                          <h3 className="text-xl font-semibold text-white text-balance">{sample.title}</h3>
+                          <p className="text-base leading-relaxed text-white/55 text-pretty">{sample.caption}</p>
+                        </div>
                       <a
                         href={sample.href}
                         target="_blank"
@@ -252,33 +257,34 @@ export function WritingSamplesSection() {
                         </span>
                         <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
                       </a>
+                      </div>
                     </div>
                   )}
 
                   {/* Body — the link collection (Low only) */}
                   {isCollection && (
-                    <div className="flex flex-col gap-12 px-8 pt-10 pb-14 md:px-12">
-                      <section>
+                    <div className="flex flex-col gap-12 px-8 py-10 md:px-12 md:pb-14">
+                      <section className="grid items-center gap-8 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12">
                         <SectionImage src="/sample-help-center.png" alt="Preview of a Personio help center article" />
-                        <h3 className="mt-6 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
-                          Help center
-                        </h3>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                          {helpCenters.map((hc) => (
-                            <LinkBox key={hc.href} label={hc.label} href={hc.href} />
-                          ))}
+                        <div className="flex flex-col gap-4">
+                          <h3 className="text-xl font-semibold text-white">Help center</h3>
+                          <div className="grid gap-3">
+                            {helpCenters.map((hc) => (
+                              <LinkBox key={hc.href} label={hc.label} href={hc.href} />
+                            ))}
+                          </div>
                         </div>
                       </section>
 
-                      <section>
+                      <section className="grid items-center gap-8 border-t border-white/10 pt-12 md:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] md:gap-12">
                         <SectionImage src="/sample-tech-stories.png" alt="Preview of a technology story published in the media" />
-                        <h3 className="mt-6 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
-                          Technology stories
-                        </h3>
-                        <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-                          {mediaArticles.map((article) => (
-                            <LinkBox key={article.href} label={article.label} href={article.href} />
-                          ))}
+                        <div className="flex flex-col gap-4">
+                          <h3 className="text-xl font-semibold text-white">Technology stories</h3>
+                          <div className="grid gap-3">
+                            {mediaArticles.map((article) => (
+                              <LinkBox key={article.href} label={article.label} href={article.href} />
+                            ))}
+                          </div>
                         </div>
                       </section>
                     </div>
