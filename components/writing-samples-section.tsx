@@ -161,11 +161,11 @@ export function WritingSamplesSection() {
                     </div>
 
                     <div className="mt-auto flex flex-col gap-2">
-                      <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
-                        {level}
+                      <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
+                        {level} technical knowledge
                       </h3>
                       <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
-                        {readers}
+                        Written {readers}
                       </p>
                     </div>
                   </button>
@@ -186,7 +186,7 @@ export function WritingSamplesSection() {
 
                   <DialogHeader className="space-y-0 px-8 pt-4 text-left md:px-12">
                     <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/25">
-                      {readers}
+                      Written {readers}
                     </span>
                     <DialogTitle className="mt-4 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
                       {level} technical knowledge
