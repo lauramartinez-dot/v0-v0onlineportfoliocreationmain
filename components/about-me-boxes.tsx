@@ -69,8 +69,8 @@ const boxes: Box[] = [
   {
     title: "Globetrotter",
     teaser: "Lived in 4 countries and speak 3 languages fluently.",
-    imageSrc: "/globe-purple.png",
-    imageAlt: "Purple globe",
+    imageSrc: "/four-countries-bamberg.png",
+    imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
     body: (
       <div className="relative overflow-hidden">
         <div
