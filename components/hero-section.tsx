@@ -1,6 +1,6 @@
 "use client"
 
-import { ChevronDown, MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 import Image from "next/image"
 
 export function HeroSection() {
@@ -68,11 +68,6 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      <div className="flex flex-col items-center gap-0.5 mt-32 opacity-70">
-        <span className="text-sm text-muted-foreground opacity-70">Scroll to explore</span>
-        <ChevronDown className="h-5 w-5 text-muted-foreground opacity-70 animate-bounce" />
-      </div>
-    </section >
+    </section>
   )
 }
