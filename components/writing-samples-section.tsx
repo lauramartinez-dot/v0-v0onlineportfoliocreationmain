@@ -66,11 +66,11 @@ const audiences = [
     level: "High",
     readers: "for developers",
     audience: ["Developers", "IT staff"],
-    assumes: "Readers who write code and know their way around APIs.",
+    assumes: "Readers who build and maintain software. Fluent in code, systems, and technical specifications.",
     sample: {
       title: "API developer portal",
       caption:
-        "A full API reference portal — authentication, endpoints, parameters, and copy-paste request examples documented end to end.",
+        "Reference documentation for developers — precise, complete, and structured so readers can find exactly what they need and put it to work.",
       image: "/sample-api-portal.png",
       href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
     },
@@ -79,11 +79,11 @@ const audiences = [
     level: "Medium",
     readers: "for consultants",
     audience: ["Consultants", "PMs", "Analysts"],
-    assumes: "Readers who configure software but don't write code.",
+    assumes: "Readers who use and configure complex software as part of their job, without being technical experts.",
     sample: {
       title: "User manuals",
       caption:
-        "A plain-language explainer that gets a non-engineer from zero to understanding how two apps talk to each other — no CS degree required.",
+        "Setup and configuration guides that explain the why behind each step — technical concepts made clear without assuming an engineering background.",
       image: "/sample-api-explainer.png",
       href: "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk.",
     },
@@ -92,13 +92,13 @@ const audiences = [
     level: "Low",
     readers: "for everyday users",
     audience: ["Everyday users"],
-    assumes: "Readers with no technical background at all.",
+    assumes: "Readers who use technology every day and want clear, task-focused answers in everyday language.",
     // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
     sample: {
       title: "Help center & technology stories",
       caption:
-        "Writing for people with no technical background — searchable help centers and technology stories in major media, all in plain language.",
+        "Help centers and technology stories in major media, written for everyday users in clear, everyday language.",
       image: "/sample-help-center.png",
       href: "",
     },
