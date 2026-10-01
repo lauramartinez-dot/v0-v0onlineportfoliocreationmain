@@ -128,7 +128,7 @@ const boxes: Box[] = [
     ),
   },
   {
-    title: "Startup",
+    title: "Startup-minded",
     teaser: "Fast teams, docs from scratch.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
@@ -142,6 +142,9 @@ const boxes: Box[] = [
   },
 ]
 
+const boxOrder = ["Ex-journalist", "Mission-driven", "Globetrotter", "Startup-minded"]
+const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === title)!)
+
 export function AboutMeBoxes() {
   return (
     <StaggerReveal
@@ -149,12 +152,12 @@ export function AboutMeBoxes() {
       itemClassName="flex [&>*]:flex-1"
       step={250}
     >
-      {boxes.map((box) => (
+      {orderedBoxes.map((box) => (
         <Dialog key={box.title}>
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[9/15]"
+              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[9/16]"
             >
               <Image
                 src={box.imageSrc}
