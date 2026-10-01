@@ -108,13 +108,14 @@ export function HighlightsSection() {
                 </div>
               </div>
 
-              <div className="relative mx-auto aspect-[71/100] w-full max-w-xl overflow-hidden rounded-3xl border border-white/10">
-                <iframe
-                  src="/europe-pins.html"
-                  title="Animated map of Europe with pins on the four countries I've lived in"
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full border-0"
-                />
+  <div className="relative mx-auto aspect-[71/100] w-full max-w-xl">
+  <iframe
+  src="/europe-pins.html"
+  title="Animated map of Europe with pins on the four countries I've lived in"
+  loading="lazy"
+  className="absolute inset-0 h-full w-full border-0 bg-transparent"
+  style={{ colorScheme: "normal" }}
+  />
               </div>
             </div>
           </div>
