@@ -1,4 +1,4 @@
-import { AboutMeHeading } from "@/components/about-me-reveal"
+import { AboutMeHeading, AboutMeIntro } from "@/components/about-me-reveal"
 import { AboutMeBoxes } from "@/components/about-me-boxes"
 
 export function HighlightsSection() {
@@ -7,6 +7,7 @@ export function HighlightsSection() {
       {/* 1. About me - heading */}
       <section id="top-differentiators" className="relative scroll-mt-32">
         <AboutMeHeading />
+        <AboutMeIntro />
       </section>
 
       {/* 2. About me boxes - each opens an in-depth pop-up */}

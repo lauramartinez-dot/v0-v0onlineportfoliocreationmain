@@ -1,4 +1,5 @@
 import type { ReactNode } from "react"
+import { StaggerReveal } from "@/components/stagger-reveal"
 
 export function AboutMeHeading() {
   return (
@@ -23,6 +24,23 @@ function FadeLine({ index, className, children }: { index: number; className?: s
     >
       {children}
     </p>
+  )
+}
+
+const introClass = "mx-auto max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-pretty md:text-3xl"
+
+export function AboutMeIntro() {
+  return (
+    <StaggerReveal className="flex flex-col gap-8 px-4 pb-20 text-center" step={350}>
+      <p className={`${introClass} text-white`}>
+        I&apos;m a tech journalist turned technical writer — and honestly,{" "}
+        <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
+      </p>
+      <p className={`${introClass} text-white/55`}>I still write about technology. Engineering. Software.</p>
+      <p className={`${introClass} text-white/55`}>
+        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+      </p>
+    </StaggerReveal>
   )
 }
 

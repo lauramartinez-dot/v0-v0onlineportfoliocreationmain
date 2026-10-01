@@ -14,7 +14,6 @@ import {
 import { ArticleCard } from "@/components/article-card"
 import { EuropePinsMap } from "@/components/europe-pins-map"
 import { StaggerReveal } from "@/components/stagger-reveal"
-import { AboutMeStatements } from "@/components/about-me-reveal"
 
 const languages = [
   { name: "Spanish", level: "Native" },
@@ -49,9 +48,8 @@ const boxes: Box[] = [
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
-      <div className="grid grid-cols-1 items-center gap-8 px-8 py-8 md:px-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.4fr)] lg:gap-10">
-      <AboutMeStatements />
-      <div className="grid grid-cols-2 gap-5">
+      <div className="px-8 py-8 md:px-12">
+      <div className="mx-auto grid max-w-4xl grid-cols-2 gap-5">
         <ArticleCard
           era="6 years ago"
           role="Tech journalist"
