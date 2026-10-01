@@ -19,8 +19,8 @@ export function AboutMeReveal() {
           <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
         </p>
 
-        <ScrollReveal className="mt-24 md:mt-32">
-          <div className="ml-auto flex max-w-3xl items-stretch gap-6 md:gap-8">
+        <ScrollReveal className="mt-32 md:mt-44">
+          <div className="ml-auto flex max-w-3xl items-stretch gap-10 md:gap-16">
             <div aria-hidden="true" className="w-px shrink-0 bg-gradient-to-b from-transparent to-primary" />
             <p className={`text-left ${statementClass}`}>
               I still write about technology. Engineering. Software.{" "}
