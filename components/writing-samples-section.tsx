@@ -108,7 +108,7 @@ const audiences: Audience[] = [
     assumes: "Readers who configure software as part of their daily work and have grown into semi-technical experts.",
     contentTypes: [
       {
-        title: "User manuals",
+        title: "Consultant manuals",
         image: "/sample-api-explainer.png",
         alt: "Preview of a software user manual",
         gated: true,
