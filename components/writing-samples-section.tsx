@@ -54,30 +54,22 @@ const mediaArticles = [
     href: "https://www.businessinsider.com/a-day-in-the-life-of-an-online-content-moderator-2019-6",
   },
   {
-    label: "Así es el día a día de quienes revisan los vídeos que reportas en redes sociales",
-    href: "https://www.businessinsider.es/dia-dia-revisores-contenidos-redes-sociales-431333",
+  label: "Free beer, laundry and pool: what it's like to work at Dublin's trendiest tech companies (Spanish)",
+  href: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
   },
   {
-    label: "Cerveza gratis, lavandería y billar: así se trabaja en las tecnológicas de moda en Dublín",
-    href: "https://www.businessinsider.es/wework-dublin-trabaja-cerveza-gratis-oficina-435405",
+  label: "It's 2020 and we still don't fully understand why planes stay in the air (Spanish)",
+  href: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
   },
   {
-    label: "Es 2020 y todavía no entendemos del todo por qué los aviones se mantienen en el aire",
-    href: "https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire",
+  label: "First evidence of cosmic inflation found (Spanish)",
+  href: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
   },
   {
-    label: "Hallan la primera evidencia de la inflación cósmica",
-    href: "https://web.archive.org/web/20221126190258/https://www.muyinteresante.es/ciencia/articulo/hallan-la-primera-evidencia-de-la-expansion-del-universo-131395147000",
+  label: "Spanish satellite Deimos-2 is now in orbit (Spanish)",
+  href: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
   },
-  {
-    label: "El satélite español Deimos-2 está ya en órbita",
-    href: "https://web.archive.org/web/20220811184721/https://www.muyinteresante.es/ciencia/articulo/el-satelite-espanol-deimos-2-esta-ya-en-orbita-341403272930",
-  },
-  {
-    label: "Los gamers que acosan a las jugadoras son, literalmente, unos perdedores",
-    href: "https://www.europapress.es/portaltic/videojuegos/noticia-gamers-acosan-jugadoras-son-literalmente-perdedores-20150725115934.html",
-  },
-]
+  ]
 
 const OMP_PORTAL =
   "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk."
