@@ -129,7 +129,7 @@ const boxes: Box[] = [
   },
   {
     title: "Startup-minded",
-    teaser: "Most of my career at startups. I build things.",
+    teaser: "Most of my career at startups, incl. a European unicorn.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (

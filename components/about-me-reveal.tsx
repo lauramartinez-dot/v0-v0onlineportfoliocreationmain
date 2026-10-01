@@ -38,7 +38,7 @@ export function AboutMeIntro() {
       </p>
       <p className={`${introClass} text-white/55`}>I still write about technology. Engineering. Software.</p>
       <p className={`${introClass} text-white/55`}>
-        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+        In plain words. While keeping it accurate. And somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along:
       </p>
     </StaggerReveal>
   )
@@ -55,7 +55,7 @@ export function AboutMeStatements() {
         I still write about technology. Engineering. Software.
       </FadeLine>
       <FadeLine index={2} className="text-white/55">
-        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+        In plain words. While keeping it accurate. And somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along:
       </FadeLine>
     </div>
   )
