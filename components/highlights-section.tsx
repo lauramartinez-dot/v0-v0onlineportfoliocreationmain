@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { AboutMeReveal } from "@/components/about-me-reveal"
 import { FlipCard } from "@/components/flip-card"
 
@@ -147,12 +146,11 @@ export function HighlightsSection() {
               </div>
 
               <div className="relative mx-auto aspect-[71/100] w-full max-w-sm overflow-hidden rounded-3xl border border-white/10">
-                <Image
-                  src="/differentiator-four-countries.png"
-                  alt="Standing on a bridge in Bamberg, Germany, one of the four countries I've lived in"
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
-                  className="object-cover"
+                <iframe
+                  src="/europe-pins.html"
+                  title="Animated map of Europe with pins on the four countries I've lived in"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full border-0"
                 />
               </div>
             </div>
