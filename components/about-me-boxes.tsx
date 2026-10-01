@@ -43,7 +43,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 const boxes: Box[] = [
   {
     title: "Ex-journalist",
-    teaser: "Six years covering tech, incl. Business Insider.",
+    teaser: "6 years at tech media outlets, incl. Business Insider.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
@@ -116,8 +116,8 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     teaser: "Making tech knowledge open to everyone.",
-    imageSrc: "/cosmic-inflation-universe-expansion.jpg",
-    imageAlt: "Expanding universe with galaxies",
+    imageSrc: "/mission-open-knowledge.png",
+    imageAlt: "Sunlit public library reading room with people reading at long tables",
     body: (
       <ImageStatement imageSrc="/cosmic-inflation-universe-expansion.jpg">
         {"The mission hasn't changed: "}
@@ -129,9 +129,9 @@ const boxes: Box[] = [
   },
   {
     title: "Startup-minded",
-    teaser: "Mostly at startups. I have a builder mindset.",
-    imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
-    imageAlt: "Modern tech office with a beer tap",
+    teaser: "Most of my career at startups. I build things.",
+    imageSrc: "/startup-whiteboard.png",
+    imageAlt: "Startup team sketching ideas on a wall covered in sticky notes",
     body: (
       <ImageStatement imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg">
         {"Most of my career has been at startups — including "}
