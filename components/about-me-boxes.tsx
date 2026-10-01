@@ -171,7 +171,7 @@ export function AboutMeBoxes() {
                 <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
                   {box.title}
                 </span>
-                <span className="line-clamp-2 min-h-[2lh] text-lg font-medium leading-snug text-white/90 text-pretty">
+                <span className="line-clamp-2 min-h-[2lh] text-base leading-relaxed text-white/80 text-pretty md:text-[17px]">
                   {box.teaser}
                 </span>
               </div>
