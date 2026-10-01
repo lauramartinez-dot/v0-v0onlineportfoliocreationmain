@@ -13,12 +13,12 @@ export function HighlightsSection() {
       {/* 2. About me boxes - each opens an in-depth pop-up */}
       <section id="why" className="relative px-4 pb-32 pt-4 scroll-mt-32">
         <div className="mx-auto flex max-w-7xl flex-col gap-8">
-  <div className="flex flex-col items-center gap-6 text-center">
-  <h2 className="text-balance text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
+  <div className="flex items-center justify-center gap-4">
+  <span className="h-px w-10 bg-primary/60 md:w-16" aria-hidden="true" />
+  <h3 className="text-balance text-center text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
   What sets me apart<span className="text-primary">.</span>
-  </h2>
-  <div className="h-1.5 w-12 rounded-full bg-primary" aria-hidden="true" />
-  <p className="text-base leading-relaxed text-foreground/60">Open any card to go deeper.</p>
+  </h3>
+  <span className="h-px w-10 bg-primary/60 md:w-16" aria-hidden="true" />
   </div>
           <AboutMeBoxes />
         </div>
