@@ -43,7 +43,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 const boxes: Box[] = [
   {
     title: "Ex-journalist",
-    teaser: "I spent six years writing about tech for media, including Business Insider.",
+    teaser: "Six years covering tech, incl. Business Insider.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
@@ -68,7 +68,7 @@ const boxes: Box[] = [
   },
   {
     title: "Globetrotter",
-    teaser: "I've lived in four countries and speak three languages fluently.",
+    teaser: "Lived in 4 countries. Fluent in 3 languages.",
     imageSrc: "/four-countries-bamberg.png",
     imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
     body: (
@@ -115,7 +115,7 @@ const boxes: Box[] = [
   },
   {
     title: "Mission-driven",
-    teaser: "I believe technical knowledge should be open to everyone.",
+    teaser: "Making tech knowledge open to everyone.",
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
@@ -129,7 +129,7 @@ const boxes: Box[] = [
   },
   {
     title: "Startup-minded",
-    teaser: "I've worked mostly at startups, so I have a builder mindset.",
+    teaser: "Mostly at startups. I have a builder mindset.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
@@ -157,7 +157,7 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[9/16]"
+              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[1/2]"
             >
               <Image
                 src={box.imageSrc}
@@ -171,7 +171,7 @@ export function AboutMeBoxes() {
                 <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
                   {box.title}
                 </span>
-                <span className="line-clamp-3 min-h-[3lh] text-base font-medium leading-relaxed text-white/90 text-pretty">
+                <span className="line-clamp-2 min-h-[2lh] text-lg font-medium leading-snug text-white/90 text-pretty">
                   {box.teaser}
                 </span>
               </div>

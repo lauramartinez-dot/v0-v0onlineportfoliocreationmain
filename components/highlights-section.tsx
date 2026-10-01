@@ -12,7 +12,7 @@ export function HighlightsSection() {
 
       {/* 2. About me boxes - each opens an in-depth pop-up */}
       <section id="why" className="relative px-4 pb-32 pt-4 scroll-mt-32">
-        <div className="mx-auto flex max-w-[88rem] flex-col gap-8">
+        <div className="mx-auto flex max-w-[92rem] flex-col gap-8">
           <div className="flex flex-col items-center gap-5 text-center">
             <h3 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
               In a nutshell<span className="text-primary">.</span>
