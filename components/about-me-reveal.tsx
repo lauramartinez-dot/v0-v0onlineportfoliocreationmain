@@ -20,7 +20,7 @@ export function AboutMeReveal() {
         </p>
 
         <ScrollReveal className="mt-32 md:mt-44">
-          <div className="ml-auto flex max-w-3xl items-stretch gap-10 md:gap-16">
+          <div className="flex items-stretch gap-12 md:ml-auto md:w-3/5 md:gap-24">
             <div aria-hidden="true" className="w-px shrink-0 bg-gradient-to-b from-transparent to-primary" />
             <p className={`text-left ${statementClass}`}>
               I still write about technology. Engineering. Software.{" "}
