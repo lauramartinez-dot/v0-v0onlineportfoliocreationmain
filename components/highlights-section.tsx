@@ -91,20 +91,16 @@ export function HighlightsSection() {
             </p>
           </div>
 
-          <div className="flex w-full max-w-sm flex-col gap-5 self-end rounded-3xl border border-white/10 bg-background/70 p-6 shadow-2xl backdrop-blur-md md:p-8">
-            <h3 className="border-b border-white/10 pb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
-              Languages
-            </h3>
-            <ul className="flex flex-col gap-3">
+          <div className="flex w-full max-w-md flex-col gap-6 self-end rounded-3xl border border-primary/40 bg-background/80 p-8 shadow-2xl shadow-primary/10 backdrop-blur-md md:p-10">
+            <h3 className="text-2xl font-semibold leading-snug text-white md:text-3xl">Languages</h3>
+            <ul className="flex flex-col">
               {languages.map((language) => (
                 <li
                   key={language.name}
-                  className="flex items-center justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 transition-all duration-300 hover:border-white/25 hover:bg-white/[0.08]"
+                  className="flex items-baseline justify-between gap-6 border-t border-white/10 py-4 first:border-t-0 first:pt-0 last:pb-0"
                 >
-                  <span className="text-lg font-semibold tracking-tight text-white">{language.name}</span>
-                  <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
-                    {language.level}
-                  </span>
+                  <span className="text-xl font-semibold text-white md:text-2xl">{language.name}</span>
+                  <span className="text-lg font-medium text-primary md:text-xl">{language.level}</span>
                 </li>
               ))}
             </ul>
