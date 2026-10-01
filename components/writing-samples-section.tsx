@@ -1,5 +1,6 @@
 "use client"
 
+import { useId, useState } from "react"
 import { Maximize2, ExternalLink, Lock } from "lucide-react"
 import {
   Dialog,
@@ -71,15 +72,11 @@ const mediaArticles = [
   },
   ]
 
-const OMP_PORTAL =
-  "https://portal.omp.com/login?callback=/?_gl=1*1lxy9i7*_gcl_au*NDAzODQ3NDY3LjE3OTAyNzQ0ODk."
-
 type ContentType = {
   title: string
-  caption?: string
   image: string
   alt: string
-  gatedHref?: string
+  gated?: boolean
   links?: { label: string; href: string }[]
 }
 
@@ -99,11 +96,9 @@ const audiences: Audience[] = [
     contentTypes: [
       {
         title: "API developer portal",
-        caption:
-          "Reference documentation for developers. Precise, complete, and structured so readers can find what they need and put it to work.",
         image: "/sample-api-portal.png",
         alt: "Preview of an API developer portal",
-        gatedHref: OMP_PORTAL,
+        gated: true,
       },
     ],
   },
@@ -114,19 +109,15 @@ const audiences: Audience[] = [
     contentTypes: [
       {
         title: "User manuals",
-        caption:
-          "Setup and configuration guides that explain the why behind each step, without assuming an engineering background.",
         image: "/sample-api-explainer.png",
         alt: "Preview of a software user manual",
-        gatedHref: OMP_PORTAL,
+        gated: true,
       },
       {
         title: "Release notes",
-        caption:
-          "Short, scannable updates that explain what changed, why it matters, and what readers need to do next.",
         image: "/sample-release-notes.png",
         alt: "Preview of software release notes",
-        gatedHref: OMP_PORTAL,
+        gated: true,
       },
     ],
   },
@@ -170,6 +161,51 @@ function LinkBox({ label, href }: { label: string; href: string }) {
       <span className="text-lg font-semibold leading-relaxed tracking-[-0.01em] text-white text-pretty">{label}</span>
       <ExternalLink className="mt-1 h-[1.1rem] w-[1.1rem] shrink-0 text-white/30 transition-colors group-hover:text-primary" />
     </a>
+  )
+}
+
+// Samples under NDA sit behind a password. The check is wired up once the
+// gated samples are added; until then submitting shows a holding message.
+function PasswordBox({ title }: { title: string }) {
+  const [submitted, setSubmitted] = useState(false)
+  const inputId = useId()
+
+  return (
+    <form
+      onSubmit={(event) => {
+        event.preventDefault()
+        setSubmitted(true)
+      }}
+      className="flex flex-col gap-4 rounded-xl border border-[#472444] bg-background/40 px-6 py-6"
+    >
+      <div className="flex items-center gap-3">
+        <Lock className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+        <label htmlFor={inputId} className="text-lg font-semibold tracking-[-0.01em] text-white">
+          Password protected
+        </label>
+      </div>
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <input
+          id={inputId}
+          type="password"
+          required
+          autoComplete="off"
+          placeholder="Enter password"
+          aria-label={`Password for ${title} samples`}
+          onChange={() => setSubmitted(false)}
+          className="h-12 flex-1 rounded-lg border border-white/10 bg-background/60 px-4 text-base text-white placeholder:text-white/35 focus:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/30"
+        />
+        <button
+          type="submit"
+          className="h-12 rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-card"
+        >
+          Unlock
+        </button>
+      </div>
+      <p role="status" className={submitted ? "text-sm text-white/50" : "sr-only"}>
+        {submitted ? "These samples aren't available yet. Please check back soon." : ""}
+      </p>
+    </form>
   )
 }
 
@@ -296,12 +332,7 @@ export function WritingSamplesSection() {
                       >
                         <SectionImage src={type.image} alt={type.alt} />
                         <div className="flex flex-col gap-5">
-                          <div className="flex flex-col gap-2">
-                            <h3 className="text-xl font-semibold text-white text-balance">{type.title}</h3>
-                            {type.caption && (
-                              <p className="text-base leading-relaxed text-white/55 text-pretty">{type.caption}</p>
-                            )}
-                          </div>
+                          <h3 className="text-xl font-semibold text-white text-balance">{type.title}</h3>
 
                           {type.links && (
                             <div className="grid gap-3">
@@ -311,25 +342,7 @@ export function WritingSamplesSection() {
                             </div>
                           )}
 
-                          {type.gatedHref && (
-                            <a
-                              href={type.gatedHref}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="group flex items-center justify-between gap-4 rounded-xl border border-[#472444] bg-background/40 px-5 py-5 transition-colors hover:border-primary/60 hover:bg-primary/[0.06]"
-                            >
-                              <span className="flex items-center gap-3">
-                                <Lock className="h-5 w-5 shrink-0 text-primary" />
-                                <span>
-                                  <span className="block text-[0.95rem] font-semibold text-white">
-                                    Read on the OMP customer portal
-                                  </span>
-                                  <span className="block text-sm text-white/50">Gated content — login required</span>
-                                </span>
-                              </span>
-                              <ExternalLink className="h-4 w-4 shrink-0 text-white/30 transition-colors group-hover:text-primary" />
-                            </a>
-                          )}
+                          {type.gated && <PasswordBox title={type.title} />}
                         </div>
                       </section>
                     ))}
