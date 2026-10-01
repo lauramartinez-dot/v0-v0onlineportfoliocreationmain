@@ -116,8 +116,8 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     teaser: "Making tech knowledge open to everyone.",
-    imageSrc: "/mission-open-knowledge.png",
-    imageAlt: "Sunlit public library reading room with people reading at long tables",
+    imageSrc: "/cosmic-inflation-universe-expansion.jpg",
+    imageAlt: "Expanding universe with galaxies",
     body: (
       <ImageStatement imageSrc="/cosmic-inflation-universe-expansion.jpg">
         {"The mission hasn't changed: "}
@@ -130,8 +130,8 @@ const boxes: Box[] = [
   {
     title: "Startup-minded",
     teaser: "Most of my career at startups. I build things.",
-    imageSrc: "/startup-whiteboard.png",
-    imageAlt: "Startup team sketching ideas on a wall covered in sticky notes",
+    imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
+    imageAlt: "Modern tech office with a beer tap",
     body: (
       <ImageStatement imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg">
         {"Most of my career has been at startups — including "}
