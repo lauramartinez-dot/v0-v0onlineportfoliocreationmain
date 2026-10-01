@@ -92,7 +92,7 @@ const audiences = [
     level: "Low",
     readers: "for everyday users",
   audience: ["Everyday users", "Media readers"],
-  assumes: "Readers who use technology every day and want quick, clear answers.",
+  assumes: "Readers who use apps every day and want simple, plain words. No jargon, just clear steps.",
     // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
     sample: {
