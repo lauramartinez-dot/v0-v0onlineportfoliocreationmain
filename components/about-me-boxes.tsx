@@ -2,7 +2,6 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
-import { Plus } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -43,7 +42,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 
 const boxes: Box[] = [
   {
-    title: "Former tech journalist",
+    title: "Ex-journalist",
     teaser: "From explaining tech in the news to explaining it in docs.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
@@ -171,10 +170,6 @@ export function AboutMeBoxes() {
                 </span>
                 <span className="text-base leading-relaxed text-white/75 text-pretty">
                   {box.teaser}
-                </span>
-                <span className="mt-2 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
-                  <Plus className="size-4" aria-hidden="true" />
-                  Read more
                 </span>
               </div>
             </button>
