@@ -1,46 +1,55 @@
 "use client"
 
-import { Children, useEffect, useRef, useState, type ReactNode } from "react"
+import { Children, useEffect, useRef, type ReactNode } from "react"
 import { cn } from "@/lib/utils"
 
-function RevealItem({
-  children,
-  className,
-  delay = 0,
-}: {
-  children: ReactNode
-  className?: string
-  delay?: number
-}) {
+const START = 0.95
+const END = 0.55
+
+function easeOut(t: number) {
+  return 1 - Math.pow(1 - t, 3)
+}
+
+function RevealItem({ children, className }: { children: ReactNode; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
-  const [visible, setVisible] = useState(false)
 
   useEffect(() => {
     const node = ref.current
     if (!node) return
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.4, rootMargin: "0px 0px -12% 0px" },
-    )
-    observer.observe(node)
-    return () => observer.disconnect()
+
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      node.style.opacity = "1"
+      return
+    }
+
+    let frame = 0
+    const update = () => {
+      frame = 0
+      const rect = node.getBoundingClientRect()
+      const vh = window.innerHeight
+      const center = rect.top + rect.height / 2
+      const raw = (vh * START - center) / (vh * (START - END))
+      const progress = easeOut(Math.min(1, Math.max(0, raw)))
+      node.style.opacity = String(progress)
+      node.style.transform = `translateY(${(1 - progress) * 32}px)`
+      node.style.filter = progress < 1 ? `blur(${(1 - progress) * 6}px)` : "none"
+    }
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update)
+    }
+
+    update()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    window.addEventListener("resize", onScroll)
+    return () => {
+      window.removeEventListener("scroll", onScroll)
+      window.removeEventListener("resize", onScroll)
+      if (frame) cancelAnimationFrame(frame)
+    }
   }, [])
 
   return (
-    <div
-      ref={ref}
-      style={{ transitionDelay: visible ? `${delay}ms` : "0ms" }}
-      className={cn(
-        "transition-all duration-[1400ms] ease-out motion-reduce:transition-none",
-        visible ? "translate-y-0 opacity-100 blur-0" : "translate-y-8 opacity-0 blur-sm",
-        className,
-      )}
-    >
+    <div ref={ref} style={{ opacity: 0 }} className={cn("will-change-[opacity,transform]", className)}>
       {children}
     </div>
   )
@@ -50,7 +59,6 @@ export function StaggerReveal({
   children,
   className,
   itemClassName,
-  step = 0,
 }: {
   children: ReactNode
   className?: string
@@ -60,7 +68,7 @@ export function StaggerReveal({
   return (
     <div className={className}>
       {Children.toArray(children).map((child, index) => (
-        <RevealItem key={index} className={itemClassName} delay={index * step}>
+        <RevealItem key={index} className={itemClassName}>
           {child}
         </RevealItem>
       ))}
