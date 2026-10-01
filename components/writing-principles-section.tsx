@@ -11,7 +11,7 @@ const principles = [
     icon: Users,
     title: "Who is reading?",
     description:
-      "I don't write a single word until I know who I'm writing for. What's their job? Are they setting things up or just using them? How technical are they?",
+      "I don't write a single word until I know who I'm writing for. What's their job? Are they setting up software or just using it? Do they have a technical background?",
   },
   {
     icon: Sparkles,
