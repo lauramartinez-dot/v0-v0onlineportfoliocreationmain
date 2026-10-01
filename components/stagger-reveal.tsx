@@ -39,10 +39,11 @@ function RevealItem({ children, className }: { children: ReactNode; className?: 
     }
 
     update()
-    window.addEventListener("scroll", onScroll, { passive: true })
+    // Capture phase so scrolling inside a pop-up (not just the window) also drives the reveal.
+    document.addEventListener("scroll", onScroll, { passive: true, capture: true })
     window.addEventListener("resize", onScroll)
     return () => {
-      window.removeEventListener("scroll", onScroll)
+      document.removeEventListener("scroll", onScroll, { capture: true })
       window.removeEventListener("resize", onScroll)
       if (frame) cancelAnimationFrame(frame)
     }

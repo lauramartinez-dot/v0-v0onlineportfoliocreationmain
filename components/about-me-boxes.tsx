@@ -14,6 +14,7 @@ import {
 import { ArticleCard } from "@/components/article-card"
 import { EuropePinsMap } from "@/components/europe-pins-map"
 import { StaggerReveal } from "@/components/stagger-reveal"
+import { AboutMeStatements } from "@/components/about-me-reveal"
 
 const languages = [
   { name: "Spanish", level: "Native" },
@@ -48,7 +49,9 @@ const boxes: Box[] = [
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
-      <div className="grid grid-cols-1 gap-4 p-6 md:grid-cols-2 md:p-10">
+      <div className="grid grid-cols-1 items-center gap-8 px-8 py-8 md:px-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-12 lg:py-10">
+      <AboutMeStatements />
+      <div className="grid grid-cols-2 gap-4">
         <ArticleCard
           era="6 years ago"
           role="Tech journalist"
@@ -62,6 +65,7 @@ const boxes: Box[] = [
           imageSrc="/now-tech-docs.png"
           imageAlt="Documentation page titled What is an API? on a laptop screen"
         />
+      </div>
       </div>
     ),
   },
@@ -144,7 +148,7 @@ const boxes: Box[] = [
 export function AboutMeBoxes() {
   return (
     <StaggerReveal
-      className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4"
+      className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
       itemClassName="flex [&>*]:flex-1"
       step={250}
     >
@@ -153,7 +157,7 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-3xl border border-white/10 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[9/15]"
             >
               <Image
                 src={box.imageSrc}
@@ -162,13 +166,15 @@ export function AboutMeBoxes() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c]/95 via-[#0f131c]/50 to-[#0f131c]/10" />
-              <div className="relative mt-auto flex flex-col gap-3 p-6">
-                <span className="text-2xl font-semibold leading-tight tracking-tight text-white text-balance">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c]/95 via-[#0f131c]/40 to-[#0f131c]/5" />
+              <div className="relative mt-auto flex flex-col gap-3 p-7">
+                <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
                   {box.title}
                 </span>
-                <span className="text-sm leading-relaxed text-white/70 text-pretty">{box.teaser}</span>
-                <span className="mt-1 flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
+                <span className="text-base leading-relaxed text-white/75 text-pretty">
+                  {box.teaser}
+                </span>
+                <span className="mt-2 flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.22em] text-primary">
                   <Plus className="size-4" aria-hidden="true" />
                   Read more
                 </span>
@@ -176,8 +182,8 @@ export function AboutMeBoxes() {
             </button>
           </DialogTrigger>
 
-          <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
-            <DialogHeader className="flex flex-col gap-3 space-y-0 border-b border-white/10 px-8 pt-12 pb-8 text-left md:px-12">
+          <DialogContent className="flex max-h-[94vh] w-[96vw] max-w-7xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-7xl sm:rounded-[1.75rem]">
+            <DialogHeader className="flex flex-col gap-3 space-y-0 border-b border-white/10 px-8 pt-10 pb-6 text-left md:px-12">
               <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
                 {box.title}
               </DialogTitle>
