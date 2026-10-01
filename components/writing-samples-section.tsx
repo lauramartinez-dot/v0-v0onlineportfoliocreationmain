@@ -65,7 +65,7 @@ const audiences = [
   {
     level: "High",
     readers: "for developers",
-    audience: "Developers",
+    audience: ["Developers", "IT staff"],
     assumes: "Readers who write code. Assumes familiarity with APIs, requests, and authentication.",
     sample: {
       title: "API developer portal",
@@ -78,7 +78,7 @@ const audiences = [
   {
     level: "Medium",
     readers: "for consultants",
-    audience: "Consultants",
+    audience: ["Consultants", "PMs", "Analysts"],
     assumes: "Readers who configure software but don't code. Concepts are explained, jargon kept minimal.",
     sample: {
       title: "User manuals",
@@ -91,7 +91,7 @@ const audiences = [
   {
     level: "Low",
     readers: "for everyday users",
-    audience: "Everyday users",
+    audience: ["Everyday users"],
     assumes: "Readers with no technical background. Plain language, step by step, no jargon.",
     // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
@@ -176,11 +176,26 @@ export function WritingSamplesSection() {
                           {assumes}
                         </p>
                       </div>
+
+                      <div className="mt-auto flex flex-col gap-3">
+                        <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white/40">
+                          Written for
+                        </span>
+                        <ul className="flex flex-wrap gap-2">
+                          {audience.map((tag) => (
+                            <li
+                              key={tag}
+                              className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-white/90"
+                            >
+                              {tag}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
 
-                    <div className="flex items-center justify-between gap-4 border-t border-white/10 px-8 py-5 md:px-10">
-                      <span className="text-base font-medium text-white/85">{audience}</span>
-                      <span className="flex items-center gap-1.5 text-sm font-medium text-white/45 transition-colors group-hover:text-primary">
+                    <div className="flex items-center justify-end border-t border-white/10 px-8 py-5 md:px-10">
+                      <span className="flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-white/45 transition-colors group-hover:text-primary">
                         View samples
                         <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
                       </span>
