@@ -3,15 +3,17 @@ import Image from "next/image"
 const personalProjects = [
   {
     id: "portfolio",
+    title: "This portfolio",
     tags: ["Vibe-coding", "AI"],
     image: "/project-portfolio.png",
     imageAlt: "Laptop showing this portfolio site being built",
   },
   {
     id: "bookclub",
+    title: "Barcelona's first book club for women in tech",
     tags: ["Entrepreneurship", "Women in tech advocacy", "Event organisation"],
-    image: "/too-bossy-poster.jpg",
-    imageAlt: "Too Bossy poster: Barcelona's first book club for women in tech, reading women in tech",
+    image: "/too-bossy-club.png",
+    imageAlt: "Too Bossy Club logo with an open book icon",
   },
 ]
 
@@ -28,16 +30,19 @@ export function PersonalProjectsSection() {
 
         <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
           {personalProjects.map((project) => (
-            <li key={project.id} className="group flex flex-col items-center gap-6 text-center">
-              <div className="relative aspect-square w-full max-w-md overflow-hidden rounded-3xl shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/15 transition-transform duration-500 ease-out group-hover:-translate-y-2">
+            <li key={project.id} className="group flex flex-col items-center gap-8 text-center">
+              <div className="relative size-64 shrink-0 overflow-hidden rounded-full shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/15 transition-transform duration-500 ease-out group-hover:-translate-y-2 md:size-80">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 448px"
-                  className="object-cover"
+                  sizes="320px"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
               </div>
+              <h3 className="max-w-sm text-2xl font-bold leading-tight text-white text-balance md:text-3xl">
+                {project.title}
+              </h3>
               <ul className="flex max-w-md flex-wrap justify-center gap-2" aria-label="Project skills">
                 {project.tags.map((tag) => (
                   <li
