@@ -10,8 +10,8 @@ const personalProjects = [
   {
     title: "Barcelona's first women in tech bookclub",
     description: "I started Barcelona's first women in tech bookclub, where we read, discuss and push each other forward.",
-    image: "/project-bookclub.png",
-    imageAlt: "A group of women gathered around books at a bookclub meeting",
+    image: "/too-bossy-club.png",
+    imageAlt: "Too Bossy Club logo with an open book icon",
   },
 ]
 
@@ -30,19 +30,18 @@ export function PersonalProjectsSection() {
           {personalProjects.map((project) => (
             <li
               key={project.title}
-              className="surface-card group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
+              className="surface-card group relative flex flex-col items-center gap-8 rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-center transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
             >
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative size-48 shrink-0 overflow-hidden rounded-full border-4 border-white/10 shadow-xl md:size-56">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  sizes="224px"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c]/70 to-transparent" aria-hidden="true" />
               </div>
-              <div className="flex flex-col gap-4 p-10">
+              <div className="flex flex-col gap-4">
                 <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">{project.title}</h3>
                 <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">{project.description}</p>
               </div>
