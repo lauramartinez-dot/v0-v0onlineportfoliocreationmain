@@ -19,10 +19,10 @@ export function AboutMeReveal() {
           <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
         </p>
 
-        <ScrollReveal className="mt-16 md:mt-20">
-          <div className="flex items-stretch justify-between gap-8">
+        <ScrollReveal className="mt-24 md:mt-32">
+          <div className="ml-auto flex max-w-3xl items-stretch gap-6 md:gap-8">
             <div aria-hidden="true" className="w-px shrink-0 bg-gradient-to-b from-transparent to-primary" />
-            <p className={`max-w-3xl text-right ${statementClass}`}>
+            <p className={`text-left ${statementClass}`}>
               I still write about technology. Engineering. Software.{" "}
               <span className="text-white/55">
                 In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow
