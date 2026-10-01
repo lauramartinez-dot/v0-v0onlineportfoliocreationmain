@@ -1,4 +1,4 @@
-import { ScrollReveal } from "@/components/scroll-reveal"
+import { StaggerReveal } from "@/components/stagger-reveal"
 
 const statementClass =
   "text-3xl font-semibold leading-[1.15] tracking-tight text-white text-balance md:text-4xl lg:text-[2.75rem]"
@@ -14,23 +14,18 @@ export function AboutMeReveal() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <p className={`mt-20 max-w-4xl ${statementClass}`}>
-          I&apos;m a tech journalist turned technical writer — and honestly,{" "}
-          <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
-        </p>
-
-        <ScrollReveal className="mt-32 md:mt-44">
-<div className="flex items-stretch gap-12 md:gap-48 lg:gap-80">
-  <div aria-hidden="true" className="w-px shrink-0 bg-gradient-to-b from-transparent to-primary" />
-  <p className={`max-w-xl text-left ${statementClass}`}>
-              I still write about technology. Engineering. Software.{" "}
-              <span className="text-white/55">
-                In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow
-                along.
-              </span>
-            </p>
-          </div>
-        </ScrollReveal>
+        <StaggerReveal className="mt-20 flex flex-col items-center gap-16 text-center md:gap-24">
+          <p className={`mx-auto max-w-4xl ${statementClass}`}>
+            I&apos;m a tech journalist turned technical writer — and honestly,{" "}
+            <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
+          </p>
+          <p className={statementClass}>I still write about technology.</p>
+          <p className={statementClass}>Engineering.</p>
+          <p className={statementClass}>Software.</p>
+          <p className={`mx-auto max-w-3xl text-white/55 ${statementClass}`}>
+            In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+          </p>
+        </StaggerReveal>
       </div>
     </div>
   )

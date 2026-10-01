@@ -1,5 +1,6 @@
 import { AboutMeReveal } from "@/components/about-me-reveal"
 import { ArticleCard } from "@/components/article-card"
+import { EuropePinsMap } from "@/components/europe-pins-map"
 
 const languages = [
     { name: "Spanish", code: "es", level: "Native" },
@@ -79,14 +80,7 @@ export function HighlightsSection() {
   }}
   aria-hidden="true"
   >
-          <iframe
-            src="/europe-pins.html"
-            title="Animated map of Europe with pins on the four countries I've lived in"
-            loading="lazy"
-            tabIndex={-1}
-            className="absolute inset-0 h-full w-full border-0 bg-transparent"
-            style={{ colorScheme: "normal" }}
-          />
+          <EuropePinsMap />
         </div>
 
         <div className="relative z-10 mx-auto flex min-h-[110vh] max-w-7xl flex-col justify-between gap-16 py-24 md:py-32">
