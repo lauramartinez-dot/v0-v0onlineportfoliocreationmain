@@ -78,46 +78,46 @@ export function HighlightsSection() {
       </section>
 
       {/* 4. Global - globetrotter, on the plain section background */}
-      <section className="relative px-4 py-32">
-        <div className="relative mx-auto max-w-7xl">
-          <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
-            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
-              <div className="flex flex-col gap-12">
-                <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
-                  I&apos;m also a globetrotter. By my 30s, I&apos;d lived in four countries and become fluent in three
-                  languages.
-                </p>
+      <section className="relative overflow-hidden px-4">
+        <div
+          className="pointer-events-none absolute inset-y-0 left-1/2 aspect-[71/100] h-full -translate-x-1/2"
+          aria-hidden="true"
+        >
+          <iframe
+            src="/europe-pins.html"
+            title="Animated map of Europe with pins on the four countries I've lived in"
+            loading="lazy"
+            tabIndex={-1}
+            className="absolute inset-0 h-full w-full border-0 bg-transparent"
+            style={{ colorScheme: "normal" }}
+          />
+        </div>
 
-                <div className="flex flex-col gap-5">
-                  <h3 className="border-b border-white/10 pb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
-                    Languages
-                  </h3>
-                  <ul className="flex flex-col gap-3">
-                    {languages.map((language) => (
-                      <li
-                        key={language.name}
-                        className="surface-card flex items-center justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 transition-all duration-300 hover:border-white/25 hover:bg-white/[0.06]"
-                      >
-                        <span className="text-xl font-semibold tracking-tight text-white">{language.name}</span>
-                        <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
-                          {language.level}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+        <div className="relative z-10 mx-auto flex min-h-[110vh] max-w-7xl flex-col justify-between gap-16 py-24 md:py-32">
+          <div className="max-w-md self-start rounded-3xl border border-white/10 bg-background/70 p-8 shadow-2xl backdrop-blur-md md:p-10">
+            <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
+              I&apos;m also a globetrotter. By my 30s, I&apos;d lived in four countries and become fluent in three
+              languages.
+            </p>
+          </div>
 
-  <div className="relative mx-auto aspect-[71/100] w-full max-w-xl">
-  <iframe
-  src="/europe-pins.html"
-  title="Animated map of Europe with pins on the four countries I've lived in"
-  loading="lazy"
-  className="absolute inset-0 h-full w-full border-0 bg-transparent"
-  style={{ colorScheme: "normal" }}
-  />
-              </div>
-            </div>
+          <div className="flex w-full max-w-sm flex-col gap-5 self-end rounded-3xl border border-white/10 bg-background/70 p-6 shadow-2xl backdrop-blur-md md:p-8">
+            <h3 className="border-b border-white/10 pb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+              Languages
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {languages.map((language) => (
+                <li
+                  key={language.name}
+                  className="flex items-center justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.04] px-5 py-4 transition-all duration-300 hover:border-white/25 hover:bg-white/[0.08]"
+                >
+                  <span className="text-lg font-semibold tracking-tight text-white">{language.name}</span>
+                  <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
+                    {language.level}
+                  </span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
