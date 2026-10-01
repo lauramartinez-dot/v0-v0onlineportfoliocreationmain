@@ -136,7 +136,7 @@ export function WritingSamplesSection() {
                 <DialogTrigger asChild>
                   <button
                     type="button"
-                    className="surface-card group relative flex h-full min-h-[300px] w-full flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="surface-card group relative flex h-full min-h-[240px] w-full flex-col gap-10 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
                     <div className="flex items-start justify-between">
                       <span
@@ -160,23 +160,13 @@ export function WritingSamplesSection() {
                       />
                     </div>
 
-                    <div className="flex flex-col gap-2">
-                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
-                        Technical expertise
-                      </span>
+                    <div className="mt-auto flex flex-col gap-2">
                       <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
                         {level}
                       </h3>
                       <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
                         {readers}
                       </p>
-                    </div>
-
-                    <div className="mt-auto flex items-center justify-between gap-4 border-t border-white/10 pt-5">
-                      <span className="text-sm font-medium text-white/70 text-pretty">{sample.title}</span>
-                      <span className="shrink-0 text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5">
-                        {"View \u2192"}
-                      </span>
                     </div>
                   </button>
                 </DialogTrigger>
