@@ -1,7 +1,6 @@
 "use client"
 
-import { useId, useState } from "react"
-import { Maximize2, ExternalLink, Lock } from "lucide-react"
+import { Maximize2, ExternalLink, FileText } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -76,7 +75,7 @@ type ContentType = {
   title: string
   image: string
   alt: string
-  gated?: boolean
+  customSample?: boolean
   links?: { label: string; href: string }[]
 }
 
@@ -98,7 +97,7 @@ const audiences: Audience[] = [
         title: "API developer portal",
         image: "/sample-api-portal.png",
         alt: "Preview of an API developer portal",
-        gated: true,
+        customSample: true,
       },
     ],
   },
@@ -111,13 +110,13 @@ const audiences: Audience[] = [
         title: "Consultant manuals",
         image: "/sample-api-explainer.png",
         alt: "Preview of a software user manual",
-        gated: true,
+        customSample: true,
       },
       {
         title: "Release notes",
         image: "/sample-release-notes.png",
         alt: "Preview of software release notes",
-        gated: true,
+        customSample: true,
       },
     ],
   },
@@ -164,48 +163,17 @@ function LinkBox({ label, href }: { label: string; href: string }) {
   )
 }
 
-// Samples under NDA sit behind a password. The check is wired up once the
-// gated samples are added; until then submitting shows a holding message.
-function PasswordBox({ title }: { title: string }) {
-  const [submitted, setSubmitted] = useState(false)
-  const inputId = useId()
-
+function CustomSampleNote() {
   return (
-    <form
-      onSubmit={(event) => {
-        event.preventDefault()
-        setSubmitted(true)
-      }}
-      className="flex flex-col gap-4 rounded-xl border border-[#472444] bg-background/40 px-6 py-6"
-    >
-      <div className="flex items-center gap-3">
-        <Lock className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
-        <label htmlFor={inputId} className="text-lg font-semibold tracking-[-0.01em] text-white">
-          Password protected
-        </label>
+    <div className="flex items-start gap-4 rounded-xl border border-[#472444] bg-background/40 px-6 py-5">
+      <FileText className="mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+      <div className="flex flex-col gap-1">
+        <span className="text-lg font-semibold tracking-[-0.01em] text-white">Customised sample</span>
+        <span className="text-base leading-relaxed text-white/60 text-pretty">
+          Client work is under NDA, so this sample is recreated in the same style.
+        </span>
       </div>
-      <div className="flex flex-col gap-3 sm:flex-row">
-        <input
-          id={inputId}
-          type="password"
-          required
-          autoComplete="off"
-          placeholder="Enter password"
-          aria-label={`Password for ${title} samples`}
-          onChange={() => setSubmitted(false)}
-          className="h-12 flex-1 rounded-lg border border-white/10 bg-background/60 px-4 text-base text-white placeholder:text-white/35 focus:border-primary/60 focus:outline-none focus:ring-2 focus:ring-primary/30"
-        />
-        <button
-          type="submit"
-          className="h-12 rounded-lg bg-primary px-6 text-base font-semibold text-primary-foreground transition-opacity hover:opacity-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-card"
-        >
-          Unlock
-        </button>
-      </div>
-      <p role="status" className={submitted ? "text-sm text-white/50" : "sr-only"}>
-        {submitted ? "These samples aren't available yet. Please check back soon." : ""}
-      </p>
-    </form>
+    </div>
   )
 }
 
@@ -342,7 +310,7 @@ export function WritingSamplesSection() {
                             </div>
                           )}
 
-                          {type.gated && <PasswordBox title={type.title} />}
+                          {type.customSample && <CustomSampleNote />}
                         </div>
                       </section>
                     ))}
