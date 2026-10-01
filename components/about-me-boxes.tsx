@@ -30,12 +30,12 @@ type Box = {
 
 function ImageStatement({ imageSrc, children }: { imageSrc: string; children: ReactNode }) {
   return (
-    <div className="relative flex min-h-[60vh] items-center justify-center overflow-hidden px-8 py-20 md:px-16">
-      <Image src={imageSrc} alt="" fill sizes="(max-width: 1024px) 95vw, 1152px" className="object-cover" />
-      <div className="absolute inset-0 bg-card/80" aria-hidden="true" />
-      <p className="relative mx-auto max-w-3xl text-center text-2xl font-medium leading-snug tracking-tight text-white text-pretty md:text-3xl lg:text-4xl">
-        {children}
-      </p>
+    <div className="relative flex min-h-[75vh] items-center justify-center overflow-hidden p-6 md:p-10">
+      <Image src={imageSrc} alt="" fill sizes="(max-width: 1400px) 96vw, 1400px" className="object-cover" />
+      <div className="absolute inset-0 bg-card/20" aria-hidden="true" />
+      <div className="relative z-10 max-w-2xl rounded-3xl border border-white/10 bg-card/70 p-8 shadow-2xl backdrop-blur-md md:p-10">
+        <p className="text-2xl font-semibold leading-snug text-white text-pretty md:text-3xl">{children}</p>
+      </div>
     </div>
   )
 }
