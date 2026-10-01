@@ -134,7 +134,7 @@ const audiences: Audience[] = [
     level: "Low",
     audience: ["Everyday users", "Media readers"],
     assumes:
-      "Readers who use apps every day or read about technology in the news. Plain words, no jargon, just clear steps.",
+      "Readers who use apps every day or read about technology in the news. Plain words, no jargon.",
     contentTypes: [
       {
         title: "Help center",
