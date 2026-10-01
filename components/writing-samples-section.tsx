@@ -27,6 +27,26 @@ const helpCenters = [
   },
 ]
 
+// Personio how-to videos, published in English and German.
+const videos = [
+  {
+    label: "Overview of permissions and employee roles (English)",
+    href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    label: "Overview of permissions and employee roles (German)",
+    href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    label: "Overview of the Analytics area (English)",
+    href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
+  },
+  {
+    label: "Overview of the Analytics area (German)",
+    href: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
+  },
+]
+
 // Technology stories written for a general audience.
 const mediaArticles = [
   {
@@ -131,16 +151,16 @@ const audiences: Audience[] = [
         links: helpCenters,
       },
       {
+        title: "Videos",
+        image: "/sample-videos.png",
+        alt: "Preview of a how-to video guide",
+        links: videos,
+      },
+      {
         title: "Technology stories",
         image: "/sample-tech-stories.png",
         alt: "Preview of a technology story published in the media",
         links: mediaArticles,
-      },
-      {
-        title: "Videos",
-        caption: "Short how-to videos that show each step on screen, narrated in plain words.",
-        image: "/sample-videos.png",
-        alt: "Preview of a how-to video guide",
       },
     ],
   },
