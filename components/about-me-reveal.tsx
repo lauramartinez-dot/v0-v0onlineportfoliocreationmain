@@ -19,18 +19,17 @@ export function AboutMeReveal() {
           <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
         </p>
 
-        <ScrollReveal className="mt-20 md:mt-28">
-          <div aria-hidden="true" className="h-24 w-px bg-gradient-to-b from-transparent to-primary md:h-32" />
-        </ScrollReveal>
-
-        <ScrollReveal className="mt-10 md:mt-12">
-  <p className="max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-white text-pretty md:text-3xl">
-  I still write about technology. Engineering. Software.
-  <span className="mt-2 block text-2xl font-semibold leading-snug tracking-tight text-white/55 md:text-3xl">
-              In plain words, accurate and clear enough that you{' '}
-  <span className="md:block md:whitespace-nowrap">don&apos;t need a PhD or a CS degree to follow along.</span>
-            </span>
-          </p>
+        <ScrollReveal className="mt-16 md:mt-20">
+          <div className="flex items-stretch justify-between gap-8">
+            <div aria-hidden="true" className="w-px shrink-0 bg-gradient-to-b from-transparent to-primary" />
+            <p className={`max-w-3xl text-right ${statementClass}`}>
+              I still write about technology. Engineering. Software.{" "}
+              <span className="text-white/55">
+                In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow
+                along.
+              </span>
+            </p>
+          </div>
         </ScrollReveal>
       </div>
     </div>
