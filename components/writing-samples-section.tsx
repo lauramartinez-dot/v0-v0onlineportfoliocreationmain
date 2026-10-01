@@ -136,88 +136,78 @@ export function WritingSamplesSection() {
                 <DialogTrigger asChild>
                   <button
                     type="button"
-                    className="surface-card group relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-3 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="surface-card group relative flex h-full min-h-[300px] w-full flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
-                    {/* Inset preview of the real sample */}
-                    <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl bg-background ring-1 ring-white/10">
-                      <img
-                        src={sample.image || "/placeholder.svg"}
-                        alt={`Preview of ${sample.title}`}
-                        className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
-                      />
-                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-                      <span className="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-full bg-background/70 ring-1 ring-white/15 backdrop-blur-sm transition-colors group-hover:bg-primary/20 group-hover:ring-primary/40">
-                        <Maximize2 className="h-4 w-4 text-white/70 transition-colors group-hover:text-primary" aria-hidden="true" />
+                    <div className="flex items-start justify-between">
+                      <span
+                        className="flex h-14 w-14 shrink-0 items-end justify-center gap-1 rounded-2xl bg-primary/10 pb-4 ring-1 ring-primary/20"
+                        aria-hidden="true"
+                      >
+                        {[1, 2, 3].map((segment) => (
+                          <span
+                            key={segment}
+                            className={
+                              "w-1.5 rounded-full " +
+                              (segment === 1 ? "h-2.5 " : segment === 2 ? "h-4 " : "h-5 ") +
+                              (segment <= filledBars ? "bg-primary" : "bg-white/15")
+                            }
+                          />
+                        ))}
                       </span>
+                      <Maximize2
+                        className="h-5 w-5 text-white/30 transition-colors group-hover:text-primary"
+                        aria-hidden="true"
+                      />
                     </div>
 
-                    <div className="flex flex-1 flex-col gap-4 px-5 pb-5 pt-6 md:px-6">
-                      <div className="flex items-center gap-3">
-                        <span className="flex items-end gap-0.5" aria-hidden="true">
-                          {[1, 2, 3].map((segment) => (
-                            <span
-                              key={segment}
-                              className={
-                                "w-1 rounded-full " +
-                                (segment === 1 ? "h-2 " : segment === 2 ? "h-3 " : "h-4 ") +
-                                (segment <= filledBars ? "bg-primary" : "bg-white/15")
-                              }
-                            />
-                          ))}
-                        </span>
-                        <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
-                          Technical expertise
-                        </span>
-                      </div>
+                    <div className="flex flex-col gap-2">
+                      <span className="text-xs font-semibold uppercase tracking-[0.2em] text-white/45">
+                        Technical expertise
+                      </span>
+                      <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
+                        {level}
+                      </h3>
+                      <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
+                        {readers}
+                      </p>
+                    </div>
 
-                      <div className="flex flex-col gap-1">
-                        <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
-                          {level}
-                        </h3>
-                        <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
-                          {readers}
-                        </p>
-                      </div>
-
-                      <div className="mt-auto flex items-center justify-between gap-4 border-t border-white/10 pt-4">
-                        <span className="text-sm font-medium text-white/80 text-pretty">{sample.title}</span>
-                        <span className="shrink-0 text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5">
-                          {"View \u2192"}
-                        </span>
-                      </div>
+                    <div className="mt-auto flex items-center justify-between gap-4 border-t border-white/10 pt-5">
+                      <span className="text-sm font-medium text-white/70 text-pretty">{sample.title}</span>
+                      <span className="shrink-0 text-sm font-semibold text-primary transition-transform group-hover:translate-x-0.5">
+                        {"View \u2192"}
+                      </span>
                     </div>
                   </button>
                 </DialogTrigger>
 
-                <DialogContent
-                  className={
-                    "flex max-h-[90vh] w-[95vw] flex-col gap-0 overflow-hidden border-[#472444] bg-card p-0 sm:rounded-[1.75rem] " +
-                    (isCollection ? "max-w-6xl sm:max-w-6xl" : "max-w-4xl sm:max-w-4xl")
-                  }
-                >
-                  {/* Sample image — banner with the title overlaid at the bottom */}
-                  <div className="relative h-56 shrink-0 overflow-hidden bg-[#0f0b13] md:h-72">
-                    <img
-                      src={sample.image || "/placeholder.svg"}
-                      alt={`Preview of ${sample.title}`}
-                      className="h-full w-full object-cover object-top"
-                    />
-                    {/* Strong bottom scrim so the overlaid title stays legible */}
-                    <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card via-card/85 to-transparent" />
-
-                    <DialogHeader className="absolute inset-x-0 bottom-0 space-y-0 px-8 pb-6 text-left md:px-12">
-                      <span className="inline-flex w-fit items-center rounded-full bg-primary/15 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/30 backdrop-blur-sm">
-                        {readers}
-                      </span>
-                      <DialogTitle className="mt-3 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
-                        {level} technical knowledge
-                      </DialogTitle>
-                      <p className="mt-1.5 text-base font-medium text-white/60 text-pretty md:text-lg">
-                        {sample.title}
-                      </p>
-                      <DialogDescription className="sr-only">{sample.caption}</DialogDescription>
-                    </DialogHeader>
+                <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
+                  {/* Large framed preview of the real sample */}
+                  <div className="shrink-0 p-4 md:p-6">
+                    <div className="relative h-64 overflow-hidden rounded-2xl bg-background ring-1 ring-white/10 sm:h-80 md:h-[26rem]">
+                      <img
+                        src={sample.image || "/placeholder.svg"}
+                        alt={`Preview of ${sample.title}`}
+                        className="h-full w-full object-cover object-top"
+                      />
+                      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card/80 to-transparent" />
+                    </div>
                   </div>
+
+                  <DialogHeader className="space-y-0 px-8 pt-4 text-left md:px-12">
+                    <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/25">
+                      {readers}
+                    </span>
+                    <DialogTitle className="mt-4 text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
+                      {level} technical knowledge
+                    </DialogTitle>
+                    <p className="mt-2 text-base font-medium text-white/80 text-pretty md:text-lg">
+                      {sample.title}
+                    </p>
+                    <DialogDescription className="mt-3 max-w-3xl text-base leading-relaxed text-white/55 text-pretty">
+                      {sample.caption}
+                    </DialogDescription>
+                  </DialogHeader>
 
                   {/* Body — gated portal link (High & Medium) */}
                   {!isCollection && (
@@ -242,7 +232,7 @@ export function WritingSamplesSection() {
 
                   {/* Body — the link collection (Low only) */}
                   {isCollection && (
-                    <div className="flex min-h-0 flex-1 flex-col gap-9 overflow-y-auto px-8 pt-8 pb-16 md:px-12">
+                    <div className="flex flex-col gap-9 px-8 pt-10 pb-14 md:px-12">
                       <section>
                         <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
                           Help center
