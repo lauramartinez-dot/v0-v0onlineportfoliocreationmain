@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2, ExternalLink, Lock, ArrowRight } from "lucide-react"
+import { Maximize2, ExternalLink, Lock } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -66,7 +66,7 @@ const audiences = [
     level: "High",
     readers: "for developers",
     audience: ["Developers", "IT staff"],
-    assumes: "Readers who write code. Assumes familiarity with APIs, requests, and authentication.",
+    assumes: "Readers who write code and know their way around APIs.",
     sample: {
       title: "API developer portal",
       caption:
@@ -79,7 +79,7 @@ const audiences = [
     level: "Medium",
     readers: "for consultants",
     audience: ["Consultants", "PMs", "Analysts"],
-    assumes: "Readers who configure software but don't code. Concepts are explained, jargon kept minimal.",
+    assumes: "Readers who configure software but don't write code.",
     sample: {
       title: "User manuals",
       caption:
@@ -92,7 +92,7 @@ const audiences = [
     level: "Low",
     readers: "for everyday users",
     audience: ["Everyday users"],
-    assumes: "Readers with no technical background. Plain language, step by step, no jargon.",
+    assumes: "Readers with no technical background at all.",
     // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
     sample: {
@@ -117,6 +117,15 @@ function LinkBox({ label, href }: { label: string; href: string }) {
       <span className="text-lg font-semibold leading-relaxed tracking-[-0.01em] text-white text-pretty">{label}</span>
       <ExternalLink className="mt-1 h-[1.1rem] w-[1.1rem] shrink-0 text-white/30 transition-colors group-hover:text-primary" />
     </a>
+  )
+}
+
+function SectionImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <div className="relative h-56 overflow-hidden rounded-2xl bg-background ring-1 ring-white/10 sm:h-72">
+      <img src={src} alt={alt} className="h-full w-full object-cover object-top" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card/70 to-transparent" />
+    </div>
   )
 }
 
@@ -177,34 +186,23 @@ export function WritingSamplesSection() {
                         </p>
                       </div>
 
-                      <div className="mt-auto flex flex-col gap-3">
-                        <span className="text-xs font-semibold uppercase tracking-[0.14em] text-white/40">
-                          Written for
-                        </span>
-                        <ul className="flex flex-wrap gap-2">
-                          {audience.map((tag) => (
-                            <li
-                              key={tag}
-                              className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-white/90"
-                            >
-                              {tag}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center justify-end border-t border-white/10 px-8 py-5 md:px-10">
-                      <span className="flex items-center gap-1.5 whitespace-nowrap text-sm font-medium text-white/45 transition-colors group-hover:text-primary">
-                        View samples
-                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-                      </span>
+                      <ul className="mt-auto flex flex-wrap gap-2" aria-label="For example">
+                        {audience.map((tag) => (
+                          <li
+                            key={tag}
+                            className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                          >
+                            {tag}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </button>
                 </DialogTrigger>
 
                 <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
                   {/* Large framed preview of the real sample */}
+                  {!isCollection && (
                   <div className="shrink-0 p-4 md:p-6">
                     <div className="relative h-64 overflow-hidden rounded-2xl bg-background ring-1 ring-white/10 sm:h-80 md:h-[26rem]">
                       <img
@@ -215,8 +213,13 @@ export function WritingSamplesSection() {
                       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-card/80 to-transparent" />
                     </div>
                   </div>
+                  )}
 
-                  <DialogHeader className="space-y-0 px-8 pt-4 text-left md:px-12">
+                  <DialogHeader
+                    className={
+                      "space-y-0 px-8 text-left md:px-12 " + (isCollection ? "pt-12" : "pt-4")
+                    }
+                  >
                     <span className="inline-flex w-fit items-center rounded-full bg-primary/10 px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-primary ring-1 ring-primary/25">
                       Written {readers}
                     </span>
@@ -254,9 +257,10 @@ export function WritingSamplesSection() {
 
                   {/* Body — the link collection (Low only) */}
                   {isCollection && (
-                    <div className="flex flex-col gap-9 px-8 pt-10 pb-14 md:px-12">
+                    <div className="flex flex-col gap-12 px-8 pt-10 pb-14 md:px-12">
                       <section>
-                        <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
+                        <SectionImage src="/sample-help-center.png" alt="Preview of a Personio help center article" />
+                        <h3 className="mt-6 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
                           Help center
                         </h3>
                         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
@@ -267,7 +271,8 @@ export function WritingSamplesSection() {
                       </section>
 
                       <section>
-                        <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
+                        <SectionImage src="/sample-tech-stories.png" alt="Preview of a technology story published in the media" />
+                        <h3 className="mt-6 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-white/45">
                           Technology stories
                         </h3>
                         <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
