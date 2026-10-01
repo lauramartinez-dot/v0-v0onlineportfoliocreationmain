@@ -31,7 +31,7 @@ const introClass = "mx-auto max-w-3xl text-2xl font-semibold leading-snug tracki
 
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="flex flex-col gap-8 px-4 pb-20 text-center" step={350}>
+    <StaggerReveal className="flex flex-col gap-8 px-4 pb-12 text-center" step={350}>
       <p className={`${introClass} text-white`}>
         I&apos;m a tech journalist turned technical writer — and honestly,{" "}
         <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
