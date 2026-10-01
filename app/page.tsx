@@ -3,6 +3,7 @@ import { HighlightsSection } from "@/components/highlights-section"
 import { WritingPrinciplesSection } from "@/components/writing-principles-section"
 import { WritingSamplesSection } from "@/components/writing-samples-section"
 import CareerMapSection from "@/components/career-map-section"
+import { PersonalProjectsSection } from "@/components/personal-projects-section"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 
@@ -19,8 +20,8 @@ export default function Home() {
       <CareerMapSection />
       {/* Writing samples */}
       <WritingSamplesSection />
-      {/* Side projects - temporarily hidden */}
-      {/* <OOOSection /> */}
+      {/* Personal projects */}
+      <PersonalProjectsSection />
       <Footer />
     </main>
   )
