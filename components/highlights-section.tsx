@@ -16,7 +16,7 @@ export function HighlightsSection() {
   <div className="flex items-center justify-center gap-4">
   <span className="h-px w-10 bg-primary/60 md:w-16" aria-hidden="true" />
   <h3 className="text-balance text-center text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-  What sets me apart<span className="text-primary">.</span>
+  Who am I, in 4 words<span className="text-primary">.</span>
   </h3>
   <span className="h-px w-10 bg-primary/60 md:w-16" aria-hidden="true" />
   </div>

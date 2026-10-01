@@ -42,7 +42,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 
 const boxes: Box[] = [
   {
-    title: "Ex-journalist",
+    title: "Journalistic",
     teaser: "From explaining tech in the news to explaining it in docs.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
@@ -67,7 +67,7 @@ const boxes: Box[] = [
     ),
   },
   {
-    title: "Globetrotter",
+    title: "Well-traveled",
     teaser: "Four countries and three languages by my 30s.",
     imageSrc: "/globe-purple.png",
     imageAlt: "Purple globe",
@@ -128,7 +128,7 @@ const boxes: Box[] = [
     ),
   },
   {
-    title: "Startup",
+    title: "Startup-minded",
     teaser: "Most of my career, including Personio.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
