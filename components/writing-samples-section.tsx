@@ -66,7 +66,7 @@ const audiences = [
     level: "High",
     readers: "for developers",
     audience: ["Developers", "IT staff"],
-    assumes: "Readers who build and run software. They read code and need precise, complete detail.",
+    assumes: "Readers whose profession is building software. They need precise, complete technical detail.",
     sample: {
       title: "API developer portal",
       caption:
@@ -79,7 +79,7 @@ const audiences = [
     level: "Medium",
     readers: "for consultants",
     audience: ["Consultants", "PMs", "Analysts"],
-    assumes: "Readers who set up and configure software at work, but don't write code.",
+    assumes: "Domain specialists who configure software, and sometimes script, without an IT background.",
     sample: {
       title: "User manuals",
       caption:
