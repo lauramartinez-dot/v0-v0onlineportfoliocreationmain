@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { AboutMeReveal } from "@/components/about-me-reveal"
+import { ThenNowReveal } from "@/components/then-now-reveal"
 
 const countries = [
   { name: "Spain", code: "es" },
@@ -25,9 +26,9 @@ export function HighlightsSection() {
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
       <section className="relative px-4 pb-32 pt-4">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2">
+          <ThenNowReveal className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2">
             {/* Then - links to the live published article */}
-            <div className="flex flex-col">
+            <div className="compare-left flex flex-col">
               <a
                 href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
                 target="_blank"
@@ -60,7 +61,7 @@ export function HighlightsSection() {
             </div>
 
             {/* Now */}
-            <div className="flex flex-col">
+            <div className="compare-right relative z-10 flex flex-col">
               <div className="surface-card relative flex flex-1 flex-col overflow-hidden rounded-3xl border border-primary/30 bg-primary/[0.06]">
                 <div className="relative aspect-[4/5] w-full overflow-hidden">
                   <Image
@@ -86,7 +87,7 @@ export function HighlightsSection() {
                 </div>
               </div>
             </div>
-          </div>
+          </ThenNowReveal>
         </div>
       </section>
 

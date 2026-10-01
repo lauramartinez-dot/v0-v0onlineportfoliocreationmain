@@ -52,45 +52,63 @@
   opacity: 0;
 }
 
-  /* Hero: both cards appear together near the center, then separate into place */
-  @keyframes hero-together-left {
-  0% { opacity: 0; transform: translateX(var(--hero-shift)) scale(0.9); }
-  35% { opacity: 1; transform: translateX(var(--hero-shift)) scale(0.94); }
-  50% { opacity: 1; transform: translateX(var(--hero-shift)) scale(0.94); }
+  /* Before/After: both columns appear together in the center, then separate into place */
+  @keyframes compare-together-left {
+  0% { opacity: 0; transform: translateX(var(--compare-shift)) scale(0.92); }
+  35% { opacity: 1; transform: translateX(var(--compare-shift)) scale(0.95); }
+  50% { opacity: 1; transform: translateX(var(--compare-shift)) scale(0.95); }
   100% { opacity: 1; transform: translateX(0) scale(1); }
   }
 
-  @keyframes hero-together-right {
-  0% { opacity: 0; transform: translateX(calc(var(--hero-shift) * -1)) scale(0.9); }
-  35% { opacity: 1; transform: translateX(calc(var(--hero-shift) * -1)) scale(0.94); }
-  50% { opacity: 1; transform: translateX(calc(var(--hero-shift) * -1)) scale(0.94); }
+  @keyframes compare-together-right {
+  0% { opacity: 0; transform: translateX(calc(var(--compare-shift) * -1)) scale(0.92); }
+  35% { opacity: 1; transform: translateX(calc(var(--compare-shift) * -1)) scale(0.95); }
+  50% { opacity: 1; transform: translateX(calc(var(--compare-shift) * -1)) scale(0.95); }
   100% { opacity: 1; transform: translateX(0) scale(1); }
   }
 
-  @keyframes hero-together-mobile {
-  0% { opacity: 0; transform: translateY(24px) scale(0.96); }
-  100% { opacity: 1; transform: translateY(0) scale(1); }
+  @keyframes compare-rise {
+  0% { opacity: 0; transform: translateY(24px); }
+  100% { opacity: 1; transform: translateY(0); }
   }
 
-  .animate-hero-left,
-  .animate-hero-right {
-  --hero-shift: 4rem;
+  @keyframes compare-fade {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+  }
+
+  .compare-left,
+  .compare-right,
+  .compare-fade {
+  --compare-shift: 18%;
   opacity: 0;
-  animation: hero-together-mobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .compare-in .compare-left,
+  .compare-in .compare-right {
+  animation: compare-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  .compare-in .compare-fade {
+  animation: compare-fade 0.6s ease-out 1.4s forwards;
   }
 
   @media (min-width: 768px) {
-  .animate-hero-left {
-  animation: hero-together-left 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  .compare-in .compare-left {
+  animation: compare-together-left 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
   }
-  .animate-hero-right {
-  animation: hero-together-right 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  .compare-in .compare-right {
+  animation: compare-together-right 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
   }
   }
 
   @media (prefers-reduced-motion: reduce) {
-  .animate-hero-left,
-  .animate-hero-right {
+  .compare-left,
+  .compare-right,
+  .compare-fade,
+  .compare-in .compare-left,
+  .compare-in .compare-right,
+  .compare-in .compare-fade {
   animation: none;
   opacity: 1;
   }
