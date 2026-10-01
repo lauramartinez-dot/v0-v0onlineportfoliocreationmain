@@ -4,16 +4,16 @@ const personalProjects = [
   {
     id: "portfolio",
     title: "This portfolio",
-    tags: ["Vibe-coding", "AI"],
-    image: "/project-portfolio.png",
-    imageAlt: "Laptop showing this portfolio site being built",
+    tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "AI upskilling"],
+    image: "/project-portfolio-ai.png",
+    imageAlt: "Laptop with a code editor and an AI chat panel side by side, lit in pink",
   },
   {
     id: "bookclub",
     title: "Barcelona's first book club for women in tech",
     tags: ["Entrepreneurship", "Women in tech advocacy", "Event organisation"],
-    image: "/too-bossy-club.png",
-    imageAlt: "Too Bossy Club logo with an open book icon",
+    image: "/too-bossy-portrait.jpg",
+    imageAlt: "Too Bossy: a woman in round glasses with a red blazer over her shoulder",
   },
 ]
 
