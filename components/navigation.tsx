@@ -12,6 +12,7 @@ export function Navigation() {
     { label: "Core principles", href: "#writing-principles" },
     { label: "Experience as a TW", href: "#company-highlights" },
     { label: "Writing samples", href: "#writing-samples" },
+    { label: "Personal projects", href: "#personal-projects" },
   ]
 
   return (
@@ -42,14 +43,6 @@ export function Navigation() {
             >
               <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
                 <span className="whitespace-nowrap">LinkedIn</span>
-              </a>
-            </Button>
-            <Button
-              className="h-auto rounded-full bg-primary/20 px-5 py-2 text-lg font-medium text-primary hover:bg-primary/30"
-              asChild
-            >
-              <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <span className="whitespace-nowrap">Download CV</span>
               </a>
             </Button>
           </div>
@@ -85,11 +78,6 @@ export function Navigation() {
               >
                 <a href="https://www.linkedin.com/in/lauramartinezmontero/" target="_blank" rel="noopener noreferrer">
                   LinkedIn
-                </a>
-              </Button>
-              <Button size="sm" className="rounded-full bg-primary/20 font-medium text-primary hover:bg-primary/30" asChild>
-                <a href="https://drive.google.com/file/d/1jxEkccyHsJgQvur5cm6PiNiX9yS0H9bI/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                  Download CV
                 </a>
               </Button>
             </div>
