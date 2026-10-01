@@ -61,8 +61,7 @@ export function HeroSection() {
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
               <div className="inline-flex items-center gap-2.5 rounded-full border border-primary/40 bg-primary/5 px-6 py-3 text-xl md:text-2xl font-medium tracking-tight backdrop-blur-sm">
                 <MapPin className="h-5 w-5 shrink-0 text-primary" />
-                <span className="text-foreground">Based in Barcelona.</span>
-                <span className="text-muted-foreground">Working globally.</span>
+  <span className="text-foreground">Based in Barcelona.</span>
               </div>
             </div>
           </div>
