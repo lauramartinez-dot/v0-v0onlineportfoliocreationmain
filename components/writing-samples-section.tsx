@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2, ExternalLink, Lock } from "lucide-react"
+import { Maximize2, ExternalLink, Lock, ArrowRight } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -65,6 +65,8 @@ const audiences = [
   {
     level: "High",
     readers: "for developers",
+    audience: "Developers",
+    assumes: "Readers who write code. Assumes familiarity with APIs, requests, and authentication.",
     sample: {
       title: "API developer portal",
       caption:
@@ -76,6 +78,8 @@ const audiences = [
   {
     level: "Medium",
     readers: "for consultants",
+    audience: "Consultants",
+    assumes: "Readers who configure software but don't code. Concepts are explained, jargon kept minimal.",
     sample: {
       title: "User manuals",
       caption:
@@ -87,6 +91,8 @@ const audiences = [
   {
     level: "Low",
     readers: "for everyday users",
+    audience: "Everyday users",
+    assumes: "Readers with no technical background. Plain language, step by step, no jargon.",
     // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
     sample: {
@@ -128,7 +134,7 @@ export function WritingSamplesSection() {
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
-          {audiences.map(({ level, readers, sample, ...rest }, index) => {
+          {audiences.map(({ level, readers, audience, assumes, sample, ...rest }, index) => {
             const isCollection = "variant" in rest && rest.variant === "collection"
             const filledBars = audiences.length - index
             return (
@@ -136,37 +142,48 @@ export function WritingSamplesSection() {
                 <DialogTrigger asChild>
                   <button
                     type="button"
-                    className="surface-card group relative flex h-full min-h-[240px] w-full flex-col gap-10 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                    className="surface-card group relative flex h-full w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-white/[0.05] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                   >
-                    <div className="flex items-start justify-between">
-                      <span
-                        className="flex h-14 w-14 shrink-0 items-end justify-center gap-1 rounded-2xl bg-primary/10 pb-4 ring-1 ring-primary/20"
-                        aria-hidden="true"
-                      >
-                        {[1, 2, 3].map((segment) => (
-                          <span
-                            key={segment}
-                            className={
-                              "w-1.5 rounded-full " +
-                              (segment === 1 ? "h-2.5 " : segment === 2 ? "h-4 " : "h-5 ") +
-                              (segment <= filledBars ? "bg-primary" : "bg-white/15")
-                            }
-                          />
-                        ))}
-                      </span>
-                      <Maximize2
-                        className="h-5 w-5 text-white/30 transition-colors group-hover:text-primary"
-                        aria-hidden="true"
-                      />
+                    <span
+                      className="pointer-events-none absolute inset-x-0 top-0 h-px origin-left scale-x-0 bg-primary transition-transform duration-500 group-hover:scale-x-100"
+                      aria-hidden="true"
+                    />
+
+                    <div className="flex flex-1 flex-col gap-6 p-8 md:p-10">
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1.5" aria-label={`${level} technical knowledge`}>
+                          {[1, 2, 3].map((segment) => (
+                            <span
+                              key={segment}
+                              className={
+                                "h-1.5 w-8 rounded-full transition-colors " +
+                                (segment <= filledBars ? "bg-primary" : "bg-white/10")
+                              }
+                            />
+                          ))}
+                        </div>
+                        <Maximize2
+                          className="h-5 w-5 text-white/30 transition-colors group-hover:text-primary"
+                          aria-hidden="true"
+                        />
+                      </div>
+
+                      <div className="flex flex-col gap-3">
+                        <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
+                          {level} technical knowledge
+                        </h3>
+                        <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
+                          {assumes}
+                        </p>
+                      </div>
                     </div>
 
-                    <div className="mt-auto flex flex-col gap-2">
-                      <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
-                        {level} technical knowledge
-                      </h3>
-                      <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
-                        Written {readers}
-                      </p>
+                    <div className="flex items-center justify-between gap-4 border-t border-white/10 px-8 py-5 md:px-10">
+                      <span className="text-base font-medium text-white/85">{audience}</span>
+                      <span className="flex items-center gap-1.5 text-sm font-medium text-white/45 transition-colors group-hover:text-primary">
+                        View samples
+                        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+                      </span>
                     </div>
                   </button>
                 </DialogTrigger>
