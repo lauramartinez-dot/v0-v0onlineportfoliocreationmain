@@ -1093,14 +1093,23 @@ function CompanyCard({
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
   return (
-    <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] mb-8 hover:border-primary/40 hover:bg-white/[0.05] transition-all duration-300 overflow-hidden">
+    <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] mb-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
-        className="p-6 md:p-8 cursor-pointer group"
+        className="p-8 md:p-10 cursor-pointer group"
+        role="button"
+        tabIndex={0}
+        aria-expanded={isExpanded}
         onClick={() => setIsExpanded(!isExpanded)}
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault()
+            setIsExpanded(!isExpanded)
+          }
+        }}
       >
         <div className="flex items-center gap-5 md:gap-6">
-          <div className="relative w-28 h-14 md:w-36 md:h-[72px] rounded-xl overflow-hidden bg-white/95 ring-1 ring-white/10 transition-shadow duration-300 group-hover:ring-primary/40 shrink-0">
+          <div className="relative w-24 h-12 md:w-28 md:h-14 rounded-xl overflow-hidden bg-white/95 shrink-0">
             <Image src={logo} alt={`${name} logo`} fill sizes="144px" className={`object-contain ${logoClassName}`} />
           </div>
           <div className="flex-1 min-w-0">
@@ -1127,29 +1136,28 @@ function CompanyCard({
           </div>
           <div className="flex items-center gap-4 shrink-0">
             {/* Country */}
-            <div className="hidden sm:flex items-center gap-2 rounded-full border border-primary/20 bg-primary/10 px-3 py-1.5">
-              <span className="text-base leading-none" aria-hidden="true">📍</span>
-              <span className="text-sm font-medium text-foreground/70">{country.replace(/\s*company$/i, '')}</span>
-            </div>
+            <span className="hidden sm:block text-sm font-medium text-foreground/50">
+              {country.replace(/\s*company$/i, '')}
+            </span>
             {/* Expand/Collapse indicator */}
-            <ChevronDown className={`w-6 h-6 text-foreground/40 group-hover:text-primary transition-all duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+            <ChevronDown className={`w-5 h-5 text-foreground/40 group-hover:text-foreground transition-all duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
           </div>
         </div>
       </div>
 
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
-        <div className="px-8 md:px-10 pb-8 md:pb-10 border-t border-primary/10">
-          <div className="pt-6 flex flex-col gap-8">
+        <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
+          <div className="pt-8 flex flex-col gap-10">
             <div
               className={
                 skills && skills.length > 0
-                  ? "grid grid-cols-1 items-start gap-8 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-10"
-                  : "flex flex-col gap-8"
+                  ? "grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-x-16"
+                  : "flex flex-col gap-10"
               }
             >
               {description && (
-                <p className="text-[17px] leading-relaxed text-foreground/75 text-pretty lg:col-start-1 lg:row-start-1 [&_strong]:font-semibold [&_strong]:text-foreground">
+                <p className="text-base md:text-[17px] leading-relaxed text-foreground/60 text-pretty lg:col-start-1 lg:row-start-1 [&_strong]:font-semibold [&_strong]:text-foreground">
                   {description}
                 </p>
               )}
@@ -1343,26 +1351,19 @@ export default function CareerMapSection() {
 
 function PanelLabel({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-5 flex items-center gap-4">
-      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" />
-      <h4 className="text-base font-bold uppercase tracking-[0.2em] text-primary">{children}</h4>
-      <span aria-hidden="true" className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" />
-    </div>
+    <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-foreground/45">{children}</h4>
   )
 }
-
-const tileClass =
-  "rounded-xl border border-primary/30 bg-foreground/[0.05] shadow-[inset_0_1px_0_0_rgba(255,255,255,0.04)] transition-colors hover:border-primary/50 hover:bg-primary/[0.06]"
 
 function ToolsPanel({ tools }: { tools: string[] }) {
   return (
     <div>
       <PanelLabel>Tools</PanelLabel>
-      <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 xl:grid-cols-4">
+      <ul className="flex flex-wrap gap-2">
         {tools.map((tool) => (
           <li
             key={tool}
-            className={`${tileClass} flex min-h-16 items-center justify-center px-4 py-4 text-center text-xl font-semibold text-foreground`}
+            className="rounded-full border border-white/10 px-4 py-1.5 text-sm font-medium text-foreground/70"
           >
             {tool}
           </li>
@@ -1374,27 +1375,13 @@ function ToolsPanel({ tools }: { tools: string[] }) {
 
 function SkillsPanel({ skills }: { skills: string[] }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-primary/40 bg-gradient-to-b from-primary/[0.14] to-primary/[0.03] shadow-[0_0_24px_-6px_rgba(153,49,231,0.5)]">
-      <div className="flex items-center gap-2 border-b border-primary/25 bg-primary/10 px-5 py-2.5">
-        <Sparkles className="h-4 w-4 text-primary" />
-        <p className="text-base font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</p>
-      </div>
-      <ul className="flex flex-col divide-y divide-primary/10 px-5 py-1">
+    <div>
+      <PanelLabel>Skills unlocked</PanelLabel>
+      <ul className="flex flex-col divide-y divide-white/10 border-y border-white/10">
         {skills.map((skill) => (
           <li key={skill} className="flex items-center justify-between gap-4 py-3">
-            <span className="text-xl font-semibold leading-snug text-foreground">{skill}</span>
-            <span className="flex shrink-0 flex-col items-center">
-              {[0, 1, 2].map((i) => (
-                <ChevronUp
-                  key={i}
-                  className="-mb-[7px] h-4 w-5 animate-skill-arrow text-primary drop-shadow-[0_0_5px_rgba(153,49,231,0.85)] last:mb-0"
-                  strokeWidth={3}
-                  style={{ animationDelay: `${(2 - i) * 180}ms` }}
-                  aria-hidden="true"
-                />
-              ))}
-              <span className="sr-only">leveled up</span>
-            </span>
+            <span className="text-base md:text-[17px] font-medium leading-snug text-foreground">{skill}</span>
+            <ChevronUp className="h-4 w-4 shrink-0 text-primary" strokeWidth={2.5} aria-hidden="true" />
           </li>
         ))}
       </ul>
@@ -1410,8 +1397,9 @@ function AchievementsPanel({ items }: { items: string[] }) {
         {items.map((item) => (
           <li
             key={item}
-            className={`${tileClass} px-6 py-4 text-center text-lg font-medium leading-relaxed text-foreground text-pretty`}
+            className="flex items-start gap-3 text-base md:text-[17px] leading-relaxed text-foreground/75 text-pretty"
           >
+            <span aria-hidden="true" className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
             {item}
           </li>
         ))}
