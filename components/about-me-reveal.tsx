@@ -37,12 +37,13 @@ export function AboutMeIntro() {
         <span className="text-primary">the job hasn&apos;t changed that much.</span>
       </p>
       <p className={`${introClass} text-white/55`}>I still write about technology. Engineering. Software.</p>
-      <p className={`${introClass} text-white/55`}>
-        In plain words. While keeping it accurate.
-        <br />
-        And somehow clear enough
-        <br />
-        that you don&apos;t need a PhD or a CS degree to follow along.
+      <p className="mx-auto flex max-w-5xl flex-col gap-1 tracking-tight">
+        <span className="text-xl font-semibold leading-snug text-white/85 md:text-2xl">
+          In plain words. While keeping it accurate.
+        </span>
+        <span className="text-lg font-medium leading-snug text-white/55 text-pretty md:text-xl lg:whitespace-nowrap">
+          And somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+        </span>
       </p>
     </StaggerReveal>
   )
