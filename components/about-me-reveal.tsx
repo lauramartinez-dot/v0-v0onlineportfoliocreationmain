@@ -23,7 +23,7 @@ export function AboutMeReveal() {
           <p className={`text-white/55 ${statementClass}`}>Engineering.</p>
           <p className={`text-white/55 ${statementClass}`}>Software.</p>
           <p className={`mx-auto max-w-3xl text-white/55 ${statementClass}`}>
-            In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+            In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
           </p>
         </StaggerReveal>
       </div>

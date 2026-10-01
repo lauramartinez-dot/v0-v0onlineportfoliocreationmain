@@ -21,7 +21,7 @@ export function HighlightsSection() {
       <section className="relative px-4 pb-32 pt-4">
         <div className="mx-auto max-w-5xl">
           <StaggerReveal
-            className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2"
+            className="grid grid-cols-1 items-stretch gap-x-4 gap-y-6 md:grid-cols-2"
             itemClassName="flex [&>*]:flex-1"
             step={350}
           >
