@@ -66,7 +66,7 @@ const audiences = [
     level: "High",
     readers: "for developers",
     audience: ["Developers", "IT staff"],
-    assumes: "Readers who build and maintain software. Fluent in code, systems, and technical specifications.",
+    assumes: "Readers who build and run software. They read code and need precise, complete detail.",
     sample: {
       title: "API developer portal",
       caption:
@@ -79,7 +79,7 @@ const audiences = [
     level: "Medium",
     readers: "for consultants",
     audience: ["Consultants", "PMs", "Analysts"],
-    assumes: "Readers who use and configure complex software as part of their job, without being technical experts.",
+    assumes: "Readers who set up and configure software at work, but don't write code.",
     sample: {
       title: "User manuals",
       caption:
@@ -91,8 +91,8 @@ const audiences = [
   {
     level: "Low",
     readers: "for everyday users",
-    audience: ["Everyday users"],
-    assumes: "Readers who use technology every day and want clear, task-focused answers in everyday language.",
+  audience: ["Everyday users", "Media readers"],
+  assumes: "Readers who are comfortable with technology and want quick, plain-language answers.",
     // The Low dialog lists help center articles and technology stories.
     variant: "collection" as const,
     sample: {
