@@ -80,9 +80,17 @@ export function HighlightsSection() {
       {/* 4. Global - globetrotter, on the plain section background */}
       <section className="relative overflow-hidden px-4">
         <div
-          className="pointer-events-none absolute inset-y-0 left-1/2 aspect-[71/100] h-full -translate-x-1/2"
-          aria-hidden="true"
-        >
+  className="pointer-events-none absolute inset-y-0 left-1/2 aspect-[71/100] h-full -translate-x-1/2"
+  style={{
+    maskImage:
+      "linear-gradient(to bottom, transparent 0%, #000 18%, #000 78%, transparent 100%), linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%)",
+    WebkitMaskImage:
+      "linear-gradient(to bottom, transparent 0%, #000 18%, #000 78%, transparent 100%), linear-gradient(to right, transparent 0%, #000 14%, #000 86%, transparent 100%)",
+    maskComposite: "intersect",
+    WebkitMaskComposite: "source-in",
+  }}
+  aria-hidden="true"
+  >
           <iframe
             src="/europe-pins.html"
             title="Animated map of Europe with pins on the four countries I've lived in"
