@@ -1,13 +1,6 @@
 import { AboutMeReveal } from "@/components/about-me-reveal"
 import { FlipCard } from "@/components/flip-card"
 
-const countries = [
-  { name: "Spain", code: "es" },
-  { name: "France", code: "fr" },
-  { name: "Ireland", code: "ie" },
-  { name: "Germany", code: "de" },
-]
-
 const languages = [
     { name: "Spanish", code: "es", level: "Native" },
     { name: "English", code: "gb", level: "Bilingual" },
@@ -88,64 +81,34 @@ export function HighlightsSection() {
       <section className="relative px-4 py-32">
         <div className="relative mx-auto max-w-7xl">
           <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
-            <div className="grid grid-cols-1 items-stretch gap-12 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
-              <div className="flex flex-col">
+            <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
+              <div className="flex flex-col gap-12">
                 <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">
                   I&apos;m also a globetrotter. By my 30s, I&apos;d lived in four countries and become fluent in three
                   languages.
                 </p>
 
-                {/* Countries & languages */}
-                <div className="mt-12 flex flex-1 flex-col justify-center gap-10">
-                  <div className="flex flex-col gap-5">
-                    <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
-                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
-                        Countries lived in
-                      </h3>
-                                        </div>
-                    <ul className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-                      {countries.map((country) => (
-                        <li
-                          key={country.name}
-                          className="surface-card group flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
-                        >
-                          <img
-                            src={`https://flagcdn.com/w320/${country.code}.png`}
-                            srcSet={`https://flagcdn.com/w640/${country.code}.png 2x`}
-                            width={96}
-                            height={64}
-                            loading="lazy"
-                            alt={country.name}
-                            title={country.name}
-                            className="aspect-[3/2] w-full max-w-24 rounded-lg object-cover shadow-lg shadow-black/40 ring-1 ring-white/15 transition-transform duration-300 group-hover:scale-105"
-                          />
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="flex flex-col gap-5">
-                    <div className="flex items-baseline justify-between border-b border-white/10 pb-3">
-                      <h3 className="text-xs font-semibold uppercase tracking-[0.2em] text-white/55">Languages</h3>
-                                        </div>
-                    <ul className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                      {languages.map((language) => (
-                        <li
-                          key={language.name}
-                          className="surface-card flex min-h-32 flex-col justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
-                        >
-                          <span className="text-xl font-semibold tracking-tight text-white">{language.name}</span>
-                          <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
-                            {language.level}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                <div className="flex flex-col gap-5">
+                  <h3 className="border-b border-white/10 pb-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/55">
+                    Languages
+                  </h3>
+                  <ul className="flex flex-col gap-3">
+                    {languages.map((language) => (
+                      <li
+                        key={language.name}
+                        className="surface-card flex items-center justify-between gap-6 rounded-2xl border border-white/10 bg-white/[0.03] px-6 py-5 transition-all duration-300 hover:border-white/25 hover:bg-white/[0.06]"
+                      >
+                        <span className="text-xl font-semibold tracking-tight text-white">{language.name}</span>
+                        <span className="w-fit rounded-full bg-primary/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary ring-1 ring-primary/30">
+                          {language.level}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
-              <div className="relative mx-auto aspect-[71/100] w-full max-w-sm overflow-hidden rounded-3xl border border-white/10">
+              <div className="relative mx-auto aspect-[71/100] w-full max-w-xl overflow-hidden rounded-3xl border border-white/10">
                 <iframe
                   src="/europe-pins.html"
                   title="Animated map of Europe with pins on the four countries I've lived in"
