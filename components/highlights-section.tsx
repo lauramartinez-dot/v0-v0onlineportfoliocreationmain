@@ -1,6 +1,7 @@
 import { AboutMeReveal } from "@/components/about-me-reveal"
 import { ArticleCard } from "@/components/article-card"
 import { EuropePinsMap } from "@/components/europe-pins-map"
+import { StaggerReveal } from "@/components/stagger-reveal"
 
 const languages = [
     { name: "Spanish", code: "es", level: "Native" },
@@ -19,7 +20,11 @@ export function HighlightsSection() {
       {/* 2. Then & now - the two eras as a contrast pair (plain-background breather) */}
       <section className="relative px-4 pb-32 pt-4">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2">
+          <StaggerReveal
+            className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2"
+            itemClassName="flex [&>*]:flex-1"
+            step={350}
+          >
             <ArticleCard
               era="6 years ago"
               role="Tech journalist"
@@ -34,7 +39,7 @@ export function HighlightsSection() {
               imageSrc="/now-tech-docs.png"
               imageAlt="Documentation page titled What is an API? on a laptop screen"
             />
-          </div>
+          </StaggerReveal>
         </div>
       </section>
 

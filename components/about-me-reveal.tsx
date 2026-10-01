@@ -19,9 +19,9 @@ export function AboutMeReveal() {
             I&apos;m a tech journalist turned technical writer — and honestly,{" "}
             <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
           </p>
-          <p className={statementClass}>I still write about technology.</p>
-          <p className={statementClass}>Engineering.</p>
-          <p className={statementClass}>Software.</p>
+          <p className={`text-white/55 ${statementClass}`}>I still write about technology.</p>
+          <p className={`text-white/55 ${statementClass}`}>Engineering.</p>
+          <p className={`text-white/55 ${statementClass}`}>Software.</p>
           <p className={`mx-auto max-w-3xl text-white/55 ${statementClass}`}>
             In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along.
           </p>
