@@ -1315,7 +1315,7 @@ export default function CareerMapSection() {
             country="Remote, Germany"
             countryFlag="🇩🇪"
             defaultExpanded={false}
-            skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity"]}
+            skills={["Everyday user documentation", "Cross-team collaboration", "Startup velocity", "Localization"]}
             tools={["Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]}
             description={
               <>
