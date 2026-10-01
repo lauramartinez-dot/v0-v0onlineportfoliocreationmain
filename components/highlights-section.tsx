@@ -1,5 +1,5 @@
 import { AboutMeReveal } from "@/components/about-me-reveal"
-import { FlipCard } from "@/components/flip-card"
+import { ArticleCard } from "@/components/article-card"
 
 const languages = [
     { name: "Spanish", code: "es", level: "Native" },
@@ -19,32 +19,20 @@ export function HighlightsSection() {
       <section className="relative px-4 pb-32 pt-4">
         <div className="mx-auto max-w-5xl">
           <div className="grid grid-cols-1 items-stretch gap-x-8 gap-y-16 md:grid-cols-2">
-            <FlipCard
+            <ArticleCard
               era="6 years ago"
               role="Tech journalist"
               imageSrc="/then-airplane-article.png"
-              imageAlt="A passenger airplane flying low over a city skyline and river"
-            >
-              <a
-                href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-2xl font-semibold leading-snug tracking-tight text-white text-balance underline-offset-4 hover:underline md:text-3xl"
-              >
-                &ldquo;How do planes stay in the air?&rdquo;
-              </a>
-            </FlipCard>
+              imageAlt="Magazine article titled How do planes stay in the air?"
+              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+            />
 
-            <FlipCard
+            <ArticleCard
               era="Now"
               role="Technical writer"
               imageSrc="/now-tech-docs.png"
-              imageAlt="A modern software API documentation page on a dark themed screen"
-            >
-              <p className="text-2xl font-semibold leading-snug tracking-tight text-white text-balance md:text-3xl">
-                &ldquo;What&apos;s an API — and how does it get these two apps talking to each other?&rdquo;
-              </p>
-            </FlipCard>
+              imageAlt="Documentation page titled What is an API? on a laptop screen"
+            />
           </div>
         </div>
       </section>
