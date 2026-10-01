@@ -22,9 +22,9 @@ export function FlipCard({ era, role, imageSrc, imageAlt, children }: FlipCardPr
   const [flipped, setFlipped] = useState(false)
 
   return (
-    <div className="flex flex-col" style={{ perspective: "1600px" }}>
+    <div className="flex flex-col" style={{ perspective: "2400px" }}>
       <div
-        className="grid flex-1 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
+        className="grid flex-1 transition-transform duration-[1100ms] ease-[cubic-bezier(0.65,0,0.35,1)] will-change-transform motion-reduce:transition-none"
         style={{
           transformStyle: "preserve-3d",
           transform: flipped ? "rotateY(180deg)" : "rotateY(0deg)",
@@ -35,7 +35,7 @@ export function FlipCard({ era, role, imageSrc, imageAlt, children }: FlipCardPr
           onClick={() => setFlipped(true)}
           inert={flipped}
           aria-label={`${era}, ${role}. Show the image`}
-          className="group relative flex flex-col items-center justify-center overflow-hidden rounded-3xl border border-primary/40 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="group relative flex flex-col items-center justify-center overflow-hidden rounded-3xl border border-white/10 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           style={faceStyle}
         >
           <Image
@@ -43,9 +43,10 @@ export function FlipCard({ era, role, imageSrc, imageAlt, children }: FlipCardPr
             alt=""
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover grayscale"
+            className="object-cover saturate-50 transition-transform duration-700 ease-out group-hover:scale-[1.03]"
           />
-          <div className="absolute inset-0 bg-primary/85 transition-colors duration-300 group-hover:bg-primary/75" />
+          <div className="absolute inset-0 bg-[#0f131c]/55 transition-colors duration-500 group-hover:bg-[#0f131c]/45" />
+          <div className="absolute inset-0 bg-primary/20 mix-blend-multiply" />
           <div className="relative flex flex-col items-center gap-4 px-8 text-center">
             <span className="text-5xl font-semibold tracking-tight text-primary-foreground text-balance md:text-6xl">
               {era}
