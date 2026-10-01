@@ -2,16 +2,18 @@ import Image from "next/image"
 
 const personalProjects = [
   {
+    id: "portfolio",
     title: "This portfolio",
-    description: "As a playground for AI. I built this entire site from scratch with AI tools, learning as I went.",
-    image: "/project-portfolio.png",
-    imageAlt: "Laptop showing this portfolio site being built",
+    tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "AI upskilling"],
+    image: "/project-portfolio-ai.png",
+    imageAlt: "Laptop with a code editor and an AI chat panel side by side, lit in pink",
   },
   {
-    title: "Barcelona's first women in tech bookclub",
-    description: "I started Barcelona's first women in tech bookclub, where we read, discuss and push each other forward.",
-    image: "/project-bookclub.png",
-    imageAlt: "A group of women gathered around books at a bookclub meeting",
+    id: "bookclub",
+    title: "Barcelona's first book club for women in tech",
+    tags: ["Founder", "Community building", "Women in tech", "Events", "Branding"],
+    image: "/too-bossy-portrait.jpg",
+    imageAlt: "Too Bossy: a woman in round glasses with a red blazer over her shoulder",
   },
 ]
 
@@ -26,26 +28,31 @@ export function PersonalProjectsSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
-        <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-2">
+        <ul className="mx-auto grid max-w-5xl grid-cols-1 gap-16 md:grid-cols-2 md:gap-12">
           {personalProjects.map((project) => (
-            <li
-              key={project.title}
-              className="surface-card group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
-            >
-              <div className="relative aspect-[16/10] overflow-hidden">
+            <li key={project.id} className="group flex flex-col items-center gap-8 text-center">
+              <div className="relative size-64 shrink-0 overflow-hidden rounded-full shadow-[0_30px_60px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/15 transition-transform duration-500 ease-out group-hover:-translate-y-2 md:size-80">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                  sizes="320px"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c]/70 to-transparent" aria-hidden="true" />
               </div>
-              <div className="flex flex-col gap-4 p-10">
-                <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">{project.title}</h3>
-                <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">{project.description}</p>
-              </div>
+              <h3 className="max-w-sm text-2xl font-bold leading-tight text-white text-balance md:text-3xl">
+                {project.title}
+              </h3>
+              <ul className="flex max-w-md flex-wrap justify-center gap-2" aria-label="Project skills">
+                {project.tags.map((tag) => (
+                  <li
+                    key={tag}
+                    className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-semibold uppercase tracking-[0.15em] text-primary"
+                  >
+                    {tag}
+                  </li>
+                ))}
+              </ul>
             </li>
           ))}
         </ul>

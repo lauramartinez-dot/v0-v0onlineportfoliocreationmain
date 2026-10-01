@@ -27,18 +27,18 @@ function FadeLine({ index, className, children }: { index: number; className?: s
   )
 }
 
-const introClass = "mx-auto max-w-3xl text-2xl font-semibold leading-snug tracking-tight text-pretty md:text-3xl"
+const introClass = "mx-auto max-w-3xl text-xl font-semibold leading-snug tracking-tight text-pretty md:text-2xl"
 
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="flex flex-col gap-8 px-4 pb-12 text-center" step={350}>
-      <p className={`${introClass} text-white`}>
+      <p className="mx-auto max-w-4xl text-3xl font-bold leading-snug tracking-tight text-white text-pretty md:text-4xl">
         I&apos;m a tech journalist turned technical writer — and honestly,{" "}
-        <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
+        <span className="text-primary">the job hasn&apos;t changed that much.</span>
       </p>
-      <p className={`${introClass} text-white/55`}>I still write about technology. Engineering. Software.</p>
-      <p className={`${introClass} text-white/55`}>
-        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+      <p className={`${introClass} max-w-4xl text-white/55`}>
+        I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And somehow
+        clear enough that you don&apos;t need a PhD or a CS degree to follow along.
       </p>
     </StaggerReveal>
   )
@@ -55,7 +55,7 @@ export function AboutMeStatements() {
         I still write about technology. Engineering. Software.
       </FadeLine>
       <FadeLine index={2} className="text-white/55">
-        In plain words, accurate and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+        In plain words. While keeping it accurate. And somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along:
       </FadeLine>
     </div>
   )
