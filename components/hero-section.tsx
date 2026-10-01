@@ -17,7 +17,7 @@ export function HeroSection() {
 
       <div className="mx-auto max-w-6xl w-full">
         <div className="flex flex-col items-center gap-10 md:flex-row md:items-center md:justify-between md:gap-16 mt-[40px]">
-          <div className="order-1 animate-slide-in-left">
+          <div className="order-1 animate-hero-left">
             <div className="relative">
               {/* Large blurred circle - bottom left */}
               <div className="absolute -bottom-8 -left-12 h-40 w-40 md:h-52 md:w-52 rounded-full bg-gradient-to-br from-purple-500/30 to-pink-500/30 blur-3xl" />
@@ -39,7 +39,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="flex-1 text-center md:text-left order-2 animate-slide-in-right">
+          <div className="flex-1 text-center md:text-left order-2 animate-hero-right relative z-20">
             {/* Intro line */}
             <p className="mb-6 text-2xl md:text-3xl font-medium tracking-tight leading-snug text-primary text-balance">
               Hi there! I&apos;m Laura Martínez.

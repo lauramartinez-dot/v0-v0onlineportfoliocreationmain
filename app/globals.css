@@ -52,7 +52,51 @@
   opacity: 0;
 }
 
-/* Dark navy theme with pink/magenta + cyan accents from reference */
+  /* Hero: both cards appear together near the center, then separate into place */
+  @keyframes hero-together-left {
+  0% { opacity: 0; transform: translateX(var(--hero-shift)) scale(0.9); }
+  35% { opacity: 1; transform: translateX(var(--hero-shift)) scale(0.94); }
+  50% { opacity: 1; transform: translateX(var(--hero-shift)) scale(0.94); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+  }
+
+  @keyframes hero-together-right {
+  0% { opacity: 0; transform: translateX(calc(var(--hero-shift) * -1)) scale(0.9); }
+  35% { opacity: 1; transform: translateX(calc(var(--hero-shift) * -1)) scale(0.94); }
+  50% { opacity: 1; transform: translateX(calc(var(--hero-shift) * -1)) scale(0.94); }
+  100% { opacity: 1; transform: translateX(0) scale(1); }
+  }
+
+  @keyframes hero-together-mobile {
+  0% { opacity: 0; transform: translateY(24px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .animate-hero-left,
+  .animate-hero-right {
+  --hero-shift: 4rem;
+  opacity: 0;
+  animation: hero-together-mobile 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @media (min-width: 768px) {
+  .animate-hero-left {
+  animation: hero-together-left 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+  .animate-hero-right {
+  animation: hero-together-right 1.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+  .animate-hero-left,
+  .animate-hero-right {
+  animation: none;
+  opacity: 1;
+  }
+  }
+
+  /* Dark navy theme with pink/magenta + cyan accents from reference */
 :root {
   --background: #0d1b2a;
   --foreground: #ffffff;
