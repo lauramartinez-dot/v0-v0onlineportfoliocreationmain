@@ -43,7 +43,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 const boxes: Box[] = [
   {
     title: "Ex-journalist",
-    teaser: "Six years covering tech, incl. Business Insider.",
+    teaser: "I spent six years writing about tech for media, including Business Insider.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
@@ -68,7 +68,7 @@ const boxes: Box[] = [
   },
   {
     title: "Globetrotter",
-    teaser: "Lived in 4 countries. Fluent in 3 languages.",
+    teaser: "I've lived in four countries and speak three languages fluently.",
     imageSrc: "/four-countries-bamberg.png",
     imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
     body: (
@@ -115,7 +115,7 @@ const boxes: Box[] = [
   },
   {
     title: "Mission-driven",
-    teaser: "Making tech knowledge open to everyone.",
+    teaser: "I believe technical knowledge should be open to everyone.",
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
@@ -129,7 +129,7 @@ const boxes: Box[] = [
   },
   {
     title: "Startup-minded",
-    teaser: "Mostly at startups. I like building things.",
+    teaser: "I've worked mostly at startups, so I have a builder mindset.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
@@ -166,12 +166,12 @@ export function AboutMeBoxes() {
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c]/95 via-[#0f131c]/40 to-[#0f131c]/5" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/55 to-[#0f131c]/5" />
               <div className="relative mt-auto flex flex-col gap-3 p-7">
                 <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
                   {box.title}
                 </span>
-                <span className="line-clamp-2 min-h-[2lh] text-base leading-relaxed text-white/75 text-pretty">
+                <span className="line-clamp-3 min-h-[3lh] text-base font-medium leading-relaxed text-white/90 text-pretty">
                   {box.teaser}
                 </span>
               </div>
