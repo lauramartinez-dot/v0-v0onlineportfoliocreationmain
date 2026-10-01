@@ -42,8 +42,8 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 
 const boxes: Box[] = [
   {
-    title: "Journalistic",
-    teaser: "From explaining tech in the news to explaining it in docs.",
+    title: "Ex-journalist",
+    teaser: "Used to write for Business Insider.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
@@ -67,8 +67,8 @@ const boxes: Box[] = [
     ),
   },
   {
-    title: "Well-traveled",
-    teaser: "Four countries and three languages by my 30s.",
+    title: "Globetrotter",
+    teaser: "Lived in 4 countries and speak 3 languages fluently.",
     imageSrc: "/globe-purple.png",
     imageAlt: "Purple globe",
     body: (
@@ -128,8 +128,8 @@ const boxes: Box[] = [
     ),
   },
   {
-    title: "Startup-minded",
-    teaser: "Most of my career, including Personio.",
+    title: "Startup",
+    teaser: "Fast teams, docs from scratch.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
