@@ -49,9 +49,9 @@ const boxes: Box[] = [
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
     body: (
-      <div className="grid grid-cols-1 items-center gap-8 px-8 py-8 md:px-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)] lg:gap-12 lg:py-10">
+      <div className="grid grid-cols-1 items-center gap-8 px-8 py-8 md:px-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,2.4fr)] lg:gap-10">
       <AboutMeStatements />
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-5">
         <ArticleCard
           era="6 years ago"
           role="Tech journalist"
@@ -182,7 +182,7 @@ export function AboutMeBoxes() {
             </button>
           </DialogTrigger>
 
-          <DialogContent className="flex max-h-[94vh] w-[96vw] max-w-7xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-7xl sm:rounded-[1.75rem]">
+          <DialogContent className="flex max-h-[94vh] w-[96vw] max-w-[1400px] flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-[1400px] sm:rounded-[1.75rem]">
             <DialogHeader className="flex flex-col gap-3 space-y-0 border-b border-white/10 px-8 pt-10 pb-6 text-left md:px-12">
               <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
                 {box.title}
