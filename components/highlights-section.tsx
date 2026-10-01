@@ -13,12 +13,13 @@ export function HighlightsSection() {
       {/* 2. About me boxes - each opens an in-depth pop-up */}
       <section id="why" className="relative px-4 pb-32 pt-4 scroll-mt-32">
         <div className="mx-auto flex max-w-7xl flex-col gap-8">
-  <div className="flex items-center justify-center gap-4">
-  <span className="h-px w-10 bg-primary/60 md:w-16" aria-hidden="true" />
-  <h3 className="text-balance text-center text-2xl font-semibold tracking-tight text-foreground md:text-3xl">
-  Who am I, in 4 words<span className="text-primary">.</span>
+  <div className="flex flex-col items-center gap-4 border-t border-border/60 pt-16 text-center">
+  <span className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+  In a nutshell
+  </span>
+  <h3 className="text-balance text-4xl font-bold uppercase tracking-tight text-foreground md:text-6xl">
+  Who am I, in <span className="text-primary">4</span> words<span className="text-primary">.</span>
   </h3>
-  <span className="h-px w-10 bg-primary/60 md:w-16" aria-hidden="true" />
   </div>
           <AboutMeBoxes />
         </div>
