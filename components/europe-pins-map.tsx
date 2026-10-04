@@ -12,7 +12,10 @@ export function EuropePinsMap({ autoplay = false }: { autoplay?: boolean }) {
 
   useEffect(() => {
     const frame = frameRef.current
+    // In autoplay mode the map starts itself via the ?autoplay query flag,
+    // which avoids racing the iframe's asynchronously registered listener.
     if (!frame || autoplay) return
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         const nowVisible = entry.isIntersecting
@@ -29,11 +32,11 @@ export function EuropePinsMap({ autoplay = false }: { autoplay?: boolean }) {
   return (
     <iframe
       ref={frameRef}
-      src="/europe-pins.html"
+      src={autoplay ? "/europe-pins.html?autoplay=1" : "/europe-pins.html"}
       title="Animated map of Europe with pins on the four countries I've lived in"
       tabIndex={-1}
       onLoad={() => {
-        if (visibleRef.current) send("play")
+        if (!autoplay && visibleRef.current) send("play")
       }}
       className="absolute inset-0 h-full w-full border-0 bg-transparent"
       style={{ colorScheme: "normal" }}
