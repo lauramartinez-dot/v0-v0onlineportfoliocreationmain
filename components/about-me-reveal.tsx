@@ -29,7 +29,7 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const introClass =
-  "mx-auto max-w-4xl text-3xl font-medium leading-snug tracking-tight text-primary text-pretty md:text-4xl"
+  "mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight text-primary text-pretty md:text-4xl"
 
 export function AboutMeIntro() {
   return (
