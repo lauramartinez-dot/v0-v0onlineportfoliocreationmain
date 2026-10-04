@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
+import { ArrowUpRight, Globe, Rocket, Telescope, type LucideIcon } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -22,6 +23,7 @@ const languages = [
 type Box = {
   title: string
   teaser: string
+  icon: LucideIcon
   imageSrc: string
   imageAlt: string
   body: ReactNode
@@ -50,6 +52,7 @@ const boxes: Box[] = [
   {
     title: "Globetrotter",
     teaser: "Lived in 4 countries. Fluent in 3 languages.",
+    icon: Globe,
     imageSrc: "/four-countries-bamberg.png",
     imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
     body: (
@@ -66,7 +69,7 @@ const boxes: Box[] = [
           }}
           aria-hidden="true"
         >
-          <EuropePinsMap />
+          <EuropePinsMap autoplay />
         </div>
 
         <div className="relative z-10 flex min-h-[75vh] flex-col justify-between gap-12 p-6 md:p-10">
@@ -97,6 +100,7 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     teaser: "Making tech knowledge open to everyone.",
+    icon: Telescope,
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
@@ -111,6 +115,7 @@ const boxes: Box[] = [
   {
     title: "Startup-minded",
     teaser: "Spent most of my career at startups. Love building stuff.",
+    icon: Rocket,
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
@@ -138,24 +143,19 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex h-full min-h-[334px] flex-col overflow-hidden rounded-3xl border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="surface-card group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <Image
-                src={box.imageSrc}
-                alt={box.imageAlt}
-                fill
-                sizes="(max-width: 640px) 100vw, 33vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/55 to-[#0f131c]/5" />
-              <div className="relative mt-auto flex flex-col gap-2 p-6">
-                <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance lg:text-3xl">
-                  {box.title}
-                </span>
-                <span className="line-clamp-2 text-[15px] leading-relaxed text-white/80 text-pretty md:text-base">
-                  {box.teaser}
-                </span>
-              </div>
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
+                <box.icon className="h-7 w-7" />
+              </span>
+              <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
+                {box.title}
+              </span>
+              <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
+              <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
+                See more
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
             </button>
           </DialogTrigger>
 

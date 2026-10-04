@@ -2,9 +2,9 @@
 
 import { useEffect, useRef } from "react"
 
-export function EuropePinsMap() {
+export function EuropePinsMap({ autoplay = false }: { autoplay?: boolean }) {
   const frameRef = useRef<HTMLIFrameElement>(null)
-  const visibleRef = useRef(false)
+  const visibleRef = useRef(autoplay)
 
   const send = (command: "play" | "stop") => {
     frameRef.current?.contentWindow?.postMessage({ europePins: command }, window.location.origin)
@@ -12,7 +12,7 @@ export function EuropePinsMap() {
 
   useEffect(() => {
     const frame = frameRef.current
-    if (!frame) return
+    if (!frame || autoplay) return
     const observer = new IntersectionObserver(
       ([entry]) => {
         const nowVisible = entry.isIntersecting
@@ -24,7 +24,7 @@ export function EuropePinsMap() {
     )
     observer.observe(frame)
     return () => observer.disconnect()
-  }, [])
+  }, [autoplay])
 
   return (
     <iframe
