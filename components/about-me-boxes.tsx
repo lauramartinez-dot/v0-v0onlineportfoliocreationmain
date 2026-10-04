@@ -129,7 +129,7 @@ const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === t
 export function AboutMeBoxes() {
   return (
     <StaggerReveal
-      className="grid w-full grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6"
+      className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr"
       itemClassName="flex [&>*]:flex-1"
       step={250}
     >
@@ -138,7 +138,7 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex aspect-square flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group relative flex h-full min-h-[334px] flex-col overflow-hidden rounded-3xl border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <Image
                 src={box.imageSrc}
