@@ -46,25 +46,7 @@ const boxes: Box[] = [
     teaser: "15 years writing about tech.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
-    body: (
-      <div className="px-8 py-8 md:px-12">
-      <div className="mx-auto grid max-w-4xl grid-cols-2 gap-5">
-        <ArticleCard
-          era="6 years ago"
-          role="Tech journalist"
-          imageSrc="/then-airplane-article.png"
-          imageAlt="Magazine article titled How do planes stay in the air?"
-          href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-        />
-        <ArticleCard
-          era="Now"
-          role="Technical writer"
-          imageSrc="/now-tech-docs.png"
-          imageAlt="Documentation page titled What is an API? on a laptop screen"
-        />
-      </div>
-      </div>
-    ),
+    body: null,
   },
   {
     title: "Globetrotter",
@@ -142,36 +124,63 @@ const boxes: Box[] = [
   },
 ]
 
-const boxOrder = ["Ex-journalist", "Mission-driven", "Globetrotter", "Startup-minded"]
+const featuredBox = boxes.find((box) => box.title === "Ex-journalist")!
+const boxOrder = ["Mission-driven", "Globetrotter", "Startup-minded"]
 const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === title)!)
+
+function ExJournalistFeature() {
+  return (
+    <div className="flex flex-col gap-8 rounded-[2rem] border border-white/10 bg-card/60 p-7 shadow-2xl shadow-black/30 md:p-10 lg:flex-row lg:items-center lg:gap-12">
+      <div className="flex flex-col gap-3 lg:w-1/3">
+        <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
+          {featuredBox.title}
+        </span>
+        <span className="text-base leading-relaxed text-white/80 text-pretty md:text-[17px]">{featuredBox.teaser}</span>
+      </div>
+      <div className="grid grid-cols-2 gap-4 lg:flex-1 md:gap-5">
+        <ArticleCard
+          era="6 years ago"
+          role="Tech journalist"
+          imageSrc="/then-airplane-article.png"
+          imageAlt="Magazine article titled How do planes stay in the air?"
+          href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+        />
+        <ArticleCard
+          era="Now"
+          role="Technical writer"
+          imageSrc="/now-tech-docs.png"
+          imageAlt="Documentation page titled What is an API? on a laptop screen"
+        />
+      </div>
+    </div>
+  )
+}
 
 export function AboutMeBoxes() {
   return (
-    <StaggerReveal
-      className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
-      itemClassName="flex [&>*]:flex-1"
-      step={250}
-    >
+    <StaggerReveal className="flex flex-col gap-5" itemClassName="flex [&>*]:flex-1" step={250}>
+      <ExJournalistFeature />
+      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
       {orderedBoxes.map((box) => (
         <Dialog key={box.title}>
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[1/2]"
+              className="group relative flex aspect-square flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <Image
                 src={box.imageSrc}
                 alt={box.imageAlt}
                 fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                sizes="(max-width: 640px) 100vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/55 to-[#0f131c]/5" />
-              <div className="relative mt-auto flex flex-col gap-3 p-7">
-                <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
+              <div className="relative mt-auto flex flex-col gap-2 p-6">
+                <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance lg:text-3xl">
                   {box.title}
                 </span>
-                <span className="line-clamp-2 min-h-[2lh] text-base leading-relaxed text-white/80 text-pretty md:text-[17px]">
+                <span className="line-clamp-2 text-[15px] leading-relaxed text-white/80 text-pretty md:text-base">
                   {box.teaser}
                 </span>
               </div>
@@ -191,6 +200,7 @@ export function AboutMeBoxes() {
           </DialogContent>
         </Dialog>
       ))}
+      </div>
     </StaggerReveal>
   )
 }
