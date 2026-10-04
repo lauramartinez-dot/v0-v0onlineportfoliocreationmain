@@ -118,7 +118,7 @@ const boxes: Box[] = [
       <ImageStatement imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg">
         {"Most of my career has been at startups — including "}
         <span className="font-bold text-primary">{"Personio, one of Europe's unicorns."}</span>{" "}
-        {"So I'm drawn to experimenting, trying new tools, and learning by doing."}
+        {"I'm comfortable experimenting, failing fast, and learning by doing."}
       </ImageStatement>
     ),
   },
