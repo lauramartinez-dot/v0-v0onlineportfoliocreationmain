@@ -10,7 +10,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { ArticleCard } from "@/components/article-card"
 import { EuropePinsMap } from "@/components/europe-pins-map"
 import { StaggerReveal } from "@/components/stagger-reveal"
 
@@ -124,43 +123,16 @@ const boxes: Box[] = [
   },
 ]
 
-const featuredBox = boxes.find((box) => box.title === "Ex-journalist")!
 const boxOrder = ["Mission-driven", "Globetrotter", "Startup-minded"]
 const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === title)!)
 
-function ExJournalistFeature() {
-  return (
-    <div className="flex flex-col gap-8 rounded-[2rem] border border-white/10 bg-card/60 p-7 shadow-2xl shadow-black/30 md:p-10 lg:flex-row lg:items-center lg:gap-12">
-      <div className="flex flex-col gap-3 lg:w-1/3">
-        <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
-          {featuredBox.title}
-        </span>
-        <span className="text-base leading-relaxed text-white/80 text-pretty md:text-[17px]">{featuredBox.teaser}</span>
-      </div>
-      <div className="grid grid-cols-2 gap-4 lg:flex-1 md:gap-5">
-        <ArticleCard
-          era="6 years ago"
-          role="Tech journalist"
-          imageSrc="/then-airplane-article.png"
-          imageAlt="Magazine article titled How do planes stay in the air?"
-          href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-        />
-        <ArticleCard
-          era="Now"
-          role="Technical writer"
-          imageSrc="/now-tech-docs.png"
-          imageAlt="Documentation page titled What is an API? on a laptop screen"
-        />
-      </div>
-    </div>
-  )
-}
-
 export function AboutMeBoxes() {
   return (
-    <StaggerReveal className="flex flex-col gap-5" itemClassName="flex [&>*]:flex-1" step={250}>
-      <ExJournalistFeature />
-      <div className="grid grid-cols-1 gap-5 sm:grid-cols-3">
+    <StaggerReveal
+      className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 sm:grid-cols-3"
+      itemClassName="flex [&>*]:flex-1"
+      step={250}
+    >
       {orderedBoxes.map((box) => (
         <Dialog key={box.title}>
           <DialogTrigger asChild>
@@ -200,7 +172,6 @@ export function AboutMeBoxes() {
           </DialogContent>
         </Dialog>
       ))}
-      </div>
     </StaggerReveal>
   )
 }

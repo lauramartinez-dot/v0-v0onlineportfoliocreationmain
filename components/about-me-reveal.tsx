@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import { StaggerReveal } from "@/components/stagger-reveal"
+import { ArticleCard } from "@/components/article-card"
 
 export function AboutMeHeading() {
   return (
@@ -38,6 +39,21 @@ export function AboutMeIntro() {
         I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And somehow
         clear enough that you don&apos;t need a PhD or a CS degree to follow along.
       </p>
+      <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-5 pt-4 text-left md:gap-6">
+        <ArticleCard
+          era="6 years ago"
+          role="Tech journalist"
+          imageSrc="/then-airplane-article.png"
+          imageAlt="Magazine article titled How do planes stay in the air?"
+          href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+        />
+        <ArticleCard
+          era="Now"
+          role="Technical writer"
+          imageSrc="/now-tech-docs.png"
+          imageAlt="Documentation page titled What is an API? on a laptop screen"
+        />
+      </div>
     </StaggerReveal>
   )
 }

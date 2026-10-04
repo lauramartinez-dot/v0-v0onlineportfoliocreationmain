@@ -15,7 +15,7 @@ export function HighlightsSection() {
         <div className="mx-auto flex max-w-[92rem] flex-col gap-8">
           <div className="flex flex-col items-center gap-5 text-center">
         <h3 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
-          In a nutshell, I am<span className="text-primary">:</span>
+          I am also<span className="text-primary">:</span>
         </h3>
         <div className="h-1 w-10 rounded-full bg-primary/70" aria-hidden="true" />
           </div>
