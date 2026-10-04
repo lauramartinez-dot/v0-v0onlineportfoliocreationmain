@@ -27,7 +27,8 @@ function FadeLine({ index, className, children }: { index: number; className?: s
   )
 }
 
-const introClass = "mx-auto max-w-4xl text-3xl font-medium leading-snug tracking-tight text-white text-pretty md:text-4xl"
+const introClass =
+  "mx-auto max-w-4xl text-3xl font-medium leading-snug tracking-tight text-primary text-pretty md:text-4xl"
 
 export function AboutMeIntro() {
   return (
@@ -35,7 +36,10 @@ export function AboutMeIntro() {
       <p className={introClass}>I&apos;m a tech journalist turned technical writer.</p>
       <p className={introClass}>
         I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And somehow
-        clear enough that you <span className="text-primary">don&apos;t need a PhD or a CS degree to follow along.</span>
+        clear enough that you{" "}
+        <span className="font-bold underline decoration-primary/50 decoration-4 underline-offset-8">
+          don&apos;t need a PhD or a CS degree to follow along.
+        </span>
       </p>
     </StaggerReveal>
   )
