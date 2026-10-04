@@ -139,13 +139,13 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex h-full min-h-[300px] flex-col gap-5 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left transition-colors duration-300 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-8 text-left transition-colors duration-300 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:p-9"
             >
               <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
                 {box.title}
               </span>
               <span className="text-base leading-relaxed text-white/70 text-pretty md:text-[17px]">{box.teaser}</span>
-              <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
+              <span className="mt-2 flex items-center gap-2 text-sm font-semibold text-primary">
                 Take a look
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
