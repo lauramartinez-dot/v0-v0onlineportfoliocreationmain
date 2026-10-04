@@ -41,7 +41,7 @@ export function AboutMeIntro() {
       </p>
       <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-5 pt-4 text-left md:gap-6">
         <ArticleCard
-          era="6 years ago"
+          era="10 years ago"
           role="Tech journalist"
           imageSrc="/then-airplane-article.png"
           imageAlt="Magazine article titled How do planes stay in the air?"
