@@ -69,7 +69,7 @@ const boxes: Box[] = [
           }}
           aria-hidden="true"
         >
-          <EuropePinsMap autoplay />
+          <EuropePinsMap />
         </div>
 
         <div className="relative z-10 flex min-h-[75vh] flex-col justify-between gap-12 p-6 md:p-10">
