@@ -27,18 +27,15 @@ function FadeLine({ index, className, children }: { index: number; className?: s
   )
 }
 
-const introClass = "mx-auto max-w-3xl text-xl font-semibold leading-snug tracking-tight text-pretty md:text-2xl"
+const introClass = "mx-auto max-w-4xl text-3xl font-bold leading-snug tracking-tight text-white text-pretty md:text-4xl"
 
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="flex flex-col gap-10 px-4 pb-24 text-center md:gap-12 md:pb-32" step={350}>
-      <p className="mx-auto max-w-4xl text-3xl font-bold leading-snug tracking-tight text-white text-pretty md:text-4xl">
-        I&apos;m a tech journalist turned technical writer — and honestly,{" "}
-        <span className="text-primary">the job hasn&apos;t changed that much.</span>
-      </p>
-      <p className={`${introClass} max-w-4xl text-white/55`}>
+      <p className={introClass}>I&apos;m a tech journalist turned technical writer.</p>
+      <p className={introClass}>
         I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And somehow
-        clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+        clear enough that you <span className="text-primary">don&apos;t need a PhD or a CS degree to follow along.</span>
       </p>
     </StaggerReveal>
   )
