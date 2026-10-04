@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
-import { ArrowUpRight, Globe, Rocket, Telescope, type LucideIcon } from "lucide-react"
+import { ArrowUpRight } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -23,7 +23,6 @@ const languages = [
 type Box = {
   title: string
   teaser: string
-  icon: LucideIcon
   imageSrc: string
   imageAlt: string
   body: ReactNode
@@ -52,7 +51,6 @@ const boxes: Box[] = [
   {
     title: "Globetrotter",
     teaser: "Lived in 4 countries. Fluent in 3 languages.",
-    icon: Globe,
     imageSrc: "/four-countries-bamberg.png",
     imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
     body: (
@@ -100,7 +98,6 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     teaser: "Making tech knowledge open to everyone.",
-    icon: Telescope,
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
@@ -115,7 +112,6 @@ const boxes: Box[] = [
   {
     title: "Startup-minded",
     teaser: "Spent most of my career at startups. Love building stuff.",
-    icon: Rocket,
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
@@ -145,9 +141,6 @@ export function AboutMeBoxes() {
               type="button"
               className="group relative flex h-full min-h-[300px] flex-col gap-5 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left transition-colors duration-300 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
-                <box.icon className="h-7 w-7" />
-              </span>
               <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
                 {box.title}
               </span>
