@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
+import { ArrowUpRight } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -10,7 +11,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import { ArticleCard } from "@/components/article-card"
 import { EuropePinsMap } from "@/components/europe-pins-map"
 import { StaggerReveal } from "@/components/stagger-reveal"
 
@@ -43,28 +43,10 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 const boxes: Box[] = [
   {
     title: "Ex-journalist",
-    teaser: "6 years at tech media outlets, incl. Business Insider.",
+    teaser: "15 years writing about tech.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
-    body: (
-      <div className="px-8 py-8 md:px-12">
-      <div className="mx-auto grid max-w-4xl grid-cols-2 gap-5">
-        <ArticleCard
-          era="6 years ago"
-          role="Tech journalist"
-          imageSrc="/then-airplane-article.png"
-          imageAlt="Magazine article titled How do planes stay in the air?"
-          href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-        />
-        <ArticleCard
-          era="Now"
-          role="Technical writer"
-          imageSrc="/now-tech-docs.png"
-          imageAlt="Documentation page titled What is an API? on a laptop screen"
-        />
-      </div>
-      </div>
-    ),
+    body: null,
   },
   {
     title: "Globetrotter",
@@ -136,19 +118,19 @@ const boxes: Box[] = [
       <ImageStatement imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg">
         {"Most of my career has been at startups — including "}
         <span className="font-bold text-primary">{"Personio, one of Europe's unicorns."}</span>{" "}
-        {"So I'm drawn to experimenting, trying new tools, and learning by doing."}
+        {"I'm comfortable experimenting, failing fast, and learning by doing."}
       </ImageStatement>
     ),
   },
 ]
 
-const boxOrder = ["Ex-journalist", "Mission-driven", "Globetrotter", "Startup-minded"]
+const boxOrder = ["Mission-driven", "Globetrotter", "Startup-minded"]
 const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === title)!)
 
 export function AboutMeBoxes() {
   return (
     <StaggerReveal
-      className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4"
+      className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr"
       itemClassName="flex [&>*]:flex-1"
       step={250}
     >
@@ -157,24 +139,16 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-[2rem] border border-white/10 text-left shadow-2xl shadow-black/30 transition-colors hover:border-primary/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:aspect-[1/2]"
+              className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-8 text-left transition-colors duration-300 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:p-9"
             >
-              <Image
-                src={box.imageSrc}
-                alt={box.imageAlt}
-                fill
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0f131c] via-[#0f131c]/55 to-[#0f131c]/5" />
-              <div className="relative mt-auto flex flex-col gap-3 p-7">
-                <span className="text-3xl font-bold leading-tight tracking-tight text-white text-balance lg:text-[2.1rem]">
-                  {box.title}
-                </span>
-                <span className="line-clamp-2 min-h-[2lh] text-base leading-relaxed text-white/80 text-pretty md:text-[17px]">
-                  {box.teaser}
-                </span>
-              </div>
+              <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
+                {box.title}
+              </span>
+              <span className="text-base leading-relaxed text-white/70 text-pretty md:text-[17px]">{box.teaser}</span>
+              <span className="mt-2 flex items-center gap-2 text-sm font-semibold text-primary">
+                Take a look
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
             </button>
           </DialogTrigger>
 
