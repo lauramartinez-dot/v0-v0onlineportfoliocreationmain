@@ -1357,13 +1357,13 @@ function PanelLabel({ children }: { children: React.ReactNode }) {
 
 function ToolsPanel({ tools }: { tools: string[] }) {
   return (
-    <div>
-      <PanelLabel>Tools</PanelLabel>
-      <ul className="flex flex-wrap gap-2">
+    <div className="rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
+      <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">Tools</h4>
+      <ul className="flex flex-wrap gap-2.5">
         {tools.map((tool) => (
           <li
             key={tool}
-            className="rounded-full border border-white/10 px-4 py-1.5 text-sm font-medium text-foreground/70"
+            className="rounded-full border border-primary/40 bg-primary/15 px-4 py-2 text-[15px] font-semibold text-foreground"
           >
             {tool}
           </li>
@@ -1375,13 +1375,13 @@ function ToolsPanel({ tools }: { tools: string[] }) {
 
 function SkillsPanel({ skills }: { skills: string[] }) {
   return (
-    <div>
-      <PanelLabel>Skills unlocked</PanelLabel>
-      <ul className="flex flex-col divide-y divide-white/10 border-y border-white/10">
+    <div className="rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
+      <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</h4>
+      <ul className="flex flex-col divide-y divide-primary/15">
         {skills.map((skill) => (
-          <li key={skill} className="flex items-center justify-between gap-4 py-3">
-            <span className="text-base md:text-[17px] font-medium leading-snug text-foreground">{skill}</span>
-            <ChevronUp className="h-4 w-4 shrink-0 text-primary" strokeWidth={2.5} aria-hidden="true" />
+          <li key={skill} className="flex items-center justify-between gap-4 py-3 first:pt-0 last:pb-0">
+            <span className="text-lg font-bold leading-snug text-foreground md:text-xl">{skill}</span>
+            <ChevronUp className="h-5 w-5 shrink-0 text-primary" strokeWidth={2.5} aria-hidden="true" />
           </li>
         ))}
       </ul>

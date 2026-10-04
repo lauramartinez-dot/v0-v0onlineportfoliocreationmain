@@ -36,10 +36,7 @@ export function AboutMeIntro() {
       <p className={introClass}>I&apos;m a tech journalist turned technical writer.</p>
       <p className={introClass}>
         I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And somehow
-        clear enough that you{" "}
-        <span className="font-bold underline decoration-primary/50 decoration-4 underline-offset-8">
-          don&apos;t need a PhD or a CS degree to follow along.
-        </span>
+        clear enough that you don&apos;t need a PhD or a CS degree to follow along.
       </p>
     </StaggerReveal>
   )
