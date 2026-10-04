@@ -143,17 +143,17 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="surface-card group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group relative flex h-full min-h-[300px] flex-col gap-5 overflow-hidden rounded-3xl border border-primary/30 bg-gradient-to-br from-primary/20 via-primary/[0.08] to-transparent p-10 text-left shadow-[0_0_0_1px_rgba(0,0,0,0)] transition-all duration-300 hover:-translate-y-1 hover:border-primary/60 hover:from-primary/30 hover:shadow-[0_20px_60px_-20px_var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                <box.icon className="h-7 w-7" />
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-lg shadow-primary/40">
+                <box.icon className="h-7 w-7" strokeWidth={2.25} />
               </span>
               <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
                 {box.title}
               </span>
-              <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
-              <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
-                See more
+              <span className="text-base leading-relaxed text-white/70 text-pretty md:text-[17px]">{box.teaser}</span>
+              <span className="mt-auto inline-flex w-fit items-center gap-2 rounded-full border border-primary/40 bg-primary/15 px-4 py-1.5 text-sm font-semibold text-white transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                Take a look
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
             </button>
