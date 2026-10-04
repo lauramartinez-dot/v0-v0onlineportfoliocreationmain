@@ -129,7 +129,7 @@ const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === t
 export function AboutMeBoxes() {
   return (
     <StaggerReveal
-      className="mx-auto grid w-full max-w-4xl grid-cols-1 gap-5 sm:grid-cols-3"
+      className="grid w-full grid-cols-1 gap-5 sm:grid-cols-3 md:gap-6"
       itemClassName="flex [&>*]:flex-1"
       step={250}
     >
