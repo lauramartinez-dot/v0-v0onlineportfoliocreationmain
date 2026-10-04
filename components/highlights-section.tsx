@@ -14,8 +14,8 @@ export function HighlightsSection() {
       <section id="why" className="relative px-4 pb-32 pt-4 scroll-mt-32">
         <div className="mx-auto flex max-w-[92rem] flex-col gap-8">
           <div className="flex flex-col items-center gap-5 text-center">
-        <h3 className="text-balance text-2xl font-medium tracking-tight leading-snug text-primary md:text-3xl">
-          In a nutshell.
+        <h3 className="text-balance text-3xl font-bold tracking-tight text-foreground md:text-5xl">
+          In a nutshell<span className="text-primary">.</span>
         </h3>
         <div className="h-1 w-10 rounded-full bg-primary/70" aria-hidden="true" />
           </div>
