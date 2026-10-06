@@ -15,7 +15,7 @@ export function ArticleCard({ era, imageSrc, imageAlt, href }: ArticleCardProps)
         src={imageSrc}
         alt={imageAlt}
         fill
-        sizes="(max-width: 768px) 50vw, 30vw"
+        sizes="(max-width: 768px) 50vw, 40vw"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0f131c]/90 via-[#0f131c]/45 to-transparent" />
@@ -31,7 +31,7 @@ export function ArticleCard({ era, imageSrc, imageAlt, href }: ArticleCardProps)
   )
 
   const className =
-    "group relative flex aspect-[3/4] w-full flex-col overflow-hidden rounded-3xl border border-white/10"
+    "group relative flex aspect-[3/4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 md:aspect-[4/3]"
 
   if (!href) return <div className={className}>{content}</div>
 

@@ -61,8 +61,8 @@ export function AboutMeIntro() {
         media={
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
             <Image
-              src="/then-tech-journalist.png"
-              alt="An open magazine spread about autonomous aviation on a desk"
+              src="/then-business-journalist.png"
+              alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
@@ -73,30 +73,25 @@ export function AboutMeIntro() {
         <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
       </StoryRow>
 
-      <StoryRow
-        mediaSide="left"
-        mediaWide
-        media={
-          <div className="grid grid-cols-2 gap-4 md:gap-6">
-            <ArticleCard
-              era="10 years ago"
-              imageSrc="/then-airplane-article.png"
-              imageAlt="Magazine article titled How do planes stay in the air?"
-              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-            />
-            <ArticleCard
-              era="Now"
-              imageSrc="/now-tech-docs.png"
-              imageAlt="Documentation page titled What is an API? on a laptop screen"
-            />
-          </div>
-        }
-      >
-        <p className="text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl">
+      <div className="flex flex-col gap-10 md:gap-12">
+        <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
           I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And
           somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along.
         </p>
-      </StoryRow>
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
+          <ArticleCard
+            era="10 years ago"
+            imageSrc="/then-airplane-article.png"
+            imageAlt="Magazine article titled How do planes stay in the air?"
+            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+          />
+          <ArticleCard
+            era="Now"
+            imageSrc="/now-tech-docs.png"
+            imageAlt="Documentation page titled What is an API? on a laptop screen"
+          />
+        </div>
+      </div>
 
       <div id="why" className="flex scroll-mt-32 flex-col gap-10 border-t border-white/10 pt-16 md:pt-20">
         <p className={storyLineClass}>I am also:</p>
