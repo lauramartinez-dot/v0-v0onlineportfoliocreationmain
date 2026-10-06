@@ -30,28 +30,32 @@ function FadeLine({ index, className, children }: { index: number; className?: s
   )
 }
 
-const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-primary text-pretty md:text-4xl"
+const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
 
 function StoryRow({
   children,
   media,
   mediaSide,
+  mediaWide = false,
 }: {
   children: ReactNode
   media: ReactNode
   mediaSide: "left" | "right"
+  mediaWide?: boolean
 }) {
+  const textCols = mediaWide ? "md:col-span-4" : "md:col-span-5"
+  const mediaCols = mediaWide ? "md:col-span-6" : "md:col-span-5"
   return (
-    <div className="grid items-center gap-10 md:grid-cols-2 md:gap-16">
-      <div className={mediaSide === "left" ? "md:order-2" : ""}>{children}</div>
-      <div className={mediaSide === "left" ? "md:order-1" : ""}>{media}</div>
+    <div className="grid items-center gap-10 md:grid-cols-10 md:gap-14">
+      <div className={`${textCols} ${mediaSide === "left" ? "md:order-2" : ""}`}>{children}</div>
+      <div className={`${mediaCols} ${mediaSide === "left" ? "md:order-1" : ""}`}>{media}</div>
     </div>
   )
 }
 
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="mx-auto flex w-full max-w-6xl flex-col gap-28 px-4 pb-32 md:gap-36 md:pb-40">
+    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
       <StoryRow
         mediaSide="right"
         media={
@@ -71,8 +75,9 @@ export function AboutMeIntro() {
 
       <StoryRow
         mediaSide="left"
+        mediaWide
         media={
-          <div className="grid grid-cols-2 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
             <ArticleCard
               era="10 years ago"
               imageSrc="/then-airplane-article.png"
@@ -87,13 +92,13 @@ export function AboutMeIntro() {
           </div>
         }
       >
-        <p className={storyLineClass}>
+        <p className="text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl">
           I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And
           somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along.
         </p>
       </StoryRow>
 
-      <div id="why" className="flex scroll-mt-32 flex-col gap-10">
+      <div id="why" className="flex scroll-mt-32 flex-col gap-10 border-t border-white/10 pt-16 md:pt-20">
         <p className={storyLineClass}>I am also:</p>
         <AboutMeBoxes />
       </div>

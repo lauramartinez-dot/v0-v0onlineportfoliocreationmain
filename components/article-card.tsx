@@ -15,7 +15,7 @@ export function ArticleCard({ era, imageSrc, imageAlt, href }: ArticleCardProps)
         src={imageSrc}
         alt={imageAlt}
         fill
-        sizes="(max-width: 768px) 50vw, 25vw"
+        sizes="(max-width: 768px) 50vw, 30vw"
         className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
       />
       <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0f131c]/90 via-[#0f131c]/45 to-transparent" />

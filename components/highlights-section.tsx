@@ -4,7 +4,9 @@ export function HighlightsSection() {
   return (
     <section id="top-differentiators" className="relative scroll-mt-32">
       <AboutMeHeading />
-      <AboutMeIntro />
-    </section>
+  <div className="px-4 pb-32 md:pb-40">
+  <AboutMeIntro />
+  </div>
+  </section>
   )
 }
