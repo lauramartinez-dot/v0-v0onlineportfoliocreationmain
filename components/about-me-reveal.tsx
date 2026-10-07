@@ -53,24 +53,39 @@ function StoryRow({
   )
 }
 
+const pressLogos = [
+  { name: "Business Insider", src: "/logos/business-insider.png" },
+  { name: "Xataka", src: "/logos/xataka.png" },
+  { name: "Muy Interesante", src: "/logos/muy-interesante.png" },
+]
+
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
       <StoryRow
         mediaSide="right"
         media={
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
-            <Image
-              src="/then-business-journalist.png"
-              alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+          <ul className="flex flex-col items-center justify-center gap-10 py-4 md:items-start md:gap-12">
+            {pressLogos.map((logo) => (
+              <li key={logo.name} className="relative h-14 w-full max-w-sm md:h-20">
+                <Image
+                  src={logo.src}
+                  alt={logo.name}
+                  fill
+                  sizes="384px"
+                  className="object-contain object-center brightness-0 invert md:object-left"
+                />
+              </li>
+            ))}
+          </ul>
         }
       >
-        <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
+        <div className="flex flex-col gap-6">
+          <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
+          <p className="text-xl font-semibold leading-snug text-white/70 text-pretty md:text-2xl">
+            I used to write for media such as:
+          </p>
+        </div>
       </StoryRow>
 
       <div className="flex flex-col gap-10 md:gap-12">
