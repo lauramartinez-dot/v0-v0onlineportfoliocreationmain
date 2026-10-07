@@ -9,7 +9,7 @@ export function Navigation() {
 
   const navItems = [
     { label: "About me", href: "#top-differentiators" },
-    { label: "Core principles", href: "#writing-principles" },
+    { label: "Core principles as a TW", href: "#writing-principles" },
     { label: "Experience as a TW", href: "#company-highlights" },
     { label: "Writing samples", href: "#writing-samples" },
     { label: "Personal projects", href: "#personal-projects" },

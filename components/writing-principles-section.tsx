@@ -45,7 +45,7 @@ export function WritingPrinciplesSection() {
       <div className="mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold uppercase tracking-tight text-foreground md:text-5xl lg:text-6xl">
-            Core principles<span className="text-primary">.</span>
+            Core principles as a TW<span className="text-primary">.</span>
           </h2>
 
           {/* Accent bar - matches the other main section titles */}
