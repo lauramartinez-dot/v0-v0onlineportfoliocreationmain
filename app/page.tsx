@@ -4,7 +4,7 @@ import { WritingPrinciplesSection } from "@/components/writing-principles-sectio
 import { WritingSamplesSection } from "@/components/writing-samples-section"
 import CareerMapSection from "@/components/career-map-section"
 import { PersonalProjectsSection } from "@/components/personal-projects-section"
-import { Navigation } from "@/components/navigation"
+import { Navigation } from "@/components/site-navigation"
 import { Footer } from "@/components/footer"
 
 export default function Home() {
