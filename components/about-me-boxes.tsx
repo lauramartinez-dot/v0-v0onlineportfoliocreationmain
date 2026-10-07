@@ -29,13 +29,28 @@ type Box = {
   body: ReactNode
 }
 
-function ImageStatement({ imageSrc, children }: { imageSrc: string; children: ReactNode }) {
+function ImageStatement({
+  imageSrc,
+  children,
+  aside,
+}: {
+  imageSrc: string
+  children: ReactNode
+  aside: ReactNode
+}) {
   return (
-    <div className="relative flex min-h-[75vh] items-center justify-center overflow-hidden p-6 md:p-10">
+    <div className="relative overflow-hidden">
       <Image src={imageSrc} alt="" fill sizes="(max-width: 1400px) 96vw, 1400px" className="object-cover" />
-      <div className="absolute inset-0 bg-card/20" aria-hidden="true" />
-      <div className="relative z-10 max-w-2xl rounded-3xl border border-white/10 bg-card/70 p-8 shadow-2xl backdrop-blur-md md:p-10">
-        <p className="text-2xl font-semibold leading-snug text-white text-pretty md:text-3xl">{children}</p>
+      <div className="absolute inset-0 bg-card/10" aria-hidden="true" />
+
+      <div className="relative z-10 flex min-h-[75vh] flex-col justify-between gap-12 p-6 md:p-10">
+        <div className="max-w-md self-start rounded-3xl border border-white/10 bg-card/70 p-8 shadow-2xl backdrop-blur-md">
+          <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">{children}</p>
+        </div>
+
+        <div className="w-full max-w-md self-end rounded-3xl border border-primary/40 bg-card/80 p-8 shadow-2xl shadow-primary/10 backdrop-blur-md">
+          {aside}
+        </div>
       </div>
     </div>
   )
@@ -105,11 +120,17 @@ const boxes: Box[] = [
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
-      <ImageStatement imageSrc="/cosmic-inflation-universe-expansion.jpg">
+      <ImageStatement
+        imageSrc="/cosmic-inflation-universe-expansion.jpg"
+        aside={
+          <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
+            The more people understand technology, use it, and help build it, the further we can push the frontiers
+            of knowledge.
+          </p>
+        }
+      >
         {"The mission hasn't changed: "}
-        <span className="font-bold text-primary">democratising access to technical knowledge.</span>{" "}
-        The more people understand technology, use it, and help build it, the further we can push the frontiers of
-        knowledge.
+        <span className="font-bold text-primary">democratising access to technical knowledge.</span>
       </ImageStatement>
     ),
   },
@@ -120,10 +141,16 @@ const boxes: Box[] = [
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
-      <ImageStatement imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg">
+      <ImageStatement
+        imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg"
+        aside={
+          <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
+            {"I'm comfortable experimenting, failing fast, and learning by doing."}
+          </p>
+        }
+      >
         {"Most of my career has been at startups — including "}
-        <span className="font-bold text-primary">{"Personio, one of Europe's unicorns."}</span>{" "}
-        {"I'm comfortable experimenting, failing fast, and learning by doing."}
+        <span className="font-bold text-primary">{"Personio, one of Europe's unicorns."}</span>
       </ImageStatement>
     ),
   },
