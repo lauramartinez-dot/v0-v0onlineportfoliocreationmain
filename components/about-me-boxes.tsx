@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Globe, Newspaper, Rocket, Telescope, type LucideIcon } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -22,6 +22,7 @@ const languages = [
 
 type Box = {
   title: string
+  icon: LucideIcon
   teaser: string
   imageSrc: string
   imageAlt: string
@@ -43,6 +44,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 const boxes: Box[] = [
   {
     title: "Ex-journalist",
+    icon: Newspaper,
     teaser: "15 years writing about tech.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
@@ -50,6 +52,7 @@ const boxes: Box[] = [
   },
   {
     title: "Globetrotter",
+    icon: Globe,
     teaser: "Lived in 4 countries. Fluent in 3 languages.",
     imageSrc: "/four-countries-bamberg.png",
     imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
@@ -97,6 +100,7 @@ const boxes: Box[] = [
   },
   {
     title: "Mission-driven",
+    icon: Telescope,
     teaser: "Making tech knowledge open to everyone.",
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
@@ -111,6 +115,7 @@ const boxes: Box[] = [
   },
   {
     title: "Startup-minded",
+    icon: Rocket,
     teaser: "Spent most of my career at startups. Love building stuff.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
@@ -139,13 +144,14 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-8 text-left transition-colors duration-300 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:p-9"
+              className="group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
-                {box.title}
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
+                <box.icon className="h-7 w-7" />
               </span>
-              <span className="text-base leading-relaxed text-white/70 text-pretty md:text-[17px]">{box.teaser}</span>
-              <span className="mt-2 flex items-center gap-2 text-sm font-semibold text-primary">
+              <span className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">{box.title}</span>
+              <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
+              <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
                 Take a look
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
