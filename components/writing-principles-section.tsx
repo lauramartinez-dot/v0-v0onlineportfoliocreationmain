@@ -29,7 +29,7 @@ const principles = [
     icon: Eye,
     title: "Transparency",
     description:
-      "I leave notes in my tickets as I work: what I did, what I found, what's still open. Anyone can see where things stand and pick up where I left off.",
+      "I'm an open book at work. I leave notes as I go, so you always know what I've done and what's still pending. And if something's not working for me, you won't have to guess. I'll just tell you (candid feedback).",
   },
   {
     icon: Flag,
