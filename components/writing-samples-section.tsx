@@ -106,7 +106,7 @@ const audiences: Audience[] = [
     level: "Medium",
     audience: ["Consultants", "PMs", "Analysts"],
     assumes:
-      "Readers who set up the software through its UI and support the people who use it. No code, but deep product knowledge.",
+      "Readers who help others build software and have grown into semi-technical experts over time.",
     contentTypes: [
       {
         title: "Consultant manuals",
@@ -126,7 +126,7 @@ const audiences: Audience[] = [
     level: "Low",
     audience: ["Everyday users", "Media readers"],
     assumes:
-      "Readers who simply use the software, or read about technology in the news. Plain words, no jargon.",
+      "Readers who only interact with the software through its UI, even when they configure it. Plain words, no jargon.",
     contentTypes: [
       {
         title: "Help center",
