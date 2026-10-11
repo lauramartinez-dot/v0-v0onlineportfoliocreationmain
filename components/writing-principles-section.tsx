@@ -11,7 +11,7 @@ const principles = [
     icon: Users,
     title: "Who is reading",
     description:
-      "Before I write a word, I find out who's reading. Do they use the software, or set it up? If they set it up, are they clicking through settings or wiring it into other systems? How technical are they, really?",
+      "Before I write a word, I find out who's reading. Do they use the software, or set it up? If they set it up, are they clicking through settings or wiring it into other systems? How technical are they?",
   },
   {
     icon: Sparkles,
