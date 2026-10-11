@@ -4,6 +4,7 @@ const personalProjects = [
   {
     id: "portfolio",
     title: "This portfolio",
+    description: "I use this portfolio as a playground for vibe-coding and AI-assisted creation.",
     tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "AI upskilling"],
     image: "/project-portfolio-ai.png",
     imageAlt: "Laptop with a code editor and an AI chat panel side by side, lit in pink",
@@ -11,6 +12,7 @@ const personalProjects = [
   {
     id: "bookclub",
     title: "A book club for women in tech",
+    description: "I created Barcelona\u2019s first book club for women in tech.",
     tags: ["Founder", "Community building", "Women in tech", "Events", "Branding"],
     image: "/too-bossy-book.jpg",
     imageAlt: "Too Bossy: a woman in round glasses with a red blazer over her shoulder",
@@ -40,9 +42,10 @@ export function PersonalProjectsSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
                 />
               </div>
-              <h3 className="max-w-sm text-2xl font-bold leading-tight text-white text-balance md:text-3xl">
-                {project.title}
-              </h3>
+              <h3 className="sr-only">{project.title}</h3>
+              <p className="max-w-md text-xl leading-relaxed text-white text-pretty md:text-2xl">
+                {project.description}
+              </p>
               <ul className="flex max-w-md flex-wrap justify-center gap-2" aria-label="Project skills">
                 {project.tags.map((tag) => (
                   <li
