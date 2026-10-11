@@ -53,27 +53,32 @@ function StoryRow({
   )
 }
 
+const panelClass =
+  "rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-14 md:px-12 md:py-20"
+
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <StoryRow
-        mediaSide="right"
-        media={
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
-            <Image
-              src="/then-business-journalist.png"
-              alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
-        }
-      >
-        <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
-      </StoryRow>
+    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-6 md:gap-8">
+      <div className={panelClass}>
+        <StoryRow
+          mediaSide="right"
+          media={
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
+              <Image
+                src="/then-business-journalist.png"
+                alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          }
+        >
+          <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
+        </StoryRow>
+      </div>
 
-      <div className="flex flex-col gap-10 md:gap-12">
+      <div className={`${panelClass} flex flex-col gap-10 md:gap-12`}>
         <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
           I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And
           somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along.
@@ -93,7 +98,7 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div id="why" className="flex scroll-mt-32 flex-col gap-12 pt-6 md:gap-14 md:pt-10">
+      <div id="why" className={`${panelClass} flex scroll-mt-32 flex-col gap-12 md:gap-14`}>
         <div className="flex items-center gap-6 md:gap-8">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" aria-hidden="true" />
           <p className={storyLineClass}>
