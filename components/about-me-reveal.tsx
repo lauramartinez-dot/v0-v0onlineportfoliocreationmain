@@ -80,7 +80,7 @@ export function AboutMeIntro() {
         </p>
         <div className="grid grid-cols-2 gap-4 md:gap-8">
           <ArticleCard
-            era="10 years ago"
+            era="Before"
             imageSrc="/then-airplane-article.png"
             imageAlt="Magazine article titled How do planes stay in the air?"
             href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
