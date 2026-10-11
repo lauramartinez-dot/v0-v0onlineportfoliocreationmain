@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Globe, Newspaper, Rocket, Telescope, type LucideIcon } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -22,19 +22,35 @@ const languages = [
 
 type Box = {
   title: string
+  icon: LucideIcon
   teaser: string
   imageSrc: string
   imageAlt: string
   body: ReactNode
 }
 
-function ImageStatement({ imageSrc, children }: { imageSrc: string; children: ReactNode }) {
+function ImageStatement({
+  imageSrc,
+  children,
+  aside,
+}: {
+  imageSrc: string
+  children: ReactNode
+  aside: ReactNode
+}) {
   return (
-    <div className="relative flex min-h-[75vh] items-center justify-center overflow-hidden p-6 md:p-10">
+    <div className="relative overflow-hidden">
       <Image src={imageSrc} alt="" fill sizes="(max-width: 1400px) 96vw, 1400px" className="object-cover" />
-      <div className="absolute inset-0 bg-card/20" aria-hidden="true" />
-      <div className="relative z-10 max-w-2xl rounded-3xl border border-white/10 bg-card/70 p-8 shadow-2xl backdrop-blur-md md:p-10">
-        <p className="text-2xl font-semibold leading-snug text-white text-pretty md:text-3xl">{children}</p>
+      <div className="absolute inset-0 bg-card/10" aria-hidden="true" />
+
+      <div className="relative z-10 flex min-h-[75vh] flex-col justify-between gap-12 p-6 md:p-10">
+        <div className="max-w-md self-start rounded-3xl border border-white/10 bg-card/70 p-8 shadow-2xl backdrop-blur-md">
+          <p className="text-2xl font-semibold leading-snug text-white text-balance md:text-3xl">{children}</p>
+        </div>
+
+        <div className="w-full max-w-md self-end rounded-3xl border border-primary/40 bg-card/80 p-8 shadow-2xl shadow-primary/10 backdrop-blur-md">
+          {aside}
+        </div>
       </div>
     </div>
   )
@@ -43,6 +59,7 @@ function ImageStatement({ imageSrc, children }: { imageSrc: string; children: Re
 const boxes: Box[] = [
   {
     title: "Ex-journalist",
+    icon: Newspaper,
     teaser: "15 years writing about tech.",
     imageSrc: "/then-airplane-article.png",
     imageAlt: "Magazine article titled How do planes stay in the air?",
@@ -50,6 +67,7 @@ const boxes: Box[] = [
   },
   {
     title: "Globetrotter",
+    icon: Globe,
     teaser: "Lived in 4 countries. Fluent in 3 languages.",
     imageSrc: "/four-countries-bamberg.png",
     imageAlt: "Laura by the river in Bamberg, Germany, with the old town hall behind her",
@@ -97,28 +115,42 @@ const boxes: Box[] = [
   },
   {
     title: "Mission-driven",
+    icon: Telescope,
     teaser: "Making tech knowledge open to everyone.",
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
-      <ImageStatement imageSrc="/cosmic-inflation-universe-expansion.jpg">
+      <ImageStatement
+        imageSrc="/cosmic-inflation-universe-expansion.jpg"
+        aside={
+          <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
+            The more people understand technology, use it, and help build it, the further we can push the frontiers
+            of knowledge.
+          </p>
+        }
+      >
         {"The mission hasn't changed: "}
-        <span className="font-bold text-primary">democratising access to technical knowledge.</span>{" "}
-        The more people understand technology, use it, and help build it, the further we can push the frontiers of
-        knowledge.
+        <span className="font-bold text-primary">democratising access to technical knowledge.</span>
       </ImageStatement>
     ),
   },
   {
     title: "Startup-minded",
+    icon: Rocket,
     teaser: "Spent most of my career at startups. Love building stuff.",
     imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
     imageAlt: "Modern tech office with a beer tap",
     body: (
-      <ImageStatement imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg">
+      <ImageStatement
+        imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg"
+        aside={
+          <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
+            {"I'm comfortable experimenting, failing fast, and learning by doing."}
+          </p>
+        }
+      >
         {"Most of my career has been at startups — including "}
-        <span className="font-bold text-primary">{"Personio, one of Europe's unicorns."}</span>{" "}
-        {"I'm comfortable experimenting, failing fast, and learning by doing."}
+        <span className="font-bold text-primary">{"Personio, one of Europe's unicorns."}</span>
       </ImageStatement>
     ),
   },
@@ -139,13 +171,14 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-8 text-left transition-colors duration-300 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:p-9"
+              className="group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">
-                {box.title}
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
+                <box.icon className="h-7 w-7" />
               </span>
-              <span className="text-base leading-relaxed text-white/70 text-pretty md:text-[17px]">{box.teaser}</span>
-              <span className="mt-2 flex items-center gap-2 text-sm font-semibold text-primary">
+              <span className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">{box.title}</span>
+              <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
+              <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
                 Take a look
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>

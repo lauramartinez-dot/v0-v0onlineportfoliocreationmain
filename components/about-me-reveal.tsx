@@ -1,6 +1,8 @@
+import Image from "next/image"
 import type { ReactNode } from "react"
 import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
+import { AboutMeBoxes } from "@/components/about-me-boxes"
 
 export function AboutMeHeading() {
   return (
@@ -28,31 +30,78 @@ function FadeLine({ index, className, children }: { index: number; className?: s
   )
 }
 
-const introClass =
-  "mx-auto max-w-4xl text-3xl font-medium leading-snug tracking-tight text-primary text-pretty md:text-4xl"
+const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
+
+function StoryRow({
+  children,
+  media,
+  mediaSide,
+  mediaWide = false,
+}: {
+  children: ReactNode
+  media: ReactNode
+  mediaSide: "left" | "right"
+  mediaWide?: boolean
+}) {
+  const textCols = mediaWide ? "md:col-span-4" : "md:col-span-5"
+  const mediaCols = mediaWide ? "md:col-span-6" : "md:col-span-5"
+  return (
+    <div className="grid items-center gap-10 md:grid-cols-10 md:gap-14">
+      <div className={`${textCols} ${mediaSide === "left" ? "md:order-2" : ""}`}>{children}</div>
+      <div className={`${mediaCols} ${mediaSide === "left" ? "md:order-1" : ""}`}>{media}</div>
+    </div>
+  )
+}
 
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="flex flex-col gap-10 px-4 pb-24 text-center md:gap-12 md:pb-32" step={350}>
-      <p className={introClass}>I&apos;m a tech journalist turned technical writer.</p>
-      <p className={introClass}>
-        I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And somehow
-        clear enough that you don&apos;t need a PhD or a CS degree to follow along.
-      </p>
-      <div className="mx-auto grid w-full max-w-4xl grid-cols-2 gap-5 pt-4 text-left md:gap-6">
-        <ArticleCard
-          era="10 years ago"
-          role="Tech journalist"
-          imageSrc="/then-airplane-article.png"
-          imageAlt="Magazine article titled How do planes stay in the air?"
-          href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-        />
-        <ArticleCard
-          era="Now"
-          role="Technical writer"
-          imageSrc="/now-tech-docs.png"
-          imageAlt="Documentation page titled What is an API? on a laptop screen"
-        />
+    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
+      <StoryRow
+        mediaSide="right"
+        media={
+          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
+            <Image
+              src="/then-business-journalist.png"
+              alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
+              fill
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
+            />
+          </div>
+        }
+      >
+        <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
+      </StoryRow>
+
+      <div className="flex flex-col gap-10 md:gap-12">
+        <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
+          I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And
+          somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+        </p>
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
+          <ArticleCard
+            era="Before"
+            imageSrc="/then-airplane-article.png"
+            imageAlt="Magazine article titled How do planes stay in the air?"
+            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+          />
+          <ArticleCard
+            era="Now"
+            imageSrc="/now-tech-docs.png"
+            imageAlt="Documentation page titled What is an API? on a laptop screen"
+          />
+        </div>
+      </div>
+
+      <div id="why" className="flex scroll-mt-32 flex-col gap-12 pt-6 md:gap-14 md:pt-10">
+        <div className="flex items-center gap-6 md:gap-8">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" aria-hidden="true" />
+          <p className={storyLineClass}>
+            I am also<span className="text-primary">:</span>
+          </p>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" aria-hidden="true" />
+        </div>
+        <AboutMeBoxes />
       </div>
     </StaggerReveal>
   )
