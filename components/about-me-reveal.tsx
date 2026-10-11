@@ -54,11 +54,11 @@ function StoryRow({
 }
 
 const panelClass =
-  "rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-14 md:px-12 md:py-20"
+  "rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-6 md:p-12"
 
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-6 md:gap-8">
+    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-8 md:gap-10">
       <div className={panelClass}>
         <StoryRow
           mediaSide="right"
@@ -98,7 +98,7 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div id="why" className={`${panelClass} flex scroll-mt-32 flex-col gap-12 md:gap-14`}>
+      <div id="why" className={`${panelClass} flex scroll-mt-32 flex-col gap-10 md:gap-12`}>
         <div className="flex items-center gap-6 md:gap-8">
           <span className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" aria-hidden="true" />
           <p className={storyLineClass}>
