@@ -145,7 +145,7 @@ const boxes: Box[] = [
         imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
-            {"I'm comfortable experimenting, failing fast, and learning by doing."}
+            {"So I'm drawn to experimenting, trying things out before they're perfect, failing miserably, and trying again."}
           </p>
         }
       >
