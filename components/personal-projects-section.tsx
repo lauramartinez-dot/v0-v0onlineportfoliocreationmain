@@ -4,15 +4,15 @@ const personalProjects = [
   {
     id: "portfolio",
     title: "This portfolio",
-    description: "I use this portfolio as a playground for vibe-coding and AI-assisted creation.",
-    tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "AI upskilling"],
+    description: "I use this portfolio as a playground\nfor vibe-coding and AI-assisted creation.",
+    tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "Claude"],
     image: "/project-portfolio-ai.png",
     imageAlt: "Laptop with a code editor and an AI chat panel side by side, lit in pink",
   },
   {
     id: "bookclub",
     title: "A book club for women in tech",
-    description: "I run Barcelona\u2019s first book club for women in tech.",
+    description: "I run Barcelona\u2019s first book club\nfor women in tech.",
     tags: ["Founder", "Community building", "Women in tech", "Events", "Branding"],
     image: "/too-bossy-book.jpg",
     imageAlt: "Too Bossy: a woman in round glasses with a red blazer over her shoulder",
@@ -43,7 +43,7 @@ export function PersonalProjectsSection() {
                 />
               </div>
               <h3 className="sr-only">{project.title}</h3>
-              <p className="max-w-md text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
+              <p className="max-w-md whitespace-pre-line text-base leading-relaxed text-white/60 md:text-[17px]">
                 {project.description}
               </p>
               <ul className="flex max-w-md flex-wrap justify-center gap-2" aria-label="Project skills">
