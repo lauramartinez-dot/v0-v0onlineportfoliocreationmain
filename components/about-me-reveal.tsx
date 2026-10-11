@@ -94,7 +94,14 @@ export function AboutMeIntro() {
       </div>
 
       <div id="why" className="flex scroll-mt-32 flex-col gap-10 border-t border-white/10 pt-16 md:pt-20">
-        <p className={storyLineClass}>I am also:</p>
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <p className={storyLineClass}>
+            I am also<span className="text-primary">:</span>
+          </p>
+          <p className="max-w-md text-lg leading-relaxed text-white/60 text-pretty md:text-right">
+            Three things that shaped how I work. Click any of them to take a look.
+          </p>
+        </div>
         <AboutMeBoxes />
       </div>
     </StaggerReveal>
