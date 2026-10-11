@@ -93,15 +93,11 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div id="why" className="flex scroll-mt-32 flex-col gap-10 border-t border-white/10 pt-16 md:pt-20">
-        <div className="flex flex-col items-center gap-3 text-center">
-          <p className={storyLineClass}>
-            I am also<span className="text-primary">:</span>
-          </p>
-          <p className="max-w-md text-lg leading-relaxed text-white/60 text-pretty">
-            Three things that shaped how I work. Click any of them to take a look.
-          </p>
-        </div>
+      <div id="why" className="flex scroll-mt-32 flex-col items-center gap-6 -mt-6 md:-mt-8">
+        <span className="h-20 w-px bg-gradient-to-b from-transparent via-primary/60 to-primary" aria-hidden="true" />
+        <p className={storyLineClass}>
+          I am also<span className="text-primary">:</span>
+        </p>
         <AboutMeBoxes />
       </div>
     </StaggerReveal>
