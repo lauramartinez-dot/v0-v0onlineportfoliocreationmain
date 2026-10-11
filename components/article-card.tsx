@@ -31,7 +31,7 @@ export function ArticleCard({ era, imageSrc, imageAlt, href }: ArticleCardProps)
   )
 
   const className =
-    "group relative flex aspect-[3/4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 md:aspect-[4/3]"
+    "group relative flex aspect-[3/4] w-full flex-col overflow-hidden rounded-3xl border border-white/10 md:aspect-[5/4]"
 
   if (!href) return <div className={className}>{content}</div>
 

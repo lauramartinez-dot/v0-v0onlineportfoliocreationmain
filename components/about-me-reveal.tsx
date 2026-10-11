@@ -93,11 +93,14 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div id="why" className="flex scroll-mt-32 flex-col items-center gap-6 -mt-6 md:-mt-8">
-        <span className="h-20 w-px bg-gradient-to-b from-transparent via-primary/60 to-primary" aria-hidden="true" />
-        <p className={storyLineClass}>
-          I am also<span className="text-primary">:</span>
-        </p>
+      <div id="why" className="flex scroll-mt-32 flex-col gap-12 pt-6 md:gap-14 md:pt-10">
+        <div className="flex items-center gap-6 md:gap-8">
+          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" aria-hidden="true" />
+          <p className={storyLineClass}>
+            I am also<span className="text-primary">:</span>
+          </p>
+          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" aria-hidden="true" />
+        </div>
         <AboutMeBoxes />
       </div>
     </StaggerReveal>
