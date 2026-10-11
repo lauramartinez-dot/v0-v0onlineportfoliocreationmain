@@ -2,7 +2,7 @@ import type { ReactNode } from "react"
 import { Minus, Users, Sparkles, Eye, LineChart, Flag } from "lucide-react"
 
 function Em({ children }: { children: ReactNode }) {
-  return <strong className="font-semibold text-white">{children}</strong>
+  return <>{children}</>
 }
 
 const principles: { icon: typeof Minus; title: string; description: ReactNode }[] = [
