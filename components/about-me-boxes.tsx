@@ -142,7 +142,7 @@ const boxes: Box[] = [
     imageAlt: "Modern tech office with a beer tap",
     body: (
       <ImageStatement
-        imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg"
+        imageSrc="/startup-team-rooftop.jpg"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
             {"So I'm drawn to experimenting, trying things out before they're perfect, failing miserably, and trying again."}
