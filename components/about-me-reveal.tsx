@@ -54,11 +54,11 @@ function StoryRow({
 }
 
 const panelClass =
-  "rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-8 md:p-16 lg:p-20"
+  "rounded-[2.5rem] border border-white/10 bg-white/[0.03] p-6 md:p-12"
 
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-10 md:gap-14">
+    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-8 md:gap-10">
       <div className={panelClass}>
         <StoryRow
           mediaSide="right"
