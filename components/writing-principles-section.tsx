@@ -21,8 +21,8 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
     title: "Who is reading",
     description: (
       <>
-        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? Click through
-        settings or integrate it with other systems? <Em>How technical</Em> are they, really?
+        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
+        up, do they stay inside the app or design the systems around it? <Em>How technical</Em> are they, really?
       </>
     ),
   },
