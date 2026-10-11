@@ -1,41 +1,70 @@
+import type { ReactNode } from "react"
 import { Minus, Users, Sparkles, Eye, LineChart, Flag } from "lucide-react"
 
-const principles = [
+function Em({ children }: { children: ReactNode }) {
+  return <strong className="font-semibold text-white">{children}</strong>
+}
+
+const principles: { icon: typeof Minus; title: string; description: ReactNode }[] = [
   {
     icon: Minus,
     title: "Less is more",
-    description:
-      "I see my job as a technical writer as subtracting, not adding \u2014 taking information away until only what matters is left. I write as if every extra sentence cost me 50 euros.",
+    description: (
+      <>
+        I see my job as a technical writer as <Em>subtracting</Em>, not adding {"\u2014"} taking information away until
+        only what matters is left. I write as if every extra sentence cost me 50 euros.
+      </>
+    ),
   },
   {
     icon: Users,
     title: "Who is reading",
-    description:
-      "Before I write a word, I find out who's reading. Do they use the software, or set it up? If they set it up, are they clicking through settings or wiring it into other systems? How technical are they?",
+    description: (
+      <>
+        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? Click through
+        settings or integrate it with other systems? <Em>How technical</Em> are they, really?
+      </>
+    ),
   },
   {
     icon: Sparkles,
     title: "AI, but not always",
-    description:
-      "I use AI every day, and I'm good at it. But knowing when not to use it matters just as much. You won't find AI slop or \u201CI work at the intersection of\u2026\u201D here.",
+    description: (
+      <>
+        I use AI all day, mostly Copilot and Claude. But knowing when <Em>not to use it</Em> matters even more. You
+        won&apos;t find AI slop here, or a single {"\u201CI work at the intersection of\u2026\u201D"}
+      </>
+    ),
   },
   {
     icon: LineChart,
     title: "Data over gut feeling",
-    description:
-      "I don't assume my docs are helpful. I want to hear it from the people using them and see it in the data, and let that shape what I write next.",
+    description: (
+      <>
+        I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people using them and see it in
+        the data, and let that shape what I write next.
+      </>
+    ),
   },
   {
     icon: Eye,
     title: "Transparency",
-    description:
-      "I'm big on transparency and candid feedback, so you'll never have to guess. You'll always know where my work stands, and if I have an issue, you'll hear it from me first.",
+    description: (
+      <>
+        I&apos;m big on transparency and candid feedback, so you&apos;ll <Em>never have to guess</Em>. You&apos;ll
+        always know where my work stands, and if I have an issue, you&apos;ll hear it from me first.
+      </>
+    ),
   },
   {
     icon: Flag,
     title: "High ownership",
-    description:
-      "Once I pick something up, I don't drop it. If I'm stuck, I figure out who to ask or dig in myself. It doesn't just sit on my list.",
+    description: (
+      <>
+        Whatever&apos;s assigned to me, I see through <Em>to the end</Em>. I&apos;m big on prioritizing, so some
+        things may wait in my backlog for a while, but nothing gets quietly forgotten.
+      </>
+    ),
   },
 ]
 
