@@ -41,8 +41,8 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
     title: "Data over gut feeling",
     description: (
       <>
-        I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people using them and see it in
-        the data, and let that shape what I write next.
+        I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people who use them. If
+        data shows a page isn&apos;t clear enough, I rewrite it, even if I personally liked it.
       </>
     ),
   },
@@ -61,8 +61,8 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
     title: "High ownership",
     description: (
       <>
-        Whatever&apos;s assigned to me, I see through <Em>to the end</Em>. I&apos;m big on prioritizing, so some
-        things may wait in my backlog for a while, but nothing gets quietly forgotten.
+        Whatever&apos;s assigned to me, I see through <Em>to the end</Em>. I prioritise, so some things wait in my
+        backlog, but nothing gets dropped just because nobody chases me.
       </>
     ),
   },

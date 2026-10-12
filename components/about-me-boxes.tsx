@@ -12,6 +12,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { EuropePinsMap } from "@/components/europe-pins-map"
+import { cn } from "@/lib/utils"
 import { StaggerReveal } from "@/components/stagger-reveal"
 
 const languages = [
@@ -31,16 +32,24 @@ type Box = {
 
 function ImageStatement({
   imageSrc,
+  imageClassName,
   children,
   aside,
 }: {
   imageSrc: string
+  imageClassName?: string
   children: ReactNode
   aside: ReactNode
 }) {
   return (
     <div className="relative overflow-hidden">
-      <Image src={imageSrc} alt="" fill sizes="(max-width: 1400px) 96vw, 1400px" className="object-cover" />
+      <Image
+        src={imageSrc}
+        alt=""
+        fill
+        sizes="(max-width: 1400px) 96vw, 1400px"
+        className={cn("object-cover", imageClassName)}
+      />
       <div className="absolute inset-0 bg-card/10" aria-hidden="true" />
 
       <div className="relative z-10 flex min-h-[75vh] flex-col justify-between gap-12 p-6 md:p-10">
@@ -116,12 +125,13 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     icon: Telescope,
-    teaser: "Making tech knowledge open to everyone.",
-    imageSrc: "/cosmic-inflation-universe-expansion.jpg",
-    imageAlt: "Expanding universe with galaxies",
+    teaser: "15+ years making tech knowledge open to everyone.",
+    imageSrc: "/people-sharing-tablet.jpg",
+    imageAlt: "Top-down view of a group of people gathered around a table sharing a tablet and phones",
     body: (
       <ImageStatement
-        imageSrc="/cosmic-inflation-universe-expansion.jpg"
+        imageSrc="/people-sharing-tablet.jpg"
+        imageClassName="object-top"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
             The more people understand technology, use it, and help build it, the further we can push the frontiers
@@ -138,14 +148,14 @@ const boxes: Box[] = [
     title: "Startup-minded",
     icon: Rocket,
     teaser: "Spent most of my career at startups. Love building stuff.",
-    imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
-    imageAlt: "Modern tech office with a beer tap",
+    imageSrc: "/startup-office-cafe.png",
+    imageAlt: "Bright modern office cafe with a terrazzo coffee bar, hanging ferns and blue-framed windows",
     body: (
       <ImageStatement
-        imageSrc="/modern-tech-office-workspace-with-beer-tap-dublin.jpg"
+        imageSrc="/startup-office-cafe.png"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
-            {"I'm comfortable experimenting, failing fast, and learning by doing."}
+            {"So I'm drawn to experimenting, trying things out before they're perfect, failing miserably, and trying again."}
           </p>
         }
       >
