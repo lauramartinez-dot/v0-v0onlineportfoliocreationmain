@@ -1,3 +1,10 @@
+// The v0 preview runtime re-enables Turbopack's on-disk dev cache through a
+// Next adapter unless this variable is "false". That cache served stale
+// client bundles after each sandbox restart, which caused hydration
+// mismatches whenever copy changed. The config flag below is not enough on
+// its own because the adapter overrides it; this env var is what it checks.
+process.env.TURBOPACK_PERSISTENT_CACHE = 'false'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   typescript: {
