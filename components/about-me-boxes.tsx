@@ -116,7 +116,7 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     icon: Telescope,
-    teaser: "Making tech knowledge open to everyone.",
+    teaser: "15+ years making tech knowledge open to everyone.",
     imageSrc: "/cosmic-inflation-universe-expansion.jpg",
     imageAlt: "Expanding universe with galaxies",
     body: (
