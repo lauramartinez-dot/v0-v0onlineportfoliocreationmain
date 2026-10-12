@@ -42,7 +42,7 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
     description: (
       <>
         I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people who use them. If
-        feedback or data shows a page isn&apos;t clear enough, I rewrite it, even if I personally liked it.
+        data shows a page isn&apos;t clear enough, I rewrite it, even if I personally liked it.
       </>
     ),
   },
