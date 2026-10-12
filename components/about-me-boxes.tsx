@@ -148,12 +148,11 @@ const boxes: Box[] = [
     title: "Startup-minded",
     icon: Rocket,
     teaser: "Spent most of my career at startups. Love building stuff.",
-    imageSrc: "/startup-team-lets-make-history.png",
-    imageAlt: "Three colleagues working on laptops under a neon sign reading Let's make history",
+    imageSrc: "/startup-office-cafe.png",
+    imageAlt: "Bright modern office cafe with a terrazzo coffee bar, hanging ferns and blue-framed windows",
     body: (
       <ImageStatement
-        imageSrc="/startup-team-lets-make-history.png"
-        imageClassName="object-[50%_30%]"
+        imageSrc="/startup-office-cafe.png"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
             {"So I'm drawn to experimenting, trying things out before they're perfect, failing miserably, and trying again."}
