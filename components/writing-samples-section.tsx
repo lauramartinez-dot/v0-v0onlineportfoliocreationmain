@@ -106,7 +106,7 @@ const audiences: Audience[] = [
     level: "Medium",
     audience: ["Consultants", "Implementation"],
     assumes:
-      "Readers with some technical background who guide others through integrating the software into their systems, but don\u2019t write the code themselves.",
+      "Readers with some technical background, usually gained on the job, who guide others through integrating the software into their systems, but don\u2019t write code.",
     contentTypes: [
       {
         title: "Consultant manuals",
