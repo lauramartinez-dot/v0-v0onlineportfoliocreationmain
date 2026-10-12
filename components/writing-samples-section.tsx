@@ -90,9 +90,9 @@ type Audience = {
 const audiences: Audience[] = [
   {
     level: "High",
-    audience: ["Developers", "IT staff"],
+    audience: ["Developers", "System architects"],
     assumes:
-      "Readers with a technical background who build the actual systems. They want exact, complete technical detail.",
+      "Readers with a technical background who write the code and build the systems themselves. They want exact, complete technical detail.",
     contentTypes: [
       {
         title: "API developer portal",
@@ -104,9 +104,9 @@ const audiences: Audience[] = [
   },
   {
     level: "Medium",
-    audience: ["Consultants", "PMs", "Analysts"],
+    audience: ["Consultants", "Solutions engineers"],
     assumes:
-      "Readers who help others build systems without a deep technical background of their own. Semi-technical by experience.",
+      "Readers with some technical background, usually gained on the job, who help others fit the software into their systems without writing the code.",
     contentTypes: [
       {
         title: "Consultant manuals",
@@ -124,9 +124,9 @@ const audiences: Audience[] = [
   },
   {
     level: "Low",
-    audience: ["Everyday users", "Media readers"],
+    audience: ["Everyday users", "Business users"],
     assumes:
-      "Readers with no technical background who simply use the software, or who just read about tech in the media.",
+      "Readers with no technical background who set up and use the software day to day, or who read about tech in the media.",
     contentTypes: [
       {
         title: "Help center",
