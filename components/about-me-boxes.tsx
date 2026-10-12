@@ -126,11 +126,12 @@ const boxes: Box[] = [
     title: "Mission-driven",
     icon: Telescope,
     teaser: "15+ years making tech knowledge open to everyone.",
-    imageSrc: "/cosmic-inflation-universe-expansion.jpg",
-    imageAlt: "Expanding universe with galaxies",
+    imageSrc: "/people-sharing-tablet.jpg",
+    imageAlt: "Top-down view of a group of people gathered around a table sharing a tablet and phones",
     body: (
       <ImageStatement
-        imageSrc="/cosmic-inflation-universe-expansion.jpg"
+        imageSrc="/people-sharing-tablet.jpg"
+        imageClassName="object-top"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
             The more people understand technology, use it, and help build it, the further we can push the frontiers
