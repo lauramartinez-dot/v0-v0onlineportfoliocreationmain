@@ -12,6 +12,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { EuropePinsMap } from "@/components/europe-pins-map"
+import { cn } from "@/lib/utils"
 import { StaggerReveal } from "@/components/stagger-reveal"
 
 const languages = [
@@ -31,16 +32,24 @@ type Box = {
 
 function ImageStatement({
   imageSrc,
+  imageClassName,
   children,
   aside,
 }: {
   imageSrc: string
+  imageClassName?: string
   children: ReactNode
   aside: ReactNode
 }) {
   return (
     <div className="relative overflow-hidden">
-      <Image src={imageSrc} alt="" fill sizes="(max-width: 1400px) 96vw, 1400px" className="object-cover" />
+      <Image
+        src={imageSrc}
+        alt=""
+        fill
+        sizes="(max-width: 1400px) 96vw, 1400px"
+        className={cn("object-cover", imageClassName)}
+      />
       <div className="absolute inset-0 bg-card/10" aria-hidden="true" />
 
       <div className="relative z-10 flex min-h-[75vh] flex-col justify-between gap-12 p-6 md:p-10">
@@ -138,11 +147,12 @@ const boxes: Box[] = [
     title: "Startup-minded",
     icon: Rocket,
     teaser: "Spent most of my career at startups. Love building stuff.",
-    imageSrc: "/modern-tech-office-workspace-with-beer-tap-dublin.jpg",
-    imageAlt: "Modern tech office with a beer tap",
+    imageSrc: "/startup-team-lets-make-history.png",
+    imageAlt: "Three colleagues working on laptops under a neon sign reading Let's make history",
     body: (
       <ImageStatement
-        imageSrc="/startup-team-rooftop.jpg"
+        imageSrc="/startup-team-lets-make-history.png"
+        imageClassName="object-[50%_30%]"
         aside={
           <p className="text-xl font-semibold leading-snug text-white text-pretty md:text-2xl">
             {"So I'm drawn to experimenting, trying things out before they're perfect, failing miserably, and trying again."}
