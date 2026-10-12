@@ -42,7 +42,7 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
     description: (
       <>
         I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people who use them. If
-        data shows a page isn&apos;t clear enough, I rewrite it, even if I personally liked it.
+        data shows a page isn&apos;t clear enough, I rewrite it, even when I was sure I&apos;d nailed it.
       </>
     ),
   },
@@ -61,8 +61,8 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
     title: "High ownership",
     description: (
       <>
-        Whatever&apos;s assigned to me, I see through <Em>to the end</Em>. I prioritise, so some things wait in my
-        backlog, but nothing gets dropped just because nobody chases me.
+        Whatever I take on, I see through <Em>to the end</Em>. I prioritise, so some things wait in the backlog,
+        but nothing gets dropped just because nobody&apos;s chasing me.
       </>
     ),
   },
