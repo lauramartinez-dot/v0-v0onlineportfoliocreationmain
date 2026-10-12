@@ -92,7 +92,7 @@ const audiences: Audience[] = [
     level: "High",
     audience: ["Developers", "System architects"],
     assumes:
-      "Readers with a technical background who write the code and build the systems themselves. They want exact, complete technical detail.",
+      "Readers with a technical background who write the code, build the integrations, and keep them running. They want exact, complete technical detail.",
     contentTypes: [
       {
         title: "API developer portal",
@@ -106,7 +106,7 @@ const audiences: Audience[] = [
     level: "Medium",
     audience: ["Consultants", "Solutions engineers"],
     assumes:
-      "Readers with some technical background, usually gained on the job, who help others fit the software into their systems without writing the code.",
+      "Readers with some technical background who guide others through integrating the software into their systems, but don\u2019t write the code themselves.",
     contentTypes: [
       {
         title: "Consultant manuals",
@@ -124,9 +124,9 @@ const audiences: Audience[] = [
   },
   {
     level: "Low",
-    audience: ["Everyday users", "Business users"],
+    audience: ["Everyday users", "Business admins"],
     assumes:
-      "Readers with no technical background who set up and use the software day to day, or who read about tech in the media.",
+      "Readers with no technical background who set up and use the software day to day, or who read about tech in the media. Plain words, no jargon.",
     contentTypes: [
       {
         title: "Help center",
