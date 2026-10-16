@@ -39,18 +39,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title:
-          "Led a content audit that removed over 100 outdated Help Center articles, 20% of all content, so readers only found what was still true.",
+        title: "Designed a content audit that let the team deprecate 100+ outdated pages",
         where: "Personio",
       },
       {
-        title:
-          "Cut a product area\u2019s support ticket volume by over 50% by rewriting its documentation to answer the question and stop there.",
+        title: "Rewrote a product area\u2019s documentation and cut its support tickets by 50%",
         where: "Personio",
       },
       {
-        title:
-          "Kept this portfolio to the sections that earn their place: no decorative stats, no filler, nothing that doesn\u2019t help you decide.",
+        title: "Kept this portfolio to five sections, with no decorative stats or filler",
         where: "This portfolio",
       },
     ],
@@ -66,18 +63,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title:
-          "Developed tailored documentation for 5+ user groups, from business admins and HR managers to supervisors and employees, and supported role-based navigation.",
+        title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
         where: "Personio",
       },
       {
-        title:
-          "Built Personio\u2019s entire Spanish documentation library from the ground up, managing 150+ English-to-Spanish translations a year.",
+        title: "Built the Spanish documentation library from scratch, 150+ translations a year",
         where: "Personio",
       },
       {
-        title:
-          "Grouped the writing samples on this site into three technical tiers, from developers down to people who read about tech in the news.",
+        title: "Grouped the writing samples on this site into three technical tiers",
         where: "This portfolio",
       },
     ],
@@ -93,18 +87,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title:
-          "Vibe-coded this entire portfolio with v0 and Claude without writing a line of code myself, while writing every word of the copy by hand.",
+        title: "Vibe-coded this entire portfolio with v0, and wrote every word of it by hand",
         where: "This portfolio",
       },
       {
-        title:
-          "Developed an AI-powered assistant for Spanish translation review that reduced review time by 90% and let the team scale translations.",
+        title: "Built an AI agent that cut Spanish translation review time by 90%",
         where: "Personio",
       },
       {
-        title:
-          "Used ChatGPT, Claude and Cursor to draft and structure new documentation pages in under 4 hours, while keeping the quality bar where it was.",
+        title: "Used Gen AI to take new documentation pages from brief to published in under 4 hours",
         where: "Personio",
       },
     ],
@@ -120,18 +111,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title:
-          "Used data analysis to identify and deprioritise 20% of feature release documentation tasks that had minimal audience impact.",
+        title: "Designed a prioritisation framework that let the team drop 20% of low-impact tasks",
         where: "Personio",
       },
       {
-        title:
-          "Built the team\u2019s Tableau reporting on article views, helpfulness votes and linked tickets, making reporting 30% faster and pointing rewrites where the numbers said.",
+        title: "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
         where: "Personio",
       },
       {
-        title:
-          "Collaborated directly with leadership to tie documentation to product adoption and customer retention metrics, not to how many pages we published.",
+        title: "Tied documentation goals to product adoption and retention metrics with leadership",
         where: "Personio",
       },
     ],
@@ -147,18 +135,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title:
-          "Conducted 20+ company-wide culture interviews and reported the findings back to leadership unfiltered, including the uncomfortable ones.",
+        title: "Conducted 20+ company-wide culture interviews and reported the findings unfiltered",
         where: "Personio",
       },
       {
-        title:
-          "Helped design the company-wide release process that tells every team what is shipping and when, so nobody downstream is surprised by a launch.",
+        title: "Co-designed the company-wide release process so no team is surprised by a launch",
         where: "Personio",
       },
       {
-        title:
-          "Mentored a peer to Senior Technical Writer with clear expectations and regular candid feedback, so there were no surprises at review time.",
+        title: "Mentored a peer to Senior Technical Writer through regular candid feedback",
         where: "Personio",
       },
     ],
@@ -174,18 +159,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title:
-          "Joined Personio at 300 employees as one of the first Technical Writers and helped grow the team from 3 writers to a global team of 10+.",
+        title: "Helped grow the documentation team from 3 writers to a global team of 10+",
         where: "Personio",
       },
       {
-        title:
-          "Co-founded Personio\u2019s first Women\u2019s Committee and kept it running alongside the day job, because nobody else was going to.",
+        title: "Co-founded Personio\u2019s first Women\u2019s Committee",
         where: "Personio",
       },
       {
-        title:
-          "Led the expansion of documentation from 3 languages to 6, owning the vendor relationships and the day-to-day of getting content translated and published.",
+        title: "Led the expansion of documentation from 3 languages to 6",
         where: "Personio",
       },
     ],
