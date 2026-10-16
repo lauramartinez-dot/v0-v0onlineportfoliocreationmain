@@ -108,14 +108,14 @@ const audiences: Audience[] = [
   },
   {
     level: "Medium",
-    audience: ["Admins", "Consultants", "Implementation"],
+    audience: ["Consultants", "Implementation"],
     assumes:
       "People with some technical background, usually gained on the job, who set up the software or help others set it up. They don\u2019t write code.",
     contentTypes: [
       {
-        title: "Admin help center",
+        title: "Implementation help center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article and video guide for admins",
+        alt: "Preview of a Personio help center article and video guide for implementation",
         links: adminHelpCenters,
       },
       {
