@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/dialog"
 
 // Help Center articles and how-to videos written for admins who configure
-// Personio ("Medium"). Videos are listed alongside the articles.
+// Personio ("Medium"). Videos are listed alongside the articles (English only).
 const adminHelpCenters = [
   {
     label: "Overview of permissions and employee roles",
@@ -26,20 +26,12 @@ const adminHelpCenters = [
     href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
   },
   {
-    label: "Video: Overview of permissions and employee roles (English)",
+    label: "Video: Overview of permissions and employee roles",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
   {
-    label: "Video: Overview of permissions and employee roles (German)",
-    href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-  },
-  {
-    label: "Video: Overview of the Analytics area (English)",
+    label: "Video: Overview of the Analytics area",
     href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
-  },
-  {
-    label: "Video: Overview of the Analytics area (German)",
-    href: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
   },
 ]
 
