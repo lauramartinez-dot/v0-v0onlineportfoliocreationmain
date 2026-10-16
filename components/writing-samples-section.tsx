@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-// Help center articles and how-to videos written for admins who configure
+// Help Center articles and how-to videos written for admins who configure
 // Personio ("Medium"). Videos are listed alongside the articles.
 const adminHelpCenters = [
   {
@@ -33,9 +33,17 @@ const adminHelpCenters = [
     label: "Video: Overview of permissions and employee roles (German)",
     href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
+  {
+    label: "Video: Overview of the Analytics area (English)",
+    href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
+  },
+  {
+    label: "Video: Overview of the Analytics area (German)",
+    href: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
+  },
 ]
 
-// Help center articles written for everyday employees who just use the UI ("Low").
+// Help Center articles written for everyday employees who just use the UI ("Low").
 const employeeHelpCenters = [
   {
     label: "Log in and explore your new Personio account",
@@ -44,18 +52,6 @@ const employeeHelpCenters = [
   {
     label: "Troubleshoot issues with report creation as a Supervisor",
     href: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
-  },
-]
-
-// How-to videos for everyday users, published in English and German ("Low").
-const employeeVideos = [
-  {
-    label: "Overview of the Analytics area (English)",
-    href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
-  },
-  {
-    label: "Overview of the Analytics area (German)",
-    href: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
   },
 ]
 
@@ -121,9 +117,9 @@ const audiences: Audience[] = [
       "People with some technical background, usually gained on the job, who set up the software or help others set it up. They don\u2019t write code.",
     contentTypes: [
       {
-        title: "Implementation help center",
+        title: "Implementation Help Center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article and video guide for implementation",
+        alt: "Preview of a Personio Help Center article and video guide for implementation",
         links: adminHelpCenters,
       },
       {
@@ -147,16 +143,10 @@ const audiences: Audience[] = [
       "People with no technical background who use the software every day, or who read about technology in the news. Plain words, no jargon.",
     contentTypes: [
       {
-        title: "Everyday users help center",
+        title: "Everyday users Help Center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article for everyday users",
+        alt: "Preview of a Personio Help Center article for everyday users",
         links: employeeHelpCenters,
-      },
-      {
-        title: "Everyday users videos",
-        image: "/sample-videos.png",
-        alt: "Preview of a how-to video guide for everyday users",
-        links: employeeVideos,
       },
       {
         title: "Tech media stories",
