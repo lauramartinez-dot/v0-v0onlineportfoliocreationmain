@@ -10,16 +10,11 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-// Help center examples surfaced at the top of the "Low" dialog — specific
-// Personio articles written for everyday employees.
-const helpCenters = [
+// Help center articles written for admins who configure Personio ("Medium").
+const adminHelpCenters = [
   {
     label: "Overview of permissions and employee roles",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-  },
-  {
-    label: "Summary of the homepage cards",
-    href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
   },
   {
     label: "Grant permissions for everyday tasks",
@@ -27,8 +22,16 @@ const helpCenters = [
   },
 ]
 
-// Personio how-to videos, published in English and German.
-const videos = [
+// Help center articles written for everyday employees who just use the UI ("Low").
+const employeeHelpCenters = [
+  {
+    label: "Summary of the homepage cards",
+    href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
+  },
+]
+
+// How-to videos for admins, published in English and German ("Medium").
+const adminVideos = [
   {
     label: "Overview of permissions and employee roles (English)",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
@@ -37,6 +40,10 @@ const videos = [
     label: "Overview of permissions and employee roles (German)",
     href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
+]
+
+// How-to videos for everyday users, published in English and German ("Low").
+const employeeVideos = [
   {
     label: "Overview of the Analytics area (English)",
     href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
@@ -104,10 +111,22 @@ const audiences: Audience[] = [
   },
   {
     level: "Medium",
-    audience: ["Consultants", "Implementation"],
+    audience: ["Admins", "Consultants", "Implementation"],
     assumes:
-      "Readers with some technical background, usually gained on the job, who guide others through integrating the software into their systems, but don\u2019t write code.",
+      "Readers with some technical background, usually gained on the job, who either configure the software themselves or guide others through doing so. However, they do not write code.",
     contentTypes: [
+      {
+        title: "Admin help center",
+        image: "/sample-help-center.png",
+        alt: "Preview of a Personio help center article for admins",
+        links: adminHelpCenters,
+      },
+      {
+        title: "Admin videos",
+        image: "/sample-videos.png",
+        alt: "Preview of a how-to video guide for admins",
+        links: adminVideos,
+      },
       {
         title: "Consultant manuals",
         image: "/sample-api-explainer.png",
@@ -126,19 +145,19 @@ const audiences: Audience[] = [
     level: "Low",
     audience: ["Everyday users", "Media readers"],
     assumes:
-      "Readers with no technical background who set up and use the software day to day, or who read about tech in the media. Plain words, no jargon.",
+      "Readers with no technical background who simply use the software through its interface day to day, or who read about technology in the media. Plain words, no jargon.",
     contentTypes: [
       {
         title: "Help center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article",
-        links: helpCenters,
+        alt: "Preview of a Personio help center article for employees",
+        links: employeeHelpCenters,
       },
       {
         title: "Videos",
         image: "/sample-videos.png",
-        alt: "Preview of a how-to video guide",
-        links: videos,
+        alt: "Preview of a how-to video guide for employees",
+        links: employeeVideos,
       },
       {
         title: "Technology stories",
