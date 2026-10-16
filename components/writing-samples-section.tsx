@@ -139,19 +139,19 @@ const audiences: Audience[] = [
       "People with no technical background who use the software every day, or who read about technology in the news. Plain words, no jargon.",
     contentTypes: [
       {
-        title: "Help center",
+        title: "Everyday users help center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article for employees",
+        alt: "Preview of a Personio help center article for everyday users",
         links: employeeHelpCenters,
       },
       {
-        title: "Videos",
+        title: "Everyday users videos",
         image: "/sample-videos.png",
-        alt: "Preview of a how-to video guide for employees",
+        alt: "Preview of a how-to video guide for everyday users",
         links: employeeVideos,
       },
       {
-        title: "Technology stories",
+        title: "Tech media stories",
         image: "/sample-tech-stories.png",
         alt: "Preview of a technology story published in the media",
         links: mediaArticles,
