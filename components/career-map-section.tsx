@@ -1251,6 +1251,7 @@ export default function CareerMapSection() {
           {/* OMP Company Card */}
           <CompanyCard
             logo="/omp-wordmark.png"
+            logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
             role="Senior Technical Writer"
             years="2026 - Present"
