@@ -10,40 +10,36 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-// Help center examples surfaced at the top of the "Low" dialog — specific
-// Personio articles written for everyday employees.
-const helpCenters = [
+// Help Center articles and how-to videos written for admins who configure
+// Personio ("Medium"). Videos are listed alongside the articles (English only).
+const adminHelpCenters = [
   {
     label: "Overview of permissions and employee roles",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    label: "Grant permissions for everyday tasks",
+    href: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
   },
   {
     label: "Summary of the homepage cards",
     href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
   },
   {
-    label: "Grant permissions for everyday tasks",
-    href: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
-  },
-]
-
-// Personio how-to videos, published in English and German.
-const videos = [
-  {
-    label: "Overview of permissions and employee roles (English)",
+    label: "Video: Overview of permissions and employee roles",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
   {
-    label: "Overview of permissions and employee roles (German)",
-    href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-  },
-  {
-    label: "Overview of the Analytics area (English)",
+    label: "Video: Overview of the Analytics area",
     href: "https://support.personio.de/hc/en-us/articles/15717723889437-Overview-of-the-Analytics-area",
   },
+]
+
+// Help Center articles written for everyday employees who just use the UI ("Low").
+const employeeHelpCenters = [
   {
-    label: "Overview of the Analytics area (German)",
-    href: "https://support.personio.de/hc/de/articles/15717723889437-%C3%9Cberblick-%C3%BCber-den-Bereich-Analysen",
+    label: "Log in and explore your new Personio account",
+    href: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
   },
 ]
 
@@ -92,7 +88,7 @@ const audiences: Audience[] = [
     level: "High",
     audience: ["Developers", "System architects"],
     assumes:
-      "Readers with a technical background who write the code, build the integrations, and keep them running. They want exact, complete technical detail.",
+      "People with a technical background who build the software and the systems around it, and keep them running. They write code and want exact, complete technical detail.",
     contentTypes: [
       {
         title: "API developer portal",
@@ -106,10 +102,16 @@ const audiences: Audience[] = [
     level: "Medium",
     audience: ["Consultants", "Implementation"],
     assumes:
-      "Readers with some technical background, usually gained on the job, who guide others through integrating the software into their systems, but don\u2019t write code.",
+      "People with some technical background, usually gained on the job, who set up the software or help others set it up. They don\u2019t write code.",
     contentTypes: [
       {
-        title: "Consultant manuals",
+        title: "Implementation Help Center",
+        image: "/sample-help-center-admin.png",
+        alt: "Preview of a Personio Help Center article and video guide for implementation",
+        links: adminHelpCenters,
+      },
+      {
+        title: "Implementation manuals",
         image: "/sample-api-explainer.png",
         alt: "Preview of a software user manual",
         customSample: true,
@@ -126,22 +128,16 @@ const audiences: Audience[] = [
     level: "Low",
     audience: ["Everyday users", "Media readers"],
     assumes:
-      "Readers with no technical background who set up and use the software day to day, or who read about tech in the media. Plain words, no jargon.",
+      "People with no technical background who use the software every day, or who read about technology in the news. Plain words, no jargon.",
     contentTypes: [
       {
-        title: "Help center",
+        title: "Everyday users Help Center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article",
-        links: helpCenters,
+        alt: "Preview of a Personio Help Center article for everyday users",
+        links: employeeHelpCenters,
       },
       {
-        title: "Videos",
-        image: "/sample-videos.png",
-        alt: "Preview of a how-to video guide",
-        links: videos,
-      },
-      {
-        title: "Technology stories",
+        title: "Tech media stories",
         image: "/sample-tech-stories.png",
         alt: "Preview of a technology story published in the media",
         links: mediaArticles,
@@ -307,7 +303,7 @@ export function WritingSamplesSection() {
                           {type.links && (
                             <div className="grid gap-3">
                               {type.links.map((link) => (
-                                <LinkBox key={link.href} label={link.label} href={link.href} />
+                                <LinkBox key={link.label} label={link.label} href={link.href} />
                               ))}
                             </div>
                           )}

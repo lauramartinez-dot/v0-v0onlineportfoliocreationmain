@@ -1073,7 +1073,7 @@ function CompanyCard({
   skills,
   tools,
   duration,
-  logoClassName = "px-5 py-3 md:px-6 md:py-4",
+  logoClassName = "px-3 py-2 md:px-4 md:py-3",
 }: {
   children?: React.ReactNode
   logo: string
@@ -1109,8 +1109,8 @@ function CompanyCard({
         }}
       >
         <div className="flex items-center gap-5 md:gap-6">
-          <div className="relative w-24 h-12 md:w-28 md:h-14 rounded-xl overflow-hidden bg-white/95 shrink-0">
-            <Image src={logo} alt={`${name} logo`} fill sizes="144px" className={`object-contain ${logoClassName}`} />
+          <div className="relative w-32 h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white/95 shrink-0">
+            <Image src={logo} alt={`${name} logo`} fill sizes="176px" className={`object-contain ${logoClassName}`} />
           </div>
           <div className="flex-1 min-w-0">
             <h3 className="sr-only">{name}</h3>
@@ -1251,6 +1251,7 @@ export default function CareerMapSection() {
           {/* OMP Company Card */}
           <CompanyCard
             logo="/omp-wordmark.png"
+            logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
             role="Senior Technical Writer"
             years="2026 - Present"
@@ -1283,7 +1284,7 @@ export default function CareerMapSection() {
           {/* Personio Company Card */}
           <CompanyCard
             logo="/personio-wordmark.png"
-          logoClassName="px-3 py-2 md:px-4 md:py-3"
+            logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Senior Technical Writer"
             years="2023 - 2025"
@@ -1315,7 +1316,7 @@ export default function CareerMapSection() {
           {/* Personio - Technical Writer (pre-senior) Company Card */}
           <CompanyCard
             logo="/personio-wordmark.png"
-          logoClassName="px-3 py-2 md:px-4 md:py-3"
+            logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Technical Writer"
             years="2021 - 2023"
