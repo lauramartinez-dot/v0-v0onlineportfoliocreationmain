@@ -22,6 +22,10 @@ const adminHelpCenters = [
     href: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
   },
   {
+    label: "Summary of the homepage cards",
+    href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
+  },
+  {
     label: "Video: Overview of permissions and employee roles (English)",
     href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
@@ -34,8 +38,12 @@ const adminHelpCenters = [
 // Help center articles written for everyday employees who just use the UI ("Low").
 const employeeHelpCenters = [
   {
-    label: "Summary of the homepage cards",
-    href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
+    label: "Log in and explore your new Personio account",
+    href: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
+  },
+  {
+    label: "Troubleshoot issues with report creation as a Supervisor",
+    href: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
   },
 ]
 
