@@ -10,7 +10,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
-// Help center articles written for admins who configure Personio ("Medium").
+// Help center articles and how-to videos written for admins who configure
+// Personio ("Medium"). Videos are listed alongside the articles.
 const adminHelpCenters = [
   {
     label: "Overview of permissions and employee roles",
@@ -20,6 +21,14 @@ const adminHelpCenters = [
     label: "Grant permissions for everyday tasks",
     href: "https://support.personio.de/hc/en-us/articles/28054432299549-Grant-permissions-for-everyday-tasks-in-Personio",
   },
+  {
+    label: "Video: Overview of permissions and employee roles (English)",
+    href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
+  {
+    label: "Video: Overview of permissions and employee roles (German)",
+    href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
+  },
 ]
 
 // Help center articles written for everyday employees who just use the UI ("Low").
@@ -27,18 +36,6 @@ const employeeHelpCenters = [
   {
     label: "Summary of the homepage cards",
     href: "https://support.personio.de/hc/en-us/articles/360001268369-Summary-of-the-homepage-cards",
-  },
-]
-
-// How-to videos for admins, published in English and German ("Medium").
-const adminVideos = [
-  {
-    label: "Overview of permissions and employee roles (English)",
-    href: "https://support.personio.de/hc/en-us/articles/29339334542109-Overview-of-permissions-and-employee-roles",
-  },
-  {
-    label: "Overview of permissions and employee roles (German)",
-    href: "https://support.personio.de/hc/de/articles/29339334542109-Overview-of-permissions-and-employee-roles",
   },
 ]
 
@@ -118,17 +115,11 @@ const audiences: Audience[] = [
       {
         title: "Admin help center",
         image: "/sample-help-center.png",
-        alt: "Preview of a Personio help center article for admins",
+        alt: "Preview of a Personio help center article and video guide for admins",
         links: adminHelpCenters,
       },
       {
-        title: "Admin videos",
-        image: "/sample-videos.png",
-        alt: "Preview of a how-to video guide for admins",
-        links: adminVideos,
-      },
-      {
-        title: "Consultant manuals",
+        title: "Implementation manuals",
         image: "/sample-api-explainer.png",
         alt: "Preview of a software user manual",
         customSample: true,
@@ -326,7 +317,7 @@ export function WritingSamplesSection() {
                           {type.links && (
                             <div className="grid gap-3">
                               {type.links.map((link) => (
-                                <LinkBox key={link.href} label={link.label} href={link.href} />
+                                <LinkBox key={link.label} label={link.label} href={link.href} />
                               ))}
                             </div>
                           )}
