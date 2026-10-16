@@ -49,10 +49,6 @@ const employeeHelpCenters = [
     label: "Log in and explore your new Personio account",
     href: "https://support.personio.de/hc/en-us/articles/209984985-Log-in-and-explore-your-new-Personio-account",
   },
-  {
-    label: "Troubleshoot issues with report creation as a Supervisor",
-    href: "https://support.personio.de/hc/en-us/articles/30194829123613-Troubleshoot-issues-with-report-creation-as-a-Supervisor",
-  },
 ]
 
 // Technology stories written for a general audience.
@@ -118,7 +114,7 @@ const audiences: Audience[] = [
     contentTypes: [
       {
         title: "Implementation Help Center",
-        image: "/sample-help-center.png",
+        image: "/sample-help-center-admin.png",
         alt: "Preview of a Personio Help Center article and video guide for implementation",
         links: adminHelpCenters,
       },
