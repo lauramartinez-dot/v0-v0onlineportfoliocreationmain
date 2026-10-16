@@ -1,6 +1,7 @@
 "use client"
 
 import type { ReactNode } from "react"
+import Image from "next/image"
 import { ArrowUpRight, Minus, Users, Sparkles, Eye, LineChart, Flag, type LucideIcon } from "lucide-react"
 import {
   Dialog,
@@ -15,9 +16,36 @@ function Em({ children }: { children: ReactNode }) {
   return <>{children}</>
 }
 
+type Source = "Personio" | "This portfolio"
+
 type Proof = {
   title: string
-  where: "Personio" | "This portfolio"
+  where: Source
+}
+
+function SourceBadge({ source }: { source: Source }) {
+  if (source === "Personio") {
+    return (
+      <div className="relative h-12 w-28 shrink-0 overflow-hidden rounded-xl bg-white/95">
+        <Image
+          src="/personio-wordmark.png"
+          alt="Personio logo"
+          fill
+          sizes="112px"
+          className="object-contain px-2 py-1.5"
+        />
+      </div>
+    )
+  }
+  return (
+    <div
+      className="flex h-12 w-28 shrink-0 items-center justify-center gap-1.5 rounded-xl bg-white/95 text-sm font-semibold text-primary"
+      aria-label="This portfolio"
+    >
+      <Sparkles className="size-4" aria-hidden="true" />
+      <span>This site</span>
+    </div>
+  )
 }
 
 type Principle = {
@@ -237,9 +265,7 @@ export function WritingPrinciplesSection() {
                           key={item.title}
                           className="flex flex-col gap-4 rounded-3xl border border-primary/40 bg-primary/15 p-6 shadow-[0_0_40px_-12px] shadow-primary/40 transition-colors hover:bg-primary/20 md:flex-row md:items-start md:gap-6 md:p-7"
                         >
-                          <span className="w-fit shrink-0 rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-foreground md:mt-1">
-                            {item.where}
-                          </span>
+                          <SourceBadge source={item.where} />
                           <p className="text-lg font-semibold leading-snug text-white text-pretty md:text-xl">{item.title}</p>
                         </li>
                       ))}
