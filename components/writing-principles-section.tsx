@@ -17,7 +17,6 @@ function Em({ children }: { children: ReactNode }) {
 
 type Proof = {
   title: string
-  detail: string
   where: "Personio" | "This portfolio"
 }
 
@@ -41,21 +40,19 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Deprecated 100+ outdated Help Center pages",
-        detail:
-          "Designed a content audit that let the team retire over 100 articles nobody needed anymore, making what was left easier to find.",
         where: "Personio",
       },
       {
         title: "Dropped 20% of low-impact tasks",
-        detail:
-          "Built a prioritisation framework that gave the team permission to stop doing work that wasn\u2019t moving the needle.",
         where: "Personio",
       },
       {
         title: "Wrote Personio\u2019s first documentation style guides",
-        detail:
-          "Set the standards for 10 writers, including what to leave out: no filler, no repetition, one idea per page.",
         where: "Personio",
+      },
+      {
+        title: "Kept this portfolio to what matters",
+        where: "This portfolio",
       },
     ],
   },
@@ -71,21 +68,19 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Tailored documentation to 5+ audiences",
-        detail:
-          "Wrote separate content for admins, HR managers, supervisors and employees, and supported role-based navigation so each group only saw what applied to them.",
         where: "Personio",
       },
       {
         title: "Built the Spanish documentation site from scratch",
-        detail:
-          "Stood up a complete Spanish-language site for a growing user base that wasn\u2019t being served by the English one.",
         where: "Personio",
       },
       {
         title: "Split writing samples into three technical tiers",
-        detail:
-          "The samples on this site are grouped by how technical the reader is, from developers down to people who read about tech in the news.",
         where: "This portfolio",
+      },
+      {
+        title: "Published how-to videos alongside articles",
+        where: "Personio",
       },
     ],
   },
@@ -101,21 +96,19 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Vibe-coded this entire portfolio",
-        detail:
-          "Every component on this site was built by prompting an AI coding agent. I never wrote the code by hand, but I wrote every word of the copy myself.",
         where: "This portfolio",
       },
       {
         title: "Built an AI agent that cut translation review time by 90%",
-        detail:
-          "A custom assistant for Spanish translation review, which turned a multi-hour task into a quick final check.",
         where: "Personio",
       },
       {
         title: "Created new pages in under 4 hours with Gen AI",
-        detail:
-          "Used ChatGPT, Claude and Cursor to draft and structure new documentation fast, while keeping the quality bar where it was.",
         where: "Personio",
+      },
+      {
+        title: "Wrote every word on this site by hand",
+        where: "This portfolio",
       },
     ],
   },
@@ -131,20 +124,18 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Cut a product area\u2019s support volume by over 50%",
-        detail:
-          "Used ticket data to find where users got stuck, then rewrote the documentation for those exact spots (Apr\u2013Sep 2025).",
         where: "Personio",
       },
       {
         title: "Sped up team reporting by 30%",
-        detail:
-          "Worked with Data Analysts to improve the Tableau dashboards the docs team relied on to track article performance.",
         where: "Personio",
       },
       {
         title: "Let data decide what to deprecate",
-        detail:
-          "The content audit and prioritisation framework both ran on usage numbers, not on which pages people felt attached to.",
+        where: "Personio",
+      },
+      {
+        title: "Tracked article performance in Tableau",
         where: "Personio",
       },
     ],
@@ -161,20 +152,18 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Conducted 20+ company-wide culture interviews",
-        detail:
-          "Selected as a Culture Champion to hear candidly from colleagues across the organisation and feed that back to leadership.",
         where: "Personio",
       },
       {
         title: "Co-founded Personio\u2019s first Women\u2019s Committee",
-        detail:
-          "Hosted open lunches on salary negotiation, assertive communication and investing, topics people usually keep to themselves.",
         where: "Personio",
       },
       {
         title: "Co-built the company-wide release process",
-        detail:
-          "Helped design how teams communicate what\u2019s shipping and when, so nobody downstream was surprised by a launch.",
+        where: "Personio",
+      },
+      {
+        title: "Mentored a peer to Senior in the open",
         where: "Personio",
       },
     ],
@@ -191,21 +180,19 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Grew a 3-writer team into a global team of 10",
-        detail:
-          "Joined as one of the first Technical Writers at ~300 people and built the function out across Germany, Ireland and Spain.",
         where: "Personio",
       },
       {
         title: "Became Personio\u2019s first Senior Technical Writer",
-        detail:
-          "First on the team to be promoted to Senior, then mentored a peer to become the second.",
         where: "Personio",
       },
       {
         title: "Grew documentation from 3 to 6 languages",
-        detail:
-          "Owned the vendor relationships and the day-to-day work of getting content translated, reviewed and published.",
         where: "Personio",
+      },
+      {
+        title: "Shipped this portfolio end to end",
+        where: "This portfolio",
       },
     ],
   },
@@ -253,7 +240,7 @@ export function WritingPrinciplesSection() {
                   </button>
                 </DialogTrigger>
 
-                <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-3xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-3xl sm:rounded-[1.75rem]">
+                <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-4xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-4xl sm:rounded-[1.75rem]">
                   <DialogHeader className="flex flex-col gap-4 space-y-0 border-b border-white/10 px-8 pt-10 pb-8 text-left md:px-12">
                     <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
                       <Icon className="h-6 w-6" />
@@ -268,19 +255,16 @@ export function WritingPrinciplesSection() {
 
                   <div className="flex flex-col gap-4 px-8 py-8 md:px-12 md:py-10">
                     <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/45">In practice</h3>
-                    <ol className="flex flex-col gap-4">
+                    <ol className="grid grid-cols-1 gap-5 sm:grid-cols-2">
                       {proof.map((item) => (
                         <li
                           key={item.title}
-                          className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+                          className="flex min-h-[180px] flex-col justify-between gap-6 rounded-3xl border border-primary/40 bg-primary/15 p-7 shadow-[0_0_40px_-12px] shadow-primary/40 transition-colors hover:bg-primary/20"
                         >
-                          <div className="flex flex-wrap items-start justify-between gap-3">
-                            <p className="text-lg font-semibold leading-snug text-white text-balance">{item.title}</p>
-                            <span className="shrink-0 rounded-full border border-primary/40 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
-                              {item.where}
-                            </span>
-                          </div>
-                          <p className="text-[15px] leading-relaxed text-white/60 text-pretty">{item.detail}</p>
+                          <p className="text-xl font-bold leading-snug text-white text-balance md:text-2xl">{item.title}</p>
+                          <span className="w-fit rounded-full bg-primary px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary-foreground">
+                            {item.where}
+                          </span>
                         </li>
                       ))}
                     </ol>
