@@ -1,5 +1,6 @@
 import Image from "next/image"
 import type { ReactNode } from "react"
+import { ArrowUpRight } from "lucide-react"
 import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
 import { AboutMeBoxes } from "@/components/about-me-boxes"
@@ -142,6 +143,10 @@ export function AboutMeIntro() {
           </p>
           <span className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" aria-hidden="true" />
         </div>
+        <p className="mx-auto -mt-4 flex max-w-xl items-center justify-center gap-2 text-center text-base text-white/60 text-pretty md:-mt-6 md:text-lg">
+          Click a card to take a look.
+          <ArrowUpRight className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+        </p>
         <AboutMeBoxes />
       </div>
     </StaggerReveal>
