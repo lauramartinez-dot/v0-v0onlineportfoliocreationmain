@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
-import { ArrowUpRight, Globe, Newspaper, Rocket, Telescope, type LucideIcon } from "lucide-react"
+import { Globe, Newspaper, Rocket, Telescope, type LucideIcon } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -187,12 +187,8 @@ export function AboutMeBoxes() {
                 <box.icon className="h-7 w-7" />
               </span>
               <span className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">{box.title}</span>
-              <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
-              <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
-                Take a look
-                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-              </span>
-            </button>
+                  <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
+                </button>
           </DialogTrigger>
 
           <DialogContent className="flex max-h-[94vh] w-[96vw] max-w-[1400px] flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-[1400px] sm:rounded-[1.75rem]">

@@ -1,11 +1,78 @@
+"use client"
+
 import type { ReactNode } from "react"
-import { Minus, Users, Sparkles, Eye, LineChart, Flag } from "lucide-react"
+import Image from "next/image"
+import { ArrowUpRight, Minus, Users, Sparkles, Eye, LineChart, Flag, type LucideIcon } from "lucide-react"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 function Em({ children }: { children: ReactNode }) {
   return <>{children}</>
 }
 
-const principles: { icon: typeof Minus; title: string; description: ReactNode }[] = [
+type Source = "Personio" | "OMP" | "This portfolio"
+
+// Dialogs show one tile per company, with that company's achievements stacked inside.
+// OMP first because it's the current role (its lines are written in present tense).
+const sourceOrder: Source[] = ["OMP", "Personio", "This portfolio"]
+
+function groupBySource(proof: Proof[]) {
+  return sourceOrder
+    .map((source) => ({ source, titles: proof.filter((p) => p.where === source).map((p) => p.title) }))
+    .filter((group) => group.titles.length > 0)
+}
+
+// OMP's mark is compact, so it gets more inner padding to sit visually level with Personio's wordmark.
+const sourceWordmarks: Partial<Record<Source, { src: string; padding: string }>> = {
+  Personio: { src: "/personio-wordmark.png", padding: "px-2 py-1.5" },
+  OMP: { src: "/omp-wordmark.png", padding: "px-5 py-3" },
+}
+
+type Proof = {
+  title: string
+  where: Source
+}
+
+function SourceBadge({ source }: { source: Source }) {
+  const wordmark = sourceWordmarks[source]
+  if (wordmark) {
+    return (
+      <div className="relative h-12 w-28 shrink-0 overflow-hidden rounded-xl bg-white/95">
+        <Image
+          src={wordmark.src}
+          alt={`${source} logo`}
+          fill
+          sizes="112px"
+          className={`object-contain ${wordmark.padding}`}
+        />
+      </div>
+    )
+  }
+  return (
+    <div
+      className="flex h-12 w-28 shrink-0 items-center justify-center gap-1.5 rounded-xl bg-white/95 text-sm font-semibold text-primary"
+      aria-label="This portfolio"
+    >
+      <Sparkles className="size-4" aria-hidden="true" />
+      <span>This site</span>
+    </div>
+  )
+}
+
+type Principle = {
+  icon: LucideIcon
+  title: string
+  description: ReactNode
+  proof: Proof[]
+}
+
+const principles: Principle[] = [
   {
     icon: Minus,
     title: "Less is more",
@@ -15,16 +82,40 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
         only what matters is left. I write as if every extra sentence cost me 50 euros.
       </>
     ),
+    proof: [
+      {
+        title: "Designed a content audit that let the team deprecate 100+ outdated pages",
+        where: "Personio",
+      },
+      {
+        title: "Kept this portfolio to five sections, with no decorative stats or filler",
+        where: "This portfolio",
+      },
+    ],
   },
   {
     icon: Users,
-    title: "Who is reading",
+    title: "User-centered",
     description: (
       <>
         Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
         up, do they stay inside the app or design the systems around it? <Em>How technical</Em> are they, really?
       </>
     ),
+    proof: [
+      {
+        title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
+        where: "Personio",
+      },
+      {
+        title: "Helped build role-based navigation so 5+ user groups each land on their own path",
+        where: "Personio",
+      },
+      {
+        title: "Tailoring API documentation to two audiences, developers and semi-technical consultants",
+        where: "OMP",
+      },
+    ],
   },
   {
     icon: Sparkles,
@@ -35,6 +126,24 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
         won&apos;t find AI slop here, or a single {"\u201CI work at the intersection of\u2026\u201D"}
       </>
     ),
+    proof: [
+      {
+        title: "Vibe-coded 100% of this portfolio with v0, and wrote 100% of the words by hand",
+        where: "This portfolio",
+      },
+      {
+        title: "Built an AI agent that cut Spanish translation review time by 90%",
+        where: "Personio",
+      },
+      {
+        title: "Used Gen AI to take new documentation pages from brief to published in under 4 hours",
+        where: "Personio",
+      },
+      {
+        title: "Using Copilot and Claude daily to automate repetitive, time-consuming writing tasks",
+        where: "OMP",
+      },
+    ],
   },
   {
     icon: LineChart,
@@ -45,16 +154,44 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
         data shows a page isn&apos;t clear enough, I rewrite it, even when I was sure I&apos;d nailed it.
       </>
     ),
+    proof: [
+      {
+        title: "Designed a prioritisation framework that let the team drop 20% of low-impact tasks",
+        where: "Personio",
+      },
+      {
+        title: "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
+        where: "Personio",
+      },
+      {
+        title: "Rewrote a product area\u2019s documentation and cut its support tickets by 50%",
+        where: "Personio",
+      },
+      {
+        title: "Asking the end users of our documentation for feedback regularly, a first for the team",
+        where: "OMP",
+      },
+    ],
   },
   {
     icon: Eye,
-    title: "Transparency",
+    title: "Radical candor",
     description: (
       <>
         I&apos;m big on transparency and candid feedback, so you&apos;ll <Em>never have to guess</Em>. You&apos;ll
         always know where my work stands, and if I have an issue, you&apos;ll hear it from me first.
       </>
     ),
+    proof: [
+      {
+        title: "Mentored a peer to Senior Technical Writer through regular, candid feedback",
+        where: "Personio",
+      },
+      {
+        title: "Became a culture champion and gave candid feedback on candidates in 20+ hiring interviews",
+        where: "Personio",
+      },
+    ],
   },
   {
     icon: Flag,
@@ -65,6 +202,28 @@ const principles: { icon: typeof Minus; title: string; description: ReactNode }[
         but nothing gets dropped just because nobody&apos;s chasing me.
       </>
     ),
+    proof: [
+      {
+        title: "Pioneering the move to docs-as-code, with documentation fully inside the development workflow",
+        where: "OMP",
+      },
+      {
+        title: "Helped grow the documentation team from 3 writers to a global team of 10+",
+        where: "Personio",
+      },
+      {
+        title: "Led the expansion of documentation from 3 languages to 6",
+        where: "Personio",
+      },
+      {
+        title: "Created Personio\u2019s first-ever documentation style guides",
+        where: "Personio",
+      },
+      {
+        title: "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
+        where: "Personio",
+      },
+    ],
   },
 ]
 
@@ -79,26 +238,75 @@ export function WritingPrinciplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+
+          <p className="mx-auto mt-8 flex max-w-xl items-center justify-center gap-2 text-base text-white/60 text-pretty md:text-lg">
+            Click a principle to see how I&apos;ve put it into practice.
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+          </p>
         </div>
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
-          {principles.map(({ icon: Icon, title, description }) => (
-            <li
-              key={title}
-              className="surface-card group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]"
-            >
-              {/* Icon badge - subtle primary-tinted chip, consistent across every card */}
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
-                <Icon className="h-7 w-7" />
-              </span>
+          {principles.map(({ icon: Icon, title, description, proof }) => (
+            <li key={title} className="flex [&>*]:flex-1">
+              <Dialog>
+                <DialogTrigger asChild>
+                  <button
+                    type="button"
+                    className="surface-card group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  >
+                    {/* Icon badge - subtle primary-tinted chip, consistent across every card */}
+                    <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
+                      <Icon className="h-7 w-7" />
+                    </span>
 
-              <h3 className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
-                {title}
-              </h3>
+                    <span className="text-2xl md:text-3xl font-bold leading-tight text-white text-balance">
+                      {title}
+                    </span>
 
-              <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
-                {description}
-              </p>
+                    <span className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
+                      {description}
+                    </span>
+                  </button>
+                </DialogTrigger>
+
+                <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-3xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-3xl sm:rounded-[1.75rem]">
+                  <DialogHeader className="flex flex-col gap-4 space-y-0 border-b border-white/10 px-8 pt-10 pb-8 text-left md:px-12">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 text-primary ring-1 ring-primary/20">
+                      <Icon className="h-6 w-6" />
+                    </span>
+                    <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
+                      {title}
+                    </DialogTitle>
+                    <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty">
+                      {description}
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  <div className="flex flex-col gap-4 px-8 py-8 md:px-12 md:py-10">
+                    <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/45">In practice</h3>
+                    <ul className="flex flex-col gap-4">
+                      {groupBySource(proof).map((group) => (
+                        <li
+                          key={group.source}
+                          className="flex flex-col gap-5 rounded-3xl border border-primary/40 bg-primary/15 p-6 shadow-[0_0_40px_-12px] shadow-primary/40 transition-colors hover:bg-primary/20 md:flex-row md:items-start md:gap-6 md:p-7"
+                        >
+                          <SourceBadge source={group.source} />
+                          <ul className="flex flex-col divide-y divide-white/10">
+                            {group.titles.map((title) => (
+                              <li
+                                key={title}
+                                className="py-3 text-lg font-semibold leading-snug text-white text-pretty first:pt-0 last:pb-0 md:text-xl"
+                              >
+                                {title}
+                              </li>
+                            ))}
+                          </ul>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </DialogContent>
+              </Dialog>
             </li>
           ))}
         </ul>

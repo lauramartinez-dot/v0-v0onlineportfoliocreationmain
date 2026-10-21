@@ -14,10 +14,10 @@ export default function Home() {
       <HeroSection />
       {/* About me */}
       <HighlightsSection />
-      {/* Writing principles */}
-      <WritingPrinciplesSection />
       {/* Work experience */}
       <CareerMapSection />
+      {/* Writing principles */}
+      <WritingPrinciplesSection />
       {/* Writing samples */}
       <WritingSamplesSection />
       {/* Personal projects */}

@@ -1152,21 +1152,29 @@ function CompanyCard({
             <div
               className={
                 skills && skills.length > 0
-                  ? "grid grid-cols-1 items-start gap-10 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-x-16"
+                  ? "grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-16"
                   : "flex flex-col gap-10"
               }
             >
               {description && (
-                <p className="text-base md:text-[17px] leading-relaxed text-foreground/60 text-pretty lg:col-start-1 lg:row-start-1 [&_strong]:font-semibold [&_strong]:text-foreground">
-                  {description}
-                </p>
-              )}
-              {children && <div className="lg:col-start-1 lg:row-start-2">{children}</div>}
-              {skills && skills.length > 0 && (
-                <div className={`lg:col-start-2 ${children ? "lg:row-start-2" : "lg:row-start-1"}`}>
-                  <SkillsPanel skills={skills} />
+                <div className="flex flex-col gap-6">
+                  <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
+                    {description}
+                  </p>
+                  <p className="text-base leading-relaxed text-foreground/55 md:text-[17px]">
+                    You&apos;ll find my achievements from this role under{" "}
+                    <a
+                      href="#writing-principles"
+                      className="font-semibold text-primary underline-offset-4 hover:underline"
+                    >
+                      Core principles
+                    </a>
+                    .
+                  </p>
                 </div>
               )}
+              {children}
+              {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
             </div>
             {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
@@ -1301,17 +1309,7 @@ export default function CareerMapSection() {
                 off the ground, and speaking up for the docs team in leadership meetings.
               </>
             }
-          >
-            {/* Top achievements */}
-            <AchievementsPanel
-              items={[
-                "Designed a prioritization framework that let the team drop 20% of low-impact tasks",
-                "Designed a content audit that let the team deprecate 100+ outdated pages",
-                "Proposed Tableau dashboard improvements that sped up team reporting by 30%",
-                "Built an AI agent that cut Spanish translation review time by 90%",
-              ]}
-            />
-          </CompanyCard>
+          />
 
           {/* Personio - Technical Writer (pre-senior) Company Card */}
           <CompanyCard
@@ -1333,26 +1331,10 @@ export default function CareerMapSection() {
                 unicorns ($8.5B).
               </>
             }
-          >
-            {/* Top achievements */}
-            <AchievementsPanel
-              items={[
-                "Grew a local 3-writer documentation team into a global team of 10",
-                "Grew documentation from 3 to 6 languages",
-                "Created Personio's first-ever documentation style guides",
-                "Co-founded Personio's first Women's Committee",
-              ]}
-            />
-          </CompanyCard>
+          />
         </div>
       </section>
     </>
-  )
-}
-
-function PanelLabel({ children }: { children: React.ReactNode }) {
-  return (
-    <h4 className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-foreground/45">{children}</h4>
   )
 }
 
@@ -1383,25 +1365,6 @@ function SkillsPanel({ skills }: { skills: string[] }) {
           <li key={skill} className="flex items-center justify-between gap-4 py-3 first:pt-0 last:pb-0">
             <span className="text-lg font-bold leading-snug text-foreground md:text-xl">{skill}</span>
             <ChevronUp className="h-5 w-5 shrink-0 text-primary" strokeWidth={2.5} aria-hidden="true" />
-          </li>
-        ))}
-      </ul>
-    </div>
-  )
-}
-
-function AchievementsPanel({ items }: { items: string[] }) {
-  return (
-    <div>
-      <PanelLabel>Top achievements</PanelLabel>
-      <ul className="flex flex-col gap-3">
-        {items.map((item) => (
-          <li
-            key={item}
-            className="flex items-start gap-3 text-base md:text-[17px] leading-relaxed text-foreground/75 text-pretty"
-          >
-            <span aria-hidden="true" className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-            {item}
           </li>
         ))}
       </ul>
