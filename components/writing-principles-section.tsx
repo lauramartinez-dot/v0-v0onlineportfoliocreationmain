@@ -71,10 +71,6 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Rewrote a product area\u2019s documentation and cut its support tickets by 50%",
-        where: "Personio",
-      },
-      {
         title: "Kept this portfolio to five sections, with no decorative stats or filler",
         where: "This portfolio",
       },
@@ -82,7 +78,7 @@ const principles: Principle[] = [
   },
   {
     icon: Users,
-    title: "Who is reading",
+    title: "User research",
     description: (
       <>
         Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
@@ -92,10 +88,6 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
-        where: "Personio",
-      },
-      {
-        title: "Built the Spanish documentation library from scratch, 150+ translations a year",
         where: "Personio",
       },
       {
@@ -147,7 +139,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Tied documentation goals to product adoption and retention metrics with leadership",
+        title: "Rewrote a product area\u2019s documentation and cut its support tickets by 50%",
         where: "Personio",
       },
     ],
@@ -162,14 +154,6 @@ const principles: Principle[] = [
       </>
     ),
     proof: [
-      {
-        title: "Conducted 20+ company-wide culture interviews and reported the findings unfiltered",
-        where: "Personio",
-      },
-      {
-        title: "Co-designed the company-wide release process so no team is surprised by a launch",
-        where: "Personio",
-      },
       {
         title: "Mentored a peer to Senior Technical Writer through regular candid feedback",
         where: "Personio",
