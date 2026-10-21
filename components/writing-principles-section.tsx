@@ -28,9 +28,10 @@ function groupBySource(proof: Proof[]) {
     .filter((group) => group.titles.length > 0)
 }
 
-const sourceWordmarks: Partial<Record<Source, string>> = {
-  Personio: "/personio-wordmark.png",
-  OMP: "/omp-wordmark.png",
+// OMP's mark is compact, so it gets more inner padding to sit visually level with Personio's wordmark.
+const sourceWordmarks: Partial<Record<Source, { src: string; padding: string }>> = {
+  Personio: { src: "/personio-wordmark.png", padding: "px-2 py-1.5" },
+  OMP: { src: "/omp-wordmark.png", padding: "px-5 py-3" },
 }
 
 type Proof = {
@@ -44,11 +45,11 @@ function SourceBadge({ source }: { source: Source }) {
     return (
       <div className="relative h-12 w-28 shrink-0 overflow-hidden rounded-xl bg-white/95">
         <Image
-          src={wordmark}
+          src={wordmark.src}
           alt={`${source} logo`}
           fill
           sizes="112px"
-          className="object-contain px-2 py-1.5"
+          className={`object-contain ${wordmark.padding}`}
         />
       </div>
     )
@@ -139,7 +140,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Using Copilot daily to automate repetitive, time-consuming writing tasks, while I review and refine the output",
+        title: "Using Copilot and Claude daily to automate repetitive, time-consuming writing tasks",
         where: "OMP",
       },
     ],
@@ -167,7 +168,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Introducing the team\u2019s first user feedback loop, so every doc decision starts from reader data",
+        title: "Asking the end users of our documentation for feedback regularly, a first for the team",
         where: "OMP",
       },
     ],
@@ -202,6 +203,10 @@ const principles: Principle[] = [
       </>
     ),
     proof: [
+      {
+        title: "Pioneering the move to docs-as-code, with documentation fully inside the development workflow",
+        where: "OMP",
+      },
       {
         title: "Helped grow the documentation team from 3 writers to a global team of 10+",
         where: "Personio",
