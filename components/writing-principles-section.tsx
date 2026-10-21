@@ -19,7 +19,8 @@ function Em({ children }: { children: ReactNode }) {
 type Source = "Personio" | "OMP" | "This portfolio"
 
 // Dialogs show one tile per company, with that company's achievements stacked inside.
-const sourceOrder: Source[] = ["Personio", "OMP", "This portfolio"]
+// OMP first because it's the current role (its lines are written in present tense).
+const sourceOrder: Source[] = ["OMP", "Personio", "This portfolio"]
 
 function groupBySource(proof: Proof[]) {
   return sourceOrder
@@ -93,7 +94,7 @@ const principles: Principle[] = [
   },
   {
     icon: Users,
-    title: "User research",
+    title: "User-centered",
     description: (
       <>
         Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
@@ -110,7 +111,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Tailored API documentation to two audiences, developers and semi-technical consultants",
+        title: "Tailoring API documentation to two audiences, developers and semi-technical consultants",
         where: "OMP",
       },
     ],
@@ -138,7 +139,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Built Copilot agents that automate 3 routine writing tasks, so my job became reviewing the output",
+        title: "Using Copilot daily to automate repetitive, time-consuming writing tasks, while I review and refine the output",
         where: "OMP",
       },
     ],
@@ -166,7 +167,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Introduced the team\u2019s first user feedback loop, so every doc decision started from reader data",
+        title: "Introducing the team\u2019s first user feedback loop, so every doc decision starts from reader data",
         where: "OMP",
       },
     ],
@@ -210,7 +211,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Co-founded Personio\u2019s first Women\u2019s Committee, now 100+ members, and organised 10+ events",
+        title: "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
         where: "Personio",
       },
     ],
