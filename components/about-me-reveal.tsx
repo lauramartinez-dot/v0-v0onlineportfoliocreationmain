@@ -115,8 +115,8 @@ export function AboutMeIntro() {
 
       <div className="flex flex-col gap-10 md:gap-12">
         <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
-          I still write about technology. Engineering. Software. In plain words. While keeping it accurate. And
-          somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along.
+          I still write about technology and software. And I still keep it accurate, yet somehow plain and clear
+          enough that you don&apos;t need a PhD or a CS degree to follow along.
         </p>
         <div className="grid grid-cols-2 gap-4 md:gap-8">
           <ArticleCard
@@ -156,10 +156,10 @@ export function AboutMeStatements() {
         <span className="font-bold text-primary">the job hasn&apos;t changed that much.</span>
       </FadeLine>
       <FadeLine index={1} className="text-white/55">
-        I still write about technology. Engineering. Software.
-      </FadeLine>
-      <FadeLine index={2} className="text-white/55">
-        In plain words. While keeping it accurate. And somehow clear enough that you don&apos;t need a PhD or a CS degree to follow along:
+            I still write about technology and software.
+          </FadeLine>
+          <FadeLine index={2} className="text-white/55">
+            And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS degree to follow along:
       </FadeLine>
     </div>
   )
