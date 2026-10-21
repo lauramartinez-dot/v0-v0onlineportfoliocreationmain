@@ -215,7 +215,7 @@ export function WritingPrinciplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
           <p className="mx-auto mt-8 flex max-w-xl items-center justify-center gap-2 text-base text-white/60 text-pretty md:text-lg">
-            Click on a principle to see the achievements behind it
+            Click a principle to see real examples from my work.
             <ArrowUpRight className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
           </p>
         </div>
