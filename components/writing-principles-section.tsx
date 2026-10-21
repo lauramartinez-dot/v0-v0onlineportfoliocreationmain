@@ -71,6 +71,10 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
+        title: "Wrote Personio\u2019s first documentation style guides, setting one standard for 10 writers",
+        where: "Personio",
+      },
+      {
         title: "Kept this portfolio to five sections, with no decorative stats or filler",
         where: "This portfolio",
       },
@@ -91,8 +95,12 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Grouped the writing samples on this site into three technical tiers",
-        where: "This portfolio",
+        title: "Supported the creation of role-based navigation so each user group finds its own path",
+        where: "Personio",
+      },
+      {
+        title: "Led UX writing for the Spanish product interface as the company-wide localisation expert",
+        where: "Personio",
       },
     ],
   },
@@ -156,6 +164,14 @@ const principles: Principle[] = [
     proof: [
       {
         title: "Mentored a peer to Senior Technical Writer through regular candid feedback",
+        where: "Personio",
+      },
+      {
+        title: "Ran training sessions and workshops so 10 writers worked from the same playbook",
+        where: "Personio",
+      },
+      {
+        title: "Documented 40+ product launches a year so customers always knew what changed",
         where: "Personio",
       },
     ],
