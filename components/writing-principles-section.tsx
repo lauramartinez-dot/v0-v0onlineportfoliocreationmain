@@ -88,7 +88,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Kept this portfolio to 5 sections and 0 decorative stats",
+        title: "Kept this portfolio to five sections, with no decorative stats or filler",
         where: "This portfolio",
       },
     ],
@@ -184,7 +184,7 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title: "Mentored 1 peer from Technical Writer to Senior through 2 years of candid feedback",
+        title: "Mentored a peer to Senior Technical Writer through regular, candid feedback",
         where: "Personio",
       },
       {
