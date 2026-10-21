@@ -213,6 +213,11 @@ export function WritingPrinciplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+
+          <p className="mx-auto mt-8 flex max-w-xl items-center justify-center gap-2 text-base text-white/60 text-pretty md:text-lg">
+            Click on a principle to see the achievements behind it
+            <ArrowUpRight className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+          </p>
         </div>
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
@@ -235,11 +240,6 @@ export function WritingPrinciplesSection() {
 
                     <span className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
                       {description}
-                    </span>
-
-                    <span className="mt-auto flex items-center gap-2 text-sm font-semibold text-primary">
-                      See it in practice
-                      <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                     </span>
                   </button>
                 </DialogTrigger>
