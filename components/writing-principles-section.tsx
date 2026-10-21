@@ -16,7 +16,12 @@ function Em({ children }: { children: ReactNode }) {
   return <>{children}</>
 }
 
-type Source = "Personio" | "This portfolio"
+type Source = "Personio" | "OMP" | "This portfolio"
+
+const sourceWordmarks: Partial<Record<Source, string>> = {
+  Personio: "/personio-wordmark.png",
+  OMP: "/omp-wordmark.png",
+}
 
 type Proof = {
   title: string
@@ -24,12 +29,13 @@ type Proof = {
 }
 
 function SourceBadge({ source }: { source: Source }) {
-  if (source === "Personio") {
+  const wordmark = sourceWordmarks[source]
+  if (wordmark) {
     return (
       <div className="relative h-12 w-28 shrink-0 overflow-hidden rounded-xl bg-white/95">
         <Image
-          src="/personio-wordmark.png"
-          alt="Personio logo"
+          src={wordmark}
+          alt={`${source} logo`}
           fill
           sizes="112px"
           className="object-contain px-2 py-1.5"
@@ -93,6 +99,10 @@ const principles: Principle[] = [
       {
         title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
         where: "Personio",
+      },
+      {
+        title: "Tailored documentation to 2+ user groups, from developers to semi-expert consultants",
+        where: "OMP",
       },
       {
         title: "Supported the creation of role-based navigation so each user group finds its own path",
