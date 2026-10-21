@@ -73,19 +73,7 @@ type ContentType = {
   alt: string
   customSample?: boolean
   links?: { label: string; href: string }[]
-  // When set, a grid of these logos replaces the preview image.
-  logos?: Logo[]
 }
-
-// `contain` keeps a wide wordmark whole; the tile background matches the file's own.
-type Logo = { name: string; src: string; fit?: "cover" | "contain"; bg?: string }
-
-const mediaLogos: Logo[] = [
-  { name: "Business Insider España", src: "/business-insider-espana-logo.png" },
-  { name: "Muy Interesante", src: "/muy-interesante-logo.png" },
-  { name: "Xataka", src: "/xataka-logo.png", fit: "contain", bg: "#222831" },
-  { name: "Europa Press", src: "/europa-press-logo.png" },
-]
 
 type Audience = {
   level: string
@@ -151,9 +139,8 @@ const audiences: Audience[] = [
       {
         title: "Tech media stories",
         image: "/sample-tech-stories.png",
-        alt: "Logos of the media outlets these stories were published in",
+        alt: "Preview of a technology story published in the media",
         links: mediaArticles,
-        logos: mediaLogos,
       },
     ],
   },
@@ -194,28 +181,6 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
       <img src={src} alt={alt} className="h-full w-full object-cover object-top" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card/70 to-transparent" />
     </div>
-  )
-}
-
-// Same footprint as SectionImage, but a 2x2 grid of the outlets' logos.
-// Each logo file carries its own brand background, so it fills its tile.
-function LogoGrid({ logos }: { logos: Logo[] }) {
-  return (
-    <ul className="grid aspect-[4/3] w-full grid-cols-2 gap-3 rounded-2xl bg-background p-3 ring-1 ring-white/10">
-      {logos.map((logo) => (
-        <li
-          key={logo.name}
-          className="overflow-hidden rounded-xl bg-white"
-          style={logo.bg ? { backgroundColor: logo.bg } : undefined}
-        >
-          <img
-            src={logo.src}
-            alt={logo.name}
-            className={logo.fit === "contain" ? "h-full w-full object-contain p-4" : "h-full w-full object-cover"}
-          />
-        </li>
-      ))}
-    </ul>
   )
 }
 
@@ -331,11 +296,7 @@ export function WritingSamplesSection() {
                           (typeIndex > 0 ? " border-t border-white/10" : "")
                         }
                       >
-                          {type.logos ? (
-                            <LogoGrid logos={type.logos} />
-                          ) : (
-                            <SectionImage src={type.image} alt={type.alt} />
-                          )}
+                        <SectionImage src={type.image} alt={type.alt} />
                         <div className="flex flex-col gap-5">
                           <h3 className="text-xl font-semibold text-white text-balance">{type.title}</h3>
 

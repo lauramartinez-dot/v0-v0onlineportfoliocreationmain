@@ -19,6 +19,14 @@ export function AboutMeHeading() {
 
 const statementClass = "text-xl font-semibold leading-snug tracking-tight text-pretty md:text-2xl"
 
+// White-on-transparent knockouts of the outlets' logos, for the dark card.
+const mediaOutlets = [
+  { name: "Business Insider España", src: "/media-business-insider.png" },
+  { name: "Muy Interesante", src: "/media-muy-interesante.png" },
+  { name: "Xataka", src: "/media-xataka.png" },
+  { name: "Europa Press", src: "/media-europa-press.png" },
+]
+
 function FadeLine({ index, className, children }: { index: number; className?: string; children: ReactNode }) {
   return (
     <p
@@ -59,15 +67,22 @@ export function AboutMeIntro() {
       <StoryRow
         mediaSide="right"
         media={
-          <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/10">
-            <Image
-              src="/then-business-journalist.png"
-              alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
-              fill
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-          </div>
+          <ul
+            className="grid aspect-[4/3] w-full grid-cols-2 content-center items-center gap-x-10 gap-y-12 px-8"
+            aria-label="Media outlets I wrote for"
+          >
+            {mediaOutlets.map((outlet) => (
+              <li key={outlet.name} className="relative h-12 w-full md:h-14">
+                <Image
+                  src={outlet.src}
+                  alt={outlet.name}
+                  fill
+                  sizes="(max-width: 768px) 40vw, 20vw"
+                  className="object-contain opacity-90"
+                />
+              </li>
+            ))}
+          </ul>
         }
       >
         <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
