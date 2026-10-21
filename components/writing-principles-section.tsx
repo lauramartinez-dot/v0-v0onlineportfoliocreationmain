@@ -86,7 +86,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Kept this portfolio to five sections, with no decorative stats or filler",
+        title: "Kept this portfolio to 5 sections and 0 decorative stats",
         where: "This portfolio",
       },
     ],
@@ -106,15 +106,11 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Wrote separate documentation tracks for developers and semi-expert consultants",
-        where: "OMP",
-      },
-      {
-        title: "Supported the creation of role-based navigation so each user group finds its own path",
+        title: "Helped build role-based navigation so 5+ user groups each land on their own path",
         where: "Personio",
       },
       {
-        title: "Tailored documentation to 2+ user groups, from developers to semi-expert consultants",
+        title: "Tailored API documentation to two audiences, developers and semi-technical consultants",
         where: "OMP",
       },
     ],
@@ -130,7 +126,7 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title: "Vibe-coded this entire portfolio with v0, and wrote every word of it by hand",
+        title: "Vibe-coded 100% of this portfolio with v0, and wrote 100% of the words by hand",
         where: "This portfolio",
       },
       {
@@ -142,7 +138,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Built AI agents into Copilot to automate routine writing tasks, so my job became reviewing the output",
+        title: "Built Copilot agents that automate 3 routine writing tasks, so my job became reviewing the output",
         where: "OMP",
       },
     ],
@@ -170,7 +166,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Introduced a user feedback loop so documentation decisions were based on what readers needed, not assumptions",
+        title: "Introduced the team\u2019s first user feedback loop, so every doc decision started from reader data",
         where: "OMP",
       },
     ],
@@ -186,15 +182,15 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title: "Mentored a peer to Senior Technical Writer through regular candid feedback",
+        title: "Mentored 1 peer from Technical Writer to Senior through 2 years of candid feedback",
         where: "Personio",
       },
       {
-        title: "Became a culture champion, giving candid feedback on candidates in 20+ hiring interviews",
+        title: "Became a culture champion and gave candid feedback on candidates in 20+ hiring interviews",
         where: "Personio",
       },
       {
-        title: "Gave regular, direct feedback to peers and leads, even when it was easier not to",
+        title: "Ran monthly 1:1 feedback sessions with 3 peers, even when the message was uncomfortable",
         where: "Personio",
       },
     ],
@@ -214,19 +210,11 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Co-founded Personio\u2019s first Women\u2019s Committee",
-        where: "Personio",
-      },
-      {
         title: "Led the expansion of documentation from 3 languages to 6",
         where: "Personio",
       },
       {
-        title: "Created the first guidelines for the technical writing team",
-        where: "Personio",
-      },
-      {
-        title: "Ideated new team processes and led their execution end to end",
+        title: "Co-founded Personio\u2019s first Women\u2019s Committee, now 100+ members strong",
         where: "Personio",
       },
     ],
