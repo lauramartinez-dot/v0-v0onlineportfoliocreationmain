@@ -86,10 +86,6 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Wrote Personio\u2019s first documentation style guides, setting one standard for 10 writers",
-        where: "Personio",
-      },
-      {
         title: "Kept this portfolio to five sections, with no decorative stats or filler",
         where: "This portfolio",
       },
@@ -118,8 +114,8 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Led UX writing for the Spanish product interface as the company-wide localisation expert",
-        where: "Personio",
+        title: "Tailored documentation to 2+ user groups, from developers to semi-expert consultants",
+        where: "OMP",
       },
     ],
   },
@@ -145,6 +141,10 @@ const principles: Principle[] = [
         title: "Used Gen AI to take new documentation pages from brief to published in under 4 hours",
         where: "Personio",
       },
+      {
+        title: "Built AI agents into Copilot to automate routine writing tasks, so my job became reviewing the output",
+        where: "OMP",
+      },
     ],
   },
   {
@@ -169,6 +169,10 @@ const principles: Principle[] = [
         title: "Rewrote a product area\u2019s documentation and cut its support tickets by 50%",
         where: "Personio",
       },
+      {
+        title: "Introduced a user feedback loop so documentation decisions were based on what readers needed, not assumptions",
+        where: "OMP",
+      },
     ],
   },
   {
@@ -186,11 +190,11 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Ran training sessions and workshops so 10 writers worked from the same playbook",
+        title: "Became a culture champion, giving candid feedback on candidates in 20+ hiring interviews",
         where: "Personio",
       },
       {
-        title: "Documented 40+ product launches a year so customers always knew what changed",
+        title: "Gave regular, direct feedback to peers and leads, even when it was easier not to",
         where: "Personio",
       },
     ],
@@ -215,6 +219,14 @@ const principles: Principle[] = [
       },
       {
         title: "Led the expansion of documentation from 3 languages to 6",
+        where: "Personio",
+      },
+      {
+        title: "Created the first guidelines for the technical writing team",
+        where: "Personio",
+      },
+      {
+        title: "Ideated new team processes and led their execution end to end",
         where: "Personio",
       },
     ],
