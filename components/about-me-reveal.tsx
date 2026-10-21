@@ -85,7 +85,7 @@ export function AboutMeIntro() {
       <div className="flex flex-col items-center gap-10 md:gap-12">
         <p className={`${storyLineClass} max-w-3xl text-center`}>I used to write for tech publications like:</p>
         <ul
-          className="grid w-full max-w-4xl grid-cols-2 items-center gap-x-10 gap-y-10 md:grid-cols-4 md:gap-x-14"
+          className="grid w-full max-w-xl grid-cols-2 items-center gap-x-12 gap-y-12 md:gap-x-16 md:gap-y-14"
           aria-label="Media outlets I wrote for"
         >
           {mediaOutlets.map((outlet) => (
