@@ -18,6 +18,13 @@ function Em({ children }: { children: ReactNode }) {
 
 type Source = "Personio" | "OMP" | "This portfolio"
 
+// Dialogs group achievements by company so the badges don't alternate.
+const sourceOrder: Source[] = ["Personio", "OMP", "This portfolio"]
+
+function groupBySource(proof: Proof[]) {
+  return [...proof].sort((a, b) => sourceOrder.indexOf(a.where) - sourceOrder.indexOf(b.where))
+}
+
 const sourceWordmarks: Partial<Record<Source, string>> = {
   Personio: "/personio-wordmark.png",
   OMP: "/omp-wordmark.png",
@@ -101,7 +108,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Tailored documentation to 2+ user groups, from developers to semi-expert consultants",
+        title: "Wrote separate documentation tracks for developers and semi-expert consultants",
         where: "OMP",
       },
       {
@@ -270,7 +277,7 @@ export function WritingPrinciplesSection() {
                   <div className="flex flex-col gap-4 px-8 py-8 md:px-12 md:py-10">
                     <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/45">In practice</h3>
                     <ol className="flex flex-col gap-4">
-                      {proof.map((item) => (
+                      {groupBySource(proof).map((item) => (
                         <li
                           key={item.title}
                           className="flex flex-col gap-4 rounded-3xl border border-primary/40 bg-primary/15 p-6 shadow-[0_0_40px_-12px] shadow-primary/40 transition-colors hover:bg-primary/20 md:flex-row md:items-start md:gap-6 md:p-7"
