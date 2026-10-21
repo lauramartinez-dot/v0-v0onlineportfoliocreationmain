@@ -173,7 +173,7 @@ const principles: Principle[] = [
   },
   {
     icon: Eye,
-    title: "Transparency",
+    title: "Radical candor",
     description: (
       <>
         I&apos;m big on transparency and candid feedback, so you&apos;ll <Em>never have to guess</Em>. You&apos;ll
@@ -187,10 +187,6 @@ const principles: Principle[] = [
       },
       {
         title: "Became a culture champion and gave candid feedback on candidates in 20+ hiring interviews",
-        where: "Personio",
-      },
-      {
-        title: "Ran monthly 1:1 feedback sessions with 3 peers, even when the message was uncomfortable",
         where: "Personio",
       },
     ],
@@ -214,7 +210,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Co-founded Personio\u2019s first Women\u2019s Committee, now 100+ members strong",
+        title: "Co-founded Personio\u2019s first Women\u2019s Committee, now 100+ members, and organised 10+ events",
         where: "Personio",
       },
     ],
