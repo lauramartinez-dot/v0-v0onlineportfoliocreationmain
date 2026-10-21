@@ -110,7 +110,7 @@ export function AboutMeIntro() {
           </ul>
         }
       >
-        <p className={storyLineClass}>I&apos;ve authored articles for tech media such as:</p>
+        <p className={storyLineClass}>I used to write for tech publications including:</p>
       </StoryRow>
 
       <div className="flex flex-col gap-10 md:gap-12">
