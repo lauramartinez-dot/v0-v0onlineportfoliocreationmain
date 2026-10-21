@@ -216,6 +216,10 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
+        title: "Created Personio\u2019s first-ever documentation style guides",
+        where: "Personio",
+      },
+      {
         title: "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
         where: "Personio",
       },
