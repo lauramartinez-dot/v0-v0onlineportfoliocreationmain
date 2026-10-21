@@ -81,31 +81,37 @@ export function AboutMeIntro() {
         <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
       </StoryRow>
 
-      {/* Outlets row - pulled up so it reads as a footnote to the statement above */}
-      <ul
-        className="-mt-12 grid grid-cols-2 items-center gap-x-8 gap-y-8 md:-mt-16 md:grid-cols-4 md:gap-x-12"
-        aria-label="Media outlets I wrote for"
+      <StoryRow
+        mediaSide="right"
+        media={
+          <ul
+            className="grid aspect-[4/3] w-full grid-cols-2 content-center items-center gap-x-10 gap-y-12 px-8"
+            aria-label="Media outlets I wrote for"
+          >
+            {mediaOutlets.map((outlet) => (
+              <li key={outlet.name} className="h-12 w-full md:h-14">
+                <span
+                  role="img"
+                  aria-label={outlet.name}
+                  className="block h-full w-full bg-primary"
+                  style={{
+                    maskImage: `url(${outlet.src})`,
+                    WebkitMaskImage: `url(${outlet.src})`,
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
+        }
       >
-        {mediaOutlets.map((outlet) => (
-          <li key={outlet.name} className="flex h-10 items-center justify-center md:h-12">
-            <span
-              role="img"
-              aria-label={outlet.name}
-              className="block h-full w-full bg-primary"
-              style={{
-                maskImage: `url(${outlet.src})`,
-                WebkitMaskImage: `url(${outlet.src})`,
-                maskSize: "contain",
-                WebkitMaskSize: "contain",
-                maskPosition: "center",
-                WebkitMaskPosition: "center",
-                maskRepeat: "no-repeat",
-                WebkitMaskRepeat: "no-repeat",
-              }}
-            />
-          </li>
-        ))}
-      </ul>
+        <p className={storyLineClass}>I&apos;ve authored articles for tech media such as:</p>
+      </StoryRow>
 
       <div className="flex flex-col gap-10 md:gap-12">
         <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
