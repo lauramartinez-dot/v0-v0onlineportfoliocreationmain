@@ -82,34 +82,40 @@ export function AboutMeIntro() {
         <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
       </StoryRow>
 
-      <div className="flex flex-col items-center gap-10 md:gap-12">
-        <p className={`${storyLineClass} max-w-3xl text-center`}>I used to write for tech publications like:</p>
-        <ul
-          className="grid w-full max-w-xl grid-cols-2 items-center gap-x-12 gap-y-12 md:gap-x-16 md:gap-y-14"
-          aria-label="Media outlets I wrote for"
-        >
-          {mediaOutlets.map((outlet) => (
-            <li key={outlet.name} className="h-12 w-full md:h-14">
-              <span
-                role="img"
-                aria-label={outlet.name}
-                className="block h-full w-full bg-primary"
-                style={{
-                  maskImage: `url(${outlet.src})`,
-                  WebkitMaskImage: `url(${outlet.src})`,
-                  maskSize: "contain",
-                  WebkitMaskSize: "contain",
-                  maskPosition: "center",
-                  WebkitMaskPosition: "center",
-                  maskRepeat: "no-repeat",
-                  WebkitMaskRepeat: "no-repeat",
-                }}
-              />
-            </li>
-          ))}
-        </ul>
-        <p className={`${storyLineClass} max-w-3xl text-center`}>Now I do it for tech companies.</p>
-      </div>
+      <StoryRow
+        mediaSide="right"
+        media={
+          <ul
+            className="grid aspect-[4/3] w-full grid-cols-2 content-center items-center gap-x-10 gap-y-12 px-8"
+            aria-label="Media outlets I wrote for"
+          >
+            {mediaOutlets.map((outlet) => (
+              <li key={outlet.name} className="h-12 w-full md:h-14">
+                <span
+                  role="img"
+                  aria-label={outlet.name}
+                  className="block h-full w-full bg-primary"
+                  style={{
+                    maskImage: `url(${outlet.src})`,
+                    WebkitMaskImage: `url(${outlet.src})`,
+                    maskSize: "contain",
+                    WebkitMaskSize: "contain",
+                    maskPosition: "center",
+                    WebkitMaskPosition: "center",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskRepeat: "no-repeat",
+                  }}
+                />
+              </li>
+            ))}
+          </ul>
+        }
+      >
+        <div className="flex flex-col gap-6">
+          <p className={storyLineClass}>I used to write for tech publications like:</p>
+          <p className={storyLineClass}>Now I do it for tech companies.</p>
+        </div>
+      </StoryRow>
 
       <div className="flex flex-col gap-10 md:gap-12">
         <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
