@@ -74,8 +74,10 @@ function MediaOutletsCard() {
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <p className={`${storyLineClass} mx-auto max-w-3xl pt-6 text-center md:pt-10`}>
-        I&apos;m a tech journalist turned technical writer.
+      <p className={`${storyLineClass} mx-auto px-6 py-10 text-center md:py-16`}>
+        I&apos;m a tech journalist
+        <br />
+        turned technical writer.
       </p>
 
       <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
