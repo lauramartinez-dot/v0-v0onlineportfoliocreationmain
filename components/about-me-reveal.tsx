@@ -32,6 +32,7 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
+const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
 
 // White-on-transparent knockouts of the outlets' logos, tinted with the brand colour via mask.
 const mediaOutlets = [
@@ -79,11 +80,11 @@ export function AboutMeIntro() {
 
       <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
         <div className="flex flex-col gap-6">
-          <p className={storyLineClass}>I used to write for tech publications.</p>
+          <p className={storyDetailClass}>I used to write for tech publications.</p>
           <MediaOutletsCard />
         </div>
         <div className="flex flex-col gap-6">
-          <p className={storyLineClass}>Now I do it for tech companies.</p>
+          <p className={storyDetailClass}>Now I do it for tech companies.</p>
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/10 md:aspect-[5/4]">
             <Image
               src="/now-tech-company.png"
@@ -97,10 +98,13 @@ export function AboutMeIntro() {
       </div>
 
       <div className="flex flex-col gap-10 md:gap-12">
-        <p className={`${storyLineClass} w-full`}>
-          I still write about technology and software. And I still keep it accurate, yet somehow plain and clear
-          enough that you don&apos;t need a PhD or a CS degree to follow along.
-        </p>
+        <div className="flex flex-col items-center gap-6 text-center">
+          <p className={storyDetailClass}>I still write about technology and software.</p>
+          <p className={`${storyDetailClass} max-w-4xl`}>
+            And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS
+            degree to follow along.
+          </p>
+        </div>
         <div className="grid grid-cols-2 gap-4 md:gap-8">
           <ArticleCard
             era="Before"

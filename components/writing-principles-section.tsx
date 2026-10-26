@@ -74,46 +74,34 @@ type Principle = {
 
 const principles: Principle[] = [
   {
-    icon: Minus,
-    title: "Less is more",
+    icon: Flag,
+    title: "High ownership",
     description: (
       <>
-        I see my job as a technical writer as <Em>subtracting</Em>, not adding {"\u2014"} taking information away until
-        only what matters is left. I write as if every extra sentence cost me 50 euros.
+        Whatever I take on, I see through <Em>to the end</Em>. I prioritise, so some things wait in the backlog,
+        but nothing gets dropped just because nobody&apos;s chasing me.
       </>
     ),
     proof: [
       {
-        title: "Designed a content audit that let the team deprecate 100+ outdated pages",
-        where: "Personio",
-      },
-      {
-        title: "Kept this portfolio to five sections, with no decorative stats or filler",
-        where: "This portfolio",
-      },
-    ],
-  },
-  {
-    icon: Users,
-    title: "User-centered",
-    description: (
-      <>
-        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
-        up, do they stay inside the app or design the systems around it? <Em>How technical</Em> are they, really?
-      </>
-    ),
-    proof: [
-      {
-        title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
-        where: "Personio",
-      },
-      {
-        title: "Helped build role-based navigation so 5+ user groups each land on their own path",
-        where: "Personio",
-      },
-      {
-        title: "Tailoring API documentation to two audiences, developers and semi-technical consultants",
+        title: "Pioneering the move to docs-as-code, with documentation fully inside the development workflow",
         where: "OMP",
+      },
+      {
+        title: "Helped grow the documentation team from 3 writers to a global team of 10+",
+        where: "Personio",
+      },
+      {
+        title: "Led the expansion of documentation from 3 languages to 6",
+        where: "Personio",
+      },
+      {
+        title: "Created Personio\u2019s first-ever documentation style guides",
+        where: "Personio",
+      },
+      {
+        title: "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
+        where: "Personio",
       },
     ],
   },
@@ -174,6 +162,50 @@ const principles: Principle[] = [
     ],
   },
   {
+    icon: Minus,
+    title: "Less is more",
+    description: (
+      <>
+        I see my job as a technical writer as <Em>subtracting</Em>, not adding {"\u2014"} taking information away until
+        only what matters is left. I write as if every extra sentence cost me 50 euros.
+      </>
+    ),
+    proof: [
+      {
+        title: "Designed a content audit that let the team deprecate 100+ outdated pages",
+        where: "Personio",
+      },
+      {
+        title: "Kept this portfolio to five sections, with no decorative stats or filler",
+        where: "This portfolio",
+      },
+    ],
+  },
+  {
+    icon: Users,
+    title: "User-centered",
+    description: (
+      <>
+        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
+        up, do they stay inside the app or design the systems around it? <Em>How technical</Em> are they, really?
+      </>
+    ),
+    proof: [
+      {
+        title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
+        where: "Personio",
+      },
+      {
+        title: "Helped build role-based navigation so 5+ user groups each land on their own path",
+        where: "Personio",
+      },
+      {
+        title: "Tailoring API documentation to two audiences, developers and semi-technical consultants",
+        where: "OMP",
+      },
+    ],
+  },
+  {
     icon: Eye,
     title: "Radical candor",
     description: (
@@ -189,38 +221,6 @@ const principles: Principle[] = [
       },
       {
         title: "Became a culture champion and gave candid feedback on candidates in 20+ hiring interviews",
-        where: "Personio",
-      },
-    ],
-  },
-  {
-    icon: Flag,
-    title: "High ownership",
-    description: (
-      <>
-        Whatever I take on, I see through <Em>to the end</Em>. I prioritise, so some things wait in the backlog,
-        but nothing gets dropped just because nobody&apos;s chasing me.
-      </>
-    ),
-    proof: [
-      {
-        title: "Pioneering the move to docs-as-code, with documentation fully inside the development workflow",
-        where: "OMP",
-      },
-      {
-        title: "Helped grow the documentation team from 3 writers to a global team of 10+",
-        where: "Personio",
-      },
-      {
-        title: "Led the expansion of documentation from 3 languages to 6",
-        where: "Personio",
-      },
-      {
-        title: "Created Personio\u2019s first-ever documentation style guides",
-        where: "Personio",
-      },
-      {
-        title: "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
         where: "Personio",
       },
     ],
