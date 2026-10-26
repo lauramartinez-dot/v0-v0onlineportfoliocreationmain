@@ -73,18 +73,26 @@ function MediaOutletsCard() {
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <div className="flex flex-col items-center gap-10 md:gap-12">
-        <p className={`${storyLineClass} max-w-3xl text-center`}>
-          I&apos;m a tech journalist turned technical writer.
-        </p>
-        <div className="relative aspect-[16/9] w-full max-w-3xl overflow-hidden rounded-3xl border border-white/10">
-          <Image
-            src="/then-business-journalist.png"
-            alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
-            fill
-            sizes="(max-width: 768px) 100vw, 768px"
-            className="object-cover"
-          />
+      <p className={`${storyLineClass} mx-auto max-w-3xl text-center`}>
+        I&apos;m a tech journalist turned technical writer.
+      </p>
+
+      <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
+        <div className="flex flex-col gap-6">
+          <p className={storyLineClass}>I used to write for tech publications.</p>
+          <MediaOutletsCard />
+        </div>
+        <div className="flex flex-col gap-6">
+          <p className={storyLineClass}>Now I do it for tech companies.</p>
+          <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/10 md:aspect-[5/4]">
+            <Image
+              src="/now-tech-company.png"
+              alt="A technical writer's desk at a software company, with developer documentation on a large monitor"
+              fill
+              sizes="(max-width: 768px) 50vw, 600px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </div>
 
@@ -93,19 +101,18 @@ export function AboutMeIntro() {
           I still write about technology and software. And I still keep it accurate, yet somehow plain and clear
           enough that you don&apos;t need a PhD or a CS degree to follow along.
         </p>
-        <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
-          <div className="flex flex-col gap-6">
-            <p className={storyLineClass}>I used to write for tech publications.</p>
-            <MediaOutletsCard />
-          </div>
-          <div className="flex flex-col gap-6">
-            <p className={storyLineClass}>Now I do it for tech companies.</p>
-            <ArticleCard
-              era="Now"
-              imageSrc="/now-tech-docs.png"
-              imageAlt="Documentation page titled What is an API? on a laptop screen"
-            />
-          </div>
+        <div className="grid grid-cols-2 gap-4 md:gap-8">
+          <ArticleCard
+            era="Before"
+            imageSrc="/then-airplane-article.png"
+            imageAlt="Magazine article titled How do planes stay in the air?"
+            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+          />
+          <ArticleCard
+            era="Now"
+            imageSrc="/now-tech-docs.png"
+            imageAlt="Documentation page titled What is an API? on a laptop screen"
+          />
         </div>
       </div>
 
