@@ -32,6 +32,7 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
+const columnCaptionClass = "text-xl font-semibold leading-snug tracking-tight text-white/85 text-pretty md:text-2xl"
 
 // White-on-transparent knockouts of the outlets' logos, tinted with the brand colour via mask.
 const mediaOutlets = [
@@ -73,17 +74,17 @@ function MediaOutletsCard() {
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <p className={`${storyLineClass} mx-auto max-w-3xl text-center`}>
+      <h3 className="mx-auto max-w-4xl pt-8 text-center text-4xl font-bold leading-[1.1] tracking-tight text-white text-balance md:pt-16 md:text-6xl">
         I&apos;m a tech journalist turned technical writer.
-      </p>
+      </h3>
 
       <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
         <div className="flex flex-col gap-6">
-          <p className={storyLineClass}>I used to write for tech publications.</p>
+          <p className={columnCaptionClass}>I used to write for tech publications.</p>
           <MediaOutletsCard />
         </div>
         <div className="flex flex-col gap-6">
-          <p className={storyLineClass}>Now I do it for tech companies.</p>
+          <p className={columnCaptionClass}>Now I do it for tech companies.</p>
           <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/10 md:aspect-[5/4]">
             <Image
               src="/now-tech-company.png"
@@ -97,7 +98,7 @@ export function AboutMeIntro() {
       </div>
 
       <div className="flex flex-col gap-10 md:gap-12">
-        <p className={`${storyLineClass} max-w-3xl`}>
+        <p className={`${storyLineClass} w-full`}>
           I still write about technology and software. And I still keep it accurate, yet somehow plain and clear
           enough that you don&apos;t need a PhD or a CS degree to follow along.
         </p>
