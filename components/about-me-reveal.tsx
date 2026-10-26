@@ -1,4 +1,3 @@
-import Image from "next/image"
 import type { ReactNode } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { StaggerReveal } from "@/components/stagger-reveal"
@@ -34,29 +33,38 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
 const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
 
-// White-on-transparent knockouts of the outlets' logos, tinted with the brand colour via mask.
-const mediaOutlets = [
+type Logo = { name: string; src: string; scale?: string }
+
+// Logos with transparent backgrounds, tinted with the brand colour via mask.
+const mediaOutlets: Logo[] = [
   { name: "Business Insider España", src: "/media-business-insider.png" },
   { name: "Muy Interesante", src: "/media-muy-interesante.png" },
   { name: "Xataka", src: "/media-xataka.png" },
   { name: "Europa Press", src: "/media-europa-press.png" },
 ]
 
-function MediaOutletsCard() {
+const techCompanies: Logo[] = [
+  // Personio's file has padding baked in; scaling it up makes the two wordmarks render the same width.
+  { name: "Personio", src: "/personio-wordmark.png", scale: "scale-[1.3]" },
+  { name: "OMP", src: "/omp-wordmark.png" },
+]
+
+function LogoCard({ logos, label, columns }: { logos: Logo[]; label: string; columns: 1 | 2 }) {
+  const layout =
+    columns === 2
+      ? "grid-cols-2 gap-x-10 gap-y-12 md:gap-x-14 md:gap-y-14 [&>li]:h-12 md:[&>li]:h-16"
+      : "grid-cols-1 gap-y-14 md:gap-y-16 [&>li]:h-16 md:[&>li]:h-20 [&>li]:mx-auto [&>li]:w-56"
   return (
-    <ul
-      className="grid aspect-[3/4] w-full grid-cols-2 content-center items-center gap-x-8 gap-y-10 rounded-3xl border border-white/10 bg-white/[0.03] px-6 md:aspect-[5/4] md:gap-x-10 md:gap-y-12 md:px-10"
-      aria-label="Media outlets I wrote for"
-    >
-      {mediaOutlets.map((outlet) => (
-        <li key={outlet.name} className="h-12 w-full md:h-16">
+    <ul className={`grid w-full items-center px-4 py-6 md:px-8 md:py-8 ${layout}`} aria-label={label}>
+      {logos.map((logo) => (
+        <li key={logo.name} className="w-full">
           <span
             role="img"
-            aria-label={outlet.name}
-            className="block h-full w-full bg-primary"
+            aria-label={logo.name}
+            className={`block h-full w-full bg-primary ${logo.scale ?? ""}`}
             style={{
-              maskImage: `url(${outlet.src})`,
-              WebkitMaskImage: `url(${outlet.src})`,
+              maskImage: `url(${logo.src})`,
+              WebkitMaskImage: `url(${logo.src})`,
               maskSize: "contain",
               WebkitMaskSize: "contain",
               maskPosition: "center",
@@ -80,28 +88,24 @@ export function AboutMeIntro() {
         turned technical writer.
       </p>
 
-      <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
+      <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
         <div className="flex flex-col gap-6">
           <p className={storyDetailClass}>I used to write for tech publications.</p>
-          <MediaOutletsCard />
+          <LogoCard logos={mediaOutlets} label="Media outlets I wrote for" columns={2} />
         </div>
         <div className="flex flex-col gap-6">
           <p className={storyDetailClass}>Now I do it for tech companies.</p>
-          <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/10 md:aspect-[5/4]">
-            <Image
-              src="/now-tech-company.png"
-              alt="A technical writer's desk at a software company, with developer documentation on a large monitor"
-              fill
-              sizes="(max-width: 768px) 50vw, 600px"
-              className="object-cover"
-            />
-          </div>
+          <LogoCard logos={techCompanies} label="Tech companies I have written for" columns={1} />
         </div>
       </div>
 
       <div className="flex flex-col gap-10 md:gap-12">
         <div className="flex flex-col items-center gap-6 text-center">
-          <p className={storyDetailClass}>I still write about technology and software.</p>
+          <p className={`${storyLineClass} mx-auto px-6 py-10 text-center md:py-16`}>
+            I still write about
+            <br />
+            technology and software.
+          </p>
           <p className={`${storyDetailClass} max-w-4xl`}>
             And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS
             degree to follow along.
