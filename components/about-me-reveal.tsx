@@ -20,14 +20,6 @@ export function AboutMeHeading() {
 
 const statementClass = "text-xl font-semibold leading-snug tracking-tight text-pretty md:text-2xl"
 
-// White-on-transparent knockouts of the outlets' logos, for the dark card.
-const mediaOutlets = [
-  { name: "Business Insider España", src: "/media-business-insider.png" },
-  { name: "Muy Interesante", src: "/media-muy-interesante.png" },
-  { name: "Xataka", src: "/media-xataka.png" },
-  { name: "Europa Press", src: "/media-europa-press.png" },
-]
-
 function FadeLine({ index, className, children }: { index: number; className?: string; children: ReactNode }) {
   return (
     <p
@@ -82,59 +74,30 @@ export function AboutMeIntro() {
         <p className={storyLineClass}>I&apos;m a tech journalist turned technical writer.</p>
       </StoryRow>
 
-      <StoryRow
-        mediaSide="right"
-        media={
-          <ul
-            className="grid aspect-[4/3] w-full grid-cols-2 content-center items-center gap-x-10 gap-y-12 px-8"
-            aria-label="Media outlets I wrote for"
-          >
-            {mediaOutlets.map((outlet) => (
-              <li key={outlet.name} className="h-12 w-full md:h-14">
-                <span
-                  role="img"
-                  aria-label={outlet.name}
-                  className="block h-full w-full bg-primary"
-                  style={{
-                    maskImage: `url(${outlet.src})`,
-                    WebkitMaskImage: `url(${outlet.src})`,
-                    maskSize: "contain",
-                    WebkitMaskSize: "contain",
-                    maskPosition: "center",
-                    WebkitMaskPosition: "center",
-                    maskRepeat: "no-repeat",
-                    WebkitMaskRepeat: "no-repeat",
-                  }}
-                />
-              </li>
-            ))}
-          </ul>
-        }
-      >
-        <div className="flex flex-col gap-6">
-          <p className={storyLineClass}>I used to write for tech publications like:</p>
-          <p className={storyLineClass}>Now I do it for tech companies.</p>
-        </div>
-      </StoryRow>
-
       <div className="flex flex-col gap-10 md:gap-12">
-        <p className={`${storyLineClass} ml-auto max-w-3xl md:text-right`}>
+        <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
+          <div className="flex flex-col gap-6">
+            <p className={storyLineClass}>I used to write for tech publications.</p>
+            <ArticleCard
+              era="Before"
+              imageSrc="/then-airplane-article.png"
+              imageAlt="Magazine article titled How do planes stay in the air?"
+              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+            />
+          </div>
+          <div className="flex flex-col gap-6">
+            <p className={storyLineClass}>Now I do it for tech companies.</p>
+            <ArticleCard
+              era="Now"
+              imageSrc="/now-tech-docs.png"
+              imageAlt="Documentation page titled What is an API? on a laptop screen"
+            />
+          </div>
+        </div>
+        <p className={`${storyLineClass} max-w-3xl`}>
           I still write about technology and software. And I still keep it accurate, yet somehow plain and clear
           enough that you don&apos;t need a PhD or a CS degree to follow along.
         </p>
-        <div className="grid grid-cols-2 gap-4 md:gap-8">
-          <ArticleCard
-            era="Before"
-            imageSrc="/then-airplane-article.png"
-            imageAlt="Magazine article titled How do planes stay in the air?"
-            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-          />
-          <ArticleCard
-            era="Now"
-            imageSrc="/now-tech-docs.png"
-            imageAlt="Documentation page titled What is an API? on a laptop screen"
-          />
-        </div>
       </div>
 
       {/* Pull this block closer to the Before/Now cards than the parent gap allows */}
