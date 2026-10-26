@@ -84,19 +84,31 @@ const principles: Principle[] = [
     ),
     proof: [
       {
+        title: "Joined OMP as the second technical writer for integrations & APIs",
+        where: "OMP",
+      },
+      {
         title: "Pioneering the move to docs-as-code, with documentation fully inside the development workflow",
         where: "OMP",
       },
       {
-        title: "Helped grow the documentation team from 3 writers to a global team of 10+",
+        title: "Pioneering the creation of AI agents and skills to automate repetitive, time-consuming writing tasks",
+        where: "OMP",
+      },
+      {
+        title: "Joined Personio as a foundational technical writer",
+        where: "Personio",
+      },
+      {
+        title: "Became Personio\u2019s first-ever senior technical writer",
+        where: "Personio",
+      },
+      {
+        title: "Grew the documentation team from 3 writers to a global team of 10+",
         where: "Personio",
       },
       {
         title: "Led the expansion of documentation from 3 languages to 6",
-        where: "Personio",
-      },
-      {
-        title: "Created Personio\u2019s first-ever documentation style guides",
         where: "Personio",
       },
       {
@@ -128,7 +140,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Using Copilot and Claude daily to automate repetitive, time-consuming writing tasks",
+        title: "Pioneering the creation of AI agents and skills to automate repetitive, time-consuming writing tasks",
         where: "OMP",
       },
     ],
