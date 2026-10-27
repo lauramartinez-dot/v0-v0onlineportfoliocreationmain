@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react"
 import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
 import { AudienceRangeCard } from "@/components/audience-range-card"
+import { AudienceSpectrumCard } from "@/components/audience-spectrum-card"
 import { AboutMeBoxes } from "@/components/about-me-boxes"
 
 export function AboutMeHeading() {
@@ -66,12 +67,9 @@ export function AboutMeIntro() {
         <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
           The audience has also changed:
         </p>
-        <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
+        <div className="grid grid-cols-2 items-stretch gap-4 md:gap-8">
           <AudienceRangeCard title="Low technical knowledge" />
-          <AudienceRangeCard
-            title="A wider range of technical knowledge"
-            detail="Depending on whether they are an everyday software user, an implementation manager or a dev."
-          />
+          <AudienceSpectrumCard />
         </div>
       </div>
 
