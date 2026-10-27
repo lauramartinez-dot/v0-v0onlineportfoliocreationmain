@@ -64,7 +64,7 @@ export function AboutMeIntro() {
           />
         </div>
         <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
-          And I also write for a wider audience:
+          And for a wider range of readers:
         </p>
         <div className="grid grid-cols-2 items-stretch gap-4 md:gap-8">
           <AudienceRangeCard title="Low technical knowledge" />

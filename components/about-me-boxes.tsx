@@ -181,24 +181,19 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex h-full min-h-[300px] flex-col gap-6 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:bg-primary/[0.12] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group relative flex h-full min-h-[300px] cursor-pointer flex-col gap-6 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left shadow-[0_0_0_0_rgba(0,0,0,0)] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:bg-primary/[0.14] hover:shadow-[0_20px_50px_-20px_var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
               <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
                 <box.icon className="h-7 w-7" />
               </span>
-              <ArrowUpRight
-                className="absolute top-8 right-8 h-6 w-6 text-primary/60 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary"
+              <span
                 aria-hidden="true"
-              />
+                className="absolute top-8 right-8 flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+              >
+                <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              </span>
               <span className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">{box.title}</span>
               <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
-              <span className="mt-auto flex items-center gap-2 pt-2 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-                Click to take a look
-                <span
-                  aria-hidden="true"
-                  className="h-px w-8 bg-primary/60 transition-all duration-300 group-hover:w-12 group-hover:bg-primary"
-                />
-              </span>
             </button>
           </DialogTrigger>
 
