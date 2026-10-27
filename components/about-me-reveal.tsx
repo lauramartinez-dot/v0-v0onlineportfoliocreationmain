@@ -61,8 +61,9 @@ export function AboutMeIntro() {
           />
         </div>
         <p className={`${storyDetailClass} mx-auto max-w-4xl text-center`}>
-          And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS
-          degree to follow along.
+          Just like before, I still write for people with limited technical knowledge (everyday software users), who
+          shouldn&apos;t need a CS degree or a PhD to get it. But now I also write for people with deep technical
+          knowledge (devs, system architects).
         </p>
       </div>
 
