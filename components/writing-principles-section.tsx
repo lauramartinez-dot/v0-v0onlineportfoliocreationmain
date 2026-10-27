@@ -92,7 +92,7 @@ const principles: Principle[] = [
         where: "OMP",
       },
       {
-        title: "Building AI agents and skills that automate repetitive writing work",
+        title: "Pioneering the creation of AI agents and skills to automate repetitive writing work",
         where: "OMP",
       },
       {
@@ -140,7 +140,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Pioneering the creation of AI agents and skills to automate repetitive, time-consuming writing tasks",
+        title: "Pioneering the creation of AI agents and skills to automate repetitive writing work",
         where: "OMP",
       },
     ],
