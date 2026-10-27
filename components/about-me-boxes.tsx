@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import type { ReactNode } from "react"
-import { Globe, Newspaper, Rocket, Telescope, type LucideIcon } from "lucide-react"
+import { ArrowUpRight, Globe, Newspaper, Rocket, Telescope, type LucideIcon } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -186,9 +186,20 @@ export function AboutMeBoxes() {
               <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
                 <box.icon className="h-7 w-7" />
               </span>
+              <ArrowUpRight
+                className="absolute top-8 right-8 h-6 w-6 text-primary/60 transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-primary"
+                aria-hidden="true"
+              />
               <span className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">{box.title}</span>
-                  <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
-                </button>
+              <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
+              <span className="mt-auto flex items-center gap-2 pt-2 text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+                Click to take a look
+                <span
+                  aria-hidden="true"
+                  className="h-px w-8 bg-primary/60 transition-all duration-300 group-hover:w-12 group-hover:bg-primary"
+                />
+              </span>
+            </button>
           </DialogTrigger>
 
           <DialogContent className="flex max-h-[94vh] w-[96vw] max-w-[1400px] flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-[1400px] sm:rounded-[1.75rem]">
