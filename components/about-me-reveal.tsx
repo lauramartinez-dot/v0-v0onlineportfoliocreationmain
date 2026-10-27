@@ -1,5 +1,4 @@
 import type { ReactNode } from "react"
-import Image from "next/image"
 import { ArrowUpRight } from "lucide-react"
 import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
@@ -34,14 +33,6 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
 const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
 
-function StoryImage({ src, alt }: { src: string; alt: string }) {
-  return (
-    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-3xl border border-white/10 md:aspect-[5/4]">
-      <Image src={src} alt={alt} fill sizes="(max-width: 768px) 50vw, 600px" className="object-cover" />
-    </div>
-  )
-}
-
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
@@ -58,43 +49,30 @@ export function AboutMeIntro() {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
-        <div className="flex flex-col gap-6">
-          <p className={storyDetailClass}>I used to write for tech publications.</p>
-          <StoryImage
-            src="/then-business-journalist.png"
-            alt="A business journalist's desk with a laptop showing a tech news article, notebook and press lanyard"
-          />
-        </div>
-        <div className="flex flex-col gap-6">
-          <p className={storyDetailClass}>Now I do it for tech companies.</p>
-          <StoryImage
-            src="/now-tech-company.png"
-            alt="A technical writer's desk at a software company, with developer documentation on a large monitor"
-          />
-        </div>
-      </div>
-
       <div className="flex flex-col gap-10 md:gap-12">
-        <div className="flex flex-col items-center gap-6 text-center">
-          <p className={`${storyDetailClass} max-w-4xl`}>
-            And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS
-            degree to follow along.
-          </p>
+        <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
+          <div className="flex flex-col gap-6">
+            <p className={storyDetailClass}>I used to do it for tech publications.</p>
+            <ArticleCard
+              era="Before"
+              imageSrc="/then-airplane-article.png"
+              imageAlt="Magazine article titled How do planes stay in the air?"
+              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+            />
+          </div>
+          <div className="flex flex-col gap-6">
+            <p className={storyDetailClass}>Now I do it for tech companies.</p>
+            <ArticleCard
+              era="Now"
+              imageSrc="/now-tech-docs.png"
+              imageAlt="Documentation page titled What is an API? on a laptop screen"
+            />
+          </div>
         </div>
-        <div className="grid grid-cols-2 gap-4 md:gap-8">
-          <ArticleCard
-            era="Before"
-            imageSrc="/then-airplane-article.png"
-            imageAlt="Magazine article titled How do planes stay in the air?"
-            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-          />
-          <ArticleCard
-            era="Now"
-            imageSrc="/now-tech-docs.png"
-            imageAlt="Documentation page titled What is an API? on a laptop screen"
-          />
-        </div>
+        <p className={`${storyDetailClass} mx-auto max-w-4xl text-center`}>
+          And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS
+          degree to follow along.
+        </p>
       </div>
 
       {/* Pull this block closer to the Before/Now cards than the parent gap allows */}
