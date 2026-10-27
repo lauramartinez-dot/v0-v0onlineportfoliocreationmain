@@ -50,12 +50,12 @@ export function HeroSection() {
 
             {/* Two-tier headline */}
             <h1 className="mb-6 text-foreground">
-            <span className="block text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
-              A Senior
-            </span>
-            <span className="block text-5xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-[6.75rem]">
-              Technical Writer<span className="ml-2 inline-block animate-bounce align-baseline text-2xl md:text-3xl lg:text-4xl">{"🌍"}</span>
-            </span>
+              <span className="block text-3xl font-bold uppercase tracking-tight md:text-4xl lg:text-5xl">
+                A global
+              </span>
+              <span className="block text-5xl font-extrabold uppercase tracking-tighter leading-[0.95] md:text-7xl lg:text-8xl xl:text-[6.75rem]">
+                Senior Technical Writer<span className="ml-2 inline-block animate-bounce align-baseline text-2xl md:text-3xl lg:text-4xl">{"🌍"}</span>
+              </span>
             </h1>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:justify-start">
