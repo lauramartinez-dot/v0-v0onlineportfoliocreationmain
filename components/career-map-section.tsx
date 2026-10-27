@@ -1281,6 +1281,8 @@ export default function CareerMapSection() {
               "XML",
               "AI agents",
               "Agentic coding",
+              "Python",
+              "Coder",
               "Azure DevOps",
               "Git",
               "GitHub Copilot",
