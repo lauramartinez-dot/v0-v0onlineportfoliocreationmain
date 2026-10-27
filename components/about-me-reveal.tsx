@@ -36,38 +36,37 @@ const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-w
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <div className="flex flex-col gap-10 md:gap-12">
-        <p className={`${storyLineClass} mx-auto px-6 pt-10 text-center md:pt-16`}>
+      <div className="flex flex-col gap-20 py-10 md:gap-28 md:py-16">
+        <p className={`${storyLineClass} mx-auto px-6 text-center`}>
           I&apos;m a tech journalist
           <br />
           turned technical writer.
         </p>
-        <p className={`${storyLineClass} mx-auto px-6 pb-10 text-center md:pb-16`}>
+        <p className={`${storyLineClass} mx-auto px-6 text-center`}>
           I still write about
           <br />
           technology and software.
+        </p>
+        <p className={`${storyLineClass} mx-auto px-6 text-center`}>
+          Only now I do it for tech companies
+          <br />
+          instead of the media.
         </p>
       </div>
 
       <div className="flex flex-col gap-10 md:gap-12">
         <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
-          <div className="flex flex-col gap-6">
-            <p className={storyDetailClass}>I used to do it for tech publications.</p>
-            <ArticleCard
-              era="Before"
-              imageSrc="/then-airplane-article.png"
-              imageAlt="Magazine article titled How do planes stay in the air?"
-              href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-            />
-          </div>
-          <div className="flex flex-col gap-6">
-            <p className={storyDetailClass}>Now I do it for tech companies.</p>
-            <ArticleCard
-              era="Now"
-              imageSrc="/now-tech-docs.png"
-              imageAlt="Documentation page titled What is an API? on a laptop screen"
-            />
-          </div>
+          <ArticleCard
+            era="Before"
+            imageSrc="/then-airplane-article.png"
+            imageAlt="Magazine article titled How do planes stay in the air?"
+            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
+          />
+          <ArticleCard
+            era="Now"
+            imageSrc="/now-tech-docs.png"
+            imageAlt="Documentation page titled What is an API? on a laptop screen"
+          />
         </div>
         <p className={`${storyDetailClass} mx-auto max-w-4xl text-center`}>
           And I still keep it accurate, yet somehow plain and clear enough that you don&apos;t need a PhD or a CS
