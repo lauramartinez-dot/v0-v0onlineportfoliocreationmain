@@ -1072,6 +1072,7 @@ function CompanyCard({
   description,
   skills,
   tools,
+  highlights,
   duration,
   logoClassName = "px-3 py-2 md:px-4 md:py-3",
 }: {
@@ -1089,6 +1090,7 @@ function CompanyCard({
   description?: React.ReactNode
   skills?: string[]
   tools?: string[]
+  highlights?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
 
@@ -1176,6 +1178,7 @@ function CompanyCard({
               {children}
               {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
             </div>
+            {highlights && highlights.length > 0 && <HighlightsPanel highlights={highlights} />}
             {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
   </div>
@@ -1268,6 +1271,11 @@ export default function CareerMapSection() {
             countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation"]}
+            highlights={[
+              "Joined OMP as the second Technical Writer for integrations and APIs",
+              "Leading the move to docs-as-code, built into the development workflow",
+              "Building AI agents and skills that automate repetitive writing work",
+            ]}
             description={
               <>
                 I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
@@ -1303,6 +1311,13 @@ export default function CareerMapSection() {
             countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decision-making"]}
+            highlights={[
+              "Joined Personio as a foundational Technical Writer",
+              "Became Personio\u2019s first-ever Senior Technical Writer",
+              "Grew the documentation team from 3 writers to a global team of 10+",
+              "Led the expansion of documentation from 3 languages to 6",
+              "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
+            ]}
             tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
             description={
               <>
@@ -1337,6 +1352,22 @@ export default function CareerMapSection() {
         </div>
       </section>
     </>
+  )
+}
+
+function HighlightsPanel({ highlights }: { highlights: string[] }) {
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6">
+      <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">High-ownership achievements</h4>
+      <ul className="flex flex-col divide-y divide-white/10">
+        {highlights.map((item) => (
+          <li key={item} className="flex items-start gap-4 py-3 first:pt-0 last:pb-0">
+            <span aria-hidden="true" className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span className="text-base leading-relaxed text-foreground/85 text-pretty md:text-lg">{item}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 
