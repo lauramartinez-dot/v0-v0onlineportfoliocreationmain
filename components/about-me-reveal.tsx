@@ -36,25 +36,19 @@ const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-w
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <div className="flex flex-col gap-20 py-10 md:gap-28 md:py-16">
-        <p className={`${storyLineClass} mx-auto px-6 text-center`}>
-          I&apos;m a tech journalist
-          <br />
-          turned technical writer.
+      <div className="flex flex-col gap-20 pt-10 pb-20 md:gap-28 md:pt-16 md:pb-32">
+        <p className={`${storyLineClass} mx-auto max-w-md px-6 text-center md:max-w-lg`}>
+          I&apos;m a tech journalist turned technical writer.
         </p>
-        <p className={`${storyLineClass} mx-auto px-6 text-center`}>
-          I still write about
-          <br />
-          technology and software.
+        <p className={`${storyLineClass} mx-auto max-w-md px-6 text-center md:max-w-lg`}>
+          I still write about technology and software.
         </p>
-        <p className={`${storyLineClass} mx-auto px-6 text-center`}>
-          Only now I do it for tech companies
-          <br />
-          instead of the media.
+        <p className={`${storyLineClass} mx-auto max-w-md px-6 text-center md:max-w-lg`}>
+          Only now I do it for tech companies instead of the media.
         </p>
       </div>
 
-      <div className="flex flex-col gap-10 md:gap-12">
+      <div className="flex flex-col gap-10 pt-6 md:gap-12 md:pt-10">
         <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
           <ArticleCard
             era="Before"
