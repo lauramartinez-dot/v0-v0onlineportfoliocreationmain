@@ -78,8 +78,8 @@ const principles: Principle[] = [
     title: "High ownership",
     description: (
       <>
-        Whatever I take on, I see through <Em>to the end</Em>. I prioritise, so some things wait in the backlog,
-        but nothing gets dropped just because nobody&apos;s chasing me.
+        I&apos;m comfortable being <Em>the first writer</Em> on a team, or one of the first. I don&apos;t need a
+        playbook to start. I&apos;m used to figuring out the path as I go.
       </>
     ),
     proof: [
