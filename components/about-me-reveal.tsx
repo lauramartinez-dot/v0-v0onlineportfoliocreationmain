@@ -36,9 +36,11 @@ const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-w
 export function AboutMeIntro() {
   return (
     <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <p className={`${storyLineClass} mx-auto max-w-md px-6 pt-10 text-center md:max-w-lg md:pt-16`}>
-        I&apos;m a tech journalist turned technical writer.
-      </p>
+      <div className="mx-auto mt-4 w-fit rounded-3xl border border-white/10 bg-white/[0.04] px-10 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:mt-8 md:px-16 md:py-14">
+        <p className={`${storyLineClass} mx-auto max-w-md text-center md:max-w-lg`}>
+          I&apos;m a tech journalist turned technical writer.
+        </p>
+      </div>
 
       <div className="flex flex-col gap-10 md:gap-12">
         <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
