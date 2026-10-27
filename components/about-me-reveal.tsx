@@ -41,10 +41,10 @@ export function AboutMeIntro() {
       </p>
 
       <div className="flex flex-col gap-10 md:gap-12">
-        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center md:max-w-lg`}>
+        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
           I still write about technology and software.
         </p>
-        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center md:max-w-lg`}>
+        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
           Only now I do it for tech companies instead of the media.
         </p>
         <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
