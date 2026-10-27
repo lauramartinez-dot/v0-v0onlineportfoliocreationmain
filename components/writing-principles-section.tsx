@@ -79,7 +79,7 @@ const principles: Principle[] = [
     description: (
       <>
         I&apos;m comfortable being <Em>the first writer</Em> on a team, or one of the first. I don&apos;t need a
-        playbook to start. I&apos;m used to figuring out the path as I go.
+        playbook. I&apos;m used to figuring out the path as I go.
       </>
     ),
     proof: [
@@ -122,8 +122,8 @@ const principles: Principle[] = [
     title: "AI, but not always",
     description: (
       <>
-        I use AI all day, mostly Copilot and Claude. But knowing when <Em>not to use it</Em> matters even more. You
-        won&apos;t find AI slop here, or a single {"\u201CI work at the intersection of\u2026\u201D"}
+        I use AI all day long. But more importantly, I know when <Em>not to use it</Em>. You won&apos;t find AI slop
+        here, or a single {"\u201CI work at the intersection of\u2026\u201D"}
       </>
     ),
     proof: [
@@ -151,7 +151,7 @@ const principles: Principle[] = [
     description: (
       <>
         I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people who use them. If
-        data shows a page isn&apos;t clear enough, I rewrite it, even when I was sure I&apos;d nailed it.
+        data shows a page isn&apos;t clear enough, I rewrite it.
       </>
     ),
     proof: [
@@ -178,8 +178,8 @@ const principles: Principle[] = [
     title: "Less is more",
     description: (
       <>
-        I see my job as a technical writer as <Em>subtracting</Em>, not adding {"\u2014"} taking information away until
-        only what matters is left. I write as if every extra sentence cost me 50 euros.
+        I see my job as a technical writer as subtracting and taking information away, <Em>not adding it</Em>. I
+        write as if every extra sentence cost me 50 euros.
       </>
     ),
     proof: [
@@ -199,7 +199,7 @@ const principles: Principle[] = [
     description: (
       <>
         Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
-        up, do they stay inside the app or design the systems around it? <Em>How technical</Em> are they, really?
+        up, do they stay inside the app? <Em>How technical</Em> are they, really?
       </>
     ),
     proof: [
@@ -222,8 +222,8 @@ const principles: Principle[] = [
     title: "Radical candor",
     description: (
       <>
-        I&apos;m big on transparency and candid feedback, so you&apos;ll <Em>never have to guess</Em>. You&apos;ll
-        always know where my work stands, and if I have an issue, you&apos;ll hear it from me first.
+        I&apos;m big on transparency and candid feedback. If something&apos;s off, <Em>I say so</Em>, and I&apos;m
+        never shy about sharing my point of view.
       </>
     ),
     proof: [
