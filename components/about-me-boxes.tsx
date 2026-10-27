@@ -172,7 +172,7 @@ const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === t
 export function AboutMeBoxes() {
   return (
     <StaggerReveal
-      className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr"
+      className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 auto-rows-fr"
       itemClassName="flex [&>*]:flex-1"
       step={250}
     >
@@ -181,18 +181,18 @@ export function AboutMeBoxes() {
           <DialogTrigger asChild>
             <button
               type="button"
-              className="group relative flex h-full min-h-[300px] cursor-pointer flex-col gap-6 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-10 text-left shadow-[0_0_0_0_rgba(0,0,0,0)] transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:bg-primary/[0.14] hover:shadow-[0_20px_50px_-20px_var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+              className="group relative flex h-full cursor-pointer flex-col gap-5 overflow-hidden rounded-3xl border border-primary/25 bg-primary/[0.08] p-8 text-left transition-all duration-300 hover:-translate-y-1.5 hover:border-primary/60 hover:bg-primary/[0.14] hover:shadow-[0_20px_50px_-20px_var(--primary)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:p-10"
             >
               <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary ring-1 ring-primary/30">
                 <box.icon className="h-7 w-7" />
               </span>
               <span
                 aria-hidden="true"
-                className="absolute top-8 right-8 flex h-11 w-11 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground"
+                className="absolute top-8 right-8 flex size-9 items-center justify-center rounded-full border border-primary/40 bg-primary/10 text-primary transition-all duration-300 group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground md:top-10 md:right-10"
               >
-                <ArrowUpRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                <ArrowUpRight className="size-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               </span>
-              <span className="text-2xl font-bold leading-tight text-white text-balance md:text-3xl">{box.title}</span>
+              <span className="text-2xl font-bold leading-tight tracking-tight text-white text-balance md:text-3xl">{box.title}</span>
               <span className="text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">{box.teaser}</span>
             </button>
           </DialogTrigger>

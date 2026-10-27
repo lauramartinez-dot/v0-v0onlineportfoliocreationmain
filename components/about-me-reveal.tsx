@@ -34,23 +34,34 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
 const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
 
+function Lead({ children }: { children: ReactNode }) {
+  return (
+    <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>{children}</p>
+  )
+}
+
+function Colon() {
+  return <span className="text-primary">:</span>
+}
+
+const pairGrid = "grid grid-cols-2 items-stretch gap-4 md:gap-8"
+const group = "flex flex-col gap-8 md:gap-10"
+
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-32 md:px-12 md:py-24">
-      <div className="mx-auto mt-4 w-fit rounded-3xl border border-white/10 bg-white/[0.04] px-10 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:mt-8 md:px-16 md:py-14">
+    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
+      <div className="mx-auto w-fit rounded-3xl border border-white/10 bg-white/[0.04] px-10 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:px-16 md:py-14">
         <p className={`${storyLineClass} mx-auto max-w-md text-center md:max-w-lg`}>
           I&apos;m a tech journalist turned technical writer.
         </p>
       </div>
 
-      <div className="flex flex-col gap-10 md:gap-12">
-        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
-          I still write about technology and software.
-        </p>
-        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
-          Only now I do it for tech companies instead of the media.
-        </p>
-        <div className="grid grid-cols-2 items-end gap-4 md:gap-8">
+      <div className={group}>
+        <div className="flex flex-col gap-6 md:gap-8">
+          <Lead>I still write about technology and software.</Lead>
+          <Lead>Only now I do it for tech companies instead of the media.</Lead>
+        </div>
+        <div className={pairGrid}>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
@@ -63,24 +74,24 @@ export function AboutMeIntro() {
             imageAlt="Documentation page titled What is an API? on a laptop screen"
           />
         </div>
-        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
-          And for a wider range of readers:
-        </p>
-        <div className="grid grid-cols-2 items-stretch gap-4 md:gap-8">
+      </div>
+
+      <div className={group}>
+        <Lead>
+          And for a wider range of readers
+          <Colon />
+        </Lead>
+        <div className={pairGrid}>
           <AudienceRangeCard title="Low technical knowledge" />
           <AudienceSpectrumCard />
         </div>
       </div>
 
-      {/* Pull this block closer to the Before/Now cards than the parent gap allows */}
-      <div id="why" className="-mt-4 flex scroll-mt-32 flex-col gap-12 md:-mt-6 md:gap-14">
-        <div className="flex items-center gap-6 md:gap-8">
-          <span className="h-px flex-1 bg-gradient-to-r from-transparent to-primary/50" aria-hidden="true" />
-          <p className={storyLineClass}>
-            I am also<span className="text-primary">:</span>
-          </p>
-          <span className="h-px flex-1 bg-gradient-to-l from-transparent to-primary/50" aria-hidden="true" />
-        </div>
+      <div id="why" className={`${group} scroll-mt-32`}>
+        <Lead>
+          I am also
+          <Colon />
+        </Lead>
         <AboutMeBoxes />
       </div>
     </StaggerReveal>
