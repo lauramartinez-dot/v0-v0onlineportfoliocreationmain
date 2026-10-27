@@ -84,23 +84,23 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title: "Joined OMP as the second technical writer for integrations & APIs",
+        title: "Joined OMP as the second Technical Writer for integrations and APIs",
         where: "OMP",
       },
       {
-        title: "Pioneering the move to docs-as-code, with documentation fully inside the development workflow",
+        title: "Leading the move to docs-as-code, built into the development workflow",
         where: "OMP",
       },
       {
-        title: "Pioneering the creation of AI agents and skills to automate repetitive, time-consuming writing tasks",
+        title: "Building AI agents and skills that automate repetitive writing work",
         where: "OMP",
       },
       {
-        title: "Joined Personio as a foundational technical writer",
+        title: "Joined Personio as a foundational Technical Writer",
         where: "Personio",
       },
       {
-        title: "Became Personio\u2019s first-ever senior technical writer",
+        title: "Became Personio\u2019s first-ever Senior Technical Writer",
         where: "Personio",
       },
       {
