@@ -179,7 +179,7 @@ const principles: Principle[] = [
     description: (
       <>
         I see my job as a technical writer as subtracting and taking information away, <Em>not adding it</Em>. I
-        write as if every extra sentence cost me 50 euros.
+        write as if every extra sentence cost me 50{"\u20AC"}.
       </>
     ),
     proof: [
