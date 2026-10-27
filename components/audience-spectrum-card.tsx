@@ -1,7 +1,7 @@
 const levels = [
-  { level: "Low", role: "Everyday software users", fill: "bg-white/[0.02]" },
-  { level: "Medium", role: "Implementation managers", fill: "bg-white/[0.05]" },
-  { level: "High", role: "Developers", fill: "bg-white/[0.08]" },
+  { level: "Low", fill: "bg-white/[0.02]" },
+  { level: "Medium", fill: "bg-white/[0.05]" },
+  { level: "High", fill: "bg-white/[0.08]" },
 ]
 
 export function AudienceSpectrumCard() {
@@ -17,7 +17,6 @@ export function AudienceSpectrumCard() {
             className={`absolute inset-y-0 -inset-x-10 -skew-x-12 ${item.fill} ${index > 0 ? "border-l border-white/10" : ""}`}
           />
           <p className="relative font-sans text-xl leading-snug text-white md:text-2xl">{item.level}</p>
-          <p className="relative font-sans text-sm leading-relaxed text-pretty text-white/70 md:text-base">{item.role}</p>
         </li>
       ))}
     </ul>
