@@ -67,8 +67,12 @@ export function AboutMeIntro() {
           The audience has also changed:
         </p>
         <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
-          <AudienceRangeCard era="Before" coverage={40} readers="Everyday software users" />
-          <AudienceRangeCard era="Now" coverage={100} readers="Everyday users, devs and system architects" />
+          <AudienceRangeCard era="Before" title="Low technical knowledge" />
+          <AudienceRangeCard
+            era="Now"
+            title="A wider range of technical knowledge"
+            detail="Depending on whether they are an everyday software user, an implementation manager or a dev."
+          />
         </div>
       </div>
 
