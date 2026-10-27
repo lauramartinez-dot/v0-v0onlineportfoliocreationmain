@@ -2,6 +2,7 @@ import type { ReactNode } from "react"
 import { ArrowUpRight } from "lucide-react"
 import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
+import { AudienceRangeCard } from "@/components/audience-range-card"
 import { AboutMeBoxes } from "@/components/about-me-boxes"
 
 export function AboutMeHeading() {
@@ -62,11 +63,13 @@ export function AboutMeIntro() {
             imageAlt="Documentation page titled What is an API? on a laptop screen"
           />
         </div>
-        <p className={`${storyDetailClass} mx-auto max-w-4xl text-center`}>
-          Just like before, I still write for people with limited technical knowledge (everyday software users), who
-          shouldn&apos;t need a CS degree or a PhD to get it. But now I also write for people with deep technical
-          knowledge (devs, system architects).
+        <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>
+          The audience has also changed:
         </p>
+        <div className="grid grid-cols-2 items-start gap-4 md:gap-8">
+          <AudienceRangeCard era="Before" coverage={40} readers="Everyday software users" />
+          <AudienceRangeCard era="Now" coverage={100} readers="Everyday users, devs and system architects" />
+        </div>
       </div>
 
       {/* Pull this block closer to the Before/Now cards than the parent gap allows */}
