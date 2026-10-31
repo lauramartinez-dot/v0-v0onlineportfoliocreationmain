@@ -95,11 +95,14 @@ export function AboutMeIntro() {
         </p>
       </div>
 
-      <div id="why" className={`${group} scroll-mt-32`}>
-        <Lead>
+      <div
+        id="why"
+        className="flex scroll-mt-32 flex-col gap-10 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:gap-12 md:px-12 md:py-14"
+      >
+        <p className={`${storyLineClass} text-center`}>
           I am also
           <Colon />
-        </Lead>
+        </p>
         <AboutMeBoxes />
       </div>
     </StaggerReveal>
