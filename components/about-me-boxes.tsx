@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/dialog"
 import { EuropePinsMap } from "@/components/europe-pins-map"
 import { cn } from "@/lib/utils"
+import { StaggerReveal } from "@/components/stagger-reveal"
 
 const languages = [
   { name: "Spanish", level: "Native" },
@@ -170,7 +171,11 @@ const orderedBoxes = boxOrder.map((title) => boxes.find((box) => box.title === t
 
 export function AboutMeBoxes() {
   return (
-    <div className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 auto-rows-fr">
+    <StaggerReveal
+      className="mx-auto grid w-full max-w-7xl grid-cols-1 gap-4 md:grid-cols-2 md:gap-8 lg:grid-cols-3 auto-rows-fr"
+      itemClassName="flex [&>*]:flex-1"
+      step={250}
+    >
       {orderedBoxes.map((box) => (
         <Dialog key={box.title}>
           <DialogTrigger asChild>
@@ -205,6 +210,6 @@ export function AboutMeBoxes() {
           </DialogContent>
         </Dialog>
       ))}
-    </div>
+    </StaggerReveal>
   )
 }
