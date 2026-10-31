@@ -1161,16 +1161,12 @@ function CompanyCard({
                   <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                     {description}
                   </p>
-                  <p className="text-base leading-relaxed text-foreground/55 md:text-[17px]">
-                    You&apos;ll find my achievements from this role under{" "}
-                    <a
-                      href="#writing-principles"
-                      className="font-semibold text-primary underline-offset-4 hover:underline"
-                    >
-                      Core principles
-                    </a>
-                    .
-                  </p>
+                  <a
+                    href="#writing-principles"
+                    className="w-fit text-base font-semibold leading-relaxed text-primary underline-offset-4 hover:underline md:text-[17px]"
+                  >
+                    See my achievements from this role under Core principles.
+                  </a>
                 </div>
               )}
               {children}
