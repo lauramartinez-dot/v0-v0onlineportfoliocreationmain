@@ -32,10 +32,8 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
 const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
 
-function Lead({ children }: { children: ReactNode }) {
-  return (
-    <p className={`${storyDetailClass} mx-auto max-w-md px-6 text-center text-white/70 md:max-w-lg`}>{children}</p>
-  )
+function Lead({ children, className = "max-w-md md:max-w-lg" }: { children: ReactNode; className?: string }) {
+  return <p className={`${storyDetailClass} mx-auto px-6 text-center text-white/70 ${className}`}>{children}</p>
 }
 
 function Colon() {
@@ -57,7 +55,7 @@ export function AboutMeIntro() {
       <div className={group}>
         <div className="flex flex-col gap-6 md:gap-8">
           <Lead>I still write about technology and software.</Lead>
-          <Lead>Only now I do it for tech companies instead of the media.</Lead>
+          <Lead>But now I do it for tech companies instead of the media.</Lead>
         </div>
         <div className={pairGrid}>
           <ArticleCard
@@ -77,7 +75,11 @@ export function AboutMeIntro() {
       <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
           <div className="flex flex-col gap-6 md:gap-8">
-            <Lead>These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.</Lead>
+            <Lead className="max-w-xl md:max-w-2xl">
+            These days, I&apos;m also less of a writer
+            <br />
+            and more of an editor-in-chief.
+          </Lead>
             <Lead>
               My team is me and a brilliant but overconfident intern
               <Colon />
