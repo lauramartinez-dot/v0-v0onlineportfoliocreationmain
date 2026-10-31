@@ -150,8 +150,8 @@ const principles: Principle[] = [
     title: "Data over gut feeling",
     description: (
       <>
-        I <Em>don&apos;t assume</Em> my docs are helpful. I want to hear it from the people who use them. If
-        data shows a page isn&apos;t clear enough, I rewrite it.
+        I work in a way where my own opinions and preferences are <Em>completely irrelevant</Em>. Is the content
+        clear? Is it easy to navigate? You tell me.
       </>
     ),
     proof: [
@@ -188,7 +188,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Kept this portfolio to five sections, with no decorative stats or filler",
+        title: "I keep this portfolio as short and tight as possible",
         where: "This portfolio",
       },
     ],
@@ -204,11 +204,11 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
+        title: "Tailored documentation to 5+ audiences, from admins to everyday employees",
         where: "Personio",
       },
       {
-        title: "Helped build role-based navigation so 5+ user groups each land on their own path",
+        title: "Helped build role-based navigation so 5+ audiences each land on their own path",
         where: "Personio",
       },
       {
@@ -251,9 +251,10 @@ export function WritingPrinciplesSection() {
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
-          <p className="mx-auto mt-8 flex max-w-xl items-center justify-center gap-2 text-base text-white/60 text-pretty md:text-lg">
-            Click a principle to see how I&apos;ve put it into practice.
-            <ArrowUpRight className="h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
+          <p className="mx-auto mt-8 max-w-2xl text-center text-base text-white/60 text-pretty md:text-lg">
+            These are the non-negotiables I bring to every job and project. Click a principle to see how I&apos;ve put
+            it into practice.
+            <ArrowUpRight className="ml-2 inline-block h-5 w-5 align-text-bottom text-primary" aria-hidden="true" />
           </p>
         </div>
 
