@@ -89,6 +89,10 @@ export function AboutMeIntro() {
             className="object-cover"
           />
         </div>
+        <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
+          So most of my time now goes into research, learning about the topic, talking to experts, briefing my intern
+          on what I&apos;ve learned (aka prompting), and reviewing what they write.
+        </p>
       </div>
 
       <div id="why" className={`${group} scroll-mt-32`}>
