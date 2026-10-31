@@ -80,10 +80,10 @@ export function AboutMeIntro() {
           These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief. My team is me and a
           brilliant but overconfident intern.
         </p>
-        <div className="relative mx-auto aspect-video w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+        <div className="relative mx-auto aspect-[3/2] w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
           <Image
-            src="/editor-in-chief.png"
-            alt="Illustration of an editor reviewing pages with a red pen while a cheerful robot intern holds up a stack of pages, one marked with a red X"
+            src="/editor-in-chief.jpg"
+            alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
             fill
             sizes="(min-width: 1024px) 896px, 100vw"
             className="object-cover"
