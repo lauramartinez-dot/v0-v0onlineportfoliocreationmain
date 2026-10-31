@@ -189,7 +189,7 @@ const principles: Principle[] = [
         where: "Personio",
       },
       {
-        title: "Kept this portfolio to five sections, with no decorative stats or filler",
+        title: "I keep this portfolio as short and tight as possible",
         where: "This portfolio",
       },
     ],
