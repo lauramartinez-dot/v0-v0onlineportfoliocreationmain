@@ -125,7 +125,7 @@ const boxes: Box[] = [
   {
     title: "Mission-driven",
     icon: Telescope,
-    teaser: "15+ years making tech knowledge open to everyone.",
+    teaser: "15+ years making tech open to everyone.",
     imageSrc: "/people-sharing-tablet.jpg",
     imageAlt: "Top-down view of a group of people gathered around a table sharing a tablet and phones",
     body: (
@@ -147,7 +147,7 @@ const boxes: Box[] = [
   {
     title: "Startup-minded",
     icon: Rocket,
-    teaser: "Spent most of my career at startups. Love building stuff.",
+    teaser: "Spent most of my career at startups.",
     imageSrc: "/startup-office-cafe.png",
     imageAlt: "Bright modern office cafe with a terrazzo coffee bar, hanging ferns and blue-framed windows",
     body: (

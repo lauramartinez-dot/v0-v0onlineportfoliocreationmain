@@ -78,7 +78,8 @@ export function AboutMeIntro() {
       <div className={group}>
         <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
           These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief. My team is me and a
-          brilliant but overconfident intern.
+          brilliant but overconfident intern
+          <Colon />
         </p>
         <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
           <Image
