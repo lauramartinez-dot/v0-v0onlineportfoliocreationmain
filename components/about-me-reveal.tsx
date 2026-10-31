@@ -74,7 +74,7 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-16 md:gap-20">
+      <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
           <div className="flex flex-col gap-6 md:gap-8">
             <Lead>These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.</Lead>
