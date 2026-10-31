@@ -150,9 +150,8 @@ const principles: Principle[] = [
     title: "Data over gut feeling",
     description: (
       <>
-        I like to work in a way where my own opinions and preferences about the writing are{" "}
-        <Em>completely irrelevant</Em>. Is the content I write truly helpful to you? Is it easy to navigate? You tell
-        me.
+        I work in a way where my own opinions and preferences are <Em>completely irrelevant</Em>. Is the content
+        clear? Is it easy to navigate? You tell me.
       </>
     ),
     proof: [
