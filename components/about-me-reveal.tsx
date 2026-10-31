@@ -57,7 +57,7 @@ export function AboutMeIntro() {
       <div className={group}>
         <div className="flex flex-col gap-6 md:gap-8">
           <Lead>I still write about technology and software.</Lead>
-          <Lead>Only now I do it for tech companies instead of the media.</Lead>
+          <Lead>But now I do it for tech companies instead of the media.</Lead>
         </div>
         <div className={pairGrid}>
           <ArticleCard
@@ -77,7 +77,7 @@ export function AboutMeIntro() {
       <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
           <div className="flex flex-col gap-6 md:gap-8">
-            <Lead>These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.</Lead>
+            <Lead>These days, I&apos;m also less of a writer and more of an editor-in-chief.</Lead>
             <Lead>
               My team is me and a brilliant but overconfident intern
               <Colon />
