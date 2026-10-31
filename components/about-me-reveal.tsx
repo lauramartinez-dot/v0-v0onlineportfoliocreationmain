@@ -75,7 +75,8 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div className={group}>
+      <div className="flex flex-col gap-10 md:gap-12">
+      <div className="flex flex-col gap-5 md:gap-6">
         <div className="flex flex-col gap-6 md:gap-8">
           <Lead>These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.</Lead>
           <Lead>
@@ -104,6 +105,7 @@ export function AboutMeIntro() {
           <Colon />
         </p>
         <AboutMeBoxes />
+      </div>
       </div>
     </StaggerReveal>
   )
