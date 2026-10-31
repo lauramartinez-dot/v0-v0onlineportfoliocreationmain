@@ -76,11 +76,15 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
-          These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief. My team is me and a
-          brilliant but overconfident intern
-          <Colon />
-        </p>
+        <div className="flex flex-col gap-6 md:gap-8">
+          <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
+            These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.
+          </p>
+          <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
+            My team is me and a brilliant but overconfident intern
+            <Colon />
+          </p>
+        </div>
         <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
           <Image
             src="/editor-in-chief.jpg"
@@ -91,8 +95,7 @@ export function AboutMeIntro() {
           />
         </div>
         <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
-          So most of my time now goes into research, talking to experts, briefing my intern on what I&apos;ve learned
-          (aka prompting), and reviewing what they write.
+          So I review and rewrite a lot, and keep teaching them so they need less supervision over time.
         </p>
       </div>
 
