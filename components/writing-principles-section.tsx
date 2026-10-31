@@ -205,11 +205,11 @@ const principles: Principle[] = [
     ),
     proof: [
       {
-        title: "Tailored documentation to 5+ user groups, from admins to everyday employees",
+        title: "Tailored documentation to 5+ audiences, from admins to everyday employees",
         where: "Personio",
       },
       {
-        title: "Helped build role-based navigation so 5+ user groups each land on their own path",
+        title: "Helped build role-based navigation so 5+ audiences each land on their own path",
         where: "Personio",
       },
       {
