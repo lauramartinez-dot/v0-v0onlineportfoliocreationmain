@@ -1,6 +1,5 @@
 import type { ReactNode } from "react"
 import Image from "next/image"
-import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
 import { AboutMeBoxes } from "@/components/about-me-boxes"
 
@@ -48,7 +47,7 @@ const group = "flex flex-col gap-8 md:gap-10"
 
 export function AboutMeIntro() {
   return (
-    <StaggerReveal className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
       <div className="mx-auto w-fit rounded-3xl border border-white/10 bg-white/[0.04] px-10 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:px-16 md:py-14">
         <p className={`${storyLineClass} mx-auto max-w-md text-center md:max-w-lg`}>
           I&apos;m a tech journalist turned technical writer.
@@ -75,39 +74,39 @@ export function AboutMeIntro() {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 md:gap-12">
-      <div className="flex flex-col gap-5 md:gap-6">
-        <div className="flex flex-col gap-6 md:gap-8">
-          <Lead>These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.</Lead>
-          <Lead>
-            My team is me and a brilliant but overconfident intern
-            <Colon />
-          </Lead>
+      <div className="flex flex-col gap-16 md:gap-20">
+        <div className={group}>
+          <div className="flex flex-col gap-6 md:gap-8">
+            <Lead>These days, I&apos;m less of a {"\u201Cwriter\u201D"} and more of an editor-in-chief.</Lead>
+            <Lead>
+              My team is me and a brilliant but overconfident intern
+              <Colon />
+            </Lead>
+          </div>
+          <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+            <Image
+              src="/editor-in-chief.jpg"
+              alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
+              fill
+              sizes="(min-width: 768px) 672px, 100vw"
+              className="object-cover"
+            />
+          </div>
+          <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
         </div>
-        <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-          <Image
-            src="/editor-in-chief.jpg"
-            alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
-            fill
-            sizes="(min-width: 768px) 672px, 100vw"
-            className="object-cover"
-          />
-        </div>
-        <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
-      </div>
 
-      <div
-        id="why"
-        className="flex scroll-mt-32 flex-col gap-10 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:gap-12 md:px-12 md:py-14"
-      >
-        <p className={`${storyLineClass} text-center`}>
-          I am also
-          <Colon />
-        </p>
-        <AboutMeBoxes />
+        <div
+          id="why"
+          className="flex scroll-mt-32 flex-col gap-10 rounded-3xl border border-white/10 bg-white/[0.04] px-6 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:gap-12 md:px-12 md:py-14"
+        >
+          <p className={`${storyLineClass} text-center`}>
+            I am also
+            <Colon />
+          </p>
+          <AboutMeBoxes />
+        </div>
       </div>
-      </div>
-    </StaggerReveal>
+    </div>
   )
 }
 
