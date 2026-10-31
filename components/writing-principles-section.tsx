@@ -65,16 +65,10 @@ function SourceBadge({ source }: { source: Source }) {
   )
 }
 
-type Audience = {
-  level: string
-  who: string
-}
-
 type Principle = {
   icon: LucideIcon
   title: string
   description: ReactNode
-  audiences?: Audience[]
   proof: Proof[]
 }
 
@@ -208,20 +202,6 @@ const principles: Principle[] = [
         up, do they stay inside the app? <Em>How technical</Em> are they, really?
       </>
     ),
-    audiences: [
-      {
-        level: "Low technical knowledge",
-        who: "People with no technical background who use the software every day, or who read about technology in the news.",
-      },
-      {
-        level: "Medium technical knowledge",
-        who: "People with some technical background, usually gained on the job, who set up the software or help others set it up.",
-      },
-      {
-        level: "High technical knowledge",
-        who: "People with a technical background who build the software and the systems around it, and keep them running. They write code.",
-      },
-    ],
     proof: [
       {
         title: "Tailored documentation to 5+ audiences, from admins to everyday employees",
@@ -279,7 +259,7 @@ export function WritingPrinciplesSection() {
         </div>
 
         <ul className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 items-stretch auto-rows-fr">
-          {principles.map(({ icon: Icon, title, description, audiences, proof }) => (
+          {principles.map(({ icon: Icon, title, description, proof }) => (
             <li key={title} className="flex [&>*]:flex-1">
               <Dialog>
                 <DialogTrigger asChild>
@@ -314,33 +294,6 @@ export function WritingPrinciplesSection() {
                       {description}
                     </DialogDescription>
                   </DialogHeader>
-
-                  {audiences && (
-                    <div className="flex flex-col gap-4 border-b border-white/10 px-8 py-8 md:px-12 md:py-10">
-                      <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/45">
-                        Who I write for
-                      </h3>
-                      <ol className="grid gap-4 md:grid-cols-3">
-                        {audiences.map((audience, index) => (
-                          <li
-                            key={audience.level}
-                            className="flex flex-col gap-3 rounded-3xl border border-white/10 bg-white/[0.04] p-6"
-                          >
-                            <div className="flex items-center gap-2" aria-hidden="true">
-                              {Array.from({ length: 3 }, (_, i) => (
-                                <span
-                                  key={i}
-                                  className={`h-1.5 flex-1 rounded-full ${i <= index ? "bg-primary" : "bg-white/15"}`}
-                                />
-                              ))}
-                            </div>
-                            <h4 className="text-lg font-semibold leading-snug text-white">{audience.level}</h4>
-                            <p className="text-sm leading-relaxed text-white/60 text-pretty">{audience.who}</p>
-                          </li>
-                        ))}
-                      </ol>
-                    </div>
-                  )}
 
                   <div className="flex flex-col gap-4 px-8 py-8 md:px-12 md:py-10">
                     <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white/45">In practice</h3>
