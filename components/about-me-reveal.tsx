@@ -1,8 +1,7 @@
 import type { ReactNode } from "react"
+import Image from "next/image"
 import { StaggerReveal } from "@/components/stagger-reveal"
 import { ArticleCard } from "@/components/article-card"
-import { AudienceRangeCard } from "@/components/audience-range-card"
-import { AudienceSpectrumCard } from "@/components/audience-spectrum-card"
 import { AboutMeBoxes } from "@/components/about-me-boxes"
 
 export function AboutMeHeading() {
@@ -77,13 +76,18 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <Lead>
-          And for a wider range of readers
-          <Colon />
-        </Lead>
-        <div className={pairGrid}>
-          <AudienceRangeCard title="Low technical knowledge" />
-          <AudienceSpectrumCard />
+        <p className={`${storyDetailClass} mx-auto max-w-2xl px-6 text-center text-white/70 md:max-w-3xl`}>
+          These days, I&apos;m less of a traditional {"\u201Cwriter\u201D"} and more of an editor-in-chief. My team is
+          me and a brilliant but overconfident intern.
+        </p>
+        <div className="relative mx-auto aspect-video w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+          <Image
+            src="/editor-in-chief.png"
+            alt="Illustration of an editor reviewing pages with a red pen while a cheerful robot intern holds up a stack of pages, one marked with a red X"
+            fill
+            sizes="(min-width: 1024px) 896px, 100vw"
+            className="object-cover"
+          />
         </div>
       </div>
 
