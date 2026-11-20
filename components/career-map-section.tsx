@@ -1263,7 +1263,7 @@ export default function CareerMapSection() {
             country="Barcelona, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
-            skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation"]}
+            skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation", "Content governance"]}
             description={
               <>
                 I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
@@ -1298,7 +1298,7 @@ export default function CareerMapSection() {
             country="Barcelona, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
-            skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decision-making"]}
+            skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decision-making", "Content operations"]}
             tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
             description={
               <>
