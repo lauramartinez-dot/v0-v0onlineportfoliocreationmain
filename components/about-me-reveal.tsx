@@ -53,7 +53,7 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <p className="max-w-prose text-left text-lg leading-relaxed text-white/80 md:text-xl md:leading-relaxed">
+        <p className="max-w-4xl text-left text-2xl font-semibold leading-snug tracking-tight text-white/90 md:text-3xl md:leading-snug">
           I used to write about tech for publications like Business Insider and Muy Interesante (4 million monthly readers).
           I still write about technology and software, but now I do it for tech companies.
         </p>
