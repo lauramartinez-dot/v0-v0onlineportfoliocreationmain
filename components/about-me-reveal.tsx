@@ -85,7 +85,7 @@ export function AboutMeIntro() {
             <p className="text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">So I write less and spend more time on:</p>
             <ul className="mt-4 flex list-disc flex-col gap-2 pl-6 text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">
               {editorialSkills.map(([skill, description]) => (
-                <li key={skill}>{description} <span className="text-primary">(</span>{skill.toLowerCase()}<span className="text-primary">)</span></li>
+                <li key={skill}>{description} <span className="text-primary">({skill.toLowerCase()})</span></li>
               ))}
             </ul>
           </div>
