@@ -5,7 +5,7 @@ const personalProjects = [
     id: "portfolio",
     title: "This portfolio",
     description: "I use this portfolio as a playground\nfor vibe-coding and AI-assisted creation.",
-    tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "Claude", "UX writing", "Content design"],
+    tags: ["Vibe-coding", "AI", "v0 by Vercel", "UX writing", "Content design"],
     image: "/project-portfolio-ai.png",
     imageAlt: "Laptop with a code editor and an AI chat panel side by side, lit in pink",
   },
