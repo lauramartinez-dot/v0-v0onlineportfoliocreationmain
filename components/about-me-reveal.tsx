@@ -31,7 +31,7 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
 function Lead({ children }: { children: ReactNode }) {
-  return <p className="mx-auto w-full max-w-2xl text-left text-lg font-normal leading-relaxed text-white/80 md:text-xl">{children}</p>
+  return <p className="mx-auto w-full max-w-2xl text-left text-2xl font-bold leading-tight tracking-tight text-pretty text-white/70 md:text-3xl">{children}</p>
 }
 
 function Colon() {
