@@ -74,7 +74,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>I decide what each guide should cover based on what readers need to do. I use AI to help draft it, then verify the details, edit for clarity, and make the final call on publication. I use what I learn from each review to give clearer instructions for the next draft.</Lead>
+          <Lead>So I still review and rewrite a lot. If I keep making the same correction, I change the instructions or add a check for the next draft. I write docs that people can follow and chatbots can use to answer questions. Either way, I’m responsible for what we publish.</Lead>
         </div>
 
         <div
