@@ -74,7 +74,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>I turn edits into better instructions and write docs for people and chatbots. What we publish is my responsibility.</Lead>
+          <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
         </div>
 
         <div
