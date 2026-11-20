@@ -55,7 +55,23 @@ export function AboutMeIntro() {
 
       <div className={pairGrid}>
         <div className={captionedCard}>
-          <Lead className="self-end">I used to write for publications like Business Insider Spain <span className="text-[0.75em]">(around 4M monthly readers).</span></Lead>
+          <div className="flex flex-col gap-6 self-end">
+            <Lead>I used to write for publications like:</Lead>
+            <ul aria-label="Publications and their reported audiences" className="grid grid-cols-3 gap-2 text-center md:gap-4">
+              {[
+                { name: "Business Insider Spain", logo: "/business-insider-espana-logo.png", reach: "Around 4M monthly readers" },
+                { name: "Xataka", logo: "/xataka-logo.png", reach: "12M+ monthly users" },
+                { name: "Muy Interesante", logo: "/muy-interesante-logo.png", reach: "1.18M monthly print readers (EGM, 2021)" },
+              ].map(({ name, logo, reach }) => (
+                <li key={name} className="flex min-w-0 flex-col items-center gap-2">
+                  <div className="flex h-12 w-full max-w-36 items-center justify-center rounded-md bg-white px-2">
+                    <Image src={logo} alt={name} width={136} height={40} className="h-full w-full object-contain" />
+                  </div>
+                  <span className="text-balance text-sm leading-snug text-white/70">{reach}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
