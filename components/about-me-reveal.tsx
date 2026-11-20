@@ -74,7 +74,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
+          <Lead>I decide who we’re writing for and what they need to know. My intern can draft, but I check the facts, rewrite what’s unclear, and decide what’s ready to publish. When a mistake keeps coming up, I change how I ask for the next draft.</Lead>
         </div>
 
         <div
