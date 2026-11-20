@@ -38,7 +38,7 @@ function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const pairGrid = "grid grid-cols-2 items-stretch gap-4 md:gap-8"
+const captionPair = "grid min-w-0 gap-4 md:row-span-2 md:grid-rows-subgrid md:gap-5"
 const group = "flex flex-col gap-8 md:gap-10"
 
 export function AboutMeIntro() {
@@ -50,20 +50,18 @@ export function AboutMeIntro() {
         </p>
       </div>
 
-      <div className={group}>
-        <div className="flex flex-col gap-4">
-          <Lead>
-            I used to write about tech for publications like Business Insider.
-          </Lead>
-          <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
-        </div>
-        <div className={pairGrid}>
+      <div className="grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-5">
+        <div className={captionPair}>
+          <Lead>I used to write about tech for publications like Business Insider.</Lead>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
             imageAlt="Magazine article titled How do planes stay in the air?"
             href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
           />
+        </div>
+        <div className={captionPair}>
+          <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
           <ArticleCard
             era="Now"
             imageSrc="/now-tech-docs.png"
