@@ -10,8 +10,8 @@ export function ArticleCard({ stage }: { stage: keyof typeof samples }) {
   const { role, src, alt } = samples[stage]
   return (
     <div className="w-full">
-      <figure className="relative aspect-[3/2] overflow-hidden rounded-3xl border border-border bg-background text-foreground">
-        <Image src={src} alt={alt} fill sizes="(max-width: 767px) 90vw, 672px" className="object-cover" />
+      <figure className="relative aspect-[21/20] overflow-hidden rounded-3xl border border-border bg-background text-foreground">
+        <Image src={src} alt={alt} fill sizes="(max-width: 767px) 90vw, 672px" className={stage === "Now" ? "object-cover object-[50%_58%]" : "object-cover"} />
         <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-[#0f131c]/90 via-[#0f131c]/45 to-transparent" />
         <figcaption className="absolute bottom-0 left-0 p-5 text-xl font-bold tracking-tight text-primary-foreground md:p-6 md:text-2xl">
           {stage === "Before" ? "Before" : "After"}<span className="sr-only">: {role}</span>
