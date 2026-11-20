@@ -41,7 +41,6 @@ function Colon() {
 }
 
 const pairGrid = "grid gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-10"
-const captionedCard = "grid min-w-0 gap-y-8 md:row-span-2 md:grid-rows-subgrid md:gap-y-10"
 const group = "flex flex-col gap-8 md:gap-10"
 
 export function AboutMeIntro() {
@@ -53,10 +52,9 @@ export function AboutMeIntro() {
         </p>
       </div>
 
-      <div className={pairGrid}>
-        <div className={captionedCard}>
-          <div className="flex flex-col gap-6 self-start">
-            <Lead>I used to write for publications like Business Insider Spain, Xataka, and Muy Interesante.</Lead>
+      <div className={group}>
+          <div className="mx-auto flex w-full flex-col items-center justify-center gap-6 md:flex-row md:items-start md:gap-8">
+            <p className={`${storyDetailClass} text-center text-white/70 md:pt-2 md:text-left`}>I used to write for publications like:</p>
             <ul aria-label="Publications and their reported audiences" className="grid grid-cols-3 gap-3 text-center md:gap-4">
               {[
                 { name: "Business Insider Spain", logo: "/media-business-insider.png", reach: "Around 4M monthly readers" },
@@ -70,15 +68,14 @@ export function AboutMeIntro() {
               ))}
             </ul>
           </div>
+          <Lead className="max-w-3xl">I still write about technology and software, but now I do it for tech companies.</Lead>
+          <div className={pairGrid}>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
             imageAlt="Magazine article titled How do planes stay in the air?"
             href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
           />
-        </div>
-        <div className={captionedCard}>
-          <Lead className="self-start">I still write about technology and software, but now I do it for tech companies.</Lead>
           <ArticleCard
             era="Now"
             imageSrc="/now-tech-docs.png"
