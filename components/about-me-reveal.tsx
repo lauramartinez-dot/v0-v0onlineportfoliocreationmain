@@ -40,8 +40,8 @@ function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const pairGrid = "grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-6"
-const captionedCard = "grid min-w-0 gap-5 md:row-span-2 md:grid-rows-subgrid md:gap-y-6"
+const pairGrid = "grid gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+const captionedCard = "grid min-w-0 gap-y-8 md:row-span-2 md:grid-rows-subgrid md:gap-y-10"
 const group = "flex flex-col gap-8 md:gap-10"
 
 export function AboutMeIntro() {
