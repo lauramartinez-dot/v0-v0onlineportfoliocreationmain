@@ -55,23 +55,7 @@ export function AboutMeIntro() {
 
       <div className={pairGrid}>
         <div className={captionedCard}>
-          <div className="flex flex-col gap-6 self-end">
-            <Lead>I used to write for publications like:</Lead>
-            <ul aria-label="Publications and their reported audiences" className="grid grid-cols-3 gap-2 text-center md:gap-4">
-              {[
-                { name: "Business Insider Spain", logo: "/business-insider-espana-logo.png", reach: "Around 4M monthly readers" },
-                { name: "Xataka", logo: "/xataka-logo.png", reach: "12M+ monthly users" },
-                { name: "Muy Interesante", logo: "/muy-interesante-logo.png", reach: "1.18M monthly print readers (EGM, 2021)" },
-              ].map(({ name, logo, reach }) => (
-                <li key={name} className="flex min-w-0 flex-col items-center gap-2">
-                  <div className="flex h-12 w-full max-w-36 items-center justify-center rounded-md bg-white px-2">
-                    <Image src={logo} alt={name} width={136} height={40} className="h-full w-full object-contain" />
-                  </div>
-                  <span className="text-balance text-sm leading-snug text-white/70">{reach}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <Lead className="self-end">I used to write for publications like Business Insider Spain, Xataka, and Muy Interesante.</Lead>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
@@ -87,6 +71,18 @@ export function AboutMeIntro() {
             imageAlt="Documentation page titled What is an API? on a laptop screen"
           />
         </div>
+        <ul aria-label="Publications and their reported audiences" className="mx-auto grid w-full max-w-3xl grid-cols-3 gap-4 text-center md:col-span-2 md:gap-8">
+          {[
+            { name: "Business Insider Spain", logo: "/media-business-insider.png", reach: "Around 4M monthly readers" },
+            { name: "Xataka", logo: "/media-xataka.png", reach: "12M+ monthly users" },
+            { name: "Muy Interesante", logo: "/media-muy-interesante.png", reach: "1.18M monthly print readers (EGM, 2021)" },
+          ].map(({ name, logo, reach }) => (
+            <li key={name} className="flex min-w-0 flex-col items-center gap-3">
+              <Image src={logo} alt={name} width={144} height={48} className="h-10 w-full max-w-36 object-contain md:h-12" />
+              <span className="text-balance text-sm leading-snug text-white/70">{reach}</span>
+            </li>
+          ))}
+        </ul>
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
