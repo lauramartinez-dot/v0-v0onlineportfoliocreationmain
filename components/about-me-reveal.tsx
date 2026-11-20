@@ -50,12 +50,12 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <Lead>I used to write about tech for publications like <strong className="font-bold text-foreground/90">Business Insider</strong>, making complex topics accessible to everyday readers.</Lead>
+        <Lead>I used to write about tech for publications like Business Insider, making complex topics accessible to everyday readers.</Lead>
         <ArticleCard stage="Before" />
       </div>
 
       <div className={group}>
-        <Lead>I still write about technology and software, but now I do it for <strong className="font-bold text-foreground/90">tech companies</strong>:</Lead>
+        <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
         <ArticleCard stage="Now" />
       </div>
 
