@@ -54,19 +54,7 @@ export function AboutMeIntro() {
           <Lead>I used to write about tech for publications like Business Insider.</Lead>
           <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
         </div>
-        <div className="grid grid-cols-2 gap-3 md:gap-4">
-          <ArticleCard
-            era="Before"
-            imageSrc="/then-airplane-article.png"
-            imageAlt="Magazine article titled How do planes stay in the air?"
-            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-          />
-          <ArticleCard
-            era="Now"
-            imageSrc="/now-tech-docs.png"
-            imageAlt="Documentation page titled What is an API? on a laptop screen"
-          />
-        </div>
+        <ArticleCard />
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
