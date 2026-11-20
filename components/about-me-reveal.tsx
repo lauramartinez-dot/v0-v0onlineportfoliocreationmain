@@ -35,10 +35,10 @@ function Lead({ children }: { children: ReactNode }) {
 }
 
 const editorialSkills = [
-  ["Content strategy", "Deciding who we’re writing for"],
+  ["Content strategy", "Deciding what we write and for whom"],
   ["Information architecture", "Structuring content for people and AI"],
-  ["Content operations", "Building processes that help my intern move faster"],
-  ["Editorial governance", "Fact-checking everything we publish"],
+  ["Content ops", "Building processes that help my intern move faster"],
+  ["Content governance", "Owning accuracy and deciding what gets published"],
 ] as const
 
 function Colon() {
