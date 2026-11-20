@@ -34,9 +34,12 @@ function Lead({ children }: { children: ReactNode }) {
   return <p className="mx-auto w-full max-w-2xl text-left text-xl font-medium leading-snug tracking-tight text-pretty text-white/70 md:text-2xl">{children}</p>
 }
 
-function SkillHighlight({ children }: { children: string }) {
-  return <strong className="box-decoration-clone rounded-md border border-primary/25 bg-primary/[0.08] px-1.5 font-semibold text-primary">{children}</strong>
-}
+const editorialSkills = [
+  ["Content strategy", "Deciding who we’re writing for"],
+  ["Information architecture", "Structuring content for people and AI"],
+  ["Content operations", "Building processes that help my intern move faster"],
+  ["Editorial governance", "Fact-checking everything we publish"],
+] as const
 
 function Colon() {
   return <span className="text-primary">:</span>
@@ -78,9 +81,17 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>
-            So I write less and spend more time deciding who we’re writing for (<SkillHighlight>content strategy</SkillHighlight>), structuring it for people and AI (<SkillHighlight>information architecture</SkillHighlight>), building processes that help my intern move faster (<SkillHighlight>content operations</SkillHighlight>), and fact-checking everything we publish (<SkillHighlight>editorial governance</SkillHighlight>).
-          </Lead>
+          <div>
+            <Lead>So I write less and spend more time on:</Lead>
+            <dl className="mt-4 divide-y divide-white/10">
+              {editorialSkills.map(([skill, description]) => (
+                <div key={skill} className="grid items-baseline gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-5">
+                  <dt className="text-base font-medium text-[color-mix(in_srgb,var(--primary)_35%,white)]">{skill}</dt>
+                  <dd className="text-base leading-relaxed text-white/75">{description}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </div>
 
         <div
