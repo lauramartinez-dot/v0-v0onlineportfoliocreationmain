@@ -81,7 +81,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <div className="mx-auto w-fit max-w-full">
+          <div className="ms-[max(0px,calc((100%_-_var(--container-2xl))/2))]">
             <p className="text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">So I write less and spend more time on:</p>
             <ul className="mt-4 flex list-disc flex-col gap-2 pl-6 text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">
               {editorialSkills.map(([skill, description]) => (
