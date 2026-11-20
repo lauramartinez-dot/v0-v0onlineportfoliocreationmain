@@ -67,7 +67,7 @@ export function AboutMeIntro() {
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
-        <div className={group}>
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-4">
             <Lead>These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.</Lead>
             <Lead>My team is me and a brilliant but overconfident intern<Colon /></Lead>
@@ -81,11 +81,11 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <div>
-            <Lead>So I write less and spend more time on:</Lead>
+          <div className="mx-auto w-fit max-w-full">
+            <p className="text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">So I write less and spend more time on:</p>
             <ul className="mt-4 flex list-disc flex-col gap-2 pl-6 text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">
               {editorialSkills.map(([skill, description]) => (
-                <li key={skill}>{description} ({skill.toLowerCase()})</li>
+                <li key={skill}>{description} <span className="text-primary">(</span>{skill.toLowerCase()}<span className="text-primary">)</span></li>
               ))}
             </ul>
           </div>
