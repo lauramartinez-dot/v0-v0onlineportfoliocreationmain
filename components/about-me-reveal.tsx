@@ -35,7 +35,7 @@ function Lead({ children }: { children: ReactNode }) {
 }
 
 function SkillHighlight({ children }: { children: string }) {
-  return <strong className="box-decoration-clone rounded-md bg-primary/10 px-1.5 py-0.5 text-[0.9em] font-medium text-[color-mix(in_srgb,var(--primary)_35%,white)] ring-1 ring-inset ring-primary/15">{children}</strong>
+  return <strong className="box-decoration-clone rounded-md bg-[#211d2d] px-1.5 font-medium text-[#e1dce9]">{children}</strong>
 }
 
 function Colon() {
