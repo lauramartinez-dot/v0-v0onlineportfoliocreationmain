@@ -34,6 +34,10 @@ function Lead({ children }: { children: ReactNode }) {
   return <p className="mx-auto w-full max-w-2xl text-left text-xl font-medium leading-snug tracking-tight text-pretty text-white/70 md:text-2xl">{children}</p>
 }
 
+function SkillHighlight({ children }: { children: string }) {
+  return <strong className="box-decoration-clone rounded-md bg-primary/10 px-1.5 py-0.5 text-[0.9em] font-medium text-[color-mix(in_srgb,var(--primary)_35%,white)] ring-1 ring-inset ring-primary/15">{children}</strong>
+}
+
 function Colon() {
   return <span className="text-primary">:</span>
 }
@@ -75,7 +79,7 @@ export function AboutMeIntro() {
             />
           </div>
           <Lead>
-            So I write less and spend more time deciding who we’re writing for (<strong className="font-bold text-primary">content strategy</strong>), structuring it for people and AI (<strong className="font-bold text-primary">information architecture</strong>), building processes that help my intern move faster (<strong className="font-bold text-primary">content operations</strong>), and fact-checking everything we publish (<strong className="font-bold text-primary">editorial governance</strong>).
+            So I write less and spend more time deciding who we’re writing for (<SkillHighlight>content strategy</SkillHighlight>), structuring it for people and AI (<SkillHighlight>information architecture</SkillHighlight>), building processes that help my intern move faster (<SkillHighlight>content operations</SkillHighlight>), and fact-checking everything we publish (<SkillHighlight>editorial governance</SkillHighlight>).
           </Lead>
         </div>
 
