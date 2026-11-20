@@ -1298,7 +1298,7 @@ export default function CareerMapSection() {
             country="Barcelona, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
-            skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decision-making", "Content operations"]}
+            skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decisions", "Content operations"]}
             tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
             description={
               <>
