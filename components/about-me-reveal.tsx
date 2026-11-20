@@ -78,25 +78,20 @@ export function AboutMeIntro() {
 
       <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
-          <div className="flex flex-col gap-6 md:gap-8">
-            <Lead className="max-w-xl md:max-w-2xl">
-            These days, I&apos;m also less of a writer
-            <br />
-            and more of an editor-in-chief.
-          </Lead>
-            <Lead>
-              My team is me and a brilliant but overconfident intern
-              <Colon />
-            </Lead>
-          </div>
-          <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-            <Image
-              src="/editor-in-chief.jpg"
-              alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
-              fill
-              sizes="(min-width: 768px) 672px, 100vw"
-              className="object-cover"
-            />
+          <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 md:flex-row md:gap-12">
+            <div className={`${storyDetailClass} flex flex-col gap-6 text-center text-white/70 md:flex-1 md:text-left`}>
+              <p>These days, I&apos;m also less of a writer and more of an editor-in-chief.</p>
+              <p>My team is me and a brilliant but overconfident intern<Colon /></p>
+            </div>
+            <div className="relative aspect-[3/2] w-full max-w-sm overflow-hidden rounded-2xl md:w-80">
+              <Image
+                src="/editor-in-chief.jpg"
+                alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
+                fill
+                sizes="(min-width: 768px) 320px, 85vw"
+                className="object-cover"
+              />
+            </div>
           </div>
           <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
         </div>
