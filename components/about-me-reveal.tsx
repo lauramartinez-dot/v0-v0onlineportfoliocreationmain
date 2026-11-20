@@ -75,7 +75,7 @@ export function AboutMeIntro() {
             />
           </div>
           <Lead>
-            So these days, I spend my time figuring out who we’re writing for (<strong className="font-bold text-primary">content strategy</strong>), structuring content so it’s easy to find (<strong className="font-bold text-primary">information architecture</strong>), building processes that help my intern work faster (<strong className="font-bold text-primary">content operations</strong>), and fact-checking what gets published (<strong className="font-bold text-primary">editorial governance</strong>).
+            So I do less writing and spend more time figuring out who we’re writing for (<strong className="font-bold text-primary">content strategy</strong>), structuring content so it’s easy to find (<strong className="font-bold text-primary">information architecture</strong>), building processes that help my intern work faster (<strong className="font-bold text-primary">content operations</strong>), and fact-checking what gets published (<strong className="font-bold text-primary">editorial governance</strong>).
           </Lead>
         </div>
 
