@@ -74,7 +74,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>I decide who we’re writing for and what they need to know. My intern can draft, but I check the facts, rewrite what’s unclear, and decide what’s ready to publish. When a mistake keeps coming up, I change how I ask for the next draft.</Lead>
+          <Lead>I decide who we’re writing for and what they need to know (content strategy). My intern can draft, but I check the facts, rewrite what’s unclear, and decide what’s ready to publish (editorial oversight). That split between what I delegate and what I keep is deliberate (workflow orchestration). When a mistake keeps coming up, I change how I ask for the next draft (prompt iteration).</Lead>
         </div>
 
         <div
