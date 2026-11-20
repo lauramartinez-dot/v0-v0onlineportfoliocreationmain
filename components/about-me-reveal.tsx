@@ -53,19 +53,12 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="mx-auto flex w-full flex-col items-center gap-5 text-center">
-          <p className={`${storyDetailClass} text-white/70`}>I used to write about tech for publications like:</p>
-          <ul aria-label="Publications" className="flex max-w-full items-center justify-center">
-            {[
-              { name: "Business Insider Spain", logo: "/media-business-insider.png" },
-              { name: "Xataka", logo: "/media-xataka.png" },
-              { name: "Muy Interesante", logo: "/media-muy-interesante.png" },
-            ].map(({ name, logo }) => (
-              <li key={name} className="flex min-w-0 items-center px-2 sm:px-3">
-                <span role="img" aria-label={name} className="block h-10 w-28 max-w-full bg-primary sm:h-14 sm:w-36" style={{ mask: `url(${logo}) center / contain no-repeat` }} />
-              </li>
-            ))}
-          </ul>
+        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 md:flex-row md:gap-12">
+          <p className={`${storyDetailClass} text-center text-white/70 md:flex-1 md:text-left`}>
+            I used to write about tech for publications like Business Insider Spain, Xataka, and Muy Interesante.
+            <span className="mt-3 block text-base font-medium leading-relaxed tracking-normal">(Around 4–12 million monthly readers at Business Insider Spain and Xataka.)</span>
+          </p>
+          <Image src="/business-insider-desk-flatlay.png" alt="Business Insider on a phone beside a notebook and glasses" width={800} height={601} sizes="(min-width: 768px) 320px, 85vw" className="h-auto w-full max-w-sm rounded-2xl md:w-80" />
         </div>
           <Lead className="max-w-3xl pt-6 md:pt-10">I still write about technology and software, but now I do it for tech companies:</Lead>
           <div className={pairGrid}>
