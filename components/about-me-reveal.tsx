@@ -53,8 +53,8 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="mx-auto flex max-w-full flex-col items-center justify-center gap-5 text-center lg:flex-row">
-          <p className={`${storyDetailClass} text-white/70`}>I used to write for publications like:</p>
+        <div className="mx-auto flex w-full flex-col items-center gap-5 text-center">
+          <p className={`${storyDetailClass} text-white/70`}>I used to write about tech for publications like:</p>
           <ul aria-label="Publications" className="flex max-w-full items-center rounded-2xl border border-primary/25 bg-primary/5 px-3 py-4">
             {[
               { name: "Business Insider Spain", logo: "/media-business-insider.png" },
@@ -62,12 +62,12 @@ export function AboutMeIntro() {
               { name: "Muy Interesante", logo: "/media-muy-interesante.png" },
             ].map(({ name, logo }) => (
               <li key={name} className="flex min-w-0 items-center px-2 sm:px-3">
-                <span role="img" aria-label={name} className="block h-8 w-20 bg-primary sm:h-9 sm:w-24" style={{ mask: `url(${logo}) center / contain no-repeat` }} />
+                <span role="img" aria-label={name} className="block h-10 w-28 max-w-full bg-primary sm:h-14 sm:w-36" style={{ mask: `url(${logo}) center / contain no-repeat` }} />
               </li>
             ))}
           </ul>
         </div>
-          <Lead className="max-w-3xl">I still write about technology and software, but now I do it for tech companies.</Lead>
+          <Lead className="max-w-3xl">I still write about technology and software, but now I do it for tech companies:</Lead>
           <div className={pairGrid}>
           <ArticleCard
             era="Before"
