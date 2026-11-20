@@ -55,7 +55,7 @@ export function AboutMeIntro() {
       <div className={group}>
         <div className="mx-auto flex w-full flex-col items-center gap-5 text-center">
           <p className={`${storyDetailClass} text-white/70`}>I used to write about tech for publications like:</p>
-          <ul aria-label="Publications" className="flex max-w-full items-center rounded-2xl border border-primary/25 bg-primary/5 px-3 py-4">
+          <ul aria-label="Publications" className="flex max-w-full items-center justify-center">
             {[
               { name: "Business Insider Spain", logo: "/media-business-insider.png" },
               { name: "Xataka", logo: "/media-xataka.png" },
@@ -66,8 +66,9 @@ export function AboutMeIntro() {
               </li>
             ))}
           </ul>
+          <p className="max-w-xl text-balance text-base leading-relaxed text-white/70">Their reach ranged from around 4 million monthly users at Business Insider Spain to around 12 million at Xataka.</p>
         </div>
-          <Lead className="max-w-3xl">I still write about technology and software, but now I do it for tech companies:</Lead>
+          <Lead className="max-w-3xl pt-6 md:pt-10">I still write about technology and software, but now I do it for tech companies:</Lead>
           <div className={pairGrid}>
           <ArticleCard
             era="Before"
