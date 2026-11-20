@@ -50,11 +50,13 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="flex flex-col gap-4">
-          <Lead>I used to write about tech for publications like Business Insider.</Lead>
-          <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
-        </div>
-        <ArticleCard />
+        <Lead>I used to write about tech for publications like Business Insider.</Lead>
+        <ArticleCard stage="Before" />
+      </div>
+
+      <div className={group}>
+        <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
+        <ArticleCard stage="Now" />
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
