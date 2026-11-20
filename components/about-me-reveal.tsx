@@ -55,8 +55,7 @@ export function AboutMeIntro() {
       <div className={group}>
         <div className="flex flex-col gap-6 md:gap-8">
           <Lead>
-            I used to write about tech for publications like Business Insider Spain, Xataka, and Muy Interesante.
-            <span className="mt-3 block text-base font-medium leading-relaxed tracking-normal">(Around 4–12 million monthly readers at Business Insider Spain and Xataka.)</span>
+            I used to write about tech for publications like Business Insider.
           </Lead>
           <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
         </div>
