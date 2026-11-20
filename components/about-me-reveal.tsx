@@ -40,7 +40,8 @@ function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const pairGrid = "grid grid-cols-2 items-stretch gap-4 md:gap-8"
+const pairGrid = "grid gap-y-10 md:grid-cols-2 md:gap-x-8 md:gap-y-6"
+const captionedCard = "grid min-w-0 gap-5 md:row-span-2 md:grid-rows-subgrid md:gap-y-6"
 const group = "flex flex-col gap-8 md:gap-10"
 
 export function AboutMeIntro() {
@@ -52,20 +53,18 @@ export function AboutMeIntro() {
         </p>
       </div>
 
-      <div className={group}>
-        <div className="flex flex-col gap-6 md:gap-8">
-          <Lead className="max-w-xl md:max-w-2xl">
-            I used to write for publications like Business Insider and Muy Interesante (around 4M monthly readers).
-          </Lead>
-          <Lead>I still write about technology and software, but now I do it for tech companies.</Lead>
-        </div>
-        <div className={pairGrid}>
+      <div className={pairGrid}>
+        <div className={captionedCard}>
+          <Lead className="self-end">I used to write for publications like Business Insider and Muy Interesante (around 4M monthly readers).</Lead>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
             imageAlt="Magazine article titled How do planes stay in the air?"
             href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
           />
+        </div>
+        <div className={captionedCard}>
+          <Lead className="self-end">I still write about technology and software, but now I do it for tech companies.</Lead>
           <ArticleCard
             era="Now"
             imageSrc="/now-tech-docs.png"
