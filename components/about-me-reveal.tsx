@@ -40,7 +40,7 @@ function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const pairGrid = "grid gap-y-12 md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+const pairGrid = "grid grid-cols-2 items-stretch gap-4 md:gap-8"
 const group = "flex flex-col gap-8 md:gap-10"
 
 export function AboutMeIntro() {
@@ -53,15 +53,14 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 md:flex-row md:gap-12">
-          <p className={`${storyDetailClass} text-center text-white/70 md:flex-1 md:text-left`}>
+        <div className="flex flex-col gap-6 md:gap-8">
+          <Lead>
             I used to write about tech for publications like Business Insider Spain, Xataka, and Muy Interesante.
             <span className="mt-3 block text-base font-medium leading-relaxed tracking-normal">(Around 4–12 million monthly readers at Business Insider Spain and Xataka.)</span>
-          </p>
-          <Image src="/business-insider-desk-flatlay.png" alt="Business Insider on a phone beside a notebook and glasses" width={800} height={601} sizes="(min-width: 1152px) 512px, (min-width: 768px) 45vw, 85vw" className="h-auto w-full max-w-sm rounded-2xl md:w-1/2 md:max-w-lg md:shrink-0" />
+          </Lead>
+          <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
         </div>
-          <Lead className="max-w-3xl pt-6 md:pt-10">I still write about technology and software, but now I do it for tech companies:</Lead>
-          <div className={pairGrid}>
+        <div className={pairGrid}>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
@@ -78,20 +77,18 @@ export function AboutMeIntro() {
 
       <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
-          <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 md:flex-row md:gap-12">
-            <div className={`${storyDetailClass} flex flex-col gap-6 text-center text-white/70 md:flex-1 md:text-left`}>
-              <p>These days, I&apos;m also less of a writer and more of an editor-in-chief.</p>
-              <p>My team is me and a brilliant but overconfident intern<Colon /></p>
-            </div>
-            <div className="relative aspect-[3/2] w-full max-w-sm overflow-hidden rounded-2xl md:w-1/2 md:max-w-lg md:shrink-0">
-              <Image
-                src="/editor-in-chief.jpg"
-                alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
-                fill
-                sizes="(min-width: 1152px) 512px, (min-width: 768px) 45vw, 85vw"
-                className="object-cover"
-              />
-            </div>
+          <div className="flex flex-col gap-6 md:gap-8">
+            <Lead className="max-w-xl md:max-w-2xl">These days, I&apos;m also less of a writer<br />and more of an editor-in-chief.</Lead>
+            <Lead>My team is me and a brilliant but overconfident intern<Colon /></Lead>
+          </div>
+          <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
+            <Image
+              src="/editor-in-chief.jpg"
+              alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
+              fill
+              sizes="(min-width: 768px) 672px, 100vw"
+              className="object-cover"
+            />
           </div>
           <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
         </div>
