@@ -74,7 +74,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>So I still review and rewrite a lot. If I keep making the same correction, I change the instructions or add a check for the next draft. I write docs that people can follow and chatbots can use to answer questions. Either way, I’m responsible for what we publish.</Lead>
+          <Lead>I turn edits into better instructions and write docs for people and chatbots. What we publish is my responsibility.</Lead>
         </div>
 
         <div
