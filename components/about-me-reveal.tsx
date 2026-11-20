@@ -55,7 +55,7 @@ export function AboutMeIntro() {
 
       <div className={pairGrid}>
         <div className={captionedCard}>
-          <Lead className="self-end">I used to write for publications like Business Insider and Muy Interesante (around 4M monthly readers).</Lead>
+          <Lead className="self-end">I used to write for publications like Business Insider Spain (around 4M monthly readers).</Lead>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
