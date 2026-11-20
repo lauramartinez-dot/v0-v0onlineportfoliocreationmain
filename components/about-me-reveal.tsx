@@ -83,14 +83,11 @@ export function AboutMeIntro() {
           </div>
           <div>
             <Lead>So I write less and spend more time on:</Lead>
-            <dl className="mt-4 divide-y divide-white/10">
+            <ul className="mt-4 flex list-disc flex-col gap-2 pl-6 text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">
               {editorialSkills.map(([skill, description]) => (
-                <div key={skill} className="grid items-baseline gap-1 py-3 sm:grid-cols-[12rem_1fr] sm:gap-5">
-                  <dt className="text-base font-medium text-[color-mix(in_srgb,var(--primary)_35%,white)]">{skill}</dt>
-                  <dd className="text-base leading-relaxed text-white/75">{description}</dd>
-                </div>
+                <li key={skill}>{description} ({skill.toLowerCase()})</li>
               ))}
-            </dl>
+            </ul>
           </div>
         </div>
 
