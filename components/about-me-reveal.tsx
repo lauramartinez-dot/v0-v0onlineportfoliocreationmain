@@ -53,12 +53,12 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 md:flex-row md:gap-12">
+        <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 md:flex-row md:gap-12">
           <p className={`${storyDetailClass} text-center text-white/70 md:flex-1 md:text-left`}>
             I used to write about tech for publications like Business Insider Spain, Xataka, and Muy Interesante.
             <span className="mt-3 block text-base font-medium leading-relaxed tracking-normal">(Around 4–12 million monthly readers at Business Insider Spain and Xataka.)</span>
           </p>
-          <Image src="/business-insider-desk-flatlay.png" alt="Business Insider on a phone beside a notebook and glasses" width={800} height={601} sizes="(min-width: 768px) 320px, 85vw" className="h-auto w-full max-w-sm rounded-2xl md:w-80" />
+          <Image src="/business-insider-desk-flatlay.png" alt="Business Insider on a phone beside a notebook and glasses" width={800} height={601} sizes="(min-width: 1152px) 512px, (min-width: 768px) 45vw, 85vw" className="h-auto w-full max-w-sm rounded-2xl md:w-1/2 md:max-w-lg md:shrink-0" />
         </div>
           <Lead className="max-w-3xl pt-6 md:pt-10">I still write about technology and software, but now I do it for tech companies:</Lead>
           <div className={pairGrid}>
@@ -78,17 +78,17 @@ export function AboutMeIntro() {
 
       <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
-          <div className="mx-auto flex w-full max-w-4xl flex-col items-center gap-6 md:flex-row md:gap-12">
+          <div className="mx-auto flex w-full max-w-5xl flex-col items-center gap-6 md:flex-row md:gap-12">
             <div className={`${storyDetailClass} flex flex-col gap-6 text-center text-white/70 md:flex-1 md:text-left`}>
               <p>These days, I&apos;m also less of a writer and more of an editor-in-chief.</p>
               <p>My team is me and a brilliant but overconfident intern<Colon /></p>
             </div>
-            <div className="relative aspect-[3/2] w-full max-w-sm overflow-hidden rounded-2xl md:w-80">
+            <div className="relative aspect-[3/2] w-full max-w-sm overflow-hidden rounded-2xl md:w-1/2 md:max-w-lg md:shrink-0">
               <Image
                 src="/editor-in-chief.jpg"
                 alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
                 fill
-                sizes="(min-width: 768px) 320px, 85vw"
+                sizes="(min-width: 1152px) 512px, (min-width: 768px) 45vw, 85vw"
                 className="object-cover"
               />
             </div>
