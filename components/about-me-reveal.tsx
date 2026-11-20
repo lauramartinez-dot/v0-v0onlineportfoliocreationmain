@@ -75,7 +75,7 @@ export function AboutMeIntro() {
             />
           </div>
           <Lead>
-            So I do less writing and spend more time figuring out who we’re writing for (<strong className="font-bold text-primary">content strategy</strong>), structuring content so it’s easy to find (<strong className="font-bold text-primary">information architecture</strong>), building processes that help my intern work faster (<strong className="font-bold text-primary">content operations</strong>), and fact-checking what gets published (<strong className="font-bold text-primary">editorial governance</strong>).
+            So I write less and spend more time deciding who we’re writing for (<strong className="font-bold text-primary">content strategy</strong>), structuring it for people and AI (<strong className="font-bold text-primary">information architecture</strong>), building processes that help my intern move faster (<strong className="font-bold text-primary">content operations</strong>), and fact-checking everything we publish (<strong className="font-bold text-primary">editorial governance</strong>).
           </Lead>
         </div>
 
