@@ -30,10 +30,8 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
-const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
-
-function Lead({ children, className = "max-w-md md:max-w-lg" }: { children: ReactNode; className?: string }) {
-  return <p className={`${storyDetailClass} mx-auto px-6 text-center text-white/70 ${className}`}>{children}</p>
+function Lead({ children }: { children: ReactNode }) {
+  return <p className="mx-auto w-full max-w-2xl text-left text-lg font-normal leading-relaxed text-white/80 md:text-xl">{children}</p>
 }
 
 function Colon() {
@@ -53,7 +51,7 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="flex flex-col gap-6 md:gap-8">
+        <div className="flex flex-col gap-4">
           <Lead>
             I used to write about tech for publications like Business Insider.
           </Lead>
@@ -76,8 +74,8 @@ export function AboutMeIntro() {
 
       <div className="flex flex-col gap-16 md:gap-24">
         <div className={group}>
-          <div className="flex flex-col gap-6 md:gap-8">
-            <Lead className="max-w-xl md:max-w-2xl">These days, I&apos;m also less of a writer<br />and more of an editor-in-chief.</Lead>
+          <div className="flex flex-col gap-4">
+            <Lead>These days, I&apos;m also less of a writer and more of an editor-in-chief.</Lead>
             <Lead>My team is me and a brilliant but overconfident intern<Colon /></Lead>
           </div>
           <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
