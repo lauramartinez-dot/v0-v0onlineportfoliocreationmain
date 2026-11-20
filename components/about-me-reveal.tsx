@@ -53,21 +53,20 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-          <div className="mx-auto flex w-full flex-col items-center justify-center gap-6 md:flex-row md:items-start md:gap-8">
-            <p className={`${storyDetailClass} text-center text-white/70 md:pt-2 md:text-left`}>I used to write for publications like:</p>
-            <ul aria-label="Publications and their reported audiences" className="grid grid-cols-3 gap-3 text-center md:gap-4">
-              {[
-                { name: "Business Insider Spain", logo: "/media-business-insider.png", reach: "Around 4M monthly readers" },
-                { name: "Xataka", logo: "/media-xataka.png", reach: "12M+ monthly users" },
-                { name: "Muy Interesante", logo: "/media-muy-interesante.png", reach: "1.18M monthly print readers (EGM, 2021)" },
-              ].map(({ name, logo, reach }) => (
-                <li key={name} className="flex min-w-0 flex-col items-center gap-3">
-                  <Image src={logo} alt={name} width={144} height={48} className="h-10 w-full max-w-36 object-contain md:h-12" />
-                  <span className="text-balance text-sm leading-snug text-white/70">{reach}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+        <div className="mx-auto flex max-w-full flex-col items-center justify-center gap-5 text-center lg:flex-row">
+          <p className={`${storyDetailClass} text-white/70`}>I used to write for publications like:</p>
+          <ul aria-label="Publications" className="flex max-w-full items-center rounded-2xl border border-primary/25 bg-primary/5 px-3 py-4">
+            {[
+              { name: "Business Insider Spain", logo: "/media-business-insider.png" },
+              { name: "Xataka", logo: "/media-xataka.png" },
+              { name: "Muy Interesante", logo: "/media-muy-interesante.png" },
+            ].map(({ name, logo }) => (
+              <li key={name} className="flex min-w-0 items-center px-2 sm:px-3">
+                <span role="img" aria-label={name} className="block h-8 w-20 bg-primary sm:h-9 sm:w-24" style={{ mask: `url(${logo}) center / contain no-repeat` }} />
+              </li>
+            ))}
+          </ul>
+        </div>
           <Lead className="max-w-3xl">I still write about technology and software, but now I do it for tech companies.</Lead>
           <div className={pairGrid}>
           <ArticleCard
