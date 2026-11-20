@@ -53,10 +53,10 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="flex flex-col gap-6 md:gap-8">
-          <Lead>I still write about technology and software.</Lead>
-          <Lead>But now I do it for tech companies instead of the media.</Lead>
-        </div>
+        <p className="max-w-prose text-left text-lg leading-relaxed text-white/80 md:text-xl md:leading-relaxed">
+          I used to write about tech for publications like Business Insider and Muy Interesante (4 million monthly readers).
+          I still write about technology and software, but now I do it for tech companies.
+        </p>
         <div className={pairGrid}>
           <ArticleCard
             era="Before"
