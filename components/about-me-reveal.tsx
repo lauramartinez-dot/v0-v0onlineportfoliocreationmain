@@ -55,7 +55,7 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <Lead>I still write about technology and software, but now I do it for tech companies:</Lead>
+        <Lead>15 years later, I still write about complex technology, but now I do it for tech companies:</Lead>
         <ArticleCard stage="Now" />
       </div>
 
