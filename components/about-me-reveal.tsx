@@ -66,7 +66,6 @@ export function AboutMeIntro() {
               </li>
             ))}
           </ul>
-          <p className="max-w-xl text-balance text-base leading-relaxed text-white/70">Their reach ranged from around 4 million monthly users at Business Insider Spain to around 12 million at Xataka.</p>
         </div>
           <Lead className="max-w-3xl pt-6 md:pt-10">I still write about technology and software, but now I do it for tech companies:</Lead>
           <div className={pairGrid}>
