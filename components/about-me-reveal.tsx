@@ -55,7 +55,21 @@ export function AboutMeIntro() {
 
       <div className={pairGrid}>
         <div className={captionedCard}>
-          <Lead className="self-end">I used to write for publications like Business Insider Spain, Xataka, and Muy Interesante.</Lead>
+          <div className="flex flex-col gap-6 self-start">
+            <Lead>I used to write for publications like Business Insider Spain, Xataka, and Muy Interesante.</Lead>
+            <ul aria-label="Publications and their reported audiences" className="grid grid-cols-3 gap-3 text-center md:gap-4">
+              {[
+                { name: "Business Insider Spain", logo: "/media-business-insider.png", reach: "Around 4M monthly readers" },
+                { name: "Xataka", logo: "/media-xataka.png", reach: "12M+ monthly users" },
+                { name: "Muy Interesante", logo: "/media-muy-interesante.png", reach: "1.18M monthly print readers (EGM, 2021)" },
+              ].map(({ name, logo, reach }) => (
+                <li key={name} className="flex min-w-0 flex-col items-center gap-3">
+                  <Image src={logo} alt={name} width={144} height={48} className="h-10 w-full max-w-36 object-contain md:h-12" />
+                  <span className="text-balance text-sm leading-snug text-white/70">{reach}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
           <ArticleCard
             era="Before"
             imageSrc="/then-airplane-article.png"
@@ -64,25 +78,13 @@ export function AboutMeIntro() {
           />
         </div>
         <div className={captionedCard}>
-          <Lead className="self-end">I still write about technology and software, but now I do it for tech companies.</Lead>
+          <Lead className="self-start">I still write about technology and software, but now I do it for tech companies.</Lead>
           <ArticleCard
             era="Now"
             imageSrc="/now-tech-docs.png"
             imageAlt="Documentation page titled What is an API? on a laptop screen"
           />
         </div>
-        <ul aria-label="Publications and their reported audiences" className="mx-auto grid w-full max-w-3xl grid-cols-3 gap-4 text-center md:col-span-2 md:gap-8">
-          {[
-            { name: "Business Insider Spain", logo: "/media-business-insider.png", reach: "Around 4M monthly readers" },
-            { name: "Xataka", logo: "/media-xataka.png", reach: "12M+ monthly users" },
-            { name: "Muy Interesante", logo: "/media-muy-interesante.png", reach: "1.18M monthly print readers (EGM, 2021)" },
-          ].map(({ name, logo, reach }) => (
-            <li key={name} className="flex min-w-0 flex-col items-center gap-3">
-              <Image src={logo} alt={name} width={144} height={48} className="h-10 w-full max-w-36 object-contain md:h-12" />
-              <span className="text-balance text-sm leading-snug text-white/70">{reach}</span>
-            </li>
-          ))}
-        </ul>
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
