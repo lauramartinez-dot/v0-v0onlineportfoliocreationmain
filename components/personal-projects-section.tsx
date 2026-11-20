@@ -14,8 +14,8 @@ const personalProjects = [
     title: "A book club for women in tech",
     description: "I run Barcelona\u2019s first book club\nfor women in tech.",
     tags: ["Founder", "Community building", "Women in tech", "Events", "Branding"],
-    image: "/women-in-tech-book-club.png",
-    imageAlt: "Four women laughing around a cafe table with open books, a laptop and coffee",
+    image: "/barcelona-book-club.jpg",
+    imageAlt: "Barcelona book club members seated in a circle for a discussion in a bookshop",
   },
 ]
 
