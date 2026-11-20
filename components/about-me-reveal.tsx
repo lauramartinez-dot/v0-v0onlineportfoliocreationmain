@@ -74,7 +74,7 @@ export function AboutMeIntro() {
               className="object-cover"
             />
           </div>
-          <Lead>I decide who we’re writing for and what they need to know. My intern can draft, but I check the facts, rewrite what’s unclear, and decide what’s ready to publish. When a mistake keeps coming up, I change how I ask for the next draft.</Lead>
+          <Lead>I decide what each guide should cover based on what readers need to do. I use AI to help draft it, then verify the details, edit for clarity, and make the final call on publication. I use what I learn from each review to give clearer instructions for the next draft.</Lead>
         </div>
 
         <div
