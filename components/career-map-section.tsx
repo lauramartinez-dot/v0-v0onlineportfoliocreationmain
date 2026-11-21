@@ -1310,8 +1310,10 @@ export default function CareerMapSection() {
             description={
               <>
                 I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
-                I stayed the only Senior for 2+ years. That meant shaping how we worked, getting our first AI automations
-                off the ground, and speaking up for the docs team in leadership meetings.
+                <span className="mt-4 block">I stayed the only Senior for 2+ years.</span>
+                <span className="mt-4 block">
+                  That meant shaping how we worked, getting our first AI automations off the ground, and speaking up for the docs team in leadership meetings.
+                </span>
               </>
             }
           />
