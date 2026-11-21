@@ -1154,8 +1154,8 @@ function CompanyCard({
             <div className={`grid items-stretch gap-8 ${photo ? "lg:grid-cols-[minmax(0,1fr)_max-content] lg:gap-6" : "lg:grid-cols-2 lg:gap-12"}`}>
               <div className="flex min-w-0 flex-col gap-6">
                 {photo && (
-                  <div className="aspect-[5/3] w-11/12 overflow-hidden rounded-2xl">
-                    <Image {...photo} sizes="(min-width: 1280px) 790px, (min-width: 1024px) 60vw, 83vw" className="block h-full w-full object-cover object-center" />
+                  <div className="aspect-[5/3] w-3/4 max-w-md overflow-hidden rounded-2xl">
+                    <Image {...photo} sizes="(min-width: 768px) 448px, 70vw" className="block h-full w-full object-cover object-center" />
                   </div>
                 )}
                 {description && (
