@@ -1154,20 +1154,20 @@ function CompanyCard({
             <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="flex min-w-0 flex-col gap-6">
                 {photo && (
-                  <Image {...photo} sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 90vw" className="aspect-video h-auto w-full rounded-2xl object-cover object-center" />
+                  <Image {...photo} sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 90vw" className="aspect-[3/2] h-auto w-full rounded-2xl object-cover object-center" />
                 )}
                 {description && (
-                  <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
-                    {description}
-                  </p>
+                  <div className="flex flex-col gap-2">
+                    <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
+                      {description}
+                    </p>
+                    <a href="#writing-principles" className="w-fit text-base font-semibold leading-relaxed text-primary underline-offset-4 hover:underline md:text-[17px]">
+                      See my achievements from this role under Core principles.
+                    </a>
+                  </div>
                 )}
               </div>
               <div className="flex min-w-0 flex-col gap-6">
-                {description && (
-                  <a href="#writing-principles" className="w-fit text-base font-semibold leading-relaxed text-primary underline-offset-4 hover:underline md:text-[17px]">
-                    See my achievements from this role under Core principles.
-                  </a>
-                )}
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
               </div>
