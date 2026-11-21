@@ -1089,7 +1089,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
-  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition" | "transform"> }
+  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition" | "transform" | "transformOrigin"> }
   tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -1302,7 +1302,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Senior Technical Writer"
-            photo={{ src: "/images/personio-senior-team.jpg", alt: "Personio teammates posing together outdoors beneath a leafy tree", width: 4032, height: 3024, style: { transform: "scale(1.6)", objectPosition: "center 64%" } }}
+            photo={{ src: "/images/personio-senior-team.jpg", alt: "Personio teammates posing together outdoors beneath a leafy tree", width: 4032, height: 3024, style: { transform: "scale(1.74)", transformOrigin: "13% 50%", objectPosition: "center 52%" } }}
             years="2023 - 2025"
           duration="2.5 years"
             country="Barcelona, Spain"
@@ -1326,7 +1326,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Technical Writer"
-            photo={{ src: "/images/personio-first-role.png", alt: "Six Personio colleagues posing in the office, four standing and two kneeling in front", width: 683, height: 911, style: { objectPosition: "50% 32%" } }}
+            photo={{ src: "/images/personio-first-role.png", alt: "Six Personio colleagues posing in the office, four standing and two kneeling in front", width: 683, height: 911, style: { objectPosition: "50% 40%" } }}
             years="2021 - 2023"
           duration="2.5 years"
             country="Remote, Germany"
