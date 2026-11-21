@@ -1151,10 +1151,10 @@ function CompanyCard({
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
           <div className="pt-8 flex flex-col gap-10">
-            <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
+            <div className={`grid items-start gap-8 lg:gap-12 ${photo ? "lg:grid-cols-[minmax(0,1fr)_max-content]" : "lg:grid-cols-2"}`}>
               <div className="flex min-w-0 flex-col gap-6">
                 {photo && (
-                  <Image {...photo} sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 90vw" className="aspect-[3/2] h-auto w-full rounded-2xl object-cover object-center" />
+                  <Image {...photo} sizes="(min-width: 1280px) 860px, (min-width: 1024px) 65vw, 90vw" className="aspect-[3/2] h-auto w-full rounded-2xl object-cover object-center" />
                 )}
                 {description && (
                   <div className="flex flex-col gap-2">
