@@ -1264,7 +1264,7 @@ export default function CareerMapSection() {
             photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199 }}
             role="Senior Technical Writer"
             years="2026 - Present"
-          duration="5 months"
+          duration="7 months"
             country="Barcelona, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
