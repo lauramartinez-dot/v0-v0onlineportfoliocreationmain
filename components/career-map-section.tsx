@@ -1271,9 +1271,11 @@ export default function CareerMapSection() {
             skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation", "Content governance"]}
             description={
               <>
-                I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
-                API docs work for less technical users too, and I&apos;m one of the first writers here moving to
-                docs-as-code and building AI agents into how we work.
+                I joined as the <strong>second Technical Writer</strong> for API &amp; integrations.
+                <span className="mt-4 block">
+                  I&apos;m making our API docs work for less technical users too, and I&apos;m one of the first writers here moving to
+                  docs-as-code and building AI agents into how we work.
+                </span>
               </>
             }
             tools={[
