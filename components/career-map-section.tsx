@@ -1089,7 +1089,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
-  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition"> }
+  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition" | "aspectRatio"> }
   tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -1261,7 +1261,7 @@ export default function CareerMapSection() {
             logo="/omp-wordmark.png"
             logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
-            photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199 }}
+            photo={{ src: "/images/omp-team-wide.webp", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 680, style: { aspectRatio: "1600 / 680" } }}
             role="Senior Technical Writer"
             years="2026 - Present"
           duration="7 months"
