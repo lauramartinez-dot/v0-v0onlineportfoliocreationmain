@@ -1307,7 +1307,7 @@ export default function CareerMapSection() {
             countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decisions", "Content operations"]}
-            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro", "Zendesk Localization", "Jira", "ChatGPT", "Cursor"]}
+            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro", "Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]}
             description={
               <>
                 I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
