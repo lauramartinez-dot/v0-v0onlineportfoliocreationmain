@@ -74,7 +74,7 @@ export function AboutMeIntro() {
           </div>
           <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
             <Image
-              src="/editor-intern.webp"
+              src="/editor-intern-v18.webp"
               alt="Laura points to a monitor beside an intern whose face is covered by the Claude logo."
               fill
               sizes="(min-width: 768px) 672px, 100vw"
