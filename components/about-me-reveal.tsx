@@ -66,7 +66,7 @@ export function AboutMeIntro() {
         <ArticleCard stage="Now" />
       </div>
 
-      <div className="flex flex-col gap-8 md:gap-12">
+      <div className="flex flex-col gap-16 md:gap-24">
         <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 md:gap-8">
           <div className="flex flex-col gap-4">
             <Lead>These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.</Lead>
