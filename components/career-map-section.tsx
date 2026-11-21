@@ -1167,12 +1167,16 @@ function CompanyCard({
                   </div>
                 )}
               </div>
-              <div className="flex min-w-0 flex-col gap-6">
+              <div className="flex min-w-0 flex-col gap-6 lg:w-fit lg:max-w-full">
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+                {tools && tools.length > 0 && (
+                  <div className="lg:[contain:inline-size]">
+                    <ToolsPanel tools={tools} />
+                  </div>
+                )}
               </div>
             </div>
-            {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
   </div>
   </div>
