@@ -30,18 +30,22 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
-const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
-
-function Lead({ children, className = "max-w-md md:max-w-lg" }: { children: ReactNode; className?: string }) {
-  return <p className={`${storyDetailClass} mx-auto px-6 text-center text-white/70 ${className}`}>{children}</p>
+function Lead({ children }: { children: ReactNode }) {
+  return <p className="mx-auto w-full max-w-2xl text-left text-xl font-medium leading-snug tracking-tight text-pretty text-white/70 md:text-2xl">{children}</p>
 }
+
+const editorialSkills = [
+  ["Content strategy", "Choosing what we write and for whom"],
+  ["Information architecture", "Structuring it for people and AI"],
+  ["Content operations", "Building processes so my intern moves faster"],
+  ["Content governance", "Deciding what actually gets published"],
+] as const
 
 function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const pairGrid = "grid grid-cols-2 items-stretch gap-4 md:gap-8"
-const group = "flex flex-col gap-8 md:gap-10"
+const group = "mx-auto flex w-full max-w-2xl flex-col gap-6 md:gap-8"
 
 export function AboutMeIntro() {
   return (
@@ -53,48 +57,38 @@ export function AboutMeIntro() {
       </div>
 
       <div className={group}>
-        <div className="flex flex-col gap-6 md:gap-8">
-          <Lead>I still write about technology and software.</Lead>
-          <Lead>But now I do it for tech companies instead of the media.</Lead>
-        </div>
-        <div className={pairGrid}>
-          <ArticleCard
-            era="Before"
-            imageSrc="/then-airplane-article.png"
-            imageAlt="Magazine article titled How do planes stay in the air?"
-            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-          />
-          <ArticleCard
-            era="Now"
-            imageSrc="/now-tech-docs.png"
-            imageAlt="Documentation page titled What is an API? on a laptop screen"
-          />
-        </div>
+        <Lead>I used to write about complex technology for publications like Business Insider, Xataka, and Muy Interesante:</Lead>
+        <ArticleCard stage="Before" />
+      </div>
+
+      <div className={group}>
+        <Lead>15 years later, I still write about complex technology, but now I do it for tech companies:</Lead>
+        <ArticleCard stage="Now" />
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
-        <div className={group}>
-          <div className="flex flex-col gap-6 md:gap-8">
-            <Lead className="max-w-xl md:max-w-2xl">
-            These days, I&apos;m also less of a writer
-            <br />
-            and more of an editor-in-chief.
-          </Lead>
-            <Lead>
-              My team is me and a brilliant but overconfident intern
-              <Colon />
-            </Lead>
+        <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 md:gap-8">
+          <div className="flex flex-col gap-4">
+            <Lead>These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.</Lead>
+            <Lead>My team is me and a brilliant but overconfident intern<Colon /></Lead>
           </div>
           <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
             <Image
-              src="/editor-in-chief.jpg"
-              alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
+              src="/editor-intern-v18.webp"
+              alt="Laura points to a monitor beside an intern whose face is covered by the Claude logo."
               fill
               sizes="(min-width: 768px) 672px, 100vw"
               className="object-cover"
             />
           </div>
-          <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
+          <div className="ms-[max(0px,calc((100%_-_var(--container-2xl))/2))]">
+            <p className="text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">So I write less and spend more time on:</p>
+            <ul className="mt-4 flex list-disc flex-col gap-2 pl-6 text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">
+              {editorialSkills.map(([skill, description]) => (
+                <li key={skill}>{description} <span className="text-primary">({skill.toLowerCase()})</span></li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div
