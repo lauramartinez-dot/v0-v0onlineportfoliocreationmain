@@ -1160,7 +1160,7 @@ function CompanyCard({
                 )}
                 {description && (
                   <div className="flex flex-1 flex-col gap-4">
-                    <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
+                    <p className="text-xl leading-relaxed text-foreground/70 text-pretty md:text-[22px] md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                       {description}
                     </p>
                     <p className="mt-auto rounded-2xl border border-primary/25 bg-primary/[0.07] px-5 py-3 text-base leading-relaxed text-primary md:text-lg">
