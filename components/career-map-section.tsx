@@ -1089,7 +1089,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
-  photo?: { src: string; alt: string; width: number; height: number }
+  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition"> }
   tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -1324,7 +1324,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Technical Writer"
-            photo={{ src: "/images/personio-first-role.png", alt: "Four Personio colleagues posing together, three wearing dirndls", width: 1215, height: 911 }}
+            photo={{ src: "/images/personio-first-role.png", alt: "Six Personio colleagues posing in the office, four standing and two kneeling in front", width: 683, height: 911, style: { objectPosition: "50% 32%" } }}
             years="2021 - 2023"
           duration="2.5 years"
             country="Remote, Germany"
