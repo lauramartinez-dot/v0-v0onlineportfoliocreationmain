@@ -1071,6 +1071,7 @@ function CompanyCard({
   roleProgression,
   description,
   skills,
+  photo,
   tools,
   duration,
   logoClassName = "px-3 py-2 md:px-4 md:py-3",
@@ -1088,6 +1089,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
+  photo?: { src: string; alt: string; width: number; height: number }
   tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -1149,28 +1151,26 @@ function CompanyCard({
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
           <div className="pt-8 flex flex-col gap-10">
-            <div
-              className={
-                skills && skills.length > 0
-                  ? "grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-16"
-                  : "flex flex-col gap-10"
-              }
-            >
-              {description && (
-                <div className="flex flex-col gap-6">
+            <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
+              <div className="flex min-w-0 flex-col gap-6">
+                {description && (
                   <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                     {description}
                   </p>
-                  <a
-                    href="#writing-principles"
-                    className="w-fit text-base font-semibold leading-relaxed text-primary underline-offset-4 hover:underline md:text-[17px]"
-                  >
+                )}
+                {photo && (
+                  <Image {...photo} sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 90vw" className="h-auto w-full rounded-2xl" />
+                )}
+              </div>
+              <div className="flex min-w-0 flex-col gap-6">
+                {description && (
+                  <a href="#writing-principles" className="w-fit text-base font-semibold leading-relaxed text-primary underline-offset-4 hover:underline md:text-[17px]">
                     See my achievements from this role under Core principles.
                   </a>
-                </div>
-              )}
-              {children}
-              {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+                )}
+                {children}
+                {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+              </div>
             </div>
             {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
@@ -1257,6 +1257,7 @@ export default function CareerMapSection() {
             logo="/omp-wordmark.png"
             logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
+            photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199 }}
             role="Senior Technical Writer"
             years="2026 - Present"
           duration="5 months"
