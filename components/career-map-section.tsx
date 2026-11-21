@@ -1160,7 +1160,7 @@ function CompanyCard({
                 )}
                 {description && (
                   <div className="flex flex-1 flex-col gap-4">
-                    <p className="text-xl leading-relaxed text-foreground/70 text-pretty md:text-[22px] md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
+                    <p className="pt-2 text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                       {description}
                     </p>
                     <p className="mt-auto rounded-2xl border border-primary/25 bg-primary/[0.07] px-5 py-3 text-base leading-relaxed text-primary md:text-lg">
@@ -1173,7 +1173,7 @@ function CompanyCard({
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
                 {tools && tools.length > 0 && (
-                  <div className="lg:mt-auto lg:[contain:inline-size]">
+                  <div className={`lg:[contain:inline-size] ${name === "OMP" ? "" : "lg:mt-auto"}`}>
                     <ToolsPanel tools={tools} />
                   </div>
                 )}
