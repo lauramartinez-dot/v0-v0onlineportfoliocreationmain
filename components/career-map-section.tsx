@@ -1302,7 +1302,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Senior Technical Writer"
-            photo={{ src: "/images/personio-senior-team.jpg", alt: "Personio teammates posing together outdoors beneath a leafy tree", width: 4032, height: 3024, style: { transform: "scale(1.74)", transformOrigin: "13% 50%", objectPosition: "center 52%" } }}
+            photo={{ src: "/images/personio-senior-team.jpg", alt: "Personio teammates posing together outdoors beneath a leafy tree", width: 4032, height: 3024, style: { transform: "scale(1.67)", transformOrigin: "31% 50%", objectPosition: "center 52%" } }}
             years="2023 - 2025"
           duration="2.5 years"
             country="Barcelona, Spain"
@@ -1326,7 +1326,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Technical Writer"
-            photo={{ src: "/images/personio-first-role.png", alt: "Six Personio colleagues posing in the office, four standing and two kneeling in front", width: 683, height: 911, style: { objectPosition: "50% 40%" } }}
+            photo={{ src: "/images/personio-first-role.png", alt: "Six Personio colleagues posing in the office, four standing and two kneeling in front", width: 683, height: 911, style: { transform: "scale(1.2)", transformOrigin: "0% 0%", objectPosition: "center 46%" } }}
             years="2021 - 2023"
           duration="2.5 years"
             country="Remote, Germany"
