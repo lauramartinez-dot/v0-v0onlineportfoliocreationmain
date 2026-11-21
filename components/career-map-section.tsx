@@ -1151,7 +1151,7 @@ function CompanyCard({
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
           <div className="pt-8 flex flex-col gap-10">
-            <div className={`grid items-start gap-8 ${photo ? "lg:grid-cols-[minmax(0,1fr)_max-content] lg:gap-6" : "lg:grid-cols-2 lg:gap-12"}`}>
+            <div className={`grid items-stretch gap-8 ${photo ? "lg:grid-cols-[minmax(0,1fr)_max-content] lg:gap-6" : "lg:grid-cols-2 lg:gap-12"}`}>
               <div className="flex min-w-0 flex-col gap-6">
                 {photo && (
                   <div className="aspect-[5/3] w-full overflow-hidden rounded-2xl">
@@ -1159,16 +1159,13 @@ function CompanyCard({
                   </div>
                 )}
                 {description && (
-                  <div className="flex flex-col gap-2">
+                  <div className="flex flex-1 flex-col gap-4">
                     <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                       {description}
                     </p>
-                    <section className="mt-2">
-                      <h4 className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">Achievements</h4>
-                      <p className="rounded-2xl border border-primary/25 bg-primary/[0.07] px-5 py-3 text-base leading-relaxed text-foreground md:text-lg">
-                        To see what I achieved in this role, <a href="#writing-principles" className="font-semibold text-primary underline underline-offset-4">open the core principles below</a>.
-                      </p>
-                    </section>
+                    <p className="mt-auto rounded-2xl border border-primary/25 bg-primary/[0.07] px-5 py-3 text-base leading-relaxed text-primary md:text-lg">
+                      To see what I achieved in this role, open the core principles below.
+                    </p>
                   </div>
                 )}
               </div>
@@ -1176,7 +1173,7 @@ function CompanyCard({
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
                 {tools && tools.length > 0 && (
-                  <div className="lg:[contain:inline-size]">
+                  <div className="lg:mt-auto lg:[contain:inline-size]">
                     <ToolsPanel tools={tools} />
                   </div>
                 )}
