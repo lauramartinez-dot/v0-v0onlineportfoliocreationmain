@@ -1153,13 +1153,13 @@ function CompanyCard({
           <div className="pt-8 flex flex-col gap-10">
             <div className="grid items-start gap-8 lg:grid-cols-2 lg:gap-12">
               <div className="flex min-w-0 flex-col gap-6">
+                {photo && (
+                  <Image {...photo} sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 90vw" className="aspect-video h-auto w-full rounded-2xl object-cover object-center" />
+                )}
                 {description && (
                   <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                     {description}
                   </p>
-                )}
-                {photo && (
-                  <Image {...photo} sizes="(min-width: 1280px) 560px, (min-width: 1024px) 45vw, 90vw" className="h-auto w-full rounded-2xl" />
                 )}
               </div>
               <div className="flex min-w-0 flex-col gap-6">
@@ -1357,9 +1357,9 @@ function ToolsPanel({ tools }: { tools: string[] }) {
 
 function SkillsPanel({ skills }: { skills: string[] }) {
   return (
-    <div className="rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
-      <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</h4>
-      <ul className="flex flex-col divide-y divide-primary/15">
+    <div>
+      <h4 className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</h4>
+      <ul className="flex flex-col divide-y divide-primary/15 rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
         {skills.map((skill) => (
           <li key={skill} className="flex items-center justify-between gap-4 py-3 first:pt-0 last:pb-0">
             <span className="text-lg font-bold leading-snug text-foreground md:text-xl">{skill}</span>
