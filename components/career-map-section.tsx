@@ -1324,6 +1324,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Technical Writer"
+            photo={{ src: "/images/personio-first-role.png", alt: "Four Personio colleagues posing together, three wearing dirndls", width: 1215, height: 911 }}
             years="2021 - 2023"
           duration="2.5 years"
             country="Remote, Germany"
