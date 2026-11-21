@@ -12,7 +12,7 @@ const personalProjects = [
   {
     id: "bookclub",
     title: "A book club for women in tech",
-    description: "I run Barcelona\u2019s first book club\nfor women in tech.",
+    description: "I founded Barcelona's first book club\nfor women in tech (in English).",
     tags: ["Founder", "Community building", "Women in tech", "Events", "Branding"],
     image: "/barcelona-book-club.jpg",
     imageAlt: "Barcelona book club members listen to a speaker seated on a yellow sofa in a bookshop",
