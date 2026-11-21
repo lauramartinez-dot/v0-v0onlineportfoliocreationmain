@@ -1169,7 +1169,7 @@ function CompanyCard({
                   </div>
                 )}
               </div>
-              <div className="flex min-w-0 flex-col gap-6 lg:w-fit lg:max-w-full">
+              <div className={`flex min-w-0 flex-col lg:w-fit lg:max-w-full ${name === "OMP" ? "gap-2" : "gap-6"}`}>
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
                 {tools && tools.length > 0 && (
