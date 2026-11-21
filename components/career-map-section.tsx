@@ -1357,7 +1357,7 @@ function ToolsPanel({ tools }: { tools: string[] }) {
 
 function SkillsPanel({ skills }: { skills: string[] }) {
   return (
-    <div>
+    <div className="w-fit max-w-full">
       <h4 className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</h4>
       <ul className="flex flex-col divide-y divide-primary/15 rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
         {skills.map((skill) => (
