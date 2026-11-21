@@ -1263,7 +1263,7 @@ export default function CareerMapSection() {
             logo="/omp-wordmark.png"
             logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
-            photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199, style: { transform: "scale(1.06)", objectPosition: "center 60%" } }}
+            photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199, style: { transform: "scale(1.35)", objectPosition: "center 22%" } }}
             role="Senior Technical Writer"
             years="2026 - Present"
           duration="7 months"
