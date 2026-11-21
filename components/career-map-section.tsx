@@ -1089,7 +1089,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
-  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition" | "aspectRatio"> }
+  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition" | "transform"> }
   tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -1154,7 +1154,9 @@ function CompanyCard({
             <div className={`grid items-start gap-8 ${photo ? "lg:grid-cols-[minmax(0,1fr)_max-content] lg:gap-6" : "lg:grid-cols-2 lg:gap-12"}`}>
               <div className="flex min-w-0 flex-col gap-6">
                 {photo && (
-                  <Image {...photo} sizes="(min-width: 1280px) 860px, (min-width: 1024px) 65vw, 90vw" className="aspect-[5/3] h-auto w-full rounded-2xl object-cover object-center" />
+                  <div className="aspect-[5/3] w-full overflow-hidden rounded-2xl">
+                    <Image {...photo} sizes="(min-width: 1280px) 860px, (min-width: 1024px) 65vw, 90vw" className="block h-full w-full object-cover object-center" />
+                  </div>
                 )}
                 {description && (
                   <div className="flex flex-col gap-2">
@@ -1261,7 +1263,7 @@ export default function CareerMapSection() {
             logo="/omp-wordmark.png"
             logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
-            photo={{ src: "/images/omp-team-wide.webp", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 680, style: { aspectRatio: "1600 / 680" } }}
+            photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199, style: { transform: "scale(1.06)", objectPosition: "center 60%" } }}
             role="Senior Technical Writer"
             years="2026 - Present"
           duration="7 months"
