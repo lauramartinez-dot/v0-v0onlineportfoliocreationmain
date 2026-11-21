@@ -1163,6 +1163,12 @@ function CompanyCard({
                     <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                       {description}
                     </p>
+                    <section className="mt-2">
+                      <h4 className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">Achievements</h4>
+                      <p className="rounded-2xl border border-primary/25 bg-primary/[0.07] px-5 py-3 text-base leading-relaxed text-foreground md:text-lg">
+                        To see what I achieved in this role, <a href="#writing-principles" className="font-semibold text-primary underline underline-offset-4">open the core principles below</a>.
+                      </p>
+                    </section>
                   </div>
                 )}
               </div>
@@ -1176,14 +1182,6 @@ function CompanyCard({
                 )}
               </div>
             </div>
-            {description && (
-              <section>
-                <h4 className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">Achievements</h4>
-                <p className="rounded-2xl border border-primary/25 bg-primary/[0.07] p-6 text-base leading-relaxed text-foreground md:text-lg">
-                  To see what I achieved in this role, <a href="#writing-principles" className="font-semibold text-primary underline underline-offset-4">open the core principles below</a>.
-                </p>
-              </section>
-            )}
           </div>
         </div>
       </div>
