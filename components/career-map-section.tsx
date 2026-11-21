@@ -1307,13 +1307,12 @@ export default function CareerMapSection() {
             countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decisions", "Content operations"]}
-            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
+            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro", "Zendesk Localization", "Jira", "ChatGPT", "Cursor"]}
             description={
               <>
                 I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
-                <span className="mt-4 block">I stayed the only Senior for 2+ years.</span>
                 <span className="mt-4 block">
-                  That meant shaping how we worked, getting our first AI automations off the ground, and speaking up for the docs team in leadership meetings.
+                  I stayed the only Senior for 2+ years. That meant shaping how we worked, getting our first AI automations off the ground, and speaking up for the docs team in leadership meetings.
                 </span>
               </>
             }
