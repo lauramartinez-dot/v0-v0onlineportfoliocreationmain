@@ -1285,7 +1285,6 @@ export default function CareerMapSection() {
               "Markdown",
               "XML",
               "AI agents",
-              "Agentic coding",
               "Python",
               "Coder",
               "Azure DevOps",
