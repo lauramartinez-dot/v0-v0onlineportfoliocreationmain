@@ -1111,7 +1111,7 @@ function CompanyCard({
         }}
       >
         <div className="flex items-center gap-5 md:gap-6">
-          <div className="relative w-32 h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white/95 shrink-0">
+          <div className="relative w-20 h-12 sm:w-32 sm:h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white/95 shrink-0">
             <Image src={logo} alt={`${name} logo`} fill sizes="176px" className={`object-contain ${logoClassName}`} />
           </div>
           <div className="flex-1 min-w-0">
@@ -1150,8 +1150,8 @@ function CompanyCard({
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
-          <div className="pt-8 flex flex-col gap-10">
-            <div className={`grid items-stretch gap-8 ${photo ? "lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-8" : "lg:grid-cols-2 lg:gap-12"}`}>
+          <div className="pt-8 md:pt-10">
+            <div className={`grid items-stretch gap-y-10 lg:gap-x-12 xl:gap-x-16 ${photo ? "lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]" : "lg:grid-cols-2"}`}>
               <div className="flex min-w-0 flex-col gap-6">
                 {photo && (
                   <div className="aspect-[5/3] w-5/6 max-w-xl overflow-hidden rounded-2xl lg:w-full lg:max-w-none">
@@ -1159,11 +1159,11 @@ function CompanyCard({
                   </div>
                 )}
                 {description && (
-                  <div className="flex flex-1 flex-col gap-4">
+                  <div className="flex flex-1 flex-col gap-6">
                     <p className="pt-2 text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
                       {description}
                     </p>
-                    <p className="mt-auto rounded-2xl border border-primary/25 bg-primary/[0.07] px-5 py-3 text-base leading-relaxed text-primary md:text-lg">
+                    <p className="mt-auto rounded-xl border border-primary/20 bg-primary/[0.04] px-5 py-4 text-base leading-relaxed text-primary">
                       To see what I achieved in this role, open the core principles below.
                     </p>
                   </div>
