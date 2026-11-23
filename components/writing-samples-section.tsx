@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink, FileText } from "lucide-react"
+import { ArrowUpRight, ExternalLink, FileText } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -211,9 +211,12 @@ export function WritingSamplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <p className="mx-auto mt-8 max-w-2xl text-center text-base text-white/60 text-pretty md:text-lg">
+            Based on audience&apos;s technical knowledge.
+            <ArrowUpRight className="ml-2 inline-block h-5 w-5 align-text-bottom text-primary" aria-hidden="true" />
+          </p>
         </div>
 
-        <p className="mx-auto mb-6 max-w-2xl text-balance text-center text-lg leading-relaxed text-foreground/80">Select a card to see writing samples for readers with that level of technical knowledge.</p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
           {audiences.map(({ level, audience, assumes, contentTypes }) => {
             return (
