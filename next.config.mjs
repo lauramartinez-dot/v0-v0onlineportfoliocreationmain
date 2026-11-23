@@ -7,6 +7,11 @@ process.env.TURBOPACK_PERSISTENT_CACHE = 'false'
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Dev chunks can reuse their URLs after a preview restart. Keep their cache
+  // keys unique per server session and consistent across its worker processes.
+  ...(process.env.NODE_ENV === 'development' && {
+    deploymentId: (process.env.LOCAL_PREVIEW_ASSET_ID ??= `dev-${Date.now().toString(36)}`),
+  }),
   typescript: {
     ignoreBuildErrors: true,
   },
