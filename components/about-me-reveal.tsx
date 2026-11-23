@@ -57,8 +57,8 @@ export function AboutMeIntro() {
         <div className="mt-8 flex flex-col gap-10 md:mt-10 lg:gap-16">
           {careerStages.map(({ stage, caption }) => (
             <div key={stage} className="grid items-center gap-4 lg:grid-cols-2 lg:gap-x-16">
-              <p className="text-lg leading-relaxed text-foreground/75 lg:col-start-2 lg:row-start-1">{caption}</p>
-              <div className="lg:col-start-1 lg:row-start-1"><ArticleCard stage={stage} /></div>
+              <p className="text-lg leading-relaxed text-foreground/75">{caption}</p>
+              <div><ArticleCard stage={stage} /></div>
             </div>
           ))}
         </div>
