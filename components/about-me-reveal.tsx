@@ -71,7 +71,7 @@ export function AboutMeIntro() {
           </h3>
           <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-2 lg:gap-x-16 lg:gap-y-4">
             <figure className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
-              <figcaption className=" text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">My team is me and a brilliant but overconfident intern<Colon /></figcaption>
+              <figcaption className=" text-lg leading-relaxed text-foreground/75 md:text-xl">My team is me and a brilliant but overconfident intern<Colon /></figcaption>
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-64">
                 <Image
                   src="/editor-intern-v18.webp"
@@ -83,7 +83,7 @@ export function AboutMeIntro() {
               </div>
             </figure>
             <div className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
-              <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">So I write less and spend more time on:</p>
+              <p className="text-lg leading-relaxed text-foreground/75 md:text-xl">So I write less and spend more time on:</p>
               <ul className="grid divide-y divide-foreground/10 border-y border-foreground/10">
                 {editorialSkills.map(([skill, description]) => (
                   <li key={skill} className="flex flex-col gap-1 py-3">
