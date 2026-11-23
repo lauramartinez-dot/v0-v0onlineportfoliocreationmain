@@ -229,12 +229,14 @@ export function WritingSamplesSection() {
                     />
 
                     <div className="flex w-full flex-1 flex-col gap-6 p-6 lg:p-8">
-                      <div className="relative isolate -mx-6 -mt-6 flex items-start justify-between gap-2 overflow-hidden border-b border-primary/25 bg-primary/[0.07] px-6 py-6 lg:-mx-8 lg:-mt-8 lg:px-8 lg:py-7">
-                        <img src={contentTypes[0].image} alt="" loading="lazy" decoding="async" className="pointer-events-none absolute inset-0 -z-10 h-full w-full select-none object-cover object-top opacity-25 [mask-image:linear-gradient(to_right,transparent,#0004_38%,black_78%)]" />
+                      <div className="-mx-6 -mt-6 overflow-hidden border-b border-primary/25 bg-primary/[0.07] lg:-mx-8 lg:-mt-8">
+                        <img src={contentTypes[0].image} alt="" loading="lazy" decoding="async" className="block aspect-[3/1] w-full object-cover object-top opacity-90" />
+                        <div className="flex items-start justify-between gap-2 px-6 py-5 lg:px-8">
                         <h3><AudienceLevel level={level} filledBars={filledBars} /></h3>
-                        <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-foreground/15 text-foreground/60 transition-colors group-hover:border-primary/50 group-hover:text-primary" aria-hidden="true">
+                        <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-foreground/25 bg-card/95 text-foreground/85 transition-colors group-hover:border-primary/50 group-hover:text-primary" aria-hidden="true">
                           <Maximize2 className="size-4" />
                         </span>
+                        </div>
                       </div>
                       <p className="text-pretty text-base leading-relaxed text-foreground/75 md:text-[17px]">{assumes}</p>
 
