@@ -195,7 +195,7 @@ function AudienceLevel({ level }: { level: string }) {
           ))}
         </span>
       </span>
-      <span className="text-base font-medium leading-snug text-foreground/75">Audience’s technical knowledge level</span>
+      <span className="sr-only"> audience technical knowledge</span>
     </span>
   )
 }
@@ -213,6 +213,7 @@ export function WritingSamplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
         </div>
 
+        <p className="mx-auto mb-6 max-w-2xl text-balance text-center text-lg leading-relaxed text-foreground/80">Select a card to see writing samples for readers with that level of technical knowledge.</p>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
           {audiences.map(({ level, audience, assumes, contentTypes }) => {
             return (
@@ -249,7 +250,7 @@ export function WritingSamplesSection() {
                   {/* Header mirrors the clickable card */}
                   <DialogHeader className="flex flex-col gap-5 space-y-0 border-b border-white/10 px-8 pt-12 pb-10 text-left md:px-12">
                     <div className="flex flex-col gap-5">
-                      <DialogTitle><AudienceLevel level={level} /></DialogTitle>
+                      <DialogTitle><span className="mb-2 block text-base font-medium text-foreground/75" aria-hidden="true">Audience’s technical knowledge level</span><AudienceLevel level={level} /></DialogTitle>
                       <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
                         {assumes}
                       </DialogDescription>
