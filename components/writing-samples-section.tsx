@@ -188,7 +188,7 @@ function AudienceLevel({ level }: { level: string }) {
   return (
     <span className="flex w-full max-w-md flex-col gap-2 text-left [container-type:inline-size]">
       <span className="flex items-center justify-between gap-3">
-        <span className="text-[clamp(2rem,17cqi,3.75rem)] font-bold uppercase leading-none tracking-tight text-foreground">{level}</span>
+        <span className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-none tracking-tight text-foreground">{level}</span>
         <span aria-hidden="true" className="inline-flex shrink-0 items-end gap-1">
           {['h-3', 'h-5', 'h-7'].map((height, index) => (
             <span key={height} className={`w-2 rounded-sm ${height} ${index < ['Low', 'Medium', 'High'].indexOf(level) + 1 ? 'bg-primary' : 'bg-foreground/15'}`} />
@@ -211,6 +211,7 @@ export function WritingSamplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-center text-base text-foreground/60 md:text-lg">Based on audience&apos;s technical knowledge.</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
