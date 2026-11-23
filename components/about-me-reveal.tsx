@@ -69,10 +69,10 @@ export function AboutMeIntro() {
           <h3 id="editorial-role" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
             These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.
           </h3>
-          <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-12 lg:gap-y-4">
+          <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:gap-x-12 lg:gap-y-4">
             <figure className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
-              <figcaption className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">My team is me and a brilliant but <strong className="font-semibold text-primary">overconfident intern</strong><Colon /></figcaption>
-              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-64">
+              <figcaption className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">My team is me and a brilliant but overconfident intern<Colon /></figcaption>
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-72">
                 <Image
                   src="/editor-intern-v18.webp"
                   alt="Laura points to a monitor beside an intern whose face is covered by the Claude logo."
@@ -84,11 +84,11 @@ export function AboutMeIntro() {
             </figure>
             <div className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
               <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">So I write less and spend more time on:</p>
-              <ul className="grid divide-y divide-foreground/10 border-y border-foreground/10">
+              <ul className="ms-3 grid list-disc divide-y divide-foreground/10 border-y border-foreground/10 ps-5 marker:text-foreground/60">
                 {editorialSkills.map(([skill, description]) => (
-                  <li key={skill} className="flex flex-col gap-1 py-3">
+                  <li key={skill} className="list-item py-3">
                     <span className="text-base leading-relaxed text-foreground/80 md:text-lg">{description}</span>
-                    <span className="text-base leading-snug text-primary/85">({skill.toLowerCase()})</span>
+                    <span className="mt-1 block text-base leading-snug text-primary/85">({skill.toLowerCase()})</span>
                   </li>
                 ))}
               </ul>
