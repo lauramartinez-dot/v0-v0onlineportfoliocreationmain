@@ -1305,7 +1305,7 @@ export default function CareerMapSection() {
             photo={{ src: "/images/personio-senior-team.jpg", alt: "Personio teammates posing together outdoors beneath a leafy tree", width: 4032, height: 3024, style: { transform: "scale(1.5)", transformOrigin: "34% 50%", objectPosition: "center 52%" } }}
             years="2023 - 2025"
           duration="2.5 years"
-            country="Barcelona, Spain"
+            country="Remote, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
             skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decisions", "Content operations"]}
