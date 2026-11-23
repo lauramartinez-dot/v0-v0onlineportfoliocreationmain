@@ -191,8 +191,8 @@ function AudienceLevel({ level }: { level: string }) {
         <span className="text-sm font-semibold uppercase leading-tight tracking-widest text-primary">Audience </span>
         <span className="text-lg font-medium leading-tight text-foreground">Technical knowledge<span className="sr-only">:</span></span>
       </span>
-      <span className="inline-flex shrink-0 items-center gap-2 rounded-full border border-primary/25 bg-primary/[0.07] px-3 py-2">
-        <span className="text-sm font-bold leading-none tracking-wide text-foreground">{level.toUpperCase()}</span>
+      <span className="inline-flex shrink-0 items-baseline gap-2">
+        <span className="text-3xl font-bold leading-none tracking-tight text-foreground lg:text-4xl">{level.toUpperCase()}</span>
         <span aria-hidden="true" className="inline-flex origin-right scale-90 items-end gap-1">
           {['h-2.5', 'h-4', 'h-6'].map((height, index) => (
             <span key={height} className={`w-1.5 rounded-sm ${height} ${index < ['Low', 'Medium', 'High'].indexOf(level) + 1 ? 'bg-primary' : 'bg-foreground/15'}`} />
