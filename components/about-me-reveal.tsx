@@ -64,7 +64,7 @@ export function AboutMeIntro() {
         </div>
       </section>
 
-      <div className="flex flex-col gap-24 md:gap-40">
+      <div className="flex flex-col gap-20 md:gap-28">
         <section className="mx-auto w-full max-w-5xl" aria-labelledby="editorial-role">
           <h3 id="editorial-role" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
             These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.
