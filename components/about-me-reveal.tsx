@@ -54,11 +54,11 @@ export function AboutMeIntro() {
         <h3 id="career-transition" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           I&apos;m a tech journalist turned technical writer.
         </h3>
-        <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-2 lg:gap-x-16">
+        <div className="mt-8 flex flex-col gap-10 md:mt-10 lg:gap-16">
           {careerStages.map(({ stage, caption }) => (
-            <div key={stage} className="flex flex-col gap-4">
-              <p className="text-lg leading-relaxed text-foreground/75">{caption}</p>
-              <div className="mt-auto"><ArticleCard stage={stage} /></div>
+            <div key={stage} className="grid items-center gap-4 lg:grid-cols-2 lg:gap-x-16">
+              <p className="text-lg leading-relaxed text-foreground/75 lg:col-start-2 lg:row-start-1">{caption}</p>
+              <div className="lg:col-start-1 lg:row-start-1"><ArticleCard stage={stage} /></div>
             </div>
           ))}
         </div>
