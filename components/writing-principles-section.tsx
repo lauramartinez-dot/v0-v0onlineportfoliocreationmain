@@ -16,11 +16,11 @@ function Em({ children }: { children: ReactNode }) {
   return <>{children}</>
 }
 
-type Source = "Personio" | "OMP" | "This portfolio"
+type Source = "Personio" | "OMP" | "This portfolio" | "Book club"
 
 // Dialogs show one tile per company, with that company's achievements stacked inside.
 // OMP first because it's the current role (its lines are written in present tense).
-const sourceOrder: Source[] = ["OMP", "Personio", "This portfolio"]
+const sourceOrder: Source[] = ["OMP", "Personio", "This portfolio", "Book club"]
 
 function groupBySource(proof: Proof[]) {
   return sourceOrder
@@ -57,10 +57,10 @@ function SourceBadge({ source }: { source: Source }) {
   return (
     <div
       className="flex h-12 w-28 shrink-0 items-center justify-center gap-1.5 rounded-xl bg-white/95 text-sm font-semibold text-primary"
-      aria-label="This portfolio"
+      aria-label={source}
     >
       <Sparkles className="size-4" aria-hidden="true" />
-      <span>This site</span>
+      <span>{source === "This portfolio" ? "This site" : source}</span>
     </div>
   )
 }
@@ -114,6 +114,10 @@ const principles: Principle[] = [
       {
         title: "Co-founded Personio\u2019s first Women\u2019s Committee, and organised 10+ events",
         where: "Personio",
+      },
+      {
+        title: "Founded Barcelona's first book club for women in tech (English).",
+        where: "Book club",
       },
     ],
   },
