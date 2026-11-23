@@ -1098,7 +1098,7 @@ function CompanyCard({
     <div className="surface-card rounded-3xl border border-white/10 bg-white/[0.03] mb-6 hover:border-white/25 hover:bg-white/[0.06] transition-all duration-300 overflow-hidden">
       {/* Company Header - Clickable to expand/collapse */}
       <div
-        className="p-8 md:p-10 cursor-pointer group"
+        className="group cursor-pointer rounded-3xl p-5 focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary sm:p-8 md:p-10"
         role="button"
         tabIndex={0}
         aria-expanded={isExpanded}
@@ -1110,7 +1110,7 @@ function CompanyCard({
           }
         }}
       >
-        <div className="flex items-center gap-5 md:gap-6">
+        <div className="grid grid-cols-[auto_minmax(0,1fr)] items-center gap-4 lg:flex lg:gap-6">
           <div className="relative w-20 h-12 sm:w-32 sm:h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white/95 shrink-0">
             <Image src={logo} alt={`${name} logo`} fill sizes="176px" className={`object-contain ${logoClassName}`} />
           </div>
@@ -1136,19 +1136,20 @@ function CompanyCard({
               </div>
             )}
           </div>
-          <div className="flex items-center gap-4 shrink-0">
-            {/* Country */}
-            <span className="hidden sm:block text-sm font-medium text-foreground/50">
+          <div className="col-span-2 flex flex-wrap items-center justify-between gap-3 lg:justify-end lg:gap-6">
+            <span className="text-base font-medium text-foreground/85 md:text-lg">
               {country.replace(/\s*company$/i, '')}
             </span>
-            {/* Expand/Collapse indicator */}
-            <ChevronDown className={`w-5 h-5 text-foreground/40 group-hover:text-foreground transition-all duration-300 ${isExpanded ? 'rotate-180' : ''}`} />
+            <span className="inline-flex size-9 items-center justify-center rounded-full border border-foreground/15 group-hover:border-primary/50">
+              <span className="sr-only">{isExpanded ? 'Hide details' : 'View details'}</span>
+              <ChevronDown aria-hidden="true" className={`size-5 text-primary motion-safe:transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+            </span>
           </div>
         </div>
       </div>
 
       {/* Collapsible content */}
-      <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
+      <div inert={!isExpanded} className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
           <div className="pt-8 md:pt-10">
             <div className={`grid items-stretch gap-y-10 lg:gap-x-12 xl:gap-x-16 ${photo ? "lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]" : "lg:grid-cols-2"}`}>
@@ -1173,7 +1174,7 @@ function CompanyCard({
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
                 {tools && tools.length > 0 && (
-                  <div className={name === "OMP" ? undefined : "lg:mt-auto"}>
+                  <div className="lg:mt-auto">
                     <ToolsPanel tools={tools} />
                   </div>
                 )}

@@ -1,6 +1,6 @@
 "use client"
 
-import { Maximize2, ExternalLink, FileText } from "lucide-react"
+import { ExternalLink, FileText } from "lucide-react"
 import {
   Dialog,
   DialogContent,
@@ -184,6 +184,22 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
   )
 }
 
+function AudienceLevel({ level }: { level: string }) {
+  return (
+    <span className="flex w-full max-w-md flex-col gap-2 text-left [container-type:inline-size]">
+      <span className="flex items-center justify-between gap-3">
+        <span className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase leading-none tracking-tight text-foreground">{level}</span>
+        <span aria-hidden="true" className="inline-flex shrink-0 items-end gap-1">
+          {['h-3', 'h-5', 'h-7'].map((height, index) => (
+            <span key={height} className={`w-2 rounded-sm ${height} ${index < ['Low', 'Medium', 'High'].indexOf(level) + 1 ? 'bg-primary' : 'bg-foreground/15'}`} />
+          ))}
+        </span>
+      </span>
+      <span className="sr-only"> audience technical knowledge</span>
+    </span>
+  )
+}
+
 export function WritingSamplesSection() {
   return (
     <section id="writing-samples" className="relative px-4 py-24 md:py-32 scroll-mt-32">
@@ -195,11 +211,11 @@ export function WritingSamplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-center text-base text-foreground/60 md:text-lg">Based on the audience&apos;s technical knowledge.</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
-          {audiences.map(({ level, audience, assumes, contentTypes }, index) => {
-            const filledBars = audiences.length - index
+          {audiences.map(({ level, audience, assumes, contentTypes }) => {
             return (
               <Dialog key={level}>
                 <DialogTrigger asChild>
@@ -212,39 +228,15 @@ export function WritingSamplesSection() {
                       aria-hidden="true"
                     />
 
-                    <div className="flex flex-1 flex-col gap-6 p-8 md:p-10">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5" aria-label={`${level} technical knowledge`}>
-                          {[1, 2, 3].map((segment) => (
-                            <span
-                              key={segment}
-                              className={
-                                "h-1.5 w-8 rounded-full transition-colors " +
-                                (segment <= filledBars ? "bg-primary" : "bg-white/10")
-                              }
-                            />
-                          ))}
-                        </div>
-                        <Maximize2
-                          className="h-5 w-5 text-white/30 transition-colors group-hover:text-primary"
-                          aria-hidden="true"
-                        />
-                      </div>
-
-                      <div className="flex flex-col gap-3">
-                        <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
-                          {level} technical knowledge
-                        </h3>
-                        <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
-                          {assumes}
-                        </p>
-                      </div>
+                    <div className="flex w-full flex-1 flex-col gap-6 p-6 lg:p-8">
+                      <h3 className="border-b border-primary/20 pb-5"><AudienceLevel level={level} /></h3>
+                      <p className="text-pretty text-base leading-relaxed text-foreground/75 md:text-[17px]">{assumes}</p>
 
                       <ul className="mt-auto flex flex-wrap gap-2" aria-label="For example">
                         {audience.map((tag) => (
                           <li
                             key={tag}
-                            className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                            className="rounded-lg border border-primary/30 bg-primary/15 px-3 py-1.5 text-sm font-semibold text-primary"
                           >
                             {tag}
                           </li>
@@ -257,20 +249,8 @@ export function WritingSamplesSection() {
                 <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
                   {/* Header mirrors the clickable card */}
                   <DialogHeader className="flex flex-col gap-5 space-y-0 border-b border-white/10 px-8 pt-12 pb-10 text-left md:px-12">
-                    <div className="flex items-center gap-1.5" aria-hidden="true">
-                      {[1, 2, 3].map((segment) => (
-                        <span
-                          key={segment}
-                          className={
-                            "h-1.5 w-8 rounded-full " + (segment <= filledBars ? "bg-primary" : "bg-white/10")
-                          }
-                        />
-                      ))}
-                    </div>
-                    <div className="flex flex-col gap-3">
-                      <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
-                        {level} technical knowledge
-                      </DialogTitle>
+                    <div className="flex flex-col gap-5">
+                      <DialogTitle><span className="mb-2 block text-base font-medium text-foreground/75" aria-hidden="true">Audience’s technical knowledge level</span><AudienceLevel level={level} /></DialogTitle>
                       <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
                         {assumes}
                       </DialogDescription>
@@ -279,7 +259,7 @@ export function WritingSamplesSection() {
                       {audience.map((tag) => (
                         <li
                           key={tag}
-                          className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                          className="rounded-lg border border-primary/30 bg-primary/15 px-3 py-1.5 text-sm font-semibold text-primary"
                         >
                           {tag}
                         </li>
