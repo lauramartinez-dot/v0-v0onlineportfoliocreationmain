@@ -5,17 +5,17 @@ const personalProjects = [
     id: "portfolio",
     title: "This portfolio",
     description: "I use this portfolio as a playground\nfor vibe-coding and AI-assisted creation.",
-    tags: ["Vibe-coding", "AI", "v0 by Vercel", "GitHub", "Claude"],
+    tags: ["Vibe-coding", "AI", "v0 by Vercel", "UX writing", "Content design"],
     image: "/project-portfolio-ai.png",
     imageAlt: "Laptop with a code editor and an AI chat panel side by side, lit in pink",
   },
   {
     id: "bookclub",
     title: "A book club for women in tech",
-    description: "I run Barcelona\u2019s first book club\nfor women in tech.",
+    description: "I founded Barcelona's first book club\nfor women in tech (in English).",
     tags: ["Founder", "Community building", "Women in tech", "Events", "Branding"],
-    image: "/women-in-tech-book-club.png",
-    imageAlt: "Four women laughing around a cafe table with open books, a laptop and coffee",
+    image: "/barcelona-book-club.jpg",
+    imageAlt: "Barcelona book club members listen to a speaker seated on a yellow sofa in a bookshop",
   },
 ]
 

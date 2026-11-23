@@ -16,7 +16,7 @@ import {
   FileText,
   Heart,
   ChevronDown,
-  ChevronUp,
+  ChevronsUp,
   ExternalLink,
   Video,
   Mail,
@@ -1071,6 +1071,7 @@ function CompanyCard({
   roleProgression,
   description,
   skills,
+  photo,
   tools,
   duration,
   logoClassName = "px-3 py-2 md:px-4 md:py-3",
@@ -1088,6 +1089,7 @@ function CompanyCard({
   roleProgression?: { title: string; period: string }[]
   description?: React.ReactNode
   skills?: string[]
+  photo?: { src: string; alt: string; width: number; height: number; style?: Pick<React.CSSProperties, "objectPosition" | "transform" | "transformOrigin"> }
   tools?: string[]
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded)
@@ -1109,7 +1111,7 @@ function CompanyCard({
         }}
       >
         <div className="flex items-center gap-5 md:gap-6">
-          <div className="relative w-32 h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white/95 shrink-0">
+          <div className="relative w-20 h-12 sm:w-32 sm:h-16 md:w-44 md:h-20 rounded-xl overflow-hidden bg-white/95 shrink-0">
             <Image src={logo} alt={`${name} logo`} fill sizes="176px" className={`object-contain ${logoClassName}`} />
           </div>
           <div className="flex-1 min-w-0">
@@ -1148,37 +1150,41 @@ function CompanyCard({
       {/* Collapsible content */}
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isExpanded ? 'max-h-[5000px] opacity-100' : 'max-h-0 opacity-0'}`}>
         <div className="mx-8 md:mx-10 pb-8 md:pb-10 border-t border-white/10">
-          <div className="pt-8 flex flex-col gap-10">
-            <div
-              className={
-                skills && skills.length > 0
-                  ? "grid grid-cols-1 items-center gap-10 lg:grid-cols-[minmax(0,1fr)_320px] lg:gap-x-16"
-                  : "flex flex-col gap-10"
-              }
-            >
-              {description && (
-                <div className="flex flex-col gap-6">
-                  <p className="text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
-                    {description}
-                  </p>
-                  <a
-                    href="#writing-principles"
-                    className="w-fit text-base font-semibold leading-relaxed text-primary underline-offset-4 hover:underline md:text-[17px]"
-                  >
-                    See my achievements from this role under Core principles.
-                  </a>
-                </div>
-              )}
-              {children}
-              {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+          <div className="pt-8 md:pt-10">
+            <div className={`grid items-stretch gap-y-10 lg:gap-x-12 xl:gap-x-16 ${photo ? "lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)]" : "lg:grid-cols-2"}`}>
+              <div className="flex min-w-0 flex-col gap-6">
+                {photo && (
+                  <div className="aspect-[5/3] w-5/6 max-w-xl overflow-hidden rounded-2xl lg:w-full lg:max-w-none">
+                    <Image {...photo} sizes="(min-width: 1280px) 690px, (min-width: 1024px) 54vw, (min-width: 768px) 576px, 77vw" className="block h-full w-full object-cover object-center" />
+                  </div>
+                )}
+                {description && (
+                  <div className="flex flex-1 flex-col gap-6">
+                    <p className="pt-2 text-lg leading-relaxed text-foreground/70 text-pretty md:text-xl md:leading-relaxed [&_strong]:font-semibold [&_strong]:text-foreground">
+                      {description}
+                    </p>
+                    <p className="mt-auto rounded-xl border border-primary/20 bg-primary/[0.04] px-5 py-4 text-base leading-relaxed text-primary">
+                      To see what I achieved in this role, open the core principles below.
+                    </p>
+                  </div>
+                )}
+              </div>
+              <div className={`flex min-w-0 flex-col ${name === "OMP" ? "gap-2" : "gap-6"}`}>
+                {children}
+                {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
+                {tools && tools.length > 0 && (
+                  <div className={name === "OMP" ? undefined : "lg:mt-auto"}>
+                    <ToolsPanel tools={tools} />
+                  </div>
+                )}
+              </div>
             </div>
-            {tools && tools.length > 0 && <ToolsPanel tools={tools} />}
           </div>
-  </div>
-  </div>
-  </div>
+        </div>
+      </div>
+    </div>
   )
-  }
+}
 
 export default function CareerMapSection() {
   const [selectedType, setSelectedType] = useState<ContentTypeData | null>(null)
@@ -1257,18 +1263,21 @@ export default function CareerMapSection() {
             logo="/omp-wordmark.png"
             logoClassName="px-5 py-3.5 md:px-7 md:py-5"
             name="OMP"
+            photo={{ src: "/omp-team.png", alt: "OMP teammates posing together at a virtual reality venue", width: 1600, height: 1199, style: { transform: "scale(1.35)", objectPosition: "center 22%" } }}
             role="Senior Technical Writer"
             years="2026 - Present"
-          duration="5 months"
+          duration="7 months"
             country="Barcelona, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
-            skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation"]}
+            skills={["Developer documentation", "API specialization", "Docs as code", "Agentic documentation", "Content governance"]}
             description={
               <>
-                I joined as the <strong>second Technical Writer</strong> for API &amp; integrations. I&apos;m making our
-                API docs work for less technical users too, and I&apos;m one of the first writers here moving to
-                docs-as-code and building AI agents into how we work.
+                I joined as the <strong>second Technical Writer</strong> for API &amp; integrations.
+                <span className="mt-4 block">
+                  I&apos;m making our API docs work for less technical users too, and I&apos;m one of the first writers here moving to
+                  docs-as-code and building AI agents into how we work.
+                </span>
               </>
             }
             tools={[
@@ -1276,7 +1285,6 @@ export default function CareerMapSection() {
               "Markdown",
               "XML",
               "AI agents",
-              "Agentic coding",
               "Python",
               "Coder",
               "Azure DevOps",
@@ -1293,18 +1301,20 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Senior Technical Writer"
+            photo={{ src: "/images/personio-senior-team.jpg", alt: "Personio teammates posing together outdoors beneath a leafy tree", width: 4032, height: 3024, style: { transform: "scale(1.5)", transformOrigin: "34% 50%", objectPosition: "center 52%" } }}
             years="2023 - 2025"
           duration="2.5 years"
             country="Barcelona, Spain"
             countryFlag="🇪🇸"
             defaultExpanded={false}
-            skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decision-making"]}
-            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro"]}
+            skills={["Business acumen", "Content strategy", "Information architecture", "Data-driven decisions", "Content operations"]}
+            tools={["Tableau", "Claude", "Langdock", "Clueso", "Phrase", "Figma", "Miro", "Jira", "Zendesk", "Confluence", "Notion", "Smartling", "Google ecosystem"]}
             description={
               <>
                 I eventually became Personio&apos;s <strong>first-ever Senior Technical Writer</strong> on a team of 10.
-                I stayed the only Senior for 2+ years. That meant shaping how we worked, getting our first AI automations
-                off the ground, and speaking up for the docs team in leadership meetings.
+                <span className="mt-4 block">
+                  I stayed the only Senior for 2+ years. That meant shaping how we worked, getting our first AI automations off the ground, and speaking up for the docs team in leadership meetings.
+                </span>
               </>
             }
           />
@@ -1315,6 +1325,7 @@ export default function CareerMapSection() {
             logoClassName="px-2 py-1.5 md:px-3 md:py-2"
             name="Personio"
             role="Technical Writer"
+            photo={{ src: "/images/personio-first-role.png", alt: "Six Personio colleagues posing in the office, four standing and two kneeling in front", width: 683, height: 911, style: { objectPosition: "center 36%" } }}
             years="2021 - 2023"
           duration="2.5 years"
             country="Remote, Germany"
@@ -1338,9 +1349,9 @@ export default function CareerMapSection() {
 
 function ToolsPanel({ tools }: { tools: string[] }) {
   return (
-    <div className="rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
-      <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">Tools</h4>
-      <ul className="flex flex-wrap gap-2.5">
+    <div>
+      <h4 className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-primary">Tools</h4>
+      <ul className="flex flex-wrap gap-2.5 rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
         {tools.map((tool) => (
           <li
             key={tool}
@@ -1356,13 +1367,13 @@ function ToolsPanel({ tools }: { tools: string[] }) {
 
 function SkillsPanel({ skills }: { skills: string[] }) {
   return (
-    <div className="rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
-      <h4 className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked</h4>
-      <ul className="flex flex-col divide-y divide-primary/15">
+    <div className="w-full min-w-0">
+      <h4 className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-primary">Skills unlocked <ChevronsUp className="size-4" aria-hidden="true" /></h4>
+      <ul className="flex flex-col divide-y divide-primary/15 rounded-2xl border border-primary/25 bg-primary/[0.07] p-6">
         {skills.map((skill) => (
           <li key={skill} className="flex items-center justify-between gap-4 py-3 first:pt-0 last:pb-0">
             <span className="text-lg font-bold leading-snug text-foreground md:text-xl">{skill}</span>
-            <ChevronUp className="h-5 w-5 shrink-0 text-primary" strokeWidth={2.5} aria-hidden="true" />
+            <ChevronsUp className="h-5 w-5 shrink-0 text-primary" strokeWidth={2.5} aria-hidden="true" />
           </li>
         ))}
       </ul>

@@ -30,72 +30,71 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
-const storyDetailClass = "text-2xl font-bold leading-tight tracking-tight text-white text-pretty md:text-3xl"
 
-function Lead({ children, className = "max-w-md md:max-w-lg" }: { children: ReactNode; className?: string }) {
-  return <p className={`${storyDetailClass} mx-auto px-6 text-center text-white/70 ${className}`}>{children}</p>
-}
+const editorialSkills = [
+  ["Content strategy", "Choosing what we write and for whom"],
+  ["Information architecture", "Structuring it for people and AI"],
+  ["Content operations", "Building processes so my intern moves faster"],
+  ["Content governance", "Deciding what actually gets published"],
+] as const
 
 function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const pairGrid = "grid grid-cols-2 items-stretch gap-4 md:gap-8"
-const group = "flex flex-col gap-8 md:gap-10"
+const careerStages = [
+  { stage: "Before", caption: "I used to write about complex technology for publications like Business Insider, Xataka, and Muy Interesante:" },
+  { stage: "Now", caption: "15 years later, I still write about complex technology, but now I do it for tech companies:" },
+] as const
 
 export function AboutMeIntro() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
-      <div className="mx-auto w-fit rounded-3xl border border-white/10 bg-white/[0.04] px-10 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:px-16 md:py-14">
-        <p className={`${storyLineClass} mx-auto max-w-md text-center md:max-w-lg`}>
+      <section className="mx-auto w-full max-w-5xl" aria-labelledby="career-transition">
+        <h3 id="career-transition" className="max-w-3xl py-3 md:py-5 text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           I&apos;m a tech journalist turned technical writer.
-        </p>
-      </div>
-
-      <div className={group}>
-        <div className="flex flex-col gap-6 md:gap-8">
-          <Lead>I still write about technology and software.</Lead>
-          <Lead>But now I do it for tech companies instead of the media.</Lead>
+        </h3>
+        <div className="mt-10 flex flex-col gap-12 md:mt-16 lg:gap-20">
+          {careerStages.map(({ stage, caption }) => (
+            <div key={stage} className="grid items-center gap-y-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,5fr)] lg:gap-x-16">
+              <p className="text-lg leading-relaxed text-foreground/75 md:text-xl">{caption}</p>
+              <div><ArticleCard stage={stage} /></div>
+            </div>
+          ))}
         </div>
-        <div className={pairGrid}>
-          <ArticleCard
-            era="Before"
-            imageSrc="/then-airplane-article.png"
-            imageAlt="Magazine article titled How do planes stay in the air?"
-            href="https://www.xataka.com/vehiculos/2020-todavia-no-entendemos-todo-que-aviones-se-mantienen-aire"
-          />
-          <ArticleCard
-            era="Now"
-            imageSrc="/now-tech-docs.png"
-            imageAlt="Documentation page titled What is an API? on a laptop screen"
-          />
-        </div>
-      </div>
+      </section>
 
       <div className="flex flex-col gap-16 md:gap-24">
-        <div className={group}>
-          <div className="flex flex-col gap-6 md:gap-8">
-            <Lead className="max-w-xl md:max-w-2xl">
-            These days, I&apos;m also less of a writer
-            <br />
-            and more of an editor-in-chief.
-          </Lead>
-            <Lead>
-              My team is me and a brilliant but overconfident intern
-              <Colon />
-            </Lead>
+        <section className="mx-auto w-full max-w-5xl" aria-labelledby="editorial-role">
+          <h3 id="editorial-role" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+            These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.
+          </h3>
+          <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-12 lg:gap-y-4">
+            <figure className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
+              <figcaption className="text-lg leading-relaxed text-foreground/75 md:text-xl">My team is me and a brilliant but <strong className="font-semibold text-primary">overconfident intern</strong><Colon /></figcaption>
+              <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-64">
+                <Image
+                  src="/editor-intern-v18.webp"
+                  alt="Laura points to a monitor beside an intern whose face is covered by the Claude logo."
+                  fill
+                  sizes="(min-width: 1024px) 480px, 90vw"
+                  className="object-cover"
+                />
+              </div>
+            </figure>
+            <div className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
+              <p className="text-lg leading-relaxed text-foreground/75 md:text-xl">So I write less and spend more time on:</p>
+              <ul className="grid divide-y divide-foreground/10 border-y border-foreground/10">
+                {editorialSkills.map(([skill, description]) => (
+                  <li key={skill} className="flex flex-col gap-1 py-3">
+                    <span className="text-base leading-relaxed text-foreground/80 md:text-lg">{description}</span>
+                    <span className="text-base leading-snug text-primary/85">({skill.toLowerCase()})</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-            <Image
-              src="/editor-in-chief.jpg"
-              alt="Laura leaning over a desk and pointing at a monitor while an intern, whose face is replaced by an AI logo, works on a tablet"
-              fill
-              sizes="(min-width: 768px) 672px, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <Lead>So I review and rewrite a lot, and keep teaching them so they need less supervision over time.</Lead>
-        </div>
+        </section>
 
         <div
           id="why"

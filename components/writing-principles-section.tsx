@@ -198,8 +198,7 @@ const principles: Principle[] = [
     title: "User-centered",
     description: (
       <>
-        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? If they set it
-        up, do they stay inside the app? <Em>How technical</Em> are they, really?
+        Before I write a word, I find out who&apos;s reading. Do they use the software or set it up? <Em>How technical</Em> are they, really?
       </>
     ),
     proof: [
