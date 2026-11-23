@@ -51,7 +51,7 @@ export function AboutMeIntro() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
       <section className="mx-auto w-full max-w-5xl" aria-labelledby="career-transition">
-        <h3 id="career-transition" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+        <h3 id="career-transition" className="max-w-3xl py-3 md:py-5 text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           I&apos;m a tech journalist turned technical writer.
         </h3>
         <div className="mt-10 flex flex-col gap-12 md:mt-16 lg:gap-20">
