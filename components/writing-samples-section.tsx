@@ -188,7 +188,14 @@ function AudienceLevel({ level }: { level: string }) {
   return (
     <span className="flex flex-col gap-2">
       <span className="text-base font-semibold leading-snug text-primary">Audience technical knowledge<span className="sr-only">:</span></span>
-      <span className="text-4xl font-semibold leading-none tracking-tight text-foreground">{level.toUpperCase()}</span>
+      <span className="flex items-baseline gap-4">
+        <span className="text-4xl font-semibold leading-none tracking-tight text-foreground">{level.toUpperCase()}</span>
+        <span aria-hidden="true" className="inline-flex items-end gap-1">
+          {['h-2.5', 'h-4', 'h-6'].map((height, index) => (
+            <span key={height} className={`w-1.5 rounded-sm ${height} ${index < ['Low', 'Medium', 'High'].indexOf(level) + 1 ? 'bg-primary' : 'bg-foreground/15'}`} />
+          ))}
+        </span>
+      </span>
     </span>
   )
 }
