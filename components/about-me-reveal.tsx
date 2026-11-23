@@ -67,29 +67,36 @@ export function AboutMeIntro() {
       </div>
 
       <div className="flex flex-col gap-16 md:gap-24">
-        <div className="mx-auto flex w-full max-w-4xl flex-col gap-6 md:gap-8">
-          <div className="flex flex-col gap-4">
-            <Lead>These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.</Lead>
-            <Lead>My team is me and a brilliant but overconfident intern<Colon /></Lead>
+        <section className="mx-auto w-full max-w-5xl" aria-labelledby="editorial-role">
+          <h3 id="editorial-role" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
+            These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.
+          </h3>
+          <div className="mt-8 grid items-start gap-y-10 md:mt-10 lg:grid-cols-2 lg:gap-x-16">
+            <figure>
+              <figcaption className="mb-4 text-lg leading-relaxed text-foreground/75">My team is me and a brilliant but overconfident intern<Colon /></figcaption>
+              <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
+                <Image
+                  src="/editor-intern-v18.webp"
+                  alt="Laura points to a monitor beside an intern whose face is covered by the Claude logo."
+                  fill
+                  sizes="(min-width: 1024px) 480px, 90vw"
+                  className="object-cover"
+                />
+              </div>
+            </figure>
+            <div>
+              <p className="text-xl font-semibold leading-snug text-foreground">So I write less and spend more time on:</p>
+              <ul className="mt-4 divide-y divide-foreground/10 border-y border-foreground/10">
+                {editorialSkills.map(([skill, description]) => (
+                  <li key={skill} className="flex flex-col gap-1 py-3">
+                    <span className="text-lg leading-snug text-foreground">{description}</span>
+                    <span className="text-sm font-medium text-primary">({skill.toLowerCase()})</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
-          <div className="relative mx-auto aspect-[3/2] w-full max-w-2xl overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]">
-            <Image
-              src="/editor-intern-v18.webp"
-              alt="Laura points to a monitor beside an intern whose face is covered by the Claude logo."
-              fill
-              sizes="(min-width: 768px) 672px, 100vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="ms-[max(0px,calc((100%_-_var(--container-2xl))/2))]">
-            <p className="text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">So I write less and spend more time on:</p>
-            <ul className="mt-4 flex list-disc flex-col gap-2 pl-6 text-xl font-medium leading-snug tracking-tight text-white/70 md:text-2xl">
-              {editorialSkills.map(([skill, description]) => (
-                <li key={skill}>{description} <span className="text-primary">({skill.toLowerCase()})</span></li>
-              ))}
-            </ul>
-          </div>
-        </div>
+        </section>
 
         <div
           id="why"
