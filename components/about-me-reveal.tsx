@@ -54,9 +54,9 @@ export function AboutMeIntro() {
         <h3 id="career-transition" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           I&apos;m a tech journalist turned technical writer.
         </h3>
-        <div className="mt-10 flex flex-col divide-y divide-foreground/10 md:mt-16">
+        <div className="mt-10 flex flex-col gap-12 md:mt-16 lg:gap-20">
           {careerStages.map(({ stage, caption }) => (
-            <div key={stage} className="grid items-start gap-y-5 py-8 first:pt-0 last:pb-0 md:py-12 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-x-16">
+            <div key={stage} className="grid items-center gap-y-6 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-x-16">
               <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">{caption}</p>
               <div><ArticleCard stage={stage} /></div>
             </div>
