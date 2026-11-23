@@ -57,7 +57,7 @@ export function AboutMeIntro() {
         <div className="mt-10 flex flex-col gap-12 md:mt-16 lg:gap-20">
           {careerStages.map(({ stage, caption }) => (
             <div key={stage} className="grid items-center gap-y-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,5fr)] lg:gap-x-16">
-              <p className="text-lg leading-relaxed text-foreground/75 md:text-xl">{caption}</p>
+              <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">{caption}</p>
               <div><ArticleCard stage={stage} /></div>
             </div>
           ))}
@@ -71,7 +71,7 @@ export function AboutMeIntro() {
           </h3>
           <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-[minmax(0,11fr)_minmax(0,9fr)] lg:gap-x-12 lg:gap-y-4">
             <figure className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
-              <figcaption className="text-lg leading-relaxed text-foreground/75 md:text-xl">My team is me and a brilliant but <strong className="font-semibold text-primary">overconfident intern</strong><Colon /></figcaption>
+              <figcaption className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">My team is me and a brilliant but <strong className="font-semibold text-primary">overconfident intern</strong><Colon /></figcaption>
               <div className="relative aspect-[3/2] w-full overflow-hidden rounded-2xl lg:aspect-auto lg:min-h-64">
                 <Image
                   src="/editor-intern-v18.webp"
@@ -83,7 +83,7 @@ export function AboutMeIntro() {
               </div>
             </figure>
             <div className="grid gap-y-4 lg:row-span-2 lg:grid-rows-subgrid">
-              <p className="text-lg leading-relaxed text-foreground/75 md:text-xl">So I write less and spend more time on:</p>
+              <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">So I write less and spend more time on:</p>
               <ul className="grid divide-y divide-foreground/10 border-y border-foreground/10">
                 {editorialSkills.map(([skill, description]) => (
                   <li key={skill} className="flex flex-col gap-1 py-3">
