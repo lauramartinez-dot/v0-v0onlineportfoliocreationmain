@@ -186,19 +186,16 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
 
 function AudienceLevel({ level }: { level: string }) {
   return (
-    <span className="flex w-full max-w-md items-center justify-between gap-3 text-left">
-      <span className="flex min-w-0 flex-col gap-1">
-        <span className="text-sm font-semibold uppercase leading-tight tracking-widest text-primary">Audience </span>
-        <span className="text-lg font-medium leading-tight text-foreground">Technical knowledge<span className="sr-only">:</span></span>
-      </span>
-      <span className="inline-flex shrink-0 items-baseline gap-2">
-        <span className="text-3xl font-bold leading-none tracking-tight text-foreground lg:text-4xl">{level.toUpperCase()}</span>
-        <span aria-hidden="true" className="inline-flex origin-right scale-90 items-end gap-1">
-          {['h-2.5', 'h-4', 'h-6'].map((height, index) => (
-            <span key={height} className={`w-1.5 rounded-sm ${height} ${index < ['Low', 'Medium', 'High'].indexOf(level) + 1 ? 'bg-primary' : 'bg-foreground/15'}`} />
+    <span className="flex w-full max-w-md flex-col gap-2 text-left [container-type:inline-size]">
+      <span className="flex items-center justify-between gap-3">
+        <span className="text-[clamp(2rem,17cqi,3.75rem)] font-bold uppercase leading-none tracking-tight text-foreground">{level}</span>
+        <span aria-hidden="true" className="inline-flex shrink-0 items-end gap-1">
+          {['h-3', 'h-5', 'h-7'].map((height, index) => (
+            <span key={height} className={`w-2 rounded-sm ${height} ${index < ['Low', 'Medium', 'High'].indexOf(level) + 1 ? 'bg-primary' : 'bg-foreground/15'}`} />
           ))}
         </span>
       </span>
+      <span className="text-base font-medium leading-snug text-foreground/75">Technical knowledge</span>
     </span>
   )
 }
