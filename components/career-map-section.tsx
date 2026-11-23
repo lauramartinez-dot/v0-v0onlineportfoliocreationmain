@@ -1173,7 +1173,7 @@ function CompanyCard({
                 {children}
                 {skills && skills.length > 0 && <SkillsPanel skills={skills} />}
                 {tools && tools.length > 0 && (
-                  <div className={name === "OMP" ? undefined : "lg:mt-auto"}>
+                  <div className="lg:mt-auto">
                     <ToolsPanel tools={tools} />
                   </div>
                 )}
