@@ -43,7 +43,7 @@ function Colon() {
 }
 
 const careerStages = [
-  { stage: "Before", caption: "I used to write about complex technology for publications like Business Insider, Xataka, and Muy Interesante:" },
+  { stage: "Before", caption: "I used to write about complex technology for publications like Business Insider:" },
   { stage: "Now", caption: "15 years later, I still write about complex technology, but now I do it for tech companies:" },
 ] as const
 
