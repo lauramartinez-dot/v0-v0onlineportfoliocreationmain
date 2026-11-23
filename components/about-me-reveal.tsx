@@ -49,12 +49,12 @@ const careerStages = [
 
 export function AboutMeIntro() {
   return (
-    <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
+    <div className="mx-auto flex w-full max-w-7xl flex-col gap-24 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 pb-16 pt-20 md:gap-40 md:px-12 md:pb-24 md:pt-32">
       <section className="mx-auto w-full max-w-5xl" aria-labelledby="career-transition">
         <h3 id="career-transition" className="max-w-3xl py-3 md:py-5 text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           I&apos;m a tech journalist turned technical writer.
         </h3>
-        <div className="mt-10 flex flex-col gap-12 md:mt-16 lg:gap-20">
+        <div className="mt-14 flex flex-col gap-16 md:mt-20 lg:gap-24">
           {careerStages.map(({ stage, caption }) => (
             <div key={stage} className="grid items-center gap-y-6 lg:grid-cols-[minmax(0,3fr)_minmax(0,5fr)] lg:gap-x-16">
               <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">{caption}</p>
@@ -64,7 +64,7 @@ export function AboutMeIntro() {
         </div>
       </section>
 
-      <div className="flex flex-col gap-16 md:gap-24">
+      <div className="flex flex-col gap-24 md:gap-40">
         <section className="mx-auto w-full max-w-5xl" aria-labelledby="editorial-role">
           <h3 id="editorial-role" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
             These days, I&apos;m also less of a traditional writer and more of an editor-in-chief.
