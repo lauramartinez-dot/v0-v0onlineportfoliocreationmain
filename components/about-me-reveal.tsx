@@ -30,9 +30,6 @@ function FadeLine({ index, className, children }: { index: number; className?: s
 }
 
 const storyLineClass = "text-3xl font-bold leading-tight tracking-tight text-white text-pretty md:text-4xl"
-function Lead({ children }: { children: ReactNode }) {
-  return <p className="mx-auto w-full max-w-2xl text-left text-xl font-medium leading-snug tracking-tight text-pretty text-white/70 md:text-2xl">{children}</p>
-}
 
 const editorialSkills = [
   ["Content strategy", "Choosing what we write and for whom"],
@@ -45,26 +42,27 @@ function Colon() {
   return <span className="text-primary">:</span>
 }
 
-const group = "mx-auto flex w-full max-w-2xl flex-col gap-6 md:gap-8"
+const careerStages = [
+  { stage: "Before", caption: "I used to write about complex technology for publications like Business Insider, Xataka, and Muy Interesante:" },
+  { stage: "Now", caption: "15 years later, I still write about complex technology, but now I do it for tech companies:" },
+] as const
 
 export function AboutMeIntro() {
   return (
     <div className="mx-auto flex w-full max-w-7xl flex-col gap-20 rounded-[2.5rem] border border-white/10 bg-white/[0.03] px-6 py-16 md:gap-28 md:px-12 md:py-24">
-      <div className="mx-auto w-fit rounded-3xl border border-white/10 bg-white/[0.04] px-10 py-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] md:px-16 md:py-14">
-        <p className={`${storyLineClass} mx-auto max-w-md text-center md:max-w-lg`}>
+      <section className="mx-auto w-full max-w-5xl" aria-labelledby="career-transition">
+        <h3 id="career-transition" className="max-w-3xl text-pretty text-2xl font-semibold leading-tight tracking-tight text-foreground md:text-4xl">
           I&apos;m a tech journalist turned technical writer.
-        </p>
-      </div>
-
-      <div className={group}>
-        <Lead>I used to write about complex technology for publications like Business Insider, Xataka, and Muy Interesante:</Lead>
-        <ArticleCard stage="Before" />
-      </div>
-
-      <div className={group}>
-        <Lead>15 years later, I still write about complex technology, but now I do it for tech companies:</Lead>
-        <ArticleCard stage="Now" />
-      </div>
+        </h3>
+        <div className="mt-8 grid gap-y-10 md:mt-10 lg:grid-cols-2 lg:gap-x-16">
+          {careerStages.map(({ stage, caption }) => (
+            <div key={stage} className="flex flex-col gap-4">
+              <p className="text-lg leading-relaxed text-foreground/75">{caption}</p>
+              <div className="mt-auto"><ArticleCard stage={stage} /></div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       <div className="flex flex-col gap-16 md:gap-24">
         <section className="mx-auto w-full max-w-5xl" aria-labelledby="editorial-role">
