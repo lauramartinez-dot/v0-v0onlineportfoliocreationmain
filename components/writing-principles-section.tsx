@@ -251,7 +251,7 @@ export function WritingPrinciplesSection() {
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
 
           <p className="mx-auto mt-8 max-w-2xl text-center text-base text-white/60 text-pretty md:text-lg">
-            These are the non-negotiables I bring to every job and project. Click a principle to see how I&apos;ve put
+            Click a principle to see how I&apos;ve put
             it into practice.
             <ArrowUpRight className="ml-2 inline-block h-5 w-5 align-text-bottom text-primary" aria-hidden="true" />
           </p>
