@@ -187,7 +187,7 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
 function AudienceLevel({ level, filledBars }: { level: string; filledBars: number }) {
   return (
     <span className="flex flex-col gap-3">
-      <span className="text-sm font-medium leading-snug tracking-wide text-foreground/70">Audience technical knowledge<span className="sr-only">:</span></span>
+      <span className="text-base font-semibold leading-snug tracking-wide text-primary">Audience technical knowledge<span className="sr-only">:</span></span>
       <span className="flex items-center gap-4">
         <span className="text-4xl font-semibold leading-none tracking-tight text-foreground">{level.toUpperCase()}</span>
         <span aria-hidden="true" className="flex h-7 items-end gap-1">
@@ -229,7 +229,7 @@ export function WritingSamplesSection() {
                     />
 
                     <div className="flex w-full flex-1 flex-col gap-6 p-6 lg:p-8">
-                      <div className="flex items-start justify-between gap-2 border-b border-foreground/10 pb-6">
+                      <div className="-mx-6 -mt-6 flex items-start justify-between gap-2 border-b border-primary/25 bg-primary/[0.07] px-6 py-6 lg:-mx-8 lg:-mt-8 lg:px-8 lg:py-7">
                         <h3><AudienceLevel level={level} filledBars={filledBars} /></h3>
                         <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-foreground/15 text-foreground/60 transition-colors group-hover:border-primary/50 group-hover:text-primary" aria-hidden="true">
                           <Maximize2 className="size-4" />
@@ -241,7 +241,7 @@ export function WritingSamplesSection() {
                         {audience.map((tag) => (
                           <li
                             key={tag}
-                            className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/80"
+                            className="rounded-lg border border-primary/30 bg-primary/15 px-3 py-1.5 text-sm font-semibold text-primary"
                           >
                             {tag}
                           </li>
@@ -264,7 +264,7 @@ export function WritingSamplesSection() {
                       {audience.map((tag) => (
                         <li
                           key={tag}
-                          className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/80"
+                          className="rounded-lg border border-primary/30 bg-primary/15 px-3 py-1.5 text-sm font-semibold text-primary"
                         >
                           {tag}
                         </li>
