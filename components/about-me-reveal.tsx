@@ -56,8 +56,8 @@ export function AboutMeIntro() {
         </h3>
         <div className="mt-8 flex flex-col gap-10 md:mt-10 lg:gap-16">
           {careerStages.map(({ stage, caption }) => (
-            <div key={stage} className="grid items-center gap-4 lg:grid-cols-2 lg:gap-x-16">
-              <p className="text-lg leading-relaxed text-foreground/75">{caption}</p>
+            <div key={stage} className="grid items-center gap-4 lg:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] lg:gap-x-16">
+              <p className="text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">{caption}</p>
               <div><ArticleCard stage={stage} /></div>
             </div>
           ))}
@@ -71,7 +71,7 @@ export function AboutMeIntro() {
           </h3>
           <div className="mt-8 grid items-start gap-y-10 md:mt-10 lg:grid-cols-2 lg:gap-x-16">
             <figure>
-              <figcaption className="mb-4 text-lg leading-relaxed text-foreground/75">My team is me and a brilliant but overconfident intern<Colon /></figcaption>
+              <figcaption className="mb-4 text-xl leading-relaxed text-foreground/75 md:text-2xl md:leading-relaxed">My team is me and a brilliant but overconfident intern<Colon /></figcaption>
               <div className="relative aspect-[3/2] overflow-hidden rounded-2xl">
                 <Image
                   src="/editor-intern-v18.webp"
@@ -87,8 +87,8 @@ export function AboutMeIntro() {
               <ul className="mt-4 divide-y divide-foreground/10 border-y border-foreground/10">
                 {editorialSkills.map(([skill, description]) => (
                   <li key={skill} className="flex flex-col gap-1 py-3">
-                    <span className="text-lg leading-snug text-foreground">{description}</span>
-                    <span className="text-sm font-medium text-primary">({skill.toLowerCase()})</span>
+                    <span className="text-xl leading-snug text-foreground md:text-2xl">{description}</span>
+                    <span className="text-base font-medium text-primary md:text-lg">({skill.toLowerCase()})</span>
                   </li>
                 ))}
               </ul>
