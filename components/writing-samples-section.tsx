@@ -184,6 +184,22 @@ function SectionImage({ src, alt }: { src: string; alt: string }) {
   )
 }
 
+function AudienceLevel({ level, filledBars }: { level: string; filledBars: number }) {
+  return (
+    <span className="flex flex-col gap-3">
+      <span className="text-sm font-medium leading-snug tracking-wide text-foreground/70">Audience technical knowledge<span className="sr-only">:</span></span>
+      <span className="flex items-center gap-4">
+        <span className="text-4xl font-semibold leading-none tracking-tight text-foreground">{level.toUpperCase()}</span>
+        <span aria-hidden="true" className="flex h-7 items-end gap-1">
+          {['h-2.5', 'h-4', 'h-6'].map((height, index) => (
+            <span key={height} className={`w-1.5 rounded-sm ${height} ${index < filledBars ? 'bg-primary' : 'bg-foreground/15'}`} />
+          ))}
+        </span>
+      </span>
+    </span>
+  )
+}
+
 export function WritingSamplesSection() {
   return (
     <section id="writing-samples" className="relative px-4 py-24 md:py-32 scroll-mt-32">
@@ -212,39 +228,20 @@ export function WritingSamplesSection() {
                       aria-hidden="true"
                     />
 
-                    <div className="flex flex-1 flex-col gap-6 p-8 md:p-10">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5" aria-hidden="true">
-                          {[1, 2, 3].map((segment) => (
-                            <span
-                              key={segment}
-                              className={
-                                "h-1.5 w-8 rounded-full transition-colors " +
-                                (segment <= filledBars ? "bg-primary" : "bg-white/10")
-                              }
-                            />
-                          ))}
-                        </div>
-                        <Maximize2
-                          className="h-5 w-5 text-white/30 transition-colors group-hover:text-primary"
-                          aria-hidden="true"
-                        />
+                    <div className="flex w-full flex-1 flex-col gap-6 p-6 lg:p-8">
+                      <div className="flex items-start justify-between gap-2 border-b border-foreground/10 pb-6">
+                        <h3><AudienceLevel level={level} filledBars={filledBars} /></h3>
+                        <span className="inline-flex size-8 shrink-0 items-center justify-center rounded-full border border-foreground/15 text-foreground/60 transition-colors group-hover:border-primary/50 group-hover:text-primary" aria-hidden="true">
+                          <Maximize2 className="size-4" />
+                        </span>
                       </div>
-
-                      <div className="flex flex-col gap-3">
-                        <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
-                          Audience technical knowledge: {level.toUpperCase()}
-                        </h3>
-                        <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
-                          {assumes}
-                        </p>
-                      </div>
+                      <p className="text-pretty text-base leading-relaxed text-foreground/75 md:text-[17px]">{assumes}</p>
 
                       <ul className="mt-auto flex flex-wrap gap-2" aria-label="For example">
                         {audience.map((tag) => (
                           <li
                             key={tag}
-                            className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                            className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/80"
                           >
                             {tag}
                           </li>
@@ -257,20 +254,8 @@ export function WritingSamplesSection() {
                 <DialogContent className="flex max-h-[92vh] w-[95vw] max-w-6xl flex-col gap-0 overflow-y-auto border-white/10 bg-card p-0 sm:max-w-6xl sm:rounded-[1.75rem]">
                   {/* Header mirrors the clickable card */}
                   <DialogHeader className="flex flex-col gap-5 space-y-0 border-b border-white/10 px-8 pt-12 pb-10 text-left md:px-12">
-                    <div className="flex items-center gap-1.5" aria-hidden="true">
-                      {[1, 2, 3].map((segment) => (
-                        <span
-                          key={segment}
-                          className={
-                            "h-1.5 w-8 rounded-full " + (segment <= filledBars ? "bg-primary" : "bg-white/10")
-                          }
-                        />
-                      ))}
-                    </div>
-                    <div className="flex flex-col gap-3">
-                      <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
-                        Audience technical knowledge: {level.toUpperCase()}
-                      </DialogTitle>
+                    <div className="flex flex-col gap-5">
+                      <DialogTitle><AudienceLevel level={level} filledBars={filledBars} /></DialogTitle>
                       <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
                         {assumes}
                       </DialogDescription>
@@ -279,7 +264,7 @@ export function WritingSamplesSection() {
                       {audience.map((tag) => (
                         <li
                           key={tag}
-                          className="rounded-lg bg-primary/15 px-3.5 py-1.5 text-[15px] font-semibold text-primary ring-1 ring-inset ring-primary/30"
+                          className="rounded-full border border-foreground/10 bg-foreground/5 px-3 py-1 text-sm font-medium text-foreground/80"
                         >
                           {tag}
                         </li>
