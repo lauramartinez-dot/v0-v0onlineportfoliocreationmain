@@ -1140,8 +1140,8 @@ function CompanyCard({
             <span className="text-base font-medium text-foreground/85 md:text-lg">
               {country.replace(/\s*company$/i, '')}
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-2 text-base font-semibold text-foreground group-hover:border-primary">
-              {isExpanded ? 'Hide details' : 'View details'}
+            <span className="inline-flex size-9 items-center justify-center rounded-full border border-foreground/15 group-hover:border-primary/50">
+              <span className="sr-only">{isExpanded ? 'Hide details' : 'View details'}</span>
               <ChevronDown aria-hidden="true" className={`size-5 text-primary motion-safe:transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
             </span>
           </div>

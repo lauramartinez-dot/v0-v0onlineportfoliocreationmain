@@ -214,7 +214,7 @@ export function WritingSamplesSection() {
 
                     <div className="flex flex-1 flex-col gap-6 p-8 md:p-10">
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1.5" aria-label={`${level} technical knowledge`}>
+                        <div className="flex items-center gap-1.5" aria-hidden="true">
                           {[1, 2, 3].map((segment) => (
                             <span
                               key={segment}
@@ -233,7 +233,7 @@ export function WritingSamplesSection() {
 
                       <div className="flex flex-col gap-3">
                         <h3 className="text-2xl md:text-[1.7rem] font-bold leading-tight text-white text-balance">
-                          {level} technical knowledge
+                          Audience technical knowledge: {level.toUpperCase()}
                         </h3>
                         <p className="text-base md:text-[17px] leading-relaxed text-white/60 text-pretty">
                           {assumes}
@@ -269,7 +269,7 @@ export function WritingSamplesSection() {
                     </div>
                     <div className="flex flex-col gap-3">
                       <DialogTitle className="text-3xl font-bold leading-tight text-white text-balance md:text-4xl">
-                        {level} technical knowledge
+                        Audience technical knowledge: {level.toUpperCase()}
                       </DialogTitle>
                       <DialogDescription className="max-w-2xl text-base leading-relaxed text-white/60 text-pretty md:text-[17px]">
                         {assumes}
