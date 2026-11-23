@@ -211,7 +211,7 @@ export function WritingSamplesSection() {
 
           {/* Accent bar - matches the other main section titles */}
           <div className="mx-auto mt-8 h-1.5 w-12 rounded-full bg-primary" />
-          <p className="mx-auto mt-8 max-w-2xl text-pretty text-center text-base text-foreground/60 md:text-lg">Based on audience&apos;s technical knowledge.</p>
+          <p className="mx-auto mt-8 max-w-2xl text-pretty text-center text-base text-foreground/60 md:text-lg">Based on the audience&apos;s technical knowledge.</p>
         </div>
 
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 items-stretch">
