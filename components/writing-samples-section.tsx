@@ -195,7 +195,7 @@ function AudienceLevel({ level }: { level: string }) {
           ))}
         </span>
       </span>
-      <span className="text-base font-medium leading-snug text-foreground/75">Technical knowledge</span>
+      <span className="text-base font-medium leading-snug text-foreground/75">Audience’s technical knowledge level</span>
     </span>
   )
 }
