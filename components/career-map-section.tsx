@@ -1342,9 +1342,30 @@ export default function CareerMapSection() {
               </>
             }
           />
+          <CareerFoundations />
         </div>
       </section>
     </>
+  )
+}
+
+function CareerFoundations() {
+  return (
+    <article aria-labelledby="career-foundations" className="surface-card rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6 md:p-10">
+      <h3 id="career-foundations" className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">Career foundations</h3>
+      <div className="mt-6 grid gap-8 border-t border-foreground/10 pt-6 md:grid-cols-2 md:gap-12">
+        <div>
+          <p className="text-base font-semibold text-primary">2008–2015 · Madrid, Spain</p>
+          <h4 className="mt-2 text-xl font-semibold text-foreground">Science and technology journalism</h4>
+          <p className="mt-3 text-pretty text-lg leading-relaxed text-foreground/80">I spent six years covering science and technology for outlets including Muy Interesante and Europa Press.</p>
+        </div>
+        <div>
+          <p className="text-base font-semibold text-primary">2015–2021 · Ireland</p>
+          <h4 className="mt-2 text-xl font-semibold text-foreground">My first roles in tech</h4>
+          <p className="mt-3 text-pretty text-lg leading-relaxed text-foreground/80">I moved to Ireland and spent four years working in documentation, technical support, and translation at tech companies. I was often the first English–Spanish bilingual hire. It’s where my English took off and where I got my first foothold in the industry.</p>
+        </div>
+      </div>
+    </article>
   )
 }
 
