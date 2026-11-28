@@ -1355,13 +1355,17 @@ function CareerFoundations() {
   return (
     <article aria-labelledby="career-foundations" className="surface-card overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] transition-colors hover:border-foreground/25 hover:bg-foreground/[0.06]">
       <h3>
-        <button type="button" aria-expanded={isExpanded} aria-controls="foundations-details" onClick={() => setIsExpanded(open => !open)} className="group flex w-full cursor-pointer items-center justify-between rounded-3xl p-5 text-left focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary sm:p-8 md:p-10">
-          <span className="flex flex-col gap-1">
+        <button type="button" aria-expanded={isExpanded} aria-controls="foundations-details" onClick={() => setIsExpanded(open => !open)} className="group grid w-full cursor-pointer grid-cols-[auto_minmax(0,1fr)] items-center gap-4 rounded-3xl p-5 text-left focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary sm:p-8 md:p-10 lg:flex lg:gap-6">
+          <span aria-hidden="true" className="inline-flex h-12 w-20 shrink-0 items-center justify-center rounded-xl bg-foreground/95 text-2xl font-black tracking-tighter text-background sm:h-16 sm:w-32 md:h-20 md:w-44 md:text-4xl">LM<span className="text-primary">.</span></span>
+          <span className="flex min-w-0 flex-1 flex-col gap-1">
             <span id="career-foundations" className="text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">Career foundations</span>
-            <span className="text-base font-normal leading-relaxed text-foreground/60 md:text-[17px]">2008–2021 · Madrid, Spain → Ireland</span>
+            <span className="text-base font-normal leading-relaxed text-foreground/60 md:text-[17px]">2008–2021</span>
           </span>
-          <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-foreground/15 group-hover:border-primary/50">
-            <ChevronDown aria-hidden="true" className={`size-5 text-primary motion-safe:transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+          <span className="col-span-2 flex items-center justify-end gap-3 lg:gap-6">
+            <span className="text-right text-base font-medium text-foreground/85 md:text-lg">Madrid, Spain → Ireland</span>
+            <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-foreground/15 group-hover:border-primary/50">
+              <ChevronDown aria-hidden="true" className={`size-5 text-primary motion-safe:transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+            </span>
           </span>
         </button>
       </h3>
