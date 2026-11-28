@@ -1350,10 +1350,22 @@ export default function CareerMapSection() {
 }
 
 function CareerFoundations() {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   return (
-    <article aria-labelledby="career-foundations" className="surface-card rounded-3xl border border-foreground/10 bg-foreground/[0.03] p-6 md:p-10">
-      <h3 id="career-foundations" className="text-2xl font-bold tracking-tight text-foreground md:text-3xl">Career foundations</h3>
-      <div className="mt-6 grid gap-8 border-t border-foreground/10 pt-6 md:grid-cols-2 md:gap-12">
+    <article aria-labelledby="career-foundations" className="surface-card overflow-hidden rounded-3xl border border-foreground/10 bg-foreground/[0.03] transition-colors hover:border-foreground/25 hover:bg-foreground/[0.06]">
+      <h3>
+        <button type="button" aria-expanded={isExpanded} aria-controls="foundations-details" onClick={() => setIsExpanded(open => !open)} className="group flex w-full cursor-pointer items-center justify-between rounded-3xl p-5 text-left focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-primary sm:p-8 md:p-10">
+          <span className="flex flex-col gap-1">
+            <span id="career-foundations" className="text-2xl font-bold leading-tight text-foreground transition-colors group-hover:text-primary md:text-3xl">Career foundations</span>
+            <span className="text-base font-normal leading-relaxed text-foreground/60 md:text-[17px]">2008–2021 · Madrid, Spain → Ireland</span>
+          </span>
+          <span className="inline-flex size-9 shrink-0 items-center justify-center rounded-full border border-foreground/15 group-hover:border-primary/50">
+            <ChevronDown aria-hidden="true" className={`size-5 text-primary motion-safe:transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
+          </span>
+        </button>
+      </h3>
+      <div id="foundations-details" className={`${isExpanded ? 'grid' : 'hidden'} mx-5 gap-8 border-t border-foreground/10 py-6 sm:mx-8 md:mx-10 md:grid-cols-2 md:gap-12 md:py-10`}>
         <div>
           <p className="text-base font-semibold text-primary">2008–2015 · Madrid, Spain</p>
           <h4 className="mt-2 text-xl font-semibold text-foreground">Science and technology journalism</h4>
@@ -1361,7 +1373,7 @@ function CareerFoundations() {
         </div>
         <div>
           <p className="text-base font-semibold text-primary">2015–2021 · Ireland</p>
-          <h4 className="mt-2 text-xl font-semibold text-foreground">My first roles in tech</h4>
+          <h4 className="mt-2 text-xl font-semibold text-foreground">Bilingual roles in tech</h4>
           <p className="mt-3 text-pretty text-lg leading-relaxed text-foreground/80">I moved to Ireland and spent four years working in documentation, technical support, and translation at tech companies. I was often the first English–Spanish bilingual hire. It’s where my English took off and where I got my first foothold in the industry.</p>
         </div>
       </div>
